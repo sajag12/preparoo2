@@ -16,9 +16,6 @@ class Config:
     GOOGLE_OAUTH_CLIENT_ID = os.environ.get('GOOGLE_OAUTH_CLIENT_ID')
     GOOGLE_OAUTH_CLIENT_SECRET = os.environ.get('GOOGLE_OAUTH_CLIENT_SECRET')
     
-    # OAuth settings - Force HTTPS in production (Railway/deployed environments)
-    OAUTHLIB_INSECURE_TRANSPORT = (
-        os.environ.get('FLASK_ENV') == 'development' or 
-        os.environ.get('RAILWAY_ENVIRONMENT') is None
-    )
+    # OAuth settings - Force HTTPS everywhere except localhost
+    OAUTHLIB_INSECURE_TRANSPORT = False  # Always use HTTPS
     OAUTHLIB_RELAX_TOKEN_SCOPE = True 
