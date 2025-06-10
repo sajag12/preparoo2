@@ -4,6 +4,7 @@ from flask_dance.contrib.google import make_google_blueprint, google
 from flask_dance.consumer.storage.sqla import OAuthConsumerMixin
 import csv
 import os
+import logging
 
 # Import configuration and models
 from config import Config
@@ -42,10 +43,13 @@ google_bp = make_google_blueprint(
 app.register_blueprint(google_bp, url_prefix="/login")
 
 # Force HTTPS for OAuth in production (Railway deployment)
-if not app.debug or os.environ.get('RAILWAY_ENVIRONMENT'):
-    google_bp.redirect_url = google_bp.redirect_url.replace('http://', 'https://')
-    if hasattr(google_bp, 'authorized_url') and google_bp.authorized_url:
-        google_bp.authorized_url = google_bp.authorized_url.replace('http://', 'https://')
+if os.environ.get('RAILWAY_ENVIRONMENT') or not app.debug:
+    # Set OAuth to use HTTPS in production
+    logging.basicConfig(level=logging.INFO)
+    logging.info("Production environment detected - forcing HTTPS for OAuth")
+    
+    # Ensure Flask-Dance uses HTTPS
+    app.config['PREFERRED_URL_SCHEME'] = 'https'
 
 # OAuth token storage model (optional - not actively used)
 class OAuth(OAuthConsumerMixin, db.Model):
