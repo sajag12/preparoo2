@@ -1,0 +1,525 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q1,1,MOCKCAT24S3GEN01_Set1_SecureAccess,"Setup (Information Provided / Excluded):
+There are three parallel East-West corridors: C-East, C-Central, and C-West. There are also three parallel North-South corridors: N1, N2, and N3. These corridors intersect at nine points. The distance between any two adjacent intersections is 10 meters.
+Six Secure Access Terminals (SATs) are to be placed at six of these nine intersections. The remaining three intersections will remain unoccupied. Each of the six SATs has a distinct integer Access Level (AL) from 1 to 6, where 1 is the lowest access level and 6 is the highest.
+The ""Corridor Clearance Sum"" for any corridor is the sum of the Access Levels of all SATs located on that corridor.
+Additional Facts:
+1.	The SAT with the lowest Access Level (AL 1) and the SAT with the highest Access Level (AL 6) are not on the same East-West corridor, nor are they on the same North-South corridor.
+2.	The Corridor Clearance Sum for C-West is 7. The Corridor Clearance Sum for N1 is also 7.
+3.	The SAT with AL 3 is located on corridor N2. The SAT with AL 5 is located on corridor C-East.
+4.	The shortest grid distance between the SAT with AL 2 and the SAT with AL 4 is exactly 30 meters.
+5.	Corridor N3 has exactly two SATs. One of these is the SAT with AL 1.
+6.	The intersection (C-East, N2) is unoccupied.
+7.	The Corridor Clearance Sum for C-Central is greater than the Corridor Clearance Sum for C-East.",What is the Access Level of the SAT located at the intersection of C-West and N3?,1,2,3,4,A,B,C,D,D,MCQ,Logical Reasoning,Grid Puzzle,Moderate,"constraint satisfaction, spatial reasoning, sum constraints","constraint satisfaction, spatial reasoning, sum constraints",False,MOCKCAT24S3GEN01_Set1_SecureAccess,Deductive and Spatial Reasoning,"General Solution for the Set:
+Grid representation and initial deductions:
+Let rows be C-East (R1), C-Central (R2), C-West (R3). Let columns be N1 (C1), N2 (C2), N3 (C3).
+Fact 6: (R1, C2) is Unoccupied.
+ALs: 1, 2, 3, 4, 5, 6. Total 6 SATs, 3 unoccupied intersections.
+1.  Placing AL 1 and AL 5: Fact 5 states N3 has two SATs, one being AL 1. Fact 3 states AL 5 is on C-East (R1). If AL 1 is at (R1, C3), AL 5 must be at (R1, C1) because (R1, C2) is unoccupied. This gives C-East Sum = 5 + 1 = 6.
+2.  Placing AL 6 and AL 3: Fact 1 places AL 6 away from R1 and C3. Fact 3 places AL 3 on N2. A case analysis shows that to satisfy all conditions, AL 6 must be at (R2, C2) and AL 3 at (R3, C2). This leads to a unique grid configuration:
+    R1 (C-East): (5) Unocc (1) -> Sum 6
+    R2 (C-Central): (2) (6) Unocc -> Sum 8
+    R3 (C-West): Unocc (3) (4) -> Sum 7
+    This configuration satisfies all facts, including Fact 4 (distance between AL 2 at (R2,C1) and AL 4 at (R3,C3) is 30m) and Fact 7 (C-Central Sum 8 > C-East Sum 6).
+
+Question 1 Solution:
+Following the unique deduction, the SAT at (C-West, N3), which corresponds to (R3,C3), has Access Level 4."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q2,2,MOCKCAT24S3GEN01_Set1_SecureAccess,"Setup (Information Provided / Excluded):
+There are three parallel East-West corridors: C-East, C-Central, and C-West. There are also three parallel North-South corridors: N1, N2, and N3. These corridors intersect at nine points. The distance between any two adjacent intersections is 10 meters.
+Six Secure Access Terminals (SATs) are to be placed at six of these nine intersections. The remaining three intersections will remain unoccupied. Each of the six SATs has a distinct integer Access Level (AL) from 1 to 6, where 1 is the lowest access level and 6 is the highest.
+The ""Corridor Clearance Sum"" for any corridor is the sum of the Access Levels of all SATs located on that corridor.
+Additional Facts:
+1.	The SAT with the lowest Access Level (AL 1) and the SAT with the highest Access Level (AL 6) are not on the same East-West corridor, nor are they on the same North-South corridor.
+2.	The Corridor Clearance Sum for C-West is 7. The Corridor Clearance Sum for N1 is also 7.
+3.	The SAT with AL 3 is located on corridor N2. The SAT with AL 5 is located on corridor C-East.
+4.	The shortest grid distance between the SAT with AL 2 and the SAT with AL 4 is exactly 30 meters.
+5.	Corridor N3 has exactly two SATs. One of these is the SAT with AL 1.
+6.	The intersection (C-East, N2) is unoccupied.
+7.	The Corridor Clearance Sum for C-Central is greater than the Corridor Clearance Sum for C-East.",Which of the following intersections is definitely unoccupied?,"(C-Central, N1)","(C-West, N1)","(C-East, N1)","(C-Central, N3)",A,B,C,D,B,MCQ,Logical Reasoning,Grid Puzzle,Moderate,"constraint satisfaction, deduction","constraint satisfaction, deduction",False,MOCKCAT24S3GEN01_Set1_SecureAccess,Deductive and Spatial Reasoning,"General Solution for the Set:
+Grid representation and initial deductions:
+Let rows be C-East (R1), C-Central (R2), C-West (R3). Let columns be N1 (C1), N2 (C2), N3 (C3).
+Fact 6: (R1, C2) is Unoccupied.
+ALs: 1, 2, 3, 4, 5, 6. Total 6 SATs, 3 unoccupied intersections.
+1.  Placing AL 1 and AL 5: Fact 5 states N3 has two SATs, one being AL 1. Fact 3 states AL 5 is on C-East (R1). If AL 1 is at (R1, C3), AL 5 must be at (R1, C1) because (R1, C2) is unoccupied. This gives C-East Sum = 5 + 1 = 6.
+2.  Placing AL 6 and AL 3: Fact 1 places AL 6 away from R1 and C3. Fact 3 places AL 3 on N2. A case analysis shows that to satisfy all conditions, AL 6 must be at (R2, C2) and AL 3 at (R3, C2). This leads to a unique grid configuration:
+    R1 (C-East): (5) Unocc (1) -> Sum 6
+    R2 (C-Central): (2) (6) Unocc -> Sum 8
+    R3 (C-West): Unocc (3) (4) -> Sum 7
+    This configuration satisfies all facts, including Fact 4 (distance between AL 2 at (R2,C1) and AL 4 at (R3,C3) is 30m) and Fact 7 (C-Central Sum 8 > C-East Sum 6).
+
+Question 2 Solution:
+From the final unique configuration, the unoccupied intersections are (C-East, N2) (given), (C-Central, N3), and (C-West, N1). Therefore, (C-West, N1) is definitely unoccupied."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q3,3,MOCKCAT24S3GEN01_Set1_SecureAccess,"Setup (Information Provided / Excluded):
+There are three parallel East-West corridors: C-East, C-Central, and C-West. There are also three parallel North-South corridors: N1, N2, and N3. These corridors intersect at nine points. The distance between any two adjacent intersections is 10 meters.
+Six Secure Access Terminals (SATs) are to be placed at six of these nine intersections. The remaining three intersections will remain unoccupied. Each of the six SATs has a distinct integer Access Level (AL) from 1 to 6, where 1 is the lowest access level and 6 is the highest.
+The ""Corridor Clearance Sum"" for any corridor is the sum of the Access Levels of all SATs located on that corridor.
+Additional Facts:
+1.	The SAT with the lowest Access Level (AL 1) and the SAT with the highest Access Level (AL 6) are not on the same East-West corridor, nor are they on the same North-South corridor.
+2.	The Corridor Clearance Sum for C-West is 7. The Corridor Clearance Sum for N1 is also 7.
+3.	The SAT with AL 3 is located on corridor N2. The SAT with AL 5 is located on corridor C-East.
+4.	The shortest grid distance between the SAT with AL 2 and the SAT with AL 4 is exactly 30 meters.
+5.	Corridor N3 has exactly two SATs. One of these is the SAT with AL 1.
+6.	The intersection (C-East, N2) is unoccupied.
+7.	The Corridor Clearance Sum for C-Central is greater than the Corridor Clearance Sum for C-East.",What is the Corridor Clearance Sum for corridor N2?,7,8,9,10,A,B,C,D,C,MCQ,Logical Reasoning,Grid Puzzle,Easy,"direct deduction, sum calculation","direct deduction, sum calculation",False,MOCKCAT24S3GEN01_Set1_SecureAccess,Deductive and Spatial Reasoning,"General Solution for the Set:
+Grid representation and initial deductions:
+Let rows be C-East (R1), C-Central (R2), C-West (R3). Let columns be N1 (C1), N2 (C2), N3 (C3).
+Fact 6: (R1, C2) is Unoccupied.
+ALs: 1, 2, 3, 4, 5, 6. Total 6 SATs, 3 unoccupied intersections.
+1.  Placing AL 1 and AL 5: Fact 5 states N3 has two SATs, one being AL 1. Fact 3 states AL 5 is on C-East (R1). If AL 1 is at (R1, C3), AL 5 must be at (R1, C1) because (R1, C2) is unoccupied. This gives C-East Sum = 5 + 1 = 6.
+2.  Placing AL 6 and AL 3: Fact 1 places AL 6 away from R1 and C3. Fact 3 places AL 3 on N2. A case analysis shows that to satisfy all conditions, AL 6 must be at (R2, C2) and AL 3 at (R3, C2). This leads to a unique grid configuration:
+    R1 (C-East): (5) Unocc (1) -> Sum 6
+    R2 (C-Central): (2) (6) Unocc -> Sum 8
+    R3 (C-West): Unocc (3) (4) -> Sum 7
+    This configuration satisfies all facts, including Fact 4 (distance between AL 2 at (R2,C1) and AL 4 at (R3,C3) is 30m) and Fact 7 (C-Central Sum 8 > C-East Sum 6).
+
+Question 3 Solution:
+From the final configuration, corridor N2 has SATs at (C-Central, N2) with AL 6, and (C-West, N2) with AL 3. The Corridor Clearance Sum for N2 = 6 + 3 = 9."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q4,4,MOCKCAT24S3GEN01_Set1_SecureAccess,"Setup (Information Provided / Excluded):
+There are three parallel East-West corridors: C-East, C-Central, and C-West. There are also three parallel North-South corridors: N1, N2, and N3. These corridors intersect at nine points. The distance between any two adjacent intersections is 10 meters.
+Six Secure Access Terminals (SATs) are to be placed at six of these nine intersections. The remaining three intersections will remain unoccupied. Each of the six SATs has a distinct integer Access Level (AL) from 1 to 6, where 1 is the lowest access level and 6 is the highest.
+The ""Corridor Clearance Sum"" for any corridor is the sum of the Access Levels of all SATs located on that corridor.
+Additional Facts:
+1.	The SAT with the lowest Access Level (AL 1) and the SAT with the highest Access Level (AL 6) are not on the same East-West corridor, nor are they on the same North-South corridor.
+2.	The Corridor Clearance Sum for C-West is 7. The Corridor Clearance Sum for N1 is also 7.
+3.	The SAT with AL 3 is located on corridor N2. The SAT with AL 5 is located on corridor C-East.
+4.	The shortest grid distance between the SAT with AL 2 and the SAT with AL 4 is exactly 30 meters.
+5.	Corridor N3 has exactly two SATs. One of these is the SAT with AL 1.
+6.	The intersection (C-East, N2) is unoccupied.
+7.	The Corridor Clearance Sum for C-Central is greater than the Corridor Clearance Sum for C-East.","If an additional SAT with AL 0.5 (a new special low level) was to be placed on an unoccupied intersection on C-East, what would be the new Corridor Clearance Sum for C-East?",6.5,7.5,Cannot be determined as C-East has no unoccupied intersections.,6,A,B,C,D,A,MCQ,Logical Reasoning,Grid Puzzle,Moderate,"conditional reasoning, sum modification","conditional reasoning, sum modification",False,MOCKCAT24S3GEN01_Set1_SecureAccess,Deductive and Spatial Reasoning,"General Solution for the Set:
+Grid representation and initial deductions:
+Let rows be C-East (R1), C-Central (R2), C-West (R3). Let columns be N1 (C1), N2 (C2), N3 (C3).
+Fact 6: (R1, C2) is Unoccupied.
+ALs: 1, 2, 3, 4, 5, 6. Total 6 SATs, 3 unoccupied intersections.
+1.  Placing AL 1 and AL 5: Fact 5 states N3 has two SATs, one being AL 1. Fact 3 states AL 5 is on C-East (R1). If AL 1 is at (R1, C3), AL 5 must be at (R1, C1) because (R1, C2) is unoccupied. This gives C-East Sum = 5 + 1 = 6.
+2.  Placing AL 6 and AL 3: Fact 1 places AL 6 away from R1 and C3. Fact 3 places AL 3 on N2. A case analysis shows that to satisfy all conditions, AL 6 must be at (R2, C2) and AL 3 at (R3, C2). This leads to a unique grid configuration:
+    R1 (C-East): (5) Unocc (1) -> Sum 6
+    R2 (C-Central): (2) (6) Unocc -> Sum 8
+    R3 (C-West): Unocc (3) (4) -> Sum 7
+    This configuration satisfies all facts, including Fact 4 (distance between AL 2 at (R2,C1) and AL 4 at (R3,C3) is 30m) and Fact 7 (C-Central Sum 8 > C-East Sum 6).
+
+Question 4 Solution:
+From the final configuration, corridor C-East has a sum of 6. The only unoccupied intersection on C-East is (C-East, N2). If an SAT with AL 0.5 is placed there, the new sum for C-East would be 6 + 0.5 = 6.5."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q5,5,MOCKCAT24S3GEN01_Set1_SecureAccess,"Setup (Information Provided / Excluded):
+There are three parallel East-West corridors: C-East, C-Central, and C-West. There are also three parallel North-South corridors: N1, N2, and N3. These corridors intersect at nine points. The distance between any two adjacent intersections is 10 meters.
+Six Secure Access Terminals (SATs) are to be placed at six of these nine intersections. The remaining three intersections will remain unoccupied. Each of the six SATs has a distinct integer Access Level (AL) from 1 to 6, where 1 is the lowest access level and 6 is the highest.
+The ""Corridor Clearance Sum"" for any corridor is the sum of the Access Levels of all SATs located on that corridor.
+Additional Facts:
+1.	The SAT with the lowest Access Level (AL 1) and the SAT with the highest Access Level (AL 6) are not on the same East-West corridor, nor are they on the same North-South corridor.
+2.	The Corridor Clearance Sum for C-West is 7. The Corridor Clearance Sum for N1 is also 7.
+3.	The SAT with AL 3 is located on corridor N2. The SAT with AL 5 is located on corridor C-East.
+4.	The shortest grid distance between the SAT with AL 2 and the SAT with AL 4 is exactly 30 meters.
+5.	Corridor N3 has exactly two SATs. One of these is the SAT with AL 1.
+6.	The intersection (C-East, N2) is unoccupied.
+7.	The Corridor Clearance Sum for C-Central is greater than the Corridor Clearance Sum for C-East.",What is the shortest grid distance between the SAT with AL 1 and the SAT with AL 6?,10m,20m,30m,40m,A,B,C,D,B,MCQ,Logical Reasoning,Grid Puzzle,Moderate,"spatial reasoning, distance calculation","spatial reasoning, distance calculation",False,MOCKCAT24S3GEN01_Set1_SecureAccess,Deductive and Spatial Reasoning,"General Solution for the Set:
+Grid representation and initial deductions:
+Let rows be C-East (R1), C-Central (R2), C-West (R3). Let columns be N1 (C1), N2 (C2), N3 (C3).
+Fact 6: (R1, C2) is Unoccupied.
+ALs: 1, 2, 3, 4, 5, 6. Total 6 SATs, 3 unoccupied intersections.
+1.  Placing AL 1 and AL 5: Fact 5 states N3 has two SATs, one being AL 1. Fact 3 states AL 5 is on C-East (R1). If AL 1 is at (R1, C3), AL 5 must be at (R1, C1) because (R1, C2) is unoccupied. This gives C-East Sum = 5 + 1 = 6.
+2.  Placing AL 6 and AL 3: Fact 1 places AL 6 away from R1 and C3. Fact 3 places AL 3 on N2. A case analysis shows that to satisfy all conditions, AL 6 must be at (R2, C2) and AL 3 at (R3, C2). This leads to a unique grid configuration:
+    R1 (C-East): (5) Unocc (1) -> Sum 6
+    R2 (C-Central): (2) (6) Unocc -> Sum 8
+    R3 (C-West): Unocc (3) (4) -> Sum 7
+    This configuration satisfies all facts, including Fact 4 (distance between AL 2 at (R2,C1) and AL 4 at (R3,C3) is 30m) and Fact 7 (C-Central Sum 8 > C-East Sum 6).
+
+Question 5 Solution:
+SAT with AL 1 is at (C-East, N3) or (R1,C3). SAT with AL 6 is at (C-Central, N2) or (R2,C2). The grid distance is calculated as (|Δrow| + |Δcol|) * 10m. Distance = (|1-2| + |3-2|) * 10m = (1 + 1) * 10m = 20m."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q6,6,MOCKCAT24S3GEN01_Set2_FlourBlends,"Setup (Information Provided / Excluded):
+Five multi-grain flour blends – B1, B2, B3, B4, and B5 – are analyzed for their nutrient composition. Each blend is made from a unique primary base grain: Wheat, Rice, Millet, Oat, or Corn. These base grains fall into broader categories: Cereals (Wheat, Rice, Corn), Millets (Millet), and Pseudo-cereals (Oat).
+For each blend, the composition is given in grams per 100g of the blend for four nutrients: Carbohydrate (C), Protein (P), Fat (F), and Fiber (Fi). Thus, for each blend, C + P + F + Fi = 100. All nutrient values are integers.
+The following table provides some information about the nutrient composition of these blends. Some values are missing and denoted by a '?'.
+Table 1: Nutrient Composition (grams per 100g)
+Blend | Primary Grain Category | Carbohydrate | Protein | Fat | Fiber
+------|------------------------|--------------|---------|-----|-------
+B1    | Cereal                 | 70           | 12      | ?   | 16
+B2    | Cereal                 | ?            | 8       | 1   | 16
+B3    | Millet                 | 60           | ?       | 5   | ?
+B4    | Pseudo-cereal          | 65           | 15      | 6   | 14
+B5    | Cereal                 | 72           | 9       | 4   | ?
+Additional Facts:
+1.	For any blend based on a Cereal grain, its Carbohydrate content is higher than that of any blend based on a Millet grain.
+2.	The blend based on a Pseudo-cereal grain has a Protein content that is higher than the Protein content of any blend based on a Cereal grain.
+3.	For the Millet-based blend (B3), the Protein content is twice its Fat content.
+4.	The Fiber content of blend B5 is 15g.
+5.	The Carbohydrate content of blend B2 is 75g.",What is the Fat content (in grams) for blend B1?,1,2,3,4,A,B,C,D,B,MCQ,Data Interpretation,"Tabular DI, Missing Values",Easy,"sum to 100, direct calculation","sum to 100, direct calculation",False,MOCKCAT24S3GEN01_Set2_FlourBlends,Direct Calculation,"For blend B1, the sum of nutrients C + P + F + Fi must equal 100.
+Given: C = 70g, P = 12g, Fi = 16g.
+So, 70 + 12 + F + 16 = 100.
+98 + F = 100.
+F = 100 - 98 = 2g.
+The Fat content for blend B1 is 2g."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q7,7,MOCKCAT24S3GEN01_Set2_FlourBlends,"Setup (Information Provided / Excluded):
+Five multi-grain flour blends – B1, B2, B3, B4, and B5 – are analyzed for their nutrient composition. Each blend is made from a unique primary base grain: Wheat, Rice, Millet, Oat, or Corn. These base grains fall into broader categories: Cereals (Wheat, Rice, Corn), Millets (Millet), and Pseudo-cereals (Oat).
+For each blend, the composition is given in grams per 100g of the blend for four nutrients: Carbohydrate (C), Protein (P), Fat (F), and Fiber (Fi). Thus, for each blend, C + P + F + Fi = 100. All nutrient values are integers.
+The following table provides some information about the nutrient composition of these blends. Some values are missing and denoted by a '?'.
+Table 1: Nutrient Composition (grams per 100g)
+Blend | Primary Grain Category | Carbohydrate | Protein | Fat | Fiber
+------|------------------------|--------------|---------|-----|-------
+B1    | Cereal                 | 70           | 12      | ?   | 16
+B2    | Cereal                 | ?            | 8       | 1   | 16
+B3    | Millet                 | 60           | ?       | 5   | ?
+B4    | Pseudo-cereal          | 65           | 15      | 6   | 14
+B5    | Cereal                 | 72           | 9       | 4   | ?
+Additional Facts:
+1.	For any blend based on a Cereal grain, its Carbohydrate content is higher than that of any blend based on a Millet grain.
+2.	The blend based on a Pseudo-cereal grain has a Protein content that is higher than the Protein content of any blend based on a Cereal grain.
+3.	For the Millet-based blend (B3), the Protein content is twice its Fat content.
+4.	The Fiber content of blend B5 is 15g.
+5.	The Carbohydrate content of blend B2 is 75g.",What is the Fiber content (in grams) for blend B3?,15,20,25,30,A,B,C,D,C,MCQ,Data Interpretation,"Tabular DI, Missing Values",Moderate,"sum to 100, ratio constraint","sum to 100, ratio constraint",False,MOCKCAT24S3GEN01_Set2_FlourBlends,Inferential Reasoning,"For blend B3 (Millet-based), we are given C = 60g and F = 5g.
+Fact 3 states that for B3, Protein content is twice its Fat content. So, P_B3 = 2 * F_B3 = 2 * 5g = 10g.
+Using the sum of all nutrients: C + P + F + Fi = 100.
+60 + 10 + 5 + Fi_B3 = 100.
+75 + Fi_B3 = 100.
+Fi_B3 = 100 - 75 = 25g.
+The Fiber content for blend B3 is 25g."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q8,8,MOCKCAT24S3GEN01_Set2_FlourBlends,"Setup (Information Provided / Excluded):
+Five multi-grain flour blends – B1, B2, B3, B4, and B5 – are analyzed for their nutrient composition. Each blend is made from a unique primary base grain: Wheat, Rice, Millet, Oat, or Corn. These base grains fall into broader categories: Cereals (Wheat, Rice, Corn), Millets (Millet), and Pseudo-cereals (Oat).
+For each blend, the composition is given in grams per 100g of the blend for four nutrients: Carbohydrate (C), Protein (P), Fat (F), and Fiber (Fi). Thus, for each blend, C + P + F + Fi = 100. All nutrient values are integers.
+The following table provides some information about the nutrient composition of these blends. Some values are missing and denoted by a '?'.
+Table 1: Nutrient Composition (grams per 100g)
+Blend | Primary Grain Category | Carbohydrate | Protein | Fat | Fiber
+------|------------------------|--------------|---------|-----|-------
+B1    | Cereal                 | 70           | 12      | ?   | 16
+B2    | Cereal                 | ?            | 8       | 1   | 16
+B3    | Millet                 | 60           | ?       | 5   | ?
+B4    | Pseudo-cereal          | 65           | 15      | 6   | 14
+B5    | Cereal                 | 72           | 9       | 4   | ?
+Additional Facts:
+1.	For any blend based on a Cereal grain, its Carbohydrate content is higher than that of any blend based on a Millet grain.
+2.	The blend based on a Pseudo-cereal grain has a Protein content that is higher than the Protein content of any blend based on a Cereal grain.
+3.	For the Millet-based blend (B3), the Protein content is twice its Fat content.
+4.	The Fiber content of blend B5 is 15g.
+5.	The Carbohydrate content of blend B2 is 75g.",Which blend has the highest Protein content?,B1,B3,B4,B5,A,B,C,D,C,MCQ,Data Interpretation,"Tabular DI, Comparison",Easy,"data lookup, comparison","data lookup, comparison",False,MOCKCAT24S3GEN01_Set2_FlourBlends,Comparison,"First, find the Protein content for all blends:
+B1: P = 12g (given).
+B2: P = 8g (given).
+B3: P = 2 * Fat = 2 * 5g = 10g (from previous question's logic).
+B4: P = 15g (given).
+B5: P = 9g (given).
+Comparing the Protein contents: B1 (12g), B2 (8g), B3 (10g), B4 (15g), B5 (9g). The highest value is 15g, which belongs to blend B4."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q9,9,MOCKCAT24S3GEN01_Set2_FlourBlends,"Setup (Information Provided / Excluded):
+Five multi-grain flour blends – B1, B2, B3, B4, and B5 – are analyzed for their nutrient composition. Each blend is made from a unique primary base grain: Wheat, Rice, Millet, Oat, or Corn. These base grains fall into broader categories: Cereals (Wheat, Rice, Corn), Millets (Millet), and Pseudo-cereals (Oat).
+For each blend, the composition is given in grams per 100g of the blend for four nutrients: Carbohydrate (C), Protein (P), Fat (F), and Fiber (Fi). Thus, for each blend, C + P + F + Fi = 100. All nutrient values are integers.
+The following table provides some information about the nutrient composition of these blends. Some values are missing and denoted by a '?'.
+Table 1: Nutrient Composition (grams per 100g)
+Blend | Primary Grain Category | Carbohydrate | Protein | Fat | Fiber
+------|------------------------|--------------|---------|-----|-------
+B1    | Cereal                 | 70           | 12      | ?   | 16
+B2    | Cereal                 | ?            | 8       | 1   | 16
+B3    | Millet                 | 60           | ?       | 5   | ?
+B4    | Pseudo-cereal          | 65           | 15      | 6   | 14
+B5    | Cereal                 | 72           | 9       | 4   | ?
+Additional Facts:
+1.	For any blend based on a Cereal grain, its Carbohydrate content is higher than that of any blend based on a Millet grain.
+2.	The blend based on a Pseudo-cereal grain has a Protein content that is higher than the Protein content of any blend based on a Cereal grain.
+3.	For the Millet-based blend (B3), the Protein content is twice its Fat content.
+4.	The Fiber content of blend B5 is 15g.
+5.	The Carbohydrate content of blend B2 is 75g.","Consider a new blend B6, which is also Cereal-based. Its Protein content is 10g and Fat content is 3g. If its Carbohydrate content must be higher than that of B3, what is the maximum possible Fiber content for B6?",26,25,24,23,A,B,C,D,A,MCQ,Data Interpretation,"Tabular DI, Conditional Reasoning",Moderate,"sum to 100, hierarchical constraint, optimization","sum to 100, hierarchical constraint, optimization",False,MOCKCAT24S3GEN01_Set2_FlourBlends,Optimization,"For new blend B6: P = 10g, F = 3g. Since C + P + F + Fi = 100, we have C_B6 + 10 + 3 + Fi_B6 = 100, which simplifies to C_B6 + Fi_B6 = 87.
+Fact 1 states Cereal-based blends have Carbohydrate content higher than Millet-based blends. B3 is Millet-based with C_B3 = 60g.
+So, C_B6 > 60. Since all values are integers, the minimum possible value for C_B6 is 61g.
+To maximize Fiber (Fi_B6), we must minimize Carbohydrate (C_B6).
+Using the minimum C_B6 = 61g, we can find the maximum Fi_B6:
+61 + Fi_B6 = 87.
+Fi_B6 = 87 - 61 = 26g.
+The maximum possible Fiber content is 26g."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q10,10,MOCKCAT24S3GEN01_Set3_StreamingTiers,"Setup (Information Provided / Excluded):
+A popular streaming service, ""StreamFast,"" offers three subscription tiers: Basic, Standard, and Premium. The company analyzed its subscriber base at the end of Year 1 and the end of Year 2. All subscriber numbers are integers.
+The following bar chart shows the percentage distribution of subscribers across the three tiers for Year 1 and Year 2.
+Year 1 Distribution: Basic (40%), Standard (35%), Premium (25%)
+Year 2 Distribution: Basic (30%), Standard (40%), Premium (30%)
+Additional Facts:
+1.	The total number of StreamFast subscribers increased by 20% from the end of Year 1 to the end of Year 2.
+2.	The number of Premium subscribers at the end of Year 2 was 11,000 more than the number of Premium subscribers at the end of Year 1.
+3.	In Year 1, the number of Basic subscribers was 5,000 more than the number of Standard subscribers.
+4.	The absolute increase in the number of Standard subscribers from Year 1 to Year 2 was 13,000.",What was the total number of StreamFast subscribers at the end of Year 1?,"80,000","100,000","120,000","150,000",A,B,C,D,B,MCQ,Data Interpretation,"Percentages, Algebraic DI",Moderate,"percentage calculation, solving linear equations","percentage calculation, solving linear equations",False,MOCKCAT24S3GEN01_Set3_StreamingTiers,Algebraic Reasoning,"Let T1 be the total subscribers in Year 1.
+From the Year 1 distribution: Basic = 0.40 * T1, Standard = 0.35 * T1.
+Fact 3 states: Basic_Y1 = Standard_Y1 + 5,000.
+0.40 * T1 = 0.35 * T1 + 5,000.
+0.05 * T1 = 5,000.
+T1 = 5,000 / 0.05 = 100,000.
+The total subscribers in Year 1 was 100,000."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q11,11,MOCKCAT24S3GEN01_Set3_StreamingTiers,"Setup (Information Provided / Excluded):
+A popular streaming service, ""StreamFast,"" offers three subscription tiers: Basic, Standard, and Premium. The company analyzed its subscriber base at the end of Year 1 and the end of Year 2. All subscriber numbers are integers.
+The following bar chart shows the percentage distribution of subscribers across the three tiers for Year 1 and Year 2.
+Year 1 Distribution: Basic (40%), Standard (35%), Premium (25%)
+Year 2 Distribution: Basic (30%), Standard (40%), Premium (30%)
+Additional Facts:
+1.	The total number of StreamFast subscribers increased by 20% from the end of Year 1 to the end of Year 2.
+2.	The number of Premium subscribers at the end of Year 2 was 11,000 more than the number of Premium subscribers at the end of Year 1.
+3.	In Year 1, the number of Basic subscribers was 5,000 more than the number of Standard subscribers.
+4.	The absolute increase in the number of Standard subscribers from Year 1 to Year 2 was 13,000.",How many subscribers were in the Standard tier at the end of Year 2?,"36,000","40,000","48,000","50,000",A,B,C,D,C,MCQ,Data Interpretation,"Percentages, Algebraic DI",Easy,"percentage calculation, absolute values","percentage calculation, absolute values",False,MOCKCAT24S3GEN01_Set3_StreamingTiers,Percentage Calculation,"From Q10, total subscribers in Year 1 (T1) = 100,000.
+Fact 1 states T2 = T1 * 1.20 = 100,000 * 1.20 = 120,000.
+Number of Standard subscribers in Year 2 = 40% of T2 = 0.40 * 120,000 = 48,000.
+Check with Fact 4: Standard_Y1 = 0.35 * 100,000 = 35,000. Increase = 48,000 - 35,000 = 13,000. This is consistent."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q12,12,MOCKCAT24S3GEN01_Set3_StreamingTiers,"Setup (Information Provided / Excluded):
+A popular streaming service, ""StreamFast,"" offers three subscription tiers: Basic, Standard, and Premium. The company analyzed its subscriber base at the end of Year 1 and the end of Year 2. All subscriber numbers are integers.
+The following bar chart shows the percentage distribution of subscribers across the three tiers for Year 1 and Year 2.
+Year 1 Distribution: Basic (40%), Standard (35%), Premium (25%)
+Year 2 Distribution: Basic (30%), Standard (40%), Premium (30%)
+Additional Facts:
+1.	The total number of StreamFast subscribers increased by 20% from the end of Year 1 to the end of Year 2.
+2.	The number of Premium subscribers at the end of Year 2 was 11,000 more than the number of Premium subscribers at the end of Year 1.
+3.	In Year 1, the number of Basic subscribers was 5,000 more than the number of Standard subscribers.
+4.	The absolute increase in the number of Standard subscribers from Year 1 to Year 2 was 13,000.",What was the absolute number of Basic subscribers at the end of Year 2?,"30,000","36,000","40,000","42,000",A,B,C,D,B,MCQ,Data Interpretation,"Percentages, Algebraic DI",Easy,"percentage calculation, absolute values","percentage calculation, absolute values",False,MOCKCAT24S3GEN01_Set3_StreamingTiers,Percentage Calculation,"From previous solutions, total subscribers in Year 2 (T2) = 120,000.
+According to the Year 2 distribution, Basic subscribers are 30% of the total.
+Number of Basic subscribers in Year 2 = 0.30 * T2 = 0.30 * 120,000 = 36,000."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q13,13,MOCKCAT24S3GEN01_Set3_StreamingTiers,"Setup (Information Provided / Excluded):
+A popular streaming service, ""StreamFast,"" offers three subscription tiers: Basic, Standard, and Premium. The company analyzed its subscriber base at the end of Year 1 and the end of Year 2. All subscriber numbers are integers.
+The following bar chart shows the percentage distribution of subscribers across the three tiers for Year 1 and Year 2.
+Year 1 Distribution: Basic (40%), Standard (35%), Premium (25%)
+Year 2 Distribution: Basic (30%), Standard (40%), Premium (30%)
+Additional Facts:
+1.	The total number of StreamFast subscribers increased by 20% from the end of Year 1 to the end of Year 2.
+2.	The number of Premium subscribers at the end of Year 2 was 11,000 more than the number of Premium subscribers at the end of Year 1.
+3.	In Year 1, the number of Basic subscribers was 5,000 more than the number of Standard subscribers.
+4.	The absolute increase in the number of Standard subscribers from Year 1 to Year 2 was 13,000.",By what percentage did the number of Basic subscribers change from Year 1 to Year 2?,Decreased by 10%,Increased by 10%,Decreased by 4%,Increased by 4%,A,B,C,D,A,MCQ,Data Interpretation,"Percentages, Algebraic DI",Moderate,percentage change calculation,percentage change calculation,False,MOCKCAT24S3GEN01_Set3_StreamingTiers,Percentage Calculation,"Number of Basic subscribers in Year 1 = 0.40 * T1 = 0.40 * 100,000 = 40,000.
+Number of Basic subscribers in Year 2 = 36,000 (from Q12).
+Change = 36,000 - 40,000 = -4,000.
+Percentage change = (Change / Initial Value) * 100% = (-4,000 / 40,000) * 100% = -10%.
+The number of Basic subscribers decreased by 10%."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q14,14,MOCKCAT24S3GEN01_Set4_ProjectMilestones,"Setup (Information Provided / Excluded):
+A software development project consists of five distinct modules: M1, M2, M3, M4, and M5. The project's progress is tracked at the end of each quarter (Q). The percentage completion for each module is recorded. The Projected Growth Rate (GR) indicates the expected increase in percentage points of completion for the upcoming quarter. For example, if a module is 20% complete and its GR for the next quarter is 10 percentage points per quarter (10 %pts/Q), it is projected to be 30% complete by the end of that quarter. All percentage completion values and GRs are integers.
+The following table provides data for the five modules at the end of Q1 and projections for Q2. Some values are missing.
+Table 1: Module Progress
+Module | % Completion (End of Q1) | Projected GR for Q2 (%pts/Q) | % Completion (End of Q2)
+-------|---------------------------|---------------------------------|---------------------------
+M1     | 20                        | 10                              | ?
+M2     | 50                        | ?                               | 65
+M3     | 10                        | 20                              | ?
+M4     | ?                         | 5                               | 85
+M5     | 40                        | ?                               | 65
+Additional Facts:
+1.	Module M4 had the highest percentage completion at the end of Q1 among all modules.
+2.	The projected GR for Q2 for Module M5 was 5 percentage points higher than that for Module M3.
+3.	The average % completion of all five modules at the end of Q1 was 40%.
+4.	The increase in completion percentage points for Module M2 during Q2 was 5 points more than that for Module M1 during Q2.",What was the % Completion of Module M4 at the end of Q1?,70%,75%,80%,85%,A,B,C,D,C,MCQ,Data Interpretation,"Tabular DI, Averages",Moderate,"average calculation, deduction from constraints","average calculation, deduction from constraints",False,MOCKCAT24S3GEN01_Set4_ProjectMilestones,Deductive Calculation,"Let the % completion values at end of Q1 be M1_Q1, etc.
+From the table: M1_Q1=20, M2_Q1=50, M3_Q1=10, M5_Q1=40.
+Fact 3: The average % completion at end of Q1 was 40%. Total sum = 40 * 5 = 200.
+Sum of known values = 20 + 50 + 10 + 40 = 120.
+So, M4_Q1 = 200 - 120 = 80.
+The % Completion of M4 at end of Q1 was 80%. This is consistent with Fact 1 (80% is the highest)."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q15,15,MOCKCAT24S3GEN01_Set4_ProjectMilestones,"Setup (Information Provided / Excluded):
+A software development project consists of five distinct modules: M1, M2, M3, M4, and M5. The project's progress is tracked at the end of each quarter (Q). The percentage completion for each module is recorded. The Projected Growth Rate (GR) indicates the expected increase in percentage points of completion for the upcoming quarter. For example, if a module is 20% complete and its GR for the next quarter is 10 percentage points per quarter (10 %pts/Q), it is projected to be 30% complete by the end of that quarter. All percentage completion values and GRs are integers.
+The following table provides data for the five modules at the end of Q1 and projections for Q2. Some values are missing.
+Table 1: Module Progress
+Module | % Completion (End of Q1) | Projected GR for Q2 (%pts/Q) | % Completion (End of Q2)
+-------|---------------------------|---------------------------------|---------------------------
+M1     | 20                        | 10                              | ?
+M2     | 50                        | ?                               | 65
+M3     | 10                        | 20                              | ?
+M4     | ?                         | 5                               | 85
+M5     | 40                        | ?                               | 65
+Additional Facts:
+1.	Module M4 had the highest percentage completion at the end of Q1 among all modules.
+2.	The projected GR for Q2 for Module M5 was 5 percentage points higher than that for Module M3.
+3.	The average % completion of all five modules at the end of Q1 was 40%.
+4.	The increase in completion percentage points for Module M2 during Q2 was 5 points more than that for Module M1 during Q2.",What was the Projected GR for Q2 (%pts/Q) for Module M5?,15,20,25,30,A,B,C,D,C,MCQ,Data Interpretation,"Tabular DI, Deduction",Moderate,"constraint application, direct calculation","constraint application, direct calculation",False,MOCKCAT24S3GEN01_Set4_ProjectMilestones,Deductive Calculation,"From the table, GR for M3 (GR_M3) is 20.
+Fact 2 states: GR for M5 (GR_M5) was 5 percentage points higher than GR_M3.
+GR_M5 = GR_M3 + 5 = 20 + 5 = 25.
+Check: M5_Q1=40, M5_Q2 = 40 + 25 = 65. This matches the table."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q16,16,MOCKCAT24S3GEN01_Set4_ProjectMilestones,"Setup (Information Provided / Excluded):
+A software development project consists of five distinct modules: M1, M2, M3, M4, and M5. The project's progress is tracked at the end of each quarter (Q). The percentage completion for each module is recorded. The Projected Growth Rate (GR) indicates the expected increase in percentage points of completion for the upcoming quarter. For example, if a module is 20% complete and its GR for the next quarter is 10 percentage points per quarter (10 %pts/Q), it is projected to be 30% complete by the end of that quarter. All percentage completion values and GRs are integers.
+The following table provides data for the five modules at the end of Q1 and projections for Q2. Some values are missing.
+Table 1: Module Progress
+Module | % Completion (End of Q1) | Projected GR for Q2 (%pts/Q) | % Completion (End of Q2)
+-------|---------------------------|---------------------------------|---------------------------
+M1     | 20                        | 10                              | ?
+M2     | 50                        | ?                               | 65
+M3     | 10                        | 20                              | ?
+M4     | ?                         | 5                               | 85
+M5     | 40                        | ?                               | 65
+Additional Facts:
+1.	Module M4 had the highest percentage completion at the end of Q1 among all modules.
+2.	The projected GR for Q2 for Module M5 was 5 percentage points higher than that for Module M3.
+3.	The average % completion of all five modules at the end of Q1 was 40%.
+4.	The increase in completion percentage points for Module M2 during Q2 was 5 points more than that for Module M1 during Q2.",Which module had the lowest % Completion at the end of Q2?,M1,M3,Both M1 and M3,M4,A,B,C,D,C,MCQ,Data Interpretation,"Tabular DI, Comparison",Easy,"data lookup, comparison after calculation","data lookup, comparison after calculation",False,MOCKCAT24S3GEN01_Set4_ProjectMilestones,Comparison,"First, calculate all % Completion values at the end of Q2:
+M1_Q2 = M1_Q1 + GR_M1 = 20 + 10 = 30%.
+M2_Q2 = 65% (given).
+M3_Q2 = M3_Q1 + GR_M3 = 10 + 20 = 30%.
+M4_Q2 = 85% (given).
+M5_Q2 = 65% (given).
+The completions are: M1=30%, M2=65%, M3=30%, M4=85%, M5=65%. The lowest value is 30%, which is for both M1 and M3."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q17,17,MOCKCAT24S3GEN01_Set4_ProjectMilestones,"Setup (Information Provided / Excluded):
+A software development project consists of five distinct modules: M1, M2, M3, M4, and M5. The project's progress is tracked at the end of each quarter (Q). The percentage completion for each module is recorded. The Projected Growth Rate (GR) indicates the expected increase in percentage points of completion for the upcoming quarter. For example, if a module is 20% complete and its GR for the next quarter is 10 percentage points per quarter (10 %pts/Q), it is projected to be 30% complete by the end of that quarter. All percentage completion values and GRs are integers.
+The following table provides data for the five modules at the end of Q1 and projections for Q2. Some values are missing.
+Table 1: Module Progress
+Module | % Completion (End of Q1) | Projected GR for Q2 (%pts/Q) | % Completion (End of Q2)
+-------|---------------------------|---------------------------------|---------------------------
+M1     | 20                        | 10                              | ?
+M2     | 50                        | ?                               | 65
+M3     | 10                        | 20                              | ?
+M4     | ?                         | 5                               | 85
+M5     | 40                        | ?                               | 65
+Additional Facts:
+1.	Module M4 had the highest percentage completion at the end of Q1 among all modules.
+2.	The projected GR for Q2 for Module M5 was 5 percentage points higher than that for Module M3.
+3.	The average % completion of all five modules at the end of Q1 was 40%.
+4.	The increase in completion percentage points for Module M2 during Q2 was 5 points more than that for Module M1 during Q2.","If the project also had a Module M6, which was 0% complete at the end of Q1 and had a projected GR of 30 %pts/Q for Q2, what would be the new average % completion of all six modules at the end of Q2?",50.00%,50.83%,51.67%,52.50%,A,B,C,D,B,MCQ,Data Interpretation,"Tabular DI, Averages",Moderate,"conditional calculation, average update","conditional calculation, average update",False,MOCKCAT24S3GEN01_Set4_ProjectMilestones,Conditional Calculation,"From Q16, the sum of % completion for M1-M5 at the end of Q2 is 30 + 65 + 30 + 85 + 65 = 275.
+For new Module M6: M6_Q2 = M6_Q1 + GR_M6 = 0 + 30 = 30%.
+The new total sum of % completion for all six modules = 275 (for M1-M5) + 30 (for M6) = 305.
+New average = Total sum / Number of modules = 305 / 6 = 50.833...%.
+This rounds to 50.83%."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q18,18,MOCKCAT24S3GEN01_Set5_ACEnergy,"Setup (Information Provided / Excluded):
+The energy consumption in a room is monitored from 12:00 PM to 6:00 PM. The room has a smart Air Conditioner (AC) and some base load appliances (lights, etc.). The total power consumption is the sum of the AC's power consumption and the base load power consumption. The base load power consumption is constant at 0.2 kW throughout the period.
+The AC operates in one of three modes:
+•	Eco Mode: Consumes 0.8 kW of power.
+•	Turbo Mode: Consumes 1.5 kW of power.
+•	Off Mode: Consumes 0.0 kW of power.
+The AC changes its mode only at half-hour intervals (e.g., 12:00, 12:30, 1:00, etc.).
+The external temperature, which influences the AC's operation, decreases linearly from 35°C at 12:00 PM to 29°C at 6:00 PM.
+The following line graph shows the TOTAL power consumption (in kW) in the room from 12:00 PM to 6:00 PM.
+The total power consumption for each 30-minute interval starting at the specified time is as follows:
+•	12:00 PM: 1.7 kW
+•	12:30 PM: 1.7 kW
+•	01:00 PM: 1.0 kW
+•	01:30 PM: 1.0 kW
+•	02:00 PM: 0.2 kW
+•	02:30 PM: 1.0 kW
+•	03:00 PM: 1.0 kW
+•	03:30 PM: 1.7 kW
+•	04:00 PM: 1.0 kW
+•	04:30 PM: 0.2 kW
+•	05:00 PM: 1.0 kW
+•	05:30 PM: 1.0 kW","For how long, in total, was the AC in Turbo Mode during the 6-hour period?",1 hour,1.5 hours,2 hours,2.5 hours,A,B,C,D,B,MCQ,Data Interpretation,"Graph Interpretation, Time Series",Moderate,"data extraction from graph, duration calculation","data extraction from graph, duration calculation",False,MOCKCAT24S3GEN01_Set5_ACEnergy,Data Interpretation & Aggregation,"General Solution for the Set:
+Deduce AC power by subtracting the 0.2 kW base load from total power. Then map power to mode.
+- 1.7 kW total -> 1.5 kW AC -> Turbo Mode
+- 1.0 kW total -> 0.8 kW AC -> Eco Mode
+- 0.2 kW total -> 0.0 kW AC -> Off Mode
+Intervals:
+12:00: Turbo | 12:30: Turbo | 01:00: Eco | 01:30: Eco | 02:00: Off | 02:30: Eco | 03:00: Eco | 03:30: Turbo | 04:00: Eco | 04:30: Off | 05:00: Eco | 05:30: Eco
+
+Question 18 Solution:
+The AC is in Turbo Mode when its power is 1.5 kW. This happens during the intervals starting at 12:00 PM, 12:30 PM, and 3:30 PM. Each interval is 30 minutes (0.5 hours). Total duration = 3 * 0.5 hours = 1.5 hours."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q19,19,MOCKCAT24S3GEN01_Set5_ACEnergy,"Setup (Information Provided / Excluded):
+The energy consumption in a room is monitored from 12:00 PM to 6:00 PM. The room has a smart Air Conditioner (AC) and some base load appliances (lights, etc.). The total power consumption is the sum of the AC's power consumption and the base load power consumption. The base load power consumption is constant at 0.2 kW throughout the period.
+The AC operates in one of three modes:
+•	Eco Mode: Consumes 0.8 kW of power.
+•	Turbo Mode: Consumes 1.5 kW of power.
+•	Off Mode: Consumes 0.0 kW of power.
+The AC changes its mode only at half-hour intervals (e.g., 12:00, 12:30, 1:00, etc.).
+The external temperature, which influences the AC's operation, decreases linearly from 35°C at 12:00 PM to 29°C at 6:00 PM.
+The following line graph shows the TOTAL power consumption (in kW) in the room from 12:00 PM to 6:00 PM.
+The total power consumption for each 30-minute interval starting at the specified time is as follows:
+•	12:00 PM: 1.7 kW
+•	12:30 PM: 1.7 kW
+•	01:00 PM: 1.0 kW
+•	01:30 PM: 1.0 kW
+•	02:00 PM: 0.2 kW
+•	02:30 PM: 1.0 kW
+•	03:00 PM: 1.0 kW
+•	03:30 PM: 1.7 kW
+•	04:00 PM: 1.0 kW
+•	04:30 PM: 0.2 kW
+•	05:00 PM: 1.0 kW
+•	05:30 PM: 1.0 kW",What was the AC's mode of operation during the interval 2:30 PM to 3:00 PM?,Off Mode,Eco Mode,Turbo Mode,Cannot be determined,A,B,C,D,B,MCQ,Data Interpretation,"Graph Interpretation, Mode Identification",Easy,"data extraction, rule application","data extraction, rule application",False,MOCKCAT24S3GEN01_Set5_ACEnergy,Data Interpretation,"General Solution for the Set:
+Deduce AC power by subtracting the 0.2 kW base load from total power. Then map power to mode.
+- 1.7 kW total -> 1.5 kW AC -> Turbo Mode
+- 1.0 kW total -> 0.8 kW AC -> Eco Mode
+- 0.2 kW total -> 0.0 kW AC -> Off Mode
+Intervals:
+12:00: Turbo | 12:30: Turbo | 01:00: Eco | 01:30: Eco | 02:00: Off | 02:30: Eco | 03:00: Eco | 03:30: Turbo | 04:00: Eco | 04:30: Off | 05:00: Eco | 05:30: Eco
+
+Question 19 Solution:
+For the interval starting at 2:30 PM, the total power consumption is 1.0 kW. The AC's power is 1.0 kW - 0.2 kW (base load) = 0.8 kW. This corresponds to Eco Mode."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q20,20,MOCKCAT24S3GEN01_Set5_ACEnergy,"Setup (Information Provided / Excluded):
+The energy consumption in a room is monitored from 12:00 PM to 6:00 PM. The room has a smart Air Conditioner (AC) and some base load appliances (lights, etc.). The total power consumption is the sum of the AC's power consumption and the base load power consumption. The base load power consumption is constant at 0.2 kW throughout the period.
+The AC operates in one of three modes:
+•	Eco Mode: Consumes 0.8 kW of power.
+•	Turbo Mode: Consumes 1.5 kW of power.
+•	Off Mode: Consumes 0.0 kW of power.
+The AC changes its mode only at half-hour intervals (e.g., 12:00, 12:30, 1:00, etc.).
+The external temperature, which influences the AC's operation, decreases linearly from 35°C at 12:00 PM to 29°C at 6:00 PM.
+The following line graph shows the TOTAL power consumption (in kW) in the room from 12:00 PM to 6:00 PM.
+The total power consumption for each 30-minute interval starting at the specified time is as follows:
+•	12:00 PM: 1.7 kW
+•	12:30 PM: 1.7 kW
+•	01:00 PM: 1.0 kW
+•	01:30 PM: 1.0 kW
+•	02:00 PM: 0.2 kW
+•	02:30 PM: 1.0 kW
+•	03:00 PM: 1.0 kW
+•	03:30 PM: 1.7 kW
+•	04:00 PM: 1.0 kW
+•	04:30 PM: 0.2 kW
+•	05:00 PM: 1.0 kW
+•	05:30 PM: 1.0 kW",How many times did the AC switch to Off Mode during the 6-hour period?,1,2,3,4,A,B,C,D,B,MCQ,Data Interpretation,"Graph Interpretation, Event Counting",Moderate,"state change identification, counting","state change identification, counting",False,MOCKCAT24S3GEN01_Set5_ACEnergy,State Change Analysis,"General Solution for the Set:
+Deduce AC power by subtracting the 0.2 kW base load from total power. Then map power to mode.
+- 1.7 kW total -> 1.5 kW AC -> Turbo Mode
+- 1.0 kW total -> 0.8 kW AC -> Eco Mode
+- 0.2 kW total -> 0.0 kW AC -> Off Mode
+Intervals:
+12:00: Turbo | 12:30: Turbo | 01:00: Eco | 01:30: Eco | 02:00: Off | 02:30: Eco | 03:00: Eco | 03:30: Turbo | 04:00: Eco | 04:30: Off | 05:00: Eco | 05:30: Eco
+
+Question 20 Solution:
+The AC is in Off Mode during the intervals starting at 2:00 PM and 4:30 PM. At 1:30 PM, it was in Eco Mode. At 2:00 PM it switched to Off. This is the first switch to Off. At 4:00 PM it was in Eco Mode. At 4:30 PM it switched to Off. This is the second switch to Off. In total, the AC switched to Off Mode 2 times."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q21,21,MOCKCAT24S3GEN01_Set5_ACEnergy,"Setup (Information Provided / Excluded):
+The energy consumption in a room is monitored from 12:00 PM to 6:00 PM. The room has a smart Air Conditioner (AC) and some base load appliances (lights, etc.). The total power consumption is the sum of the AC's power consumption and the base load power consumption. The base load power consumption is constant at 0.2 kW throughout the period.
+The AC operates in one of three modes:
+•	Eco Mode: Consumes 0.8 kW of power.
+•	Turbo Mode: Consumes 1.5 kW of power.
+•	Off Mode: Consumes 0.0 kW of power.
+The AC changes its mode only at half-hour intervals (e.g., 12:00, 12:30, 1:00, etc.).
+The external temperature, which influences the AC's operation, decreases linearly from 35°C at 12:00 PM to 29°C at 6:00 PM.
+The following line graph shows the TOTAL power consumption (in kW) in the room from 12:00 PM to 6:00 PM.
+The total power consumption for each 30-minute interval starting at the specified time is as follows:
+•	12:00 PM: 1.7 kW
+•	12:30 PM: 1.7 kW
+•	01:00 PM: 1.0 kW
+•	01:30 PM: 1.0 kW
+•	02:00 PM: 0.2 kW
+•	02:30 PM: 1.0 kW
+•	03:00 PM: 1.0 kW
+•	03:30 PM: 1.7 kW
+•	04:00 PM: 1.0 kW
+•	04:30 PM: 0.2 kW
+•	05:00 PM: 1.0 kW
+•	05:30 PM: 1.0 kW",What was the total energy (in kWh) consumed by the AC alone (excluding base load) between 1:00 PM and 4:00 PM?,2.1 kWh,2.35 kWh,2.9 kWh,3.1 kWh,A,B,C,D,B,MCQ,Data Interpretation,"Graph Interpretation, Energy Calculation",Moderate,"interval calculation, power to energy conversion, summation","interval calculation, power to energy conversion, summation",False,MOCKCAT24S3GEN01_Set5_ACEnergy,Energy Calculation,"General Solution for the Set:
+Deduce AC power by subtracting the 0.2 kW base load from total power. Then map power to mode.
+- 1.7 kW total -> 1.5 kW AC -> Turbo Mode
+- 1.0 kW total -> 0.8 kW AC -> Eco Mode
+- 0.2 kW total -> 0.0 kW AC -> Off Mode
+Intervals:
+12:00: Turbo | 12:30: Turbo | 01:00: Eco | 01:30: Eco | 02:00: Off | 02:30: Eco | 03:00: Eco | 03:30: Turbo | 04:00: Eco | 04:30: Off | 05:00: Eco | 05:30: Eco
+
+Question 21 Solution:
+Calculate energy (Power * Time) for each 0.5 hour interval from 1:00 PM up to 4:00 PM.
+•	1:00-1:30: Eco (0.8 kW) -> 0.8 * 0.5 = 0.4 kWh
+•	1:30-2:00: Eco (0.8 kW) -> 0.8 * 0.5 = 0.4 kWh
+•	2:00-2:30: Off (0.0 kW) -> 0.0 * 0.5 = 0.0 kWh
+•	2:30-3:00: Eco (0.8 kW) -> 0.8 * 0.5 = 0.4 kWh
+•	3:00-3:30: Eco (0.8 kW) -> 0.8 * 0.5 = 0.4 kWh
+•	3:30-4:00: Turbo (1.5 kW) -> 1.5 * 0.5 = 0.75 kWh
+Total energy = 0.4 + 0.4 + 0.0 + 0.4 + 0.4 + 0.75 = 2.35 kWh."
+Logical Reasoning & Data Interpretation,40,MOCKCAT24S3GEN01_Q22,22,MOCKCAT24S3GEN01_Set5_ACEnergy,"Setup (Information Provided / Excluded):
+The energy consumption in a room is monitored from 12:00 PM to 6:00 PM. The room has a smart Air Conditioner (AC) and some base load appliances (lights, etc.). The total power consumption is the sum of the AC's power consumption and the base load power consumption. The base load power consumption is constant at 0.2 kW throughout the period.
+The AC operates in one of three modes:
+•	Eco Mode: Consumes 0.8 kW of power.
+•	Turbo Mode: Consumes 1.5 kW of power.
+•	Off Mode: Consumes 0.0 kW of power.
+The AC changes its mode only at half-hour intervals (e.g., 12:00, 12:30, 1:00, etc.).
+The external temperature, which influences the AC's operation, decreases linearly from 35°C at 12:00 PM to 29°C at 6:00 PM.
+The following line graph shows the TOTAL power consumption (in kW) in the room from 12:00 PM to 6:00 PM.
+The total power consumption for each 30-minute interval starting at the specified time is as follows:
+•	12:00 PM: 1.7 kW
+•	12:30 PM: 1.7 kW
+•	01:00 PM: 1.0 kW
+•	01:30 PM: 1.0 kW
+•	02:00 PM: 0.2 kW
+•	02:30 PM: 1.0 kW
+•	03:00 PM: 1.0 kW
+•	03:30 PM: 1.7 kW
+•	04:00 PM: 1.0 kW
+•	04:30 PM: 0.2 kW
+•	05:00 PM: 1.0 kW
+•	05:30 PM: 1.0 kW","If the Eco Mode consumed 0.7 kW instead of 0.8 kW (other modes and base load unchanged), what would be the sum of the total room power consumption rates (in kW) as measured at the beginning of the 5:00 PM interval and at the beginning of the 5:30 PM interval?",1.6 kW,1.8 kW,2.0 kW,2.2 kW,A,B,C,D,B,MCQ,Data Interpretation,"Graph Interpretation, Conditional Calculation",Difficult,"parameter change, recalculation, unit interpretation, specific question phrasing interpretation","parameter change, recalculation, unit interpretation, specific question phrasing interpretation",False,MOCKCAT24S3GEN01_Set5_ACEnergy,Conditional Recalculation,"General Solution for the Set:
+Deduce AC power by subtracting the 0.2 kW base load from total power. Then map power to mode.
+- 1.7 kW total -> 1.5 kW AC -> Turbo Mode
+- 1.0 kW total -> 0.8 kW AC -> Eco Mode
+- 0.2 kW total -> 0.0 kW AC -> Off Mode
+Intervals:
+12:00: Turbo | 12:30: Turbo | 01:00: Eco | 01:30: Eco | 02:00: Off | 02:30: Eco | 03:00: Eco | 03:30: Turbo | 04:00: Eco | 04:30: Off | 05:00: Eco | 05:30: Eco
+
+Question 22 Solution:
+From the mode analysis, the AC was in Eco Mode during the intervals starting at 5:00 PM and 5:30 PM.
+If Eco Mode power is changed to 0.7 kW:
+- Total power at 5:00 PM = New Eco AC power + Base Load = 0.7 kW + 0.2 kW = 0.9 kW.
+- Total power at 5:30 PM = New Eco AC power + Base Load = 0.7 kW + 0.2 kW = 0.9 kW.
+The sum of these two rates is 0.9 kW + 0.9 kW = 1.8 kW."

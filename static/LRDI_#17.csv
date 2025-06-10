@@ -1,0 +1,1034 @@
+"SectionName","SectionTimeLimitMinutes","QuestionUniqueID","QuestionNumberInSection","PassageOrSetID","PassageOrSetContent","QuestionPrompt","OptionAText","OptionBText","OptionCText","OptionDText","OptionAValue","OptionBValue","OptionCValue","OptionDValue","CorrectAnswerValue","QuestionType","Topic","SubTopic","DifficultyLevelPredicted","ConceptTested","DetailedTags","IsTITA","SetID","CognitiveSkillLevel","SolutionExplanation"
+"LRDI","40","MOCKFNL017_Q1","1","MOCKFNL017_Set1_Alchemist","Four alchemists – Aurum, Beryl, Cinnabar, and Digen – compete in a transmutation game. The game consists of exactly 3 rounds for all alchemists, unless they create a Philosopher's Stone Shard (PS), in which case their game ends immediately after that round, and they do not participate in subsequent rounds.
+
+**Game Rules:**
+1.  Starting Resources: Each alchemist starts with 100 units of Lead (Pb) and 100 Energy Points (PP).
+2.  Transmutation Options (An alchemist attempts exactly one type of transmutation per round they participate in):
+    *   Silver (Ag): Converts 10 Pb into 1 Ag. Costs 5 PP. Yields 2 Victory Points (VP).
+    *   Gold (Au): Converts 20 Pb into 1 Au. Costs 15 PP. Yields 5 VP.
+    *   Philosopher's Stone Shard (PS): Converts 30 Pb into 1 PS. Costs 30 PP. Yields 10 VP.
+3.  Spell Success: An attempted transmutation is successful only if the alchemist has sufficient Pb and PP for that specific transmutation at the start of the round. If an attempt would fail due to insufficient resources for that specific transmutation, they do nothing that round (no VP gain, no resource cost for that round).
+4.  Objective: Each alchemist, in each round they participate, chooses the transmutation that maximizes their own total VP by the end of their participation. If multiple spell choices in a round lead to the same maximum final VP outcome over their entire game, they prefer the choice that leaves them with more remaining PP at the end of their game. If remaining PP is also tied, they prefer Ag, then Au, then PS for that round's action.
+5.  All resource units (Pb, PP) and VP are integers.
+
+**The following information details the actual choices made by the alchemists in this particular game. These choices should be taken as given facts for solving the questions.**
+
+**Information about a specific game:**
+i. Cinnabar created a Philosopher's Stone Shard (PS) and did so in Round 1.
+ii. Aurum only created Silver (Ag) throughout the game, cast one Silver (Ag) spell in each of the three rounds, and thus spent 15 PP in total.
+iii. Beryl cast Gold (Au) in Round 1, Gold (Au) in Round 2, and Gold (Au) in Round 3.
+iv. Digen did not create any Gold (Au). Digen cast Silver (Ag) in Round 1 and Silver (Ag) in Round 2. In Round 3, Digen cast a Philosopher's Stone Shard (PS).
+v. No two alchemists had the same total VP at the end of the game, and Aurum had the lowest VP among the four.","What was Cinnabar's total Victory Points?","5","10","15","20","A","B","C","D","B","MCQ","Logical Reasoning","Games & Tournaments","Difficult","","resource management, VP maximization, multi-round game logic, rule-based deduction","False","MOCKFNL017_Set1_Alchemist","","Initial State for all: Pb=100, PP=100.
+
+1.  **Cinnabar (C):** (Clue i) Creates PS in R1.
+    *   Cost: 30 Pb, 30 PP. VP gained: 10.
+    *   Game ends for Cinnabar after R1.
+    *   End state for C: Pb = 100 - 30 = 70. PP = 100 - 30 = 70. Total VP = 10.
+
+2.  **Aurum (A):** (Clue ii) Only Ag. Casts one Ag spell in R1, R2, R3.
+    *   Ag spell: 10 Pb, 5 PP, 2 VP.
+    *   R1: Ag. Pb=90, PP=95, VP_round=2.
+    *   R2: Ag. Pb=80, PP=90, VP_round=2.
+    *   R3: Ag. Pb=70, PP=85, VP_round=2.
+    *   Total PP spent = 3 * 5 = 15 PP (consistent with clue).
+    *   End state for A: Pb = 70. PP = 85. Total VP = 3 * 2 = 6.
+
+3.  **Beryl (B):** (Clue iii) Au in R1, R2, R3.
+    *   Au spell: 20 Pb, 15 PP, 5 VP.
+    *   R1: Au. Pb=80, PP=85, VP_round=5.
+    *   R2: Au. Pb=60, PP=70, VP_round=5.
+    *   R3: Au. Pb=40, PP=55, VP_round=5.
+    *   End state for B: Pb = 40. PP = 55. Total VP = 3 * 5 = 15.
+
+4.  **Digen (D):** (Clue iv) No Au. Ag in R1, Ag in R2. PS in R3.
+    *   R1: Ag (10Pb, 5PP, 2VP). State after R1: Pb=90, PP=95.
+    *   R2: Ag (10Pb, 5PP, 2VP). State after R2: Pb=80, PP=90.
+    *   R3: PS (30Pb, 30PP, 10VP). State after R3: Pb=50, PP=60.
+    *   Game ends for Digen after R3 (due to PS).
+    *   End state for D: Pb = 50. PP = 60. Total VP = 2 + 2 + 10 = 14.
+
+5.  **Final VP check (Clue v):**
+    *   Cinnabar: 10 VP
+    *   Aurum: 6 VP (Lowest)
+    *   Beryl: 15 VP
+    *   Digen: 14 VP
+    *   Scores: Beryl (15), Digen (14), Cinnabar (10), Aurum (6). All distinct, and Aurum is lowest. This is consistent with Clue v.
+
+Based on the analysis of Cinnabar's actions in Round 1, Cinnabar created a Philosopher's Stone Shard, gaining 10 VP. Their game ended immediately. Thus, Cinnabar's total Victory Points is 10."
+"LRDI","40","MOCKFNL017_Q2","2","MOCKFNL017_Set1_Alchemist","Four alchemists – Aurum, Beryl, Cinnabar, and Digen – compete in a transmutation game. The game consists of exactly 3 rounds for all alchemists, unless they create a Philosopher's Stone Shard (PS), in which case their game ends immediately after that round, and they do not participate in subsequent rounds.
+
+**Game Rules:**
+1.  Starting Resources: Each alchemist starts with 100 units of Lead (Pb) and 100 Energy Points (PP).
+2.  Transmutation Options (An alchemist attempts exactly one type of transmutation per round they participate in):
+    *   Silver (Ag): Converts 10 Pb into 1 Ag. Costs 5 PP. Yields 2 Victory Points (VP).
+    *   Gold (Au): Converts 20 Pb into 1 Au. Costs 15 PP. Yields 5 VP.
+    *   Philosopher's Stone Shard (PS): Converts 30 Pb into 1 PS. Costs 30 PP. Yields 10 VP.
+3.  Spell Success: An attempted transmutation is successful only if the alchemist has sufficient Pb and PP for that specific transmutation at the start of the round. If an attempt would fail due to insufficient resources for that specific transmutation, they do nothing that round (no VP gain, no resource cost for that round).
+4.  Objective: Each alchemist, in each round they participate, chooses the transmutation that maximizes their own total VP by the end of their participation. If multiple spell choices in a round lead to the same maximum final VP outcome over their entire game, they prefer the choice that leaves them with more remaining PP at the end of their game. If remaining PP is also tied, they prefer Ag, then Au, then PS for that round's action.
+5.  All resource units (Pb, PP) and VP are integers.
+
+**The following information details the actual choices made by the alchemists in this particular game. These choices should be taken as given facts for solving the questions.**
+
+**Information about a specific game:**
+i. Cinnabar created a Philosopher's Stone Shard (PS) and did so in Round 1.
+ii. Aurum only created Silver (Ag) throughout the game, cast one Silver (Ag) spell in each of the three rounds, and thus spent 15 PP in total.
+iii. Beryl cast Gold (Au) in Round 1, Gold (Au) in Round 2, and Gold (Au) in Round 3.
+iv. Digen did not create any Gold (Au). Digen cast Silver (Ag) in Round 1 and Silver (Ag) in Round 2. In Round 3, Digen cast a Philosopher's Stone Shard (PS).
+v. No two alchemists had the same total VP at the end of the game, and Aurum had the lowest VP among the four.","How many units of Lead (Pb) did Aurum have remaining at the end of the game?","70","60","50","40","A","B","C","D","A","MCQ","Logical Reasoning","Games & Tournaments","Difficult","","resource tracking, constraint application, multi-round game logic","False","MOCKFNL017_Set1_Alchemist","","Initial State for all: Pb=100, PP=100.
+
+1.  **Cinnabar (C):** (Clue i) Creates PS in R1.
+    *   Cost: 30 Pb, 30 PP. VP gained: 10.
+    *   Game ends for Cinnabar after R1.
+    *   End state for C: Pb = 100 - 30 = 70. PP = 100 - 30 = 70. Total VP = 10.
+
+2.  **Aurum (A):** (Clue ii) Only Ag. Casts one Ag spell in R1, R2, R3.
+    *   Ag spell: 10 Pb, 5 PP, 2 VP.
+    *   R1: Ag. Pb=90, PP=95, VP_round=2.
+    *   R2: Ag. Pb=80, PP=90, VP_round=2.
+    *   R3: Ag. Pb=70, PP=85, VP_round=2.
+    *   Total PP spent = 3 * 5 = 15 PP (consistent with clue).
+    *   End state for A: Pb = 70. PP = 85. Total VP = 3 * 2 = 6.
+
+3.  **Beryl (B):** (Clue iii) Au in R1, R2, R3.
+    *   Au spell: 20 Pb, 15 PP, 5 VP.
+    *   R1: Au. Pb=80, PP=85, VP_round=5.
+    *   R2: Au. Pb=60, PP=70, VP_round=5.
+    *   R3: Au. Pb=40, PP=55, VP_round=5.
+    *   End state for B: Pb = 40. PP = 55. Total VP = 3 * 5 = 15.
+
+4.  **Digen (D):** (Clue iv) No Au. Ag in R1, Ag in R2. PS in R3.
+    *   R1: Ag (10Pb, 5PP, 2VP). State after R1: Pb=90, PP=95.
+    *   R2: Ag (10Pb, 5PP, 2VP). State after R2: Pb=80, PP=90.
+    *   R3: PS (30Pb, 30PP, 10VP). State after R3: Pb=50, PP=60.
+    *   Game ends for Digen after R3 (due to PS).
+    *   End state for D: Pb = 50. PP = 60. Total VP = 2 + 2 + 10 = 14.
+
+5.  **Final VP check (Clue v):**
+    *   Cinnabar: 10 VP
+    *   Aurum: 6 VP (Lowest)
+    *   Beryl: 15 VP
+    *   Digen: 14 VP
+    *   Scores: Beryl (15), Digen (14), Cinnabar (10), Aurum (6). All distinct, and Aurum is lowest. This is consistent with Clue v.
+
+Aurum cast three Silver spells, each costing 10 Pb. Total Pb cost = 3 * 10 = 30 Pb. Starting with 100 Pb, Aurum had 100 - 30 = 70 Pb remaining."
+"LRDI","40","MOCKFNL017_Q3","3","MOCKFNL017_Set1_Alchemist","Four alchemists – Aurum, Beryl, Cinnabar, and Digen – compete in a transmutation game. The game consists of exactly 3 rounds for all alchemists, unless they create a Philosopher's Stone Shard (PS), in which case their game ends immediately after that round, and they do not participate in subsequent rounds.
+
+**Game Rules:**
+1.  Starting Resources: Each alchemist starts with 100 units of Lead (Pb) and 100 Energy Points (PP).
+2.  Transmutation Options (An alchemist attempts exactly one type of transmutation per round they participate in):
+    *   Silver (Ag): Converts 10 Pb into 1 Ag. Costs 5 PP. Yields 2 Victory Points (VP).
+    *   Gold (Au): Converts 20 Pb into 1 Au. Costs 15 PP. Yields 5 VP.
+    *   Philosopher's Stone Shard (PS): Converts 30 Pb into 1 PS. Costs 30 PP. Yields 10 VP.
+3.  Spell Success: An attempted transmutation is successful only if the alchemist has sufficient Pb and PP for that specific transmutation at the start of the round. If an attempt would fail due to insufficient resources for that specific transmutation, they do nothing that round (no VP gain, no resource cost for that round).
+4.  Objective: Each alchemist, in each round they participate, chooses the transmutation that maximizes their own total VP by the end of their participation. If multiple spell choices in a round lead to the same maximum final VP outcome over their entire game, they prefer the choice that leaves them with more remaining PP at the end of their game. If remaining PP is also tied, they prefer Ag, then Au, then PS for that round's action.
+5.  All resource units (Pb, PP) and VP are integers.
+
+**The following information details the actual choices made by the alchemists in this particular game. These choices should be taken as given facts for solving the questions.**
+
+**Information about a specific game:**
+i. Cinnabar created a Philosopher's Stone Shard (PS) and did so in Round 1.
+ii. Aurum only created Silver (Ag) throughout the game, cast one Silver (Ag) spell in each of the three rounds, and thus spent 15 PP in total.
+iii. Beryl cast Gold (Au) in Round 1, Gold (Au) in Round 2, and Gold (Au) in Round 3.
+iv. Digen did not create any Gold (Au). Digen cast Silver (Ag) in Round 1 and Silver (Ag) in Round 2. In Round 3, Digen cast a Philosopher's Stone Shard (PS).
+v. No two alchemists had the same total VP at the end of the game, and Aurum had the lowest VP among the four.","What was Beryl's total Victory Points at the end of the game?","10","15","20","25","A","B","C","D","B","MCQ","Logical Reasoning","Games & Tournaments","Difficult","","VP calculation, resource tracking, multi-round game logic","False","MOCKFNL017_Set1_Alchemist","","Initial State for all: Pb=100, PP=100.
+
+1.  **Cinnabar (C):** (Clue i) Creates PS in R1.
+    *   Cost: 30 Pb, 30 PP. VP gained: 10.
+    *   Game ends for Cinnabar after R1.
+    *   End state for C: Pb = 100 - 30 = 70. PP = 100 - 30 = 70. Total VP = 10.
+
+2.  **Aurum (A):** (Clue ii) Only Ag. Casts one Ag spell in R1, R2, R3.
+    *   Ag spell: 10 Pb, 5 PP, 2 VP.
+    *   R1: Ag. Pb=90, PP=95, VP_round=2.
+    *   R2: Ag. Pb=80, PP=90, VP_round=2.
+    *   R3: Ag. Pb=70, PP=85, VP_round=2.
+    *   Total PP spent = 3 * 5 = 15 PP (consistent with clue).
+    *   End state for A: Pb = 70. PP = 85. Total VP = 3 * 2 = 6.
+
+3.  **Beryl (B):** (Clue iii) Au in R1, R2, R3.
+    *   Au spell: 20 Pb, 15 PP, 5 VP.
+    *   R1: Au. Pb=80, PP=85, VP_round=5.
+    *   R2: Au. Pb=60, PP=70, VP_round=5.
+    *   R3: Au. Pb=40, PP=55, VP_round=5.
+    *   End state for B: Pb = 40. PP = 55. Total VP = 3 * 5 = 15.
+
+4.  **Digen (D):** (Clue iv) No Au. Ag in R1, Ag in R2. PS in R3.
+    *   R1: Ag (10Pb, 5PP, 2VP). State after R1: Pb=90, PP=95.
+    *   R2: Ag (10Pb, 5PP, 2VP). State after R2: Pb=80, PP=90.
+    *   R3: PS (30Pb, 30PP, 10VP). State after R3: Pb=50, PP=60.
+    *   Game ends for Digen after R3 (due to PS).
+    *   End state for D: Pb = 50. PP = 60. Total VP = 2 + 2 + 10 = 14.
+
+5.  **Final VP check (Clue v):**
+    *   Cinnabar: 10 VP
+    *   Aurum: 6 VP (Lowest)
+    *   Beryl: 15 VP
+    *   Digen: 14 VP
+    *   Scores: Beryl (15), Digen (14), Cinnabar (10), Aurum (6). All distinct, and Aurum is lowest. This is consistent with Clue v.
+
+Beryl cast three Gold spells, each yielding 5 VP. Total VP for Beryl = 3 * 5 = 15."
+"LRDI","40","MOCKFNL017_Q4","4","MOCKFNL017_Set1_Alchemist","Four alchemists – Aurum, Beryl, Cinnabar, and Digen – compete in a transmutation game. The game consists of exactly 3 rounds for all alchemists, unless they create a Philosopher's Stone Shard (PS), in which case their game ends immediately after that round, and they do not participate in subsequent rounds.
+
+**Game Rules:**
+1.  Starting Resources: Each alchemist starts with 100 units of Lead (Pb) and 100 Energy Points (PP).
+2.  Transmutation Options (An alchemist attempts exactly one type of transmutation per round they participate in):
+    *   Silver (Ag): Converts 10 Pb into 1 Ag. Costs 5 PP. Yields 2 Victory Points (VP).
+    *   Gold (Au): Converts 20 Pb into 1 Au. Costs 15 PP. Yields 5 VP.
+    *   Philosopher's Stone Shard (PS): Converts 30 Pb into 1 PS. Costs 30 PP. Yields 10 VP.
+3.  Spell Success: An attempted transmutation is successful only if the alchemist has sufficient Pb and PP for that specific transmutation at the start of the round. If an attempt would fail due to insufficient resources for that specific transmutation, they do nothing that round (no VP gain, no resource cost for that round).
+4.  Objective: Each alchemist, in each round they participate, chooses the transmutation that maximizes their own total VP by the end of their participation. If multiple spell choices in a round lead to the same maximum final VP outcome over their entire game, they prefer the choice that leaves them with more remaining PP at the end of their game. If remaining PP is also tied, they prefer Ag, then Au, then PS for that round's action.
+5.  All resource units (Pb, PP) and VP are integers.
+
+**The following information details the actual choices made by the alchemists in this particular game. These choices should be taken as given facts for solving the questions.**
+
+**Information about a specific game:**
+i. Cinnabar created a Philosopher's Stone Shard (PS) and did so in Round 1.
+ii. Aurum only created Silver (Ag) throughout the game, cast one Silver (Ag) spell in each of the three rounds, and thus spent 15 PP in total.
+iii. Beryl cast Gold (Au) in Round 1, Gold (Au) in Round 2, and Gold (Au) in Round 3.
+iv. Digen did not create any Gold (Au). Digen cast Silver (Ag) in Round 1 and Silver (Ag) in Round 2. In Round 3, Digen cast a Philosopher's Stone Shard (PS).
+v. No two alchemists had the same total VP at the end of the game, and Aurum had the lowest VP among the four.","Which alchemist had the second-highest Victory Points?","Aurum","Beryl","Cinnabar","Digen","A","B","C","D","D","MCQ","Logical Reasoning","Games & Tournaments","Difficult","","comparative ranking, VP calculation, overall game analysis","False","MOCKFNL017_Set1_Alchemist","","Initial State for all: Pb=100, PP=100.
+
+1.  **Cinnabar (C):** (Clue i) Creates PS in R1.
+    *   Cost: 30 Pb, 30 PP. VP gained: 10.
+    *   Game ends for Cinnabar after R1.
+    *   End state for C: Pb = 100 - 30 = 70. PP = 100 - 30 = 70. Total VP = 10.
+
+2.  **Aurum (A):** (Clue ii) Only Ag. Casts one Ag spell in R1, R2, R3.
+    *   Ag spell: 10 Pb, 5 PP, 2 VP.
+    *   R1: Ag. Pb=90, PP=95, VP_round=2.
+    *   R2: Ag. Pb=80, PP=90, VP_round=2.
+    *   R3: Ag. Pb=70, PP=85, VP_round=2.
+    *   Total PP spent = 3 * 5 = 15 PP (consistent with clue).
+    *   End state for A: Pb = 70. PP = 85. Total VP = 3 * 2 = 6.
+
+3.  **Beryl (B):** (Clue iii) Au in R1, R2, R3.
+    *   Au spell: 20 Pb, 15 PP, 5 VP.
+    *   R1: Au. Pb=80, PP=85, VP_round=5.
+    *   R2: Au. Pb=60, PP=70, VP_round=5.
+    *   R3: Au. Pb=40, PP=55, VP_round=5.
+    *   End state for B: Pb = 40. PP = 55. Total VP = 3 * 5 = 15.
+
+4.  **Digen (D):** (Clue iv) No Au. Ag in R1, Ag in R2. PS in R3.
+    *   R1: Ag (10Pb, 5PP, 2VP). State after R1: Pb=90, PP=95.
+    *   R2: Ag (10Pb, 5PP, 2VP). State after R2: Pb=80, PP=90.
+    *   R3: PS (30Pb, 30PP, 10VP). State after R3: Pb=50, PP=60.
+    *   Game ends for Digen after R3 (due to PS).
+    *   End state for D: Pb = 50. PP = 60. Total VP = 2 + 2 + 10 = 14.
+
+5.  **Final VP check (Clue v):**
+    *   Cinnabar: 10 VP
+    *   Aurum: 6 VP (Lowest)
+    *   Beryl: 15 VP
+    *   Digen: 14 VP
+    *   Scores: Beryl (15), Digen (14), Cinnabar (10), Aurum (6). All distinct, and Aurum is lowest. This is consistent with Clue v.
+
+Ranking the VPs: Beryl (15) is the highest. Digen (14) is the second-highest. Cinnabar (10) is third. Aurum (6) is the lowest."
+"LRDI","40","MOCKFNL017_Q5","5","MOCKFNL017_Set1_Alchemist","Four alchemists – Aurum, Beryl, Cinnabar, and Digen – compete in a transmutation game. The game consists of exactly 3 rounds for all alchemists, unless they create a Philosopher's Stone Shard (PS), in which case their game ends immediately after that round, and they do not participate in subsequent rounds.
+
+**Game Rules:**
+1.  Starting Resources: Each alchemist starts with 100 units of Lead (Pb) and 100 Energy Points (PP).
+2.  Transmutation Options (An alchemist attempts exactly one type of transmutation per round they participate in):
+    *   Silver (Ag): Converts 10 Pb into 1 Ag. Costs 5 PP. Yields 2 Victory Points (VP).
+    *   Gold (Au): Converts 20 Pb into 1 Au. Costs 15 PP. Yields 5 VP.
+    *   Philosopher's Stone Shard (PS): Converts 30 Pb into 1 PS. Costs 30 PP. Yields 10 VP.
+3.  Spell Success: An attempted transmutation is successful only if the alchemist has sufficient Pb and PP for that specific transmutation at the start of the round. If an attempt would fail due to insufficient resources for that specific transmutation, they do nothing that round (no VP gain, no resource cost for that round).
+4.  Objective: Each alchemist, in each round they participate, chooses the transmutation that maximizes their own total VP by the end of their participation. If multiple spell choices in a round lead to the same maximum final VP outcome over their entire game, they prefer the choice that leaves them with more remaining PP at the end of their game. If remaining PP is also tied, they prefer Ag, then Au, then PS for that round's action.
+5.  All resource units (Pb, PP) and VP are integers.
+
+**The following information details the actual choices made by the alchemists in this particular game. These choices should be taken as given facts for solving the questions.**
+
+**Information about a specific game:**
+i. Cinnabar created a Philosopher's Stone Shard (PS) and did so in Round 1.
+ii. Aurum only created Silver (Ag) throughout the game, cast one Silver (Ag) spell in each of the three rounds, and thus spent 15 PP in total.
+iii. Beryl cast Gold (Au) in Round 1, Gold (Au) in Round 2, and Gold (Au) in Round 3.
+iv. Digen did not create any Gold (Au). Digen cast Silver (Ag) in Round 1 and Silver (Ag) in Round 2. In Round 3, Digen cast a Philosopher's Stone Shard (PS).
+v. No two alchemists had the same total VP at the end of the game, and Aurum had the lowest VP among the four.","What was Digen's remaining Energy Points (PP) at the end of the game?","50","60","70","75","A","B","C","D","B","MCQ","Logical Reasoning","Games & Tournaments","Difficult","","resource tracking (Energy), multi-round game logic, final state deduction","False","MOCKFNL017_Set1_Alchemist","","Initial State for all: Pb=100, PP=100.
+
+1.  **Cinnabar (C):** (Clue i) Creates PS in R1.
+    *   Cost: 30 Pb, 30 PP. VP gained: 10.
+    *   Game ends for Cinnabar after R1.
+    *   End state for C: Pb = 100 - 30 = 70. PP = 100 - 30 = 70. Total VP = 10.
+
+2.  **Aurum (A):** (Clue ii) Only Ag. Casts one Ag spell in R1, R2, R3.
+    *   Ag spell: 10 Pb, 5 PP, 2 VP.
+    *   R1: Ag. Pb=90, PP=95, VP_round=2.
+    *   R2: Ag. Pb=80, PP=90, VP_round=2.
+    *   R3: Ag. Pb=70, PP=85, VP_round=2.
+    *   Total PP spent = 3 * 5 = 15 PP (consistent with clue).
+    *   End state for A: Pb = 70. PP = 85. Total VP = 3 * 2 = 6.
+
+3.  **Beryl (B):** (Clue iii) Au in R1, R2, R3.
+    *   Au spell: 20 Pb, 15 PP, 5 VP.
+    *   R1: Au. Pb=80, PP=85, VP_round=5.
+    *   R2: Au. Pb=60, PP=70, VP_round=5.
+    *   R3: Au. Pb=40, PP=55, VP_round=5.
+    *   End state for B: Pb = 40. PP = 55. Total VP = 3 * 5 = 15.
+
+4.  **Digen (D):** (Clue iv) No Au. Ag in R1, Ag in R2. PS in R3.
+    *   R1: Ag (10Pb, 5PP, 2VP). State after R1: Pb=90, PP=95.
+    *   R2: Ag (10Pb, 5PP, 2VP). State after R2: Pb=80, PP=90.
+    *   R3: PS (30Pb, 30PP, 10VP). State after R3: Pb=50, PP=60.
+    *   Game ends for Digen after R3 (due to PS).
+    *   End state for D: Pb = 50. PP = 60. Total VP = 2 + 2 + 10 = 14.
+
+5.  **Final VP check (Clue v):**
+    *   Cinnabar: 10 VP
+    *   Aurum: 6 VP (Lowest)
+    *   Beryl: 15 VP
+    *   Digen: 14 VP
+    *   Scores: Beryl (15), Digen (14), Cinnabar (10), Aurum (6). All distinct, and Aurum is lowest. This is consistent with Clue v.
+
+Digen's PP consumption: R1 (Ag) cost 5 PP, R2 (Ag) cost 5 PP, R3 (PS) cost 30 PP. Total PP cost = 5 + 5 + 30 = 40 PP. Starting with 100 PP, Digen had 100 - 40 = 60 PP remaining."
+"LRDI","40","MOCKFNL017_Q6","6","MOCKFNL017_Set2_FoodGrain","A government agency manages the supply of three food grains – Rice, Wheat, and Maize – across four regions – North, South, East, and West – for the year 2023.
+
+**Definitions:**
+*   Demand: Required Tonnage of a grain in a region.
+*   Supply: Available Tonnage of a grain from a region's production.
+*   Deficit/Surplus for a grain in a region = Supply - Demand.
+*   Movement: Tonnage of a grain moved from a surplus region to a deficit region to cover deficits. Movements are made to fulfill deficits as much as possible from available surpluses.
+*   Landed Cost: Production Cost + Transportation Cost (per tonne).
+All Tonnage values are positive integers. All Costs are in INR per tonne and are positive integers.
+
+**Table 1: Demand and Supply Data for 2023 (Tonnage)**
+| Region | Grain | Demand | Supply |
+|--------|-------|--------|--------|
+| North  | Rice  | 1000   | A      |
+| North  | Wheat | 1500   | 1300   |
+| South  | Rice  | B      | 700    |
+| South  | Wheat | 1200   | C      |
+| East   | Maize | 500    | 600    |
+| West   | Maize | D      | 500    |
+
+**Table 2: Cost Data for 2023 (INR per tonne)**
+| Region | Grain | Production Cost | Transportation Cost (from this region) |
+|--------|-------|-----------------|----------------------------------------|
+| North  | Rice  | 2000            | E                                      |
+| North  | Wheat | 1800            | 400                                    |
+| South  | Rice  | F               | 600                                    |
+| South  | Wheat | 1900            | G                                      |
+| East   | Maize | 1500            | 300                                    |
+| West   | Maize | 1600            | 350                                    |
+
+**Additional Information:**
+1.  The supply of Rice from North (A) was 20% greater than its demand in North.
+2.  The demand for Rice in South (B) was 80% of the demand for Rice in North.
+3.  The supply of Wheat from South (C) created a surplus of 200 tonnes in the South region for Wheat.
+4.  The total demand for Maize in West (D) was 140% of the demand for Maize in East.
+5.  The Transportation Cost for Rice from North (E) was 25% of its Production Cost in North.
+6.  The Production Cost for Rice in South (F) was 10% higher than the Production Cost for Rice in North.
+7.  The Transportation Cost for Wheat from South (G) was 12.5% higher than the Transportation Cost for Wheat from North.
+8.  To cover the deficit of Rice in South, 100 tonnes of Rice were moved from North to South.
+9.  To cover the deficit of Wheat in North, all of South's Wheat surplus was moved to North.
+10. To cover part of the deficit of Maize in West, all of East's Maize surplus was moved to West.","What was the supply of Rice from North (A) in tonnes?","1100","1200","1250","1300","A","B","C","D","B","MCQ","Data Interpretation","Multi-Table Data Analysis","Moderate","","data deduction from table, percentage calculation, direct application of info","False","MOCKFNL017_Set2_FoodGrain","","Calculations based on additional information:
+1.  A (Supply Rice North) = Demand (North Rice) * 1.20 = 1000 * 1.20 = 1200 tonnes.
+2.  B (Demand Rice South) = Demand (North Rice) * 0.80 = 1000 * 0.80 = 800 tonnes.
+3.  C (Supply Wheat South) = Demand (South Wheat) + Surplus = 1200 + 200 = 1400 tonnes.
+4.  D (Demand Maize West) = Demand (East Maize) * 1.40 = 500 * 1.40 = 700 tonnes.
+5.  E (TransCost Rice North) = Prod Cost (North Rice) * 0.25 = 2000 * 0.25 = INR 500 per tonne.
+6.  F (ProdCost Rice South) = Prod Cost (North Rice) * 1.10 = 2000 * 1.10 = INR 2200 per tonne.
+7.  G (TransCost Wheat South) = Trans Cost (North Wheat) * 1.125 = 400 * 1.125 = INR 450 per tonne.
+
+From calculation 1, the supply of Rice from North (A) is 1200 tonnes."
+"LRDI","40","MOCKFNL017_Q7","7","MOCKFNL017_Set2_FoodGrain","A government agency manages the supply of three food grains – Rice, Wheat, and Maize – across four regions – North, South, East, and West – for the year 2023.
+
+**Definitions:**
+*   Demand: Required Tonnage of a grain in a region.
+*   Supply: Available Tonnage of a grain from a region's production.
+*   Deficit/Surplus for a grain in a region = Supply - Demand.
+*   Movement: Tonnage of a grain moved from a surplus region to a deficit region to cover deficits. Movements are made to fulfill deficits as much as possible from available surpluses.
+*   Landed Cost: Production Cost + Transportation Cost (per tonne).
+All Tonnage values are positive integers. All Costs are in INR per tonne and are positive integers.
+
+**Table 1: Demand and Supply Data for 2023 (Tonnage)**
+| Region | Grain | Demand | Supply |
+|--------|-------|--------|--------|
+| North  | Rice  | 1000   | A      |
+| North  | Wheat | 1500   | 1300   |
+| South  | Rice  | B      | 700    |
+| South  | Wheat | 1200   | C      |
+| East   | Maize | 500    | 600    |
+| West   | Maize | D      | 500    |
+
+**Table 2: Cost Data for 2023 (INR per tonne)**
+| Region | Grain | Production Cost | Transportation Cost (from this region) |
+|--------|-------|-----------------|----------------------------------------|
+| North  | Rice  | 2000            | E                                      |
+| North  | Wheat | 1800            | 400                                    |
+| South  | Rice  | F               | 600                                    |
+| South  | Wheat | 1900            | G                                      |
+| East   | Maize | 1500            | 300                                    |
+| West   | Maize | 1600            | 350                                    |
+
+**Additional Information:**
+1.  The supply of Rice from North (A) was 20% greater than its demand in North.
+2.  The demand for Rice in South (B) was 80% of the demand for Rice in North.
+3.  The supply of Wheat from South (C) created a surplus of 200 tonnes in the South region for Wheat.
+4.  The total demand for Maize in West (D) was 140% of the demand for Maize in East.
+5.  The Transportation Cost for Rice from North (E) was 25% of its Production Cost in North.
+6.  The Production Cost for Rice in South (F) was 10% higher than the Production Cost for Rice in North.
+7.  The Transportation Cost for Wheat from South (G) was 12.5% higher than the Transportation Cost for Wheat from North.
+8.  To cover the deficit of Rice in South, 100 tonnes of Rice were moved from North to South.
+9.  To cover the deficit of Wheat in North, all of South's Wheat surplus was moved to North.
+10. To cover part of the deficit of Maize in West, all of East's Maize surplus was moved to West.","What is the final deficit of Maize in the West region after all specified movements (in tonnes)?","0","50","100","150","A","B","C","D","C","MCQ","Data Interpretation","Multi-Table Data Analysis","Moderate","","deficit calculation, impact of movement, multi-step data processing","False","MOCKFNL017_Set2_FoodGrain","","Calculations based on additional information:
+1.  A (Supply Rice North) = 1200 tonnes.
+2.  B (Demand Rice South) = 800 tonnes.
+3.  C (Supply Wheat South) = 1400 tonnes.
+4.  D (Demand Maize West) = 700 tonnes.
+
+West Maize Demand (D) = 700 tonnes. West Maize Supply (from Table 1) = 500 tonnes.
+Initial Deficit in West for Maize = Demand - Supply = 700 - 500 = 200 tonnes.
+East Maize Supply = 600 tonnes. East Maize Demand = 500 tonnes.
+East Maize Surplus = Supply - Demand = 600 - 500 = 100 tonnes.
+According to Information 10, all of East's Maize surplus (100 tonnes) was moved to West.
+West's remaining deficit = Initial Deficit - Moved-In Tonnage = 200 - 100 = 100 tonnes."
+"LRDI","40","MOCKFNL017_Q8","8","MOCKFNL017_Set2_FoodGrain","A government agency manages the supply of three food grains – Rice, Wheat, and Maize – across four regions – North, South, East, and West – for the year 2023.
+
+**Definitions:**
+*   Demand: Required Tonnage of a grain in a region.
+*   Supply: Available Tonnage of a grain from a region's production.
+*   Deficit/Surplus for a grain in a region = Supply - Demand.
+*   Movement: Tonnage of a grain moved from a surplus region to a deficit region to cover deficits. Movements are made to fulfill deficits as much as possible from available surpluses.
+*   Landed Cost: Production Cost + Transportation Cost (per tonne).
+All Tonnage values are positive integers. All Costs are in INR per tonne and are positive integers.
+
+**Table 1: Demand and Supply Data for 2023 (Tonnage)**
+| Region | Grain | Demand | Supply |
+|--------|-------|--------|--------|
+| North  | Rice  | 1000   | A      |
+| North  | Wheat | 1500   | 1300   |
+| South  | Rice  | B      | 700    |
+| South  | Wheat | 1200   | C      |
+| East   | Maize | 500    | 600    |
+| West   | Maize | D      | 500    |
+
+**Table 2: Cost Data for 2023 (INR per tonne)**
+| Region | Grain | Production Cost | Transportation Cost (from this region) |
+|--------|-------|-----------------|----------------------------------------|
+| North  | Rice  | 2000            | E                                      |
+| North  | Wheat | 1800            | 400                                    |
+| South  | Rice  | F               | 600                                    |
+| South  | Wheat | 1900            | G                                      |
+| East   | Maize | 1500            | 300                                    |
+| West   | Maize | 1600            | 350                                    |
+
+**Additional Information:**
+1.  The supply of Rice from North (A) was 20% greater than its demand in North.
+2.  The demand for Rice in South (B) was 80% of the demand for Rice in North.
+3.  The supply of Wheat from South (C) created a surplus of 200 tonnes in the South region for Wheat.
+4.  The total demand for Maize in West (D) was 140% of the demand for Maize in East.
+5.  The Transportation Cost for Rice from North (E) was 25% of its Production Cost in North.
+6.  The Production Cost for Rice in South (F) was 10% higher than the Production Cost for Rice in North.
+7.  The Transportation Cost for Wheat from South (G) was 12.5% higher than the Transportation Cost for Wheat from North.
+8.  To cover the deficit of Rice in South, 100 tonnes of Rice were moved from North to South.
+9.  To cover the deficit of Wheat in North, all of South's Wheat surplus was moved to North.
+10. To cover part of the deficit of Maize in West, all of East's Maize surplus was moved to West.","What is the Landed Cost per tonne of Rice that arrived in South from North?","INR 2400","INR 2500","INR 2600","INR 2700","A","B","C","D","B","MCQ","Data Interpretation","Multi-Table Data Analysis","Moderate","","cost calculation, sum of components, data extraction","False","MOCKFNL017_Set2_FoodGrain","","Calculations based on additional information:
+1.  E (TransCost Rice North) = Prod Cost (North Rice) * 0.25 = 2000 * 0.25 = INR 500 per tonne.
+
+Landed Cost = Production Cost (origin) + Transportation Cost (from origin).
+For Rice moved from North to South:
+Production Cost (North Rice) = INR 2000 (from Table 2).
+Transportation Cost (from North Rice, E) = INR 500 (from calculation above).
+Landed Cost per tonne = 2000 + 500 = INR 2500."
+"LRDI","40","MOCKFNL017_Q9","9","MOCKFNL017_Set2_FoodGrain","A government agency manages the supply of three food grains – Rice, Wheat, and Maize – across four regions – North, South, East, and West – for the year 2023.
+
+**Definitions:**
+*   Demand: Required Tonnage of a grain in a region.
+*   Supply: Available Tonnage of a grain from a region's production.
+*   Deficit/Surplus for a grain in a region = Supply - Demand.
+*   Movement: Tonnage of a grain moved from a surplus region to a deficit region to cover deficits. Movements are made to fulfill deficits as much as possible from available surpluses.
+*   Landed Cost: Production Cost + Transportation Cost (per tonne).
+All Tonnage values are positive integers. All Costs are in INR per tonne and are positive integers.
+
+**Table 1: Demand and Supply Data for 2023 (Tonnage)**
+| Region | Grain | Demand | Supply |
+|--------|-------|--------|--------|
+| North  | Rice  | 1000   | A      |
+| North  | Wheat | 1500   | 1300   |
+| South  | Rice  | B      | 700    |
+| South  | Wheat | 1200   | C      |
+| East   | Maize | 500    | 600    |
+| West   | Maize | D      | 500    |
+
+**Table 2: Cost Data for 2023 (INR per tonne)**
+| Region | Grain | Production Cost | Transportation Cost (from this region) |
+|--------|-------|-----------------|----------------------------------------|
+| North  | Rice  | 2000            | E                                      |
+| North  | Wheat | 1800            | 400                                    |
+| South  | Rice  | F               | 600                                    |
+| South  | Wheat | 1900            | G                                      |
+| East   | Maize | 1500            | 300                                    |
+| West   | Maize | 1600            | 350                                    |
+
+**Additional Information:**
+1.  The supply of Rice from North (A) was 20% greater than its demand in North.
+2.  The demand for Rice in South (B) was 80% of the demand for Rice in North.
+3.  The supply of Wheat from South (C) created a surplus of 200 tonnes in the South region for Wheat.
+4.  The total demand for Maize in West (D) was 140% of the demand for Maize in East.
+5.  The Transportation Cost for Rice from North (E) was 25% of its Production Cost in North.
+6.  The Production Cost for Rice in South (F) was 10% higher than the Production Cost for Rice in North.
+7.  The Transportation Cost for Wheat from South (G) was 12.5% higher than the Transportation Cost for Wheat from North.
+8.  To cover the deficit of Rice in South, 100 tonnes of Rice were moved from North to South.
+9.  To cover the deficit of Wheat in North, all of South's Wheat surplus was moved to North.
+10. To cover part of the deficit of Maize in West, all of East's Maize surplus was moved to West.","What was the total Production Cost of all Rice and Wheat that was moved between regions (calculated at the production cost of the originating region)?","INR 680,000","INR 780,000","INR 580,000","INR 400,000","A","B","C","D","C","MCQ","Data Interpretation","Multi-Table Data Analysis","Moderate","","data aggregation, cost calculation, multi-source data","False","MOCKFNL017_Set2_FoodGrain","","We need to calculate the production cost for two movements:
+1.  Movement of Rice (Info 8): 100 tonnes of Rice from North to South.
+    - Production Cost of North Rice = INR 2000 per tonne (Table 2).
+    - Cost for this movement = 100 tonnes * 2000 INR/tonne = INR 200,000.
+
+2.  Movement of Wheat (Info 9): All of South's Wheat surplus moved to North.
+    - South's Wheat surplus = 200 tonnes (from Info 3).
+    - Production Cost of South Wheat = INR 1900 per tonne (Table 2).
+    - Cost for this movement = 200 tonnes * 1900 INR/tonne = INR 380,000.
+
+Total Production Cost of moved grains = 200,000 + 380,000 = INR 580,000."
+"LRDI","40","MOCKFNL017_Q10","10","MOCKFNL017_Set2_FoodGrain","A government agency manages the supply of three food grains – Rice, Wheat, and Maize – across four regions – North, South, East, and West – for the year 2023.
+
+**Definitions:**
+*   Demand: Required Tonnage of a grain in a region.
+*   Supply: Available Tonnage of a grain from a region's production.
+*   Deficit/Surplus for a grain in a region = Supply - Demand.
+*   Movement: Tonnage of a grain moved from a surplus region to a deficit region to cover deficits. Movements are made to fulfill deficits as much as possible from available surpluses.
+*   Landed Cost: Production Cost + Transportation Cost (per tonne).
+All Tonnage values are positive integers. All Costs are in INR per tonne and are positive integers.
+
+**Table 1: Demand and Supply Data for 2023 (Tonnage)**
+| Region | Grain | Demand | Supply |
+|--------|-------|--------|--------|
+| North  | Rice  | 1000   | A      |
+| North  | Wheat | 1500   | 1300   |
+| South  | Rice  | B      | 700    |
+| South  | Wheat | 1200   | C      |
+| East   | Maize | 500    | 600    |
+| West   | Maize | D      | 500    |
+
+**Table 2: Cost Data for 2023 (INR per tonne)**
+| Region | Grain | Production Cost | Transportation Cost (from this region) |
+|--------|-------|-----------------|----------------------------------------|
+| North  | Rice  | 2000            | E                                      |
+| North  | Wheat | 1800            | 400                                    |
+| South  | Rice  | F               | 600                                    |
+| South  | Wheat | 1900            | G                                      |
+| East   | Maize | 1500            | 300                                    |
+| West   | Maize | 1600            | 350                                    |
+
+**Additional Information:**
+1.  The supply of Rice from North (A) was 20% greater than its demand in North.
+2.  The demand for Rice in South (B) was 80% of the demand for Rice in North.
+3.  The supply of Wheat from South (C) created a surplus of 200 tonnes in the South region for Wheat.
+4.  The total demand for Maize in West (D) was 140% of the demand for Maize in East.
+5.  The Transportation Cost for Rice from North (E) was 25% of its Production Cost in North.
+6.  The Production Cost for Rice in South (F) was 10% higher than the Production Cost for Rice in North.
+7.  The Transportation Cost for Wheat from South (G) was 12.5% higher than the Transportation Cost for Wheat from North.
+8.  To cover the deficit of Rice in South, 100 tonnes of Rice were moved from North to South.
+9.  To cover the deficit of Wheat in North, all of South's Wheat surplus was moved to North.
+10. To cover part of the deficit of Maize in West, all of East's Maize surplus was moved to West.","If the West region had to fulfill its remaining Maize deficit from an external source at a Landed Cost of INR 2100 per tonne, what would be the total expenditure for these external tonnes?","INR 105,000","INR 210,000","INR 1,050,000","INR 2,100,000","A","B","C","D","B","MCQ","Data Interpretation","Multi-Table Data Analysis","Moderate","","conditional calculation, cost estimation, applying external data","False","MOCKFNL017_Set2_FoodGrain","","From the solution to Q7, the remaining Maize deficit in the West region is 100 tonnes.
+The external Landed Cost is given as INR 2100 per tonne.
+Total expenditure for these external tonnes = Remaining Deficit * External Landed Cost
+Total expenditure = 100 tonnes * 2100 INR/tonne = INR 210,000."
+"LRDI","40","MOCKFNL017_Q11","11","MOCKFNL017_Set3_Research","A university has three departments: Engineering (Eng), Science (Sci), and Humanities (Hum). The research output is measured by Journal Publications (JP), Conference Papers (CP), and Patents Filed (PF). Data is for the year 2023.
+
+**Definitions:**
+*   Total Research Units (TRU) for a department = (JP × 5) + (CP × 2) + (PF × 10).
+*   Faculty Strength: Number of professors in the department. All faculty counts are positive integers.
+*   TRU per Faculty = TRU / Faculty Strength.
+All counts (JP, CP, PF) are positive integers.
+
+**Table 1: Department Research Counts for 2023**
+| Department  | Journal Publications (JP) | Conference Papers (CP) | Patents Filed (PF) | Faculty Strength |
+|-------------|---------------------------|------------------------|--------------------|------------------|
+| Engineering | 40                        | A                      | 15                 | 25               |
+| Science     | B                         | 70                     | 10                 | C                |
+| Humanities  | 25                        | 50                     | D                  | 20               |
+
+**Table 2: Derived Metrics for 2023**
+| Department  | Total Research Units (TRU) | TRU per Faculty |
+|-------------|----------------------------|-----------------|
+| Engineering | E                          | F               |
+| Science     | G                          | 18.25           |
+| Humanities  | H                          | I               |
+
+**Additional Information:**
+1.  The number of Conference Papers for Engineering (A) was 30.
+2.  The total number of Journal Publications across all three departments was 90.
+3.  The number of Patents Filed by Humanities (D) was 5.
+4.  The TRU per Faculty for Engineering (F) was exactly 2.65 points higher than the TRU per Faculty for Humanities (I).
+5.  The total TRU for all three departments combined was 1050.","What was the number of Journal Publications for the Science department (B)?","20","25","30","35","A","B","C","D","B","MCQ","Data Interpretation","Hybrid DI-LR (Tables & Formulas)","Moderate","","data deduction, applying given info, sum constraint","False","MOCKFNL017_Set3_Research","","Let's first determine the missing values from the tables using the additional information.
+1.  A (Eng CP) = 30 (from Info 1).
+2.  D (Hum PF) = 5 (from Info 3).
+3.  Total JP = 90 (from Info 2). We know Eng JP = 40 and Hum JP = 25 from Table 1.
+    So, B (Sci JP) = Total JP - Eng JP - Hum JP = 90 - 40 - 25 = 25.
+
+Now we can calculate the TRU for each department:
+*   E (Eng TRU) = (40 × 5) + (30 × 2) + (15 × 10) = 200 + 60 + 150 = 410.
+*   G (Sci TRU) = (25 × 5) + (70 × 2) + (10 × 10) = 125 + 140 + 100 = 365.
+*   H (Hum TRU) = (25 × 5) + (50 × 2) + (5 × 10) = 125 + 100 + 50 = 275.
+(Check: Total TRU = 410 + 365 + 275 = 1050, which matches Info 5).
+
+Now calculate other missing values:
+*   C (Sci Faculty Strength): We know G (Sci TRU) = 365 and Sci TRU per Faculty = 18.25. So, C = 365 / 18.25 = 20.
+*   F (Eng TRU per Fac) = E / Eng Fac Strength = 410 / 25 = 16.4.
+*   I (Hum TRU per Fac) = H / Hum Fac Strength = 275 / 20 = 13.75.
+(Check: F = I + 2.65 => 16.4 = 13.75 + 2.65, which is correct and matches Info 4).
+
+From step 3 of the analysis, the number of Journal Publications for the Science department (B) is 25."
+"LRDI","40","MOCKFNL017_Q12","12","MOCKFNL017_Set3_Research","A university has three departments: Engineering (Eng), Science (Sci), and Humanities (Hum). The research output is measured by Journal Publications (JP), Conference Papers (CP), and Patents Filed (PF). Data is for the year 2023.
+
+**Definitions:**
+*   Total Research Units (TRU) for a department = (JP × 5) + (CP × 2) + (PF × 10).
+*   Faculty Strength: Number of professors in the department. All faculty counts are positive integers.
+*   TRU per Faculty = TRU / Faculty Strength.
+All counts (JP, CP, PF) are positive integers.
+
+**Table 1: Department Research Counts for 2023**
+| Department  | Journal Publications (JP) | Conference Papers (CP) | Patents Filed (PF) | Faculty Strength |
+|-------------|---------------------------|------------------------|--------------------|------------------|
+| Engineering | 40                        | A                      | 15                 | 25               |
+| Science     | B                         | 70                     | 10                 | C                |
+| Humanities  | 25                        | 50                     | D                  | 20               |
+
+**Table 2: Derived Metrics for 2023**
+| Department  | Total Research Units (TRU) | TRU per Faculty |
+|-------------|----------------------------|-----------------|
+| Engineering | E                          | F               |
+| Science     | G                          | 18.25           |
+| Humanities  | H                          | I               |
+
+**Additional Information:**
+1.  The number of Conference Papers for Engineering (A) was 30.
+2.  The total number of Journal Publications across all three departments was 90.
+3.  The number of Patents Filed by Humanities (D) was 5.
+4.  The TRU per Faculty for Engineering (F) was exactly 2.65 points higher than the TRU per Faculty for Humanities (I).
+5.  The total TRU for all three departments combined was 1050.","What was the Faculty Strength for the Science department (C)?","20","25","30","35","A","B","C","D","A","MCQ","Data Interpretation","Hybrid DI-LR (Tables & Formulas)","Moderate","","formula application (TRU per Faculty), solving for unknown, integer constraint","False","MOCKFNL017_Set3_Research","","Let's first determine the missing values from the tables using the additional information.
+1.  A (Eng CP) = 30 (from Info 1).
+2.  D (Hum PF) = 5 (from Info 3).
+3.  Total JP = 90 (from Info 2). We know Eng JP = 40 and Hum JP = 25. So, B (Sci JP) = 90 - 40 - 25 = 25.
+
+Now we can calculate the TRU for each department:
+*   E (Eng TRU) = (40 × 5) + (30 × 2) + (15 × 10) = 410.
+*   G (Sci TRU) = (25 × 5) + (70 × 2) + (10 × 10) = 125 + 140 + 100 = 365.
+*   H (Hum TRU) = (25 × 5) + (50 × 2) + (5 × 10) = 275.
+
+Now calculate other missing values:
+*   C (Sci Faculty Strength): We know G (Sci TRU) = 365 and Sci TRU per Faculty = 18.25 from Table 2. Since TRU per Faculty = TRU / Faculty Strength, we have Faculty Strength = TRU / TRU per Faculty. So, C = 365 / 18.25 = 20.
+*   F (Eng TRU per Fac) = E / Eng Fac Strength = 410 / 25 = 16.4.
+*   I (Hum TRU per Fac) = H / Hum Fac Strength = 275 / 20 = 13.75.
+
+The Faculty Strength for the Science department (C) is 20."
+"LRDI","40","MOCKFNL017_Q13","13","MOCKFNL017_Set3_Research","A university has three departments: Engineering (Eng), Science (Sci), and Humanities (Hum). The research output is measured by Journal Publications (JP), Conference Papers (CP), and Patents Filed (PF). Data is for the year 2023.
+
+**Definitions:**
+*   Total Research Units (TRU) for a department = (JP × 5) + (CP × 2) + (PF × 10).
+*   Faculty Strength: Number of professors in the department. All faculty counts are positive integers.
+*   TRU per Faculty = TRU / Faculty Strength.
+All counts (JP, CP, PF) are positive integers.
+
+**Table 1: Department Research Counts for 2023**
+| Department  | Journal Publications (JP) | Conference Papers (CP) | Patents Filed (PF) | Faculty Strength |
+|-------------|---------------------------|------------------------|--------------------|------------------|
+| Engineering | 40                        | A                      | 15                 | 25               |
+| Science     | B                         | 70                     | 10                 | C                |
+| Humanities  | 25                        | 50                     | D                  | 20               |
+
+**Table 2: Derived Metrics for 2023**
+| Department  | Total Research Units (TRU) | TRU per Faculty |
+|-------------|----------------------------|-----------------|
+| Engineering | E                          | F               |
+| Science     | G                          | 18.25           |
+| Humanities  | H                          | I               |
+
+**Additional Information:**
+1.  The number of Conference Papers for Engineering (A) was 30.
+2.  The total number of Journal Publications across all three departments was 90.
+3.  The number of Patents Filed by Humanities (D) was 5.
+4.  The TRU per Faculty for Engineering (F) was exactly 2.65 points higher than the TRU per Faculty for Humanities (I).
+5.  The total TRU for all three departments combined was 1050.","What was the Total Research Units (TRU) for the Engineering department (E)?","380","390","400","410","A","B","C","D","D","MCQ","Data Interpretation","Hybrid DI-LR (Tables & Formulas)","Moderate","","TRU calculation, using derived values, formula application","False","MOCKFNL017_Set3_Research","","Let's first determine the missing values from the tables using the additional information.
+1.  A (Eng CP) = 30 (from Info 1).
+2.  D (Hum PF) = 5 (from Info 3).
+3.  B (Sci JP) is not needed for this question but was found to be 25.
+
+Now we can calculate the TRU for the Engineering department (E) using the formula: TRU = (JP × 5) + (CP × 2) + (PF × 10).
+From Table 1, for Engineering:
+*   JP = 40
+*   CP (A) = 30
+*   PF = 15
+
+E (Eng TRU) = (40 × 5) + (30 × 2) + (15 × 10) = 200 + 60 + 150 = 410.
+
+The Total Research Units (TRU) for the Engineering department is 410."
+"LRDI","40","MOCKFNL017_Q14","14","MOCKFNL017_Set3_Research","A university has three departments: Engineering (Eng), Science (Sci), and Humanities (Hum). The research output is measured by Journal Publications (JP), Conference Papers (CP), and Patents Filed (PF). Data is for the year 2023.
+
+**Definitions:**
+*   Total Research Units (TRU) for a department = (JP × 5) + (CP × 2) + (PF × 10).
+*   Faculty Strength: Number of professors in the department. All faculty counts are positive integers.
+*   TRU per Faculty = TRU / Faculty Strength.
+All counts (JP, CP, PF) are positive integers.
+
+**Table 1: Department Research Counts for 2023**
+| Department  | Journal Publications (JP) | Conference Papers (CP) | Patents Filed (PF) | Faculty Strength |
+|-------------|---------------------------|------------------------|--------------------|------------------|
+| Engineering | 40                        | A                      | 15                 | 25               |
+| Science     | B                         | 70                     | 10                 | C                |
+| Humanities  | 25                        | 50                     | D                  | 20               |
+
+**Table 2: Derived Metrics for 2023**
+| Department  | Total Research Units (TRU) | TRU per Faculty |
+|-------------|----------------------------|-----------------|
+| Engineering | E                          | F               |
+| Science     | G                          | 18.25           |
+| Humanities  | H                          | I               |
+
+**Additional Information:**
+1.  The number of Conference Papers for Engineering (A) was 30.
+2.  The total number of Journal Publications across all three departments was 90.
+3.  The number of Patents Filed by Humanities (D) was 5.
+4.  The TRU per Faculty for Engineering (F) was exactly 2.65 points higher than the TRU per Faculty for Humanities (I).
+5.  The total TRU for all three departments combined was 1050.","Which department had the lowest TRU per Faculty?","Engineering","Science","Humanities","Science and Humanities had the same lowest TRU per Faculty","A","B","C","D","C","MCQ","Data Interpretation","Hybrid DI-LR (Tables & Formulas)","Moderate","","comparative analysis (TRU per Faculty), identifying minimum","False","MOCKFNL017_Set3_Research","","To answer this, we need to calculate the TRU per Faculty for all three departments.
+
+From the previous solutions' analysis:
+*   E (Eng TRU) = 410. Eng Faculty = 25. So, F (Eng TRU per Fac) = 410 / 25 = 16.4.
+*   Science TRU per Faculty is given as 18.25 in Table 2.
+*   H (Hum TRU) = 275. Hum Faculty = 20. So, I (Hum TRU per Fac) = 275 / 20 = 13.75.
+
+Comparing the TRU per Faculty values:
+*   Engineering: 16.4
+*   Science: 18.25
+*   Humanities: 13.75
+
+The lowest value is 13.75, which belongs to the Humanities department."
+"LRDI","40","MOCKFNL017_Q15","15","MOCKFNL017_Set4_SummitDinner","Eight representatives – P, Q, R, S, T, U, V, and W – are seated around a circular table for a dinner, all facing the center. Each representative is from a different one of eight countries (Argentina, Brazil, China, Denmark, Egypt, France, Ghana, Hungary) and prefers a different one of eight main courses (Steak, Pasta, Sushi, Biryani, Tacos, Paella, Curry, Goulash).
+
+**Clues:**
+1.  P, who is from Argentina, prefers Goulash. U, who is from Ghana and prefers Curry, sits directly opposite P.
+2.  Q prefers Steak and is from Brazil. V, who is from Hungary and prefers Biryani, sits immediately to the left of Q.
+3.  R, who is from Denmark, prefers Paella and sits immediately to the right of U.
+4.  S is from China and prefers Sushi. S sits immediately to the left of T. P is an immediate neighbor of S.
+5.  T is from Egypt and prefers Tacos. Q (Brazil) sits directly opposite W (France).
+6.  W is from France and prefers Pasta. W sits between T and U such that if one moves clockwise from T, one encounters W before U.","Who is from Brazil?","P","Q","T","V","A","B","C","D","B","MCQ","Logical Reasoning","Circular Arrangement","Difficult","","multi-parameter arrangement, deductive logic, constraint satisfaction, spatial reasoning","False","MOCKFNL017_Set4_SummitDinner","","Let's map the circular arrangement step-by-step (assuming 8 seats numbered 1 to 8 clockwise):
+1.  Place P (Argentina, Goulash) at seat 1. U (Ghana, Curry) sits opposite P, so U is at seat 5. (Clue 1)
+    `1:P, 5:U`
+2.  R (Denmark, Paella) sits immediately to the right of U. U is at 5, so R is at seat 6. (Clue 3)
+    `1:P, 5:U, 6:R(Den,Pae)`
+3.  W (France, Pasta) sits between T and U, clockwise from T (T-W-U). W is also from France and prefers Pasta. (Clue 6). With U at 5 and R at 6, this means W must be at seat 4 and T at seat 3.
+    `1:P, 3:T, 4:W(Fra,Pas), 5:U(Gha,Cur), 6:R(Den,Pae)`
+4.  Q (Brazil) sits directly opposite W (France). W is at seat 4, so Q is at seat 8. (Clue 5). From Clue 2, Q prefers Steak and is from Brazil.
+    `... 8:Q(Bra,Steak)`
+5.  V (Hungary, Biryani) sits immediately to the left of Q. Q is at 8, so V is at seat 7. (Clue 2)
+    `... 7:V(Hun,Bir), 8:Q(Bra,Steak)`
+6.  S (China, Sushi) sits immediately to the left of T. T is at 3, so S is at seat 2. The clue also says P is a neighbor of S, which is true as P is at 1. (Clue 4)
+    `1:P, 2:S(Chi,Sus), 3:T ...`
+7.  T is from Egypt and prefers Tacos. (Clue 5)
+    `3:T(Egy,Tac)`
+
+Final Arrangement (Clockwise from P at Seat 1):
+1.  P (Argentina, Goulash)
+2.  S (China, Sushi)
+3.  T (Egypt, Tacos)
+4.  W (France, Pasta)
+5.  U (Ghana, Curry)
+6.  R (Denmark, Paella)
+7.  V (Hungary, Biryani)
+8.  Q (Brazil, Steak)
+
+From the final arrangement, Q is the representative from Brazil."
+"LRDI","40","MOCKFNL017_Q16","16","MOCKFNL017_Set4_SummitDinner","Eight representatives – P, Q, R, S, T, U, V, and W – are seated around a circular table for a dinner, all facing the center. Each representative is from a different one of eight countries (Argentina, Brazil, China, Denmark, Egypt, France, Ghana, Hungary) and prefers a different one of eight main courses (Steak, Pasta, Sushi, Biryani, Tacos, Paella, Curry, Goulash).
+
+**Clues:**
+1.  P, who is from Argentina, prefers Goulash. U, who is from Ghana and prefers Curry, sits directly opposite P.
+2.  Q prefers Steak and is from Brazil. V, who is from Hungary and prefers Biryani, sits immediately to the left of Q.
+3.  R, who is from Denmark, prefers Paella and sits immediately to the right of U.
+4.  S is from China and prefers Sushi. S sits immediately to the left of T. P is an immediate neighbor of S.
+5.  T is from Egypt and prefers Tacos. Q (Brazil) sits directly opposite W (France).
+6.  W is from France and prefers Pasta. W sits between T and U such that if one moves clockwise from T, one encounters W before U.","What main course does the representative from Denmark prefer?","Steak","Pasta","Goulash","Paella","A","B","C","D","D","MCQ","Logical Reasoning","Circular Arrangement","Difficult","","attribute matching, deductive logic, spatial reasoning","False","MOCKFNL017_Set4_SummitDinner","","Let's map the circular arrangement step-by-step (assuming 8 seats numbered 1 to 8 clockwise):
+1.  Place P (Argentina, Goulash) at seat 1. U (Ghana, Curry) sits opposite P, so U is at seat 5. (Clue 1)
+    `1:P, 5:U`
+2.  R (Denmark, Paella) sits immediately to the right of U. U is at 5, so R is at seat 6. (Clue 3)
+    `1:P, 5:U, 6:R(Den,Pae)`
+3.  W (France, Pasta) sits between T and U, clockwise from T (T-W-U). W is also from France and prefers Pasta. (Clue 6). With U at 5 and R at 6, this means W must be at seat 4 and T at seat 3.
+    `1:P, 3:T, 4:W(Fra,Pas), 5:U(Gha,Cur), 6:R(Den,Pae)`
+4.  Q (Brazil) sits directly opposite W (France). W is at seat 4, so Q is at seat 8. (Clue 5). From Clue 2, Q prefers Steak and is from Brazil.
+    `... 8:Q(Bra,Steak)`
+5.  V (Hungary, Biryani) sits immediately to the left of Q. Q is at 8, so V is at seat 7. (Clue 2)
+    `... 7:V(Hun,Bir), 8:Q(Bra,Steak)`
+6.  S (China, Sushi) sits immediately to the left of T. T is at 3, so S is at seat 2. The clue also says P is a neighbor of S, which is true as P is at 1. (Clue 4)
+    `1:P, 2:S(Chi,Sus), 3:T ...`
+7.  T is from Egypt and prefers Tacos. (Clue 5)
+    `3:T(Egy,Tac)`
+
+Final Arrangement (Clockwise from P at Seat 1):
+1.  P (Argentina, Goulash)
+2.  S (China, Sushi)
+3.  T (Egypt, Tacos)
+4.  W (France, Pasta)
+5.  U (Ghana, Curry)
+6.  R (Denmark, Paella)
+7.  V (Hungary, Biryani)
+8.  Q (Brazil, Steak)
+
+From the final arrangement, the representative from Denmark is R, who prefers Paella."
+"LRDI","40","MOCKFNL017_Q17","17","MOCKFNL017_Set4_SummitDinner","Eight representatives – P, Q, R, S, T, U, V, and W – are seated around a circular table for a dinner, all facing the center. Each representative is from a different one of eight countries (Argentina, Brazil, China, Denmark, Egypt, France, Ghana, Hungary) and prefers a different one of eight main courses (Steak, Pasta, Sushi, Biryani, Tacos, Paella, Curry, Goulash).
+
+**Clues:**
+1.  P, who is from Argentina, prefers Goulash. U, who is from Ghana and prefers Curry, sits directly opposite P.
+2.  Q prefers Steak and is from Brazil. V, who is from Hungary and prefers Biryani, sits immediately to the left of Q.
+3.  R, who is from Denmark, prefers Paella and sits immediately to the right of U.
+4.  S is from China and prefers Sushi. S sits immediately to the left of T. P is an immediate neighbor of S.
+5.  T is from Egypt and prefers Tacos. Q (Brazil) sits directly opposite W (France).
+6.  W is from France and prefers Pasta. W sits between T and U such that if one moves clockwise from T, one encounters W before U.","Who sits third to the right of the representative from France?","The representative from Argentina","The representative who prefers Sushi","The representative from Hungary","The representative from Brazil","A","B","C","D","C","MCQ","Logical Reasoning","Circular Arrangement","Difficult","","relative positioning, spatial reasoning, clockwise/counter-clockwise","False","MOCKFNL017_Set4_SummitDinner","","Let's map the circular arrangement step-by-step (assuming 8 seats numbered 1 to 8 clockwise):
+1.  Place P (Argentina, Goulash) at seat 1. U (Ghana, Curry) sits opposite P, so U is at seat 5. (Clue 1)
+    `1:P, 5:U`
+2.  R (Denmark, Paella) sits immediately to the right of U. U is at 5, so R is at seat 6. (Clue 3)
+    `1:P, 5:U, 6:R(Den,Pae)`
+3.  W (France, Pasta) sits between T and U, clockwise from T (T-W-U). W is also from France and prefers Pasta. (Clue 6). With U at 5 and R at 6, this means W must be at seat 4 and T at seat 3.
+    `1:P, 3:T, 4:W(Fra,Pas), 5:U(Gha,Cur), 6:R(Den,Pae)`
+4.  Q (Brazil) sits directly opposite W (France). W is at seat 4, so Q is at seat 8. (Clue 5). From Clue 2, Q prefers Steak and is from Brazil.
+    `... 8:Q(Bra,Steak)`
+5.  V (Hungary, Biryani) sits immediately to the left of Q. Q is at 8, so V is at seat 7. (Clue 2)
+    `... 7:V(Hun,Bir), 8:Q(Bra,Steak)`
+6.  S (China, Sushi) sits immediately to the left of T. T is at 3, so S is at seat 2. The clue also says P is a neighbor of S, which is true as P is at 1. (Clue 4)
+    `1:P, 2:S(Chi,Sus), 3:T ...`
+7.  T is from Egypt and prefers Tacos. (Clue 5)
+    `3:T(Egy,Tac)`
+
+Final Arrangement (Clockwise from P at Seat 1):
+1.  P (Argentina, Goulash)
+2.  S (China, Sushi)
+3.  T (Egypt, Tacos)
+4.  W (France, Pasta)
+5.  U (Ghana, Curry)
+6.  R (Denmark, Paella)
+7.  V (Hungary, Biryani)
+8.  Q (Brazil, Steak)
+
+The representative from France is W, who is at seat 4. Moving clockwise (to the right):
+- 1st to the right: U (at seat 5)
+- 2nd to the right: R (at seat 6)
+- 3rd to the right: V (at seat 7)
+Representative V is from Hungary."
+"LRDI","40","MOCKFNL017_Q18","18","MOCKFNL017_Set4_SummitDinner","Eight representatives – P, Q, R, S, T, U, V, and W – are seated around a circular table for a dinner, all facing the center. Each representative is from a different one of eight countries (Argentina, Brazil, China, Denmark, Egypt, France, Ghana, Hungary) and prefers a different one of eight main courses (Steak, Pasta, Sushi, Biryani, Tacos, Paella, Curry, Goulash).
+
+**Clues:**
+1.  P, who is from Argentina, prefers Goulash. U, who is from Ghana and prefers Curry, sits directly opposite P.
+2.  Q prefers Steak and is from Brazil. V, who is from Hungary and prefers Biryani, sits immediately to the left of Q.
+3.  R, who is from Denmark, prefers Paella and sits immediately to the right of U.
+4.  S is from China and prefers Sushi. S sits immediately to the left of T. P is an immediate neighbor of S.
+5.  T is from Egypt and prefers Tacos. Q (Brazil) sits directly opposite W (France).
+6.  W is from France and prefers Pasta. W sits between T and U such that if one moves clockwise from T, one encounters W before U.","Which of the following statements is false?","T is from Egypt and prefers Tacos.","The representative from Denmark prefers Paella.","V is from Hungary and prefers Biryani.","S sits opposite W.","A","B","C","D","D","MCQ","Logical Reasoning","Circular Arrangement","Difficult","","statement verification, deductive logic, identifying false statement, attribute matching","False","MOCKFNL017_Set4_SummitDinner","","Let's map the circular arrangement step-by-step (assuming 8 seats numbered 1 to 8 clockwise):
+1.  Place P (Argentina, Goulash) at seat 1. U (Ghana, Curry) sits opposite P, so U is at seat 5. (Clue 1)
+    `1:P, 5:U`
+2.  R (Denmark, Paella) sits immediately to the right of U. U is at 5, so R is at seat 6. (Clue 3)
+    `1:P, 5:U, 6:R(Den,Pae)`
+3.  W (France, Pasta) sits between T and U, clockwise from T (T-W-U). W is also from France and prefers Pasta. (Clue 6). With U at 5 and R at 6, this means W must be at seat 4 and T at seat 3.
+    `1:P, 3:T, 4:W(Fra,Pas), 5:U(Gha,Cur), 6:R(Den,Pae)`
+4.  Q (Brazil) sits directly opposite W (France). W is at seat 4, so Q is at seat 8. (Clue 5). From Clue 2, Q prefers Steak and is from Brazil.
+    `... 8:Q(Bra,Steak)`
+5.  V (Hungary, Biryani) sits immediately to the left of Q. Q is at 8, so V is at seat 7. (Clue 2)
+    `... 7:V(Hun,Bir), 8:Q(Bra,Steak)`
+6.  S (China, Sushi) sits immediately to the left of T. T is at 3, so S is at seat 2. The clue also says P is a neighbor of S, which is true as P is at 1. (Clue 4)
+    `1:P, 2:S(Chi,Sus), 3:T ...`
+7.  T is from Egypt and prefers Tacos. (Clue 5)
+    `3:T(Egy,Tac)`
+
+Final Arrangement (Clockwise from P at Seat 1):
+1.  P (Argentina, Goulash)
+2.  S (China, Sushi)
+3.  T (Egypt, Tacos)
+4.  W (France, Pasta)
+5.  U (Ghana, Curry)
+6.  R (Denmark, Paella)
+7.  V (Hungary, Biryani)
+8.  Q (Brazil, Steak)
+
+Let's check each statement:
+A) T is from Egypt and prefers Tacos. - True, from the arrangement.
+B) The representative from Denmark prefers Paella. - True, R is from Denmark and prefers Paella.
+C) V is from Hungary and prefers Biryani. - True, from the arrangement.
+D) S sits opposite W. - S is at seat 2. W is at seat 4. The person opposite S (seat 2) would be at seat 6 (R). So, this statement is false."
+"LRDI","40","MOCKFNL017_Q19","19","MOCKFNL017_Set5_ArtifactGrid","A museum displays 16 artifacts in a 4x4 grid. Each artifact belongs to one of four Civilizations (Alpha, Beta, Gamma, Delta) and is made of one of four Materials (Gold, Silver, Bronze, Jade). For brevity, Civilizations are D1(Alpha), D2(Beta), D3(Gamma), D4(Delta) and Materials are M1(Gold), M2(Silver), M3(Bronze), M4(Jade).
+Grid Cells are denoted by (Row, Column).
+
+**Rules:**
+1.  Each row contains exactly one artifact from each of the four Civilizations.
+2.  Each column contains exactly one artifact from each of the four Civilizations.
+3.  Each row contains exactly one artifact made of each of the four Materials.
+4.  Each column contains exactly one artifact made of each of the four Materials.
+
+**Known Information:**
+i. The artifact at (1,1) is (Alpha, Gold).
+ii. The artifact at (1,2) is (Beta, Jade).
+iii. The artifact at (2,1) is (Gamma, Silver).
+iv. The artifact at (2,2) is (Alpha, Bronze).
+v. The artifact at (3,4) is (Alpha, Silver).
+vi. The artifact at (4,4) is (Gamma, Gold).
+vii. The artifact at (1,3) is (Gamma, Silver).
+viii. The artifact at (4,1) is (Beta, Jade).
+ix. The artifact at (3,2) is (Gamma, Gold).
+x. The artifact at (2,4) is (Beta, Jade).
+xi. The artifact at (3,3) is (Beta, Jade).","What is the Civilization and Material of the artifact at (1,4)?","(Delta, Bronze)","(Delta, Silver)","(Alpha, Bronze)","(Gamma, Jade)","A","B","C","D","A","MCQ","Logical Reasoning","Grid Puzzle","Difficult","","Latin Square logic, multi-attribute grid, constraint satisfaction, cell deduction","False","MOCKFNL017_Set5_ArtifactGrid","","Let's decode the information and fill the grid. D1=Alpha, D2=Beta, D3=Gamma, D4=Delta; M1=Gold, M2=Silver, M3=Bronze, M4=Jade.
+
+Initial Grid from given clues:
+Row 1: (D1,M1) (D2,M4) (D3,M2) ( , )
+Row 2: (D3,M2) (D1,M3) ( , )   (D2,M4)
+Row 3: ( , )   (D3,M1) (D2,M4) (D1,M2)
+Row 4: (D2,M4) ( , )   ( , )   (D3,M1)
+
+Let's deduce the empty cells based on the rules (each row/column must have one of each D1-D4 and M1-M4).
+
+**Step 1: Cell (1,4)**
+- Row 1 Civilizations: D1, D2, D3 are used. D4 (Delta) must be in (1,4).
+- Row 1 Materials: M1, M4, M2 are used. M3 (Bronze) must be in (1,4).
+- So, (1,4) is (D4, M3) = (Delta, Bronze).
+
+**Step 2: Complete the grid (for other questions)**
+- **Cell (3,1):** Col 1 has D1, D3, D2. Needs D4. Col 1 has M1, M2, M4. Needs M3. So (3,1) is (D4, M3).
+- **Cell (2,3):** Row 2 has D3, D1, D2. Needs D4. Row 2 has M2, M3, M4. Needs M1. So (2,3) is (D4, M1).
+- **Cell (4,2):** Col 2 has D2, D1, D3. Needs D4. Col 2 has M4, M3, M1. Needs M2. So (4,2) is (D4, M2).
+- **Cell (4,3):** Row 4 has D2, D4, D3. Needs D1. Row 4 has M4, M2, M1. Needs M3. So (4,3) is (D1, M3).
+
+Final Grid:
+| Cell  | Civilization, Material |
+|-------|------------------------|
+| (1,1) | (D1,M1) Alpha, Gold    |
+| (1,2) | (D2,M4) Beta, Jade     |
+| (1,3) | (D3,M2) Gamma, Silver  |
+| (1,4) | (D4,M3) Delta, Bronze  |
+| (2,1) | (D3,M2) Gamma, Silver  |
+| (2,2) | (D1,M3) Alpha, Bronze  |
+| (2,3) | (D4,M1) Delta, Gold    |
+| (2,4) | (D2,M4) Beta, Jade     |
+| (3,1) | (D4,M3) Delta, Bronze  |
+| (3,2) | (D3,M1) Gamma, Gold    |
+| (3,3) | (D2,M4) Beta, Jade     |
+| (3,4) | (D1,M2) Alpha, Silver  |
+| (4,1) | (D2,M4) Beta, Jade     |
+| (4,2) | (D4,M2) Delta, Silver  |
+| (4,3) | (D1,M3) Alpha, Bronze  |
+| (4,4) | (D3,M1) Gamma, Gold    |
+
+Based on Step 1, the artifact at (1,4) is (D4, M3), which is (Delta, Bronze)."
+"LRDI","40","MOCKFNL017_Q20","20","MOCKFNL017_Set5_ArtifactGrid","A museum displays 16 artifacts in a 4x4 grid. Each artifact belongs to one of four Civilizations (Alpha, Beta, Gamma, Delta) and is made of one of four Materials (Gold, Silver, Bronze, Jade). For brevity, Civilizations are D1(Alpha), D2(Beta), D3(Gamma), D4(Delta) and Materials are M1(Gold), M2(Silver), M3(Bronze), M4(Jade).
+Grid Cells are denoted by (Row, Column).
+
+**Rules:**
+1.  Each row contains exactly one artifact from each of the four Civilizations.
+2.  Each column contains exactly one artifact from each of the four Civilizations.
+3.  Each row contains exactly one artifact made of each of the four Materials.
+4.  Each column contains exactly one artifact made of each of the four Materials.
+
+**Known Information:**
+i. The artifact at (1,1) is (Alpha, Gold).
+ii. The artifact at (1,2) is (Beta, Jade).
+iii. The artifact at (2,1) is (Gamma, Silver).
+iv. The artifact at (2,2) is (Alpha, Bronze).
+v. The artifact at (3,4) is (Alpha, Silver).
+vi. The artifact at (4,4) is (Gamma, Gold).
+vii. The artifact at (1,3) is (Gamma, Silver).
+viii. The artifact at (4,1) is (Beta, Jade).
+ix. The artifact at (3,2) is (Gamma, Gold).
+x. The artifact at (2,4) is (Beta, Jade).
+xi. The artifact at (3,3) is (Beta, Jade).","What is the Material of the artifact at (4,2)?","Gold","Silver","Bronze","Jade","A","B","C","D","B","MCQ","Logical Reasoning","Grid Puzzle","Difficult","","Latin Square logic, data deduction, attribute identification","False","MOCKFNL017_Set5_ArtifactGrid","","Let's decode the information and fill the grid. D1=Alpha, D2=Beta, D3=Gamma, D4=Delta; M1=Gold, M2=Silver, M3=Bronze, M4=Jade.
+
+Initial Grid from given clues:
+Row 1: (D1,M1) (D2,M4) (D3,M2) ( , )
+Row 2: (D3,M2) (D1,M3) ( , )   (D2,M4)
+Row 3: ( , )   (D3,M1) (D2,M4) (D1,M2)
+Row 4: (D2,M4) ( , )   ( , )   (D3,M1)
+
+Let's deduce the empty cells based on the rules (each row/column must have one of each D1-D4 and M1-M4).
+
+**Deduction for Cell (4,2):**
+- Column 2 Civilizations: D2 (at 1,2), D1 (at 2,2), D3 (at 3,2) are used. D4 (Delta) must be in (4,2).
+- Column 2 Materials: M4 (at 1,2), M3 (at 2,2), M1 (at 3,2) are used. M2 (Silver) must be in (4,2).
+- So, (4,2) is (D4, M2) = (Delta, Silver).
+
+The Material of the artifact at (4,2) is M2, which is Silver."
+"LRDI","40","MOCKFNL017_Q21","21","MOCKFNL017_Set5_ArtifactGrid","A museum displays 16 artifacts in a 4x4 grid. Each artifact belongs to one of four Civilizations (Alpha, Beta, Gamma, Delta) and is made of one of four Materials (Gold, Silver, Bronze, Jade). For brevity, Civilizations are D1(Alpha), D2(Beta), D3(Gamma), D4(Delta) and Materials are M1(Gold), M2(Silver), M3(Bronze), M4(Jade).
+Grid Cells are denoted by (Row, Column).
+
+**Rules:**
+1.  Each row contains exactly one artifact from each of the four Civilizations.
+2.  Each column contains exactly one artifact from each of the four Civilizations.
+3.  Each row contains exactly one artifact made of each of the four Materials.
+4.  Each column contains exactly one artifact made of each of the four Materials.
+
+**Known Information:**
+i. The artifact at (1,1) is (Alpha, Gold).
+ii. The artifact at (1,2) is (Beta, Jade).
+iii. The artifact at (2,1) is (Gamma, Silver).
+iv. The artifact at (2,2) is (Alpha, Bronze).
+v. The artifact at (3,4) is (Alpha, Silver).
+vi. The artifact at (4,4) is (Gamma, Gold).
+vii. The artifact at (1,3) is (Gamma, Silver).
+viii. The artifact at (4,1) is (Beta, Jade).
+ix. The artifact at (3,2) is (Gamma, Gold).
+x. The artifact at (2,4) is (Beta, Jade).
+xi. The artifact at (3,3) is (Beta, Jade).","What are the Civilization and Material of the artifact at (3,1)?","(Alpha, Bronze)","(Beta, Silver)","(Delta, Bronze)","(Gamma, Jade)","A","B","C","D","C","MCQ","Logical Reasoning","Grid Puzzle","Difficult","","Latin Square logic, attribute identification, cell deduction","False","MOCKFNL017_Set5_ArtifactGrid","","Let's decode the information and fill the grid. D1=Alpha, D2=Beta, D3=Gamma, D4=Delta; M1=Gold, M2=Silver, M3=Bronze, M4=Jade.
+
+Initial Grid from given clues:
+Row 1: (D1,M1) (D2,M4) (D3,M2) ( , )
+Row 2: (D3,M2) (D1,M3) ( , )   (D2,M4)
+Row 3: ( , )   (D3,M1) (D2,M4) (D1,M2)
+Row 4: (D2,M4) ( , )   ( , )   (D3,M1)
+
+Let's deduce the empty cells based on the rules (each row/column must have one of each D1-D4 and M1-M4).
+
+**Deduction for Cell (3,1):**
+- Column 1 Civilizations: D1 (at 1,1), D3 (at 2,1), D2 (at 4,1) are used. D4 (Delta) must be in (3,1).
+- Column 1 Materials: M1 (at 1,1), M2 (at 2,1), M4 (at 4,1) are used. M3 (Bronze) must be in (3,1).
+- So, (3,1) is (D4, M3) = (Delta, Bronze).
+
+The Civilization and Material of the artifact at (3,1) is (Delta, Bronze)."
+"LRDI","40","MOCKFNL017_Q22","22","MOCKFNL017_Set5_ArtifactGrid","A museum displays 16 artifacts in a 4x4 grid. Each artifact belongs to one of four Civilizations (Alpha, Beta, Gamma, Delta) and is made of one of four Materials (Gold, Silver, Bronze, Jade). For brevity, Civilizations are D1(Alpha), D2(Beta), D3(Gamma), D4(Delta) and Materials are M1(Gold), M2(Silver), M3(Bronze), M4(Jade).
+Grid Cells are denoted by (Row, Column).
+
+**Rules:**
+1.  Each row contains exactly one artifact from each of the four Civilizations.
+2.  Each column contains exactly one artifact from each of the four Civilizations.
+3.  Each row contains exactly one artifact made of each of the four Materials.
+4.  Each column contains exactly one artifact made of each of the four Materials.
+
+**Known Information:**
+i. The artifact at (1,1) is (Alpha, Gold).
+ii. The artifact at (1,2) is (Beta, Jade).
+iii. The artifact at (2,1) is (Gamma, Silver).
+iv. The artifact at (2,2) is (Alpha, Bronze).
+v. The artifact at (3,4) is (Alpha, Silver).
+vi. The artifact at (4,4) is (Gamma, Gold).
+vii. The artifact at (1,3) is (Gamma, Silver).
+viii. The artifact at (4,1) is (Beta, Jade).
+ix. The artifact at (3,2) is (Gamma, Gold).
+x. The artifact at (2,4) is (Beta, Jade).
+xi. The artifact at (3,3) is (Beta, Jade).","In which cell is the artifact (Delta, Gold) located?","(2,3)","(3,1)","(4,3)","(4,2)","A","B","C","D","A","MCQ","Logical Reasoning","Grid Puzzle","Difficult","","Latin Square logic, specific combination search, cell identification","False","MOCKFNL017_Set5_ArtifactGrid","","Let's decode the information and fill the grid. D1=Alpha, D2=Beta, D3=Gamma, D4=Delta; M1=Gold, M2=Silver, M3=Bronze, M4=Jade.
+
+Initial Grid from given clues:
+Row 1: (D1,M1) (D2,M4) (D3,M2) ( , )
+Row 2: (D3,M2) (D1,M3) ( , )   (D2,M4)
+Row 3: ( , )   (D3,M1) (D2,M4) (D1,M2)
+Row 4: (D2,M4) ( , )   ( , )   (D3,M1)
+
+We need to find the location of (Delta, Gold), which is (D4, M1).
+
+**Deduction for Cell (2,3):**
+- Row 2 Civilizations: D3 (at 2,1), D1 (at 2,2), D2 (at 2,4) are used. D4 (Delta) must be in (2,3).
+- Row 2 Materials: M2 (at 2,1), M3 (at 2,2), M4 (at 2,4) are used. M1 (Gold) must be in (2,3).
+- Therefore, cell (2,3) contains the artifact (D4, M1) or (Delta, Gold).
+
+Final Grid:
+| Cell  | Civilization, Material |
+|-------|------------------------|
+| (1,1) | (D1,M1) Alpha, Gold    |
+| (1,2) | (D2,M4) Beta, Jade     |
+| (1,3) | (D3,M2) Gamma, Silver  |
+| (1,4) | (D4,M3) Delta, Bronze  |
+| (2,1) | (D3,M2) Gamma, Silver  |
+| (2,2) | (D1,M3) Alpha, Bronze  |
+| (2,3) | (D4,M1) Delta, Gold    |
+| (2,4) | (D2,M4) Beta, Jade     |
+| (3,1) | (D4,M3) Delta, Bronze  |
+| (3,2) | (D3,M1) Gamma, Gold    |
+| (3,3) | (D2,M4) Beta, Jade     |
+| (3,4) | (D1,M2) Alpha, Silver  |
+| (4,1) | (D2,M4) Beta, Jade     |
+| (4,2) | (D4,M2) Delta, Silver  |
+| (4,3) | (D1,M3) Alpha, Bronze  |
+| (4,4) | (D3,M1) Gamma, Gold    |
+
+The artifact (Delta, Gold) is located in cell (2,3)."

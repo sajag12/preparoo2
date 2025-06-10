@@ -1,0 +1,308 @@
+CognitiveSkillLevel,ConceptTested,CorrectAnswerValue,DetailedTags,DifficultyLevelPredicted,IsTITA,OptionAText,OptionAValue,OptionBText,OptionBValue,OptionCText,OptionCValue,OptionDText,OptionDValue,PassageOrSetContent,PassageOrSetID,QuestionNumberInSection,QuestionPrompt,QuestionType,QuestionUniqueID,SectionName,SectionTimeLimitMinutes,SetID,SolutionExplanation,SubTopic,Topic
+Application,"Profit, Loss & Discount",19%,"Percentages, Successive Discounts, Cost Price, Selling Price, Markup",Medium,False,(A) 15%,15%,(B) 18%,18%,(C) 19%,19%,(D) 22%,22%,,,1,"A shopkeeper bought an article for Rs. 500. He marked it up by X% and sold it after giving a discount of 20%, making a profit of 20%. If he had marked it up by (X+20)% and given a discount of 30%, what would have been his profit percentage?",MCQ,MockSet1_QA_1,Quantitative Aptitude,40,MockSet1_QA,"Let Cost Price (CP) = Rs. 500.
+**Scenario 1:** Markup X%, Discount 20%, Profit 20%.
+Selling Price (SP1) = CP * (1 + Profit%/100) = 500 * (1 + 20/100) = 500 * 1.2 = Rs. 600.
+Let Marked Price be MP1.
+SP1 = MP1 * (1 - Discount%/100) = MP1 * 0.8.
+The marked price is given by MP1 = CP * (1 + X/100).
+So, 500 * (1 + X/100) * 0.8 = 600.
+400 * (1 + X/100) = 600.
+1 + X/100 = 600/400 = 1.5.
+X/100 = 0.5, so X = 50.
+
+**Scenario 2:** Markup (X+20)%, Discount 30%.
+New markup percentage = (50+20)% = 70%.
+New Marked Price (MP2) = CP * (1 + 70/100) = 500 * 1.7 = Rs. 850.
+New Selling Price (SP2) = MP2 * (1 - 30/100) = 850 * 0.7 = Rs. 595.
+Profit2 = SP2 - CP = 595 - 500 = Rs. 95.
+Profit Percentage2 = (Profit2 / CP) * 100 = (95 / 500) * 100 = 19%.
+The correct option is (C).","Profit, Loss & Discount",Arithmetic
+Analysis,Divisibility Rules,6,"Divisibility by 72, Divisibility by 8, Divisibility by 9, Number Formation, Smallest Integer",Hard,True,,,,,,,,,,,2,"A positive integer N consists of 'p' repetitions of the digit 'a' followed by 'q' repetitions of the digit 'b' (e.g., if a=1, p=3, b=2, q=2, N=11122). Given that N is divisible by 72, 'a' and 'b' are distinct non-zero digits, 'p' is the smallest even integer greater than 1, and 'q' is the smallest odd integer greater than 1. Find the value of 'a'.",TITA,MockSet1_QA_2,Quantitative Aptitude,40,MockSet1_QA,"The number N is formed by 'p' 'a's followed by 'q' 'b's.
+'p' is the smallest even integer greater than 1, so p = 2.
+'q' is the smallest odd integer greater than 1, so q = 3.
+The number N has the form 'aabbb'.
+N is divisible by 72, which means N is divisible by both 8 and 9.
+**Divisibility by 8:** The number formed by the last three digits, 'bbb' (which is 111b), must be divisible by 8.
+Since 111 is odd, for 111b to be divisible by 8, 'b' must be an even digit such that 111b is a multiple of 8. Testing even digits: 111*2=222 (not div by 8), 111*4=444 (not div by 8), 111*6=666 (not div by 8), 111*8=888 (div by 8).
+As 'b' is a non-zero digit, b = 8.
+**Divisibility by 9:** The sum of digits of N must be divisible by 9.
+Sum of digits = pa + qb = 2a + 3b.
+Substitute b=8: Sum = 2a + 3(8) = 2a + 24.
+2a + 24 must be a multiple of 9.
+'a' is a non-zero digit (1 to 9) and a ≠ b (so a ≠ 8).
+Test values for 'a':
+If a=6, Sum = 2(6) + 24 = 12 + 24 = 36. 36 is divisible by 9.
+This satisfies all conditions (a=6, b=8, a≠b, a,b are non-zero digits).
+The value of 'a' is 6.",Divisibility Rules,Number System
+Application,Circles,372,"Common Chord, Distance between centers, Area of Quadrilateral, Pythagoras Theorem",Medium,False,(A) 372,372,(B) 396,396,(C) 418,418,(D) 435,435,,,3,"Two circles with centers A and B intersect at points P and Q. The line segment AB is perpendicular to the common chord PQ and M is the intersection point of AB and PQ. The length of the common chord PQ is 24 cm. The distance between the centers A and B is 31 cm. If the radius of the circle with center A is 15 cm, what is the area (in sq. cm) of the quadrilateral APBQ?",MCQ,MockSet1_QA_3,Quantitative Aptitude,40,MockSet1_QA,"The line connecting the centers of two intersecting circles (AB) is the perpendicular bisector of their common chord (PQ). Let M be the intersection of AB and PQ.
+PM = MQ = PQ/2 = 24/2 = 12 cm.
+In right-angled ΔAPM, AP is the radius of the circle with center A (r_A = 15 cm).
+AM² + PM² = AP²
+AM² + 12² = 15²
+AM² + 144 = 225
+AM² = 81 => AM = 9 cm.
+Given AB = 31 cm.
+BM = AB - AM = 31 - 9 = 22 cm.
+The area of quadrilateral APBQ is the sum of the areas of ΔAPQ and ΔBPQ.
+Area(APBQ) = Area(ΔAPQ) + Area(ΔBPQ) = (1/2 * PQ * AM) + (1/2 * PQ * BM)
+Area(APBQ) = (1/2) * PQ * (AM + BM) = (1/2) * PQ * AB
+Area(APBQ) = (1/2) * 24 * 31 = 12 * 31 = 372 sq. cm.
+The correct option is (A).","Circles (Properties, Chords, Tangents, Secants)",Geometry
+Analysis,Relative Speed,60 km/hr,"Relative Speed, Meeting Point, Multiple travelers",Hard,False,(A) 50 km/hr,50 km/hr,(B) 60 km/hr,60 km/hr,(C) 75 km/hr,75 km/hr,(D) 80 km/hr,80 km/hr,,,4,"Ajay and Binay start simultaneously from points P and Q respectively, towards each other. The distance between P and Q is 600 km. Ajay’s speed is 40 km/hr and Binay’s speed is 20 km/hr. When Ajay and Binay meet, a third person, Chetan, who started from P 3 hours after Ajay started (travelling towards Q), has already met Binay and is now 20 km away from Binay (Binay being closer to P than Chetan is). What is Chetan’s speed in km/hr?",MCQ,MockSet1_QA_4,Quantitative Aptitude,40,MockSet1_QA,"Distance PQ = 600 km. Speed of Ajay (S_A) = 40 km/hr. Speed of Binay (S_B) = 20 km/hr.
+Ajay and Binay travel towards each other. Their relative speed = S_A + S_B = 40 + 20 = 60 km/hr.
+Time until Ajay and Binay meet (T_meet) = Distance / Relative Speed = 600 / 60 = 10 hours.
+Meeting point M is at a distance of S_A * T_meet = 40 * 10 = 400 km from P.
+Chetan starts from P, 3 hours after Ajay. At T_meet = 10 hours, Chetan has been travelling for 10 - 3 = 7 hours.
+Let Chetan's speed be S_C.
+At T_meet, Binay is at point M, 400 km from P.
+The problem states Chetan is 20 km away from Binay, and 'Binay being closer to P than Chetan is'. This means Chetan is at position 400 + 20 = 420 km from P.
+Chetan travelled 420 km in 7 hours.
+S_C = Distance / Time = 420 / 7 = 60 km/hr.
+The correct option is (B).","Time, Speed & Distance (General)",Arithmetic
+Application,Arithmetic Progression,53,"Arithmetic Progression, Sum of AP, Term of AP",Medium,True,,,,,,,,,,,5,"The sum of the first 12 terms of an arithmetic progression is 222, and the sum of the first 24 terms of the same arithmetic progression is 876. Find the 18th term of this progression.",TITA,MockSet1_QA_5,Quantitative Aptitude,40,MockSet1_QA,"Let the arithmetic progression have first term 'a' and common difference 'd'.
+Sum of first n terms S_n = (n/2) * [2a + (n-1)d].
+Given S₁₂ = 222:
+(12/2) * [2a + (12-1)d] = 222 => 6 * (2a + 11d) = 222.
+2a + 11d = 37. (Equation 1)
+Given S₂₄ = 876:
+(24/2) * [2a + (24-1)d] = 876 => 12 * (2a + 23d) = 876.
+2a + 23d = 73. (Equation 2)
+Subtract Equation 1 from Equation 2:
+(2a + 23d) - (2a + 11d) = 73 - 37.
+12d = 36 => d = 3.
+Substitute d=3 into Equation 1:
+2a + 11(3) = 37 => 2a + 33 = 37 => 2a = 4 => a = 2.
+The 18th term, a₁₈ = a + (18-1)d = a + 17d.
+a₁₈ = 2 + 17(3) = 2 + 51 = 53.
+The 18th term is 53.","Sequences & Series (AP, GP, HP, Special Series)",Algebra
+Application,Weighted Average,35.33 years,"Weighted Average, Group Average Change",Medium,False,(A) 35.33 years,35.33 years,(B) 36.0 years,36.0 years,(C) 34.67 years,34.67 years,(D) 35.0 years,35.0 years,,,6,"The average age of a group of 40 employees in a company is 35 years. 8 employees with an average age of 30 years resign, and 12 new employees with an average age of 'x' years join the company. If the new average age of all employees in the company becomes 36 years, what is the value of 'x'?",MCQ,MockSet1_QA_6,Quantitative Aptitude,40,MockSet1_QA,"Initial sum of ages = 40 employees * 35 years/employee = 1400 years.
+Sum of ages of 8 employees who resigned = 8 * 30 = 240 years.
+Sum of ages of remaining 32 employees = 1400 - 240 = 1160 years.
+Let the average age of 12 new employees be 'x'. Sum of their ages = 12x.
+New number of employees = 32 + 12 = 44.
+New sum of ages = 1160 + 12x.
+New average age = 36 years.
+(1160 + 12x) / 44 = 36.
+1160 + 12x = 36 * 44 = 1584.
+12x = 1584 - 1160 = 424.
+x = 424 / 12 = 106 / 3 = 35.333... years.
+The value of 'x' is 35.33 years.
+The correct option is (A).",Averages & Weighted Averages,Arithmetic
+Application,Volume and Recasting,420,"Volume of Cylinder, Volume of Cone, Volume of Sphere, Melting and Recasting",Medium,True,,,,,,,,,,,7,"A solid metal cylinder of radius 7 cm and height 20 cm is melted. Three-sevenths of this molten metal is used to make 'K' identical solid cones, each of radius 3 cm and height 7 cm, where K is an integer. The remaining metal is used to make 'N' identical solid spheres, each of radius 1 cm. If pi is taken as 22/7, find the value of N.",TITA,MockSet1_QA_7,Quantitative Aptitude,40,MockSet1_QA,"Volume of cylinder (V_cyl) = π * r² * h = (22/7) * 7² * 20 = 22 * 7 * 20 = 3080 cm³.
+Volume of metal used for cones (V_cones) = (3/7) * 3080 = 3 * 440 = 1320 cm³.
+Volume of one cone (V_cone) = (1/3) * π * r² * h = (1/3) * (22/7) * 3² * 7 = 22 * 3 = 66 cm³.
+Number of cones (K) = V_cones / V_cone = 1320 / 66 = 20.
+Volume of remaining metal for spheres (V_spheres) = V_cyl - V_cones = 3080 - 1320 = 1760 cm³.
+Volume of one sphere (V_sphere) = (4/3) * π * r³ = (4/3) * (22/7) * 1³ = 88/21 cm³.
+Number of spheres (N) = V_spheres / V_sphere = 1760 / (88/21) = 1760 * 21 / 88.
+1760 / 88 = 20.
+N = 20 * 21 = 420.
+The value of N is 420.","Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Mensuration
+Analysis,Quadratic Equations and Progressions,-1,"Roots of Quadratic Equation, Geometric Progression of roots, Discriminant",Hard,False,(A) -3,-3,(B) -1,-1,(C) 1,1,(D) 2,2,,,8,"If the roots of the quadratic equation x² – (k+2)x + (k+1)(k+2) = 0 are α and β, and these roots α, β are themselves in geometric progression with a common ratio 'r' such that |r| ≠ 1, which of the following is a possible value of k?",MCQ,MockSet1_QA_8,Quantitative Aptitude,40,MockSet1_QA,"For the roots α and β to be distinct (|r| ≠ 1), the discriminant (D) must be greater than 0.
+D = (-(k+2))² - 4(1)((k+1)(k+2)) > 0.
+(k+2)² - 4(k+1)(k+2) > 0.
+(k+2) * [(k+2) - 4(k+1)] > 0.
+(k+2) * [k+2 - 4k - 4] > 0.
+(k+2)(-3k - 2) > 0.
+-(k+2)(3k+2) > 0.
+(k+2)(3k+2) < 0.
+This inequality holds for -2 < k < -2/3.
+Checking the options against this valid range:
+(A) -3 is not in the range.
+(B) -1 is in the range (-2, -0.66...).
+(C) 1 is not in the range.
+(D) 2 is not in the range.
+Therefore, k = -1 is the only possible value among the choices.
+The correct option is (B).",Quadratic Equations,Algebra
+Application,Work and Efficiency,24 days,"Work and Efficiency, Multiple workers, Work in phases",Medium,False,(A) 22 days,22 days,(B) 24 days,24 days,(C) 26 days,26 days,(D) 28 days,28 days,,,9,"A, B, and C can complete a piece of work in 24, 36, and 48 days respectively. They start working together. After 4 days, A leaves. B and C continue to work together for 'x' more days. Then B leaves, and C completes the remaining 25% of the total work in 'y' more days. Find the total number of days taken to complete the work.",MCQ,MockSet1_QA_9,Quantitative Aptitude,40,MockSet1_QA,"Total Work = LCM(24, 36, 48) = 144 units.
+Rates: A = 144/24 = 6 units/day, B = 144/36 = 4 units/day, C = 144/48 = 3 units/day.
+**Phase 1:** A, B, C work for 4 days.
+Work done = (6+4+3) * 4 = 13 * 4 = 52 units.
+Remaining work = 144 - 52 = 92 units.
+**Phase 3:** C completes 25% of total work alone.
+Work done by C = 0.25 * 144 = 36 units.
+Time taken by C (y) = 36 units / 3 units/day = 12 days.
+**Phase 2:** B and C work together.
+Work done in Phase 2 = Total Work - Work(Phase 1) - Work(Phase 3) = 144 - 52 - 36 = 56 units.
+Combined rate of B and C = 4 + 3 = 7 units/day.
+Time taken by B+C (x) = 56 units / 7 units/day = 8 days.
+Total days = (Days in Phase 1) + x + y = 4 + 8 + 12 = 24 days.
+The correct option is (B).",Time & Work,Arithmetic
+Analysis,Distribution and Grouping,36,"Distribution of distinct items into distinct boxes, Grouping",Hard,False,(A) 24,24,(B) 30,30,(C) 36,36,(D) 48,48,,,10,In how many ways can 4 distinct letters be posted into 3 distinct letterboxes such that no letterbox remains empty?,MCQ,MockSet1_QA_10,Quantitative Aptitude,40,MockSet1_QA,"We need to post 4 distinct letters into 3 distinct letterboxes such that no letterbox is empty. This requires partitioning the 4 letters into 3 non-empty sets. The only possible partition is one group of 2 letters and two groups of 1 letter (2, 1, 1).
+**Step 1: Form the groups.**
+First, choose the 2 letters that will be in the same group.
+Number of ways to choose these 2 letters from 4 = C(4,2) = (4×3)/(2×1) = 6.
+Once this pair is chosen, the other two letters form their own individual groups. We now have three distinct items to distribute: {a group of 2 letters}, {a single letter}, {another single letter}.
+**Step 2: Distribute the groups.**
+These 3 distinct groups must be placed into the 3 distinct letterboxes.
+The number of ways to arrange 3 distinct items into 3 distinct places is 3! = 3 × 2 × 1 = 6.
+**Total Ways:**
+Total ways = (Ways to form the groups) × (Ways to distribute the groups) = 6 × 6 = 36.
+The correct option is (C).",Permutations & Combinations,Modern Maths
+Application,Compound Interest and Simple Interest,32000,"Compound Interest, Simple Interest, Half-yearly compounding, Difference between CI and SI",Medium,False,(A) Rs. 24000,24000,(B) Rs. 28000,28000,(C) Rs. 30000,30000,(D) Rs. 32000,32000,,,11,The difference between the compound interest compounded half-yearly and the simple interest on a certain sum of money for 1.5 years at 10% per annum is Rs. 244. What is the sum of money?,MCQ,MockSet1_QA_11,Quantitative Aptitude,40,MockSet1_QA,"Let the sum be P. Rate R = 10% p.a. Time T = 1.5 years.
+**Compound Interest (CI):** Compounded half-yearly.
+Rate per period = 10%/2 = 5%. Number of periods n = 1.5 * 2 = 3.
+CI = P * [(1 + 5/100)³ - 1] = P * [1.05³ - 1] = P * [1.157625 - 1] = 0.157625 * P.
+**Simple Interest (SI):**
+SI = P * (10/100) * 1.5 = 0.15 * P.
+**Difference:**
+CI - SI = 0.157625*P - 0.15*P = 0.007625*P.
+Given CI - SI = 244.
+0.007625 * P = 244.
+P = 244 / 0.007625 = 244 * 1000000 / 7625.
+P = 244 / (7625/1000000) = 244 * 1000000 / 7625 = 244 * (8000/61) (Divide by 125)
+P = (244/61) * 8000 = 4 * 8000 = 32000.
+The sum is Rs. 32000.
+The correct option is (D).",Compound Interest,Arithmetic
+Analysis,Logarithm Properties,12,"Logarithm Properties, Solving Logarithmic Equations",Hard,True,,,,,,,,,,,12,"If x and y are positive real numbers, find the value of x³ + y² given that it is an integer. The value of x is derived from the equation (log₃x) * (logₓ(2x-3)) = log₃(2x-3), subject to the condition log₃(2x-3) = 0. The value of y is derived from the equation (log₂y)² + log₂(y²/8) = 0.",TITA,MockSet1_QA_12,Quantitative Aptitude,40,MockSet1_QA,"**First equation:** The condition given is log₃(2x-3) = 0.
+This implies 2x - 3 = 3⁰ = 1.
+2x = 4, so x = 2.
+This value satisfies the domain conditions for the original logarithms (x>0, x≠1, and 2x-3>0).
+**Second equation:** (log₂y)² + log₂(y²/8) = 0.
+Using log properties: log₂(y²/8) = log₂(y²) - log₂(8) = 2log₂y - 3.
+Let L = log₂y. The equation becomes:
+L² + 2L - 3 = 0.
+Factoring the quadratic: (L+3)(L-1) = 0.
+This gives two possible values for L: L = -3 or L = 1.
+Case 1: log₂y = -3 => y = 2⁻³ = 1/8.
+Case 2: log₂y = 1 => y = 2¹ = 2.
+**Final Calculation:** We need to find the value of x³ + y² that is an integer.
+Using y = 1/8: x³ + y² = 2³ + (1/8)² = 8 + 1/64. This is not an integer.
+Using y = 2: x³ + y² = 2³ + 2² = 8 + 4 = 12. This is an integer.
+The required integer value is 12.",Logarithms,Algebra
+Application,Successive Percentage Change,1,"Population Change, Successive Percentage Change, Consecutive Integers",Easy,False,(A) 1,1,(B) 2,2,(C) 3,3,(D) 4,4,,,13,"The population of a town was 100,000. In the first year, it increased by x%. In the second year, it decreased by y%. In the third year, it increased by z%. If x, y, z are consecutive positive integers in increasing order (x, x+1, x+2) and the population at the end of the third year was 101,949 (rounded to nearest integer), what is the value of x?",MCQ,MockSet1_QA_13,Quantitative Aptitude,40,MockSet1_QA,"Initial population P_init = 100,000. Final population P_final = 101,949.
+The final population is a result of successive percentage changes: +x%, -(x+1)%, +(x+2)%.
+P_final = P_init * (1 + x/100) * (1 - (x+1)/100) * (1 + (x+2)/100).
+101,949 = 100,000 * [(100+x)/100] * [(99-x)/100] * [(102+x)/100].
+1.01949 = (100+x)(99-x)(102+x) / 1000000.
+(100+x)(99-x)(102+x) = 1,019,490.
+Test integer values for x.
+If x=1: y=2, z=3.
+Product = (100+1)(99-1)(102+1) = 101 * 98 * 103.
+101 * 98 = 9898.
+9898 * 103 = 9898 * (100+3) = 989800 + 29694 = 1019494.
+This is extremely close to 1,019,490, consistent with the final population being rounded.
+Thus, x=1 is the correct value.
+The correct option is (A).",Percentages,Arithmetic
+Application,Median and Area of Triangle,70 sq. units,"Median, Area of Triangle, Ratio of Areas",Medium,False,(A) 56 sq. units,56 sq. units,(B) 63 sq. units,63 sq. units,(C) 70 sq. units,70 sq. units,(D) 84 sq. units,84 sq. units,,,14,"In triangle ABC, AD is the median to BC, and BE is the angle bisector of angle B (E lies on AC). AD and BE intersect at point O. If AO:OD = 5:2 and the area of triangle AOB is 25 sq. units, find the area of triangle ABC.",MCQ,MockSet1_QA_14,Quantitative Aptitude,40,MockSet1_QA,"AD is a median to BC, and BE is an angle bisector of ∠B. They intersect at O.
+Given AO:OD = 5:2 and Area(ΔAOB) = 25 sq. units.
+In triangles AOB and BOD, vertex B is common and the bases AO and OD lie on the same line AD.
+The ratio of their areas is equal to the ratio of their bases:
+Area(ΔAOB) / Area(ΔBOD) = AO/OD
+25 / Area(ΔBOD) = 5/2
+Area(ΔBOD) = 25 * (2/5) = 10 sq. units.
+The area of ΔABD = Area(ΔAOB) + Area(ΔBOD) = 25 + 10 = 35 sq. units.
+Since AD is a median to BC, it divides ΔABC into two triangles of equal area.
+Area(ΔABC) = 2 * Area(ΔABD) = 2 * 35 = 70 sq. units.
+The correct option is (C).","Triangles (Properties, Congruence, Similarity)",Geometry
+Analysis,Inequalities with Square Roots,90,"Square Root Inequality, Case Analysis, Quadratic Inequality, Sum of Squares",Medium,True,,,,,,,,,,,15,Find the sum of the squares of all positive integers x satisfying the inequality √(3x-5) > x-3.,TITA,MockSet1_QA_15,Quantitative Aptitude,40,MockSet1_QA,"The inequality is √(3x-5) > x-3.
+Domain: 3x-5 ≥ 0 => x ≥ 5/3.
+**Case 1:** x-3 < 0.
+This applies for x < 3. The interval for this case is [5/3, 3).
+Here, the LHS is non-negative and the RHS is negative. The inequality is always true.
+Positive integers in this interval: x = 2.
+**Case 2:** x-3 ≥ 0.
+This applies for x ≥ 3.
+Both sides are non-negative, so we can square both sides:
+3x-5 > (x-3)²
+3x-5 > x² - 6x + 9
+0 > x² - 9x + 14
+x² - 9x + 14 < 0.
+Factoring: (x-2)(x-7) < 0. This holds for 2 < x < 7.
+The solution for this case is the intersection of x ≥ 3 and 2 < x < 7, which is [3, 7).
+Positive integers in this interval: x = 3, 4, 5, 6.
+Combining solutions from both cases, the set of integers is {2, 3, 4, 5, 6}.
+Sum of squares = 2² + 3² + 4² + 5² + 6² = 4 + 9 + 16 + 25 + 36 = 90.
+The sum is 90.",Inequalities (Linear & Quadratic),Algebra
+Application,Partnership,2800,"Partnership, Profit Sharing, Ratio of Investments",Easy,False,(A) Rs. 2400,2400,(B) Rs. 2700,2700,(C) Rs. 2800,2800,(D) Rs. 3200,3200,,,16,"A, B, and C enter into a partnership with investments in the ratio 5:6:8. After the business term, the profit is distributed. A is a working partner and receives a salary which is a certain part of the total profit, and the remaining profit is distributed among A, B, and C in the ratio of their investments. If B's share of this distributed profit (excluding any salary) is Rs. 2100, what is C's share of the distributed profit?",MCQ,MockSet1_QA_16,Quantitative Aptitude,40,MockSet1_QA,"The remaining profit (after any salary to A) is distributed among A, B, and C in the ratio of their investments, 5:6:8.
+B's share of this distributed profit is Rs. 2100. This corresponds to 6 parts of the ratio.
+6 parts = Rs. 2100.
+1 part = Rs. 2100 / 6 = Rs. 350.
+C's share of the distributed profit corresponds to 8 parts.
+C's share = 8 parts * Rs. 350/part = Rs. 2800.
+The information about A's salary is not needed to find C's share of the distributed profit.
+The correct option is (C).","Ratio, Proportion & Variation",Arithmetic
+Knowledge,Absolute Value Functions,4,"Absolute Value Function, Minimum Value of Function, Median property",Easy,False,(A) 2,2,(B) 4,4,(C) 6,6,(D) 8,8,,,17,Let f(x) = |x-2| + |x-4| + |x-6|. Find the minimum value of f(x).,MCQ,MockSet1_QA_17,Quantitative Aptitude,40,MockSet1_QA,"The function is f(x) = |x-2| + |x-4| + |x-6|.
+The minimum value of a function of the form |x-a| + |x-b| + |x-c| + ... occurs at the median of the roots {a, b, c, ...}.
+The roots are 2, 4, and 6. The median of this set is 4.
+The minimum value occurs at x=4.
+f(4) = |4-2| + |4-4| + |4-6| = |2| + |0| + |-2| = 2 + 0 + 2 = 4.
+The minimum value is 4.
+The correct option is (B).","Functions (Domain, Range, Types, Graphs, Inverse)",Algebra
+Application,Rhombus Properties,15,"Rhombus, Diagonals of Rhombus, Area of Rhombus, Pythagoras Theorem",Medium,True,,,,,,,,,,,18,"The diagonals of a rhombus are in the ratio 3:4. If the area of the rhombus is 216 sq. cm, find its side length in cm.",TITA,MockSet1_QA_18,Quantitative Aptitude,40,MockSet1_QA,"Let the diagonals be d₁ and d₂. Given d₁:d₂ = 3:4.
+Let d₁ = 3k and d₂ = 4k.
+Area of rhombus = (1/2) * d₁ * d₂ = 216.
+(1/2) * (3k) * (4k) = 216.
+6k² = 216.
+k² = 36 => k = 6.
+Diagonals are d₁ = 3*6 = 18 cm and d₂ = 4*6 = 24 cm.
+The diagonals of a rhombus bisect each other at right angles. Let the side be 's'.
+(d₁/2)² + (d₂/2)² = s².
+(18/2)² + (24/2)² = s².
+9² + 12² = s².
+81 + 144 = 225 = s².
+s = √225 = 15 cm.
+The side length is 15 cm.","Mensuration - 2D (Area & Perimeter: Triangles, Quadrilaterals, Polygons, Circles)",Mensuration
+Analysis,Boats and Streams with Variable Speed,10,"Upstream Speed, Downstream Speed, Variable Speed",Hard,True,,,,,,,,,,,19,"A boat travels from point P to point Q upstream, a distance of 60 km, and returns to P downstream. The speed of the stream is 2 km/hr. On its upstream journey, after travelling for 2 hours, the boat's engine malfunctions, and its speed relative to still water for the remainder of the upstream journey is reduced by 20%. If the total time for the round trip (P to Q and back to P) was exactly 43/3 hours, find the normal speed of the boat in still water (in km/hr).",TITA,MockSet1_QA_19,Quantitative Aptitude,40,MockSet1_QA,"Let the normal speed of the boat in still water be 's' km/hr.
+Stream speed = 2 km/hr. Upstream speed = s-2, Downstream speed = s+2.
+**Upstream Journey (60 km):**
+- Part 1: 2 hours at normal speed. Distance = 2(s-2).
+- Part 2: Engine malfunctions. New still water speed = 0.8s. New upstream speed = 0.8s-2.
+Remaining distance = 60 - 2(s-2) = 60 - 2s + 4 = 64 - 2s.
+Time for Part 2 = (64 - 2s) / (0.8s - 2).
+Total Upstream Time (T_up) = 2 + (64 - 2s) / (0.8s - 2).
+**Downstream Journey (60 km):**
+Time for Downstream (T_down) = 60 / (s+2).
+**Total Trip Time:**
+T_up + T_down = 43/3.
+2 + (64 - 2s) / (0.8s - 2) + 60 / (s+2) = 43/3.
+(64 - 2s) / (0.8s - 2) + 60 / (s+2) = 43/3 - 2 = 37/3.
+Test options or likely integer values for 's'. Let's test s=10.
+LHS = (64 - 2*10) / (0.8*10 - 2) + 60 / (10+2)
+= (64 - 20) / (8 - 2) + 60 / 12
+= 44/6 + 5 = 22/3 + 15/3 = 37/3.
+This matches the RHS. The speed is 10 km/hr.","Time, Speed & Distance (Boats & Streams)",Arithmetic
+Application,HCF and LCM Properties,80,"HCF, LCM, Product of two numbers, Quadratic equation from word problem",Easy,False,(A) 80,80,(B) 60,60,(C) 100,100,(D) 120,120,,,20,"The HCF of two numbers x and y (x>y) is 20 and their LCM is 240. If x-y=20, find x.",MCQ,MockSet1_QA_20,Quantitative Aptitude,40,MockSet1_QA,"Let the two numbers be x and y.
+Given: HCF(x,y) = 20, LCM(x,y) = 240, x > y, x - y = 20.
+We know that Product of numbers = HCF × LCM.
+x * y = 20 * 240 = 4800.
+From x - y = 20, we have x = y + 20.
+Substitute x in the product equation:
+(y + 20) * y = 4800.
+y² + 20y - 4800 = 0.
+Factoring the quadratic: (y + 80)(y - 60) = 0.
+Since y must be a positive integer, y = 60.
+Then x = y + 20 = 60 + 20 = 80.
+The numbers are 80 and 60. They satisfy all conditions. The value of x is 80.
+The correct option is (A).",HCF & LCM,Number System
+Application,Mixtures and Ratios,40,"Mixture transfer, Ratio in Mixtures, Multi-step process",Medium,True,,,,,,,,,,,21,"Vessel X initially contains 120 litres of a mixture of juice and water in the ratio 7:5. Vessel Y initially contains 80 litres of a mixture of juice and water in the ratio 3:1. First, 48 litres of mixture are transferred from X to Y. Then, 32 litres of mixture are transferred from Y (after the first transfer) back to X. Find the final quantity of water in vessel X (in litres).",TITA,MockSet1_QA_21,Quantitative Aptitude,40,MockSet1_QA,"**Initial State:**
+Vessel X: 120 L. J:W = 7:5 => J=70 L, W=50 L.
+Vessel Y: 80 L. J:W = 3:1 => J=60 L, W=20 L.
+**Step 1:** Transfer 48 L from X to Y.
+Mixture from X is in ratio 7:5.
+J transferred = (7/12)*48 = 28 L. W transferred = (5/12)*48 = 20 L.
+**State after Step 1:**
+Vessel X: J = 70-28=42, W = 50-20=30. Total = 72 L.
+Vessel Y: J = 60+28=88, W = 20+20=40. Total = 128 L. (New ratio J:W = 88:40 = 11:5)
+**Step 2:** Transfer 32 L from Y to X.
+Mixture from Y is in ratio 11:5. Total parts = 16.
+J transferred = (11/16)*32 = 22 L. W transferred = (5/16)*32 = 10 L.
+**Final State of Vessel X:**
+J_final = 42 + 22 = 64 L.
+W_final = 30 + 10 = 40 L.
+Total_final = 72 + 32 = 104 L.
+The final quantity of water in vessel X is 40 litres.",Mixtures & Alligations,Arithmetic
+Application,Probability and Combinatorics,2/5,"Classical Probability, Permutations, Divisibility by 3, Distinct digits",Medium,False,(A) 1/3,1/3,(B) 2/5,2/5,(C) 7/15,7/15,(D) 8/15,8/15,,,22,"From the digits {1, 2, 3, 4, 5}, a three-digit number is formed using distinct digits. What is the probability that the number formed is a multiple of 3?",MCQ,MockSet1_QA_22,Quantitative Aptitude,40,MockSet1_QA,"**Total Outcomes:** Form a 3-digit number from {1, 2, 3, 4, 5} using distinct digits.
+Number of ways = P(5,3) = 5 × 4 × 3 = 60.
+**Favorable Outcomes:** The number must be a multiple of 3.
+The sum of its digits must be a multiple of 3. We find combinations of 3 distinct digits from the set {1, 2, 3, 4, 5} whose sum is a multiple of 3.
+- {1, 2, 3} -> Sum = 6 (Multiple of 3)
+- {1, 3, 5} -> Sum = 9 (Multiple of 3)
+- {2, 3, 4} -> Sum = 9 (Multiple of 3)
+- {3, 4, 5} -> Sum = 12 (Multiple of 3)
+There are 4 such sets of digits.
+For each set of 3 distinct digits, we can form 3! = 6 distinct numbers.
+Total number of favorable numbers = 4 sets × 6 numbers/set = 24.
+**Probability:**
+P(multiple of 3) = Favorable Outcomes / Total Outcomes = 24 / 60 = 2/5.
+The correct option is (B).",Probability,Modern Maths

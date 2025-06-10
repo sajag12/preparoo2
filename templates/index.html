@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preparoo 🦘 - CAT Preparation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    .header {
+      background: #fff;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #6b7280;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #333;
+    }
+
+    .login-btn {
+      background: #f3f4f6;
+      color: #374151;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      border: 1px solid #d1d5db;
+    }
+
+    .login-btn:hover {
+      background: #e5e7eb;
+      color: #1f2937;
+    }
+
+    .user-menu {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    .logout-btn {
+      background: none;
+      border: 1px solid #ddd;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      color: #666;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    
+    .logout-btn:hover {
+      background: #f5f5f5;
+      border-color: #ccc;
+    }
+
+    /* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 6rem 0;
+  background-image: url('/static/hero-background.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+    .hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 3rem;
+      opacity: 0.95;
+    }
+
+    .hero-features {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+
+    .hero-feature .checkmark {
+      color: #10b981;
+      font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #8b5cf6;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: #7c3aed;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(139, 92, 246, 0.25);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #374151;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+      border: 1px solid #d1d5db;
+    }
+
+    .btn-secondary:hover {
+      background: #f9fafb;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Mentors Section */
+    .mentors-section {
+      padding: 5rem 0;
+      background: white;
+      text-align: center;
+    }
+
+    .mentors-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 3rem;
+    }
+
+    .mentors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .mentor-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .mentor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .mentor-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+
+    .mentor-avatar svg {
+      width: 48px;
+      height: 48px;
+      fill: #8b5cf6;
+    }
+
+    .mentor-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+
+    .mentor-college {
+      color: #6b7280;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .mentor-stats {
+      color: #374151;
+      font-weight: 600;
+    }
+
+    .mentor-detail {
+      color: #8b5cf6;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Method Section */
+    .method-section {
+      padding: 5rem 0;
+      background: #f9fafb;
+    }
+
+    .method-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .method-tagline {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1.5rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .method-description {
+      color: #6b7280;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .steps-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 3rem;
+      margin-bottom: 4rem;
+      align-items: center;
+    }
+
+    .step:nth-child(even) {
+      grid-template-columns: 200px 1fr;
+    }
+
+    .step:nth-child(even) .step-content {
+      order: 2;
+    }
+
+    .step:nth-child(even) .step-icon {
+      order: 1;
+    }
+
+    .step-number {
+      color: #8b5cf6;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+
+    .step-description {
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .step-features {
+      list-style: none;
+    }
+
+    .step-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      color: #374151;
+    }
+
+    .step-features li::before {
+      content: "•";
+      color: #8b5cf6;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .step-icon {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: white;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      margin: 0 auto;
+    }
+
+    .step-icon svg {
+      width: 60px;
+      height: 60px;
+      fill: #8b5cf6;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 5rem 0;
+      background: white;
+    }
+
+    .faq-title {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 3rem;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 1.5rem;
+      background: none;
+      border: none;
+      text-align: left;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f2937;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s ease;
+    }
+
+    .faq-question:hover {
+      background: #f9fafb;
+    }
+
+    .faq-arrow {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+      color: #9ca3af;
+    }
+
+    .faq-arrow.open {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer.open {
+      max-height: 200px;
+    }
+
+    .faq-answer-content {
+      padding: 0 1.5rem 1.5rem;
+      color: #6b7280;
+      line-height: 1.6;
+    }
+
+    /* Footer Section */
+    .footer-section {
+      padding: 3rem 0 1rem;
+      background: white;
+      text-align: center;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .footer-cta-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+
+    .footer-contact {
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+
+    .footer-contact a {
+      color: #8b5cf6;
+      text-decoration: none;
+    }
+
+    .footer-contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 20px;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-features {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .mentors-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+      }
+
+      .step:nth-child(even) .step-content {
+        order: 1;
+      }
+
+      .step:nth-child(even) .step-icon {
+        order: 2;
+      }
+
+      .method-tagline {
+        font-size: 2rem;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.3rem;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .mentors-title {
+        font-size: 2rem;
+      }
+
+      .faq-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="/" class="logo">Preparoo 🦘</a>
+      <div class="nav-links">
+        <a href="#method">Our Method</a>
+        <a href="/mock-tests">Full-length Mocks</a>
+        <a href="/mock-tests">Sectionals</a>
+        
+        {% if current_user.is_authenticated %}
+          <div class="user-menu">
+            <div class="user-info">
+              {% if current_user.avatar_url %}
+                <img src="{{ current_user.avatar_url }}" alt="{{ current_user.name }}" class="user-avatar">
+              {% endif %}
+              <span>{{ current_user.name }}</span>
+            </div>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+          </div>
+        {% else %}
+          <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+        {% endif %}
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        
+        <h1 class="hero-title">
+          The definitive, all-inclusive CAT<br>
+          preparation solution
+        </h1>
+
+        <div class="hero-subtitle">
+          Designed by IIM Ahmedabad alumni
+        </div>
+
+        <div class="hero-features">
+          <div class="hero-feature">
+            <span class="checkmark">✓</span>
+            <span>15+ Full-Length Mocks</span>
+          </div>
+          <div class="hero-feature">
+            <span class="checkmark">✓</span>
+            <span>30+ Sectionals (VARC, Quants, LRDI)</span>
+          </div>
+          <div class="hero-feature">
+            <span class="checkmark">✓</span>
+            <span>Detailed Analytics</span>
+          </div>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="/mock-tests" class="btn-primary">Take a free mock test</a>
+          <a href="#method" class="btn-secondary">Explore Our Method</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mentors Section -->
+  <section class="mentors-section">
+    <div class="container">
+      <h2 class="mentors-title">Meet your mentors!</h2>
+      
+      <div class="mentors-grid">
+        <div class="mentor-card">
+          <div class="mentor-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.722 2.032a1.002 1.002 0 01.556 0l8.25 4.125a1 1 0 01.527.926v3.317c0 .48-.337.9-2.011 1.267-1.673.366-3.593.633-5.594.633s-3.921-.267-5.594-.633c-1.674-.367-2.011-.787-2.011-1.267V7.083a1 1 0 01.527-.926l8.25-4.125z"></path>
+              <path d="M12 10.5a6.685 6.685 0 00-6.75 6.417.75.75 0 00.75.833h12a.75.75 0 00.75-.833A6.685 6.685 0 0012 10.5z"></path>
+              <path fill-rule="evenodd" d="M12 21.75a1.5 1.5 0 01-1.5-1.5V18a1.5 1.5 0 013 0v2.25a1.5 1.5 0 01-1.5 1.5z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <div class="mentor-name">Kushagra Sachdeva</div>
+          <div class="mentor-college">IIM Ahmedabad PGP'25</div>
+          <div class="mentor-stats">CAT'22: 99.96 percentile</div>
+          <div class="mentor-detail">VARC: 100 percentile</div>
+        </div>
+        
+        <div class="mentor-card">
+          <div class="mentor-avatar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.722 2.032a1.002 1.002 0 01.556 0l8.25 4.125a1 1 0 01.527.926v3.317c0 .48-.337.9-2.011 1.267-1.673.366-3.593.633-5.594.633s-3.921-.267-5.594-.633c-1.674-.367-2.011-.787-2.011-1.267V7.083a1 1 0 01.527-.926l8.25-4.125z"></path>
+              <path d="M12 10.5a6.685 6.685 0 00-6.75 6.417.75.75 0 00.75.833h12a.75.75 0 00.75-.833A6.685 6.685 0 0012 10.5z"></path>
+              <path fill-rule="evenodd" d="M12 21.75a1.5 1.5 0 01-1.5-1.5V18a1.5 1.5 0 013 0v2.25a1.5 1.5 0 01-1.5 1.5z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <div class="mentor-name">Sajag Prakash</div>
+          <div class="mentor-college">IIM Ahmedabad PGP'24</div>
+          <div class="mentor-stats">CAT'21: 99.88 percentile</div>
+          <div class="mentor-detail">QA: 99.92 percentile</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method Section -->
+  <section id="method" class="method-section">
+    <div class="container">
+      <div class="method-header">
+        <h2 class="method-tagline">
+          Your CAT prep doesn't have to be a<br>
+          mystery.
+        </h2>
+        <p class="method-description">
+          Preparing for CAT can feel like shouting into the void. We've been there. So, we broke down our
+          own prep into a simple, repeatable cycle that turned confusion into confidence. Here's how you
+          can use it too.
+        </p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-content">
+            <div class="step-number">Step 1</div>
+            <h3 class="step-title">Take High-Quality Mocks</h3>
+            <p class="step-description">
+              Start with a realistic test. Our mocks are made to feel like the
+              actual CAT, helping you build the stamina and focus you need
+              for D-day.
+            </p>
+            <ul class="step-features">
+              <li>Take on 15+ full-length mocks that mirror the actual CAT environment.</li>
+              <li>Our questions are thoughtfully created after analyzing every CAT paper from 2017-2024.</li>
+              <li>We cover the different types of recurring questions, so you're never caught off guard.</li>
+              <li>Feeling short on time? Drill down with 30+ targeted sectional tests.</li>
+            </ul>
+          </div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.722 2.032a1.002 1.002 0 01.556 0l8.25 4.125a1 1 0 01.527.926v3.317c0 .48-.337.9-2.011 1.267-1.673.366-3.593.633-5.594.633s-3.921-.267-5.594-.633c-1.674-.367-2.011-.787-2.011-1.267V7.083a1 1 0 01.527-.926l8.25-4.125z"></path>
+              <path d="M12 10.5a6.685 6.685 0 00-6.75 6.417.75.75 0 00.75.833h12a.75.75 0 00.75-.833A6.685 6.685 0 0012 10.5z"></path>
+              <path fill-rule="evenodd" d="M12 21.75a1.5 1.5 0 01-1.5-1.5V18a1.5 1.5 0 013 0v2.25a1.5 1.5 0 01-1.5 1.5z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-content">
+            <div class="step-number">Step 2</div>
+            <h3 class="step-title">Analyze Your Performance (The Right Way)</h3>
+            <p class="step-description">
+              Your score is just the beginning. We help you go beyond that
+              number to understand the why behind every click.
+            </p>
+            <ul class="step-features">
+              <li>Forget just 'right' or 'wrong'; our analytics show you why you made a mistake.</li>
+              <li>Use the Question Heatmap to see your timing, from "quick correct" to "long incorrect."</li>
+              <li>Analyze your question-picking strategy. Did you miss easy questions (missed opportunities)?</li>
+              <li>Identify time-wasters: difficult questions you spent too long on and should have skipped.</li>
+            </ul>
+          </div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.722 2.032a1.002 1.002 0 01.556 0l8.25 4.125a1 1 0 01.527.926v3.317c0 .48-.337.9-2.011 1.267-1.673.366-3.593.633-5.594.633s-3.921-.267-5.594-.633c-1.674-.367-2.011-.787-2.011-1.267V7.083a1 1 0 01.527-.926l8.25-4.125z"></path>
+              <path d="M12 10.5a6.685 6.685 0 00-6.75 6.417.75.75 0 00.75.833h12a.75.75 0 00.75-.833A6.685 6.685 0 0012 10.5z"></path>
+              <path fill-rule="evenodd" d="M12 21.75a1.5 1.5 0 01-1.5-1.5V18a1.5 1.5 0 013 0v2.25a1.5 1.5 0 01-1.5 1.5z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-content">
+            <div class="step-number">Step 3</div>
+            <h3 class="step-title">Pinpoint Your Weaknesses & Improve</h3>
+            <p class="step-description">
+              Get a crystal-clear roadmap of what to work on next. Our
+              analysis turns vague feelings of weakness into a specific,
+              actionable study plan.
+            </p>
+            <ul class="step-features">
+              <li>Our SWOT analysis gives you an honest look at your strengths, weaknesses, opportunities, and threats.</li>
+              <li>Go from "I'm weak in Quants" to knowing "I need to work on Arithmetic."</li>
+              <li>Drill down even further, from "Arithmetic" to a specific sub-topic like "Trains."</li>
+              <li>We even point out specific patterns, like the "trains speed change after accident" question type.</li>
+            </ul>
+          </div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.722 2.032a1.002 1.002 0 01.556 0l8.25 4.125a1 1 0 01.527.926v3.317c0 .48-.337.9-2.011 1.267-1.673.366-3.593.633-5.594.633s-3.921-.267-5.594-.633c-1.674-.367-2.011-.787-2.011-1.267V7.083a1 1 0 01.527-.926l8.25-4.125z"></path>
+              <path d="M12 10.5a6.685 6.685 0 00-6.75 6.417.75.75 0 00.75.833h12a.75.75 0 00.75-.833A6.685 6.685 0 0012 10.5z"></path>
+              <path fill-rule="evenodd" d="M12 21.75a1.5 1.5 0 01-1.5-1.5V18a1.5 1.5 0 013 0v2.25a1.5 1.5 0 01-1.5 1.5z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-content">
+            <div class="step-number">Step 4</div>
+            <h3 class="step-title">Practice with Purpose (and Repeat)</h3>
+            <p class="step-description">
+              Now, you turn those insights into strengths. This is how you
+              close the gaps in your knowledge and strategy, one focused
+              session at a time.
+            </p>
+            <ul class="step-features">
+              <li>Jump into our 30+ sectional tests, built to help you conquer your identified weak areas.</li>
+              <li>Practice with questions and patterns seen in the CAT from 2017-2024.</li>
+              <li>With every practice session, you close a gap. Then, you take another mock and repeat the cycle.</li>
+              <li>This is how small, consistent efforts lead to big percentile jumps.</li>
+            </ul>
+          </div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.722 2.032a1.002 1.002 0 01.556 0l8.25 4.125a1 1 0 01.527.926v3.317c0 .48-.337.9-2.011 1.267-1.673.366-3.593.633-5.594.633s-3.921-.267-5.594-.633c-1.674-.367-2.011-.787-2.011-1.267V7.083a1 1 0 01.527-.926l8.25-4.125z"></path>
+              <path d="M12 10.5a6.685 6.685 0 00-6.75 6.417.75.75 0 00.75.833h12a.75.75 0 00.75-.833A6.685 6.685 0 0012 10.5z"></path>
+              <path fill-rule="evenodd" d="M12 21.75a1.5 1.5 0 01-1.5-1.5V18a1.5 1.5 0 013 0v2.25a1.5 1.5 0 01-1.5 1.5z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="faq-title">Common questions</h2>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What's included in the free access?</span>
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Everything! Our platform includes unlimited daily practice sets for RC, LRDI, and Quant, unlimited full-length mock tests, sectional tests, detailed analytics, and performance insights - all completely free.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Who creates the content?</span>
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Our content is designed by IIM Ahmedabad alumni and experienced CAT educators who have a deep understanding of the exam pattern and difficulty levels.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How long can I access the materials?</span>
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Forever! Since everything is completely free, you have unlimited access to all materials for as long as the platform exists.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Are the tests updated with the latest CAT patterns?</span>
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes, all our tests and practice materials are regularly updated to reflect the latest CAT exam pattern, syllabus, and question types.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What makes your analytics different?</span>
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Our analytics go beyond just scores. We provide question heatmaps, SWOT analysis, question picking strategies, and personalized insights that help you understand not just what you got wrong, but why and how to improve.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do I need to pay for anything?</span>
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              No! Everything on Preparoo is completely free. No hidden costs, no premium features, no limitations. Quality CAT preparation accessible to everyone.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do I get started?</span>
+            <span class="faq-arrow">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Simply click "Login" to sign in with your Google account, then head to the mock tests section to start your first test. It's that easy!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer-section">
+    <div class="container">
+      <h2 class="footer-cta-title">Ready to hop into your CAT journey? 🦘</h2>
+      <p class="footer-contact">
+        Contact: <a href="mailto:hello@preparoo.com">hello@preparoo.com</a>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    // FAQ Accordion functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const arrow = item.querySelector('.faq-arrow');
+        
+        question.addEventListener('click', () => {
+          const isOpen = answer.classList.contains('open');
+          
+          // Close all other FAQ items
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.querySelector('.faq-answer').classList.remove('open');
+              otherItem.querySelector('.faq-arrow').classList.remove('open');
+              otherItem.querySelector('.faq-arrow').textContent = '+';
+            }
+          });
+          
+          // Toggle current item
+          if (isOpen) {
+            answer.classList.remove('open');
+            arrow.classList.remove('open');
+            arrow.textContent = '+';
+          } else {
+            answer.classList.add('open');
+            arrow.classList.add('open');
+            arrow.textContent = '+';
+          }
+        });
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

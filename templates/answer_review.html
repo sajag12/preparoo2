@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Answer Review - Preparoo 🦘</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header - Matching index.html */
+    .header {
+      background: #fff;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #6b7280;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #333;
+    }
+
+    .login-btn {
+      background: #f3f4f6;
+      color: #374151;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      border: 1px solid #d1d5db;
+    }
+
+    .login-btn:hover {
+      background: #e5e7eb;
+      color: #1f2937;
+    }
+
+    .user-menu {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    .logout-btn {
+      background: none;
+      border: 1px solid #ddd;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      color: #666;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    
+    .logout-btn:hover {
+      background: #f5f5f5;
+      border-color: #ccc;
+    }
+
+    /* Main Content */
+    .review-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 20px;
+    }
+
+    /* Review Header */
+    .review-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .review-header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+
+    .test-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .test-name {
+      font-size: 1.2rem;
+      color: #6b7280;
+      font-weight: 500;
+    }
+
+    .section-badge {
+      background: #8b5cf6;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* Review Navigation */
+    .review-navigation {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .filter-controls-container {
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .filter-label {
+      font-weight: 600;
+      color: #374151;
+      font-size: 1rem;
+      min-width: 80px;
+    }
+
+    .filter-buttons-group {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .section-filter-btn,
+    .filter-btn {
+      padding: 0.75rem 1.5rem;
+      border: 1px solid #d1d5db;
+      background: white;
+      color: #374151;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      font-size: 0.9rem;
+    }
+
+    .section-filter-btn:hover,
+    .filter-btn:hover {
+      background: #f9fafb;
+      border-color: #8b5cf6;
+      color: #333;
+    }
+
+    .section-filter-btn.active,
+    .filter-btn.active {
+      background: #8b5cf6;
+      color: white;
+      border-color: #8b5cf6;
+    }
+
+    .navigation-actions {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .back-to-results {
+      padding: 0.75rem 1.5rem;
+      background: white;
+      color: #374151;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .back-to-results:hover {
+      background: #f9fafb;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Questions Container */
+    .questions-container {
+      margin-bottom: 3rem;
+    }
+
+    .section-review {
+      margin-bottom: 3rem;
+    }
+
+    .section-review h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #8b5cf6;
+      margin-bottom: 2rem;
+      text-align: center;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    /* Question Cards */
+    .question-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .question-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .question-card.correct {
+      border-left: 4px solid #10b981;
+    }
+
+    .question-card.incorrect {
+      border-left: 4px solid #ef4444;
+    }
+
+    .question-card.skipped {
+      border-left: 4px solid #f59e0b;
+    }
+
+    .question-header {
+      background: #f8fafc;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .question-number {
+      font-weight: 600;
+      color: #1f2937;
+      font-size: 1.1rem;
+    }
+
+    .status-badge {
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .status-badge.correct {
+      background: #dcfce7;
+      color: #16a34a;
+    }
+
+    .status-badge.incorrect {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+
+    .status-badge.skipped {
+      background: #fef3c7;
+      color: #d97706;
+    }
+
+    .time-taken {
+      color: #6b7280;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .question-content {
+      padding: 1.5rem;
+    }
+
+    .passage-section,
+    .question-prompt,
+    .options-section,
+    .solution-section,
+    .tita-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .passage-section h4,
+    .question-prompt h4,
+    .options-section h4,
+    .solution-section h4,
+    .tita-section h4 {
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+
+    .passage-text {
+      background: #f8fafc;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    .question-prompt p {
+      color: #1f2937;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    /* Options Styling */
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .option-item {
+      padding: 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: all 0.2s ease;
+      background: white;
+    }
+
+    .option-item.correct-option {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+
+    .option-item.user-selected {
+      background: #fef2f2;
+      border-color: #fecaca;
+    }
+
+    .option-item.correct-option.user-selected {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+    }
+
+    .option-label {
+      font-weight: 600;
+      color: #374151;
+      min-width: 30px;
+    }
+
+    .option-text {
+      flex: 1;
+      color: #1f2937;
+    }
+
+    .correct-indicator {
+      background: #10b981;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .incorrect-indicator {
+      background: #ef4444;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* TITA Specific Styles */
+    .tita-section {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .tita-answer-display {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      border: 1px solid #d1d5db;
+    }
+
+    .answer-field label {
+      display: block;
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .tita-answer-box {
+      padding: 0.75rem;
+      background: #f9fafb;
+      border-radius: 6px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .tita-user-answer {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .tita-user-answer.correct {
+      color: #059669;
+    }
+
+    .tita-user-answer.incorrect {
+      color: #dc2626;
+    }
+
+    .tita-user-answer.skipped {
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    /* Solution Section */
+    .solution-text {
+      background: #fffbeb;
+      border: 1px solid #fed7aa;
+      border-radius: 8px;
+      padding: 1rem;
+      color: #92400e;
+      line-height: 1.6;
+    }
+
+    /* Answer Summary */
+    .answer-summary {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .answer-details {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .correct-answer,
+    .user-answer {
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    .correct-answer {
+      background: #dcfce7;
+      color: #16a34a;
+    }
+
+    .user-answer {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+
+    .user-answer.skipped {
+      background: #fef3c7;
+      color: #d97706;
+    }
+
+    /* Review Actions */
+    .review-actions {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .review-actions > div {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .action-btn.primary {
+      background: #8b5cf6;
+      color: white;
+    }
+
+    .action-btn.primary:hover {
+      background: #7c3aed;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(139, 92, 246, 0.25);
+    }
+
+    .action-btn.secondary {
+      background: white;
+      color: #374151;
+      border: 1px solid #d1d5db;
+    }
+
+    .action-btn.secondary:hover {
+      background: #f9fafb;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 20px;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .review-header h1 {
+        font-size: 2rem;
+      }
+
+      .review-container {
+        padding: 1rem 20px;
+      }
+
+      .filter-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .filter-label {
+        min-width: auto;
+      }
+
+      .question-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .answer-details {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .review-actions > div {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .action-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .review-navigation {
+        padding: 1rem;
+      }
+
+      .section-filter-btn,
+      .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+      }
+
+      .question-content {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="/" class="logo">Preparoo 🦘</a>
+      <div class="nav-links">
+        <a href="/">Our Method</a>
+        <a href="/mock-tests">Full-length Mocks</a>
+        <a href="/mock-tests">Sectionals</a>
+        
+        {% if current_user.is_authenticated %}
+          <div class="user-menu">
+            <div class="user-info">
+              {% if current_user.avatar_url %}
+                <img src="{{ current_user.avatar_url }}" alt="{{ current_user.name }}" class="user-avatar">
+              {% endif %}
+              <span>{{ current_user.name }}</span>
+            </div>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+          </div>
+        {% else %}
+          <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+        {% endif %}
+      </div>
+    </nav>
+  </header>
+
+  <div class="review-container">
+    <header class="review-header">
+      <h1>Answer Review</h1>
+      <div class="test-info">
+        <span class="test-name">{{ stats.test_name if stats.test_name else 'Mock Test Review' }}</span>
+        {% if is_sectional %}
+          <span class="section-badge">{{ stats.section_name }}</span>
+        {% endif %}
+      </div>
+    </header>
+
+    <div class="review-navigation">
+      <div class="filter-controls-container">
+        {% if not is_sectional %}
+        <!-- Section Filter Tabs (only for full mock tests) -->
+        <div class="filter-row primary-filters">
+          <div class="filter-label">Sections:</div>
+          <div class="filter-buttons-group">
+            <button class="section-filter-btn active" data-section="all">All Sections</button>
+            <button class="section-filter-btn" data-section="varc">VARC</button>
+            <button class="section-filter-btn" data-section="lrdi">LRDI</button>
+            <button class="section-filter-btn" data-section="qa">QA</button>
+          </div>
+        </div>
+        {% endif %}
+        
+        <!-- Status Filter Tabs -->
+        <div class="filter-row secondary-filters">
+          <div class="filter-label">Status:</div>
+          <div class="filter-buttons-group">
+            <button class="filter-btn active" data-filter="all">All Questions</button>
+            <button class="filter-btn" data-filter="correct">Correct</button>
+            <button class="filter-btn" data-filter="incorrect">Incorrect</button>
+            <button class="filter-btn" data-filter="skipped">Skipped</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="navigation-actions">
+        <a href="/results" class="back-to-results">← Back to Results</a>
+      </div>
+    </div>
+
+    <div class="questions-container">
+      {% if is_sectional %}
+        <!-- Sectional Test Review -->
+        <div class="section-review">
+          <h2>{{ stats.section_name }}</h2>
+          {% for question in stats.detailed_questions %}
+          <div class="question-card {{ question.status }}" data-status="{{ question.status }}">
+            <div class="question-header">
+              <span class="question-number">Question {{ question.number }}</span>
+              <span class="status-badge {{ question.status }}">{{ question.status.title() }}</span>
+              <span class="time-taken">{{ question.time_spent_on_question_formatted }}</span>
+            </div>
+            
+            <div class="question-content">
+              {% if question.passage_content %}
+              <div class="passage-section">
+                <h4>Passage:</h4>
+                <div class="passage-text">{{ question.passage_content|safe }}</div>
+              </div>
+              {% endif %}
+              
+              <div class="question-prompt">
+                <h4>Question:</h4>
+                <p>{{ question.prompt|safe }}</p>
+              </div>
+              
+              {% if question.question_type == 'MCQ' and question.options %}
+              <!-- MCQ Question -->
+              <div class="options-section">
+                <h4>Options:</h4>
+                <div class="options-grid">
+                  {% for option in question.options %}
+                  <div class="option-item 
+                    {% if option.value == question.correct_answer %}correct-option{% endif %}
+                    {% if option.value == question.user_answer %}user-selected{% endif %}">
+                    <span class="option-label">{{ option.value }})</span>
+                    <span class="option-text">{{ option.text }}</span>
+                    {% if option.value == question.correct_answer %}
+                      <span class="correct-indicator">✓ Correct</span>
+                    {% endif %}
+                    {% if option.value == question.user_answer and option.value != question.correct_answer %}
+                      <span class="incorrect-indicator">✗ Your Answer</span>
+                    {% endif %}
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+              {% else %}
+              <!-- TITA Question -->
+              <div class="tita-section">
+                <h4>Type in the Answer (TITA):</h4>
+                <div class="tita-answer-display">
+                  <div class="answer-field">
+                    <label>Numerical Answer Required</label>
+                    <div class="tita-answer-box">
+                      {% if question.user_answer %}
+                        <span class="tita-user-answer {% if question.user_answer == question.correct_answer %}correct{% else %}incorrect{% endif %}">
+                          Your Answer: {{ question.user_answer }}
+                        </span>
+                      {% else %}
+                        <span class="tita-user-answer skipped">Not Answered</span>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              
+              <!-- Always show solution section if solution exists -->
+              {% if question.solution %}
+              <div class="solution-section">
+                <h4>Solution:</h4>
+                <div class="solution-text">{{ question.solution|safe }}</div>
+              </div>
+              {% endif %}
+              
+              <div class="answer-summary">
+                <div class="answer-details">
+                  <span class="correct-answer">Correct Answer: {{ question.correct_answer }}</span>
+                  {% if question.user_answer %}
+                    <span class="user-answer">Your Answer: {{ question.user_answer }}</span>
+                  {% else %}
+                    <span class="user-answer skipped">Not Answered</span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <!-- Full Mock Test Review -->
+        {% for section in stats.detailed_sections %}
+        <div class="section-review" data-section="{{ 'varc' if 'Verbal' in section.name else ('lrdi' if 'Data' in section.name or 'LRDI' in section.name or 'Logical' in section.name else 'qa') }}">
+          <h2>{{ section.name }}</h2>
+          {% for question in section.questions %}
+          <div class="question-card {{ question.status }}" data-status="{{ question.status }}" data-section="{{ 'varc' if 'Verbal' in section.name else ('lrdi' if 'Data' in section.name or 'LRDI' in section.name or 'Logical' in section.name else 'qa') }}">
+            <div class="question-header">
+              <span class="question-number">Question {{ question.number }}</span>
+              <span class="status-badge {{ question.status }}">{{ question.status.title() }}</span>
+              <span class="time-taken">{{ question.time_spent_on_question_formatted }}</span>
+            </div>
+            
+            <div class="question-content">
+              {% if question.passage_content %}
+              <div class="passage-section">
+                <h4>Passage:</h4>
+                <div class="passage-text">{{ question.passage_content|safe }}</div>
+              </div>
+              {% endif %}
+              
+              <div class="question-prompt">
+                <h4>Question:</h4>
+                <p>{{ question.prompt|safe }}</p>
+              </div>
+              
+              {% if question.question_type == 'MCQ' and question.options %}
+              <!-- MCQ Question -->
+              <div class="options-section">
+                <h4>Options:</h4>
+                <div class="options-grid">
+                  {% for option in question.options %}
+                  <div class="option-item 
+                    {% if option.value == question.correct_answer %}correct-option{% endif %}
+                    {% if option.value == question.user_answer %}user-selected{% endif %}">
+                    <span class="option-label">{{ option.value }})</span>
+                    <span class="option-text">{{ option.text }}</span>
+                    {% if option.value == question.correct_answer %}
+                      <span class="correct-indicator">✓ Correct</span>
+                    {% endif %}
+                    {% if option.value == question.user_answer and option.value != question.correct_answer %}
+                      <span class="incorrect-indicator">✗ Your Answer</span>
+                    {% endif %}
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+              {% else %}
+              <!-- TITA Question -->
+              <div class="tita-section">
+                <h4>Type in the Answer (TITA):</h4>
+                <div class="tita-answer-display">
+                  <div class="answer-field">
+                    <label>Numerical Answer Required</label>
+                    <div class="tita-answer-box">
+                      {% if question.user_answer %}
+                        <span class="tita-user-answer {% if question.user_answer == question.correct_answer %}correct{% else %}incorrect{% endif %}">
+                          Your Answer: {{ question.user_answer }}
+                        </span>
+                      {% else %}
+                        <span class="tita-user-answer skipped">Not Answered</span>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              
+              <!-- Always show solution section if solution exists -->
+              {% if question.solution %}
+              <div class="solution-section">
+                <h4>Solution:</h4>
+                <div class="solution-text">{{ question.solution|safe }}</div>
+              </div>
+              {% endif %}
+              
+              <div class="answer-summary">
+                <div class="answer-details">
+                  <span class="correct-answer">Correct Answer: {{ question.correct_answer }}</span>
+                  {% if question.user_answer %}
+                    <span class="user-answer">Your Answer: {{ question.user_answer }}</span>
+                  {% else %}
+                    <span class="user-answer skipped">Not Answered</span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="review-actions">
+      <div>
+        <a href="/results" class="action-btn secondary">
+          ← Back to Results
+        </a>
+        <a href="/mock-tests" class="action-btn primary">
+          🔄 Take Another Test
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Clear any navigation protection that might be leftover from test
+    window.onbeforeunload = null;
+    window.onpopstate = null;
+    
+    let currentSectionFilter = 'all';
+    let currentStatusFilter = 'all';
+
+    function applyFilters() {
+      const questions = document.querySelectorAll('.question-card');
+      const sections = document.querySelectorAll('.section-review');
+      
+      sections.forEach((section, index) => {
+        const sectionId = section.dataset.section;
+        const sectionName = section.querySelector('h2') ? section.querySelector('h2').textContent : 'Unknown';
+        
+        const shouldShowSection = currentSectionFilter === 'all' || currentSectionFilter === sectionId;
+        section.style.display = shouldShowSection ? 'block' : 'none';
+      });
+
+      questions.forEach(question => {
+        const questionStatus = question.dataset.status;
+        const questionSection = question.dataset.section;
+        
+        const sectionMatch = currentSectionFilter === 'all' || currentSectionFilter === questionSection;
+        const statusMatch = currentStatusFilter === 'all' || currentStatusFilter === questionStatus;
+        
+        question.style.display = sectionMatch && statusMatch ? 'block' : 'none';
+      });
+    }
+
+    // Section filter functionality
+    document.querySelectorAll('.section-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        document.querySelectorAll('.section-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        currentSectionFilter = btn.dataset.section;
+        applyFilters();
+      });
+    });
+
+    // Status filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        currentStatusFilter = btn.dataset.filter;
+        applyFilters();
+      });
+    });
+
+    // Debug: Log initial state when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+      applyFilters();
+    });
+  </script>
+</body>
+</html>

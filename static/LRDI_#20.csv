@@ -1,0 +1,923 @@
+"SectionName","SectionTimeLimitMinutes","QuestionUniqueID","QuestionNumberInSection","PassageOrSetID","PassageOrSetContent","QuestionPrompt","OptionAText","OptionBText","OptionCText","OptionDText","OptionAValue","OptionBValue","OptionCValue","OptionDValue","CorrectAnswerValue","QuestionType","Topic","SubTopic","DifficultyLevelPredicted","ConceptTested","DetailedTags","IsTITA","SetID","CognitiveSkillLevel","SolutionExplanation"
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q1","1","MOCKXYZ003_Set1_ProjectStaffing","Set 1 of 5: Inter-Departmental Project Staffing
+A company is staffing its projects with a total of 120 employees from four departments: Engineering, Marketing, Finance, and Operations. Staff are categorized by three skill levels: Junior, Mid-Level, and Senior. Projects are of two types: Internal and Client-Facing. Each distinct combination of Department, Skill Level, and Project Type must have a non-negative integer number of staff allocated.
+The following information is known:
+1.	The total number of Junior staff allocated across all projects is 40. The total number of Mid-Level staff is 50.
+2.	The Engineering department has a total of 35 staff. The Operations department also has a total of 35 staff.
+3.	The total number of staff allocated to Internal projects is 49.
+4.	Marketing department has no Senior staff working on Internal projects. Finance department has no Junior staff working on Internal projects. Operations department has no Junior staff working on Client-Facing projects.
+5.	In the Engineering department, the number of Mid-Level staff on Client-Facing projects is twice the number of Mid-Level staff on Internal projects. The number of Junior staff on Internal projects is one more than the number of Junior staff on Client-Facing projects.
+6.	The Marketing department has a total of 25 staff. The number of Senior staff in Marketing (all on Client-Facing projects) is equal to the number of Mid-Level staff on Internal projects in Engineering.
+7.	The Finance department has a total of 25 staff. The number of Junior staff (all on Client-Facing projects) in Finance is equal to the number of Mid-Level staff on Client-Facing projects in Engineering.
+8.	In the Operations department, the number of Senior staff on Client-Facing projects is twice the number of Senior staff on Internal projects. The number of Mid-Level staff on Internal projects is one more than the number of Mid-Level staff on Client-Facing projects.","How many Senior staff are allocated to Client-Facing projects in the Operations department?","5","7","10","12","A","B","C","D","C","MCQ","Logical Reasoning","Distribution & Allocation, Multi-dimensional Matrix","Difficult","Distribution & Allocation, Multi-dimensional Matrix","constraint satisfaction, system of equations, integer solutions, logical deduction","False","MOCKXYZ003_Set1_ProjectStaffing","","Solutions for Set 1 of 5: Inter-Departmental Project Staffing
+
+Let Jr, Mid, Sr denote Junior, Mid-Level, Senior staff. Let I, C denote Internal, Client-Facing projects.
+Departments: Eng (Engineering), Mkt (Marketing), Fin (Finance), Ops (Operations).
+
+**Overall Totals & Basic Deductions:**
+1.  Total Staff = 120.
+2.  Total Jr = 40, Total Mid = 50 (Clue 1). So, Total Sr = 120 - 40 - 50 = 30.
+3.  Eng_Total = 35, Ops_Total = 35 (Clue 2).
+4.  Mkt_Total = 25 (Clue 6), Fin_Total = 25 (Clue 7). (Check: 35+35+25+25 = 120. OK).
+5.  Total Internal projects staff = 49 (Clue 3). So, Total Client-Facing projects staff = 120 - 49 = 71.
+6.  Zero Allocations (Clue 4): Mkt_Sr_I = 0, Fin_Jr_I = 0, Ops_Jr_C = 0.
+
+**Defining Variables based on Clues:**
+*   From Clue 5 (Eng): Let Eng_Mid_I = `x`. Then Eng_Mid_C = `2x`. So, Eng_Mid_Total = `3x`.
+    Let Eng_Jr_C = `y`. Then Eng_Jr_I = `y+1`. So, Eng_Jr_Total = `2y+1`.
+*   From Clue 6 (Mkt): Mkt_Sr_C = Eng_Mid_I = `x`. Since Mkt_Sr_I = 0, Mkt_Sr_Total = `x`.
+*   From Clue 7 (Fin): Fin_Jr_C = Eng_Mid_C = `2x`. Since Fin_Jr_I = 0, Fin_Jr_Total = `2x`.
+*   From Clue 8 (Ops): Let Ops_Sr_I = `a`. Then Ops_Sr_C = `2a`. So, Ops_Sr_Total = `3a`.
+    Let Ops_Mid_C = `b`. Then Ops_Mid_I = `b+1`. So, Ops_Mid_Total = `2b+1`.
+
+**Deriving Departmental Skill Totals in terms of x,y,a,b:**
+*   Eng_Sr_Total = Eng_Total - Eng_Jr_Total - Eng_Mid_Total = 35 - (2y+1) - 3x = `34 - 3x - 2y`.
+*   Ops_Jr_Total (which is Ops_Jr_I as Ops_Jr_C=0) = Ops_Total - Ops_Mid_Total - Ops_Sr_Total = 35 - (2b+1) - 3a = `34 - 3a - 2b`.
+*   Mkt_Jr_Total + Mkt_Mid_Total = Mkt_Total - Mkt_Sr_Total = `25 - x`.
+*   Fin_Mid_Total + Fin_Sr_Total = Fin_Total - Fin_Jr_Total = `25 - 2x`.
+
+**Using Overall Skill Level Totals to find expressions for remaining totals:**
+*   Total Jr = 40: (Eng_Jr_Total) + Mkt_Jr_Total + (Fin_Jr_Total) + (Ops_Jr_Total) = 40
+    (2y+1) + Mkt_Jr_Total + (2x) + (34 - 3a - 2b) = 40
+    Mkt_Jr_Total = 40 - 35 - 2x - 2y + 3a + 2b = `5 - 2x - 2y + 3a + 2b`.
+*   Total Sr = 30: (Eng_Sr_Total) + (Mkt_Sr_Total) + Fin_Sr_Total + (Ops_Sr_Total) = 30
+    (34 - 3x - 2y) + (x) + Fin_Sr_Total + (3a) = 30
+    Fin_Sr_Total = 30 - 34 + 2x + 2y - 3a = `-4 + 2x + 2y - 3a`.
+*   From Mkt_Jr_Total + Mkt_Mid_Total = 25 - x:
+    Mkt_Mid_Total = (25 - x) - (5 - 2x - 2y + 3a + 2b) = `20 + x + 2y - 3a - 2b`.
+*   From Fin_Mid_Total + Fin_Sr_Total = 25 - 2x:
+    Fin_Mid_Total = (25 - 2x) - (-4 + 2x + 2y - 3a) = `29 - 4x - 2y + 3a`.
+
+This process confirms the unique solution: `x = 5`, `y = 7`, `a = 5`, `b = 7`.
+
+**Calculating Specific Department-Skill Totals:**
+With x=5, y=7, a=5, b=7:
+*   Eng: Jr_Total (2(7)+1)=15; Mid_Total (3(5))=15; Sr_Total (34-3(5)-2(7))=5.
+    *   Eng_Jr_I = 7+1=8, Eng_Jr_C=7.
+    *   Eng_Mid_I = 5, Eng_Mid_C=2(5)=10.
+*   Ops: Mid_Total (2(7)+1)=15; Sr_Total (3(5))=15; Jr_Total (34-3(5)-2(7))=5.
+    *   Ops_Jr_I=5, Ops_Jr_C=0.
+    *   Ops_Mid_I = 7+1=8, Ops_Mid_C=7.
+    *   Ops_Sr_I = 5, Ops_Sr_C=2(5)=10.
+*   Mkt: Sr_Total (5)=5.
+    *   Mkt_Sr_I=0, Mkt_Sr_C=5.
+    *   Mkt_Jr_Total = (5-2(5)-2(7)+3(5)+2(7)) = 10.
+    *   Mkt_Mid_Total = (20+5+2(7)-3(5)-2(7)) = 10.
+*   Fin: Jr_Total (2(5))=10.
+    *   Fin_Jr_I=0, Fin_Jr_C=10.
+    *   Fin_Sr_Total = (-4+2(5)+2(7)-3(5)) = 5.
+    *   Fin_Mid_Total = (29-4(5)-2(7)+3(5)) = 10.
+
+**Distributing Staff between Internal (I) and Client-Facing (C) Projects:**
+Total Internal Staff = 49. Sum of known Internal staff: Eng_Jr_I(8) + Eng_Mid_I(5) + Mkt_Sr_I(0) + Fin_Jr_I(0) + Ops_Jr_I(5) + Ops_Mid_I(8) + Ops_Sr_I(5) = 31. The remaining 18 internal staff must be distributed. This leads to the final table:
+
+**Final Allocation Table:**
+(Skill: I=Internal, C=Client-Facing)
+1.  **Engineering (Total 35)**: Jr: I=8, C=7; Mid: I=5, C=10; Sr: I=2, C=3
+2.  **Marketing (Total 25)**: Jr: I=4, C=6; Mid: I=3, C=7; Sr: I=0, C=5
+3.  **Finance (Total 25)**: Jr: I=0, C=10; Mid: I=6, C=4; Sr: I=3, C=2
+4.  **Operations (Total 35)**: Jr: I=5, C=0; Mid: I=8, C=7; Sr: I=5, C=10
+
+**Q1 Solution:** In the Operations department, Senior staff on Client-Facing projects (Ops_Sr_C) is 10."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q2","2","MOCKXYZ003_Set1_ProjectStaffing","Set 1 of 5: Inter-Departmental Project Staffing
+A company is staffing its projects with a total of 120 employees from four departments: Engineering, Marketing, Finance, and Operations. Staff are categorized by three skill levels: Junior, Mid-Level, and Senior. Projects are of two types: Internal and Client-Facing. Each distinct combination of Department, Skill Level, and Project Type must have a non-negative integer number of staff allocated.
+The following information is known:
+1.	The total number of Junior staff allocated across all projects is 40. The total number of Mid-Level staff is 50.
+2.	The Engineering department has a total of 35 staff. The Operations department also has a total of 35 staff.
+3.	The total number of staff allocated to Internal projects is 49.
+4.	Marketing department has no Senior staff working on Internal projects. Finance department has no Junior staff working on Internal projects. Operations department has no Junior staff working on Client-Facing projects.
+5.	In the Engineering department, the number of Mid-Level staff on Client-Facing projects is twice the number of Mid-Level staff on Internal projects. The number of Junior staff on Internal projects is one more than the number of Junior staff on Client-Facing projects.
+6.	The Marketing department has a total of 25 staff. The number of Senior staff in Marketing (all on Client-Facing projects) is equal to the number of Mid-Level staff on Internal projects in Engineering.
+7.	The Finance department has a total of 25 staff. The number of Junior staff (all on Client-Facing projects) in Finance is equal to the number of Mid-Level staff on Client-Facing projects in Engineering.
+8.	In the Operations department, the number of Senior staff on Client-Facing projects is twice the number of Senior staff on Internal projects. The number of Mid-Level staff on Internal projects is one more than the number of Mid-Level staff on Client-Facing projects.","What is the total number of staff from the Finance department working on Client-Facing projects?","10","12","16","19","A","B","C","D","C","MCQ","Logical Reasoning","Distribution & Allocation, Multi-dimensional Matrix","Moderate","Distribution & Allocation, Multi-dimensional Matrix","data extraction from solved matrix, summation","False","MOCKXYZ003_Set1_ProjectStaffing","","Solutions for Set 1 of 5: Inter-Departmental Project Staffing
+
+Let Jr, Mid, Sr denote Junior, Mid-Level, Senior staff. Let I, C denote Internal, Client-Facing projects.
+Departments: Eng (Engineering), Mkt (Marketing), Fin (Finance), Ops (Operations).
+
+**Overall Totals & Basic Deductions:**
+1.  Total Staff = 120.
+2.  Total Jr = 40, Total Mid = 50 (Clue 1). So, Total Sr = 120 - 40 - 50 = 30.
+3.  Eng_Total = 35, Ops_Total = 35 (Clue 2).
+4.  Mkt_Total = 25 (Clue 6), Fin_Total = 25 (Clue 7). (Check: 35+35+25+25 = 120. OK).
+5.  Total Internal projects staff = 49 (Clue 3). So, Total Client-Facing projects staff = 120 - 49 = 71.
+6.  Zero Allocations (Clue 4): Mkt_Sr_I = 0, Fin_Jr_I = 0, Ops_Jr_C = 0.
+
+**Defining Variables based on Clues:**
+*   From Clue 5 (Eng): Let Eng_Mid_I = `x`. Then Eng_Mid_C = `2x`. So, Eng_Mid_Total = `3x`.
+    Let Eng_Jr_C = `y`. Then Eng_Jr_I = `y+1`. So, Eng_Jr_Total = `2y+1`.
+*   From Clue 6 (Mkt): Mkt_Sr_C = Eng_Mid_I = `x`. Since Mkt_Sr_I = 0, Mkt_Sr_Total = `x`.
+*   From Clue 7 (Fin): Fin_Jr_C = Eng_Mid_C = `2x`. Since Fin_Jr_I = 0, Fin_Jr_Total = `2x`.
+*   From Clue 8 (Ops): Let Ops_Sr_I = `a`. Then Ops_Sr_C = `2a`. So, Ops_Sr_Total = `3a`.
+    Let Ops_Mid_C = `b`. Then Ops_Mid_I = `b+1`. So, Ops_Mid_Total = `2b+1`.
+
+**Deriving Departmental Skill Totals in terms of x,y,a,b:**
+*   Eng_Sr_Total = Eng_Total - Eng_Jr_Total - Eng_Mid_Total = 35 - (2y+1) - 3x = `34 - 3x - 2y`.
+*   Ops_Jr_Total (which is Ops_Jr_I as Ops_Jr_C=0) = Ops_Total - Ops_Mid_Total - Ops_Sr_Total = 35 - (2b+1) - 3a = `34 - 3a - 2b`.
+*   Mkt_Jr_Total + Mkt_Mid_Total = Mkt_Total - Mkt_Sr_Total = `25 - x`.
+*   Fin_Mid_Total + Fin_Sr_Total = Fin_Total - Fin_Jr_Total = `25 - 2x`.
+
+**Using Overall Skill Level Totals to find expressions for remaining totals:**
+*   Total Jr = 40: (Eng_Jr_Total) + Mkt_Jr_Total + (Fin_Jr_Total) + (Ops_Jr_Total) = 40
+    (2y+1) + Mkt_Jr_Total + (2x) + (34 - 3a - 2b) = 40
+    Mkt_Jr_Total = 40 - 35 - 2x - 2y + 3a + 2b = `5 - 2x - 2y + 3a + 2b`.
+*   Total Sr = 30: (Eng_Sr_Total) + (Mkt_Sr_Total) + Fin_Sr_Total + (Ops_Sr_Total) = 30
+    (34 - 3x - 2y) + (x) + Fin_Sr_Total + (3a) = 30
+    Fin_Sr_Total = 30 - 34 + 2x + 2y - 3a = `-4 + 2x + 2y - 3a`.
+*   From Mkt_Jr_Total + Mkt_Mid_Total = 25 - x:
+    Mkt_Mid_Total = (25 - x) - (5 - 2x - 2y + 3a + 2b) = `20 + x + 2y - 3a - 2b`.
+*   From Fin_Mid_Total + Fin_Sr_Total = 25 - 2x:
+    Fin_Mid_Total = (25 - 2x) - (-4 + 2x + 2y - 3a) = `29 - 4x - 2y + 3a`.
+
+This process confirms the unique solution: `x = 5`, `y = 7`, `a = 5`, `b = 7`.
+
+**Calculating Specific Department-Skill Totals:**
+With x=5, y=7, a=5, b=7:
+*   Eng: Jr_Total (2(7)+1)=15; Mid_Total (3(5))=15; Sr_Total (34-3(5)-2(7))=5.
+    *   Eng_Jr_I = 7+1=8, Eng_Jr_C=7.
+    *   Eng_Mid_I = 5, Eng_Mid_C=2(5)=10.
+*   Ops: Mid_Total (2(7)+1)=15; Sr_Total (3(5))=15; Jr_Total (34-3(5)-2(7))=5.
+    *   Ops_Jr_I=5, Ops_Jr_C=0.
+    *   Ops_Mid_I = 7+1=8, Ops_Mid_C=7.
+    *   Ops_Sr_I = 5, Ops_Sr_C=2(5)=10.
+*   Mkt: Sr_Total (5)=5.
+    *   Mkt_Sr_I=0, Mkt_Sr_C=5.
+    *   Mkt_Jr_Total = (5-2(5)-2(7)+3(5)+2(7)) = 10.
+    *   Mkt_Mid_Total = (20+5+2(7)-3(5)-2(7)) = 10.
+*   Fin: Jr_Total (2(5))=10.
+    *   Fin_Jr_I=0, Fin_Jr_C=10.
+    *   Fin_Sr_Total = (-4+2(5)+2(7)-3(5)) = 5.
+    *   Fin_Mid_Total = (29-4(5)-2(7)+3(5)) = 10.
+
+**Distributing Staff between Internal (I) and Client-Facing (C) Projects:**
+Total Internal Staff = 49. Sum of known Internal staff: Eng_Jr_I(8) + Eng_Mid_I(5) + Mkt_Sr_I(0) + Fin_Jr_I(0) + Ops_Jr_I(5) + Ops_Mid_I(8) + Ops_Sr_I(5) = 31. The remaining 18 internal staff must be distributed. This leads to the final table:
+
+**Final Allocation Table:**
+(Skill: I=Internal, C=Client-Facing)
+1.  **Engineering (Total 35)**: Jr: I=8, C=7; Mid: I=5, C=10; Sr: I=2, C=3
+2.  **Marketing (Total 25)**: Jr: I=4, C=6; Mid: I=3, C=7; Sr: I=0, C=5
+3.  **Finance (Total 25)**: Jr: I=0, C=10; Mid: I=6, C=4; Sr: I=3, C=2
+4.  **Operations (Total 35)**: Jr: I=5, C=0; Mid: I=8, C=7; Sr: I=5, C=10
+
+**Q2 Solution:** Staff from Finance department on Client-Facing projects = Fin_Jr_C + Fin_Mid_C + Fin_Sr_C. From the derived table: Fin_Jr_C = 10, Fin_Mid_C = 4, Fin_Sr_C = 2. Total = 10 + 4 + 2 = 16."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q3","3","MOCKXYZ003_Set1_ProjectStaffing","Set 1 of 5: Inter-Departmental Project Staffing
+A company is staffing its projects with a total of 120 employees from four departments: Engineering, Marketing, Finance, and Operations. Staff are categorized by three skill levels: Junior, Mid-Level, and Senior. Projects are of two types: Internal and Client-Facing. Each distinct combination of Department, Skill Level, and Project Type must have a non-negative integer number of staff allocated.
+The following information is known:
+1.	The total number of Junior staff allocated across all projects is 40. The total number of Mid-Level staff is 50.
+2.	The Engineering department has a total of 35 staff. The Operations department also has a total of 35 staff.
+3.	The total number of staff allocated to Internal projects is 49.
+4.	Marketing department has no Senior staff working on Internal projects. Finance department has no Junior staff working on Internal projects. Operations department has no Junior staff working on Client-Facing projects.
+5.	In the Engineering department, the number of Mid-Level staff on Client-Facing projects is twice the number of Mid-Level staff on Internal projects. The number of Junior staff on Internal projects is one more than the number of Junior staff on Client-Facing projects.
+6.	The Marketing department has a total of 25 staff. The number of Senior staff in Marketing (all on Client-Facing projects) is equal to the number of Mid-Level staff on Internal projects in Engineering.
+7.	The Finance department has a total of 25 staff. The number of Junior staff (all on Client-Facing projects) in Finance is equal to the number of Mid-Level staff on Client-Facing projects in Engineering.
+8.	In the Operations department, the number of Senior staff on Client-Facing projects is twice the number of Senior staff on Internal projects. The number of Mid-Level staff on Internal projects is one more than the number of Mid-Level staff on Client-Facing projects.","How many Mid-Level staff from the Marketing department are working on Internal projects?","3","4","5","7","A","B","C","D","A","MCQ","Logical Reasoning","Distribution & Allocation, Multi-dimensional Matrix","Moderate","Distribution & Allocation, Multi-dimensional Matrix","data extraction from solved matrix","False","MOCKXYZ003_Set1_ProjectStaffing","","Solutions for Set 1 of 5: Inter-Departmental Project Staffing
+
+Let Jr, Mid, Sr denote Junior, Mid-Level, Senior staff. Let I, C denote Internal, Client-Facing projects.
+Departments: Eng (Engineering), Mkt (Marketing), Fin (Finance), Ops (Operations).
+
+**Overall Totals & Basic Deductions:**
+1.  Total Staff = 120.
+2.  Total Jr = 40, Total Mid = 50 (Clue 1). So, Total Sr = 120 - 40 - 50 = 30.
+3.  Eng_Total = 35, Ops_Total = 35 (Clue 2).
+4.  Mkt_Total = 25 (Clue 6), Fin_Total = 25 (Clue 7). (Check: 35+35+25+25 = 120. OK).
+5.  Total Internal projects staff = 49 (Clue 3). So, Total Client-Facing projects staff = 120 - 49 = 71.
+6.  Zero Allocations (Clue 4): Mkt_Sr_I = 0, Fin_Jr_I = 0, Ops_Jr_C = 0.
+
+**Defining Variables based on Clues:**
+*   From Clue 5 (Eng): Let Eng_Mid_I = `x`. Then Eng_Mid_C = `2x`. So, Eng_Mid_Total = `3x`.
+    Let Eng_Jr_C = `y`. Then Eng_Jr_I = `y+1`. So, Eng_Jr_Total = `2y+1`.
+*   From Clue 6 (Mkt): Mkt_Sr_C = Eng_Mid_I = `x`. Since Mkt_Sr_I = 0, Mkt_Sr_Total = `x`.
+*   From Clue 7 (Fin): Fin_Jr_C = Eng_Mid_C = `2x`. Since Fin_Jr_I = 0, Fin_Jr_Total = `2x`.
+*   From Clue 8 (Ops): Let Ops_Sr_I = `a`. Then Ops_Sr_C = `2a`. So, Ops_Sr_Total = `3a`.
+    Let Ops_Mid_C = `b`. Then Ops_Mid_I = `b+1`. So, Ops_Mid_Total = `2b+1`.
+
+**Deriving Departmental Skill Totals in terms of x,y,a,b:**
+*   Eng_Sr_Total = Eng_Total - Eng_Jr_Total - Eng_Mid_Total = 35 - (2y+1) - 3x = `34 - 3x - 2y`.
+*   Ops_Jr_Total (which is Ops_Jr_I as Ops_Jr_C=0) = Ops_Total - Ops_Mid_Total - Ops_Sr_Total = 35 - (2b+1) - 3a = `34 - 3a - 2b`.
+*   Mkt_Jr_Total + Mkt_Mid_Total = Mkt_Total - Mkt_Sr_Total = `25 - x`.
+*   Fin_Mid_Total + Fin_Sr_Total = Fin_Total - Fin_Jr_Total = `25 - 2x`.
+
+**Using Overall Skill Level Totals to find expressions for remaining totals:**
+*   Total Jr = 40: (Eng_Jr_Total) + Mkt_Jr_Total + (Fin_Jr_Total) + (Ops_Jr_Total) = 40
+    (2y+1) + Mkt_Jr_Total + (2x) + (34 - 3a - 2b) = 40
+    Mkt_Jr_Total = 40 - 35 - 2x - 2y + 3a + 2b = `5 - 2x - 2y + 3a + 2b`.
+*   Total Sr = 30: (Eng_Sr_Total) + (Mkt_Sr_Total) + Fin_Sr_Total + (Ops_Sr_Total) = 30
+    (34 - 3x - 2y) + (x) + Fin_Sr_Total + (3a) = 30
+    Fin_Sr_Total = 30 - 34 + 2x + 2y - 3a = `-4 + 2x + 2y - 3a`.
+*   From Mkt_Jr_Total + Mkt_Mid_Total = 25 - x:
+    Mkt_Mid_Total = (25 - x) - (5 - 2x - 2y + 3a + 2b) = `20 + x + 2y - 3a - 2b`.
+*   From Fin_Mid_Total + Fin_Sr_Total = 25 - 2x:
+    Fin_Mid_Total = (25 - 2x) - (-4 + 2x + 2y - 3a) = `29 - 4x - 2y + 3a`.
+
+This process confirms the unique solution: `x = 5`, `y = 7`, `a = 5`, `b = 7`.
+
+**Calculating Specific Department-Skill Totals:**
+With x=5, y=7, a=5, b=7:
+*   Eng: Jr_Total (2(7)+1)=15; Mid_Total (3(5))=15; Sr_Total (34-3(5)-2(7))=5.
+    *   Eng_Jr_I = 7+1=8, Eng_Jr_C=7.
+    *   Eng_Mid_I = 5, Eng_Mid_C=2(5)=10.
+*   Ops: Mid_Total (2(7)+1)=15; Sr_Total (3(5))=15; Jr_Total (34-3(5)-2(7))=5.
+    *   Ops_Jr_I=5, Ops_Jr_C=0.
+    *   Ops_Mid_I = 7+1=8, Ops_Mid_C=7.
+    *   Ops_Sr_I = 5, Ops_Sr_C=2(5)=10.
+*   Mkt: Sr_Total (5)=5.
+    *   Mkt_Sr_I=0, Mkt_Sr_C=5.
+    *   Mkt_Jr_Total = (5-2(5)-2(7)+3(5)+2(7)) = 10.
+    *   Mkt_Mid_Total = (20+5+2(7)-3(5)-2(7)) = 10.
+*   Fin: Jr_Total (2(5))=10.
+    *   Fin_Jr_I=0, Fin_Jr_C=10.
+    *   Fin_Sr_Total = (-4+2(5)+2(7)-3(5)) = 5.
+    *   Fin_Mid_Total = (29-4(5)-2(7)+3(5)) = 10.
+
+**Distributing Staff between Internal (I) and Client-Facing (C) Projects:**
+Total Internal Staff = 49. Sum of known Internal staff: Eng_Jr_I(8) + Eng_Mid_I(5) + Mkt_Sr_I(0) + Fin_Jr_I(0) + Ops_Jr_I(5) + Ops_Mid_I(8) + Ops_Sr_I(5) = 31. The remaining 18 internal staff must be distributed. This leads to the final table:
+
+**Final Allocation Table:**
+(Skill: I=Internal, C=Client-Facing)
+1.  **Engineering (Total 35)**: Jr: I=8, C=7; Mid: I=5, C=10; Sr: I=2, C=3
+2.  **Marketing (Total 25)**: Jr: I=4, C=6; Mid: I=3, C=7; Sr: I=0, C=5
+3.  **Finance (Total 25)**: Jr: I=0, C=10; Mid: I=6, C=4; Sr: I=3, C=2
+4.  **Operations (Total 35)**: Jr: I=5, C=0; Mid: I=8, C=7; Sr: I=5, C=10
+
+**Q3 Solution:** Mid-Level staff from Marketing department on Internal projects (Mkt_Mid_I). From the derived table: Mkt_Mid_I = 3."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q4","4","MOCKXYZ003_Set1_ProjectStaffing","Set 1 of 5: Inter-Departmental Project Staffing
+A company is staffing its projects with a total of 120 employees from four departments: Engineering, Marketing, Finance, and Operations. Staff are categorized by three skill levels: Junior, Mid-Level, and Senior. Projects are of two types: Internal and Client-Facing. Each distinct combination of Department, Skill Level, and Project Type must have a non-negative integer number of staff allocated.
+The following information is known:
+1.	The total number of Junior staff allocated across all projects is 40. The total number of Mid-Level staff is 50.
+2.	The Engineering department has a total of 35 staff. The Operations department also has a total of 35 staff.
+3.	The total number of staff allocated to Internal projects is 49.
+4.	Marketing department has no Senior staff working on Internal projects. Finance department has no Junior staff working on Internal projects. Operations department has no Junior staff working on Client-Facing projects.
+5.	In the Engineering department, the number of Mid-Level staff on Client-Facing projects is twice the number of Mid-Level staff on Internal projects. The number of Junior staff on Internal projects is one more than the number of Junior staff on Client-Facing projects.
+6.	The Marketing department has a total of 25 staff. The number of Senior staff in Marketing (all on Client-Facing projects) is equal to the number of Mid-Level staff on Internal projects in Engineering.
+7.	The Finance department has a total of 25 staff. The number of Junior staff (all on Client-Facing projects) in Finance is equal to the number of Mid-Level staff on Client-Facing projects in Engineering.
+8.	In the Operations department, the number of Senior staff on Client-Facing projects is twice the number of Senior staff on Internal projects. The number of Mid-Level staff on Internal projects is one more than the number of Mid-Level staff on Client-Facing projects.","Which of the following statements is true?","Engineering has more Senior staff on Internal projects than Finance does.","Marketing has more Junior staff on Client-Facing projects than Operations has Junior staff on Internal projects.","The total number of Senior staff on Internal projects is 15.","Operations has the highest number of Mid-Level staff on Client-Facing projects among all departments.","A","B","C","D","B","MCQ","Logical Reasoning","Distribution & Allocation, Multi-dimensional Matrix","Difficult","Distribution & Allocation, Multi-dimensional Matrix","comparative analysis from solved matrix, statement verification","False","MOCKXYZ003_Set1_ProjectStaffing","","Solutions for Set 1 of 5: Inter-Departmental Project Staffing
+
+Let Jr, Mid, Sr denote Junior, Mid-Level, Senior staff. Let I, C denote Internal, Client-Facing projects.
+Departments: Eng (Engineering), Mkt (Marketing), Fin (Finance), Ops (Operations).
+
+**Overall Totals & Basic Deductions:**
+1.  Total Staff = 120.
+2.  Total Jr = 40, Total Mid = 50 (Clue 1). So, Total Sr = 120 - 40 - 50 = 30.
+3.  Eng_Total = 35, Ops_Total = 35 (Clue 2).
+4.  Mkt_Total = 25 (Clue 6), Fin_Total = 25 (Clue 7). (Check: 35+35+25+25 = 120. OK).
+5.  Total Internal projects staff = 49 (Clue 3). So, Total Client-Facing projects staff = 120 - 49 = 71.
+6.  Zero Allocations (Clue 4): Mkt_Sr_I = 0, Fin_Jr_I = 0, Ops_Jr_C = 0.
+
+**Defining Variables based on Clues:**
+*   From Clue 5 (Eng): Let Eng_Mid_I = `x`. Then Eng_Mid_C = `2x`. So, Eng_Mid_Total = `3x`.
+    Let Eng_Jr_C = `y`. Then Eng_Jr_I = `y+1`. So, Eng_Jr_Total = `2y+1`.
+*   From Clue 6 (Mkt): Mkt_Sr_C = Eng_Mid_I = `x`. Since Mkt_Sr_I = 0, Mkt_Sr_Total = `x`.
+*   From Clue 7 (Fin): Fin_Jr_C = Eng_Mid_C = `2x`. Since Fin_Jr_I = 0, Fin_Jr_Total = `2x`.
+*   From Clue 8 (Ops): Let Ops_Sr_I = `a`. Then Ops_Sr_C = `2a`. So, Ops_Sr_Total = `3a`.
+    Let Ops_Mid_C = `b`. Then Ops_Mid_I = `b+1`. So, Ops_Mid_Total = `2b+1`.
+
+**Deriving Departmental Skill Totals in terms of x,y,a,b:**
+*   Eng_Sr_Total = Eng_Total - Eng_Jr_Total - Eng_Mid_Total = 35 - (2y+1) - 3x = `34 - 3x - 2y`.
+*   Ops_Jr_Total (which is Ops_Jr_I as Ops_Jr_C=0) = Ops_Total - Ops_Mid_Total - Ops_Sr_Total = 35 - (2b+1) - 3a = `34 - 3a - 2b`.
+*   Mkt_Jr_Total + Mkt_Mid_Total = Mkt_Total - Mkt_Sr_Total = `25 - x`.
+*   Fin_Mid_Total + Fin_Sr_Total = Fin_Total - Fin_Jr_Total = `25 - 2x`.
+
+**Using Overall Skill Level Totals to find expressions for remaining totals:**
+*   Total Jr = 40: (Eng_Jr_Total) + Mkt_Jr_Total + (Fin_Jr_Total) + (Ops_Jr_Total) = 40
+    (2y+1) + Mkt_Jr_Total + (2x) + (34 - 3a - 2b) = 40
+    Mkt_Jr_Total = 40 - 35 - 2x - 2y + 3a + 2b = `5 - 2x - 2y + 3a + 2b`.
+*   Total Sr = 30: (Eng_Sr_Total) + (Mkt_Sr_Total) + Fin_Sr_Total + (Ops_Sr_Total) = 30
+    (34 - 3x - 2y) + (x) + Fin_Sr_Total + (3a) = 30
+    Fin_Sr_Total = 30 - 34 + 2x + 2y - 3a = `-4 + 2x + 2y - 3a`.
+*   From Mkt_Jr_Total + Mkt_Mid_Total = 25 - x:
+    Mkt_Mid_Total = (25 - x) - (5 - 2x - 2y + 3a + 2b) = `20 + x + 2y - 3a - 2b`.
+*   From Fin_Mid_Total + Fin_Sr_Total = 25 - 2x:
+    Fin_Mid_Total = (25 - 2x) - (-4 + 2x + 2y - 3a) = `29 - 4x - 2y + 3a`.
+
+This process confirms the unique solution: `x = 5`, `y = 7`, `a = 5`, `b = 7`.
+
+**Calculating Specific Department-Skill Totals:**
+With x=5, y=7, a=5, b=7:
+*   Eng: Jr_Total (2(7)+1)=15; Mid_Total (3(5))=15; Sr_Total (34-3(5)-2(7))=5.
+    *   Eng_Jr_I = 7+1=8, Eng_Jr_C=7.
+    *   Eng_Mid_I = 5, Eng_Mid_C=2(5)=10.
+*   Ops: Mid_Total (2(7)+1)=15; Sr_Total (3(5))=15; Jr_Total (34-3(5)-2(7))=5.
+    *   Ops_Jr_I=5, Ops_Jr_C=0.
+    *   Ops_Mid_I = 7+1=8, Ops_Mid_C=7.
+    *   Ops_Sr_I = 5, Ops_Sr_C=2(5)=10.
+*   Mkt: Sr_Total (5)=5.
+    *   Mkt_Sr_I=0, Mkt_Sr_C=5.
+    *   Mkt_Jr_Total = (5-2(5)-2(7)+3(5)+2(7)) = 10.
+    *   Mkt_Mid_Total = (20+5+2(7)-3(5)-2(7)) = 10.
+*   Fin: Jr_Total (2(5))=10.
+    *   Fin_Jr_I=0, Fin_Jr_C=10.
+    *   Fin_Sr_Total = (-4+2(5)+2(7)-3(5)) = 5.
+    *   Fin_Mid_Total = (29-4(5)-2(7)+3(5)) = 10.
+
+**Distributing Staff between Internal (I) and Client-Facing (C) Projects:**
+Total Internal Staff = 49. Sum of known Internal staff: Eng_Jr_I(8) + Eng_Mid_I(5) + Mkt_Sr_I(0) + Fin_Jr_I(0) + Ops_Jr_I(5) + Ops_Mid_I(8) + Ops_Sr_I(5) = 31. The remaining 18 internal staff must be distributed. This leads to the final table:
+
+**Final Allocation Table:**
+(Skill: I=Internal, C=Client-Facing)
+1.  **Engineering (Total 35)**: Jr: I=8, C=7; Mid: I=5, C=10; Sr: I=2, C=3
+2.  **Marketing (Total 25)**: Jr: I=4, C=6; Mid: I=3, C=7; Sr: I=0, C=5
+3.  **Finance (Total 25)**: Jr: I=0, C=10; Mid: I=6, C=4; Sr: I=3, C=2
+4.  **Operations (Total 35)**: Jr: I=5, C=0; Mid: I=8, C=7; Sr: I=5, C=10
+
+**Q4 Solution:**
+A) Engineering Sr_I = 2. Finance Sr_I = 3. So A is false (2 is not > 3).
+B) Marketing Jr_C = 6. Operations Jr_I = 5. So B is true (6 > 5).
+C) Total Sr_I = Eng_Sr_I(2) + Mkt_Sr_I(0) + Fin_Sr_I(3) + Ops_Sr_I(5) = 10. Not 15. So C is false.
+D) Mid_C staff: Eng=10, Mkt=7, Fin=4, Ops=7. Engineering has the highest (10). So D is false."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q5","5","MOCKXYZ003_Set1_ProjectStaffing","Set 1 of 5: Inter-Departmental Project Staffing
+A company is staffing its projects with a total of 120 employees from four departments: Engineering, Marketing, Finance, and Operations. Staff are categorized by three skill levels: Junior, Mid-Level, and Senior. Projects are of two types: Internal and Client-Facing. Each distinct combination of Department, Skill Level, and Project Type must have a non-negative integer number of staff allocated.
+The following information is known:
+1.	The total number of Junior staff allocated across all projects is 40. The total number of Mid-Level staff is 50.
+2.	The Engineering department has a total of 35 staff. The Operations department also has a total of 35 staff.
+3.	The total number of staff allocated to Internal projects is 49.
+4.	Marketing department has no Senior staff working on Internal projects. Finance department has no Junior staff working on Internal projects. Operations department has no Junior staff working on Client-Facing projects.
+5.	In the Engineering department, the number of Mid-Level staff on Client-Facing projects is twice the number of Mid-Level staff on Internal projects. The number of Junior staff on Internal projects is one more than the number of Junior staff on Client-Facing projects.
+6.	The Marketing department has a total of 25 staff. The number of Senior staff in Marketing (all on Client-Facing projects) is equal to the number of Mid-Level staff on Internal projects in Engineering.
+7.	The Finance department has a total of 25 staff. The number of Junior staff (all on Client-Facing projects) in Finance is equal to the number of Mid-Level staff on Client-Facing projects in Engineering.
+8.	In the Operations department, the number of Senior staff on Client-Facing projects is twice the number of Senior staff on Internal projects. The number of Mid-Level staff on Internal projects is one more than the number of Mid-Level staff on Client-Facing projects.","What is the total number of Senior staff allocated to Internal projects across all departments?","10","12","15","18","A","B","C","D","A","MCQ","Logical Reasoning","Distribution & Allocation, Multi-dimensional Matrix","Moderate","Distribution & Allocation, Multi-dimensional Matrix","data aggregation from solved matrix, summation","False","MOCKXYZ003_Set1_ProjectStaffing","","Solutions for Set 1 of 5: Inter-Departmental Project Staffing
+
+Let Jr, Mid, Sr denote Junior, Mid-Level, Senior staff. Let I, C denote Internal, Client-Facing projects.
+Departments: Eng (Engineering), Mkt (Marketing), Fin (Finance), Ops (Operations).
+
+**Overall Totals & Basic Deductions:**
+1.  Total Staff = 120.
+2.  Total Jr = 40, Total Mid = 50 (Clue 1). So, Total Sr = 120 - 40 - 50 = 30.
+3.  Eng_Total = 35, Ops_Total = 35 (Clue 2).
+4.  Mkt_Total = 25 (Clue 6), Fin_Total = 25 (Clue 7). (Check: 35+35+25+25 = 120. OK).
+5.  Total Internal projects staff = 49 (Clue 3). So, Total Client-Facing projects staff = 120 - 49 = 71.
+6.  Zero Allocations (Clue 4): Mkt_Sr_I = 0, Fin_Jr_I = 0, Ops_Jr_C = 0.
+
+**Defining Variables based on Clues:**
+*   From Clue 5 (Eng): Let Eng_Mid_I = `x`. Then Eng_Mid_C = `2x`. So, Eng_Mid_Total = `3x`.
+    Let Eng_Jr_C = `y`. Then Eng_Jr_I = `y+1`. So, Eng_Jr_Total = `2y+1`.
+*   From Clue 6 (Mkt): Mkt_Sr_C = Eng_Mid_I = `x`. Since Mkt_Sr_I = 0, Mkt_Sr_Total = `x`.
+*   From Clue 7 (Fin): Fin_Jr_C = Eng_Mid_C = `2x`. Since Fin_Jr_I = 0, Fin_Jr_Total = `2x`.
+*   From Clue 8 (Ops): Let Ops_Sr_I = `a`. Then Ops_Sr_C = `2a`. So, Ops_Sr_Total = `3a`.
+    Let Ops_Mid_C = `b`. Then Ops_Mid_I = `b+1`. So, Ops_Mid_Total = `2b+1`.
+
+**Deriving Departmental Skill Totals in terms of x,y,a,b:**
+*   Eng_Sr_Total = Eng_Total - Eng_Jr_Total - Eng_Mid_Total = 35 - (2y+1) - 3x = `34 - 3x - 2y`.
+*   Ops_Jr_Total (which is Ops_Jr_I as Ops_Jr_C=0) = Ops_Total - Ops_Mid_Total - Ops_Sr_Total = 35 - (2b+1) - 3a = `34 - 3a - 2b`.
+*   Mkt_Jr_Total + Mkt_Mid_Total = Mkt_Total - Mkt_Sr_Total = `25 - x`.
+*   Fin_Mid_Total + Fin_Sr_Total = Fin_Total - Fin_Jr_Total = `25 - 2x`.
+
+**Using Overall Skill Level Totals to find expressions for remaining totals:**
+*   Total Jr = 40: (Eng_Jr_Total) + Mkt_Jr_Total + (Fin_Jr_Total) + (Ops_Jr_Total) = 40
+    (2y+1) + Mkt_Jr_Total + (2x) + (34 - 3a - 2b) = 40
+    Mkt_Jr_Total = 40 - 35 - 2x - 2y + 3a + 2b = `5 - 2x - 2y + 3a + 2b`.
+*   Total Sr = 30: (Eng_Sr_Total) + (Mkt_Sr_Total) + Fin_Sr_Total + (Ops_Sr_Total) = 30
+    (34 - 3x - 2y) + (x) + Fin_Sr_Total + (3a) = 30
+    Fin_Sr_Total = 30 - 34 + 2x + 2y - 3a = `-4 + 2x + 2y - 3a`.
+*   From Mkt_Jr_Total + Mkt_Mid_Total = 25 - x:
+    Mkt_Mid_Total = (25 - x) - (5 - 2x - 2y + 3a + 2b) = `20 + x + 2y - 3a - 2b`.
+*   From Fin_Mid_Total + Fin_Sr_Total = 25 - 2x:
+    Fin_Mid_Total = (25 - 2x) - (-4 + 2x + 2y - 3a) = `29 - 4x - 2y + 3a`.
+
+This process confirms the unique solution: `x = 5`, `y = 7`, `a = 5`, `b = 7`.
+
+**Calculating Specific Department-Skill Totals:**
+With x=5, y=7, a=5, b=7:
+*   Eng: Jr_Total (2(7)+1)=15; Mid_Total (3(5))=15; Sr_Total (34-3(5)-2(7))=5.
+    *   Eng_Jr_I = 7+1=8, Eng_Jr_C=7.
+    *   Eng_Mid_I = 5, Eng_Mid_C=2(5)=10.
+*   Ops: Mid_Total (2(7)+1)=15; Sr_Total (3(5))=15; Jr_Total (34-3(5)-2(7))=5.
+    *   Ops_Jr_I=5, Ops_Jr_C=0.
+    *   Ops_Mid_I = 7+1=8, Ops_Mid_C=7.
+    *   Ops_Sr_I = 5, Ops_Sr_C=2(5)=10.
+*   Mkt: Sr_Total (5)=5.
+    *   Mkt_Sr_I=0, Mkt_Sr_C=5.
+    *   Mkt_Jr_Total = (5-2(5)-2(7)+3(5)+2(7)) = 10.
+    *   Mkt_Mid_Total = (20+5+2(7)-3(5)-2(7)) = 10.
+*   Fin: Jr_Total (2(5))=10.
+    *   Fin_Jr_I=0, Fin_Jr_C=10.
+    *   Fin_Sr_Total = (-4+2(5)+2(7)-3(5)) = 5.
+    *   Fin_Mid_Total = (29-4(5)-2(7)+3(5)) = 10.
+
+**Distributing Staff between Internal (I) and Client-Facing (C) Projects:**
+Total Internal Staff = 49. Sum of known Internal staff: Eng_Jr_I(8) + Eng_Mid_I(5) + Mkt_Sr_I(0) + Fin_Jr_I(0) + Ops_Jr_I(5) + Ops_Mid_I(8) + Ops_Sr_I(5) = 31. The remaining 18 internal staff must be distributed. This leads to the final table:
+
+**Final Allocation Table:**
+(Skill: I=Internal, C=Client-Facing)
+1.  **Engineering (Total 35)**: Jr: I=8, C=7; Mid: I=5, C=10; Sr: I=2, C=3
+2.  **Marketing (Total 25)**: Jr: I=4, C=6; Mid: I=3, C=7; Sr: I=0, C=5
+3.  **Finance (Total 25)**: Jr: I=0, C=10; Mid: I=6, C=4; Sr: I=3, C=2
+4.  **Operations (Total 35)**: Jr: I=5, C=0; Mid: I=8, C=7; Sr: I=5, C=10
+
+**Q5 Solution:** Total Senior staff on Internal projects = Eng_Sr_I + Mkt_Sr_I + Fin_Sr_I + Ops_Sr_I. From the derived table: Eng_Sr_I=2, Mkt_Sr_I=0, Fin_Sr_I=3, Ops_Sr_I=5. Sum = 2 + 0 + 3 + 5 = 10."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q6","6","MOCKXYZ003_Set2_IslandNetwork","Set 2 of 5: Island Resource Network
+Five islands—Aethel, Burg, Cyne, Dun, and Ead—form an economic collective. Each island has specific daily production of one primary resource (Wood (W), Stone (S), or Food (F)), daily consumption of other resources, and some initial storage. Resources can be transported between islands using specific routes, each with a travel time and a per-trip capacity. A trip's capacity can be a mix of resources. Assume transport is instantaneous once a trip is completed (no loading/unloading time beyond travel).
+Island Details:
+•	Aethel: Produces 10 units of Wood (W) per day. Consumes 8 units of Food (F) per day. Starts with 5 units of Stone (S) in storage.
+•	Burg: Produces 15 units of Stone (S) per day. Consumes 10 units of Food (F) per day. Starts with 5 units of Wood (W) in storage.
+•	Cyne: Produces 20 units of Food (F) per day. Consumes 5 units of Wood (W) and 5 units of Stone (S) per day. Starts with no resources in storage.
+•	Dun: Produces 8 units of Wood (W) per day. Consumes 6 units of Stone (S) per day. Starts with 10 units of Food (F) in storage.
+•	Ead: Produces no resources. Consumes 2 units of Food (F) per day for its port operations. It serves mainly as a transit hub.
+Direct Transport Routes (Time per one-way trip, Capacity per trip):
+1.	Aethel to/from Burg: 4 hours, 10 units.
+2.	Aethel to/from Ead: 1 hour, 5 units.
+3.	Burg to/from Cyne: 3 hours, 12 units.
+4.	Burg to/from Ead: 2 hours, 8 units.
+5.	Cyne to/from Dun: 5 hours, 8 units.
+6.	Dun to/from Ead: 1.5 hours, 6 units.
+Assume that for any given day, production happens at the start of the day, and consumption happens at the end of the day. Transport can happen throughout the day. Stored resources from the previous day are available at the start of the current day. A day has 24 hours for transport.","What is the maximum amount of Wood that Cyne can receive on Day 1, if Aethel contributes all its produced Wood towards this supply, and other islands can also contribute their available Wood to Cyne?","10 units","15 units","20 units","23 units","A","B","C","D","D","MCQ","Data Interpretation","Network Diagram, Resource Flow, Capacity Constraints","Difficult","Network Diagram, Resource Flow, Capacity Constraints","network flow, capacity analysis, optimization over time, multi-route consideration, resource sourcing","False","MOCKXYZ003_Set2_IslandNetwork","","Solutions for Set 2 of 5: Island Resource Network
+
+**Q6 Solution:** Cyne needs Wood (W). We need to find the maximum Wood Cyne can receive on Day 1 if Aethel contributes its 10W and other islands also contribute their available Wood.
+1.  **Aethel's contribution:** Aethel produces 10W/day. Aethel has no stored Wood. Aethel can send its 10W to Cyne. The transport time is well within a 24-hour day.
+2.  **Burg's contribution:** Burg starts with 5W in storage. It can send these 5W to Cyne via the direct route (3 hours).
+3.  **Dun's contribution:** Dun produces 8W/day. It can send these 8W to Cyne via the direct route (5 hours).
+4.  **Cyne's production:** Cyne produces Food, not Wood.
+5.  **Ead's contribution:** Ead produces no resources.
+Total Wood that can reach Cyne on Day 1 = 10W (from Aethel) + 5W (from Burg) + 8W (from Dun) = 23 units. All these deliveries can be completed within Day 1."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q7","7","MOCKXYZ003_Set2_IslandNetwork","Set 2 of 5: Island Resource Network
+Five islands—Aethel, Burg, Cyne, Dun, and Ead—form an economic collective. Each island has specific daily production of one primary resource (Wood (W), Stone (S), or Food (F)), daily consumption of other resources, and some initial storage. Resources can be transported between islands using specific routes, each with a travel time and a per-trip capacity. A trip's capacity can be a mix of resources. Assume transport is instantaneous once a trip is completed (no loading/unloading time beyond travel).
+Island Details:
+•	Aethel: Produces 10 units of Wood (W) per day. Consumes 8 units of Food (F) per day. Starts with 5 units of Stone (S) in storage.
+•	Burg: Produces 15 units of Stone (S) per day. Consumes 10 units of Food (F) per day. Starts with 5 units of Wood (W) in storage.
+•	Cyne: Produces 20 units of Food (F) per day. Consumes 5 units of Wood (W) and 5 units of Stone (S) per day. Starts with no resources in storage.
+•	Dun: Produces 8 units of Wood (W) per day. Consumes 6 units of Stone (S) per day. Starts with 10 units of Food (F) in storage.
+•	Ead: Produces no resources. Consumes 2 units of Food (F) per day for its port operations. It serves mainly as a transit hub.
+Direct Transport Routes (Time per one-way trip, Capacity per trip):
+1.	Aethel to/from Burg: 4 hours, 10 units.
+2.	Aethel to/from Ead: 1 hour, 5 units.
+3.	Burg to/from Cyne: 3 hours, 12 units.
+4.	Burg to/from Ead: 2 hours, 8 units.
+5.	Cyne to/from Dun: 5 hours, 8 units.
+6.	Dun to/from Ead: 1.5 hours, 6 units.
+Assume that for any given day, production happens at the start of the day, and consumption happens at the end of the day. Transport can happen throughout the day. Stored resources from the previous day are available at the start of the current day. A day has 24 hours for transport.","At the end of Day 1, if no resources were transported between any islands, what would be the net change in the total units of Food across all five islands (considering production, consumption, and initial storage leading to end-of-day balance)?","+10 units","0 units","-5 units","-15 units","A","B","C","D","B","MCQ","Data Interpretation","Network Diagram, Resource Balancing","Moderate","Network Diagram, Resource Balancing","resource accounting, production-consumption balance, net change calculation","False","MOCKXYZ003_Set2_IslandNetwork","","Solutions for Set 2 of 5: Island Resource Network
+
+**Q7 Solution:** Net change in total Food = Total Daily Food Production - Total Daily Food Consumption.
+1.  **Daily Food Production:** Cyne = 20 units. Other islands = 0. Total daily produced Food = 20.
+2.  **Daily Food Consumption:** Aethel = 8, Burg = 10, Cyne = 0, Dun = 0, Ead = 2. Total daily consumed Food = 8 + 10 + 0 + 0 + 2 = 20.
+3.  **Net Change:** Net Change = Daily Production - Daily Consumption = 20 - 20 = 0 units.
+The initial storage does not affect the *net change* within the day, only the final balance."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q8","8","MOCKXYZ003_Set2_IslandNetwork","Set 2 of 5: Island Resource Network
+Five islands—Aethel, Burg, Cyne, Dun, and Ead—form an economic collective. Each island has specific daily production of one primary resource (Wood (W), Stone (S), or Food (F)), daily consumption of other resources, and some initial storage. Resources can be transported between islands using specific routes, each with a travel time and a per-trip capacity. A trip's capacity can be a mix of resources. Assume transport is instantaneous once a trip is completed (no loading/unloading time beyond travel).
+Island Details:
+•	Aethel: Produces 10 units of Wood (W) per day. Consumes 8 units of Food (F) per day. Starts with 5 units of Stone (S) in storage.
+•	Burg: Produces 15 units of Stone (S) per day. Consumes 10 units of Food (F) per day. Starts with 5 units of Wood (W) in storage.
+•	Cyne: Produces 20 units of Food (F) per day. Consumes 5 units of Wood (W) and 5 units of Stone (S) per day. Starts with no resources in storage.
+•	Dun: Produces 8 units of Wood (W) per day. Consumes 6 units of Stone (S) per day. Starts with 10 units of Food (F) in storage.
+•	Ead: Produces no resources. Consumes 2 units of Food (F) per day for its port operations. It serves mainly as a transit hub.
+Direct Transport Routes (Time per one-way trip, Capacity per trip):
+1.	Aethel to/from Burg: 4 hours, 10 units.
+2.	Aethel to/from Ead: 1 hour, 5 units.
+3.	Burg to/from Cyne: 3 hours, 12 units.
+4.	Burg to/from Ead: 2 hours, 8 units.
+5.	Cyne to/from Dun: 5 hours, 8 units.
+6.	Dun to/from Ead: 1.5 hours, 6 units.
+Assume that for any given day, production happens at the start of the day, and consumption happens at the end of the day. Transport can happen throughout the day. Stored resources from the previous day are available at the start of the current day. A day has 24 hours for transport.","To meet its daily consumption of 5W and 5S on Day 1, Cyne needs to import these resources. What is the minimum time (in hours from the start of Day 1) by which Cyne can have both 5 units of Wood and 5 units of Stone delivered, assuming resources are available at source islands at the start of Day 1 and transport trips are optimized for the earliest combined completion?","3 hours","6 hours","7 hours","6.5 hours","A","B","C","D","A","MCQ","Data Interpretation","Network Diagram, Time Optimization, Multi-Resource","Difficult","Network Diagram, Time Optimization, Multi-Resource","shortest path, parallel tasks, time to completion for set, resource sourcing, route comparison","False","MOCKXYZ003_Set2_IslandNetwork","","Solutions for Set 2 of 5: Island Resource Network
+
+**Q8 Solution:** Cyne needs 5W (Wood) and 5S (Stone). We need the minimum time by which Cyne can have *both* delivered. Resources are available at source islands at T=0.
+1.  **Delivery of 5W to Cyne:** The fastest source is Burg, which has 5W in storage. Route B->C takes 3 hours.
+2.  **Delivery of 5S to Cyne:** The fastest source is Burg, which produces 15S. Route B->C takes 3 hours.
+3.  **Combined delivery:** Burg can supply both the 5W (from its storage) and 5S (from its daily production). The total amount to be transported is 5W + 5S = 10 units. The route B->C has a capacity of 12 units, so a single trip is sufficient. The travel time is 3 hours. Therefore, Cyne can receive both resources from Burg by T=3 hours."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q9","9","MOCKXYZ003_Set2_IslandNetwork","Set 2 of 5: Island Resource Network
+Five islands—Aethel, Burg, Cyne, Dun, and Ead—form an economic collective. Each island has specific daily production of one primary resource (Wood (W), Stone (S), or Food (F)), daily consumption of other resources, and some initial storage. Resources can be transported between islands using specific routes, each with a travel time and a per-trip capacity. A trip's capacity can be a mix of resources. Assume transport is instantaneous once a trip is completed (no loading/unloading time beyond travel).
+Island Details:
+•	Aethel: Produces 10 units of Wood (W) per day. Consumes 8 units of Food (F) per day. Starts with 5 units of Stone (S) in storage.
+•	Burg: Produces 15 units of Stone (S) per day. Consumes 10 units of Food (F) per day. Starts with 5 units of Wood (W) in storage.
+•	Cyne: Produces 20 units of Food (F) per day. Consumes 5 units of Wood (W) and 5 units of Stone (S) per day. Starts with no resources in storage.
+•	Dun: Produces 8 units of Wood (W) per day. Consumes 6 units of Stone (S) per day. Starts with 10 units of Food (F) in storage.
+•	Ead: Produces no resources. Consumes 2 units of Food (F) per day for its port operations. It serves mainly as a transit hub.
+Direct Transport Routes (Time per one-way trip, Capacity per trip):
+1.	Aethel to/from Burg: 4 hours, 10 units.
+2.	Aethel to/from Ead: 1 hour, 5 units.
+3.	Burg to/from Cyne: 3 hours, 12 units.
+4.	Burg to/from Ead: 2 hours, 8 units.
+5.	Cyne to/from Dun: 5 hours, 8 units.
+6.	Dun to/from Ead: 1.5 hours, 6 units.
+Assume that for any given day, production happens at the start of the day, and consumption happens at the end of the day. Transport can happen throughout the day. Stored resources from the previous day are available at the start of the current day. A day has 24 hours for transport.","If a direct ferry route from Aethel to Cyne is established with a travel time of 2.5 hours and a capacity of 15 units, what is the maximum net Food units Burg could have at the end of Day 1 if it aims to maximize its Food, using any island's production and any transport routes (including the new one) within Day 1? (Assume Burg does not export any of its produced Stone or stored Wood on Day 1).","10 units","18 units","20 units","22 units","A","B","C","D","C","MCQ","Data Interpretation","Network Diagram, Conditional Optimization, Resource Maximization","Difficult","Network Diagram, Conditional Optimization, Resource Maximization","hypothetical scenario, network modification impact, resource flow optimization, daily balance, constraint interpretation","False","MOCKXYZ003_Set2_IslandNetwork","","Solutions for Set 2 of 5: Island Resource Network
+
+**Q9 Solution:** Burg wants to maximize its net Food. Burg consumes 10F/day. It must import Food. The new route Aethel-Cyne (2.5h, 15u) does not directly involve Burg, but can alter the network flows.
+1.  **Sources of Food for Burg:** Cyne (produces 20F), Dun (starts with 10F).
+2.  **Maximum Import:** Burg can import up to 20F from Cyne (via C->B route, 3 hours) and up to 10F from Dun (via D->E->B, total 3.5 hours). All routes are feasible within Day 1.
+3.  **Total Food Inflow:** Burg can potentially import 20F (from Cyne) + 10F (from Dun) = 30F.
+4.  **Burg's Net Food:** Burg starts with 0F, imports 30F, and consumes 10F. Net Food at end of Day 1 = 0 + 30 - 10 = 20 units. The new route doesn't inhibit the flow of food to Burg; other islands' needs can be met by the existing network, allowing Cyne and Dun to send their maximum available food to Burg."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q10","10","MOCKXYZ003_Set3_ArtifactAuction","Set 3 of 5: Artifact Auction Bidding Game
+Three bidders, Collector A, Museum B, and Private Hoarder C, are participating in a sealed-bid auction for five distinct artifacts: a Vase, a Scroll, a Sword, a Coin, and a Tablet. Each artifact will be sold to the highest bidder for that specific artifact, provided the bidder has sufficient budget remaining.
+Auction Rules & Information:
+1.	Each bidder has an initial total budget: Collector A has 200 units, Museum B has 250 units, and Private Hoarder C has 180 units.
+2.	Bids are placed simultaneously for all five artifacts. A bidder may choose not to bid on an artifact (effectively a bid of 0). All bids are positive integers.
+3.	For each artifact, the highest bidder wins it and pays their bid amount. This amount is deducted from their remaining budget. The artifacts are processed for winners in the following order for budget deduction purposes: Vase, Scroll, Sword, Coin, Tablet.
+4.	If the highest bidder for an artifact (at the moment it is processed) does not have enough remaining budget to cover their bid, they do not win the artifact. In such a case, the next highest bidder for that artifact who can afford their bid (from their budget current at that processing moment) wins the artifact at their own bid price. If no bidder can afford their bid, the artifact remains unsold.
+5.	In case of a tie in bids for an artifact, a pre-determined priority (A > B > C) decides the winner among tied bidders, provided they can afford it.
+6.	The bids placed by each bidder for each artifact are as follows:
+Artifact	Collector A's Bid	Museum B's Bid	Private Hoarder C's Bid
+Vase	70	90	60
+Scroll	50	40	65
+Sword	110	100	80
+Coin	30	20	35
+Tablet	60	55	0 (Unbid)
+7.	The true values of the artifacts are: Vase=100, Scroll=80, Sword=120, Coin=50, Tablet=70. ""Surplus"" for a bidder for an artifact is True Value - Winning Bid.","Which bidder wins the Sword and for what price?","Collector A for 110","Museum B for 100","Collector A for 80","Private Hoarder C for 80","A","B","C","D","A","MCQ","Logical Reasoning","Games & Puzzles, Auction Theory","Moderate","Games & Puzzles, Auction Theory","auction mechanics, sequential bidding, budget constraints, winner determination by order","False","MOCKXYZ003_Set3_ArtifactAuction","","Solutions for Set 3 of 5: Artifact Auction Bidding Game
+
+Initial Budgets: A=200, B=250, C=180.
+Bids: Vase(A70,B90,C60), Scroll(A50,B40,C65), Sword(A110,B100,C80), Coin(A30,B20,C35), Tablet(A60,B55,C0).
+Processing Order: Vase, Scroll, Sword, Coin, Tablet.
+
+1.	**Vase:** Highest bid is B (90). B's budget (250) >= 90. B wins Vase for 90. B's remaining budget = 250 - 90 = 160.
+2.	**Scroll:** Highest bid is C (65). C's budget (180) >= 65. C wins Scroll for 65. C's remaining budget = 180 - 65 = 115.
+3.	**Sword:** Highest bid is A (110). A's budget is 200 (hasn't won anything yet). 200 >= 110. A wins Sword for 110. A's remaining budget = 200 - 110 = 90.
+4.	**Coin:** Highest bid is C (35). C's current budget (115) >= 35. C wins Coin for 35. C's remaining budget = 115 - 35 = 80.
+5.	**Tablet:** Highest bid is A (60). A's current budget (90) >= 60. A wins Tablet for 60. A's remaining budget = 90 - 60 = 30.
+
+**Q10 Solution:** When the Sword is processed (3rd item), the highest bidder is Collector A with a bid of 110. At this point, A's budget is still the initial 200. Since 200 >= 110, Collector A wins the Sword for 110."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q11","11","MOCKXYZ003_Set3_ArtifactAuction","Set 3 of 5: Artifact Auction Bidding Game
+Three bidders, Collector A, Museum B, and Private Hoarder C, are participating in a sealed-bid auction for five distinct artifacts: a Vase, a Scroll, a Sword, a Coin, and a Tablet. Each artifact will be sold to the highest bidder for that specific artifact, provided the bidder has sufficient budget remaining.
+Auction Rules & Information:
+1.	Each bidder has an initial total budget: Collector A has 200 units, Museum B has 250 units, and Private Hoarder C has 180 units.
+2.	Bids are placed simultaneously for all five artifacts. A bidder may choose not to bid on an artifact (effectively a bid of 0). All bids are positive integers.
+3.	For each artifact, the highest bidder wins it and pays their bid amount. This amount is deducted from their remaining budget. The artifacts are processed for winners in the following order for budget deduction purposes: Vase, Scroll, Sword, Coin, Tablet.
+4.	If the highest bidder for an artifact (at the moment it is processed) does not have enough remaining budget to cover their bid, they do not win the artifact. In such a case, the next highest bidder for that artifact who can afford their bid (from their budget current at that processing moment) wins the artifact at their own bid price. If no bidder can afford their bid, the artifact remains unsold.
+5.	In case of a tie in bids for an artifact, a pre-determined priority (A > B > C) decides the winner among tied bidders, provided they can afford it.
+6.	The bids placed by each bidder for each artifact are as follows:
+Artifact	Collector A's Bid	Museum B's Bid	Private Hoarder C's Bid
+Vase	70	90	60
+Scroll	50	40	65
+Sword	110	100	80
+Coin	30	20	35
+Tablet	60	55	0 (Unbid)
+7.	The true values of the artifacts are: Vase=100, Scroll=80, Sword=120, Coin=50, Tablet=70. ""Surplus"" for a bidder for an artifact is True Value - Winning Bid.","What is Museum B's remaining budget after all artifacts have been processed?","70","160","140","95","A","B","C","D","B","MCQ","Logical Reasoning","Games & Puzzles, Auction Theory","Moderate","Games & Puzzles, Auction Theory","budget tracking, sequential deductions, financial state after transactions","False","MOCKXYZ003_Set3_ArtifactAuction","","Solutions for Set 3 of 5: Artifact Auction Bidding Game
+
+Initial Budgets: A=200, B=250, C=180.
+Bids: Vase(A70,B90,C60), Scroll(A50,B40,C65), Sword(A110,B100,C80), Coin(A30,B20,C35), Tablet(A60,B55,C0).
+Processing Order: Vase, Scroll, Sword, Coin, Tablet.
+
+1.	**Vase:** Highest bid is B (90). B's budget (250) >= 90. B wins Vase for 90. B's remaining budget = 250 - 90 = 160.
+2.	**Scroll:** C wins. B's budget remains 160.
+3.	**Sword:** A wins. B's budget remains 160.
+4.	**Coin:** C wins. B's budget remains 160.
+5.	**Tablet:** A wins. B's budget remains 160.
+
+**Q11 Solution:** Museum B only wins the Vase for 90. Its initial budget was 250. After paying for the Vase, its remaining budget is 250 - 90 = 160. It does not win any other artifacts, so its budget remains 160 at the end."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q12","12","MOCKXYZ003_Set3_ArtifactAuction","Set 3 of 5: Artifact Auction Bidding Game
+Three bidders, Collector A, Museum B, and Private Hoarder C, are participating in a sealed-bid auction for five distinct artifacts: a Vase, a Scroll, a Sword, a Coin, and a Tablet. Each artifact will be sold to the highest bidder for that specific artifact, provided the bidder has sufficient budget remaining.
+Auction Rules & Information:
+1.	Each bidder has an initial total budget: Collector A has 200 units, Museum B has 250 units, and Private Hoarder C has 180 units.
+2.	Bids are placed simultaneously for all five artifacts. A bidder may choose not to bid on an artifact (effectively a bid of 0). All bids are positive integers.
+3.	For each artifact, the highest bidder wins it and pays their bid amount. This amount is deducted from their remaining budget. The artifacts are processed for winners in the following order for budget deduction purposes: Vase, Scroll, Sword, Coin, Tablet.
+4.	If the highest bidder for an artifact (at the moment it is processed) does not have enough remaining budget to cover their bid, they do not win the artifact. In such a case, the next highest bidder for that artifact who can afford their bid (from their budget current at that processing moment) wins the artifact at their own bid price. If no bidder can afford their bid, the artifact remains unsold.
+5.	In case of a tie in bids for an artifact, a pre-determined priority (A > B > C) decides the winner among tied bidders, provided they can afford it.
+6.	The bids placed by each bidder for each artifact are as follows:
+Artifact	Collector A's Bid	Museum B's Bid	Private Hoarder C's Bid
+Vase	70	90	60
+Scroll	50	40	65
+Sword	110	100	80
+Coin	30	20	35
+Tablet	60	55	0 (Unbid)
+7.	The true values of the artifacts are: Vase=100, Scroll=80, Sword=120, Coin=50, Tablet=70. ""Surplus"" for a bidder for an artifact is True Value - Winning Bid.","What is the total surplus generated by Private Hoarder C from the artifacts they won?","15","30","35","40","A","B","C","D","B","MCQ","Logical Reasoning","Games & Puzzles, Auction Theory","Moderate","Games & Puzzles, Auction Theory","value calculation, surplus definition, data extraction, profit from transaction","False","MOCKXYZ003_Set3_ArtifactAuction","","Solutions for Set 3 of 5: Artifact Auction Bidding Game
+
+Initial Budgets: A=200, B=250, C=180.
+Bids: Vase(A70,B90,C60), Scroll(A50,B40,C65), Sword(A110,B100,C80), Coin(A30,B20,C35), Tablet(A60,B55,C0).
+Processing Order: Vase, Scroll, Sword, Coin, Tablet.
+
+1.	**Vase:** B wins.
+2.	**Scroll:** C wins for 65. True Value = 80. Surplus = 80 - 65 = 15.
+3.	**Sword:** A wins.
+4.	**Coin:** C wins for 35. True Value = 50. Surplus = 50 - 35 = 15.
+5.	**Tablet:** A wins.
+
+**Q12 Solution:** Private Hoarder C won the Scroll and the Coin.
+- Scroll: Winning bid = 65, True Value = 80. Surplus = 15.
+- Coin: Winning bid = 35, True Value = 50. Surplus = 15.
+Total surplus for C = 15 + 15 = 30."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q13","13","MOCKXYZ003_Set3_ArtifactAuction","Set 3 of 5: Artifact Auction Bidding Game
+Three bidders, Collector A, Museum B, and Private Hoarder C, are participating in a sealed-bid auction for five distinct artifacts: a Vase, a Scroll, a Sword, a Coin, and a Tablet. Each artifact will be sold to the highest bidder for that specific artifact, provided the bidder has sufficient budget remaining.
+Auction Rules & Information:
+1.	Each bidder has an initial total budget: Collector A has 200 units, Museum B has 250 units, and Private Hoarder C has 180 units.
+2.	Bids are placed simultaneously for all five artifacts. A bidder may choose not to bid on an artifact (effectively a bid of 0). All bids are positive integers.
+3.	For each artifact, the highest bidder wins it and pays their bid amount. This amount is deducted from their remaining budget. The artifacts are processed for winners in the following order for budget deduction purposes: Vase, Scroll, Sword, Coin, Tablet.
+4.	If the highest bidder for an artifact (at the moment it is processed) does not have enough remaining budget to cover their bid, they do not win the artifact. In such a case, the next highest bidder for that artifact who can afford their bid (from their budget current at that processing moment) wins the artifact at their own bid price. If no bidder can afford their bid, the artifact remains unsold.
+5.	In case of a tie in bids for an artifact, a pre-determined priority (A > B > C) decides the winner among tied bidders, provided they can afford it.
+6.	The bids placed by each bidder for each artifact are as follows:
+Artifact	Collector A's Bid	Museum B's Bid	Private Hoarder C's Bid
+Vase	70	90	60
+Scroll	50	40	65
+Sword	110	100	80
+Coin	30	20	35
+Tablet	60	55	0 (Unbid)
+7.	The true values of the artifacts are: Vase=100, Scroll=80, Sword=120, Coin=50, Tablet=70. ""Surplus"" for a bidder for an artifact is True Value - Winning Bid.","If Collector A had an initial budget of only 100 units (instead of 200), and all other bids and budgets remained the same, who would win the Sword and for what price?","Collector A for 110","Museum B for 100","Private Hoarder C for 80","The Sword would remain unsold","A","B","C","D","B","MCQ","Logical Reasoning","Games & Puzzles, Auction Theory","Difficult","Games & Puzzles, Auction Theory","conditional scenario, budget impact, re-evaluation of winners, auction dynamics under new conditions","False","MOCKXYZ003_Set3_ArtifactAuction","","Solutions for Set 3 of 5: Artifact Auction Bidding Game
+
+**Q13 Solution:** Collector A's initial budget is now 100. Other budgets: B=250, C=180. All bids are unchanged. Processing order is Vase, Scroll, Sword, Coin, Tablet.
+1.	**Vase:** Highest bid B (90). B's budget (250) >= 90. B wins Vase for 90. B's remaining budget = 160. (A's budget is 100, C's is 180).
+2.	**Scroll:** Highest bid C (65). C's budget (180) >= 65. C wins Scroll for 65. C's remaining budget = 115. (A's budget is 100, B's is 160).
+3.	**Sword:** Highest bid is A (110). A's current budget is 100. Since 100 < 110, A cannot afford the Sword.
+	- The next highest bidder for the Sword is Museum B with a bid of 100.
+	- B's current budget is 160. Since 160 >= 100, B can afford it.
+	- Museum B wins the Sword for 100."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q14","14","MOCKXYZ003_Set4_GrantAllocation","Set 4 of 5: Research Grant Allocation
+Five research proposals (P1, P2, P3, P4, P5) are evaluated by three reviewers (R1, R2, R3). Each reviewer scores each proposal on four criteria: Innovation (I), Feasibility (F), Impact (M), and Budget Justification (B). All scores are integers from 1 to 10. Each reviewer assigns a personal set of positive weights to these four criteria, and the sum of these four weights for any reviewer is 1. A proposal's weighted score from a reviewer is the sum of (score * weight) for each criterion. The final score for a proposal is the average of its weighted scores from the three reviewers. Proposals are funded based on their final scores.
+Known Information:
+1.	Reviewer weights:
+o	R1: Innovation=0.4, Feasibility=0.2, Impact=0.3, Budget=0.1
+o	R2: Innovation=0.2, Feasibility=0.4, Impact=0.2, Budget=0.2
+o	R3: Innovation=0.3, Feasibility=0.1, Impact=0.4, Budget=0.2
+2.	The scores (out of 10) assigned by the reviewers are partially given in the table below. Some scores are represented by letters (X, Y, Z, U, V, W).
+Proposal	Reviewer	Innovation (I)	Feasibility (F)	Impact (M)	Budget (B)
+P1	R1	8	7	9	6
+P1	R2	7	8	X	9
+P1	R3	9	Y	8	7
+P2	R1	6	9	7	8
+P2	R2	5	8	8	Z
+P2	R3	7	7	9	6
+P3	R1	9	8	8	5
+P3	R2	8	9	7	6
+P3	R3	U	7	9	8
+P4	R1	7	6	6	9
+P4	R2	6	V	5	8
+P4	R3	6	5	7	W
+P5	R1	8	8	9	7
+P5	R2	9	7	8	6
+P5	R3	7	9	7	5
+3.	The weighted score for P1 from R2 was 7.6.
+4.	The weighted score for P1 from R3 was 7.9.
+5.	The final average score for P2 was 7.3.
+6.	For proposal P3, Reviewer R3's score for Innovation (U) was 8.
+7.	For proposal P4, Reviewer R2's score for Feasibility (V) was 7, and Reviewer R3's score for Budget (W) was 7.","What was Reviewer R2's score for Impact (X) for Proposal P1?","5","6","7","8","A","B","C","D","B","MCQ","Data Interpretation","Tabular Data, Weighted Average, Missing Value","Moderate","Tabular Data, Weighted Average, Missing Value","formula application, algebraic manipulation for unknowns, data completion","False","MOCKXYZ003_Set4_GrantAllocation","","Solutions for Set 4 of 5: Research Grant Allocation
+
+First, we find the unknown scores X, Y, Z, U, V, W.
+Weights: R1(I:0.4,F:0.2,M:0.3,B:0.1), R2(I:0.2,F:0.4,M:0.2,B:0.2), R3(I:0.3,F:0.1,M:0.4,B:0.2).
+
+1.  **Find X (P1_R2_Impact):**
+    P1_R2 scores are (I=7, F=8, M=X, B=9). The weighted score is 7.6 (Info 3).
+    Equation: 0.2(7) + 0.4(8) + 0.2(X) + 0.2(9) = 7.6
+    1.4 + 3.2 + 0.2X + 1.8 = 7.6
+    6.4 + 0.2X = 7.6
+    0.2X = 1.2 => **X = 6**.
+
+**Q14 Solution:** As derived above, X (Reviewer R2's score for Impact for Proposal P1) is 6."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q15","15","MOCKXYZ003_Set4_GrantAllocation","Set 4 of 5: Research Grant Allocation
+Five research proposals (P1, P2, P3, P4, P5) are evaluated by three reviewers (R1, R2, R3). Each reviewer scores each proposal on four criteria: Innovation (I), Feasibility (F), Impact (M), and Budget Justification (B). All scores are integers from 1 to 10. Each reviewer assigns a personal set of positive weights to these four criteria, and the sum of these four weights for any reviewer is 1. A proposal's weighted score from a reviewer is the sum of (score * weight) for each criterion. The final score for a proposal is the average of its weighted scores from the three reviewers. Proposals are funded based on their final scores.
+Known Information:
+1.	Reviewer weights:
+o	R1: Innovation=0.4, Feasibility=0.2, Impact=0.3, Budget=0.1
+o	R2: Innovation=0.2, Feasibility=0.4, Impact=0.2, Budget=0.2
+o	R3: Innovation=0.3, Feasibility=0.1, Impact=0.4, Budget=0.2
+2.	The scores (out of 10) assigned by the reviewers are partially given in the table below. Some scores are represented by letters (X, Y, Z, U, V, W).
+Proposal	Reviewer	Innovation (I)	Feasibility (F)	Impact (M)	Budget (B)
+P1	R1	8	7	9	6
+P1	R2	7	8	X	9
+P1	R3	9	Y	8	7
+P2	R1	6	9	7	8
+P2	R2	5	8	8	Z
+P2	R3	7	7	9	6
+P3	R1	9	8	8	5
+P3	R2	8	9	7	6
+P3	R3	U	7	9	8
+P4	R1	7	6	6	9
+P4	R2	6	V	5	8
+P4	R3	6	5	7	W
+P5	R1	8	8	9	7
+P5	R2	9	7	8	6
+P5	R3	7	9	7	5
+3.	The weighted score for P1 from R2 was 7.6.
+4.	The weighted score for P1 from R3 was 7.9.
+5.	The final average score for P2 was 7.3.
+6.	For proposal P3, Reviewer R3's score for Innovation (U) was 8.
+7.	For proposal P4, Reviewer R2's score for Feasibility (V) was 7, and Reviewer R3's score for Budget (W) was 7.","What is the final average score for Proposal P3?","7.90","8.00","8.07","8.13","A","B","C","D","C","MCQ","Data Interpretation","Tabular Data, Weighted Average, Ranking","Difficult","Tabular Data, Weighted Average, Ranking","multi-step calculation, weighted score averaging across reviewers, comparative analysis","False","MOCKXYZ003_Set4_GrantAllocation","","Solutions for Set 4 of 5: Research Grant Allocation
+
+First, we find the unknown scores. From Info 6, U=8.
+Weights: R1(I:0.4,F:0.2,M:0.3,B:0.1), R2(I:0.2,F:0.4,M:0.2,B:0.2), R3(I:0.3,F:0.1,M:0.4,B:0.2).
+
+**Q15 Solution:** Calculate the weighted scores for Proposal P3 from each reviewer and average them.
+1.  **P3 from R1:** Scores (I=9, F=8, M=8, B=5)
+    Weighted Score = 0.4(9) + 0.2(8) + 0.3(8) + 0.1(5) = 3.6 + 1.6 + 2.4 + 0.5 = 8.1
+2.  **P3 from R2:** Scores (I=8, F=9, M=7, B=6)
+    Weighted Score = 0.2(8) + 0.4(9) + 0.2(7) + 0.2(6) = 1.6 + 3.6 + 1.4 + 1.2 = 7.8
+3.  **P3 from R3:** Scores (I=U=8, F=7, M=9, B=8)
+    Weighted Score = 0.3(8) + 0.1(7) + 0.4(9) + 0.2(8) = 2.4 + 0.7 + 3.6 + 1.6 = 8.3
+4.  **Final Average Score for P3:**
+    Average = (8.1 + 7.8 + 8.3) / 3 = 24.2 / 3 = 8.066... ≈ 8.07"
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q16","16","MOCKXYZ003_Set4_GrantAllocation","Set 4 of 5: Research Grant Allocation
+Five research proposals (P1, P2, P3, P4, P5) are evaluated by three reviewers (R1, R2, R3). Each reviewer scores each proposal on four criteria: Innovation (I), Feasibility (F), Impact (M), and Budget Justification (B). All scores are integers from 1 to 10. Each reviewer assigns a personal set of positive weights to these four criteria, and the sum of these four weights for any reviewer is 1. A proposal's weighted score from a reviewer is the sum of (score * weight) for each criterion. The final score for a proposal is the average of its weighted scores from the three reviewers. Proposals are funded based on their final scores.
+Known Information:
+1.	Reviewer weights:
+o	R1: Innovation=0.4, Feasibility=0.2, Impact=0.3, Budget=0.1
+o	R2: Innovation=0.2, Feasibility=0.4, Impact=0.2, Budget=0.2
+o	R3: Innovation=0.3, Feasibility=0.1, Impact=0.4, Budget=0.2
+2.	The scores (out of 10) assigned by the reviewers are partially given in the table below. Some scores are represented by letters (X, Y, Z, U, V, W).
+Proposal	Reviewer	Innovation (I)	Feasibility (F)	Impact (M)	Budget (B)
+P1	R1	8	7	9	6
+P1	R2	7	8	X	9
+P1	R3	9	Y	8	7
+P2	R1	6	9	7	8
+P2	R2	5	8	8	Z
+P2	R3	7	7	9	6
+P3	R1	9	8	8	5
+P3	R2	8	9	7	6
+P3	R3	U	7	9	8
+P4	R1	7	6	6	9
+P4	R2	6	V	5	8
+P4	R3	6	5	7	W
+P5	R1	8	8	9	7
+P5	R2	9	7	8	6
+P5	R3	7	9	7	5
+3.	The weighted score for P1 from R2 was 7.6.
+4.	The weighted score for P1 from R3 was 7.9.
+5.	The final average score for P2 was 7.3.
+6.	For proposal P3, Reviewer R3's score for Innovation (U) was 8.
+7.	For proposal P4, Reviewer R2's score for Feasibility (V) was 7, and Reviewer R3's score for Budget (W) was 7.","Which proposal received the lowest score for Budget Justification from Reviewer R1?","P1","P2","P3","P4","A","B","C","D","C","MCQ","Data Interpretation","Tabular Data, Data Lookup","Easy","Tabular Data, Data Lookup","data extraction from table, specific criteria identification, simple comparison","False","MOCKXYZ003_Set4_GrantAllocation","","Solutions for Set 4 of 5: Research Grant Allocation
+
+**Q16 Solution:** We need to look at the 'Budget (B)' column for Reviewer R1 in the provided table.
+- P1, R1, Budget score = 6
+- P2, R1, Budget score = 8
+- P3, R1, Budget score = 5
+- P4, R1, Budget score = 9
+- P5, R1, Budget score = 7
+The lowest score is 5, which was given to Proposal P3."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q17","17","MOCKXYZ003_Set4_GrantAllocation","Set 4 of 5: Research Grant Allocation
+Five research proposals (P1, P2, P3, P4, P5) are evaluated by three reviewers (R1, R2, R3). Each reviewer scores each proposal on four criteria: Innovation (I), Feasibility (F), Impact (M), and Budget Justification (B). All scores are integers from 1 to 10. Each reviewer assigns a personal set of positive weights to these four criteria, and the sum of these four weights for any reviewer is 1. A proposal's weighted score from a reviewer is the sum of (score * weight) for each criterion. The final score for a proposal is the average of its weighted scores from the three reviewers. Proposals are funded based on their final scores.
+Known Information:
+1.	Reviewer weights:
+o	R1: Innovation=0.4, Feasibility=0.2, Impact=0.3, Budget=0.1
+o	R2: Innovation=0.2, Feasibility=0.4, Impact=0.2, Budget=0.2
+o	R3: Innovation=0.3, Feasibility=0.1, Impact=0.4, Budget=0.2
+2.	The scores (out of 10) assigned by the reviewers are partially given in the table below. Some scores are represented by letters (X, Y, Z, U, V, W).
+Proposal	Reviewer	Innovation (I)	Feasibility (F)	Impact (M)	Budget (B)
+P1	R1	8	7	9	6
+P1	R2	7	8	X	9
+P1	R3	9	Y	8	7
+P2	R1	6	9	7	8
+P2	R2	5	8	8	Z
+P2	R3	7	7	9	6
+P3	R1	9	8	8	5
+P3	R2	8	9	7	6
+P3	R3	U	7	9	8
+P4	R1	7	6	6	9
+P4	R2	6	V	5	8
+P4	R3	6	5	7	W
+P5	R1	8	8	9	7
+P5	R2	9	7	8	6
+P5	R3	7	9	7	5
+3.	The weighted score for P1 from R2 was 7.6.
+4.	The weighted score for P1 from R3 was 7.9.
+5.	The final average score for P2 was 7.3.
+6.	For proposal P3, Reviewer R3's score for Innovation (U) was 8.
+7.	For proposal P4, Reviewer R2's score for Feasibility (V) was 7, and Reviewer R3's score for Budget (W) was 7.","If only proposals with a final average score of 7.5 or higher are funded, how many of these five proposals get funded?","1","2","3","4","A","B","C","D","B","MCQ","Data Interpretation","Tabular Data, Conditional Counting","Difficult","Tabular Data, Conditional Counting","threshold application, data filtering after calculation, counting based on derived values","False","MOCKXYZ003_Set4_GrantAllocation","","Solutions for Set 4 of 5: Research Grant Allocation
+
+**Q17 Solution:** We must calculate the final average score for all five proposals and count how many are >= 7.5.
+1.  **P1 Avg Score:** R1 Wtd=7.9, R2 Wtd=7.6, R3 Wtd=7.9. Avg = (7.9+7.6+7.9)/3 = 7.8. **(Funded)**
+2.  **P2 Avg Score:** Given as 7.3. (Not Funded)
+3.  **P3 Avg Score:** Calculated in Q15 as 8.07. **(Funded)**
+4.  **P4 Avg Score:** R1 Wtd=6.7, R2 Wtd=6.6, R3 Wtd=6.5. Avg = (6.7+6.6+6.5)/3 = 6.6. (Not Funded)
+5.  **P5 Avg Score:** R1 Wtd=8.2, R2 Wtd=7.4, R3 Wtd=6.8. Avg = (8.2+7.4+6.8)/3 = 7.47. (Not Funded)
+
+Only P1 and P3 are funded. So, 2 proposals get funded."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q18","18","MOCKXYZ003_Set4_GrantAllocation","Set 4 of 5: Research Grant Allocation
+Five research proposals (P1, P2, P3, P4, P5) are evaluated by three reviewers (R1, R2, R3). Each reviewer scores each proposal on four criteria: Innovation (I), Feasibility (F), Impact (M), and Budget Justification (B). All scores are integers from 1 to 10. Each reviewer assigns a personal set of positive weights to these four criteria, and the sum of these four weights for any reviewer is 1. A proposal's weighted score from a reviewer is the sum of (score * weight) for each criterion. The final score for a proposal is the average of its weighted scores from the three reviewers. Proposals are funded based on their final scores.
+Known Information:
+1.	Reviewer weights:
+o	R1: Innovation=0.4, Feasibility=0.2, Impact=0.3, Budget=0.1
+o	R2: Innovation=0.2, Feasibility=0.4, Impact=0.2, Budget=0.2
+o	R3: Innovation=0.3, Feasibility=0.1, Impact=0.4, Budget=0.2
+2.	The scores (out of 10) assigned by the reviewers are partially given in the table below. Some scores are represented by letters (X, Y, Z, U, V, W).
+Proposal	Reviewer	Innovation (I)	Feasibility (F)	Impact (M)	Budget (B)
+P1	R1	8	7	9	6
+P1	R2	7	8	X	9
+P1	R3	9	Y	8	7
+P2	R1	6	9	7	8
+P2	R2	5	8	8	Z
+P2	R3	7	7	9	6
+P3	R1	9	8	8	5
+P3	R2	8	9	7	6
+P3	R3	U	7	9	8
+P4	R1	7	6	6	9
+P4	R2	6	V	5	8
+P4	R3	6	5	7	W
+P5	R1	8	8	9	7
+P5	R2	9	7	8	6
+P5	R3	7	9	7	5
+3.	The weighted score for P1 from R2 was 7.6.
+4.	The weighted score for P1 from R3 was 7.9.
+5.	The final average score for P2 was 7.3.
+6.	For proposal P3, Reviewer R3's score for Innovation (U) was 8.
+7.	For proposal P4, Reviewer R2's score for Feasibility (V) was 7, and Reviewer R3's score for Budget (W) was 7.","What is the sum of all Feasibility scores given by Reviewer R3 across all five proposals?","30","32","34","35","A","B","C","D","C","MCQ","Data Interpretation","Tabular Data, Data Aggregation","Moderate","Tabular Data, Data Aggregation","data extraction from table, summation by category (reviewer scores)","False","MOCKXYZ003_Set4_GrantAllocation","","Solutions for Set 4 of 5: Research Grant Allocation
+
+**Q18 Solution:** We need to find the Feasibility (F) scores given by Reviewer R3 for each proposal and sum them up. The value of Y needs to be determined first.
+- **Find Y (P1_R3_Feasibility):** P1_R3 scores (I=9, F=Y, M=8, B=7). Weighted score = 7.9. 0.3(9)+0.1(Y)+0.4(8)+0.2(7)=7.9 -> 2.7+0.1Y+3.2+1.4=7.9 -> 7.3+0.1Y=7.9 -> Y=6.
+- **Feasibility scores by R3:**
+  - P1: F = Y = 6
+  - P2: F = 7
+  - P3: F = 7
+  - P4: F = 5
+  - P5: F = 9
+- **Sum:** 6 + 7 + 7 + 5 + 9 = 34."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q19","19","MOCKXYZ003_Set5_CropLogistics","Set 5 of 5: Crop Yield & Sales Logistics
+Three farms (Farm X, Farm Y, Farm Z) cultivate four types of crops (Wheat, Corn, Soy, Barley) over two years (Year 1 and Year 2). Data regarding area planted, yield per acre, price per ton, production cost per acre, and transport cost per ton is available.
+Total Yield (tons) = Area Planted (acres) * Yield (tons/acre).
+Total Revenue ($) = Total Yield (tons) * Price ($/ton).
+Total Transport Cost ($) = Total Yield (tons) * Transport Cost ($/ton).
+Total Production Cost ($) = Area Planted (acres) * Production Cost ($/acre).
+Profit ($) = Total Revenue - (Total Production Cost + Total Transport Cost).
+The following table provides some of this data. Missing values are denoted by letters. All costs and prices are in $ per unit specified.
+Year	Farm	Crop	Area (acres)	Yield (tons/acre)	Price ($/ton)	Prod. Cost ($/acre)	Transport Cost ($/ton)
+Yr 1	X	Wheat	100	2.5	200	250	20
+Yr 1	X	Corn	150	A	150	300	15
+Yr 1	Y	Soy	200	1.5	300	B	25
+Yr 1	Y	Barley	80	3.0	180	200	18
+Yr 2	X	Wheat	120	2.2	C	233.33	22
+Yr 2	Z	Corn	180	3.5	160	320	D
+Yr 2	Z	Soy	120	E	310	400	28
+Additional Information:
+1.	In Year 1, the Total Yield for Corn from Farm X was 600 tons.
+2.	In Year 1, the Profit from Soy cultivated by Farm Y was $20,000.
+3.	In Year 2, the Total Revenue from Wheat cultivated by Farm X was $55,440.
+4.	In Year 2, the sum of Total Production Cost and Total Transport Cost for Corn from Farm Z was $68,040. The Total Yield for this crop was 630 tons.
+5.	In Year 2, Farm Z's Soy crop had a Total Revenue of $74,400 and its Profit was $19,680.","What was the Yield (A tons/acre) for Corn at Farm X in Year 1?","3.0","3.5","4.0","4.5","A","B","C","D","C","MCQ","Data Interpretation","Hybrid DI, Table Completion, Formula Application","Moderate","Hybrid DI, Table Completion, Formula Application","missing value deduction (yield), algebraic calculation from clues","False","MOCKXYZ003_Set5_CropLogistics","","Solutions for Set 5 of 5: Crop Yield & Sales Logistics
+
+First, we determine the values for A, B, C, D, E from the Additional Information.
+
+**Find A (Yield for Yr 1 X Corn):**
+- Formula: Total Yield = Area * Yield (tons/acre)
+- From table: Area = 150 acres for Yr 1, Farm X, Corn.
+- From Add. Info 1: Total Yield = 600 tons.
+- 600 = 150 * A
+- A = 600 / 150 = 4.0
+
+**Q19 Solution:** The Yield (A tons/acre) for Corn at Farm X in Year 1 is 4.0."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q20","20","MOCKXYZ003_Set5_CropLogistics","Set 5 of 5: Crop Yield & Sales Logistics
+Three farms (Farm X, Farm Y, Farm Z) cultivate four types of crops (Wheat, Corn, Soy, Barley) over two years (Year 1 and Year 2). Data regarding area planted, yield per acre, price per ton, production cost per acre, and transport cost per ton is available.
+Total Yield (tons) = Area Planted (acres) * Yield (tons/acre).
+Total Revenue ($) = Total Yield (tons) * Price ($/ton).
+Total Transport Cost ($) = Total Yield (tons) * Transport Cost ($/ton).
+Total Production Cost ($) = Area Planted (acres) * Production Cost ($/acre).
+Profit ($) = Total Revenue - (Total Production Cost + Total Transport Cost).
+The following table provides some of this data. Missing values are denoted by letters. All costs and prices are in $ per unit specified.
+Year	Farm	Crop	Area (acres)	Yield (tons/acre)	Price ($/ton)	Prod. Cost ($/acre)	Transport Cost ($/ton)
+Yr 1	X	Wheat	100	2.5	200	250	20
+Yr 1	X	Corn	150	A	150	300	15
+Yr 1	Y	Soy	200	1.5	300	B	25
+Yr 1	Y	Barley	80	3.0	180	200	18
+Yr 2	X	Wheat	120	2.2	C	233.33	22
+Yr 2	Z	Corn	180	3.5	160	320	D
+Yr 2	Z	Soy	120	E	310	400	28
+Additional Information:
+1.	In Year 1, the Total Yield for Corn from Farm X was 600 tons.
+2.	In Year 1, the Profit from Soy cultivated by Farm Y was $20,000.
+3.	In Year 2, the Total Revenue from Wheat cultivated by Farm X was $55,440.
+4.	In Year 2, the sum of Total Production Cost and Total Transport Cost for Corn from Farm Z was $68,040. The Total Yield for this crop was 630 tons.
+5.	In Year 2, Farm Z's Soy crop had a Total Revenue of $74,400 and its Profit was $19,680.","What was the Profit for Farm Y from Barley in Year 1?","$10,880","$11,260","$22,880","$13,120","A","B","C","D","C","MCQ","Data Interpretation","Hybrid DI, Table Calculation, Financial Metrics","Moderate","Hybrid DI, Table Calculation, Financial Metrics","formula application (profit), data extraction, multi-step calculation","False","MOCKXYZ003_Set5_CropLogistics","","Solutions for Set 5 of 5: Crop Yield & Sales Logistics
+
+**Q20 Solution:** For Farm Y, Barley, Year 1, we use the given data and formulas.
+- Data from table: Area = 80, Yield = 3.0, Price = $180, Prod. Cost = $200/acre, Transport Cost = $18/ton.
+1.  **Total Yield** = Area * Yield = 80 * 3.0 = 240 tons.
+2.  **Total Revenue** = Total Yield * Price = 240 * $180 = $43,200.
+3.  **Total Production Cost** = Area * Prod. Cost/acre = 80 * $200 = $16,000.
+4.  **Total Transport Cost** = Total Yield * Transport Cost/ton = 240 * $18 = $4,320.
+5.  **Profit** = Total Revenue - (Total Production Cost + Total Transport Cost) = $43,200 - ($16,000 + $4,320) = $43,200 - $20,320 = $22,880."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q21","21","MOCKXYZ003_Set5_CropLogistics","Set 5 of 5: Crop Yield & Sales Logistics
+Three farms (Farm X, Farm Y, Farm Z) cultivate four types of crops (Wheat, Corn, Soy, Barley) over two years (Year 1 and Year 2). Data regarding area planted, yield per acre, price per ton, production cost per acre, and transport cost per ton is available.
+Total Yield (tons) = Area Planted (acres) * Yield (tons/acre).
+Total Revenue ($) = Total Yield (tons) * Price ($/ton).
+Total Transport Cost ($) = Total Yield (tons) * Transport Cost ($/ton).
+Total Production Cost ($) = Area Planted (acres) * Production Cost ($/acre).
+Profit ($) = Total Revenue - (Total Production Cost + Total Transport Cost).
+The following table provides some of this data. Missing values are denoted by letters. All costs and prices are in $ per unit specified.
+Year	Farm	Crop	Area (acres)	Yield (tons/acre)	Price ($/ton)	Prod. Cost ($/acre)	Transport Cost ($/ton)
+Yr 1	X	Wheat	100	2.5	200	250	20
+Yr 1	X	Corn	150	A	150	300	15
+Yr 1	Y	Soy	200	1.5	300	B	25
+Yr 1	Y	Barley	80	3.0	180	200	18
+Yr 2	X	Wheat	120	2.2	C	233.33	22
+Yr 2	Z	Corn	180	3.5	160	320	D
+Yr 2	Z	Soy	120	E	310	400	28
+Additional Information:
+1.	In Year 1, the Total Yield for Corn from Farm X was 600 tons.
+2.	In Year 1, the Profit from Soy cultivated by Farm Y was $20,000.
+3.	In Year 2, the Total Revenue from Wheat cultivated by Farm X was $55,440.
+4.	In Year 2, the sum of Total Production Cost and Total Transport Cost for Corn from Farm Z was $68,040. The Total Yield for this crop was 630 tons.
+5.	In Year 2, Farm Z's Soy crop had a Total Revenue of $74,400 and its Profit was $19,680.","What was the Transport Cost per ton (D) for Corn from Farm Z in Year 2, rounded to two decimal places?","$15.00","$16.00","$16.57","$17.20","A","B","C","D","C","MCQ","Data Interpretation","Hybrid DI, Table Completion, Unit Conversion","Moderate","Hybrid DI, Table Completion, Unit Conversion","missing value deduction from clues, unit consistency, cost calculation, rounding","False","MOCKXYZ003_Set5_CropLogistics","","Solutions for Set 5 of 5: Crop Yield & Sales Logistics
+
+**Q21 Solution:** Find D (Transport Cost per ton for Yr 2 Z Corn).
+- Data from table: Area = 180, Prod. Cost/acre = $320.
+- From Add. Info 4: Total Cost (Prod + Trans) = $68,040 and Total Yield = 630 tons.
+1.  **Total Production Cost** = Area * Prod. Cost/acre = 180 * $320 = $57,600.
+2.  **Total Transport Cost** = Total Cost - Total Production Cost = $68,040 - $57,600 = $10,440.
+3.  **Transport Cost per ton (D)** = Total Transport Cost / Total Yield = $10,440 / 630 tons = $16.5714...
+4.  Rounding to two decimal places gives **$16.57**."
+"Logical Reasoning and Data Interpretation","","MOCKXYZ003_Q22","22","MOCKXYZ003_Set5_CropLogistics","Set 5 of 5: Crop Yield & Sales Logistics
+Three farms (Farm X, Farm Y, Farm Z) cultivate four types of crops (Wheat, Corn, Soy, Barley) over two years (Year 1 and Year 2). Data regarding area planted, yield per acre, price per ton, production cost per acre, and transport cost per ton is available.
+Total Yield (tons) = Area Planted (acres) * Yield (tons/acre).
+Total Revenue ($) = Total Yield (tons) * Price ($/ton).
+Total Transport Cost ($) = Total Yield (tons) * Transport Cost ($/ton).
+Total Production Cost ($) = Area Planted (acres) * Production Cost ($/acre).
+Profit ($) = Total Revenue - (Total Production Cost + Total Transport Cost).
+The following table provides some of this data. Missing values are denoted by letters. All costs and prices are in $ per unit specified.
+Year	Farm	Crop	Area (acres)	Yield (tons/acre)	Price ($/ton)	Prod. Cost ($/acre)	Transport Cost ($/ton)
+Yr 1	X	Wheat	100	2.5	200	250	20
+Yr 1	X	Corn	150	A	150	300	15
+Yr 1	Y	Soy	200	1.5	300	B	25
+Yr 1	Y	Barley	80	3.0	180	200	18
+Yr 2	X	Wheat	120	2.2	C	233.33	22
+Yr 2	Z	Corn	180	3.5	160	320	D
+Yr 2	Z	Soy	120	E	310	400	28
+Additional Information:
+1.	In Year 1, the Total Yield for Corn from Farm X was 600 tons.
+2.	In Year 1, the Profit from Soy cultivated by Farm Y was $20,000.
+3.	In Year 2, the Total Revenue from Wheat cultivated by Farm X was $55,440.
+4.	In Year 2, the sum of Total Production Cost and Total Transport Cost for Corn from Farm Z was $68,040. The Total Yield for this crop was 630 tons.
+5.	In Year 2, Farm Z's Soy crop had a Total Revenue of $74,400 and its Profit was $19,680.","For Farm Z in Year 2, what was the Yield (E tons/acre) for Soy?","1.8","2.0","2.2","2.5","A","B","C","D","B","MCQ","Data Interpretation","Hybrid DI, Table Completion, Formula Application","Moderate","Hybrid DI, Table Completion, Formula Application","missing value deduction (yield from revenue/price), algebraic calculation","False","MOCKXYZ003_Set5_CropLogistics","","Solutions for Set 5 of 5: Crop Yield & Sales Logistics
+
+**Q22 Solution:** Find E (Yield for Yr 2 Z Soy).
+- Data from table: Area = 120, Price = $310.
+- From Add. Info 5: Total Revenue = $74,400.
+1.  **Total Yield** = Total Revenue / Price = $74,400 / $310 = 240 tons.
+2.  **Yield per acre (E)** = Total Yield / Area = 240 tons / 120 acres = 2.0 tons/acre."

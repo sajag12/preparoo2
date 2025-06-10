@@ -1,0 +1,572 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q1,1,CATMOCK24S2LRDI01_Set1_ResearchGrants,"A research institute allocates grants to its six researchers (R1, R2, R3, R4, R5, R6) over two funding cycles in a year: Cycle A (January-June) and Cycle B (July-December). Grants can be of three types: Short-term (ST: 3 months duration), Medium-term (MT: 6 months duration), or Long-term (LT: 12 months duration). Each researcher can receive at most one grant per cycle. A new grant for a researcher cannot start until any previous grant they hold is completed. The total budget allocation for grants for the year is ₹275 Lakhs. No two researchers have the same total annual funding.
+
+Additional Information:
+1.  All grant funding amounts are in whole Lakhs of Rupees. Grant durations are exact.
+2.  R1 was the only researcher to receive a Long-term (LT) grant in Cycle A. Only one LT grant was awarded in Cycle B.
+3.  R4 received no funding in Cycle A but secured the LT grant in Cycle B, which was the second highest single-grant funding of the year. The funding for R1's LT grant was ₹10 Lakhs more than R4's LT grant.
+4.  Exactly two researchers, R2 and R5, received Medium-term (MT) grants starting in January. R5’s Cycle B grant started a month later than R2’s Cycle B grant.
+5.  The total funding for Short-term (ST) grants across all researchers and both cycles was ₹70 Lakhs. R3's total annual funding was ₹5 Lakhs less than R4's.
+6.  R6’s only grant was an ST grant, and its funding was ₹5 Lakhs more than R2's ST grant.
+7.  No ST grant was funded at more than ₹25 Lakhs. R3's Cycle A grant did not start in January. The researcher with the highest total annual funding did not receive any grant in Cycle B.
+8.  Researcher R5's Medium-Term grant in Cycle A was equal in funding to Researcher R3's Medium-Term grant in Cycle B.",What was the total annual funding received by researcher R2?,₹45 Lakhs,₹50 Lakhs,₹55 Lakhs,₹60 Lakhs,A,B,C,D,C,MCQ,Data Interpretation,Multi-Table Analysis,Moderate,"Logical deduction from interrelated data points, solving simultaneous equations with constraints, and understanding grant cycles and funding structures.","data deduction, constraint satisfaction, sum computation",False,CATMOCK24S2LRDI01_Set1_ResearchGrants,Analysis,"Step 1: Determine Grant Types and Cycles
+* R1: LT in Cycle A (Jan-Dec). No grant in Cycle B.
+* R4: No grant in Cycle A. LT in Cycle B (Jul-Jun next year).
+* R2 & R5: MT in Cycle A (Jan-Jun). Since R2 has an ST grant (implied by Clue 6), it must be in Cycle B (Jul-Sep). R5's Cycle B grant starts in Aug, so it must be an ST grant (Aug-Oct) to finish by Dec.
+* R3: To fit within Cycle A without starting in Jan, R3 must have an ST grant (e.g., Apr-Jun). R3's Cycle B grant must be MT (Jul-Dec).
+* R6: Has one ST grant. All available slots for an ST grant are in Cycle A (e.g., Feb-Apr).
+
+Step 2: Determine Grant Funding
+* Total Budget = ₹275L. Total ST Funding = ₹70L.
+* Let R2(B,ST) = X. Then R6(A,ST) = X+5. Max ST grant is ₹25L, so X+5 ≤ 25 => X ≤ 20. The only consistent solution requires X=20. Thus, R2(B,ST) = ₹20L, R6(A,ST) = ₹25L.
+* Let R3(A,ST) = Y, R5(B,ST) = Z. Y+Z = 70 - 20 - 25 = 25.
+* Let R4(B,LT) = G4. Then R1(A,LT) = G4+10.
+* R3's Total = G4-5. R3(B,MT) = (G4-5) - Y.
+* R5(A,MT) = R3(B,MT) = G4-5-Y.
+* By solving the system of equations based on the total budget and ensuring all constraints (distinct total funding, R1's total being highest) are met, we find a unique solution: G4=50, Y=15, Z=10.
+* This leads to the following funding amounts:
+  R1(A,LT) = 60
+  R2(A,MT) = 35, R2(B,ST) = 20
+  R3(A,ST) = 15, R3(B,MT) = 30
+  R4(B,LT) = 50
+  R5(A,MT) = 30, R5(B,ST) = 10
+  R6(A,ST) = 25
+
+Final Annual Funding Table:
+* R1: 60 Lakhs
+* R2: 35 + 20 = 55 Lakhs
+* R3: 15 + 30 = 45 Lakhs
+* R4: 50 Lakhs
+* R5: 30 + 10 = 40 Lakhs
+* R6: 25 Lakhs
+
+Answer: From the derived grant details in the table, R2's total annual funding is ₹55 Lakhs."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q2,2,CATMOCK24S2LRDI01_Set1_ResearchGrants,"A research institute allocates grants to its six researchers (R1, R2, R3, R4, R5, R6) over two funding cycles in a year: Cycle A (January-June) and Cycle B (July-December). Grants can be of three types: Short-term (ST: 3 months duration), Medium-term (MT: 6 months duration), or Long-term (LT: 12 months duration). Each researcher can receive at most one grant per cycle. A new grant for a researcher cannot start until any previous grant they hold is completed. The total budget allocation for grants for the year is ₹275 Lakhs. No two researchers have the same total annual funding.
+
+Additional Information:
+1.  All grant funding amounts are in whole Lakhs of Rupees. Grant durations are exact.
+2.  R1 was the only researcher to receive a Long-term (LT) grant in Cycle A. Only one LT grant was awarded in Cycle B.
+3.  R4 received no funding in Cycle A but secured the LT grant in Cycle B, which was the second highest single-grant funding of the year. The funding for R1's LT grant was ₹10 Lakhs more than R4's LT grant.
+4.  Exactly two researchers, R2 and R5, received Medium-term (MT) grants starting in January. R5’s Cycle B grant started a month later than R2’s Cycle B grant.
+5.  The total funding for Short-term (ST) grants across all researchers and both cycles was ₹70 Lakhs. R3's total annual funding was ₹5 Lakhs less than R4's.
+6.  R6’s only grant was an ST grant, and its funding was ₹5 Lakhs more than R2's ST grant.
+7.  No ST grant was funded at more than ₹25 Lakhs. R3's Cycle A grant did not start in January. The researcher with the highest total annual funding did not receive any grant in Cycle B.
+8.  Researcher R5's Medium-Term grant in Cycle A was equal in funding to Researcher R3's Medium-Term grant in Cycle B.",Which researcher received the grant with the lowest funding amount in Cycle A?,R3,R5,R6,R4,A,B,C,D,A,MCQ,Data Interpretation,Multi-Table Analysis,Moderate,"Logical deduction from interrelated data points, solving simultaneous equations with constraints, and understanding grant cycles and funding structures.","data deduction, comparison, minimum value",False,CATMOCK24S2LRDI01_Set1_ResearchGrants,Analysis,"Step 1: Determine Grant Types and Cycles
+* R1: LT in Cycle A (Jan-Dec). No grant in Cycle B.
+* R4: No grant in Cycle A. LT in Cycle B (Jul-Jun next year).
+* R2 & R5: MT in Cycle A (Jan-Jun). Since R2 has an ST grant (implied by Clue 6), it must be in Cycle B (Jul-Sep). R5's Cycle B grant starts in Aug, so it must be an ST grant (Aug-Oct) to finish by Dec.
+* R3: To fit within Cycle A without starting in Jan, R3 must have an ST grant (e.g., Apr-Jun). R3's Cycle B grant must be MT (Jul-Dec).
+* R6: Has one ST grant. All available slots for an ST grant are in Cycle A (e.g., Feb-Apr).
+
+Step 2: Determine Grant Funding
+* Total Budget = ₹275L. Total ST Funding = ₹70L.
+* Let R2(B,ST) = X. Then R6(A,ST) = X+5. Max ST grant is ₹25L, so X+5 ≤ 25 => X ≤ 20. The only consistent solution requires X=20. Thus, R2(B,ST) = ₹20L, R6(A,ST) = ₹25L.
+* Let R3(A,ST) = Y, R5(B,ST) = Z. Y+Z = 70 - 20 - 25 = 25.
+* Let R4(B,LT) = G4. Then R1(A,LT) = G4+10.
+* R3's Total = G4-5. R3(B,MT) = (G4-5) - Y.
+* R5(A,MT) = R3(B,MT) = G4-5-Y.
+* By solving the system of equations based on the total budget and ensuring all constraints (distinct total funding, R1's total being highest) are met, we find a unique solution: G4=50, Y=15, Z=10.
+* This leads to the following funding amounts:
+  R1(A,LT) = 60
+  R2(A,MT) = 35
+  R3(A,ST) = 15
+  R4 received no grant in Cycle A
+  R5(A,MT) = 30
+  R6(A,ST) = 25
+
+Answer: The funding amounts for grants received in Cycle A are: R1=₹60L, R2=₹35L, R3=₹15L, R5=₹30L, R6=₹25L. R4 received no funding. Among those who received a grant, R3 received the lowest funding of ₹15 Lakhs."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q3,3,CATMOCK24S2LRDI01_Set1_ResearchGrants,"A research institute allocates grants to its six researchers (R1, R2, R3, R4, R5, R6) over two funding cycles in a year: Cycle A (January-June) and Cycle B (July-December). Grants can be of three types: Short-term (ST: 3 months duration), Medium-term (MT: 6 months duration), or Long-term (LT: 12 months duration). Each researcher can receive at most one grant per cycle. A new grant for a researcher cannot start until any previous grant they hold is completed. The total budget allocation for grants for the year is ₹275 Lakhs. No two researchers have the same total annual funding.
+
+Additional Information:
+1.  All grant funding amounts are in whole Lakhs of Rupees. Grant durations are exact.
+2.  R1 was the only researcher to receive a Long-term (LT) grant in Cycle A. Only one LT grant was awarded in Cycle B.
+3.  R4 received no funding in Cycle A but secured the LT grant in Cycle B, which was the second highest single-grant funding of the year. The funding for R1's LT grant was ₹10 Lakhs more than R4's LT grant.
+4.  Exactly two researchers, R2 and R5, received Medium-term (MT) grants starting in January. R5’s Cycle B grant started a month later than R2’s Cycle B grant.
+5.  The total funding for Short-term (ST) grants across all researchers and both cycles was ₹70 Lakhs. R3's total annual funding was ₹5 Lakhs less than R4's.
+6.  R6’s only grant was an ST grant, and its funding was ₹5 Lakhs more than R2's ST grant.
+7.  No ST grant was funded at more than ₹25 Lakhs. R3's Cycle A grant did not start in January. The researcher with the highest total annual funding did not receive any grant in Cycle B.
+8.  Researcher R5's Medium-Term grant in Cycle A was equal in funding to Researcher R3's Medium-Term grant in Cycle B.",How many researchers received grants in both Cycle A and Cycle B?,1,2,3,4,A,B,C,D,C,MCQ,Data Interpretation,Multi-Table Analysis,Moderate,"Logical deduction from interrelated data points, solving simultaneous equations with constraints, and understanding grant cycles and funding structures.","data deduction, counting, set intersection",False,CATMOCK24S2LRDI01_Set1_ResearchGrants,Analysis,"Step 1: Determine Grant Types and Cycles
+* R1: LT in Cycle A (Jan-Dec). No grant in Cycle B.
+* R4: No grant in Cycle A. LT in Cycle B (Jul-Jun next year).
+* R2 & R5: MT in Cycle A (Jan-Jun). Since R2 has an ST grant (implied by Clue 6), it must be in Cycle B (Jul-Sep). R5's Cycle B grant starts in Aug, so it must be an ST grant (Aug-Oct) to finish by Dec.
+* R3: To fit within Cycle A without starting in Jan, R3 must have an ST grant (e.g., Apr-Jun). R3's Cycle B grant must be MT (Jul-Dec).
+* R6: Has one ST grant. All available slots for an ST grant are in Cycle A (e.g., Feb-Apr).
+
+From the derived grant structure:
+* R1: Cycle A only.
+* R2: Cycle A and Cycle B.
+* R3: Cycle A and Cycle B.
+* R4: Cycle B only.
+* R5: Cycle A and Cycle B.
+* R6: Cycle A only.
+
+Answer: Researchers R2, R3, and R5 received grants in both cycles. Thus, 3 researchers."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q4,4,CATMOCK24S2LRDI01_Set1_ResearchGrants,"A research institute allocates grants to its six researchers (R1, R2, R3, R4, R5, R6) over two funding cycles in a year: Cycle A (January-June) and Cycle B (July-December). Grants can be of three types: Short-term (ST: 3 months duration), Medium-term (MT: 6 months duration), or Long-term (LT: 12 months duration). Each researcher can receive at most one grant per cycle. A new grant for a researcher cannot start until any previous grant they hold is completed. The total budget allocation for grants for the year is ₹275 Lakhs. No two researchers have the same total annual funding.
+
+Additional Information:
+1.  All grant funding amounts are in whole Lakhs of Rupees. Grant durations are exact.
+2.  R1 was the only researcher to receive a Long-term (LT) grant in Cycle A. Only one LT grant was awarded in Cycle B.
+3.  R4 received no funding in Cycle A but secured the LT grant in Cycle B, which was the second highest single-grant funding of the year. The funding for R1's LT grant was ₹10 Lakhs more than R4's LT grant.
+4.  Exactly two researchers, R2 and R5, received Medium-term (MT) grants starting in January. R5’s Cycle B grant started a month later than R2’s Cycle B grant.
+5.  The total funding for Short-term (ST) grants across all researchers and both cycles was ₹70 Lakhs. R3's total annual funding was ₹5 Lakhs less than R4's.
+6.  R6’s only grant was an ST grant, and its funding was ₹5 Lakhs more than R2's ST grant.
+7.  No ST grant was funded at more than ₹25 Lakhs. R3's Cycle A grant did not start in January. The researcher with the highest total annual funding did not receive any grant in Cycle B.
+8.  Researcher R5's Medium-Term grant in Cycle A was equal in funding to Researcher R3's Medium-Term grant in Cycle B.",What is the difference between the total funding allocated in Cycle A and Cycle B?,₹30 Lakhs,₹35 Lakhs,₹40 Lakhs,₹55 Lakhs,A,B,C,D,D,MCQ,Data Interpretation,Multi-Table Analysis,Moderate,"Logical deduction from interrelated data points, solving simultaneous equations with constraints, and understanding grant cycles and funding structures.","data deduction, sum computation, difference calculation",False,CATMOCK24S2LRDI01_Set1_ResearchGrants,Analysis,"From the final derived funding table:
+Grants in Cycle A:
+R1(LT): 60
+R2(MT): 35
+R3(ST): 15
+R5(MT): 30
+R6(ST): 25
+Total funding in Cycle A = 60 + 35 + 15 + 30 + 25 = 165 Lakhs.
+
+Grants in Cycle B:
+R2(ST): 20
+R3(MT): 30
+R4(LT): 50
+R5(ST): 10
+Total funding in Cycle B = 20 + 30 + 50 + 10 = 110 Lakhs.
+
+Difference = Total Cycle A Funding - Total Cycle B Funding = 165 - 110 = 55 Lakhs."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q5,5,CATMOCK24S2LRDI01_Set1_ResearchGrants,"A research institute allocates grants to its six researchers (R1, R2, R3, R4, R5, R6) over two funding cycles in a year: Cycle A (January-June) and Cycle B (July-December). Grants can be of three types: Short-term (ST: 3 months duration), Medium-term (MT: 6 months duration), or Long-term (LT: 12 months duration). Each researcher can receive at most one grant per cycle. A new grant for a researcher cannot start until any previous grant they hold is completed. The total budget allocation for grants for the year is ₹275 Lakhs. No two researchers have the same total annual funding.
+
+Additional Information:
+1.  All grant funding amounts are in whole Lakhs of Rupees. Grant durations are exact.
+2.  R1 was the only researcher to receive a Long-term (LT) grant in Cycle A. Only one LT grant was awarded in Cycle B.
+3.  R4 received no funding in Cycle A but secured the LT grant in Cycle B, which was the second highest single-grant funding of the year. The funding for R1's LT grant was ₹10 Lakhs more than R4's LT grant.
+4.  Exactly two researchers, R2 and R5, received Medium-term (MT) grants starting in January. R5’s Cycle B grant started a month later than R2’s Cycle B grant.
+5.  The total funding for Short-term (ST) grants across all researchers and both cycles was ₹70 Lakhs. R3's total annual funding was ₹5 Lakhs less than R4's.
+6.  R6’s only grant was an ST grant, and its funding was ₹5 Lakhs more than R2's ST grant.
+7.  No ST grant was funded at more than ₹25 Lakhs. R3's Cycle A grant did not start in January. The researcher with the highest total annual funding did not receive any grant in Cycle B.
+8.  Researcher R5's Medium-Term grant in Cycle A was equal in funding to Researcher R3's Medium-Term grant in Cycle B.","If a new policy capped any single ST grant at ₹15 Lakhs (instead of ₹25 Lakhs) and R6's grant was at this new cap, while R2's ST grant funding was maintained at ₹5 Lakhs less than R6's ST grant, what would be R3's Cycle B MT grant funding, assuming R3's total annual funding (as derived from the original conditions) and R3's Cycle A ST grant amount (as derived from original conditions) remain unchanged?",₹20 Lakhs,₹25 Lakhs,₹30 Lakhs,₹35 Lakhs,A,B,C,D,C,MCQ,Data Interpretation,Multi-Table Analysis,Difficult,Applying conditional changes to a solved data set and recalculating values based on fixed parameters from the original solution.,"conditional reasoning, constraint modification, data re-evaluation",False,CATMOCK24S2LRDI01_Set1_ResearchGrants,Evaluation,"This question asks to evaluate a hypothetical scenario based on the original solution. It is not about resolving the entire puzzle with new rules.
+1.  **R3's Total Annual Funding:** From the original solution, R3's total annual funding was derived to be ₹45 Lakhs. The question states this remains unchanged.
+2.  **R3's Cycle A ST Grant:** From the original solution, R3's Cycle A ST grant was derived to be ₹15 Lakhs. The question states this also remains unchanged.
+3.  **New Policy Check:** The new policy caps ST grants at ₹15 Lakhs. R3's original ST grant of ₹15 Lakhs already complies with this new cap, so its value is consistent and remains ₹15 Lakhs.
+4.  **Calculation:** R3's total annual funding is the sum of its grant(s) for the year. R3 received one grant in Cycle A (ST) and one in Cycle B (MT).
+R3's Total Funding = R3's Cycle A ST Funding + R3's Cycle B MT Funding
+₹45 Lakhs = ₹15 Lakhs + R3's Cycle B MT Funding
+
+Therefore, R3's Cycle B MT grant funding = ₹45 Lakhs - ₹15 Lakhs = ₹30 Lakhs.
+The other information in the hypothetical scenario (about R6's and R2's grants) is extraneous to what is being asked."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q6,6,CATMOCK24S2LRDI01_Set2_ArtifactPlacement,"A museum curator is placing eleven ancient artifacts, uniquely numbered 1 through 11, into a display grid. The grid has 3 Floors (Floor 1, Floor 2, Floor 3) and 4 display Columns (C1, C2, C3, C4, physically arranged from left to right). Exactly one slot in the 3x4 grid will remain empty. Artifacts are placed one per slot. The display Columns C1, C2, C3, C4 are designated as North, East, South, or West Wing based on clues.
+The placement adheres to the following rules:
+•	Row Rule: In any row (floor), if multiple artifacts are present, their numbers strictly increase from Column C1 to Column C4 for occupied slots (e.g., value in C1 < value in C2, if both occupied).
+•	Column Rule: In any column (C1, C2, C3, or C4), if multiple artifacts are present, their numbers strictly decrease from Floor 1 to Floor 2 to Floor 3 for occupied slots (e.g., value in F1 > value in F2, if both occupied).
+
+Additional Information:
+1.	Artifact 11 is placed on Floor 1, in the column designated as West Wing.
+2.	Artifact 1 is placed on Floor 3, in the column designated as North Wing.
+3.	The empty slot is on Floor 2, in the column designated as South Wing.
+4.	The artifact in Floor 2, Column C1 (which is designated as the North Wing) is 5.
+5.	The artifact in Floor 1, Column C2 (which is designated as the East Wing) is 8.
+6.	Artifact 4 is placed in the column designated as West Wing.
+7.	The sum of artifacts in Floor 3 is 10. The artifact in Floor 3, Column C3 (designated as South Wing) is 3.
+8.  Artifact 7 is placed in Floor 1, Column C1 and Artifact 10 is placed in Floor 1, Column C3.","Which artifact is placed in Floor 1, Column C3 (designated as South Wing)?",6,9,10,12,A,B,C,D,C,MCQ,Logical Reasoning,Grid Puzzle,Moderate,"Deductive reasoning, spatial arrangement, and constraint satisfaction in a grid-based puzzle.","spatial reasoning, constraint satisfaction, direct deduction",False,CATMOCK24S2LRDI01_Set2_ArtifactPlacement,Analysis,"Step 1: Deduce Column Designations
+* From Clue 4: C1 = North Wing (NW).
+* From Clue 5: C2 = East Wing (EW).
+* From Clue 7: C3 = South Wing (SW).
+* Therefore, C4 = West Wing (WW).
+
+Step 2: Place Initial Artifacts
+* F2,C1 = 5 (Clue 4).
+* F1,C2 = 8 (Clue 5).
+* F3,C3 = 3 (Clue 7).
+* F1,C4 = 11 (Clue 1, C4=WW).
+* F3,C1 = 1 (Clue 2, C1=NW).
+* F2,C3 = '-' (empty) (Clue 3, C3=SW).
+* F1,C1 = 7 (Clue 8, C1=NW). Check Col 1: 7>5>1. OK.
+* F1,C3 = 10 (Clue 8, C3=SW). Check Col 3: 10>3. OK.
+* Check Row 1: 7<8<10<11. OK.
+
+Step 3: Deduce Floor 3
+* Sum of F3 = 10 (Clue 7). We have F3,C1=1, F3,C3=3. So, F3,C2 + F3,C4 = 10 - 1 - 3 = 6.
+* Row Rule for F3: 1 < F3,C2 < 3 < F3,C4. The only integer for F3,C2 is 2. Then F3,C4 = 6 - 2 = 4.
+* F3 is: 1, 2, 3, 4. This is consistent.
+
+Step 4: Deduce Floor 2
+* Remaining artifacts to place: {6, 9}.
+* Remaining slots: F2,C2 and F2,C4.
+* For F2,C2: Row rule implies F2,C2 > F2,C1(5). Column rule implies F1,C2(8) > F2,C2 > F3,C2(2). Combining, 5 < F2,C2 < 8. From {6, 9}, F2,C2 must be 6.
+* For F2,C4: The last artifact, 9, goes here. Check rules: Row 2 (5<6<9) is OK. Col 4 (11>9>4) is OK.
+
+Final Grid:
+      C1  C2  C3  C4
+F1:    7   8  10  11
+F2:    5   6   -   9
+F3:    1   2   3   4
+
+Answer: Column C3 is the South Wing. The artifact in Floor 1, Column C3 is 10."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q7,7,CATMOCK24S2LRDI01_Set2_ArtifactPlacement,"A museum curator is placing eleven ancient artifacts, uniquely numbered 1 through 11, into a display grid. The grid has 3 Floors (Floor 1, Floor 2, Floor 3) and 4 display Columns (C1, C2, C3, C4, physically arranged from left to right). Exactly one slot in the 3x4 grid will remain empty. Artifacts are placed one per slot. The display Columns C1, C2, C3, C4 are designated as North, East, South, or West Wing based on clues.
+The placement adheres to the following rules:
+•	Row Rule: In any row (floor), if multiple artifacts are present, their numbers strictly increase from Column C1 to Column C4 for occupied slots (e.g., value in C1 < value in C2, if both occupied).
+•	Column Rule: In any column (C1, C2, C3, or C4), if multiple artifacts are present, their numbers strictly decrease from Floor 1 to Floor 2 to Floor 3 for occupied slots (e.g., value in F1 > value in F2, if both occupied).
+
+Additional Information:
+1.	Artifact 11 is placed on Floor 1, in the column designated as West Wing.
+2.	Artifact 1 is placed on Floor 3, in the column designated as North Wing.
+3.	The empty slot is on Floor 2, in the column designated as South Wing.
+4.	The artifact in Floor 2, Column C1 (which is designated as the North Wing) is 5.
+5.	The artifact in Floor 1, Column C2 (which is designated as the East Wing) is 8.
+6.	Artifact 4 is placed in the column designated as West Wing.
+7.	The sum of artifacts in Floor 3 is 10. The artifact in Floor 3, Column C3 (designated as South Wing) is 3.
+8.  Artifact 7 is placed in Floor 1, Column C1 and Artifact 10 is placed in Floor 1, Column C3.","What is the number of the artifact in Floor 2, Column C2 (designated as East Wing)?",6,7,8,Cannot be determined,A,B,C,D,A,MCQ,Logical Reasoning,Grid Puzzle,Moderate,"Deductive reasoning, spatial arrangement, and constraint satisfaction in a grid-based puzzle.","spatial reasoning, constraint satisfaction, direct deduction",False,CATMOCK24S2LRDI01_Set2_ArtifactPlacement,Analysis,"Following the common data derivation:
+Step 1: Column Designations are C1=NW, C2=EW, C3=SW, C4=WW.
+Step 2: Initial placements lead to a partially filled grid.
+Step 3: Floor 3 is deduced as {1, 2, 3, 4}.
+Step 4: To deduce the artifact in Floor 2, Column C2 (East Wing), we use the rules:
+*   We have F2,C1 = 5. The Row Rule for Floor 2 implies F2,C2 > 5.
+*   We have F1,C2 = 8 and F3,C2 = 2. The Column Rule for Column C2 implies 8 > F2,C2 > 2.
+*   Combining these conditions: 5 < F2,C2 < 8.
+*   The artifacts yet to be placed at this stage are {6, 9}.
+*   The only artifact from the remaining set that fits the condition 5 < F2,C2 < 8 is 6.
+*   Therefore, the artifact in Floor 2, Column C2 is 6.
+
+Final Grid:
+      C1  C2  C3  C4
+F1:    7   8  10  11
+F2:    5   6   -   9
+F3:    1   2   3   4
+
+Answer: From the derived final grid, the artifact in Floor 2, Column C2 (East Wing) is 6."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q8,8,CATMOCK24S2LRDI01_Set2_ArtifactPlacement,"A museum curator is placing eleven ancient artifacts, uniquely numbered 1 through 11, into a display grid. The grid has 3 Floors (Floor 1, Floor 2, Floor 3) and 4 display Columns (C1, C2, C3, C4, physically arranged from left to right). Exactly one slot in the 3x4 grid will remain empty. Artifacts are placed one per slot. The display Columns C1, C2, C3, C4 are designated as North, East, South, or West Wing based on clues.
+The placement adheres to the following rules:
+•	Row Rule: In any row (floor), if multiple artifacts are present, their numbers strictly increase from Column C1 to Column C4 for occupied slots (e.g., value in C1 < value in C2, if both occupied).
+•	Column Rule: In any column (C1, C2, C3, or C4), if multiple artifacts are present, their numbers strictly decrease from Floor 1 to Floor 2 to Floor 3 for occupied slots (e.g., value in F1 > value in F2, if both occupied).
+
+Additional Information:
+1.	Artifact 11 is placed on Floor 1, in the column designated as West Wing.
+2.	Artifact 1 is placed on Floor 3, in the column designated as North Wing.
+3.	The empty slot is on Floor 2, in the column designated as South Wing.
+4.	The artifact in Floor 2, Column C1 (which is designated as the North Wing) is 5.
+5.	The artifact in Floor 1, Column C2 (which is designated as the East Wing) is 8.
+6.	Artifact 4 is placed in the column designated as West Wing.
+7.	The sum of artifacts in Floor 3 is 10. The artifact in Floor 3, Column C3 (designated as South Wing) is 3.
+8.  Artifact 7 is placed in Floor 1, Column C1 and Artifact 10 is placed in Floor 1, Column C3.",Which of the following statements is true regarding the final arrangement?,"The artifact in Floor 3, West Wing is 2.","The empty slot is in Floor 2, Column C2 (East Wing).","The artifact in Floor 1, North Wing is 6.",The sum of artifacts in Column C4 (West Wing) is 24.,A,B,C,D,D,MCQ,Logical Reasoning,Grid Puzzle,Difficult,"Deductive reasoning, spatial arrangement, and constraint satisfaction in a grid-based puzzle.","spatial reasoning, constraint satisfaction, statement verification, multi-condition check",False,CATMOCK24S2LRDI01_Set2_ArtifactPlacement,Analysis,"Using the derived final grid:
+      C1(NW) C2(EW) C3(SW) C4(WW)
+F1:    7      8      10     11
+F2:    5      6      -      9
+F3:    1      2      3      4
+
+Let's check each statement:
+A) The artifact in Floor 3, West Wing is 2. The West Wing is C4. The artifact in F3,C4 is 4. Statement is False.
+B) The empty slot is in Floor 2, Column C2 (East Wing). The empty slot is in F2,C3 (South Wing). Statement is False.
+C) The artifact in Floor 1, North Wing is 6. The North Wing is C1. The artifact in F1,C1 is 7. Statement is False.
+D) The sum of artifacts in Column C4 (West Wing) is 24. The artifacts in C4 are 11 (F1), 9 (F2), and 4 (F3). Sum = 11 + 9 + 4 = 24. Statement is True."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q9,9,CATMOCK24S2LRDI01_Set2_ArtifactPlacement,"A museum curator is placing eleven ancient artifacts, uniquely numbered 1 through 11, into a display grid. The grid has 3 Floors (Floor 1, Floor 2, Floor 3) and 4 display Columns (C1, C2, C3, C4, physically arranged from left to right). Exactly one slot in the 3x4 grid will remain empty. Artifacts are placed one per slot. The display Columns C1, C2, C3, C4 are designated as North, East, South, or West Wing based on clues.
+The placement adheres to the following rules:
+•	Row Rule: In any row (floor), if multiple artifacts are present, their numbers strictly increase from Column C1 to Column C4 for occupied slots (e.g., value in C1 < value in C2, if both occupied).
+•	Column Rule: In any column (C1, C2, C3, or C4), if multiple artifacts are present, their numbers strictly decrease from Floor 1 to Floor 2 to Floor 3 for occupied slots (e.g., value in F1 > value in F2, if both occupied).
+
+Additional Information:
+1.	Artifact 11 is placed on Floor 1, in the column designated as West Wing.
+2.	Artifact 1 is placed on Floor 3, in the column designated as North Wing.
+3.	The empty slot is on Floor 2, in the column designated as South Wing.
+4.	The artifact in Floor 2, Column C1 (which is designated as the North Wing) is 5.
+5.	The artifact in Floor 1, Column C2 (which is designated as the East Wing) is 8.
+6.	Artifact 4 is placed in the column designated as West Wing.
+7.	The sum of artifacts in Floor 3 is 10. The artifact in Floor 3, Column C3 (designated as South Wing) is 3.
+8.  Artifact 7 is placed in Floor 1, Column C1 and Artifact 10 is placed in Floor 1, Column C3.","Artifact 9 is placed in Floor 2, Column C4 (West Wing). If Artifact 9 was not placed, and instead Artifact 12 was to be placed according to all rules, where could Artifact 12 be placed if the empty slot remained in Floor 2, South Wing (C3)? (Assume all other initially placed artifacts from clues 1,2,4,5,7,8 that led to the unique grid remain, except for artifact 9 which is now replaced by 12 in the available pool of numbers).","Floor 1, West Wing (C4)","Floor 1, South Wing (C3)","Floor 2, West Wing (C4)",Such a placement for Artifact 12 is not possible in the West Wing.,A,B,C,D,D,MCQ,Logical Reasoning,Grid Puzzle,Difficult,"Applying rules to a hypothetical modification of a solved puzzle, testing for possibility under constraints.","spatial reasoning, conditional reasoning, constraint application, rule interpretation, possibility analysis",False,CATMOCK24S2LRDI01_Set2_ArtifactPlacement,Evaluation,"The original grid remains the same except artifact 9 is removed and artifact 12 is to be placed. The slot F2,C4 (West Wing) is now vacant.
+The West Wing is Column C4. The state of C4 is:
+F1,C4 = 11
+F2,C4 = vacant
+F3,C4 = 4
+We need to check if Artifact 12 can be placed in the West Wing (C4).
+A) Floor 1, West Wing (C4): This slot is occupied by Artifact 11. Cannot be placed.
+B) Floor 1, South Wing (C3): This is not in the West Wing. Also, it is occupied by 10.
+C) Floor 2, West Wing (C4): This slot is vacant. Let's check the rules if 12 is placed here.
+*   Row Rule (Floor 2): F2,C1(5) < F2,C2(6) < F2,C4(12). This is satisfied.
+*   Column Rule (Column C4): F1,C4(11) > F2,C4(12) > F3,C4(4). This is NOT satisfied because 11 is not greater than 12.
+Therefore, Artifact 12 cannot be placed in Floor 2, Column C4.
+Since F1,C4 and F3,C4 are occupied, and F2,C4 is not a valid position for 12, no placement is possible for Artifact 12 in the West Wing."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q10,10,CATMOCK24S2LRDI01_Set2_ArtifactPlacement,"A museum curator is placing eleven ancient artifacts, uniquely numbered 1 through 11, into a display grid. The grid has 3 Floors (Floor 1, Floor 2, Floor 3) and 4 display Columns (C1, C2, C3, C4, physically arranged from left to right). Exactly one slot in the 3x4 grid will remain empty. Artifacts are placed one per slot. The display Columns C1, C2, C3, C4 are designated as North, East, South, or West Wing based on clues.
+The placement adheres to the following rules:
+•	Row Rule: In any row (floor), if multiple artifacts are present, their numbers strictly increase from Column C1 to Column C4 for occupied slots (e.g., value in C1 < value in C2, if both occupied).
+•	Column Rule: In any column (C1, C2, C3, or C4), if multiple artifacts are present, their numbers strictly decrease from Floor 1 to Floor 2 to Floor 3 for occupied slots (e.g., value in F1 > value in F2, if both occupied).
+
+Additional Information:
+1.	Artifact 11 is placed on Floor 1, in the column designated as West Wing.
+2.	Artifact 1 is placed on Floor 3, in the column designated as North Wing.
+3.	The empty slot is on Floor 2, in the column designated as South Wing.
+4.	The artifact in Floor 2, Column C1 (which is designated as the North Wing) is 5.
+5.	The artifact in Floor 1, Column C2 (which is designated as the East Wing) is 8.
+6.	Artifact 4 is placed in the column designated as West Wing.
+7.	The sum of artifacts in Floor 3 is 10. The artifact in Floor 3, Column C3 (designated as South Wing) is 3.
+8.  Artifact 7 is placed in Floor 1, Column C1 and Artifact 10 is placed in Floor 1, Column C3.",What is the sum of the artifact numbers in the column designated as East Wing (C2)?,15,16,17,18,A,B,C,D,B,MCQ,Logical Reasoning,Grid Puzzle,Moderate,"Deductive reasoning, spatial arrangement, and constraint satisfaction in a grid-based puzzle.","spatial reasoning, sum computation from grid",False,CATMOCK24S2LRDI01_Set2_ArtifactPlacement,Analysis,"Using the derived final grid:
+      C1(NW) C2(EW) C3(SW) C4(WW)
+F1:    7      8      10     11
+F2:    5      6      -      9
+F3:    1      2      3      4
+
+The column designated as East Wing is C2. The artifacts in this column are:
+*   Floor 1: 8
+*   Floor 2: 6
+*   Floor 3: 2
+Sum = 8 + 6 + 2 = 16."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q11,11,CATMOCK24S2LRDI01_Set3_ProjectValuations,"Five students (Ankit, Bipul, Charan, Divya, Esha) were each assigned exactly two distinct projects from a list of ten projects (P1 to P10). All ten projects were assigned. Each student has their own personal integer valuation (from 1 to 10, where 10 is the highest) for each of the ten projects. A student's ""Bundle Value"" is the sum of their personal valuations for the two projects assigned to them. Student X experiences ""Regret"" for Student Y if Student X values Student Y's assigned bundle more than Student X values their own assigned bundle. No two students have the same Bundle Value. For any given student, their valuations for the 10 projects are distinct integers from 1 to 10.
+
+Additional Information:
+1.	Ankit is assigned projects P1 and P2. His Bundle Value is 15. He experiences Regret only for Charan.
+2.	Bipul’s Bundle Value is 14. He values Divya's bundle at 15. He does not experience Regret for Ankit or Charan.
+3.	Charan is assigned projects P5 and P6. He values Ankit's bundle at 18. Charan's own Bundle Value is the highest among all students.
+4.	Divya was assigned projects {P7, P8}. She values Bipul's bundle at 17. Divya experiences Regret for Bipul only.
+5.	Esha is assigned P9 and P10. She experiences no Regret for any other student. Her Bundle Value is 13.
+6.	Ankit values Bipul's bundle at 12. Bipul values Charan's bundle at 11. Esha values Charan's bundle at 12.",What is Charan's Bundle Value?,16,17,18,19,A,B,C,D,B,MCQ,Logical Reasoning,Reasoning based on Conditions,Moderate,"Logical deduction based on a set of conditional rules, inequalities, and ranking.","constraint satisfaction, value deduction, ranking",False,CATMOCK24S2LRDI01_Set3_ProjectValuations,Analysis,"Step 1: List known Bundle Values (BV).
+*   Ankit (BV_A) = 15
+*   Bipul (BV_B) = 14
+*   Esha (BV_E) = 13
+
+Step 2: Use Regret logic to constrain Charan's and Divya's BVs.
+*   Charan (BV_C) is the highest (Clue 3), so BV_C > 15. The maximum possible BV is 10+9=19.
+*   Charan values Ankit's bundle at 18. If he regrets Ankit, 18 > BV_C. This implies BV_C can be 16, 17.
+*   Divya (BV_D) values Bipul's bundle at 17. She regrets Bipul (Clue 4). This means 17 > BV_D.
+
+Step 3: Determine Charan's BV.
+*   The set of BVs is {13, 14, 15, BV_C, BV_D}. All must be distinct.
+*   Case 1: Assume BV_C = 16. Then BV_D must be < 17 and not equal to 13, 14, 15, or 16. The only possible value for BV_D is not available. Wait, 17 > BV_D means BV_D can be anything up to 16. But if BV_C is 16, then BV_D must be something else, and also less than 17. So BV_D cannot be 16. Then, from the available numbers, BV_D must be less than 13, which is unlikely in such problems and would contradict other constraints if explored.
+*   A better deduction for Divya: Divya regrets *only* Bipul. This means for Ankit, Charan, Esha, Divya's valuation of their bundle is <= her own BV_D. Bipul values Divya's bundle at 15. This implies Bipul regrets Divya, so 15 > Bipul's BV (14), which is true.
+*   Let's re-evaluate Charan's BV. We have BV_C > 15. Possible values are {16, 17, 18, 19}. And we have 17 > BV_D.
+    The known BVs are {13, 14, 15}. The remaining two are BV_C and BV_D.
+    If BV_C = 16, then BV_D must be < 17 and not in {13, 14, 15, 16}. This leaves no integer slot for BV_D.
+    If BV_C = 17, then BV_D must be < 17 and not in {13, 14, 15, 17}. The only integer slot left for BV_D is 16. This is a consistent solution.
+*   Check if BV_C=17 works. Charan values Ankit's bundle at 18. Since 18 > 17 (his own BV), he regrets Ankit. This is consistent.
+
+Therefore, Charan's Bundle Value is 17."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q12,12,CATMOCK24S2LRDI01_Set3_ProjectValuations,"Five students (Ankit, Bipul, Charan, Divya, Esha) were each assigned exactly two distinct projects from a list of ten projects (P1 to P10). All ten projects were assigned. Each student has their own personal integer valuation (from 1 to 10, where 10 is the highest) for each of the ten projects. A student's ""Bundle Value"" is the sum of their personal valuations for the two projects assigned to them. Student X experiences ""Regret"" for Student Y if Student X values Student Y's assigned bundle more than Student X values their own assigned bundle. No two students have the same Bundle Value. For any given student, their valuations for the 10 projects are distinct integers from 1 to 10.
+
+Additional Information:
+1.	Ankit is assigned projects P1 and P2. His Bundle Value is 15. He experiences Regret only for Charan.
+2.	Bipul’s Bundle Value is 14. He values Divya's bundle at 15. He does not experience Regret for Ankit or Charan.
+3.	Charan is assigned projects P5 and P6. He values Ankit's bundle at 18. Charan's own Bundle Value is the highest among all students.
+4.	Divya was assigned projects {P7, P8}. She values Bipul's bundle at 17. Divya experiences Regret for Bipul only.
+5.	Esha is assigned P9 and P10. She experiences no Regret for any other student. Her Bundle Value is 13.
+6.	Ankit values Bipul's bundle at 12. Bipul values Charan's bundle at 11. Esha values Charan's bundle at 12.",For which student does Bipul experience Regret?,Ankit,Charan,Divya,Esha,A,B,C,D,C,MCQ,Logical Reasoning,Reasoning based on Conditions,Moderate,"Logical deduction based on a set of conditional rules, inequalities, and ranking.","constraint satisfaction, definition application (regret)",False,CATMOCK24S2LRDI01_Set3_ProjectValuations,Application,"Bipul's Bundle Value (BV_B) is 14 (Clue 2).
+Regret for Bipul occurs if he values another student's bundle at a value greater than 14.
+*   For Ankit: Clue 2 says Bipul does not experience regret for Ankit. (Bipul's valuation of Ankit's bundle <= 14).
+*   For Charan: Clue 2 says Bipul does not experience regret for Charan. Clue 6 confirms Bipul values Charan's bundle at 11. Since 11 is not > 14, no regret.
+*   For Divya: Clue 2 explicitly states 'He values Divya's bundle at 15'. Since 15 (Bipul's valuation of Divya's bundle) > 14 (Bipul's own bundle value), Bipul experiences regret for Divya.
+*   For Esha: The problem doesn't state Bipul's valuation of Esha's bundle, but the solved BVs are {A=15, B=14, C=17, D=16, E=13}. Bipul does not experience regret for Ankit or Charan, so he can only regret Divya or Esha. The info about Divya is explicit. There is no information to suggest he regrets Esha.
+
+Based on the direct information in Clue 2, Bipul experiences Regret for Divya."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q13,13,CATMOCK24S2LRDI01_Set3_ProjectValuations,"Five students (Ankit, Bipul, Charan, Divya, Esha) were each assigned exactly two distinct projects from a list of ten projects (P1 to P10). All ten projects were assigned. Each student has their own personal integer valuation (from 1 to 10, where 10 is the highest) for each of the ten projects. A student's ""Bundle Value"" is the sum of their personal valuations for the two projects assigned to them. Student X experiences ""Regret"" for Student Y if Student X values Student Y's assigned bundle more than Student X values their own assigned bundle. No two students have the same Bundle Value. For any given student, their valuations for the 10 projects are distinct integers from 1 to 10.
+
+Additional Information:
+1.	Ankit is assigned projects P1 and P2. His Bundle Value is 15. He experiences Regret only for Charan.
+2.	Bipul’s Bundle Value is 14. He values Divya's bundle at 15. He does not experience Regret for Ankit or Charan.
+3.	Charan is assigned projects P5 and P6. He values Ankit's bundle at 18. Charan's own Bundle Value is the highest among all students.
+4.	Divya was assigned projects {P7, P8}. She values Bipul's bundle at 17. Divya experiences Regret for Bipul only.
+5.	Esha is assigned P9 and P10. She experiences no Regret for any other student. Her Bundle Value is 13.
+6.	Ankit values Bipul's bundle at 12. Bipul values Charan's bundle at 11. Esha values Charan's bundle at 12.",Which of the following statements is DEFINITELY true?,Ankit values Bipul's bundle at 11.,Divya's Bundle Value is 15.,Esha values Charan's bundle at 14.,Charan experiences Regret for Ankit.,A,B,C,D,D,MCQ,Logical Reasoning,Reasoning based on Conditions,Difficult,"Logical deduction based on a set of conditional rules, inequalities, and ranking.","constraint satisfaction, definite truth, multiple condition integration",False,CATMOCK24S2LRDI01_Set3_ProjectValuations,Analysis,"Based on the derived Bundle Values: Ankit=15, Bipul=14, Charan=17, Divya=16, Esha=13.
+Let's check each statement:
+A) Ankit values Bipul's bundle at 11. False. Clue 6 explicitly states this value is 12.
+B) Divya's Bundle Value is 15. False. We derived Divya's Bundle Value to be 16.
+C) Esha values Charan's bundle at 14. False. Clue 6 explicitly states this value is 12. (Also, since Esha's BV is 13 and she experiences no regret, her valuation of any other bundle must be <= 13).
+D) Charan experiences Regret for Ankit. True. Charan's Bundle Value is 17. Clue 3 states he values Ankit's bundle at 18. Since 18 (his valuation of Ankit's bundle) > 17 (his own Bundle Value), Charan experiences Regret for Ankit. This is definitely true."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q14,14,CATMOCK24S2LRDI01_Set3_ProjectValuations,"Five students (Ankit, Bipul, Charan, Divya, Esha) were each assigned exactly two distinct projects from a list of ten projects (P1 to P10). All ten projects were assigned. Each student has their own personal integer valuation (from 1 to 10, where 10 is the highest) for each of the ten projects. A student's ""Bundle Value"" is the sum of their personal valuations for the two projects assigned to them. Student X experiences ""Regret"" for Student Y if Student X values Student Y's assigned bundle more than Student X values their own assigned bundle. No two students have the same Bundle Value. For any given student, their valuations for the 10 projects are distinct integers from 1 to 10.
+
+Additional Information:
+1.	Ankit is assigned projects P1 and P2. His Bundle Value is 15. He experiences Regret only for Charan.
+2.	Bipul’s Bundle Value is 14. He values Divya's bundle at 15. He does not experience Regret for Ankit or Charan.
+3.	Charan is assigned projects P5 and P6. He values Ankit's bundle at 18. Charan's own Bundle Value is the highest among all students.
+4.	Divya was assigned projects {P7, P8}. She values Bipul's bundle at 17. Divya experiences Regret for Bipul only.
+5.	Esha is assigned P9 and P10. She experiences no Regret for any other student. Her Bundle Value is 13.
+6.	Ankit values Bipul's bundle at 12. Bipul values Charan's bundle at 11. Esha values Charan's bundle at 12.","If Divya's Bundle Value was 16, and Ankit valued Divya's bundle at 14 (all other original conditions and valuations as per Clue 6 remaining the same), how many students would Ankit experience Regret for?",0,1,2,Cannot be determined,A,B,C,D,B,MCQ,Logical Reasoning,Reasoning based on Conditions,Moderate,Applying conditional changes to a solved data set and re-evaluating outcomes.,"conditional reasoning, definition application (regret), counting",False,CATMOCK24S2LRDI01_Set3_ProjectValuations,Evaluation,"Ankit's Bundle Value (BV_A) is 15. We need to check for how many students (Y) does Ankit's valuation of Y's bundle exceed 15.
+*   For Charan: From original Clue 1, Ankit experiences Regret for Charan. This means Ankit's valuation of Charan's bundle > 15. This condition remains. So, Ankit regrets Charan. (1 student)
+*   For Divya: The hypothetical states Ankit valued Divya's bundle at 14. Since 14 is not > 15, Ankit does not regret Divya.
+*   For Bipul: From Clue 6, Ankit values Bipul's bundle at 12. Since 12 is not > 15, Ankit does not regret Bipul.
+*   For Esha: From original Clue 1, Ankit regrets *only* Charan. This implies that in the original scenario, Ankit's valuation of Esha's bundle was <= 15. There is no information to change this. So, Ankit does not regret Esha.
+
+Under the new condition, Ankit still experiences Regret only for Charan. The number of students Ankit regrets is 1."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q15,15,CATMOCK24S2LRDI01_Set4_ConferenceAttendance,"The table below provides partial data on the Number of Conferences Hosted (CH) and the Number of Unique International Delegates (UID) for four Indian cities – Ahmedabad, Bengaluru, Chennai, and Delhi – for the years 2021, 2022, and 2023. The Delegate Ratio (DR) for a city in a year is defined as UID/CH. The Overall Improvement Index (OII) for a city from Year1 to Year2 is defined as the sum of the percentage increase in CH and the percentage increase in UID from Year1 to Year2.
+
+Additional Information:
+1.	The total number of Unique International Delegates (UID) across all four cities was 25200 in 2021 and 30600 in 2022. All CH and UID values are positive integers.
+2.	In 2022, Ahmedabad hosted 10 more conferences than in 2021, and its Delegate Ratio (DR) increased by 10 from its 2021 DR of 100. Ahmedabad hosted 50 conferences in 2021.
+3.	Bengaluru hosted the same number of conferences in 2021 and 2022, but its UID increased by 800 in 2022, leading to a DR of 100 in 2022.
+4.	Chennai’s UID in 2022 was 12.5% higher than its UID in 2021. Chennai hosted 100 conferences in 2021. In 2023, Chennai hosted 10 fewer conferences than in 2022, and its DR remained the same as in 2022. Chennai's DR in 2022 was 75.
+5.	Delhi’s CH count decreased by 20% from 2022 to 2023, ending up the same as its 2021 CH count of 40. Delhi's DR in 2023 was 150. The UID for Delhi in 2022 was 7000.
+6.	For Ahmedabad in 2023, CH increased by 25% over 2022, and its UID increased by 2400 from 2022.
+7.	For Bengaluru in 2023, CH increased by 10 over 2022, and its DR increased by 10 from 2022.",What was the total number of Conferences Hosted (CH) by Chennai in 2022?,110,115,120,125,A,B,C,D,C,MCQ,Data Interpretation,Table Analysis,Moderate,"Solving a data-based caselet by filling a table using percentages, ratios, and absolute values from given clues.","data extraction, percentage calculation, multi-step calculation",False,CATMOCK24S2LRDI01_Set4_ConferenceAttendance,Analysis,"Step 1: Calculate Ahmedabad's 2021/2022 data. CHA21=50, DRA21=100 -> UIDA21=5000. CHA22=60, DRA22=110 -> UIDA22=6600.
+Step 2: Calculate Delhi's 2022 data. CHD22 * 0.8 = 40 -> CHD22=50. UIDD22=7000. DRD22=7000/50=140.
+Step 3: Set up equations for Bengaluru and Chennai for 2022.
+* Bengaluru: UIDB22 = DRB22 * CHB22 = 100 * CHB22.
+* Chennai: UIDC22 = DRC22 * CHC22 = 75 * CHC22. From another clue, UIDC21 = (200/3) * CHC22, which implies CHC22 must be a multiple of 3.
+Step 4: Use Total UID in 2022 to solve for unknowns.
+* Total UID 2022 = 30600.
+* UIDA22 + UIDB22 + UIDC22 + UIDD22 = 30600
+* 6600 + (100 * CHB22) + (75 * CHC22) + 7000 = 30600
+* 100 * CHB22 + 75 * CHC22 = 17000
+* Dividing by 25: 4 * CHB22 + 3 * CHC22 = 680.
+Step 5: Find the unique integer solution.
+* We know CHC22 must be a multiple of 3. We also need (680 - 3*CHC22) to be divisible by 4. Since 680 is divisible by 4, 3*CHC22 must be divisible by 4. This means CHC22 must be a multiple of 4. Therefore, CHC22 must be a multiple of 12.
+* Testing multiples of 12 for CHC22: If CHC22 = 120, then 4*CHB22 + 3*120 = 680 -> 4*CHB22 = 320 -> CHB22 = 80. This gives a clean integer solution that is consistent with all clues.
+
+Answer: The total number of Conferences Hosted (CH) by Chennai in 2022 (CHC22) is 120."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q16,16,CATMOCK24S2LRDI01_Set4_ConferenceAttendance,"The table below provides partial data on the Number of Conferences Hosted (CH) and the Number of Unique International Delegates (UID) for four Indian cities – Ahmedabad, Bengaluru, Chennai, and Delhi – for the years 2021, 2022, and 2023. The Delegate Ratio (DR) for a city in a year is defined as UID/CH. The Overall Improvement Index (OII) for a city from Year1 to Year2 is defined as the sum of the percentage increase in CH and the percentage increase in UID from Year1 to Year2.
+
+Additional Information:
+1.	The total number of Unique International Delegates (UID) across all four cities was 25200 in 2021 and 30600 in 2022. All CH and UID values are positive integers.
+2.	In 2022, Ahmedabad hosted 10 more conferences than in 2021, and its Delegate Ratio (DR) increased by 10 from its 2021 DR of 100. Ahmedabad hosted 50 conferences in 2021.
+3.	Bengaluru hosted the same number of conferences in 2021 and 2022, but its UID increased by 800 in 2022, leading to a DR of 100 in 2022.
+4.	Chennai’s UID in 2022 was 12.5% higher than its UID in 2021. Chennai hosted 100 conferences in 2021. In 2023, Chennai hosted 10 fewer conferences than in 2022, and its DR remained the same as in 2022. Chennai's DR in 2022 was 75.
+5.	Delhi’s CH count decreased by 20% from 2022 to 2023, ending up the same as its 2021 CH count of 40. Delhi's DR in 2023 was 150. The UID for Delhi in 2022 was 7000.
+6.	For Ahmedabad in 2023, CH increased by 25% over 2022, and its UID increased by 2400 from 2022.
+7.	For Bengaluru in 2023, CH increased by 10 over 2022, and its DR increased by 10 from 2022.",Which city had the highest Delegate Ratio (DR) in 2021?,Ahmedabad,Bengaluru,Chennai,Delhi,A,B,C,D,D,MCQ,Data Interpretation,Table Analysis,Moderate,"Solving a data-based caselet by filling a table using percentages, ratios, and absolute values from given clues.","ratio calculation, comparison, data extraction",False,CATMOCK24S2LRDI01_Set4_ConferenceAttendance,Analysis,"After solving for all values, the 2021 data is:
+*   Ahmedabad: CHA21=50, DRA21=100.
+*   Bengaluru: CHB21=80. UIDB22=100*80=8000. UIDB21=8000-800=7200. DRB21=7200/80=90.
+*   Chennai: CHC21=100. CHC22=120. UIDC21=(200/3)*120=8000. DRC21=8000/100=80.
+*   Delhi: CHD21=40. Total UID 2021 = 25200. UIDD21 = 25200 - UIDA21 - UIDB21 - UIDC21 = 25200 - 5000 - 7200 - 8000 = 5000. DRD21=5000/40=125.
+
+Comparing the DR values for 2021:
+*   Ahmedabad: 100
+*   Bengaluru: 90
+*   Chennai: 80
+*   Delhi: 125
+
+Answer: Delhi had the highest Delegate Ratio (125) in 2021."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q17,17,CATMOCK24S2LRDI01_Set4_ConferenceAttendance,"The table below provides partial data on the Number of Conferences Hosted (CH) and the Number of Unique International Delegates (UID) for four Indian cities – Ahmedabad, Bengaluru, Chennai, and Delhi – for the years 2021, 2022, and 2023. The Delegate Ratio (DR) for a city in a year is defined as UID/CH. The Overall Improvement Index (OII) for a city from Year1 to Year2 is defined as the sum of the percentage increase in CH and the percentage increase in UID from Year1 to Year2.
+
+Additional Information:
+1.	The total number of Unique International Delegates (UID) across all four cities was 25200 in 2021 and 30600 in 2022. All CH and UID values are positive integers.
+2.	In 2022, Ahmedabad hosted 10 more conferences than in 2021, and its Delegate Ratio (DR) increased by 10 from its 2021 DR of 100. Ahmedabad hosted 50 conferences in 2021.
+3.	Bengaluru hosted the same number of conferences in 2021 and 2022, but its UID increased by 800 in 2022, leading to a DR of 100 in 2022.
+4.	Chennai’s UID in 2022 was 12.5% higher than its UID in 2021. Chennai hosted 100 conferences in 2021. In 2023, Chennai hosted 10 fewer conferences than in 2022, and its DR remained the same as in 2022. Chennai's DR in 2022 was 75.
+5.	Delhi’s CH count decreased by 20% from 2022 to 2023, ending up the same as its 2021 CH count of 40. Delhi's DR in 2023 was 150. The UID for Delhi in 2022 was 7000.
+6.	For Ahmedabad in 2023, CH increased by 25% over 2022, and its UID increased by 2400 from 2022.
+7.	For Bengaluru in 2023, CH increased by 10 over 2022, and its DR increased by 10 from 2022.",What was the Overall Improvement Index (OII) for Bengaluru from 2021 to 2022?,11.11,20.00,21.11,23.75,A,B,C,D,A,MCQ,Data Interpretation,Table Analysis,Moderate,"Solving a data-based caselet by filling a table using percentages, ratios, and absolute values from given clues.","percentage increase, index calculation, formula application",False,CATMOCK24S2LRDI01_Set4_ConferenceAttendance,Application,"The Overall Improvement Index (OII) = (% increase in CH) + (% increase in UID).
+For Bengaluru from 2021 to 2022:
+*   From Clue 3, Bengaluru hosted the same number of conferences in 2021 and 2022. From the derived table, CHB21 = 80 and CHB22 = 80.
+    Percentage increase in CH = ((80 - 80) / 80) * 100% = 0%.
+*   From the derived table, UIDB21 = 7200 and UIDB22 = 8000.
+    Percentage increase in UID = ((8000 - 7200) / 7200) * 100% = (800 / 7200) * 100% = (1/9) * 100% ≈ 11.11%.
+*   OII = 0% + 11.11% = 11.11.
+
+Answer: The OII for Bengaluru from 2021 to 2022 was 11.11."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q18,18,CATMOCK24S2LRDI01_Set4_ConferenceAttendance,"The table below provides partial data on the Number of Conferences Hosted (CH) and the Number of Unique International Delegates (UID) for four Indian cities – Ahmedabad, Bengaluru, Chennai, and Delhi – for the years 2021, 2022, and 2023. The Delegate Ratio (DR) for a city in a year is defined as UID/CH. The Overall Improvement Index (OII) for a city from Year1 to Year2 is defined as the sum of the percentage increase in CH and the percentage increase in UID from Year1 to Year2.
+
+Additional Information:
+1.	The total number of Unique International Delegates (UID) across all four cities was 25200 in 2021 and 30600 in 2022. All CH and UID values are positive integers.
+2.	In 2022, Ahmedabad hosted 10 more conferences than in 2021, and its Delegate Ratio (DR) increased by 10 from its 2021 DR of 100. Ahmedabad hosted 50 conferences in 2021.
+3.	Bengaluru hosted the same number of conferences in 2021 and 2022, but its UID increased by 800 in 2022, leading to a DR of 100 in 2022.
+4.	Chennai’s UID in 2022 was 12.5% higher than its UID in 2021. Chennai hosted 100 conferences in 2021. In 2023, Chennai hosted 10 fewer conferences than in 2022, and its DR remained the same as in 2022. Chennai's DR in 2022 was 75.
+5.	Delhi’s CH count decreased by 20% from 2022 to 2023, ending up the same as its 2021 CH count of 40. Delhi's DR in 2023 was 150. The UID for Delhi in 2022 was 7000.
+6.	For Ahmedabad in 2023, CH increased by 25% over 2022, and its UID increased by 2400 from 2022.
+7.	For Bengaluru in 2023, CH increased by 10 over 2022, and its DR increased by 10 from 2022.","In 2023, how many cities had a Delegate Ratio (DR) greater than or equal to 120?",0,1,2,3,A,B,C,D,C,MCQ,Data Interpretation,Table Analysis,Moderate,"Solving a data-based caselet by filling a table using percentages, ratios, and absolute values from given clues.","data extraction, comparison, counting based on threshold",False,CATMOCK24S2LRDI01_Set4_ConferenceAttendance,Analysis,"First, calculate all the 2023 DR values from the derived 2022 data:
+*   Ahmedabad: CHA22=60, UIDA22=6600. For 2023, CHA23=60*1.25=75. UIDA23=6600+2400=9000. DRA23=9000/75=120.
+*   Bengaluru: CHB22=80, DRB22=100. For 2023, CHB23=80+10=90. DRB23=100+10=110.
+*   Chennai: CHC22=120, DRC22=75. For 2023, CHC23=120-10=110. DRC23=DRC22=75.
+*   Delhi: CHD22=50. For 2023, CHD23=40. DRD23=150 (given).
+
+Now, check which cities have DR ≥ 120 in 2023:
+*   Ahmedabad: DR = 120 (≥ 120)
+*   Bengaluru: DR = 110 (< 120)
+*   Chennai: DR = 75 (< 120)
+*   Delhi: DR = 150 (≥ 120)
+
+Answer: Two cities, Ahmedabad and Delhi, had a Delegate Ratio greater than or equal to 120. "
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q19,19,CATMOCK24S2LRDI01_Set5_ProjectTeams,"Eight employees (E1 to E8) are to be assigned to three projects: Alpha, Beta, and Gamma. Each employee has proficiency in three skills: Analytics (A), Coding (C), and Design (D), rated as Basic (B), Proficient (P), or Expert (E).
+The skill levels for all employees are:
+E1: A(E), C(P), D(B); E2: A(P), C(E), D(B); E3: A(B), C(P), D(E); E4: A(P), C(P), D(B);
+E5: A(P), C(P), D(B); E6: A(P), C(B), D(E); E7: A(E), C(B), D(P); E8: A(P), C(E), D(B).
+Team & Skill Requirements:
+•	Project Alpha: 3 members; requires at least 1 member Expert in Analytics.
+•	Project Beta: 3 members; requires at least 1 member Expert in Coding.
+•	Project Gamma: 2 members; requires at least 1 member Expert in Design.
+•	No employee can be on more than one project. All employees are assigned to a project.
+•	Each employee has a ""Dominant Skill"" - the skill in which they have their highest proficiency. If proficiency is the same at the highest level across multiple skills for an employee, their dominant skill is specifically defined below.
+
+Additional Information:
+1.	E1 (Dominant Skill: Analytics) is assigned to Project Alpha. E2 (Dominant Skill: Coding) is assigned to Project Beta. E3 (Dominant Skill: Design) is assigned to Project Gamma.
+2.	E4’s dominant skill is Analytics. E5’s dominant skill is Coding. E6’s dominant skill is Design, and E6 is assigned to the same project as E3.
+3.  E7’s dominant skill is Analytics. E8’s dominant skill is Coding. Neither E7 nor E8 has Design as their dominant skill.
+4.	Project Alpha has exactly two members who are Expert in Analytics. Project Beta has exactly two members who are Expert in Coding.
+5.	E4 is not on Project Beta. E5 is not on Project Alpha.","Who is the third member of Project Alpha, apart from E1 and E7?",E4,E5,E6,E8,A,B,C,D,A,MCQ,Logical Reasoning,Assignment Problem,Moderate,"Team formation and assignment based on multiple constraints including skills, team size, and specific placement rules.","constraint satisfaction, team formation, deduction",False,CATMOCK24S2LRDI01_Set5_ProjectTeams,Analysis,"Step 1: Initial Assignments and Gamma Team.
+* Clue 1: E1 -> Alpha, E2 -> Beta, E3 -> Gamma.
+* Clue 2: E6 is on the same project as E3 (Gamma). Gamma requires 2 members. So, Team Gamma = {E3, E6}. Gamma is full.
+
+Step 2: Fulfill Expert Requirements for Alpha and Beta.
+* Clue 4: Alpha needs exactly two A(E) members. E1 is A(E). Checking the list, only E7 is also A(E). Therefore, E7 must be in Alpha. Current Alpha = {E1, E7, ?}.
+* Clue 4: Beta needs exactly two C(E) members. E2 is C(E). Checking the list, only E8 is also C(E). Therefore, E8 must be in Beta. Current Beta = {E2, E8, ?}.
+
+Step 3: Assign Remaining Employees (E4, E5).
+* Unassigned employees are E4 and E5. The remaining slots are one in Alpha and one in Beta.
+* Clue 5: E4 is not on Project Beta. Since Gamma is full, E4 must be on Project Alpha.
+* The third member of Alpha is therefore E4.
+
+Step 4: Final Teams.
+* Alpha = {E1, E4, E7}.
+* With E4 assigned, the last remaining employee E5 must fill the last slot in Beta. Beta = {E2, E5, E8}.
+
+Answer: The members of Project Alpha are E1, E4, and E7. The third member, apart from E1 and E7, is E4."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q20,20,CATMOCK24S2LRDI01_Set5_ProjectTeams,"Eight employees (E1 to E8) are to be assigned to three projects: Alpha, Beta, and Gamma. Each employee has proficiency in three skills: Analytics (A), Coding (C), and Design (D), rated as Basic (B), Proficient (P), or Expert (E).
+The skill levels for all employees are:
+E1: A(E), C(P), D(B); E2: A(P), C(E), D(B); E3: A(B), C(P), D(E); E4: A(P), C(P), D(B);
+E5: A(P), C(P), D(B); E6: A(P), C(B), D(E); E7: A(E), C(B), D(P); E8: A(P), C(E), D(B).
+Team & Skill Requirements:
+•	Project Alpha: 3 members; requires at least 1 member Expert in Analytics.
+•	Project Beta: 3 members; requires at least 1 member Expert in Coding.
+•	Project Gamma: 2 members; requires at least 1 member Expert in Design.
+•	No employee can be on more than one project. All employees are assigned to a project.
+•	Each employee has a ""Dominant Skill"" - the skill in which they have their highest proficiency. If proficiency is the same at the highest level across multiple skills for an employee, their dominant skill is specifically defined below.
+
+Additional Information:
+1.	E1 (Dominant Skill: Analytics) is assigned to Project Alpha. E2 (Dominant Skill: Coding) is assigned to Project Beta. E3 (Dominant Skill: Design) is assigned to Project Gamma.
+2.	E4’s dominant skill is Analytics. E5’s dominant skill is Coding. E6’s dominant skill is Design, and E6 is assigned to the same project as E3.
+3.  E7’s dominant skill is Analytics. E8’s dominant skill is Coding. Neither E7 nor E8 has Design as their dominant skill.
+4.	Project Alpha has exactly two members who are Expert in Analytics. Project Beta has exactly two members who are Expert in Coding.
+5.	E4 is not on Project Beta. E5 is not on Project Alpha.",Which project is E5 assigned to?,Alpha,Beta,Gamma,Cannot be determined,A,B,C,D,B,MCQ,Logical Reasoning,Assignment Problem,Moderate,"Team formation and assignment based on multiple constraints including skills, team size, and specific placement rules.","constraint satisfaction, team formation, deduction",False,CATMOCK24S2LRDI01_Set5_ProjectTeams,Analysis,"Following the common data derivation:
+Step 1: Team Gamma is {E3, E6}.
+Step 2: Team Alpha has {E1, E7, ?}. Team Beta has {E2, E8, ?}.
+Step 3: Unassigned employees are E4 and E5. The remaining slots are one in Alpha and one in Beta.
+*   Clue 5 states 'E5 is not on Project Alpha'.
+*   Project Gamma is already full.
+*   Therefore, E5 must be assigned to the only remaining project with a vacancy, which is Project Beta.
+
+Answer: E5 is assigned to Project Beta."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q21,21,CATMOCK24S2LRDI01_Set5_ProjectTeams,"Eight employees (E1 to E8) are to be assigned to three projects: Alpha, Beta, and Gamma. Each employee has proficiency in three skills: Analytics (A), Coding (C), and Design (D), rated as Basic (B), Proficient (P), or Expert (E).
+The skill levels for all employees are:
+E1: A(E), C(P), D(B); E2: A(P), C(E), D(B); E3: A(B), C(P), D(E); E4: A(P), C(P), D(B);
+E5: A(P), C(P), D(B); E6: A(P), C(B), D(E); E7: A(E), C(B), D(P); E8: A(P), C(E), D(B).
+Team & Skill Requirements:
+•	Project Alpha: 3 members; requires at least 1 member Expert in Analytics.
+•	Project Beta: 3 members; requires at least 1 member Expert in Coding.
+•	Project Gamma: 2 members; requires at least 1 member Expert in Design.
+•	No employee can be on more than one project. All employees are assigned to a project.
+•	Each employee has a ""Dominant Skill"" - the skill in which they have their highest proficiency. If proficiency is the same at the highest level across multiple skills for an employee, their dominant skill is specifically defined below.
+
+Additional Information:
+1.	E1 (Dominant Skill: Analytics) is assigned to Project Alpha. E2 (Dominant Skill: Coding) is assigned to Project Beta. E3 (Dominant Skill: Design) is assigned to Project Gamma.
+2.	E4’s dominant skill is Analytics. E5’s dominant skill is Coding. E6’s dominant skill is Design, and E6 is assigned to the same project as E3.
+3.  E7’s dominant skill is Analytics. E8’s dominant skill is Coding. Neither E7 nor E8 has Design as their dominant skill.
+4.	Project Alpha has exactly two members who are Expert in Analytics. Project Beta has exactly two members who are Expert in Coding.
+5.	E4 is not on Project Beta. E5 is not on Project Alpha.",Which of the following statements is necessarily true?,E4 is Proficient in Design.,E8 is Expert in Analytics.,E7 is assigned to Project Alpha.,Project Gamma has one member Expert in Analytics.,A,B,C,D,C,MCQ,Logical Reasoning,Assignment Problem,Difficult,"Team formation and assignment based on multiple constraints including skills, team size, and specific placement rules.","constraint satisfaction, definite truth, multi-condition verification, data lookup",False,CATMOCK24S2LRDI01_Set5_ProjectTeams,Analysis,"Let's check each statement based on the solved team compositions (Alpha={E1,E4,E7}, Beta={E2,E5,E8}, Gamma={E3,E6}) and the initial skill data.
+A) E4 is Proficient in Design. False. The skill list shows E4: A(P), C(P), D(B). E4 is Basic in Design.
+B) E8 is Expert in Analytics. False. The skill list shows E8: A(P), C(E), D(B). E8 is Proficient in Analytics.
+C) E7 is assigned to Project Alpha. True. This was a necessary deduction. Project Alpha needed exactly two members who are Expert in Analytics (A(E)). E1 was one. The only other employee with A(E) is E7. Thus, E7 had to be assigned to Alpha.
+D) Project Gamma has one member Expert in Analytics. False. Project Gamma's members are E3 and E6. Their Analytics skills are E3: A(B) and E6: A(P). Neither is Expert in Analytics.
+
+Answer: The statement that is necessarily true is that E7 is assigned to Project Alpha."
+Logical Reasoning & Data Interpretation,40,CATMOCK24S2LRDI01_Q22,22,CATMOCK24S2LRDI01_Set5_ProjectTeams,"Eight employees (E1 to E8) are to be assigned to three projects: Alpha, Beta, and Gamma. Each employee has proficiency in three skills: Analytics (A), Coding (C), and Design (D), rated as Basic (B), Proficient (P), or Expert (E).
+The skill levels for all employees are:
+E1: A(E), C(P), D(B); E2: A(P), C(E), D(B); E3: A(B), C(P), D(E); E4: A(P), C(P), D(B);
+E5: A(P), C(P), D(B); E6: A(P), C(B), D(E); E7: A(E), C(B), D(P); E8: A(P), C(E), D(B).
+Team & Skill Requirements:
+•	Project Alpha: 3 members; requires at least 1 member Expert in Analytics.
+•	Project Beta: 3 members; requires at least 1 member Expert in Coding.
+•	Project Gamma: 2 members; requires at least 1 member Expert in Design.
+•	No employee can be on more than one project. All employees are assigned to a project.
+•	Each employee has a ""Dominant Skill"" - the skill in which they have their highest proficiency. If proficiency is the same at the highest level across multiple skills for an employee, their dominant skill is specifically defined below.
+
+Additional Information:
+1.	E1 (Dominant Skill: Analytics) is assigned to Project Alpha. E2 (Dominant Skill: Coding) is assigned to Project Beta. E3 (Dominant Skill: Design) is assigned to Project Gamma.
+2.	E4’s dominant skill is Analytics. E5’s dominant skill is Coding. E6’s dominant skill is Design, and E6 is assigned to the same project as E3.
+3.  E7’s dominant skill is Analytics. E8’s dominant skill is Coding. Neither E7 nor E8 has Design as their dominant skill.
+4.	Project Alpha has exactly two members who are Expert in Analytics. Project Beta has exactly two members who are Expert in Coding.
+5.	E4 is not on Project Beta. E5 is not on Project Alpha.",How many employees assigned to Project Beta are Proficient in Analytics?,0,1,2,3,A,B,C,D,D,MCQ,Logical Reasoning,Assignment Problem,Moderate,"Team formation and assignment based on multiple constraints including skills, team size, and specific placement rules.","constraint satisfaction, data lookup from solution, counting",False,CATMOCK24S2LRDI01_Set5_ProjectTeams,Analysis,"From the solved team compositions, Project Beta = {E2, E5, E8}.
+We need to check the Analytics skill level for each of these employees from the given data:
+*   E2: A(P) -> Proficient
+*   E5: A(P) -> Proficient
+*   E8: A(P) -> Proficient
+
+All three members of Project Beta are Proficient in Analytics.
+
+Answer: The number of employees assigned to Project Beta who are Proficient in Analytics is 3."

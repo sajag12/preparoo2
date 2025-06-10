@@ -1,0 +1,417 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+LRDI,40,MOCKCATPREP01_Q1,1,MOCKCATPREP01_Set1_FestivalLogistics,"The upcoming Grand City Festival requires meticulous logistics planning across four key resource categories: Transportation (T), Security (S), Medical (M), and Waste Management (W). A total of 2000 logistics units are deployed. Some units are dedicated to a special ""Contingency Only"" (CO) task; these CO units are not involved in T, S, or M. Any unit involved in T, S, or M is not a CO unit. Units can be involved in one, two, or all three of T, S, and M. All counts of units are non-negative integers.
+The following information is known about the deployment:
+1.  The number of units dedicated solely to Transportation is 150.
+2.  The number of units dedicated solely to Security is 200.
+3.  The number of units dedicated solely to Medical services is 100.
+4.  Exactly 400 units are involved in all three services: Transportation, Security, and Medical.
+5.  The total number of units involved in at least Transportation is 1100.
+6.  The total number of units involved in at least Security is 1250.
+7.  The number of units involved in Transportation and Security but not Medical is 300.
+8.  The number of units involved in Security and Medical but not Transportation is 350.
+9.  The number of units dedicated to ""Contingency Only"" (CO) tasks is 250.",How many logistics units are involved in Transportation and Medical services but not Security?,150,200,250,300,A,B,C,D,C,MCQ,Data Interpretation,"Venn Diagrams, Set Theory",Moderate,"Venn Diagrams, Set Theory","set theory, venn diagram interpretation, logical deduction",False,MOCKCATPREP01_Set1_FestivalLogistics,Applying,"We need to find the number of units involved in Transportation and Medical services but not Security. This is represented by the region |(T ∩ M) \ S|. Let this value be 'x'.
+From Clue 5, the total number of units involved in at least Transportation (|T|) is 1100.
+The total number of units in Transportation can be broken down as:
+|T| = |T only| + |(T ∩ S) \ M| + |(T ∩ M) \ S| + |T ∩ S ∩ M|.
+Substituting the known values:
+1100 = 150 (Clue 1) + 300 (Clue 7) + x + 400 (Clue 4).
+1100 = 850 + x.
+x = 1100 - 850 = 250.
+Thus, the number of units involved in Transportation and Medical services but not Security is 250."
+LRDI,40,MOCKCATPREP01_Q2,2,MOCKCATPREP01_Set1_FestivalLogistics,"The upcoming Grand City Festival requires meticulous logistics planning across four key resource categories: Transportation (T), Security (S), Medical (M), and Waste Management (W). A total of 2000 logistics units are deployed. Some units are dedicated to a special ""Contingency Only"" (CO) task; these CO units are not involved in T, S, or M. Any unit involved in T, S, or M is not a CO unit. Units can be involved in one, two, or all three of T, S, and M. All counts of units are non-negative integers.
+The following information is known about the deployment:
+1.  The number of units dedicated solely to Transportation is 150.
+2.  The number of units dedicated solely to Security is 200.
+3.  The number of units dedicated solely to Medical services is 100.
+4.  Exactly 400 units are involved in all three services: Transportation, Security, and Medical.
+5.  The total number of units involved in at least Transportation is 1100.
+6.  The total number of units involved in at least Security is 1250.
+7.  The number of units involved in Transportation and Security but not Medical is 300.
+8.  The number of units involved in Security and Medical but not Transportation is 350.
+9.  The number of units dedicated to ""Contingency Only"" (CO) tasks is 250.",What is the total number of logistics units involved in Medical services?,1000,1100,1150,1250,A,B,C,D,B,MCQ,Data Interpretation,"Venn Diagrams, Set Theory",Moderate,"Venn Diagrams, Set Theory","set theory, sum of sets, logical deduction",False,MOCKCATPREP01_Set1_FestivalLogistics,Applying,"The total number of logistics units involved in Medical services (|M|) is the sum of units in M only, T and M only, S and M only, and T and S and M.
+|(T ∩ M) \ S| was found to be 250 in the solution for Q1.
+|M| = |M only| + |(T ∩ M) \ S| + |(S ∩ M) \ T| + |T ∩ S ∩ M|.
+|M| = 100 (Clue 3) + 250 (from Q1 solution) + 350 (Clue 8) + 400 (Clue 4).
+|M| = 1100."
+LRDI,40,MOCKCATPREP01_Q3,3,MOCKCATPREP01_Set1_FestivalLogistics,"The upcoming Grand City Festival requires meticulous logistics planning across four key resource categories: Transportation (T), Security (S), Medical (M), and Waste Management (W). A total of 2000 logistics units are deployed. Some units are dedicated to a special ""Contingency Only"" (CO) task; these CO units are not involved in T, S, or M. Any unit involved in T, S, or M is not a CO unit. Units can be involved in one, two, or all three of T, S, and M. All counts of units are non-negative integers.
+The following information is known about the deployment:
+1.  The number of units dedicated solely to Transportation is 150.
+2.  The number of units dedicated solely to Security is 200.
+3.  The number of units dedicated solely to Medical services is 100.
+4.  Exactly 400 units are involved in all three services: Transportation, Security, and Medical.
+5.  The total number of units involved in at least Transportation is 1100.
+6.  The total number of units involved in at least Security is 1250.
+7.  The number of units involved in Transportation and Security but not Medical is 300.
+8.  The number of units involved in Security and Medical but not Transportation is 350.
+9.  The number of units dedicated to ""Contingency Only"" (CO) tasks is 250.","How many logistics units are involved in exactly two of the three services (Transportation, Security, Medical)?",800,850,900,950,A,B,C,D,C,MCQ,Data Interpretation,"Venn Diagrams, Set Theory",Moderate,"Venn Diagrams, Set Theory","set theory, exactly two sets, logical deduction",False,MOCKCATPREP01_Set1_FestivalLogistics,Applying,"Units involved in exactly two of the three services are the sum of units in T and S only, T and M only, and S and M only.
+Number = |(T ∩ S) \ M| + |(T ∩ M) \ S| + |(S ∩ M) \ T|.
+|(T ∩ M) \ S| was found to be 250 in the solution for Q1.
+Number = 300 (Clue 7) + 250 (from Q1 solution) + 350 (Clue 8).
+Number = 900."
+LRDI,40,MOCKCATPREP01_Q4,4,MOCKCATPREP01_Set1_FestivalLogistics,"The upcoming Grand City Festival requires meticulous logistics planning across four key resource categories: Transportation (T), Security (S), Medical (M), and Waste Management (W). A total of 2000 logistics units are deployed. Some units are dedicated to a special ""Contingency Only"" (CO) task; these CO units are not involved in T, S, or M. Any unit involved in T, S, or M is not a CO unit. Units can be involved in one, two, or all three of T, S, and M. All counts of units are non-negative integers.
+The following information is known about the deployment:
+1.  The number of units dedicated solely to Transportation is 150.
+2.  The number of units dedicated solely to Security is 200.
+3.  The number of units dedicated solely to Medical services is 100.
+4.  Exactly 400 units are involved in all three services: Transportation, Security, and Medical.
+5.  The total number of units involved in at least Transportation is 1100.
+6.  The total number of units involved in at least Security is 1250.
+7.  The number of units involved in Transportation and Security but not Medical is 300.
+8.  The number of units involved in Security and Medical but not Transportation is 350.
+9.  The number of units dedicated to ""Contingency Only"" (CO) tasks is 250.",How many logistics units involved in Security are NOT involved in Transportation?,550,650,700,750,A,B,C,D,A,MCQ,Data Interpretation,"Venn Diagrams, Set Theory",Moderate,"Venn Diagrams, Set Theory","set theory, set difference, logical deduction",False,MOCKCATPREP01_Set1_FestivalLogistics,Applying,"Logistics units involved in Security but NOT involved in Transportation (|S \ T|) are the sum of units in S only and units in S and M only.
+|S \ T| = |S only| + |(S ∩ M) \ T|.
+|S \ T| = 200 (Clue 2) + 350 (Clue 8).
+|S \ T| = 550."
+LRDI,40,MOCKCATPREP01_Q5,5,MOCKCATPREP01_Set2_InternEvaluation,"Ten interns (I1 to I10) were evaluated based on their performance in three modules: Project Work (PW), Client Interaction (CI), and Team Collaboration (TC). Each module was scored out of 50 marks. An intern's Final Performance Score (FPS) was calculated as a weighted average: FPS = 0.40 * PW + 0.35 * CI + 0.25 * TC.
+An intern is put on probation if they score less than 60% (i.e., strictly less than 30 marks) in two or more modules. Only non-probationary interns are eligible for the ""Star Performer"" award, which is given to the top three FPS scorers among them. All scores (PW, CI, TC) are integers. FPS can be decimal.
+The partial scores and some additional information are provided below:
+Intern PW (Project Work) CI (Client Interaction) TC (Team Collaboration)
+I1  40  45  38
+I2  35  28  A
+I3  48  B   44
+I4  25  30  20
+I5  C   38  30
+I6  28  26  D
+I7  42  48  40
+I8  30  E   48
+I9  50  F   G
+I10 20  22  28
+
+Additional Information:
+1.  The average Team Collaboration (TC) score for all ten interns was 34.8.
+2.  Intern I3 achieved the highest Final Performance Score (FPS) among all non-probationary interns. His Client Interaction (CI) score was 40.
+3.  Intern I2's TC score (A) was the same as Intern I9's CI score (F), which was 42.
+4.  Intern I8's CI score (E) was 35.
+5.  Intern I5's PW score (C) was 45.
+6.  The three Star Performers were I3, I7, and I9. Intern I9 had a higher FPS than Intern I7.
+7.  The sum of TC scores for Interns I2, I6, and I9 (A, D, G respectively) was 100. Intern I6's TC score (D) was 22.",What is the Team Collaboration (TC) score of Intern I9 (G)?,30,36,40,42,A,B,C,D,B,MCQ,Logical Reasoning,"Data Caselet, Table Analysis",Moderate,"Data Caselet, Table Analysis","data interpretation, constraint satisfaction, calculation",False,MOCKCATPREP01_Set2_InternEvaluation,Analyzing,"From ""Additional Information"" Clue 3, Intern I2's TC score (A) is 42.
+From Clue 7, Intern I6's TC score (D) is 22.
+Clue 7 also states that the sum of TC scores for Interns I2, I6, and I9 (A, D, G respectively) is 100.
+So, A + D + G = 100.
+42 + 22 + G = 100.
+64 + G = 100.
+G = 100 - 64 = 36.
+The Team Collaboration (TC) score of Intern I9 (G) is 36."
+LRDI,40,MOCKCATPREP01_Q6,6,MOCKCATPREP01_Set2_InternEvaluation,"Ten interns (I1 to I10) were evaluated based on their performance in three modules: Project Work (PW), Client Interaction (CI), and Team Collaboration (TC). Each module was scored out of 50 marks. An intern's Final Performance Score (FPS) was calculated as a weighted average: FPS = 0.40 * PW + 0.35 * CI + 0.25 * TC.
+An intern is put on probation if they score less than 60% (i.e., strictly less than 30 marks) in two or more modules. Only non-probationary interns are eligible for the ""Star Performer"" award, which is given to the top three FPS scorers among them. All scores (PW, CI, TC) are integers. FPS can be decimal.
+The partial scores and some additional information are provided below:
+Intern PW (Project Work) CI (Client Interaction) TC (Team Collaboration)
+I1  40  45  38
+I2  35  28  A
+I3  48  B   44
+I4  25  30  20
+I5  C   38  30
+I6  28  26  D
+I7  42  48  40
+I8  30  E   48
+I9  50  F   G
+I10 20  22  28
+
+Additional Information:
+1.  The average Team Collaboration (TC) score for all ten interns was 34.8.
+2.  Intern I3 achieved the highest Final Performance Score (FPS) among all non-probationary interns. His Client Interaction (CI) score was 40.
+3.  Intern I2's TC score (A) was the same as Intern I9's CI score (F), which was 42.
+4.  Intern I8's CI score (E) was 35.
+5.  Intern I5's PW score (C) was 45.
+6.  The three Star Performers were I3, I7, and I9. Intern I9 had a higher FPS than Intern I7.
+7.  The sum of TC scores for Interns I2, I6, and I9 (A, D, G respectively) was 100. Intern I6's TC score (D) was 22.",What is the Final Performance Score (FPS) of Intern I1?,40.75,41.25,41.50,42.00,A,B,C,D,B,MCQ,Logical Reasoning,"Data Caselet, Table Analysis",Easy,"Data Caselet, Table Analysis","weighted average, calculation",False,MOCKCATPREP01_Set2_InternEvaluation,Applying,"The Final Performance Score (FPS) is calculated as FPS = 0.40 * PW + 0.35 * CI + 0.25 * TC.
+For Intern I1, the scores from the table are PW=40, CI=45, TC=38.
+FPS(I1) = (0.40 * 40) + (0.35 * 45) + (0.25 * 38)
+FPS(I1) = 16 + 15.75 + 9.50 = 41.25."
+LRDI,40,MOCKCATPREP01_Q7,7,MOCKCATPREP01_Set2_InternEvaluation,"Ten interns (I1 to I10) were evaluated based on their performance in three modules: Project Work (PW), Client Interaction (CI), and Team Collaboration (TC). Each module was scored out of 50 marks. An intern's Final Performance Score (FPS) was calculated as a weighted average: FPS = 0.40 * PW + 0.35 * CI + 0.25 * TC.
+An intern is put on probation if they score less than 60% (i.e., strictly less than 30 marks) in two or more modules. Only non-probationary interns are eligible for the ""Star Performer"" award, which is given to the top three FPS scorers among them. All scores (PW, CI, TC) are integers. FPS can be decimal.
+The partial scores and some additional information are provided below:
+Intern PW (Project Work) CI (Client Interaction) TC (Team Collaboration)
+I1  40  45  38
+I2  35  28  A
+I3  48  B   44
+I4  25  30  20
+I5  C   38  30
+I6  28  26  D
+I7  42  48  40
+I8  30  E   48
+I9  50  F   G
+I10 20  22  28
+
+Additional Information:
+1.  The average Team Collaboration (TC) score for all ten interns was 34.8.
+2.  Intern I3 achieved the highest Final Performance Score (FPS) among all non-probationary interns. His Client Interaction (CI) score was 40.
+3.  Intern I2's TC score (A) was the same as Intern I9's CI score (F), which was 42.
+4.  Intern I8's CI score (E) was 35.
+5.  Intern I5's PW score (C) was 45.
+6.  The three Star Performers were I3, I7, and I9. Intern I9 had a higher FPS than Intern I7.
+7.  The sum of TC scores for Interns I2, I6, and I9 (A, D, G respectively) was 100. Intern I6's TC score (D) was 22.",How many interns are on probation?,2,3,4,5,A,B,C,D,B,MCQ,Logical Reasoning,"Data Caselet, Table Analysis",Moderate,"Data Caselet, Table Analysis","conditional logic, counting, data interpretation",False,MOCKCATPREP01_Set2_InternEvaluation,Analyzing,"An intern is on probation if they score strictly less than 30 marks in two or more modules. Based on the full scores derived in the preamble:
+I1: No scores < 30. Not probationary.
+I2: CI(28) is < 30 (1 score). Not probationary.
+I3: No scores < 30. Not probationary.
+I4: PW(25), TC(20) are < 30 (2 scores). Probationary.
+I5: No scores < 30. Not probationary.
+I6: PW(28), CI(26), TC(22) are < 30 (3 scores). Probationary.
+I7: No scores < 30. Not probationary.
+I8: No scores < 30. Not probationary.
+I9: No scores < 30. Not probationary.
+I10: PW(20), CI(22), TC(28) are < 30 (3 scores). Probationary.
+The interns on probation are I4, I6, and I10. There are 3 such interns."
+LRDI,40,MOCKCATPREP01_Q8,8,MOCKCATPREP01_Set2_InternEvaluation,"Ten interns (I1 to I10) were evaluated based on their performance in three modules: Project Work (PW), Client Interaction (CI), and Team Collaboration (TC). Each module was scored out of 50 marks. An intern's Final Performance Score (FPS) was calculated as a weighted average: FPS = 0.40 * PW + 0.35 * CI + 0.25 * TC.
+An intern is put on probation if they score less than 60% (i.e., strictly less than 30 marks) in two or more modules. Only non-probationary interns are eligible for the ""Star Performer"" award, which is given to the top three FPS scorers among them. All scores (PW, CI, TC) are integers. FPS can be decimal.
+The partial scores and some additional information are provided below:
+Intern PW (Project Work) CI (Client Interaction) TC (Team Collaboration)
+I1  40  45  38
+I2  35  28  A
+I3  48  B   44
+I4  25  30  20
+I5  C   38  30
+I6  28  26  D
+I7  42  48  40
+I8  30  E   48
+I9  50  F   G
+I10 20  22  28
+
+Additional Information:
+1.  The average Team Collaboration (TC) score for all ten interns was 34.8.
+2.  Intern I3 achieved the highest Final Performance Score (FPS) among all non-probationary interns. His Client Interaction (CI) score was 40.
+3.  Intern I2's TC score (A) was the same as Intern I9's CI score (F), which was 42.
+4.  Intern I8's CI score (E) was 35.
+5.  Intern I5's PW score (C) was 45.
+6.  The three Star Performers were I3, I7, and I9. Intern I9 had a higher FPS than Intern I7.
+7.  The sum of TC scores for Interns I2, I6, and I9 (A, D, G respectively) was 100. Intern I6's TC score (D) was 22.",Who among the following is NOT a Star Performer?,I3,I5,I7,I9,A,B,C,D,B,MCQ,Logical Reasoning,"Data Caselet, Table Analysis",Easy,"Data Caselet, Table Analysis","direct inference, ranking",False,MOCKCATPREP01_Set2_InternEvaluation,Understanding,"According to ""Additional Information"" Clue 6, the three Star Performers were I3, I7, and I9.
+Therefore, Intern I5 is NOT a Star Performer."
+LRDI,40,MOCKCATPREP01_Q9,9,MOCKCATPREP01_Set2_InternEvaluation,"Ten interns (I1 to I10) were evaluated based on their performance in three modules: Project Work (PW), Client Interaction (CI), and Team Collaboration (TC). Each module was scored out of 50 marks. An intern's Final Performance Score (FPS) was calculated as a weighted average: FPS = 0.40 * PW + 0.35 * CI + 0.25 * TC.
+An intern is put on probation if they score less than 60% (i.e., strictly less than 30 marks) in two or more modules. Only non-probationary interns are eligible for the ""Star Performer"" award, which is given to the top three FPS scorers among them. All scores (PW, CI, TC) are integers. FPS can be decimal.
+The partial scores and some additional information are provided below:
+Intern PW (Project Work) CI (Client Interaction) TC (Team Collaboration)
+I1  40  45  38
+I2  35  28  A
+I3  48  B   44
+I4  25  30  20
+I5  C   38  30
+I6  28  26  D
+I7  42  48  40
+I8  30  E   48
+I9  50  F   G
+I10 20  22  28
+
+Additional Information:
+1.  The average Team Collaboration (TC) score for all ten interns was 34.8.
+2.  Intern I3 achieved the highest Final Performance Score (FPS) among all non-probationary interns. His Client Interaction (CI) score was 40.
+3.  Intern I2's TC score (A) was the same as Intern I9's CI score (F), which was 42.
+4.  Intern I8's CI score (E) was 35.
+5.  Intern I5's PW score (C) was 45.
+6.  The three Star Performers were I3, I7, and I9. Intern I9 had a higher FPS than Intern I7.
+7.  The sum of TC scores for Interns I2, I6, and I9 (A, D, G respectively) was 100. Intern I6's TC score (D) was 22.",What is the difference between the highest and lowest FPS among non-probationary interns?,9.9,10.1,8.7,9.3,A,B,C,D,A,MCQ,Logical Reasoning,"Data Caselet, Table Analysis",Moderate,"Data Caselet, Table Analysis","range calculation, data interpretation, ranking",False,MOCKCATPREP01_Set2_InternEvaluation,Analyzing,"First, list the FPS scores of all non-probationary interns as calculated in the preamble:
+I1: 41.25
+I2: 34.3
+I3: 44.2
+I5: 38.8
+I7: 43.6
+I8: 36.25
+I9: 43.7
+The highest FPS among these is 44.2 (Intern I3).
+The lowest FPS among these is 34.3 (Intern I2).
+The difference = Highest FPS - Lowest FPS = 44.2 - 34.3 = 9.9."
+LRDI,40,MOCKCATPREP01_Q10,10,MOCKCATPREP01_Set3_DeptAllocation,"An organization has 8 employees: M1, M2, M3, M4 (Males) and F1, F2, F3, F4 (Females). These employees are distributed across three departments: X, Y, and Z. Each employee is assigned to exactly one department, works on exactly one Primary Project Type (Alpha, Beta, or Gamma), and provides exactly one Secondary Support Function (Omega, Sigma, or Tau).
+The following is known:
+1.  Department X has 3 employees, Department Y has 3 employees, and Department Z has 2 employees. Both employees in Department Z are male.
+2.  M3 is in Department X and his Primary Project is Gamma. F1 is also in Department X.
+3.  M4 is in Department Y and his Primary Project is Alpha. F3 is also in Department Y.
+4.  F1's Primary Project is Beta and her Secondary Support is Sigma. F2's Primary Project is Gamma. (Note: This information about F2's Primary Project being Gamma is provisional and might be refined by Clue 6 to ensure consistency with all rules.)
+5.  M1's Secondary Support is Sigma. M2's Primary Project is Beta and his Secondary Support is Tau.
+6.  No two employees in the same department have the same Primary Project Type.
+7.  Among the three employees in Department Y, exactly one has Sigma as Secondary Support, and exactly one has Tau as Secondary Support. F4 is in Department Y.
+8.  The Primary Project Types Alpha, Beta, and Gamma are undertaken by 2, 3, and 3 employees respectively.
+9.  The Secondary Support Functions Omega, Sigma, and Tau are provided by 3, 3, and 2 employees respectively.
+10. F3's Primary Project type is Beta.",What is F2's Primary Project Type?,Alpha,Beta,Gamma,Cannot be determined,A,B,C,D,A,MCQ,Logical Reasoning,"Assignment Puzzle, Matrix Logic",Moderate,"Assignment Puzzle, Matrix Logic","constraint satisfaction, logical deduction, distribution",False,MOCKCATPREP01_Set3_DeptAllocation,Analyzing,"F1 is in Department X (Clue 2) and her Primary Project is Beta (Clue 4). M3 is in Department X and his Primary Project is Gamma (Clue 2). As determined in the solution preamble, F2 is the third employee in Department X.
+According to Clue 6, no two employees in the same department have the same Primary Project Type. Since Primary Project Types Beta (by F1) and Gamma (by M3) are already assigned in Department X, F2's Primary Project Type must be Alpha. (The note with Clue 4 in the problem statement highlights that Clue 6 is used to refine F2's Primary Project)."
+LRDI,40,MOCKCATPREP01_Q11,11,MOCKCATPREP01_Set3_DeptAllocation,"An organization has 8 employees: M1, M2, M3, M4 (Males) and F1, F2, F3, F4 (Females). These employees are distributed across three departments: X, Y, and Z. Each employee is assigned to exactly one department, works on exactly one Primary Project Type (Alpha, Beta, or Gamma), and provides exactly one Secondary Support Function (Omega, Sigma, or Tau).
+The following is known:
+1.  Department X has 3 employees, Department Y has 3 employees, and Department Z has 2 employees. Both employees in Department Z are male.
+2.  M3 is in Department X and his Primary Project is Gamma. F1 is also in Department X.
+3.  M4 is in Department Y and his Primary Project is Alpha. F3 is also in Department Y.
+4.  F1's Primary Project is Beta and her Secondary Support is Sigma. F2's Primary Project is Gamma. (Note: This information about F2's Primary Project being Gamma is provisional and might be refined by Clue 6 to ensure consistency with all rules.)
+5.  M1's Secondary Support is Sigma. M2's Primary Project is Beta and his Secondary Support is Tau.
+6.  No two employees in the same department have the same Primary Project Type.
+7.  Among the three employees in Department Y, exactly one has Sigma as Secondary Support, and exactly one has Tau as Secondary Support. F4 is in Department Y.
+8.  The Primary Project Types Alpha, Beta, and Gamma are undertaken by 2, 3, and 3 employees respectively.
+9.  The Secondary Support Functions Omega, Sigma, and Tau are provided by 3, 3, and 2 employees respectively.
+10. F3's Primary Project type is Beta.",Which employee provides Omega as Secondary Support and is in Department X?,M3,F1,F2,Both M3 and F2,A,B,C,D,D,MCQ,Logical Reasoning,"Assignment Puzzle, Matrix Logic",Moderate,"Assignment Puzzle, Matrix Logic","logical deduction, multiple conditions",False,MOCKCATPREP01_Set3_DeptAllocation,Analyzing,"We need to find employees in Department X whose Secondary Support is Omega.
+From the derived table in the solution preamble:
+M3 is in Department X. His Secondary Support is Omega.
+F1 is in Department X. Her Secondary Support is Sigma.
+F2 is in Department X. Her Secondary Support is Omega.
+Thus, both M3 and F2 are in Department X and provide Omega as Secondary Support."
+LRDI,40,MOCKCATPREP01_Q12,12,MOCKCATPREP01_Set3_DeptAllocation,"An organization has 8 employees: M1, M2, M3, M4 (Males) and F1, F2, F3, F4 (Females). These employees are distributed across three departments: X, Y, and Z. Each employee is assigned to exactly one department, works on exactly one Primary Project Type (Alpha, Beta, or Gamma), and provides exactly one Secondary Support Function (Omega, Sigma, or Tau).
+The following is known:
+1.  Department X has 3 employees, Department Y has 3 employees, and Department Z has 2 employees. Both employees in Department Z are male.
+2.  M3 is in Department X and his Primary Project is Gamma. F1 is also in Department X.
+3.  M4 is in Department Y and his Primary Project is Alpha. F3 is also in Department Y.
+4.  F1's Primary Project is Beta and her Secondary Support is Sigma. F2's Primary Project is Gamma. (Note: This information about F2's Primary Project being Gamma is provisional and might be refined by Clue 6 to ensure consistency with all rules.)
+5.  M1's Secondary Support is Sigma. M2's Primary Project is Beta and his Secondary Support is Tau.
+6.  No two employees in the same department have the same Primary Project Type.
+7.  Among the three employees in Department Y, exactly one has Sigma as Secondary Support, and exactly one has Tau as Secondary Support. F4 is in Department Y.
+8.  The Primary Project Types Alpha, Beta, and Gamma are undertaken by 2, 3, and 3 employees respectively.
+9.  The Secondary Support Functions Omega, Sigma, and Tau are provided by 3, 3, and 2 employees respectively.
+10. F3's Primary Project type is Beta.","Who is paired with M1 for their Primary Project Type (i.e., who else has the same Primary Project Type as M1)?",M3 and F2,M3 and F4,F2 and F4,M4 and F2,A,B,C,D,B,MCQ,Logical Reasoning,"Assignment Puzzle, Matrix Logic",Difficult,"Assignment Puzzle, Matrix Logic","relationship mapping, logical deduction",False,MOCKCATPREP01_Set3_DeptAllocation,Analyzing,"First, we determine M1's Primary Project Type. From the solution preamble, M1's Primary Project is Gamma.
+We need to find other employees with Primary Project Type Gamma.
+From the derived table:
+M3's Primary Project is Gamma.
+F4's Primary Project is Gamma.
+So, M3 and F4 share the Primary Project Type Gamma with M1."
+LRDI,40,MOCKCATPREP01_Q13,13,MOCKCATPREP01_Set3_DeptAllocation,"An organization has 8 employees: M1, M2, M3, M4 (Males) and F1, F2, F3, F4 (Females). These employees are distributed across three departments: X, Y, and Z. Each employee is assigned to exactly one department, works on exactly one Primary Project Type (Alpha, Beta, or Gamma), and provides exactly one Secondary Support Function (Omega, Sigma, or Tau).
+The following is known:
+1.  Department X has 3 employees, Department Y has 3 employees, and Department Z has 2 employees. Both employees in Department Z are male.
+2.  M3 is in Department X and his Primary Project is Gamma. F1 is also in Department X.
+3.  M4 is in Department Y and his Primary Project is Alpha. F3 is also in Department Y.
+4.  F1's Primary Project is Beta and her Secondary Support is Sigma. F2's Primary Project is Gamma. (Note: This information about F2's Primary Project being Gamma is provisional and might be refined by Clue 6 to ensure consistency with all rules.)
+5.  M1's Secondary Support is Sigma. M2's Primary Project is Beta and his Secondary Support is Tau.
+6.  No two employees in the same department have the same Primary Project Type.
+7.  Among the three employees in Department Y, exactly one has Sigma as Secondary Support, and exactly one has Tau as Secondary Support. F4 is in Department Y.
+8.  The Primary Project Types Alpha, Beta, and Gamma are undertaken by 2, 3, and 3 employees respectively.
+9.  The Secondary Support Functions Omega, Sigma, and Tau are provided by 3, 3, and 2 employees respectively.
+10. F3's Primary Project type is Beta.",Which of the following statements is DEFINITELY true?,F3's Secondary Support is Tau.,M4's Secondary Support is Omega.,F4's Primary Project is Gamma.,M1's Primary Project is Alpha.,A,B,C,D,C,MCQ,Logical Reasoning,"Assignment Puzzle, Matrix Logic",Moderate,"Assignment Puzzle, Matrix Logic","definite truth, logical deduction, case analysis",False,MOCKCATPREP01_Set3_DeptAllocation,Analyzing,"Evaluate each statement based on the derived table in the solution preamble:
+A) F3's Secondary Support is Tau. (Derived: F3's SecS is Omega). False.
+B) M4's Secondary Support is Omega. (Derived: M4's SecS is Tau). False.
+C) F4's Primary Project is Gamma. (Derived: F4's PriP is Gamma). True.
+D) M1's Primary Project is Alpha. (Derived: M1's PriP is Gamma). False."
+LRDI,40,MOCKCATPREP01_Q14,14,MOCKCATPREP01_Set4_SubscriptionTiers,"An online learning platform aims to generate exactly ₹100,000 in monthly revenue from each new cohort of users. Users in a cohort subscribe to one of three tiers: Basic (₹500 per month), Pro (₹1000 per month), or Premium (₹2000 per month). For a special cohort program, the platform enrolled exactly 60 new subscribers.
+The platform also has a strategic goal for this cohort:
+1.  The number of Premium subscribers must be strictly greater than the sum of Basic and Pro subscribers.
+2.  All subscription counts (Basic, Pro, Premium) must be non-negative integers.
+3.  The number of Pro subscribers was 20.
+Let b, p, and m be the number of Basic, Pro, and Premium subscribers, respectively.",How many Premium subscribers (m) were there in this cohort?,30,35,40,45,A,B,C,D,C,MCQ,Data Interpretation,"Integer Solutions, Linear Equations",Moderate,"Integer Solutions, Linear Equations","system of equations, constraint satisfaction, algebraic reasoning",False,MOCKCATPREP01_Set4_SubscriptionTiers,Applying,"Using the given information and derived equations:
+b + p + m = 60 (Total subscribers)
+b + 2p + 4m = 200 (Revenue equation, simplified)
+p = 20 (Goal 3)
+Substitute p=20 into the first equation: b + 20 + m = 60 => b = 40 - m.
+Substitute p=20 and b = 40 - m into the second equation:
+(40 - m) + 2(20) + 4m = 200
+40 - m + 40 + 4m = 200
+80 + 3m = 200
+3m = 120
+m = 40.
+There were 40 Premium subscribers."
+LRDI,40,MOCKCATPREP01_Q15,15,MOCKCATPREP01_Set4_SubscriptionTiers,"An online learning platform aims to generate exactly ₹100,000 in monthly revenue from each new cohort of users. Users in a cohort subscribe to one of three tiers: Basic (₹500 per month), Pro (₹1000 per month), or Premium (₹2000 per month). For a special cohort program, the platform enrolled exactly 60 new subscribers.
+The platform also has a strategic goal for this cohort:
+1.  The number of Premium subscribers must be strictly greater than the sum of Basic and Pro subscribers.
+2.  All subscription counts (Basic, Pro, Premium) must be non-negative integers.
+3.  The number of Pro subscribers was 20.
+Let b, p, and m be the number of Basic, Pro, and Premium subscribers, respectively.",How many Basic subscribers (b) were there in this cohort?,0,5,10,15,A,B,C,D,A,MCQ,Data Interpretation,"Integer Solutions, Linear Equations",Moderate,"Integer Solutions, Linear Equations","system of equations, constraint satisfaction",False,MOCKCATPREP01_Set4_SubscriptionTiers,Applying,"From the derivation in Q14, we found m = 40 and used p = 20.
+Using the relation b = 40 - m (derived from b + 20 + m = 60),
+b = 40 - 40 = 0.
+There were 0 Basic subscribers."
+LRDI,40,MOCKCATPREP01_Q16,16,MOCKCATPREP01_Set4_SubscriptionTiers,"An online learning platform aims to generate exactly ₹100,000 in monthly revenue from each new cohort of users. Users in a cohort subscribe to one of three tiers: Basic (₹500 per month), Pro (₹1000 per month), or Premium (₹2000 per month). For a special cohort program, the platform enrolled exactly 60 new subscribers.
+The platform also has a strategic goal for this cohort:
+1.  The number of Premium subscribers must be strictly greater than the sum of Basic and Pro subscribers.
+2.  All subscription counts (Basic, Pro, Premium) must be non-negative integers.
+3.  The number of Pro subscribers was 20.
+Let b, p, and m be the number of Basic, Pro, and Premium subscribers, respectively.","If the number of Pro subscribers had been 5 instead of 20 (while total subscribers remain 60 and total revenue ₹100,000, and m > b+p still holds), what would be the number of Premium subscribers?",40,43,45,47,A,B,C,D,C,MCQ,Data Interpretation,"Integer Solutions, Linear Equations",Moderate,"Integer Solutions, Linear Equations","conditional scenario, algebraic solving, constraint application",False,MOCKCATPREP01_Set4_SubscriptionTiers,Applying,"The conditions are: revenue = ₹100,000 (b + 2p + 4m = 200), total subscribers = 60 (b + p + m = 60), m > b+p.
+New condition: p = 5.
+Substitute p=5 into b + p + m = 60: b + 5 + m = 60 => b = 55 - m.
+Substitute p=5 and b = 55 - m into b + 2p + 4m = 200:
+(55 - m) + 2(5) + 4m = 200
+55 - m + 10 + 4m = 200
+65 + 3m = 200
+3m = 135
+m = 45.
+Now find b: b = 55 - 45 = 10.
+Check m > b+p: 45 > 10 + 5 => 45 > 15. True.
+The number of Premium subscribers would be 45."
+LRDI,40,MOCKCATPREP01_Q17,17,MOCKCATPREP01_Set4_SubscriptionTiers,"An online learning platform aims to generate exactly ₹100,000 in monthly revenue from each new cohort of users. Users in a cohort subscribe to one of three tiers: Basic (₹500 per month), Pro (₹1000 per month), or Premium (₹2000 per month). For a special cohort program, the platform enrolled exactly 60 new subscribers.
+The platform also has a strategic goal for this cohort:
+1.  The number of Premium subscribers must be strictly greater than the sum of Basic and Pro subscribers.
+2.  All subscription counts (Basic, Pro, Premium) must be non-negative integers.
+3.  The number of Pro subscribers was 20.
+Let b, p, and m be the number of Basic, Pro, and Premium subscribers, respectively.","If the platform decided to enroll exactly 56 total subscribers in this cohort, and the number of Premium subscribers was 45 (while total revenue ₹100,000 and m > b+p still holds), how many Pro subscribers would there be?",2,9,8,10,A,B,C,D,B,MCQ,Data Interpretation,"Integer Solutions, Linear Equations",Difficult,"Integer Solutions, Linear Equations","conditional scenario, system of equations, logical consistency",False,MOCKCATPREP01_Set4_SubscriptionTiers,Applying,"New conditions: total subscribers = 56, m = 45. Revenue and m > b+p constraint hold.
+b + p + m = 56 => b + p + 45 = 56 => b + p = 11. (Eq A)
+b + 2p + 4m = 200 => b + 2p + 4(45) = 200 => b + 2p + 180 = 200 => b + 2p = 20. (Eq B)
+Subtracting Equation A from Equation B: (b + 2p) - (b + p) = 20 - 11 => p = 9.
+Substitute p=9 into Equation A: b + 9 = 11 => b = 2.
+The distribution is (b=2, p=9, m=45).
+Check m > b+p: 45 > 2 + 9 => 45 > 11. True.
+The number of Pro subscribers would be 9."
+LRDI,40,MOCKCATPREP01_Q18,18,MOCKCATPREP01_Set4_SubscriptionTiers,"An online learning platform aims to generate exactly ₹100,000 in monthly revenue from each new cohort of users. Users in a cohort subscribe to one of three tiers: Basic (₹500 per month), Pro (₹1000 per month), or Premium (₹2000 per month). For a special cohort program, the platform enrolled exactly 60 new subscribers.
+The platform also has a strategic goal for this cohort:
+1.  The number of Premium subscribers must be strictly greater than the sum of Basic and Pro subscribers.
+2.  All subscription counts (Basic, Pro, Premium) must be non-negative integers.
+3.  The number of Pro subscribers was 20.
+Let b, p, and m be the number of Basic, Pro, and Premium subscribers, respectively.","What is the maximum possible number of Premium subscribers if the total number of subscribers is exactly 53, total revenue is ₹100,000, and the condition m > b+p holds?",47,48,49,50,A,B,C,D,C,MCQ,Data Interpretation,"Integer Solutions, Linear Equations",Difficult,"Integer Solutions, Linear Equations","optimization, inequalities, system of equations",False,MOCKCATPREP01_Set4_SubscriptionTiers,Analyzing,"New conditions: total subscribers = 53. Revenue (b + 2p + 4m = 200) and m > b+p constraint hold. We want to maximize m.
+From b + p + m = 53, we get b + p = 53 - m.
+The constraint m > b + p becomes m > 53 - m => 2m > 53 => m > 26.5. So, m ≥ 27.
+Substitute b = 53 - m - p into the revenue equation b + 2p + 4m = 200:
+(53 - m - p) + 2p + 4m = 200
+53 + 3m + p = 200 => p = 147 - 3m.
+Since p must be a non-negative integer, p ≥ 0:
+147 - 3m ≥ 0 => 147 ≥ 3m => m ≤ 49.
+Also, b must be a non-negative integer. b = 53 - m - p. Substitute p = 147 - 3m:
+b = 53 - m - (147 - 3m) = 53 - m - 147 + 3m = 2m - 94.
+Since b ≥ 0:
+2m - 94 ≥ 0 => 2m ≥ 94 => m ≥ 47.
+Combining the conditions for m: m ≥ 47 and m ≤ 49.
+The possible integer values for m are 47, 48, 49.
+We must also ensure m > b+p for each.
+If m=49: p = 147 - 3(49) = 147 - 147 = 0. b = 2(49) - 94 = 98 - 94 = 4.
+Check m > b+p: 49 > 4+0 => 49 > 4. True.
+Thus, the maximum possible number of Premium subscribers is 49."
+LRDI,40,MOCKCATPREP01_Q19,19,MOCKCATPREP01_Set5_ArtGallery,"An art gallery is arranging 10 new artworks, labeled A1 to A10, in a single linear display from left to right. Each artwork is classified by its style: Impressionist (I), Cubist (C), or Surrealist (S). Each artwork has exactly one style.
+The curator has decided on the following arrangement principles:
+1.  The display features exactly 4 Impressionist, 4 Cubist, and 2 Surrealist artworks.
+2.  All Surrealist artworks are at positions A3 and A6.
+3.  No two artworks of the same style are adjacent to each other.
+4.  The artworks at positions A1 and A4 are of the same style.
+5.  The artworks at positions A2 and A5 are of the same style.
+6.  The artwork at position A7 is Cubist.
+7.  The artwork at position A10 is Impressionist.
+8.  The artwork at position A1 is Cubist.",What is the style of the artwork at position A1?,Impressionist,Cubist,Surrealist,Cannot be determined,A,B,C,D,B,MCQ,Logical Reasoning,"Linear Arrangement, Grid Logic",Moderate,"Linear Arrangement, Grid Logic","constraint satisfaction, logical deduction, pattern recognition",False,MOCKCATPREP01_Set5_ArtGallery,Understanding,"Clue 8 directly states: The artwork at position A1 is Cubist.
+This is also confirmed by the detailed deduction in the solution preamble."
+LRDI,40,MOCKCATPREP01_Q20,20,MOCKCATPREP01_Set5_ArtGallery,"An art gallery is arranging 10 new artworks, labeled A1 to A10, in a single linear display from left to right. Each artwork is classified by its style: Impressionist (I), Cubist (C), or Surrealist (S). Each artwork has exactly one style.
+The curator has decided on the following arrangement principles:
+1.  The display features exactly 4 Impressionist, 4 Cubist, and 2 Surrealist artworks.
+2.  All Surrealist artworks are at positions A3 and A6.
+3.  No two artworks of the same style are adjacent to each other.
+4.  The artworks at positions A1 and A4 are of the same style.
+5.  The artworks at positions A2 and A5 are of the same style.
+6.  The artwork at position A7 is Cubist.
+7.  The artwork at position A10 is Impressionist.
+8.  The artwork at position A1 is Cubist.",What is the style of the artwork at position A8?,Impressionist,Cubist,Surrealist,Cannot be determined,A,B,C,D,A,MCQ,Logical Reasoning,"Linear Arrangement, Grid Logic",Moderate,"Linear Arrangement, Grid Logic","constraint satisfaction, logical deduction",False,MOCKCATPREP01_Set5_ArtGallery,Applying,"Following the step-by-step deduction in the solution preamble:
+1.  The sequence up to A7 is determined as: A1(C), A2(I), A3(S), A4(C), A5(I), A6(S), A7(C).
+2.  A7 is Cubist (Clue 6).
+3.  By Clue 3 (no two artworks of the same style are adjacent), A8 cannot be Cubist.
+4.  All Surrealist artworks are at A3 and A6 (Clue 2), so A8 cannot be Surrealist.
+5.  Therefore, A8 must be Impressionist (I).
+This is part of the final derived sequence: A1(C), A2(I), A3(S), A4(C), A5(I), A6(S), A7(C), A8(I), A9(C), A10(I).
+The style of A8 is Impressionist."
+LRDI,40,MOCKCATPREP01_Q21,21,MOCKCATPREP01_Set5_ArtGallery,"An art gallery is arranging 10 new artworks, labeled A1 to A10, in a single linear display from left to right. Each artwork is classified by its style: Impressionist (I), Cubist (C), or Surrealist (S). Each artwork has exactly one style.
+The curator has decided on the following arrangement principles:
+1.  The display features exactly 4 Impressionist, 4 Cubist, and 2 Surrealist artworks.
+2.  All Surrealist artworks are at positions A3 and A6.
+3.  No two artworks of the same style are adjacent to each other.
+4.  The artworks at positions A1 and A4 are of the same style.
+5.  The artworks at positions A2 and A5 are of the same style.
+6.  The artwork at position A7 is Cubist.
+7.  The artwork at position A10 is Impressionist.
+8.  The artwork at position A1 is Cubist.",How many Cubist artworks are present between A4 (inclusive) and A9 (inclusive)?,1,2,3,4,A,B,C,D,C,MCQ,Logical Reasoning,"Linear Arrangement, Grid Logic",Moderate,"Linear Arrangement, Grid Logic","counting, range analysis, logical deduction",False,MOCKCATPREP01_Set5_ArtGallery,Applying,"The derived unique sequence from A1 to A10 (from solution preamble) is:
+C(A1), I(A2), S(A3), C(A4), I(A5), S(A6), C(A7), I(A8), C(A9), I(A10).
+We need to count Cubist artworks from A4 (inclusive) to A9 (inclusive):
+A4: Cubist (C)
+A5: Impressionist (I)
+A6: Surrealist (S)
+A7: Cubist (C)
+A8: Impressionist (I)
+A9: Cubist (C)
+The Cubist artworks in this range are A4, A7, and A9. There are 3 Cubist artworks."
+LRDI,40,MOCKCATPREP01_Q22,22,MOCKCATPREP01_Set5_ArtGallery,"An art gallery is arranging 10 new artworks, labeled A1 to A10, in a single linear display from left to right. Each artwork is classified by its style: Impressionist (I), Cubist (C), or Surrealist (S). Each artwork has exactly one style.
+The curator has decided on the following arrangement principles:
+1.  The display features exactly 4 Impressionist, 4 Cubist, and 2 Surrealist artworks.
+2.  All Surrealist artworks are at positions A3 and A6.
+3.  No two artworks of the same style are adjacent to each other.
+4.  The artworks at positions A1 and A4 are of the same style.
+5.  The artworks at positions A2 and A5 are of the same style.
+6.  The artwork at position A7 is Cubist.
+7.  The artwork at position A10 is Impressionist.
+8.  The artwork at position A1 is Cubist.",Which of the following statements is true?,Artwork A5 is Cubist.,Artwork A9 is Impressionist.,Artwork A2 and A8 are of the same style.,Artwork A4 is Impressionist.,A,B,C,D,C,MCQ,Logical Reasoning,"Linear Arrangement, Grid Logic",Moderate,"Linear Arrangement, Grid Logic","definite truth, logical deduction, constraint interaction",False,MOCKCATPREP01_Set5_ArtGallery,Analyzing,"The derived unique sequence (from solution preamble) is:
+C(A1), I(A2), S(A3), C(A4), I(A5), S(A6), C(A7), I(A8), C(A9), I(A10).
+Let's evaluate each statement:
+A) Artwork A5 is Cubist. (In the sequence, A5 is Impressionist). False.
+B) Artwork A9 is Impressionist. (In the sequence, A9 is Cubist). False.
+C) Artwork A2 and A8 are of the same style. (A2 is Impressionist, A8 is Impressionist). True.
+D) Artwork A4 is Impressionist. (In the sequence, A4 is Cubist). False.
+Statement C is true."

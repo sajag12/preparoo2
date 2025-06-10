@@ -1,0 +1,186 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+All Questions,40,CATMOCKDLR003_Q1,1,CATMOCKDLR003_Set1_OrderFulfillment,"Introductory Text:
+An e-commerce platform processes orders for five product categories: Electronics (E), Apparel (A), Books (B), Home Goods (H), and Groceries (G). Each order goes through up to five processing stages sequentially: Order Verification (OV), Item Picking (IP), Quality Check (QC), Packaging (P), and Dispatch (D). Stage times are in hours. Orders are classified into three priority tiers: Express, Standard, and Economy, which can affect processing. Not all stages are applicable to all categories or priorities (e.g., Groceries skip QC).
+
+Information Provided (Partial Data):
+The following table shows some typical stage times. ""Spec."" packaging is for Electronics and some Home Goods orders and uses a dedicated resource; ""Std."" packaging is for others. Groceries do not undergo Quality Check (QC Time = 0).
+
+Category	Priority	OV Time (hr)	IP Time (hr)	QC Time (hr)	Packaging Type	P Time (hr)	D Time (hr)	Total Time (hr)
+Electronics	Express	0.5	1.0	0.75	Spec.	1.0	0.25	E_Exp_Total
+Electronics	Standard	0.5	E_Std_IP	1.0	Spec.	E_Std_P	0.3	4.2
+Apparel	Express	A_Exp_OV	0.5	0.25	Std.	0.5	0.2	1.75
+Apparel	Economy	0.4	0.8	A_Econ_QC	Std.	0.6	A_Econ_D	A_Econ_Total
+Books	Standard	0.2	0.4	B_Std_QC	Std.	0.3	0.1	B_Std_Total
+Home Goods	Standard	H_Std_OV	1.5	H_Std_QC	Spec.	1.5	0.5	H_Std_Total
+Home Goods	Economy	0.7	1.8	1.2	Std.	1.0	0.6	H_Econ_Total
+Groceries	Express	0.1	0.2	0.0	Std.	G_Exp_P	0.1	G_Exp_Total
+
+Additional Information:
+
+1.  The Total Time for an Electronics Express order (E_Exp_Total) is 3.5 hours.
+2.  The Item Picking (IP) time for an Electronics Standard order (E_Std_IP) is 0.2 hours longer than for an Electronics Express order. The Packaging (P) time for an Electronics Standard order (E_Std_P) is also 0.2 hours longer than for an Electronics Express order.
+3.  For an Apparel Express order, the Order Verification (OV) time (A_Exp_OV) is 0.3 hours. The Total Time for an Apparel Economy order (A_Econ_Total) is 2.7 hours.
+4.  The Quality Check (QC) time for an Apparel Economy order (A_Econ_QC) is twice that of an Apparel Express order. The Dispatch (D) time for an Apparel Economy order (A_Econ_D) is also twice that of an Apparel Express order.
+5.  The Total Time for a Books Standard order (B_Std_Total) is 1.2 hours. The Quality Check (QC) time for these orders (B_Std_QC) is 0.2 hours.
+6.  The Order Verification (OV) time for a Home Goods Standard order (H_Std_OV) is 0.1 hours more than for an Electronics Express order. The QC time for these Home Goods orders (H_Std_QC) is the same as the QC time for an Electronics Standard order.
+7.  The Total Time for a Home Goods Standard order (H_Std_Total) is 5.1 hours. The Total Time for a Home Goods Economy order (H_Econ_Total) is 5.3 hours.
+8.  The Packaging (P) time for a Groceries Express order (G_Exp_P) is 0.2 hours, and its Total Time (G_Exp_Total) is 0.6 hours.",What is the Item Picking (IP) time for an Electronics Standard order (E_Std_IP)?,1.0 hr,1.2 hr,1.3 hr,1.5 hr,A,B,C,D,B,MCQ,Data Interpretation,"Table Completion, Formula Application",Easy,Calculating a value in a table by applying a relative rule from the clues.,"data extraction, simple calculation",False,CATMOCKDLR003_Set1_OrderFulfillment,Application,"From the table, the Item Picking (IP) time for an Electronics Express order is 1.0 hr. Clue 2 states that the IP time for an Electronics Standard order (E_Std_IP) is 0.2 hours longer. Therefore, E_Std_IP = 1.0 + 0.2 = 1.2 hr."
+All Questions,40,CATMOCKDLR003_Q2,2,CATMOCKDLR003_Set1_OrderFulfillment,,What is the Quality Check (QC) time for an Apparel Economy order (A_Econ_QC)?,0.25 hr,0.4 hr,0.5 hr,0.6 hr,A,B,C,D,C,MCQ,Data Interpretation,"Table Completion, Rule Application",Easy,Calculating a value in a table by applying a multiplicative rule from the clues.,"clue interpretation, direct calculation",False,CATMOCKDLR003_Set1_OrderFulfillment,Application,"From the table, the Quality Check (QC) time for an Apparel Express order is 0.25 hr. Clue 4 states that the QC time for an Apparel Economy order (A_Econ_QC) is twice that of an Apparel Express order. Therefore, A_Econ_QC = 2 * 0.25 = 0.5 hr."
+All Questions,40,CATMOCKDLR003_Q3,3,CATMOCKDLR003_Set1_OrderFulfillment,,What is the Order Verification (OV) time for a Home Goods Standard order (H_Std_OV)?,0.5 hr,0.6 hr,0.7 hr,0.8 hr,A,B,C,D,B,MCQ,Data Interpretation,"Table Completion, Rule Application",Moderate,Calculating a value by linking data points across different rows in the table.,multi-step deduction,False,CATMOCKDLR003_Set1_OrderFulfillment,Application,"From the table, the Order Verification (OV) time for an Electronics Express order is 0.5 hr. Clue 6 states that the OV time for a Home Goods Standard order (H_Std_OV) is 0.1 hours more. Therefore, H_Std_OV = 0.5 + 0.1 = 0.6 hr."
+All Questions,40,CATMOCKDLR003_Q4,4,CATMOCKDLR003_Set1_OrderFulfillment,,Which of the following has the longest Total Time for fulfillment?,Electronics Standard,Apparel Economy,Home Goods Standard,Home Goods Economy,A,B,C,D,D,MCQ,Data Interpretation,"Comparative Analysis, Table Completion",Moderate,Comparing calculated total values after filling the table using all clues.,"comparison of calculated totals, data extraction",False,CATMOCKDLR003_Set1_OrderFulfillment,Analysis,"First, we must calculate the total times for all relevant orders using the clues. 
+Electronics Standard Total Time = 4.2 hr (given). 
+Apparel Economy Total Time = 2.7 hr (Clue 3). 
+Home Goods Standard Total Time = 5.1 hr (Clue 7). 
+Home Goods Economy Total Time = 5.3 hr (Clue 7). 
+Comparing these values (4.2, 2.7, 5.1, 5.3), the longest is Home Goods Economy at 5.3 hr."
+All Questions,40,CATMOCKDLR003_Q5,5,CATMOCKDLR003_Set1_OrderFulfillment,,What is the sum of Dispatch (D) times for an Apparel Express order and an Apparel Economy order?,0.4 hr,0.5 hr,0.6 hr,0.7 hr,A,B,C,D,C,MCQ,Data Interpretation,"Summation, Table Completion",Moderate,Calculating and summing values based on clues.,summation of deduced values,False,CATMOCKDLR003_Set1_OrderFulfillment,Application,"The Dispatch (D) time for an Apparel Express order is given in the table as 0.2 hr. According to Clue 4, the Dispatch (D) time for an Apparel Economy order is twice that of an Apparel Express order, so it is 2 * 0.2 = 0.4 hr. The sum is 0.2 + 0.4 = 0.6 hr."
+All Questions,40,CATMOCKDLR003_Q6,6,CATMOCKDLR003_Set2_TeamAssignment,"Introductory Text:
+Nine employees (E1, E2, E3, E4, E5, E6, E7, E8, E9) are assigned to a 3x3 grid of project tasks. Each cell in the grid is assigned exactly one employee. Each employee has a unique Skill Score, which is a distinct integer from 1 to 9.
+
+Known Information (Partial Grid and Clues):
+The sum of Skill Scores in each row is 15, and the sum of Skill Scores in each column is 15.
+The following table shows the employees assigned to some of the cells (RxCy denotes Row x, Column y):
+
+	Col 1	Col 2	Col 3
+Row 1	E1	E5	E9
+Row 2	E6	E7	E2
+Row 3	E8	E3	E4
+
+Additional Information (Clues about Skill Scores):
+
+1.  The Skill Score of E5 is 5. The Skill Score of E9 is 9.
+2.  The Skill Score of E6 is 6. The Skill Score of E4 is 4.
+3.  Employee E1 has the lowest possible Skill Score among the nine employees.
+4.  The Skill Score of Employee E7 is exactly one greater than the Skill Score of Employee E6.
+5.  The Skill Score of Employee E3 is exactly one less than the Skill Score of Employee E4.
+6.  Employee E8's Skill Score is an even number greater than E7's Skill Score.",What is the Skill Score of Employee E1?,1,2,3,Cannot be determined,A,B,C,D,A,MCQ,Logical Reasoning,"Grid Puzzle, Constraint Satisfaction",Easy,Direct application of a limiting constraint.,direct application of clue,False,CATMOCKDLR003_Set2_TeamAssignment,Understanding,"The skill scores are distinct integers from 1 to 9. Clue 3 states that Employee E1 has the lowest possible Skill Score. Therefore, the Skill Score of E1 must be 1."
+All Questions,40,CATMOCKDLR003_Q7,7,CATMOCKDLR003_Set2_TeamAssignment,,What is the Skill Score of Employee E8?,7,8,9,Cannot be determined,A,B,C,D,B,MCQ,Logical Reasoning,"Grid Puzzle, Constraint Satisfaction",Moderate,Deduction using the sum constraint of a column.,"deduction using sums, clue integration",False,CATMOCKDLR003_Set2_TeamAssignment,Analysis,"The sum of scores in each column is 15. Column 1 contains E1, E6, and E8. We know S(E1)=1 (from Q6) and S(E6)=6 (Clue 2). Therefore, S(E1) + S(E6) + S(E8) = 15, which means 1 + 6 + S(E8) = 15. Solving for S(E8), we get S(E8) = 15 - 7 = 8."
+All Questions,40,CATMOCKDLR003_Q8,8,CATMOCKDLR003_Set2_TeamAssignment,,What is the Skill Score of Employee E2?,2,3,7,Cannot be determined,A,B,C,D,A,MCQ,Logical Reasoning,"Grid Puzzle, Constraint Satisfaction",Moderate,Deduction using the sum constraint of a column after finding other values.,"deduction using sums, multiple constraints",False,CATMOCKDLR003_Set2_TeamAssignment,Analysis,"The sum of scores in each column is 15. Column 3 contains E9, E2, and E4. We know S(E9)=9 (Clue 1) and S(E4)=4 (Clue 2). Therefore, S(E9) + S(E2) + S(E4) = 15, which means 9 + S(E2) + 4 = 15. Solving for S(E2), we get S(E2) = 15 - 13 = 2."
+All Questions,40,CATMOCKDLR003_Q9,9,CATMOCKDLR003_Set2_TeamAssignment,,"Which employee is assigned to cell (Row 2, Column 2)?",E2,E3,E7,E8,A,B,C,D,C,MCQ,Logical Reasoning,"Grid Puzzle, Constraint Satisfaction",Moderate,Identifying an element in the grid based on its position.,"identification from completed grid, row/column sum",False,CATMOCKDLR003_Set2_TeamAssignment,Understanding,"From the provided grid table, the employee assigned to the cell at the intersection of Row 2 and Column 2 is E7."
+All Questions,40,CATMOCKDLR003_Q10,10,CATMOCKDLR003_Set3_EnrollmentFunnel,"Introductory Text:
+An online learning platform tracked 10,000 initial Website Visits (WV) over a period. These visits were attributed to one of four primary marketing channels: Organic Search (OS), Social Media (SM), Email Campaign (EC), or Referrals (R). Visitors could then progress to a Free Trial Sign-up (FT), then to a Paid Subscription (PS), and finally to an Advanced Module Add-on (AM). Conversion rates for FT are calculated based on WV from that channel. Conversion rates for PS are calculated based on FT users from that channel. Conversion rates for AM are calculated based on PS users from that channel.
+
+Known Information (Partial Data Table for Student):
+
+Channel	WV from Channel	FT Users from Channel	PS Users from Channel	AM Users from Channel
+OS	4000	FT_OS	PS_OS	AM_OS
+SM	SM_WV	FT_SM	180	AM_SM
+EC	2000	FT_EC	PS_EC	75
+Referrals	1000	400	PS_R	72
+Total	10000	2600	PS_Total	254
+
+Additional Information (Clues):
+
+1.  The number of Website Visits (WV) attributed to Social Media (SM_WV) was 3000.
+2.  The conversion rate from Website Visits (WV) to Free Trial Sign-up (FT) for users attributed to Organic Search was 25%.
+3.  For users attributed to the Email Campaign channel, the conversion rate from Free Trial Sign-up (FT) to Paid Subscription (PS) was 50%.
+4.  For users attributed to the Referrals channel, the conversion rate from Paid Subscription (PS) to Advanced Module Add-on (AM) was 30%.
+5.  The conversion rate from Paid Subscription (PS) to Advanced Module Add-on (AM) for users attributed to Organic Search was 20%.
+6.  The number of Free Trial Sign-ups (FT) from users attributed to Social Media was 600.
+7.  The total number of users who purchased a Paid Subscription (PS_Total) across all channels was 1120.
+8.  The conversion rate from Free Trial (FT) to Paid Subscription (PS) for users attributed to Organic Search was 40%.",How many users signed up for a Free Trial (FT) from Organic Search?,800,1000,1200,1250,A,B,C,D,B,MCQ,Data Interpretation,"Percentages, Table Completion",Easy,Calculating a value based on a given base and a percentage conversion rate.,"direct calculation, percentage application",False,CATMOCKDLR003_Set3_EnrollmentFunnel,Application,"The table shows that there were 4000 Website Visits (WV) from Organic Search (OS). Clue 2 states that the conversion rate from WV to Free Trial (FT) for OS was 25%. Therefore, the number of FT users from OS is 4000 * 0.25 = 1000."
+All Questions,40,CATMOCKDLR003_Q11,11,CATMOCKDLR003_Set3_EnrollmentFunnel,,What was the conversion rate (%) from Free Trial (FT) to Paid Subscription (PS) for users from Social Media?,20%,25%,30%,35%,A,B,C,D,C,MCQ,Data Interpretation,"Percentages, Rate Calculation",Moderate,Calculating a conversion rate from two given data points.,rate calculation from derived values,False,CATMOCKDLR003_Set3_EnrollmentFunnel,Analysis,Clue 6 states that there were 600 Free Trial (FT) sign-ups from Social Media (SM). The table shows there were 180 Paid Subscription (PS) users from SM. The conversion rate is (PS users / FT users) * 100 = (180 / 600) * 100 = 30%.
+All Questions,40,CATMOCKDLR003_Q12,12,CATMOCKDLR003_Set3_EnrollmentFunnel,,How many users purchased a Paid Subscription (PS) through Email Campaign?,200,250,300,350,A,B,C,D,C,MCQ,Data Interpretation,"Percentages, Table Completion",Moderate,Multi-step deduction involving calculation of an intermediate value to find the final answer.,multi-step calculation from derived values,False,CATMOCKDLR003_Set3_EnrollmentFunnel,Analysis,"First, find the number of Free Trial (FT) users from Email Campaign (EC). Total FT = 2600. FT_OS = 1000 (from Q10). FT_SM = 600 (Clue 6). FT_R = 400 (Table). So, FT_EC = 2600 - (1000 + 600 + 400) = 600. Clue 3 states the FT to PS conversion rate for EC is 50%. Therefore, PS users from EC = 600 * 0.50 = 300."
+All Questions,40,CATMOCKDLR003_Q13,13,CATMOCKDLR003_Set3_EnrollmentFunnel,,What was the overall conversion rate (%) from Website Visits (WV) to Free Trial Sign-ups (FT) for all channels combined?,22%,24%,26%,28%,A,B,C,D,C,MCQ,Data Interpretation,"Percentages, Aggregate Calculation",Moderate,Calculating an overall rate using total values from the table.,"overall rate calculation, use of totals",False,CATMOCKDLR003_Set3_EnrollmentFunnel,Application,"The table provides the total numbers needed. Total Website Visits (WV) = 10,000. Total Free Trial Sign-ups (FT) = 2600. The overall conversion rate is (Total FT / Total WV) * 100 = (2600 / 10000) * 100 = 26%."
+All Questions,40,CATMOCKDLR003_Q14,14,CATMOCKDLR003_Set3_EnrollmentFunnel,,Which channel generated the highest number of Advanced Module (AM) users?,Organic Search,Social Media,Email Campaign,Referrals,A,B,C,D,A,MCQ,Data Interpretation,"Comparative Analysis, Table Completion",Moderate,Comparing calculated values across multiple categories to find the maximum.,comparison of calculated values across categories,False,CATMOCKDLR003_Set3_EnrollmentFunnel,Analysis,"We need to calculate the number of AM users for each channel. 
+OS: PS_OS = 1000 FT * 40% = 400. AM_OS = 400 PS * 20% (Clue 5) = 80. 
+SM: PS_SM = 180. Total AM = 254. AM_OS=80, AM_EC=75, AM_R=72. So, AM_SM = 254 - (80+75+72) = 27. 
+EC: AM_EC = 75 (Table). 
+Referrals: AM_R = 72 (Table). 
+Comparing the values: OS (80), SM (27), EC (75), R (72). Organic Search generated the highest number."
+All Questions,40,CATMOCKDLR003_Q15,15,CATMOCKDLR003_Set4_AlumniAnalysis,"Introductory Text:
+Innovate University tracked its Class of 2000 alumni. Initially, the class had 100 graduates from Engineering (Eng), 150 from Business (Bus), 80 from Arts & Humanities (AH), and 120 from Sciences (Sci). Their career progression was assessed at four checkpoints: 2005, 2010, 2015, and 2020. At each checkpoint, the number of tracked alumni from each original Field of Study (FOS) was noted, and their primary engagement was categorized into one of six milestones: Entry-Level (EL), Mid-Management (MM), Senior Leadership (SL), Entrepreneur (EN), Further Education (FE), or Other/Unaccounted (O). All percentages are based on the number of tracked alumni for that FOS at that specific checkpoint year. Assume no alumni switch their original FOS category for tracking purposes. All calculated numbers of alumni for any category must be integers; if a calculation from a percentage results in a non-integer, round it to the nearest integer (0.5 rounds up). The 'Other/Unaccounted' (O) category number for a given FOS and year is the 'Tracked Alumni' for that FOS/year minus the sum of the integer numbers of alumni in the other five categories (EL, MM, SL, EN, FE) for that FOS/year. Blank percentages in the tables (e.g., FE_E05) must be determined from the clues.
+
+Data Tables (Percentages of Tracked Alumni in each Milestone):
+
+Engineering (Eng) Alumni - Initial: 100
+| Year | Tracked Alumni | EL (%) | MM (%) | SL (%) | EN (%)                 | FE (%) | O (%) |
+| :--- | :------------- | :----- | :----- | :----- | :--------------------- | :----- | :---- |
+| 2005 | 100            | 60     | 20     | 0      | 5                      | FE_E05 | 5     |
+| 2010 | 98             | 15     | MM_E10 | 10     | 10                     | 5      | 10    |
+| 2015 | 95             | 5      | 30     | SL_E15 | EN_E15_SeeClue         | 2      | O_E15 |
+| 2020 | 92             | 2      | 10     | 40     | EN_E20                 | 1      | 22    |
+
+Business (Bus) Alumni - Initial: 150
+| Year | Tracked Alumni | EL (%) | MM (%) | SL (%) | EN (%) | FE (%) | O (%) |
+| :--- | :------------- | :----- | :----- | :----- | :----- | :----- | :---- |
+| 2005 | 145 | 50 | 30 | 2 | 8 | 5 | 5 |
+| 2010 | 140 | 10 | MM_B10 | 15 | 15 | 3 | 7 |
+| 2015 | 130 | 4 | 20 | 30 | EN_B15 | 1 | O_B15 |
+| 2020 | 125 | 1 | 8 | SL_B20 | 36 | 0 | 15 |
+
+Arts & Humanities (AH) Alumni - Initial: 80
+| Year | Tracked Alumni | EL (%) | MM (%) | SL (%) | EN (%) | FE (%) | O (%) |
+| :--- | :------------- | :----- | :----- | :----- | :----- | :----- | :---- |
+| 2005 | 80 | 65 | 10 | 0 | 5 | 15 | 5 |
+| 2010 | 78 | 20 | MM_A10 | 5 | 10 | 8 | 7 |
+| 2015 | 75 | 8 | 28 | 24 | EN_A15 | 4 | O_A15 |
+| 2020 | 70 | 2 | 10 | SL_A20 | 20 | 1 | 20 |
+
+Sciences (Sci) Alumni - Initial: 120
+| Year | Tracked Alumni | EL (%) | MM (%) | SL (%) | EN (%) | FE (%) | O (%) |
+| :--- | :------------- | :----- | :----- | :----- | :----- | :----- | :---- |
+| 2005 | 120 | 40 | 15 | 1 | 4 | FE_S05 | 20 |
+| 2010 | 115 | 10 | MM_S10 | 8 | 7 | 10 | 10 |
+| 2015 | 110 | 5 | 25 | 20 | 10 | 5 | O_S15 |
+| 2020 | 105 | 1 | 8 | 30 | 15 | 1 | O_S20 |
+
+Additional Information (Clues):
+
+1.  For Engineering alumni in 2005, 10% were pursuing Further Education (FE_E05 = 10%).
+2.  For Engineering alumni in 2010, the percentage in Mid-Management (MM_E10) was 50%.
+3.  For Engineering alumni in 2015, the percentage in Senior Leadership (SL_E15) was 35%.
+4.  For Engineering alumni in 2020, the percentage who were Entrepreneurs (EN_E20) was 25%.
+5.  Across all FOS combined in 2010, exactly 200 alumni were in Mid-Management roles. The Business cohort had 70 alumni in Mid-Management in 2010 (so MM_B10 = 70/140 = 50%). The Arts & Humanities cohort had 39 alumni in Mid-Management in 2010 (so MM_A10 = 39/78 = 50%).
+6.  The number of Sciences alumni pursuing Further Education in 2005 (FE_S05 calculated from its percentage) was 24.
+7.  In 2020, the number of Business alumni in Senior Leadership roles (SL_B20 calculated from its percentage) was 50.
+8.  The total number of tracked alumni across all FOS in 2015 who were Entrepreneurs was 57. For Engineering alumni in 2015, the number who were Entrepreneurs (EN) was exactly 14; this specific number overrides any calculation from a table percentage for EN_E15. For Business alumni in 2015, the number of Entrepreneurs was 25. For Arts & Humanities alumni in 2015, the number of Entrepreneurs was 8.",How many Engineering alumni were in the 'Other/Unaccounted' (O) category in 2015?,10,12,13,15,A,B,C,D,B,MCQ,Data Interpretation,"Table Analysis, Percentage Calculation",Moderate,"Calculating a balancing figure by applying percentages, rounding rules, and specific overrides from clues.","data extraction from table, application of rounding rules, calculation of balancing figure",False,CATMOCKDLR003_Set4_AlumniAnalysis,Analysis,"For Engineering alumni in 2015, there were 95 tracked alumni. We calculate the number in each category:
+EL: 95 * 5% = 4.75 -> 5
+MM: 95 * 30% = 28.5 -> 29
+SL: 95 * 35% (Clue 3) = 33.25 -> 33
+EN: 14 (exact number from Clue 8)
+FE: 95 * 2% = 1.9 -> 2
+The sum of these is 5 + 29 + 33 + 14 + 2 = 83.
+The 'Other/Unaccounted' (O) number is the total tracked minus this sum: 95 - 83 = 12."
+All Questions,40,CATMOCKDLR003_Q16,16,CATMOCKDLR003_Set4_AlumniAnalysis,,What percentage of Sciences alumni were in Mid-Management (MM) roles in 2010?,30%,35%,40%,45%,A,B,C,D,B,MCQ,Data Interpretation,"Table Analysis, Percentage Calculation",Difficult,Deducing a value by aggregating data across multiple tables and categories and then calculating a percentage.,"multi-step deduction across categories, application of rounding rules, percentage calculation, matching to closest option",False,CATMOCKDLR003_Set4_AlumniAnalysis,Analysis,"Clue 5 states that the total number of alumni in Mid-Management (MM) in 2010 was 200. We need to find the number of MM alumni from other fields to find the number for Sciences.
+Eng: 98 tracked * 50% (Clue 2) = 49.
+Bus: 70 (Clue 5).
+AH: 39 (Clue 5).
+Sum from Eng, Bus, AH = 49 + 70 + 39 = 158.
+Number of MM for Sciences = 200 - 158 = 42.
+Tracked Sciences alumni in 2010 were 115. 
+Percentage = (42 / 115) * 100% ≈ 36.52%. The closest option is 35%."
+All Questions,40,CATMOCKDLR003_Q17,17,CATMOCKDLR003_Set4_AlumniAnalysis,,"In 2020, which Field of Study (FOS) had the highest absolute number of alumni in Senior Leadership (SL) roles?",Engineering,Business,Arts & Humanities,Sciences,A,B,C,D,B,MCQ,Data Interpretation,"Comparative Analysis, Table Analysis",Moderate,"Calculating absolute numbers from percentages and comparing them across categories, applying rounding rules.","calculation of absolute numbers, comparison across categories, application of rounding rules",False,CATMOCKDLR003_Set4_AlumniAnalysis,Analysis,"We calculate the absolute number of SL alumni for each FOS in 2020.
+Eng: 92 tracked * 40% = 36.8 -> 37.
+Bus: 50 (exact number from Clue 7).
+AH: We must first find the percentage for SL. Sum of other percentages = 2+10+20+1+20=53%. So SL% = 100-53=47%. Number = 70 tracked * 47% = 32.9 -> 33.
+Sci: 105 tracked * 30% = 31.5 -> 32.
+Comparing the numbers: Eng(37), Bus(50), AH(33), Sci(32). Business has the highest number with 50."
+All Questions,40,CATMOCKDLR003_Q18,18,CATMOCKDLR003_Set4_AlumniAnalysis,,What was the total number of alumni from the Arts & Humanities cohort who were Entrepreneurs in 2015?,6,8,10,12,A,B,C,D,B,MCQ,Data Interpretation,"Table Analysis, Clue Interpretation",Easy,"Extracting a direct, explicitly stated value from the clues.",direct data extraction from clue,False,CATMOCKDLR003_Set4_AlumniAnalysis,Understanding,"Clue 8 explicitly states: 'For Arts & Humanities alumni in 2015, the number of Entrepreneurs was 8.'"
+All Questions,40,CATMOCKDLR003_Q19,19,CATMOCKDLR003_Set5_WorkshopScheduling,"Introductory Text:
+A one-day event features six distinct 2-hour workshops: W1 (""AI in Marketing"" - AIM), W2 (""Data Storytelling"" - DS), W3 (""Agile Methodologies"" - AM), W4 (""Blockchain Basics"" - BB), W5 (""UX Design Thinking"" - UXDT), and W6 (""Cloud Security"" - CS).
+There are three available time slots: TS1 (9-11 AM), TS2 (11:30 AM - 1:30 PM), and TS3 (2:30 PM - 4:30 PM).
+There are three available rooms: R1 (Capacity 50, equipped with Projector only), R2 (Capacity 30, equipped with Whiteboard only), and R3 (Capacity 40, equipped with both Projector & Whiteboard).
+Each workshop must be assigned to exactly one room and one time slot. A room can host only one workshop per time slot.
+
+Workshop Requirements & Facilitators:
+
+W1 (AIM): Needs Projector. Facilitated by F1.
+W2 (DS): Needs Projector AND Whiteboard. Facilitated by F2.
+W3 (AM): Needs Whiteboard. Facilitated by F3.
+W4 (BB): Needs Projector. Facilitated by F1.
+W5 (UXDT): Needs Whiteboard. Facilitated by F4.
+W6 (CS): Needs Projector. Facilitated by F5.
+
+Additional Information (Clues):
+
+1.  Each of the five facilitators (F1, F2, F3, F4, F5) can only facilitate one workshop at any given time. Facilitator F1 is assigned to facilitate two workshops (W1 and W4) during the day.
+2.  All six workshops are scheduled within the first two time slots (TS1 and TS2); Time Slot TS3 remains entirely empty.
+3.  Workshop W2 (""Data Storytelling"") is scheduled in Room R3.
+4.  Workshop W3 (""Agile Methodologies"") is scheduled in Time Slot TS1 but not in Room R1.
+5.  Workshop W1 (""AI in Marketing"") and Workshop W4 (""Blockchain Basics"") are scheduled in the same room but in different time slots.
+6.  Workshop W6 (""Cloud Security"") is not scheduled in Time Slot TS1. Facilitator F4 (for W5) is busy in Time Slot TS2.
+7.  Workshop W1 (""AI in Marketing"") is scheduled in an earlier time slot than Workshop W4 (""Blockchain Basics"").",Which workshop is scheduled in Room R1 during Time Slot TS1?,W1 (AIM),W2 (DS),W4 (BB),W6 (CS),A,B,C,D,A,MCQ,Logical Reasoning,"Scheduling, Constraint Satisfaction",Moderate,Deducing a specific assignment in a scheduling puzzle by synthesizing multiple constraints.,"time slot allocation, resource matching, facilitator constraints, sequential constraints",False,CATMOCKDLR003_Set5_WorkshopScheduling,Analysis,"Based on Clues 1, 5, and 7, W1 (facilitated by F1) and W4 (also by F1) must be in different time slots. Since W1 is earlier, W1 is in TS1 and W4 is in TS2. They are in the same room. W2 needs both Projector & Whiteboard, so it must be in R3. Clue 3 confirms W2 is in R3. Since W2 must be in TS1 or TS2, we can determine the schedule. The only way to satisfy all constraints is to place W4 (needs P) in R1-TS2, which means W1 must be in R1-TS1 to be in the same room. W6 (needs P) is in TS2 (Clue 6), and R3 is the only remaining room with a projector in TS2, so W6 is in R3-TS2. This forces W2 into R3-TS1. Thus, W1 is in Room R1, Time Slot TS1."
+All Questions,40,CATMOCKDLR003_Q20,20,CATMOCKDLR003_Set5_WorkshopScheduling,,"In which room and time slot is Workshop W5 (""UX Design Thinking"") scheduled?","Room R1, Time Slot TS2","Room R2, Time Slot TS1","Room R2, Time Slot TS2","Room R3, Time Slot TS1",A,B,C,D,B,MCQ,Logical Reasoning,"Scheduling, Constraint Satisfaction",Moderate,Deducing an assignment through logical elimination based on time and resource constraints.,"multi-step deduction, elimination of possibilities, resource matching",False,CATMOCKDLR003_Set5_WorkshopScheduling,Analysis,"Clue 6 states that facilitator F4 (for W5) is busy in Time Slot TS2. This means W5 cannot be scheduled in TS2 and must be in TS1. We have deduced that in TS1, W1 is in R1 and W2 is in R3. The only remaining room for W5 in TS1 is R2. Room R2 has a whiteboard, which matches the requirement for W5. Therefore, W5 is scheduled in Room R2, Time Slot TS1."
+All Questions,40,CATMOCKDLR003_Q21,21,CATMOCKDLR003_Set5_WorkshopScheduling,,Which facilitator is free during Time Slot TS1?,F1,F4,F5,No facilitator is free in TS1 among F1-F5.,A,B,C,D,C,MCQ,Logical Reasoning,"Scheduling, Constraint Satisfaction",Easy,Identifying availability based on a completed schedule.,"facilitator availability tracking, time slot analysis",False,CATMOCKDLR003_Set5_WorkshopScheduling,Understanding,"Based on the final schedule, the workshops in TS1 are W1 (facilitated by F1), W2 (by F2), and W3 (by F3). Therefore, facilitators F1, F2, and F3 are busy. Facilitators F4 and F5 are facilitating workshops in TS2, which means they are free during TS1. Of the options provided, F5 is listed."
+All Questions,40,CATMOCKDLR003_Q22,22,CATMOCKDLR003_Set5_WorkshopScheduling,,"If a new 2-hour workshop, W7, requiring only a Projector and facilitated by a new facilitator F6, needs to be scheduled, which is a possible room and time slot combination for W7?","Room R1, Time Slot TS3","Room R2, Time Slot TS3","Room R3, Time Slot TS2","Room R1, Time Slot TS2",A,B,C,D,A,MCQ,Logical Reasoning,"Scheduling, Resource Availability",Moderate,Identifying available resources and time slots to accommodate a new event with given constraints.,"identifying empty slots, matching requirements for new event",False,CATMOCKDLR003_Set5_WorkshopScheduling,Application,"Clue 2 states that Time Slot TS3 is entirely empty. W7 requires a Projector. We need to find a room with a projector that is free in TS3. Room R1 has a Projector and is free in TS3. Room R2 has only a Whiteboard, so it's not suitable. Room R3 has a Projector and is also free in TS3. Of the given options, 'Room R1, Time Slot TS3' is a valid and possible combination."

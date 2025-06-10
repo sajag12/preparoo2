@@ -1,0 +1,265 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+QA,,Q45,1,,,"A bus has a fixed schedule for its daily route of 300 km. One day, it started 1 hour late. To compensate, it travelled the first 40% of the route at its scheduled speed, and then increased its speed by 33.33% (or 1/3rd) for the remaining 60% of the route, ultimately arriving at its destination exactly on schedule. What is the scheduled speed of the bus in km/hr?",45,60,75,90,A,B,C,D,A,MCQ,Arithmetic,"Time, Speed & Distance (General)",Hard,"Time, Speed, and Distance with variable speed","Piecewise Speed, Scheduled Time, Algebraic Modelling",False,MockSet1_QA,Analyzing,"Let S be the scheduled speed in km/hr and T be the scheduled time in hours. The route length D = 300 km.
+So, D = ST, which means T = 300/S.
+One day, the bus started 1 hour late. To arrive on schedule, the actual travel time must be T - 1 hours.
+First 40% of the route = 0.4 * 300 = 120 km. Time taken for this part = 120/S hours.
+Remaining 60% of the route = 0.6 * 300 = 180 km.
+Speed for this part is increased by 33.33% (1/3rd). New speed = S + S/3 = 4S/3 km/hr.
+Time taken for this part = 180 / (4S/3) = (180 * 3) / (4S) = 540 / 4S = 135/S hours.
+Total actual travel time = (120/S) + (135/S) = 255/S hours.
+This total actual travel time must be equal to T - 1:
+255/S = (300/S) - 1
+1 = 300/S - 255/S
+1 = 45/S
+S = 45 km/hr.
+The final answer is (A)."
+QA,,Q46,2,,,"A four-digit number abcd has distinct non-zero digits. It is given that abcd is divisible by 11, a+d = b+c, and a+b+c+d = 24. If a > d, what is the number abcd if its value is to be maximized?",,,,,,,,,9843,TITA,Algebra,Number System,Hard,"Number properties, divisibility rules, and maximization","Divisibility Rules, Number Properties, Digit Problems, Maximization",True,MockSet1_QA,Analyzing,"Let the four-digit number be N = 1000a + 100b + 10c + d.
+Digits a, b, c, d are distinct and non-zero (a,b,c,d ∈ {1, ..., 9}).
+Condition 1: abcd is divisible by 11. This means (d+b) - (c+a) is a multiple of 11.
+Condition 2: a+d = b+c.
+Substituting Condition 2 into the divisibility rule: (a+d) - (a+d) = 0. Since 0 is a multiple of 11, Condition 1 is satisfied if Condition 2 holds.
+Condition 3: a+b+c+d = 24.
+Using Condition 2, let K = a+d = b+c. Then K+K = 24 => 2K = 24 => K = 12.
+So, a+d = 12 and b+c = 12.
+Condition 4: a > d.
+We want to maximize the number abcd, so 'a' should be maximized first, then 'b', then 'c'.
+For a+d = 12, a > d, and a,d are distinct non-zero:
+Possible (a,d) pairs: (9,3), (8,4), (7,5).
+To maximize abcd, we choose the largest 'a', so a=9, d=3. (Digits used: 9, 3).
+For b+c = 12, b,c are distinct non-zero, and b,c ≠ 9, b,c ≠ 3:
+Possible (b,c) pairs to maximize 'b':
+If b=8, c=4. (Digits used: 9,8,4,3. All distinct). Number: 9843.
+If b=7, c=5. (Digits used: 9,7,5,3. All distinct). Number: 9753.
+Comparing these, 9843 is the largest.
+The final answer is 9843."
+QA,,Q47,3,,,"In quadrilateral ABCD, AB is parallel to CD. Diagonals AC and BD intersect at O. If the area of triangle AOB is 16 sq. units and the area of triangle COD is 25 sq. units, what is the area of quadrilateral ABCD in sq. units?",,,,,,,,,81,TITA,Geometry,Quadrilaterals & Polygons,Hard,Area of trapezium using properties of diagonals,"Trapezium, Area of Triangles, Properties of Trapezium Diagonals",True,MockSet1_QA,Analyzing,"In a trapezium ABCD with AB || CD, and diagonals AC and BD intersecting at O:
+Triangles AOB and COD are similar.
+A key property is that Area(ΔAOD) = Area(ΔBOC). Let this area be X.
+Another property states that Area(ΔAOB) * Area(ΔCOD) = Area(ΔAOD) * Area(ΔBOC).
+Given Area(ΔAOB) = 16 sq. units and Area(ΔCOD) = 25 sq. units.
+So, 16 * 25 = X * X = X².
+X² = 400 => X = 20 sq. units (since area must be positive).
+The area of the quadrilateral ABCD is the sum of the areas of the four triangles:
+Area(ABCD) = Area(ΔAOB) + Area(ΔCOD) + Area(ΔAOD) + Area(ΔBOC)
+Area(ABCD) = 16 + 25 + X + X = 16 + 25 + 20 + 20 = 41 + 40 = 81 sq. units.
+The final answer is 81."
+QA,,Q48,4,,,Find the sum of the infinite series: 1 + (1+x)/2! + (1+x+x²)/3! + (1+x+x²+x³)/4! + ... where |x| < 1.,(e^x - e) / (x-1),(e - 1) / (1-x),(e^x - 1) / (x(1-x)),(e^x - 1) / (1-x),A,B,C,D,A,MCQ,Algebra,Sequences & Series,Hard,Summation of infinite series using Taylor expansion,"Infinite Series, Taylor Series Expansion (e^x), Summation",False,MockSet1_QA,Analyzing,"Let S be the sum of the series. The k-th term (for the k! in denominator) is (1+x+x²+...+x^(k-1)) / k! for k ≥ 1.
+The sum of the geometric progression in the numerator is (1-x^k)/(1-x) for x ≠ 1.
+So the k-th term T_k = (1-x^k) / (k!(1-x)).
+S = Σ_{k=1 to ∞} T_k = Σ_{k=1 to ∞} [ (1-x^k) / (k!(1-x)) ]
+S = (1/(1-x)) * [ Σ_{k=1 to ∞} (1/k!) - Σ_{k=1 to ∞} (x^k/k!) ]
+We know the Taylor series for e: e = Σ_{k=0 to ∞} (1/k!) = 1/0! + 1/1! + 1/2! + ... = 1 + Σ_{k=1 to ∞} (1/k!).
+So, Σ_{k=1 to ∞} (1/k!) = e - 1.
+Similarly for e^x: e^x = Σ_{k=0 to ∞} (x^k/k!) = x⁰/0! + x¹/1! + x²/2! + ... = 1 + Σ_{k=1 to ∞} (x^k/k!).
+So, Σ_{k=1 to ∞} (x^k/k!) = e^x - 1.
+Substituting these into the sum S:
+S = (1/(1-x)) * [ (e - 1) - (e^x - 1) ]
+S = (1/(1-x)) * [ e - 1 - e^x + 1 ]
+S = (1/(1-x)) * (e - e^x) = (e - e^x) / (1-x).
+This can be rewritten as (e^x - e) / (x-1).
+The final answer is (A)."
+QA,,Q49,5,,,"In a trapezium ABCD, AB is parallel to CD. AB = 10 cm, CD = 20 cm. The non-parallel sides AD and BC are 8 cm and 6 cm respectively. A line segment PQ is drawn parallel to AB and CD, with P on AD and Q on BC, such that PQ divides the trapezium into two smaller trapeziums of equal perimeter. If the length of PQ is x/y cm, where x and y are coprime positive integers, find the value of x.",,,,,,,,,130,TITA,Geometry,Quadrilaterals & Polygons,Hard,Properties of a trapezium with parallel lines and perimeters,"Trapezium, Parallel Lines, Similar Triangles, Perimeter, Ratio Division of Sides",True,MockSet1_QA,Analyzing,"Let AB = a = 10, CD = b = 20. Let AD = s1 = 8, BC = s2 = 6. Let PQ = z.
+Let P divide AD in the ratio k:(1-k) starting from A (i.e., AP = ks1, PD = (1-k)s1).
+Since PQ || AB || CD, Q divides BC in the same ratio k:(1-k) starting from B (i.e., BQ = ks2, QC = (1-k)s2).
+The length of PQ is given by the formula z = (1-k)a + kb.
+So, z = (1-k)10 + k20 = 10 - 10k + 20k = 10 + 10k.
+Perimeter of trapezium ABQP = AB + BQ + PQ + AP
+= a + ks2 + z + ks1 = 10 + 6k + (10+10k) + 8k = 20 + 24k.
+Perimeter of trapezium PQCD = PQ + QC + CD + PD
+= z + (1-k)*s2 + b + (1-k)*s1 = (10+10k) + (1-k)*6 + 20 + (1-k)8
+= 10+10k + 6-6k + 20 + 8-8k = 44 - 4k.
+Given that these perimeters are equal:
+20 + 24k = 44 - 4k
+28k = 24
+k = 24/28 = 6/7.
+Now, substitute k back into the expression for PQ:
+PQ = z = 10 + 10k = 10 + 10(6/7) = 10 + 60/7 = (70+60)/7 = 130/7.
+The length of PQ is 130/7 cm.
+The question asks for the value of x, where PQ = x/y and x, y are coprime. So x=130.
+The final answer is 130."
+QA,,Q50,6,,,"A dataset consists of 7 distinct positive integers. The average of these integers is 22. The smallest integer is x₁ and the largest is x₇. If the smallest integer is replaced by a new integer x₁' = x₁ - 5, and the largest integer is replaced by a new integer x₇' = x₇ + 12, by how much does the average of the 7 integers increase?",,,,,,,,,1,TITA,Arithmetic,Averages & Weighted Averages,Easy,Calculation of average and effect of data changes,"Average, Sum of Integers, Data Interpretation",True,MockSet1_QA,Understanding,"Let the 7 distinct positive integers be x₁, x₂, ..., x₇.
+Original average = 22. Original sum S = 7 * 22 = 154.
+The smallest integer is x₁, largest is x₇.
+New set: x₁' = x₁ - 5, x₂ , ..., x₆, x₇' = x₇ + 12.
+The sum of the new set S' = (x₁ - 5) + x₂ + ... + x₆ + (x₇ + 12) = (x₁ + ... + x₇) - 5 + 12 = S + 7.
+S' = 154 + 7 = 161.
+The new average = S' / 7 = 161 / 7 = 23.
+The increase in average = New average - Original average = 23 - 22 = 1.
+The final answer is 1."
+QA,,Q51,7,,,"Anil, Bimal, and Charu invest ₹X, ₹Y, and ₹Z respectively in a partnership. The duration of their investments are in the ratio 3:4:5. At the end of the partnership, the profits are shared in the ratio 2:3:4. If Anil’s investment ₹X was ₹10,000, what is the total investment (X+Y+Z) made by all three?","₹28,750","₹30,000","₹31,250","₹33,250",A,B,C,D,D,MCQ,Arithmetic,"Ratio, Proportion & Variation",Medium,Profit sharing in a partnership based on investment and duration,"Partnership, Profit Sharing, Ratio of Investments and Durations",False,MockSet1_QA,Applying,"Let the investments be I_A, I_B, I_C and the durations be D_A, D_B, D_C.
+Profit is proportional to Investment × Duration.
+Given I_A = X = ₹10,000.
+D_A : D_B : D_C = 3 : 4 : 5.
+Profit_A : Profit_B : Profit_C = 2 : 3 : 4.
+Since Profit ∝ Investment × Duration, we have:
+Profit_A / (I_A * D_A) = Profit_B / (I_B * D_B) = Profit_C / (I_C * D_C).
+2 / (X * 3) = 3 / (Y * 4) = 4 / (Z * 5)
+2 / (3X) = 3 / (4Y) = 4 / (5Z)
+From 2 / (3X) = 3 / (4Y): 8Y = 9X => Y = (9/8)X.
+From 2 / (3X) = 4 / (5Z): 10Z = 12X => Z = (12/10)X = (6/5)X.
+Given X = ₹10,000.
+Y = (9/8) * 10000 = ₹11,250.
+Z = (6/5) * 10000 = ₹12,000.
+Total investment (X+Y+Z) = 10000 + 11250 + 12000 = ₹33,250.
+The final answer is (D)."
+QA,,Q52,8,,,"If x and y are positive real numbers such that x^(√y) = y^(√x) and y = x², and x+y is one of the options provided, what is the value of x + y?",2,4,6,8,A,B,C,D,A,MCQ,Algebra,Indices & Surds,Medium,Solving exponential equations with substitution,"Exponential Equations, Logarithms (implicit), Substitution",False,MockSet1_QA,Applying,"Given x^(√y) = y^(√x) and y = x². Since x, y are positive real numbers, x > 0.
+Substitute y = x² into the first equation:
+x^(√(x²)) = (x²)^(√x)
+Since x > 0, √(x²) = x.
+So, x^x = (x²)^(√x).
+Using the exponent rule (a^b)^c = a^(bc): x^x = x^(2√x).
+Case 1: x = 1. If x = 1, then 1^1 = 1^(2√1) => 1 = 1. This is a valid solution. If x=1, then y = x² = 1² = 1. For this pair, x+y = 1+1 = 2.
+Case 2: x > 0 and x ≠ 1. Since the bases are equal and not 1, we can equate the exponents: x = 2√x. Since x > 0, we can divide both sides by √x: √x = 2. Squaring both sides: x = 4. If x=4, then y = x² = 4² = 16. For this pair, x+y = 4+16 = 20.
+The question specifies 'x+y is one of the options provided'. The value x+y=2 is present in option (A), while x+y=20 is not. Therefore, the intended solution corresponds to x=1, y=1.
+The final answer is (A)."
+QA,,Q53,9,,,For how many distinct integer values of x is (x² - 7x + 10) / (x² - 9x + 18) < 0?,,,,,,,,,0,TITA,Algebra,Inequalities,Medium,Solving rational inequalities and finding integer solutions,"Rational Inequalities, Sign Analysis, Polynomial Roots, Integer Solutions",True,MockSet1_QA,Applying,"Let N(x) = x² - 7x + 10 = (x-2)(x-5). Roots are x=2, x=5.
+Let D(x) = x² - 9x + 18 = (x-3)(x-6). Roots are x=3, x=6.
+We need the fraction F(x) = N(x)/D(x) < 0.
+The critical points are 2, 3, 5, 6.
+Using the wavy curve method (sign analysis):
+The expression is positive for x > 6. It changes sign at each root.
+Intervals: (-∞, 2), (2, 3), (3, 5), (5, 6), (6, ∞)
+Signs:      +,       -,      +,      -,      +
+The inequality holds for x ∈ (2,3) U (5,6).
+We are looking for distinct integer values of x.
+In the interval (2,3), there are no integers.
+In the interval (5,6), there are no integers.
+Thus, there are 0 integer values of x for which the inequality holds.
+The final answer is 0."
+QA,,Q54,10,,,"If α and β are the roots of the quadratic equation 2x² - 5x + 3 = 0, find the value of ((α+β)² - 3αβ) / αβ.",35/12,7/6,19/6,19/12,A,B,C,D,B,MCQ,Algebra,Quadratic Equations,Easy,Application of Vieta's formulas for quadratic equations,"Roots of Quadratic Equation, Sum and Product of Roots, Algebraic Manipulation",False,MockSet1_QA,Understanding,"Given the quadratic equation 2x² - 5x + 3 = 0.
+The roots are α and β.
+From Vieta's formulas:
+Sum of roots: α + β = -(-5)/2 = 5/2.
+Product of roots: αβ = 3/2.
+We need to find the value of ((α+β)² - 3αβ) / αβ.
+Substitute the values of α+β and αβ into the expression:
+Numerator = (α+β)² - 3αβ = (5/2)² - 3(3/2) = 25/4 - 9/2 = 25/4 - 18/4 = 7/4.
+Denominator = αβ = 3/2.
+So the expression is (7/4) / (3/2) = (7/4) * (2/3) = 14/12 = 7/6.
+The final answer is (B)."
+QA,,Q55,11,,,"If a/b + b/a = 4, where a and b are positive real numbers and a > b, what is the value of (a/b - b/a)?",√12,√10,√8,√6,A,B,C,D,A,MCQ,Algebra,Basics of Algebra & Identities,Easy,Algebraic manipulation of reciprocal sum identities,"Algebraic Manipulation, Quadratic from Reciprocal Sum",False,MockSet1_QA,Understanding,"Given a/b + b/a = 4. Let x = a/b. Then x + 1/x = 4.
+We need to find the value of a/b - b/a = x - 1/x.
+We know (x + 1/x)² = x² + 1/x² + 2.
+So, 4² = x² + 1/x² + 2 => 16 = x² + 1/x² + 2 => x² + 1/x² = 14.
+Also, (x - 1/x)² = x² + 1/x² - 2.
+(x - 1/x)² = 14 - 2 = 12.
+So, x - 1/x = ±√12.
+Given a > b and b is positive, a/b > 1. So x > 1.
+If x > 1, then 0 < 1/x < 1. Therefore, x - 1/x > 0.
+Thus, x - 1/x = √12.
+The final answer is (A)."
+QA,,Q56,12,,,"A sphere of radius R is cut by three mutually perpendicular planes that all pass through the center of the sphere, dividing the sphere into 8 identical pieces (octants). What is the total surface area of one such piece, in terms of R?",(3/2)πR²,(1/2)πR² + (3/2)R²,(5/4)πR²,πR²,A,B,C,D,C,MCQ,Geometry,Mensuration - 3D,Hard,Surface area calculation of a spherical octant,"Sphere, Surface Area, Octant of a Sphere, Visualization",False,MockSet1_QA,Analyzing,"A sphere of radius R is cut by three mutually perpendicular planes passing through its center. This divides the sphere into 8 identical pieces (octants).
+The total surface area of one such piece consists of two types of surfaces:
+1. A curved spherical surface: This is 1/8th of the total surface area of the sphere. Area = (1/8) * 4πR² = (1/2)πR².
+2. Three flat surfaces: Each cut creates a great circle. Each flat face of the octant is a quarter-circle of radius R. Area of one such face = (1/4)πR². Since there are three such faces, their total area = 3 * (1/4)πR² = (3/4)πR².
+Total surface area of one piece = Area of curved part + Area of three flat parts
+= (1/2)πR² + (3/4)πR² = (2/4)πR² + (3/4)πR² = (5/4)πR².
+The final answer is (C)."
+QA,,Q57,13,,,"If log_a(b) = m, log_b(c) = n, and log_c(a) = p, such that a, b, c are real numbers greater than 1. What is the value of mnp + (1/m)(1/n)(1/p)?",0,1,2,m+n+p,A,B,C,D,C,MCQ,Algebra,Logarithms,Easy,Application of logarithm properties (chain rule),"Logarithm Properties, Chain Rule of Logarithms",False,MockSet1_QA,Understanding,"Given log_a(b) = m, log_b(c) = n, log_c(a) = p.
+By the chain rule of logarithms: log_a(b) * log_b(c) * log_c(a) = log_a(a) = 1.
+So, m * n * p = 1.
+The expression to evaluate is mnp + (1/m)(1/n)(1/p).
+This is mnp + 1/(mnp).
+Since mnp = 1, the expression becomes 1 + 1/1 = 2.
+The final answer is (C)."
+QA,,Q58,14,,,"The vertices of a triangle are A(1, 8), B(7, 0), and C(1, 0). Find the radius of the incircle of triangle ABC.",,,,,,,,,2,TITA,Geometry,Triangles,Medium,Finding incircle radius of a right-angled triangle in coordinate geometry,"Coordinate Geometry, Right-angled Triangle, Incircle Radius",True,MockSet1_QA,Applying,"The vertices are A(1, 8), B(7, 0), C(1, 0).
+Side AC is vertical: length = |8-0| = 8.
+Side BC is horizontal: length = |7-1| = 6.
+Since AC is vertical (x=1) and BC is horizontal (y=0), they are perpendicular. The triangle is a right-angled triangle at C.
+Side AB (hypotenuse) = √((7-1)² + (0-8)²) = √(6² + (-8)²) = √(36+64) = √100 = 10.
+For a right-angled triangle with legs a, b and hypotenuse c, the radius of the incircle (r) is given by: r = (a + b - c) / 2.
+r = (6 + 8 - 10) / 2 = 4 / 2 = 2.
+The final answer is 2."
+QA,,Q59,15,,,"A shopkeeper has a stock of three types of pens: A, B, and C. Initially, he has at least one of each type. He sells 2/5 of type A pens, 30 type B pens, and 1/3 of type C pens. After the sales, he finds that he sold exactly 2/5 of his total initial stock of pens. If the initial number of type A pens was equal to the initial number of type C pens, what is the smallest possible total number of pens he had initially?",,,,,,,,,130,TITA,Arithmetic,Percentages,Hard,"Solving word problems involving fractions, LCM, and minimization","Fractional Sales, Diophantine Equation concept, LCM, Minimization",True,MockSet1_QA,Analyzing,"Let initial numbers be N_A, N_B, N_C. N_A, N_B, N_C are positive integers.
+Given N_A = N_C. For (2/5)N_A and (1/3)N_C to be integers, N_A (and N_C) must be a multiple of LCM(5,3) = 15.
+Let N_A = N_C = 15k for some positive integer k.
+Total initial stock T = N_A + N_B + N_C = 15k + N_B + 15k = 30k + N_B.
+Total pens sold S_total = (2/5)N_A + 30 + (1/3)N_C = (2/5)(15k) + 30 + (1/3)(15k) = 6k + 30 + 5k = 11k + 30.
+Given S_total = (2/5)T.
+11k + 30 = (2/5)(30k + N_B)
+55k + 150 = 60k + 2N_B
+150 - 5k = 2N_B.
+Since N_B ≥ 1, 2N_B ≥ 2. So 150 - 5k ≥ 2 => 148 ≥ 5k => k ≤ 29.6.
+For N_B to be an integer, 150 - 5k must be even, so 5k must be even, which means k must be even.
+k must be a positive even integer ≤ 29.
+Total stock T = 30k + N_B = 30k + (150 - 5k)/2 = 30k + 75 - 2.5k = 27.5k + 75.
+To minimize T, we must minimize k. The smallest positive even integer for k is 2.
+If k=2: N_A = N_C = 30. 2N_B = 150 - 5(2) = 140 => N_B = 70.
+T = 30 + 70 + 30 = 130.
+The final answer is 130."
+QA,,Q60,16,,,"A tank has two inlet pipes, A and B, and one outlet pipe, C. Pipe A alone can fill the empty tank in 6 hours. Pipe B alone can fill the empty tank in 8 hours. Pipe C alone can empty the full tank in 3 hours. If all three pipes are opened simultaneously when the tank is 1/4 full, how many hours will it take for the tank to be completely empty from that point?",,,,,,,,,6,TITA,Arithmetic,Pipes & Cisterns,Medium,Calculating time for pipes and cisterns with combined work,"Rate of Filling/Emptying, Combined Work",True,MockSet1_QA,Applying,"Let the capacity of the tank be V. Let's use LCM of 6, 8, 3 which is 24 units.
+Rate of A = +24/6 = +4 units/hr.
+Rate of B = +24/8 = +3 units/hr.
+Rate of C = -24/3 = -8 units/hr.
+Combined rate = 4 + 3 - 8 = -1 unit/hr. The negative sign means the tank is emptying.
+Net emptying rate is 1 unit/hr.
+The tank is initially 1/4 full. Amount of water = (1/4) * 24 = 6 units.
+Time to empty = Amount of water / Net emptying rate = 6 units / 1 unit/hr = 6 hours.
+The final answer is 6."
+QA,,Q61,17,,,"A number when successively divided by 5, 4, and 3 leaves remainders 2, 1, and 2 respectively. What will be the remainders if the original number is successively divided by 3, 4, and 5?","1, 2, 3","2, 3, 3","0, 1, 2","2, 1, 3",A,B,C,D,B,MCQ,Algebra,Number System,Medium,Number theory problem on successive division and remainders,"Successive Division, Remainders, Number Representation",False,MockSet1_QA,Applying,"Let N be the number. Let q1, q2, q3 be quotients.
+N = 5*q1 + 2
+q1 = 4*q2 + 1
+q2 = 3*q3 + 2
+To find the smallest such number, let q3=0.
+q2 = 3(0) + 2 = 2.
+q1 = 4(2) + 1 = 9.
+N = 5(9) + 2 = 47.
+Now divide 47 successively by 3, 4, and 5.
+47 ÷ 3: Quotient 15, Remainder 2.
+15 ÷ 4: Quotient 3, Remainder 3.
+3 ÷ 5: Quotient 0, Remainder 3.
+The remainders are 2, 3, 3.
+The final answer is (B)."
+QA,,Q62,18,,,"There are four cities A, B, C, and D. There are 3 roads from A to B, 4 roads from B to C, 2 roads from A to D, and 3 roads from D to C. A person wants to travel from A to C. How many distinct routes are there from A to C, if a route cannot visit the same city more than once?",,,,,,,,,18,TITA,Modern Maths,Permutations & Combinations,Easy,Counting routes using fundamental principle of counting,"Path Counting, Network Routes, Fundamental Principle of Counting",True,MockSet1_QA,Understanding,"A person wants to travel from A to C. The possible paths are through B or through D.
+Case 1: Path via B (A -> B -> C).
+Number of ways = (Roads from A to B) × (Roads from B to C) = 3 × 4 = 12.
+Case 2: Path via D (A -> D -> C).
+Number of ways = (Roads from A to D) × (Roads from D to C) = 2 × 3 = 6.
+These two cases are mutually exclusive. Total number of distinct routes is the sum of the ways for each case.
+Total routes = 12 + 6 = 18.
+The final answer is 18."
+QA,,Q63,19,,,"Let f(n) = n * (sum of divisors of n). For example, f(6) = 6 * (1+2+3+6) = 6 * 12 = 72. If k is the smallest integer such that f(k) > 1000, what is the sum of the digits of k?",,,,,,,,,6,TITA,Algebra,Functions,Hard,Analysis of a number-theoretic function and finding a minimum value,"Number Theoretic Functions, Sum of Divisors, Minimization, Iteration",True,MockSet1_QA,Analyzing,"f(n) = n * σ(n), where σ(n) is the sum of divisors of n. We need the smallest integer k such that f(k) > 1000.
+Let's test values for k starting from a reasonable number.
+f(20) = 20 * σ(20) = 20 * (1+2+4+5+10+20) = 20 * 42 = 840.
+f(21) = 21 * σ(21) = 21 * (1+3+7+21) = 21 * 32 = 672.
+f(22) = 22 * σ(22) = 22 * (1+2+11+22) = 22 * 36 = 792.
+f(23) = 23 * σ(23) = 23 * (1+23) = 23 * 24 = 552.
+f(24) = 24 * σ(24) = 24 * σ(2³ * 3¹) = 24 * ( (2⁴-1)/(2-1) * (3²-1)/(3-1) ) = 24 * (15 * 4) = 24 * 60 = 1440.
+We found f(24) > 1000. All values tested for k < 24 gave f(k) < 1000. So, k=24 is the smallest integer.
+The sum of the digits of k=24 is 2+4=6.
+The final answer is 6."
+QA,,Q64,20,,,"The average age of a group of N people is 30 years. Two new people, aged 20 years and 50 years, join the group. Then, one person aged X years leaves the group. If the average age of the remaining N+1 people is 31 years, what is the value of X?",N-21,39-N,29,Cannot be determined,A,B,C,D,B,MCQ,Arithmetic,Averages & Weighted Averages,Medium,Calculating average age with changes in the group,"Average, Algebraic Manipulation, Word Problem",False,MockSet1_QA,Applying,"Initial total age of the group = 30N.
+Two people join, their total age is 20 + 50 = 70.
+New total age (for N+2 people) = 30N + 70.
+One person aged X leaves. 
+Final total age (for N+1 people) = 30N + 70 - X.
+Final average age = (30N + 70 - X) / (N+1).
+Given this average is 31.
+(30N + 70 - X) / (N+1) = 31
+30N + 70 - X = 31(N+1)
+30N + 70 - X = 31N + 31
+70 - 31 = 31N - 30N + X
+39 = N + X
+X = 39 - N.
+The final answer is (B)."
+QA,,Q65,21,,,"In a triangle ABC, D is a point on BC such that BD:DC = 2:3. E is a point on AD such that AE:ED = 1:2. What is the ratio of the area of triangle ABE to the area of triangle ABC?",1:5,2:15,1:6,2:9,A,B,C,D,B,MCQ,Geometry,Triangles,Hard,Ratio of areas of triangles using common base/height properties,"Area of Triangles, Ratio of Areas, Bases and Heights",False,MockSet1_QA,Analyzing,"Let Area(ΔABC) be [ABC].
+D is on BC with BD:DC = 2:3, so BD = (2/5)BC.
+Triangles ABD and ABC share the same altitude from vertex A. The ratio of their areas equals the ratio of their bases.
+[ABD] / [ABC] = BD/BC = 2/5 => [ABD] = (2/5)[ABC].
+E is on AD with AE:ED = 1:2, so AE = (1/3)AD.
+Triangles ABE and ABD share the same altitude from vertex B. The ratio of their areas equals the ratio of their bases.
+[ABE] / [ABD] = AE/AD = 1/3 => [ABE] = (1/3)[ABD].
+Substitute the first result into the second:
+[ABE] = (1/3) * (2/5)[ABC] = (2/15)[ABC].
+The ratio of Area(ABE) to Area(ABC) is 2/15.
+The final answer is (B)."
+QA,,Q66,22,,,"A trader buys two articles, A and B. The cost price of article A is 20% more than the cost price of article B. He sells article A at a profit of 25% and article B at a profit of 10%. His total profit from selling both articles is ₹385. What was the cost price of article A?",₹900,₹1000,₹1080,₹1155,A,B,C,D,D,MCQ,Arithmetic,"Profit, Loss & Discount",Medium,Profit and loss calculation with percentage changes,"Percentages, Cost Price, Selling Price, Profit Calculation",False,MockSet1_QA,Applying,"Let the cost price (CP) of article B be C_B.
+CP of article A, C_A = 1.2 * C_B.
+Profit from A = 0.25 * C_A = 0.25 * (1.2 * C_B) = 0.3 * C_B.
+Profit from B = 0.10 * C_B.
+Total Profit = Profit from A + Profit from B = 0.3 * C_B + 0.1 * C_B = 0.4 * C_B.
+Given Total Profit = ₹385.
+0.4 * C_B = 385
+C_B = 385 / 0.4 = 3850 / 4 = 962.5.
+Cost price of article A, C_A = 1.2 * C_B = 1.2 * 962.5 = 1155.
+The final answer is (D)."

@@ -1,0 +1,294 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+Quantitative Aptitude,40,Q111,1,,,"Anirudh buys an item from Bhanu, with Bhanu making a 20% profit on his cost price. Bhanu had originally purchased this item from Charan. Charan had sold the item to Bhanu making a 20% profit on his (Charan's) own cost price. Separately, Charan sells an identical item to David at a 10% loss on his (Charan's) cost price; David pays Rs. 1125 for this item. Considering these conditions, what did Anirudh pay for the item?",Rs. 1500,Rs. 1800,Rs. 2000,Rs. 2160,A,B,C,D,B,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,"Chain of Sales, Profit Percentage","Chain of Sales, Profit Percentage, Cost Price Calculation, Multiple Transactions",False,MockSet1_QA_V3,Analysis,"Let Charan's original cost price be CP_C.
+Charan sells an identical item to David at a 10% loss, and David pays Rs. 1125.
+So, CP_C × (1 - 0.10) = 1125
+CP_C × 0.90 = 1125
+CP_C = 1125 / 0.90 = 11250 / 9 = Rs. 1250.
+Charan's original cost price for such an item is Rs. 1250.
+Charan sold the item to Bhanu making a 20% profit on his (Charan's) cost price (which is Rs. 1250).
+Charan's SP to Bhanu = CP_Bhanu = CP_C × (1 + 0.20) = 1250 × 1.20 = Rs. 1500.
+Bhanu sells this item to Anirudh making a 20% profit on his (Bhanu's) cost price (which is Rs. 1500).
+Anirudh's CP (what Anirudh paid) = CP_Bhanu × (1 + 0.20) = 1500 × 1.20 = Rs. 1800.
+The question asks what Anirudh paid for the item. This is Rs. 1800.
+The correct option is B."
+Quantitative Aptitude,40,Q112,2,,,A circle is inscribed in a right-angled triangle whose legs are 15 cm and 20 cm. What is the radius of the inscribed circle in cm? (Enter your answer as a numerical value),,,,,,,,,5,TITA,Geometry,"Circles (Properties, Chords, Tangents, Secants)",Medium,Inradius of a Right-angled Triangle,"Incircle, Right-angled Triangle, Inradius Formula",True,MockSet1_QA_V3,Application,"Let the legs of the right-angled triangle be a = 15 cm and b = 20 cm.
+The hypotenuse c is found using Pythagoras theorem: c² = a² + b²
+c² = 15² + 20² = 225 + 400 = 625.
+c = √625 = 25 cm.
+The radius 'r' of the inscribed circle (incircle) in a right-angled triangle is given by r = (a+b-c)/2.
+r = (15 + 20 - 25) / 2
+r = (35 - 25) / 2 = 10 / 2 = 5 cm.
+Alternatively, Area of triangle = (1/2) × base × height = (1/2) × 15 × 20 = 150 sq. cm.
+Semi-perimeter s = (a+b+c)/2 = (15+20+25)/2 = 60/2 = 30 cm.
+Radius of incircle r = Area / s = 150 / 30 = 5 cm.
+Answer: 5"
+Quantitative Aptitude,40,Q113,3,,,"A number N leaves a remainder of 3 when divided by 5, a remainder of 4 when divided by 7, and a remainder of 5 when divided by 9. If N is the smallest three-digit number satisfying these conditions, what is the remainder when N is divided by 11?",0,4,5,8,A,B,C,D,B,MCQ,Number System,Remainders (incl. Remainder Theorem),Medium,System of Congruences,"System of Congruences, Chinese Remainder Theorem (Implicit), Smallest Three-Digit Number",False,MockSet1_QA_V3,Application,"N ≡ 3 (mod 5)
+N ≡ 4 (mod 7)
+N ≡ 5 (mod 9)
+From the first two conditions: N = 5k+3.
+Testing values for k:
+k=0, N=3. 3 mod 7 = 3 (not 4)
+k=1, N=8. 8 mod 7 = 1 (not 4)
+k=2, N=13. 13 mod 7 = 6 (not 4)
+k=3, N=18. 18 mod 7 = 4. This satisfies the second condition.
+So, N ≡ 18 (mod LCM(5,7)) => N ≡ 18 (mod 35).
+Possible values for N are 18, 53, 88, 123, 158, ...
+Now check the third condition N ≡ 5 (mod 9) for these values:
+158 mod 9 = 5 (158 = 17×9 + 5). This satisfies the third condition.
+The smallest three-digit number N satisfying these conditions is 158.
+We need to find the remainder when N=158 is divided by 11.
+158 = 11 × 14 + 4.
+The remainder is 4.
+The correct option is B."
+Quantitative Aptitude,40,Q114,4,,,"The first term of an arithmetico-geometric progression (AGP) is 3. The sum to infinity of this AGP is 8. If the common ratio of the geometric part is 1/2, what is the common difference of the arithmetic part?",1,2,3/2,4/3,A,B,C,D,A,MCQ,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Hard,Arithmetico-Geometric Progression,"Arithmetico-Geometric Progression, Sum to Infinity, Finding Common Difference",False,MockSet1_QA_V3,Analysis,"The sum of an infinite Arithmetico-Geometric Progression (AGP) is given by S = a/(1-r) + dr/((1-r)²), where 'a' is the first term, 'd' is the common difference, and 'r' is the common ratio.
+Given: First term a = 3, Sum S = 8, Common ratio r = 1/2.
+Substitute these values into the formula:
+8 = 3 / (1 - 1/2) + d(1/2) / ((1 - 1/2)²)
+8 = 3 / (1/2) + (d/2) / (1/2)²
+8 = 6 + (d/2) / (1/4)
+8 = 6 + d × (1/2) × 4
+8 = 6 + 2d
+2d = 2
+d = 1.
+The common difference is 1.
+The correct option is A."
+Quantitative Aptitude,40,Q115,5,,,"A loan of Rs. 21,000 is to be repaid in two equal annual installments. If the rate of compound interest is 10% per annum, compounded annually, what is the value of each installment?","Rs. 12,000","Rs. 12,100","Rs. 12,600","Rs. 12,750",A,B,C,D,B,MCQ,Arithmetic,Compound Interest,Hard,Compound Interest Installments,"Compound Interest Installments, Equal Annual Installments, Loan Repayment",False,MockSet1_QA_V3,Analysis,"Let P be the loan amount = Rs. 21,000.
+Let X be the value of each equal annual installment.
+Rate of interest R = 10% per annum = 0.1.
+The present value of the two installments must equal the loan amount.
+P = X/(1+R) + X/(1+R)².
+Here, 1+R = 1.1.
+21000 = X/1.1 + X/(1.1)².
+21000 = X/1.1 + X/1.21.
+21000 = X (1/1.1 + 1/1.21).
+21000 = X ((1.1 + 1) / 1.21)
+21000 = X (2.1 / 1.21).
+X = 21000 × (1.21 / 2.1).
+X = (21000 / 2.1) × 1.21.
+X = 10000 × 1.21 = Rs. 12,100.
+Each installment is Rs. 12,100.
+The correct option is B."
+Quantitative Aptitude,40,Q116,6,,,"The population of a town increased by 25% in the first year, decreased by 20% in the second year, and increased by 10% in the third year. If the population at the end of the third year was 66,000, what was the population at the beginning of the first year?","60,000","64,000","66,000","72,000",A,B,C,D,A,MCQ,Arithmetic,Percentages,Medium,Successive Percentage Changes,"Successive Percentage Changes, Population Growth/Decline, Fractional Percentages",False,MockSet1_QA_V3,Application,"Let the population at the beginning be P₀.
+After year 1: P₁ = P₀ × (1 + 25/100) = P₀ × (5/4).
+After year 2: P₂ = P₁ × (1 - 20/100) = P₁ × (4/5) = P₀ × (5/4) × (4/5).
+After year 3: P₃ = P₂ × (1 + 10/100) = P₂ × (11/10) = P₀ × (5/4) × (4/5) × (11/10).
+Given P₃ = 66,000.
+P₀ × (5/4) × (4/5) × (11/10) = 66,000.
+P₀ × (11/10) = 66,000.
+P₀ = 66,000 × (10/11) = 6000 × 10 = 60,000.
+The initial population was 60,000.
+The correct option is A."
+Quantitative Aptitude,40,Q117,7,,,"A right circular cylinder is cut by a plane not parallel to its base. The shortest and longest heights of the resulting truncated cylinder are 8 cm and 14 cm respectively. If the radius of the base of the cylinder is 7 cm, find the volume of the truncated cylinder in cubic cm. (Use π = 22/7. Enter your answer as a numerical value)",,,,,,,,,1694,TITA,Geometry,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Hard,Truncated Cylinder Volume,"Truncated Cylinder, Volume Calculation, Average Height",True,MockSet1_QA_V3,Analysis,"The volume of a truncated cylinder is given by V = πr² × (h₁ + h₂) / 2, where r is the radius, and h₁ and h₂ are the shortest and longest heights.
+Given: r = 7 cm, h₁ = 8 cm, h₂ = 14 cm, π = 22/7.
+V = (22/7) × (7)² × (8 + 14) / 2
+V = (22/7) × 49 × (22 / 2)
+V = 22 × 7 × 11
+V = 154 × 11 = 1694 cubic cm.
+Answer: 1694"
+Quantitative Aptitude,40,Q118,8,,,"If logₓ(8x-15) = 2, find the sum of the possible values of x.",3,5,8,10,A,B,C,D,C,MCQ,Algebra,Logarithms,Easy,Logarithmic Equations,"Logarithmic Equations, Definition of Logarithm, Quadratic from Log Equation",False,MockSet1_QA_V3,Application,"The equation is logₓ(8x-15) = 2.
+Conditions for the logarithm to be defined: base x > 0, x ≠ 1, and argument 8x-15 > 0, which implies x > 15/8 or x > 1.875.
+By definition of logarithm, 8x-15 = x².
+Rearranging gives the quadratic equation: x² - 8x + 15 = 0.
+Factoring the quadratic: (x-3)(x-5) = 0.
+The possible values for x are x=3 or x=5.
+Both values satisfy the condition x > 1.875.
+The sum of possible values = 3 + 5 = 8.
+The correct option is C."
+Quantitative Aptitude,40,Q119,9,,,"12 men can complete a work in 10 days, while 10 women can complete the same work in 18 days. 6 men and 15 women start working together. After 5 days, some men leave and some women also leave such that the number of men and women remaining become equal (let this number be K). This new group completes the remaining work in 6 more days. How many men left after 5 days? (Enter your answer as a numerical value, K is an integer)",,,,,,,,,2,TITA,Arithmetic,Time & Work,Hard,Efficiency and Work in Stages,"Men-Women Efficiency, Work Done in Stages, Changing Group Composition",True,MockSet1_QA_V3,Analysis,"First, establish the efficiency ratio of men and women.
+Total work = 12 men × 10 days = 120 man-days.
+Total work = 10 women × 18 days = 180 woman-days.
+120 man-days = 180 woman-days => 12M = 18W => 2M = 3W.
+Let one woman's work rate be 2 units/day (W=2). Then one man's work rate is 3 units/day (M=3).
+Total work = 10 women × 18 days × 2 units/woman-day = 360 units.
+Initial group: 6 men and 15 women.
+Work rate of initial group = (6 men × 3 units/M) + (15 women × 2 units/W) = 18 + 30 = 48 units/day.
+Work done in the first 5 days = 48 units/day × 5 days = 240 units.
+Remaining work = 360 - 240 = 120 units.
+After 5 days, K men and K women remain.
+Work rate of new group = (K men × 3 units/M) + (K women × 2 units/W) = 3K + 2K = 5K units/day.
+This new group completes the remaining work (120 units) in 6 days.
+(5K units/day) × 6 days = 120 units.
+30K = 120.
+K = 4.
+The new number of men is K=4.
+Original number of men = 6.
+Number of men who left = Original men - New men = 6 - 4 = 2.
+Answer: 2"
+Quantitative Aptitude,40,Q120,10,,,"A shopkeeper mixes two varieties of tea, one costing Rs. 60/kg and another costing Rs. 90/kg, in a certain ratio. He sells the mixture at Rs. 84/kg, thereby making a profit of 20%. In what ratio did he mix the two varieties?",1:2,2:1,2:3,3:2,A,B,C,D,B,MCQ,Arithmetic,Mixtures & Alligations,Easy,Alligation with Profit,"Alligation Rule, Profit Percentage on Mixture, Finding Ratio of Mixing",False,MockSet1_QA_V3,Application,"Let the cost price of the mixture be CP_mix.
+The mixture is sold at Rs. 84/kg with a 20% profit.
+SP = CP_mix × (1 + Profit%) => 84 = CP_mix × 1.2.
+CP_mix = 84 / 1.2 = Rs. 70/kg.
+Using the alligation rule:
+Variety 1 (Cost 60) Variety 2 (Cost 90)
+\          /
+  Mean Cost (70)
+/          \
+(90-70)=20   (70-60)=10
+The ratio of Variety 1 to Variety 2 is 20 : 10, which simplifies to 2 : 1.
+The correct option is B."
+Quantitative Aptitude,40,Q121,11,,,"The total cost (C) of producing 'x' units of an item is given by C = ax² + b/x + F, where 'a' and 'b' are positive constants and F is a fixed cost. When 10 units are produced, the variable cost is Rs. 650. When 20 units are produced, the variable cost is Rs. 2100. What is the variable cost when 5 units are produced?",Rs. 275,Rs. 300,Rs. 325,Rs. 412.50,A,B,C,D,D,MCQ,Arithmetic,"Ratio, Proportion & Variation",Hard,Variation and Simultaneous Equations,"Variation, Sum of Quantities Varying Differently (Directly as x², Inversely as x), Variable Cost",False,MockSet1_QA_V3,Analysis,"Variable Cost (VC) = ax² + b/x.
+For x=10, VC = 650: a(10)² + b/10 = 650 => 100a + b/10 = 650. (1)
+For x=20, VC = 2100: a(20)² + b/20 = 2100 => 400a + b/20 = 2100. (2)
+From (1), b = 10(650 - 100a) = 6500 - 1000a.
+Substitute b into (2):
+400a + (6500 - 1000a)/20 = 2100.
+400a + 325 - 50a = 2100.
+350a = 1775.
+a = 1775 / 350 = 71/14.
+Substitute a back to find b:
+b = 6500 - 1000(71/14) = 6500 - 500(71/7) = (45500 - 35500)/7 = 10000/7.
+Now, find VC when x=5:
+VC = a(5)² + b/5 = (71/14)(25) + (10000/7)/5.
+VC = 1775/14 + 2000/7.
+To add these fractions, find a common denominator:
+VC = 1775/14 + (2000 × 2)/(7 × 2) = 1775/14 + 4000/14.
+VC = (1775 + 4000) / 14 = 5775 / 14 = 825 / 2 = 412.5.
+The variable cost is Rs. 412.50.
+The correct option is D."
+Quantitative Aptitude,40,Q122,12,,,"How many 4-digit numbers greater than 3000 can be formed using the digits 0, 2, 3, 4, 5 without repetition, such that the number formed is divisible by 4? (Enter your answer as a numerical value)",,,,,,,,,26,TITA,Modern Maths,Permutations & Combinations,Hard,Number Formation with Multiple Constraints,"Number Formation, Divisibility by 4, No Repetition, Greater Than Condition",True,MockSet1_QA_V3,Analysis,"Digits available: {0, 2, 3, 4, 5}. No repetition.
+Number must be a 4-digit number > 3000 and divisible by 4.
+Divisibility by 4: The last two digits must form a number divisible by 4.
+Possible endings from the available digits: 04, 20, 24, 32, 40, 52.
+Case 1: First digit is 3. (Number: 3 _ _ _)
+- Ends in 04: 3 _ 04. 2 choices for the blank (2, 5). -> 2 numbers.
+- Ends in 20: 3 _ 20. 2 choices for the blank (4, 5). -> 2 numbers.
+- Ends in 24: 3 _ 24. 2 choices for the blank (0, 5). -> 2 numbers.
+- Ends in 40: 3 _ 40. 2 choices for the blank (2, 5). -> 2 numbers.
+- Ends in 52: 3 _ 52. 2 choices for the blank (0, 4). -> 2 numbers.
+Total for first digit 3 = 10 numbers.
+Case 2: First digit is 4. (Number: 4 _ _ _)
+- Ends in 20: 4 _ 20. 2 choices for the blank (3, 5). -> 2 numbers.
+- Ends in 32: 4 _ 32. 2 choices for the blank (0, 5). -> 2 numbers.
+- Ends in 52: 4 _ 52. 2 choices for the blank (0, 3). -> 2 numbers.
+Total for first digit 4 = 6 numbers.
+Case 3: First digit is 5. (Number: 5 _ _ _)
+- Ends in 04: 5 _ 04. 2 choices for the blank (2, 3). -> 2 numbers.
+- Ends in 20: 5 _ 20. 2 choices for the blank (3, 4). -> 2 numbers.
+- Ends in 24: 5 _ 24. 2 choices for the blank (0, 3). -> 2 numbers.
+- Ends in 32: 5 _ 32. 2 choices for the blank (0, 4). -> 2 numbers.
+- Ends in 40: 5 _ 40. 2 choices for the blank (2, 3). -> 2 numbers.
+Total for first digit 5 = 10 numbers.
+Total numbers = 10 + 6 + 10 = 26.
+Answer: 26"
+Quantitative Aptitude,40,Q123,13,,,What is the HCF of the polynomials x³ - 6x² + 11x - 6 and x⁴ - 5x³ + 5x² + 5x - 6?,x-1,(x-1)(x-2),(x-1)(x-3),(x-1)(x-2)(x-3),A,B,C,D,D,MCQ,Number System,HCF & LCM,Hard,HCF of Polynomials,"HCF of Polynomials, Factorization of Polynomials",False,MockSet1_QA_V3,Analysis,"Let P(x) = x³ - 6x² + 11x - 6. Test for integer roots (factors of -6).
+P(1) = 1-6+11-6=0. (x-1) is a factor.
+P(2) = 8-24+22-6=0. (x-2) is a factor.
+P(3) = 27-54+33-6=0. (x-3) is a factor.
+So, P(x) = (x-1)(x-2)(x-3).
+Let Q(x) = x⁴ - 5x³ + 5x² + 5x - 6.
+To find the HCF, check if the roots of P(x) are also roots of Q(x).
+Q(1) = 1-5+5+5-6=0. (x-1) is a common factor.
+Q(2) = 16-40+20+10-6=0. (x-2) is a common factor.
+Q(3) = 81-135+45+15-6=0. (x-3) is a common factor.
+Since (x-1), (x-2), and (x-3) are all factors of both polynomials, their product, (x-1)(x-2)(x-3), is a common factor. This product is P(x). Therefore, the HCF is (x-1)(x-2)(x-3).
+The correct option is D."
+Quantitative Aptitude,40,Q124,14,,,"In an isosceles trapezium ABCD, AB is parallel to CD. AB = 10 cm, CD = 22 cm, and the non-parallel sides AD and BC are each 10 cm long. If the diagonals AC and BD intersect at O, find the length of AO in cm. (Enter your answer as a numerical value, rounded to one decimal place if necessary)",,,,,,,,,5.6,TITA,Geometry,"Quadrilaterals & Polygons (Properties, Diagonals)",Medium,Properties of Isosceles Trapezium,"Isosceles Trapezium, Diagonals, Similar Triangles within Trapezium, Pythagoras",True,MockSet1_QA_V3,Application,"ABCD is an isosceles trapezium with AB || CD. AB=10, CD=22, AD=BC=10.
+Draw altitudes from A and B to CD, say AM and BN.
+MN = AB = 10. DM = NC = (CD-AB)/2 = (22-10)/2 = 6.
+In right ΔADM, height AM = √(AD²-DM²) = √(10²-6²) = √64 = 8.
+The diagonals intersect at O. ΔAOB is similar to ΔCOD.
+The ratio of corresponding sides is AO/OC = AB/CD = 10/22 = 5/11.
+This means AO is 5/(5+11) = 5/16 of the total diagonal length AC.
+Find AC using right ΔAMC. MC = CD - DM = 22 - 6 = 16.
+AC = √(AM²+MC²) = √(8²+16²) = √(64+256) = √320 = 8√5.
+Length of AO = (5/16) × AC = (5/16) × 8√5 = (5√5)/2.
+Using √5 ≈ 2.236, AO ≈ (5 × 2.236)/2 = 5.59.
+Rounded to one decimal place, AO is 5.6 cm.
+Answer: 5.6"
+Quantitative Aptitude,40,Q125,15,,,A function f(x) is defined such that f(1) = 2 and f(x+y) = f(x)f(y) for all real numbers x and y. What is the value of f(3) + f(-2)?,6,8.25,8.5,10,A,B,C,D,B,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Hard,Functional Equations,"Functional Equations, Properties of Exponential Functions, f(x+y)=f(x)f(y)",False,MockSet1_QA_V3,Analysis,"The functional equation f(x+y) = f(x)f(y) implies f(x) is an exponential function of the form f(x) = aˣ.
+Given f(1) = 2.
+f(1) = a¹ = a. So, a=2.
+The function is f(x) = 2ˣ.
+We need to find f(3) + f(-2).
+f(3) = 2³ = 8.
+f(-2) = 2⁻² = 1/2² = 1/4 = 0.25.
+f(3) + f(-2) = 8 + 0.25 = 8.25.
+The correct option is B."
+Quantitative Aptitude,40,Q126,16,,,"The area of a path of uniform width 2 meters running around the outside of a rectangular field is 240 sq. meters. If the length of the field is 6 meters more than its breadth, what is the perimeter of the field in meters? (Enter your answer as a numerical value)",,,,,,,,,112,TITA,Geometry,"Mensuration - 2D (Area & Perimeter: Triangles, Quadrilaterals, Polygons, Circles)",Easy,Area of Path,"Area of Path, Rectangle, Perimeter Calculation",True,MockSet1_QA_V3,Application,"Let the breadth of the field be 'b' meters. Length 'l' = b+6 meters.
+A path of width 2 meters runs around the outside.
+The outer length L' = (b+6) + 2(2) = b+10.
+The outer breadth B' = b + 2(2) = b+4.
+Area of path = Outer Area - Inner Area = L'B' - lb.
+240 = (b+10)(b+4) - (b+6)b.
+240 = (b² + 14b + 40) - (b² + 6b).
+240 = 8b + 40.
+200 = 8b.
+b = 25 meters.
+The length l = 25+6 = 31 meters.
+Perimeter of the field = 2(l+b) = 2(31+25) = 2(56) = 112 meters.
+Answer: 112"
+Quantitative Aptitude,40,Q127,17,,,"A polynomial P(x) when divided by (x-1) leaves a remainder of 10, when divided by (x+1) leaves a remainder of 6, and when divided by (x) leaves a remainder of 3. If P(x) is divided by (x³-x), what is the remainder?",5x² + 2x + 3,2x² - 4x + 3,4x² + 2x + 3,4x² - 2x + 3,A,B,C,D,A,MCQ,Algebra,Polynomials (Higher degree equations),Hard,Remainder Theorem,"Remainder Theorem, Division of Polynomial by Product of Factors (x³-x)",False,MockSet1_QA_V3,Analysis,"Given: P(1)=10, P(-1)=6, P(0)=3.
+When P(x) is divided by x³-x = x(x-1)(x+1), the remainder R(x) is of the form Ax² + Bx + C.
+P(x) = Q(x)(x³-x) + Ax² + Bx + C.
+P(0) = A(0)² + B(0) + C = C. So, C = 3.
+P(1) = A(1)² + B(1) + C = A+B+C. So, A+B+3 = 10 => A+B=7. (1)
+P(-1) = A(-1)² + B(-1) + C = A-B+C. So, A-B+3 = 6 => A-B=3. (2)
+Adding (1) and (2): 2A = 10 => A=5.
+Substituting A=5 into (1): 5+B=7 => B=2.
+The remainder R(x) = 5x² + 2x + 3.
+The correct option is A."
+Quantitative Aptitude,40,Q128,18,,,"Train A, 150 m long, crosses a pole in 10 seconds. Train B, 200 m long, moving in the opposite direction crosses Train A in 8 seconds. What is the speed of Train B in km/hr? (Enter your answer as a numerical value, rounded to one decimal place if necessary)",,,,,,,,,103.5,TITA,Arithmetic,"Time, Speed & Distance (Problems on Trains)",Hard,Relative Speed of Trains,"Relative Speed of Trains, Crossing Pole, Crossing Each Other, Opposite Direction",True,MockSet1_QA_V3,Analysis,"Speed of Train A (S_A) = Length / Time to cross pole = 150 m / 10 s = 15 m/s.
+Let the speed of Train B be S_B. They move in opposite directions.
+Relative speed S_rel = S_A + S_B = 15 + S_B.
+Time to cross = Total Length / Relative Speed.
+8 = (150 + 200) / (15 + S_B).
+8(15 + S_B) = 350.
+120 + 8S_B = 350.
+8S_B = 230.
+S_B = 230/8 = 115/4 = 28.75 m/s.
+Convert to km/hr: S_B (km/hr) = 28.75 × (18/5) = 5.75 × 18 = 103.5 km/hr.
+Answer: 103.5"
+Quantitative Aptitude,40,Q129,19,,,Find the number of integer solutions for the inequality |x+3| > |2x-9|.,9,10,11,8,A,B,C,D,A,MCQ,Algebra,Inequalities (Linear & Quadratic),Medium,Modulus Inequalities,"Modulus Inequalities, Absolute Value, Squaring Both Sides, Number of Integer Solutions",False,MockSet1_QA_V3,Application,"The inequality is |x+3| > |2x-9|.
+Square both sides: (x+3)² > (2x-9)².
+x² + 6x + 9 > 4x² - 36x + 81.
+0 > 3x² - 42x + 72.
+Divide by 3: 0 > x² - 14x + 24.
+x² - 14x + 24 < 0.
+Factoring: (x-12)(x-2) < 0.
+The roots are x=2 and x=12. The quadratic is negative between its roots.
+So, 2 < x < 12.
+The integer solutions are 3, 4, 5, 6, 7, 8, 9, 10, 11.
+Number of integers = 11 - 3 + 1 = 9.
+The correct option is A."
+Quantitative Aptitude,40,Q130,20,,,Find the number of factors of N = 2⁴ × 3³ × 5² that are perfect squares but not perfect cubes.,8,9,10,11,A,B,C,D,D,MCQ,Number System,Number of Factors & Sum of Factors,Hard,Properties of Factors (Perfect Squares/Cubes),"Number of Factors, Perfect Squares, Perfect Cubes, Set Difference",False,MockSet1_QA_V3,Analysis,"N = 2⁴ × 3³ × 5².
+A factor F = 2^a × 3^b × 5^c is a perfect square if a, b, c are even.
+Choices for 'a': 0, 2, 4 (3 choices).
+Choices for 'b': 0, 2 (2 choices).
+Choices for 'c': 0, 2 (2 choices).
+Number of perfect square factors = 3 × 2 × 2 = 12.
+A factor is a perfect cube if a, b, c are multiples of 3.
+Choices for 'a': 0, 3 (2 choices).
+Choices for 'b': 0, 3 (2 choices).
+Choices for 'c': 0 (1 choice).
+Number of perfect cube factors = 2 × 2 × 1 = 4.
+A factor is both a square and a cube if it is a 6th power.
+Choices for 'a': 0 (1 choice).
+Choices for 'b': 0 (1 choice).
+Choices for 'c': 0 (1 choice).
+Number of factors that are both = 1 × 1 × 1 = 1. (This is the number 1).
+Number of factors that are squares but not cubes = (Total squares) - (Those that are also cubes)
+= 12 - 1 = 11.
+The correct option is D."
+Quantitative Aptitude,40,Q131,21,,,"A merchant sells an item at a certain price. If he had sold it at 4/5th of that price, he would have made a loss of 10%. What is his profit percentage if he sells at the original price? (Enter your answer as a numerical value, e.g., 12.5 for 12.5%)",,,,,,,,,12.5,TITA,Arithmetic,"Profit, Loss & Discount",Medium,Profit and Loss Calculation,"Selling Price Change, Loss to Profit Calculation, Finding Original Profit %",True,MockSet1_QA_V3,Application,"Let the original cost price be CP and original selling price be SP_orig.
+New selling price SP_new = (4/5)SP_orig.
+At this new price, loss is 10%. So, SP_new = CP × (1 - 0.10) = 0.9 CP.
+Equating the two expressions for SP_new:
+(4/5)SP_orig = 0.9 CP.
+SP_orig = (5/4) × 0.9 CP = (4.5/4) CP = 1.125 CP.
+Profit = SP_orig - CP = 1.125 CP - CP = 0.125 CP.
+Profit Percentage = (Profit / CP) × 100 = (0.125 CP / CP) × 100 = 12.5%.
+Answer: 12.5"
+Quantitative Aptitude,40,Q132,22,,,"From a standard deck of 52 playing cards, three cards are drawn one after another without replacement. What is the probability that the first two cards are kings and the third card is an ace?",2/5525,3/5525,4/5525,1/5525,A,B,C,D,A,MCQ,Modern Maths,Probability,Medium,Dependent Events in Probability,"Dependent Events, Drawing Cards Without Replacement, Sequential Probability",False,MockSet1_QA_V3,Application,"Total cards = 52. Kings = 4. Aces = 4.
+Probability of drawing the sequence King, King, Ace without replacement.
+P(1st is King) = 4/52.
+After one King is drawn, 51 cards remain, with 3 Kings.
+P(2nd is King) = 3/51.
+After two Kings are drawn, 50 cards remain, with 4 Aces.
+P(3rd is Ace) = 4/50.
+Total probability = P(1st) × P(2nd) × P(3rd)
+= (4/52) × (3/51) × (4/50)
+= (1/13) × (1/17) × (2/25)
+= 2 / (13 × 17 × 25)
+= 2 / (221 × 25)
+= 2 / 5525.
+The correct option is A."

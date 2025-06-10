@@ -1,0 +1,287 @@
+CognitiveSkillLevel,ConceptTested,CorrectAnswerValue,DetailedTags,DifficultyLevelPredicted,IsTITA,OptionAText,OptionAValue,OptionBText,OptionBValue,OptionCText,OptionCValue,OptionDText,OptionDValue,PassageOrSetContent,PassageOrSetID,QuestionNumberInSection,QuestionPrompt,QuestionType,QuestionUniqueID,SectionName,SectionTimeLimitMinutes,SetID,SolutionExplanation,SubTopic,Topic
+,"Ratio, Proportion & Variation",C,"Ratio manipulation, Linear equations, Word problem",Easy,False,64,A,72,B,80,C,88,D,,,1,"The ratio of the number of boys to girls in a school was 7:8. When 10 boys left the school and 10 girls joined the school, the new ratio of boys to girls became 6:9. What was the original number of girls in the school?",MCQ,836201745,Part 1: All Questions,,MockSet1_QA,"Let the original number of boys be 7x and girls be 8x.
+According to the condition, (7x-10)/(8x+10) = 6/9 = 2/3.
+3(7x-10) = 2(8x+10)
+21x - 30 = 16x + 20
+5x = 50 ⟹ x = 10.
+Original number of girls = 8x = 8 × 10 = 80.
+The correct option is (C).","Ratio, Proportion & Variation",Arithmetic
+,"Profit, Loss & Discount",1650,"Percentages, Marked price, Multiple discounts, Overall profit, Cost price calculation",Hard,True,,,,,,,,,,,2,"A shopkeeper marked an article 60% above its cost price. He sold two-fifths of the total stock at this marked price. He then sold half of the remaining stock at a 25% discount on the marked price, and the rest of the stock was sold at a 50% discount on the marked price. If his overall profit from the entire stock was Rs. 396, find the cost price of the entire stock in Rs.",TITA,729384016,Part 1: All Questions,,MockSet1_QA,"Let the cost price (CP) of the entire stock be Rs. C.
+Marked Price (MP) of the stock = C + 0.60C = 1.6C.
+Revenue from (2/5) of stock sold at MP = (2/5) * 1.6C = 0.64C.
+Remaining stock = 1 - 2/5 = 3/5 of total stock.
+Stock sold at 25% discount on MP = (1/2) * (3/5) = 3/10 of total stock.
+Selling price for this part = 1.6C * (1 - 0.25) = 1.6C * 0.75 = 1.2C.
+Revenue from this (3/10) stock = (3/10) * 1.2C = 0.36C.
+Remaining stock = (3/5) - (3/10) = 3/10 of total stock.
+Selling price for this part (50% discount on MP) = 1.6C * (1 - 0.50) = 1.6C * 0.50 = 0.8C.
+Revenue from this (3/10) stock = (3/10) * 0.8C = 0.24C.
+Total Revenue = 0.64C + 0.36C + 0.24C = 1.24C.
+Overall Profit = Total Revenue - CP = 1.24C - C = 0.24C.
+Given, overall profit = Rs. 396.
+So, 0.24C = 396.
+C = 396 / 0.24 = 39600 / 24 = 1650.
+The cost price of the entire stock is Rs. 1650.","Profit, Loss & Discount",Arithmetic
+,Number Systems,14,"Divisibility rules, Divisibility by 55, Digit properties, Combinatorics with digits, Maximization",Hard,True,,,,,,,,,,,3,"If the 7-digit number 34X7Y6Z is divisible by 55, where X, Y, Z are distinct digits, what is the maximum possible value of X+Y+Z?",TITA,610479283,Part 1: All Questions,,MockSet1_QA,"The number is 34X7Y6Z. For divisibility by 55, it must be divisible by 5 and 11.
+Divisibility by 5 implies Z = 0 or Z = 5.
+X, Y, Z are distinct digits, also distinct from 3, 4, 7, 6.
+Divisibility by 11 implies the alternating sum of digits is a multiple of 11:
+(Z + Y + X + 3) - (6 + 7 + 4) is a multiple of 11.
+(X+Y+Z+3) - 17 is a multiple of 11.
+X+Y+Z-14 = 11k for some integer k.
+So X+Y+Z = 14 + 11k.
+The maximum sum of three distinct digits is 9+8+7=24.
+If k=0, X+Y+Z=14.
+If k=1, X+Y+Z=25 (Impossible).
+If k=-1, X+Y+Z=3.
+The maximum possible sum is therefore 14. This value must be verified against the constraint that X, Y, and Z are distinct digits not already used in {3, 4, 6, 7}.
+Case 1: Z = 0.
+X+Y+0 = 14 ⟹ X+Y=14.
+Digits available for X, Y are from {1, 2, 5, 8, 9}. The pair (9,5) sums to 14. This is a valid set (e.g., X=9, Y=5, Z=0). X+Y+Z = 14.
+Case 2: Z = 5.
+X+Y+5 = 14 ⟹ X+Y=9.
+Digits available for X, Y are from {0, 1, 2, 8, 9}. The pairs (9,0) and (8,1) sum to 9. These are valid sets (e.g., X=9, Y=0, Z=5). X+Y+Z = 14.
+Both cases yield a maximum sum of 14.
+Thus, the maximum possible value of X+Y+Z is 14.",Number Systems,Algebra
+,"Profit, Loss & Discount",C,"Chain transactions, Percentage profit, Mark-up, Discount calculation",Hard,False,Rs. 600,A,Rs. 625,B,Rs. 750,C,Rs. 800,D,,,4,"A manufacturer sells an item to a wholesaler at a 20% profit. The wholesaler sells the same item to a retailer at a 10% profit. The retailer marks the item up by 50% of his cost price but then offers a 20% discount on this marked-up price to a customer. If the customer paid Rs. 1188 for the item, what was the original manufacturing cost of the item?",MCQ,501564872,Part 1: All Questions,,MockSet1_QA,"Let the Manufacturing Cost (MC) be C.
+Manufacturer's Selling Price (SP_M) = C × (1+0.20) = 1.2C. This is Wholesaler's Cost Price (CP_W).
+Wholesaler's Selling Price (SP_W) = 1.2C × (1+0.10) = 1.2C × 1.1 = 1.32C. This is Retailer's Cost Price (CP_R).
+Retailer's Marked Price (MP_R) = 1.32C × (1+0.50) = 1.32C × 1.5 = 1.98C.
+Retailer's Selling Price (SP_R) to customer = MP_R × (1-0.20) = 1.98C × 0.8 = 1.584C.
+The customer paid Rs. 1188.
+So, 1.584C = 1188.
+C = 1188 / 1.584 = 1188000 / 1584 = 750.
+The manufacturing cost C = Rs. 750.
+The correct option is (C).","Profit, Loss & Discount",Arithmetic
+,Simple Interest,B,"Simple interest formula, Amount calculation, Effect of rate change",Medium,False,5%,A,6%,B,7.5%,C,8%,D,,,5,"A sum of money amounts to Rs. 9440 in 3 years at a certain rate of simple interest. If the rate of interest were increased by 25%, the same sum would amount to Rs. 9800 in the same 3 years. Find the original rate of interest per annum.",MCQ,492650461,Part 1: All Questions,,MockSet1_QA,"Let P be the principal and R be the original rate of interest per annum. Time T = 3 years.
+Amount A = P + (P × R × T)/100.
+9440 = P + (P × R × 3)/100 → (1)
+If rate increased by 25%, new rate R' = R(1+0.25) = 1.25R.
+9800 = P + (P × 1.25R × 3)/100 → (2)
+The difference in amounts is due to the increase in interest over 3 years.
+Increase in Amount = 9800 - 9440 = Rs. 360.
+This increase corresponds to the interest generated by the rate increase (1.25R - R = 0.25R).
+Increase in Interest = (P × (0.25R) × 3)/100 = (0.75PR)/100.
+So, the interest increase is (0.75PR)/100 = 360.
+The original interest for 3 years is SI₁ = (3PR)/100.
+Note that (3PR)/100 = 4 × [(0.75PR)/100].
+Therefore, SI₁ = 4 × 360 = 1440.
+From (1), P = Amount - SI₁ = 9440 - 1440 = 8000.
+Now find R using SI₁ = (P × R × T)/100:
+1440 = (8000 × R × 3)/100 = 240R.
+R = 1440 / 240 = 6.
+The original rate of interest is 6%.
+The correct option is (B).",Simple Interest,Arithmetic
+,"Time, Speed & Distance (Problems on Trains)",36,"Relative speed, Trains crossing in opposite directions, System of linear equations, Unit conversion (m/s to km/hr)",Hard,True,,,,,,,,,,,6,"Two trains of lengths 180 m and 220 m are moving in opposite directions on parallel tracks. Their speeds are S1 m/s and S2 m/s respectively. They cross each other in 10 seconds. If the first train (length 180 m) had doubled its speed, they would have crossed each other in 8 seconds. Find the speed of the first train (S1) in km/hr.",TITA,383746050,Part 1: All Questions,,MockSet1_QA,"Let the lengths of the trains be L1 = 180 m and L2 = 220 m.
+Let their speeds be S1 m/s and S2 m/s.
+When moving in opposite directions, their relative speed is S1 + S2.
+The total distance covered to cross each other is L1 + L2 = 180 + 220 = 400 m.
+Time taken = (L1+L2) / (S1+S2).
+10 = 400 / (S1+S2) ⟹ S1+S2 = 400/10 = 40 → (1).
+If the first train doubles its speed, its new speed is 2S1.
+New relative speed = 2S1 + S2.
+Time taken = (L1+L2) / (2S1+S2).
+8 = 400 / (2S1+S2) ⟹ 2S1+S2 = 400/8 = 50 → (2).
+Subtracting equation (1) from equation (2):
+(2S1+S2) - (S1+S2) = 50 - 40.
+S1 = 10 m/s.
+To convert S1 to km/hr: 10 m/s = 10 × (18/5) km/hr = 2 × 18 = 36 km/hr.
+The speed of the first train is 36.","Time, Speed & Distance (Problems on Trains)",Arithmetic
+,Mensuration - 2D (Area & Perimeter: Quadrilaterals),C,"Rectangle properties, Perimeter formula, Area formula, Algebraic word problem",Easy,False,171,A,180,B,187,C,195,D,,,7,"The perimeter of a rectangle is 56 cm. If its length is 6 cm more than its width, find its area in sq. cm.",MCQ,274831639,Part 1: All Questions,,MockSet1_QA,"Let the width of the rectangle be w cm.
+The length l = w+6 cm.
+The perimeter is 2(l+w) = 56 cm.
+So, l+w = 28.
+Substitute l=w+6: (w+6)+w = 28 ⟹ 2w+6=28 ⟹ 2w=22 ⟹ w=11 cm.
+The length l = 11+6 = 17 cm.
+The area of the rectangle is l × w = 17 × 11 = 187 sq. cm.
+The correct option is (C).",Mensuration - 2D (Area & Perimeter: Quadrilaterals),Geometry & Mensuration
+,"Geometry (Triangles - Properties, Area Ratios)",90,"Area of triangle, Ratio of bases and areas, Median property (line from vertex to midpoint)",Medium,True,,,,,,,,,,,8,"In a triangle ABC, D is a point on BC such that BD:DC = 2:3. E is the midpoint of AD. If the area of triangle ABE is 18 sq. units, find the area of triangle ABC in sq. units.",TITA,165927228,Part 1: All Questions,,MockSet1_QA,"Let Area(XYZ) denote the area of triangle XYZ.
+D is a point on BC such that BD:DC = 2:3.
+Since triangles ABD and ADC share the same altitude from vertex A, the ratio of their areas is equal to the ratio of their bases. Thus, Area(ABD) : Area(ADC) = BD:DC = 2:3.
+This means Area(ABD) = (BD/BC) * Area(ABC) = (2/(2+3)) * Area(ABC) = (2/5)Area(ABC).
+E is the midpoint of AD. In △ABD, BE is a median.
+A median divides a triangle into two triangles of equal area, so Area(ABE) = Area(BDE) = (1/2)Area(ABD).
+Given Area(ABE) = 18 sq. units.
+So, Area(ABD) = 2 * Area(ABE) = 2 * 18 = 36 sq. units.
+Using the relation Area(ABD) = (2/5)Area(ABC):
+36 = (2/5)Area(ABC).
+Area(ABC) = (36 × 5) / 2 = 18 × 5 = 90 sq. units.
+The area of triangle ABC is 90.","Geometry (Triangles - Properties, Area Ratios)",Geometry & Mensuration
+,"Time, Speed & Distance (General)",B,"Distance-Speed-Time relationship, Forming equations from conditions, Solving system of equations",Medium,False,100 km,A,120 km,B,150 km,C,180 km,D,,,9,"A car travels from P to Q at a constant speed. If its speed were increased by 10 km/hr, it would have taken 1 hour less to cover the distance. If its speed were decreased by 10 km/hr, it would have taken 2 hours more. What is the distance PQ in km?",MCQ,957012817,Part 1: All Questions,,MockSet1_QA,"Let D be the distance, S be the usual speed, and T be the usual time. So D = ST.
+If speed is (S+10), time is (T-1). So D = (S+10)(T-1).
+ST = (S+10)(T-1) = ST - S + 10T - 10 ⟹ S = 10T - 10 → (1).
+If speed is (S-10), time is (T+2). So D = (S-10)(T+2).
+ST = (S-10)(T+2) = ST + 2S - 10T - 20 ⟹ 2S = 10T + 20 ⟹ S = 5T + 10 → (2).
+Equating (1) and (2):
+10T - 10 = 5T + 10.
+5T = 20 ⟹ T = 4 hours.
+Substitute T=4 into (1): S = 10(4) - 10 = 40 - 10 = 30 km/hr.
+Distance D = ST = 30 × 4 = 120 km.
+The correct option is (B).","Time, Speed & Distance (General)",Arithmetic
+,Pipes & Cisterns,24,"Work rate of pipes, Filling and emptying, Combined work, Variable schedule (pipe closing early)",Hard,True,,,,,,,,,,,10,"Pipe A can fill a tank in 12 hours. Pipe B can fill the same tank in 18 hours. Pipe C can empty the full tank in X hours. All three pipes are opened together. However, Pipe C is closed 3 hours before the tank is completely filled. If the tank gets filled in a total of 9 hours, find the value of X.",TITA,848108406,Part 1: All Questions,,MockSet1_QA,"Let V be the volume of the tank.
+Rate of pipe A, r_A = V/12 (filling).
+Rate of pipe B, r_B = V/18 (filling).
+Rate of pipe C, r_C = V/X (emptying).
+The tank is filled in 9 hours. Pipe C works for the first 9-3=6 hours.
+Work done in the last 3 hours (Pipes A and B only):
+Work_last3 = 3 × (V/12 + V/18) = 3V × (3+2)/36 = 3V × (5/36) = 5V/12.
+Work done in the first 6 hours (Pipes A, B, and C):
+Work_first6 = 6 × (V/12 + V/18 - V/X) = 6V × ((3+2)/36 - 1/X) = 6V × (5/36 - 1/X) = 5V/6 - 6V/X.
+Total work done is V (the full tank):
+Work_first6 + Work_last3 = V
+(5V/6 - 6V/X) + 5V/12 = V
+Divide by V: 5/6 - 6/X + 5/12 = 1
+10/12 - 6/X + 5/12 = 1
+15/12 - 6/X = 1
+5/4 - 1 = 6/X
+1/4 = 6/X ⟹ X = 24.
+The value of X is 24.",Pipes & Cisterns,Arithmetic
+,Number Systems,B,"Factorials, Remainders, Modular arithmetic (mod 36), Sum of series of factorials",Hard,False,0,A,9,B,17,C,25,D,,,11,What is the remainder when N = (1!)³ + (2!)³ + (3!)³ + (4!)³ + (5!)³ + ... + (100!)³ is divided by 36?,MCQ,739204995,Part 1: All Questions,,MockSet1_QA,"We need to find the remainder of N when divided by 36.
+For n ≥ 6, n! contains the factors 4 and 9 (since 6! = 720 = 20 × 36), so n! is a multiple of 36. Thus, (n!)³ is also a multiple of 36, and its remainder is 0.
+We only need to check the terms from n=1 to n=5:
+• (1!)³ = 1³ = 1 ≡ 1 (mod 36)
+• (2!)³ = 2³ = 8 ≡ 8 (mod 36)
+• (3!)³ = 6³ = 216. Since 216 = 6 × 36, the remainder is 0.
+• (4!)³ = 24³. Since 24² = 576 = 16 × 36, 24² is divisible by 36. Therefore, 24³ is also divisible by 36. The remainder is 0.
+• (5!)³ = 120³. Since 120 = 3 × 36 + 12, 120 ≡ 12 (mod 36). Then 120³ ≡ 12³ (mod 36). 12³ = 1728 = 48 × 36, so 120³ is divisible by 36. The remainder is 0.
+Sum of remainders = 1 + 8 + 0 + 0 + 0 + ... = 9.
+The remainder is 9.
+The correct option is (B).",Number Systems,Algebra
+,Sequences & Series (AP),2,"Arithmetic progression, Sum of n terms formula, Nth term formula",Easy,True,,,,,,,,,,,12,"The sum of the first 15 terms of an arithmetic progression is 255. If the 5th term of this progression is 11, find its common difference.",TITA,620190584,Part 1: All Questions,,MockSet1_QA,"Let the arithmetic progression have first term a and common difference d.
+Sum of the first n terms S_n = n/2[2a + (n-1)d].
+Given S₁₅ = 255.
+15/2[2a + (15-1)d] = 15(a+7d) = 255 ⟹ a+7d = 255/15 = 17.
+The n-th term T_n = a + (n-1)d.
+Given the 5th term T₅ = 11 ⟹ a + (5-1)d = a+4d = 11.
+We have a system of two equations:
+1. a+7d = 17
+2. a+4d = 11
+Subtracting (2) from (1): (a+7d) - (a+4d) = 17 - 11 ⟹ 3d = 6 ⟹ d = 2.
+The common difference is 2.",Sequences & Series (AP),Algebra
+,Mixtures & Alligations,D,"Concentration of solutions, Acid-water mixture, Dilution by adding water, Fortification by adding concentrated solution",Hard,False,5,A,6,B,8,C,10,D,,,13,"A solution contains 25% acid. When 10 litres of water are added to this solution, the concentration of acid becomes 15%. If, to this new diluted solution, 'x' litres of a 50% acid solution are added, the final acid concentration in the mixture becomes 25%. Find the value of 'x'.",MCQ,511286173,Part 1: All Questions,,MockSet1_QA,"Let the initial volume of the solution be V litres. Acid = 0.25V.
+Adding 10L water: volume V+10, acid 0.25V. New concentration: 0.25V / (V+10) = 0.15.
+0.25V = 0.15V + 1.5 ⟹ 0.10V = 1.5 ⟹ V = 15 litres.
+Diluted solution: volume 15+10 = 25 L. Acid 0.25 × 15 = 3.75 L.
+Adding 'x' litres of 50% acid solution:
+Acid added 0.50x. Total acid 3.75 + 0.50x. New total volume 25+x.
+Final concentration: (3.75 + 0.50x) / (25+x) = 0.25.
+3.75 + 0.50x = 0.25(25+x) = 6.25 + 0.25x.
+0.25x = 2.5 ⟹ x = 10.
+The correct option is (D).",Mixtures & Alligations,Arithmetic
+,Logarithms,B,"Logarithm properties (power rule, change of base), Algebraic manipulation of log expressions",Hard,False,3p/(p+2),A,6p/(p+4),B,3p/(p+4),C,6p/(4-p),D,,,14,"If log₁₂ 81 = p, then log₆ 27 is equal to:",MCQ,402371762,Part 1: All Questions,,MockSet1_QA,"Given log₁₂ 81 = p ⟹ 4log₁₂ 3 = p ⟹ log₁₂ 3 = p/4.
+Using the base-change formula, log_a(b) = 1/log_b(a):
+1/log₃(12) = p/4
+1/log₃(4×3) = p/4
+1/(log₃(2²) + log₃(3)) = p/4
+1/(2log₃(2) + 1) = p/4
+4 = p(2log₃(2) + 1) ⟹ 4 = 2plog₃(2) + p ⟹ 2plog₃(2) = 4-p ⟹ log₃(2) = (4-p)/(2p).
+We need log₆ 27 = 3log₆ 3 = 3/log₃(6) = 3/(log₃(2) + log₃(3)) = 3/(log₃(2)+1).
+Substitute the expression for log₃(2):
+log₆ 27 = 3 / [((4-p)/(2p)) + 1] = 3 / [(4-p+2p)/(2p)] = 3 / [(4+p)/(2p)] = 6p/(4+p).
+The correct option is (B).",Logarithms,Algebra
+,Quadratic Equations,B,"Roots of quadratic equation, Vieta's formulas, Symmetric functions of roots (α²+β²), Discriminant for real roots condition",Hard,False,1,A,2,B,-1,C,4,D,,,15,"If the roots of the quadratic equation x² - (k+1)x + (k²-k-2) = 0 are α and β such that α² + β² = 9, find the sum of all possible real values of k.",MCQ,393467351,Part 1: All Questions,,MockSet1_QA,"Equation x² - (k+1)x + (k²-k-2) = 0. Roots α, β.
+From Vieta's formulas:
+α + β = k+1.
+αβ = k²-k-2.
+Given α² + β² = 9.
+(α+β)² - 2αβ = 9 ⟹ (k+1)² - 2(k²-k-2) = 9.
+(k²+2k+1) - (2k²-2k-4) = 9.
+-k² + 4k + 5 = 9 ⟹ -k² + 4k - 4 = 0 ⟹ k²-4k+4 = 0 ⟹ (k-2)² = 0.
+So k=2.
+For the roots α, β to be real, the discriminant must be non-negative: D ≥ 0.
+D = (-(k+1))² - 4(1)(k²-k-2) ≥ 0.
+(k²+2k+1) - 4k² + 4k + 8 ≥ 0.
+-3k² + 6k + 9 ≥ 0 ⟹ k² - 2k - 3 ≤ 0 ⟹ (k-3)(k+1) ≤ 0 ⟹ -1 ≤ k ≤ 3.
+The value k=2 is within the valid interval [-1, 3].
+So, k=2 is the only possible value.
+The sum of all possible real values of k is 2.
+The correct option is (B).",Quadratic Equations,Algebra
+,Functions & Graphs,D,"Absolute value functions, Piecewise linear functions, Graphical analysis, Number of solutions of f(x)=k",Hard,False,0,A,1,B,2,C,Infinitely many,D,,,16,Let f(x) = |x-2| + |x-4| + |x-6|. For how many distinct integer values of k does the equation f(x) = k have exactly 2 solutions?,MCQ,284552940,Part 1: All Questions,,MockSet1_QA,"The function f(x) is a piecewise linear function with critical points at x=2, 4, 6. We define f(x) for each interval:
+• For x < 2: f(x) = -(x-2) - (x-4) - (x-6) = -3x + 12
+• For 2 ≤ x < 4: f(x) = (x-2) - (x-4) - (x-6) = -x + 8
+• For 4 ≤ x < 6: f(x) = (x-2) + (x-4) - (x-6) = x
+• For x ≥ 6: f(x) = (x-2) + (x-4) + (x-6) = 3x - 12
+The graph of f(x) is a V-shape (or a combination of V-shapes). The minimum value occurs at one of the critical points.
+f(2) = |0| + |-2| + |-4| = 6.
+f(4) = |2| + |0| + |-2| = 4.
+f(6) = |4| + |2| + |0| = 6.
+The minimum value of f(x) is 4, which occurs at x=4.
+For the equation f(x)=k to have solutions, k must be greater than or equal to the minimum value.
+If k < 4, there are 0 solutions.
+If k = 4, there is 1 solution (at x=4).
+If k > 4, any horizontal line y=k will intersect the graph of f(x) at two points.
+For example, if 4 < k < 6, the solutions come from -x+8 = k and x = k.
+If k = 6, the solutions are x=2 and x=6.
+If k > 6, the solutions come from -3x+12 = k and 3x-12 = k.
+The equation f(x)=k has exactly 2 solutions for all k > 4.
+The integer values of k for which this is true are 5, 6, 7, 8, ...
+This is an infinite set of integers.
+The correct option is (D).",Functions & Graphs,Algebra
+,"Geometry (Circles - Properties, Tangents)",D,"Circle properties, Tangent-radius perpendicularity, Isosceles triangle properties, Angle sum property of triangles",Hard,False,20°,A,25°,B,30°,C,40°,D,,,17,"In a circle with center O, AB is a chord. A tangent drawn at point A on the circle intersects the line BO extended (through O, away from B) at point T. If ∠OAB = 25°, find the measure of ∠ATB.",MCQ,175648529,Part 1: All Questions,,MockSet1_QA,"In △OAB, OA = OB (radii of the same circle), so it is an isosceles triangle.
+Therefore, ∠OBA = ∠OAB = 25°.
+The sum of angles in △OAB is 180°, so ∠AOB = 180° - (25° + 25°) = 130°.
+The phrase ""line BO extended... through O, away from B"" implies that the points are collinear in the order B-O-T.
+Since T, O, B are collinear, ∠AOT and ∠AOB are supplementary angles.
+Therefore, ∠AOT = 180° - ∠AOB = 180° - 130° = 50°.
+AT is tangent to the circle at A, so the radius OA is perpendicular to the tangent AT. Thus, ∠OAT = 90°.
+In △AOT, the sum of angles is 180°.
+∠ATB = ∠ATO = 180° - (∠TAO + ∠AOT) = 180° - (90° + 50°) = 180° - 140° = 40°.
+The correct option is (D).","Geometry (Circles - Properties, Tangents)",Geometry & Mensuration
+,"Mensuration - 3D (Volume & Surface Area: Spheres, Cones)",54,"Volume of sphere, Volume of cone, Conservation of volume (melting and recasting)",Medium,True,,,,,,,,,,,18,"A solid metallic sphere of radius 10.5 cm is melted and recast into a number of smaller identical cones, each of radius 3.5 cm and height 7 cm. Find the number of such cones formed.",TITA,966734118,Part 1: All Questions,,MockSet1_QA,"Sphere radius R = 10.5 = 21/2 cm.
+Volume of sphere V_s = (4/3)πR³ = (4/3)π(21/2)³ = (4/3)π(9261/8) = 9261π/6 cm³.
+Cone radius r = 3.5 = 7/2 cm, height h = 7 cm.
+Volume of one cone V_c = (1/3)πr²h = (1/3)π(7/2)²(7) = (1/3)π(49/4)(7) = 343π/12 cm³.
+Number of cones N = V_s / V_c = (9261π/6) / (343π/12) = (9261/6) × (12/343) = (9261 × 2) / 343.
+Since 21³ = 9261 and 7³ = 343, then 9261/343 = (21/7)³ = 3³ = 27.
+N = 27 × 2 = 54.
+The number of cones is 54.","Mensuration - 3D (Volume & Surface Area: Spheres, Cones)",Geometry & Mensuration
+,Percentages,16,"Percentage increase, Expenditure, Consumption adjustment",Easy,True,,,,,,,,,,,19,The price of petrol increased by 25%. By what percentage must a car owner reduce his consumption of petrol so that his expenditure on petrol increases by only 5%?,TITA,857829707,Part 1: All Questions,,MockSet1_QA,"Let initial Price = P, Consumption = C, Expenditure = E. So, E = P × C.
+New Price P' = 1.25P.
+New Expenditure E' = 1.05E = 1.05PC.
+Let the new consumption be C'. The new expenditure is also E' = P' × C' = (1.25P) × C'.
+So, 1.05PC = (1.25P)C'.
+1.05C = 1.25C'.
+C' = (1.05/1.25)C = (105/125)C = (21/25)C.
+The reduction in consumption = C - C' = C - (21/25)C = (4/25)C.
+Percentage reduction = [(4/25)C / C] × 100 = (4/25) × 100 = 16%.
+The percentage reduction is 16.",Percentages,Arithmetic
+,Time & Work,B,"Work and efficiency, Combined work, System of linear equations, Variable efficiency",Hard,False,30,A,35,B,40,C,48,D,,,20,"A and B together can complete a task in 24 days. If A works at 125% of his actual efficiency and B works at 75% of his actual efficiency, they can complete the same task in 22 days. In how many days can A alone complete the task at his actual efficiency? (Choose the closest integer if the answer is not an exact integer)",MCQ,748915296,Part 1: All Questions,,MockSet1_QA,"Let actual efficiencies be e_A, e_B. Let total work be 1 unit.
+From the first condition: (e_A + e_B) × 24 = 1 ⟹ e_A + e_B = 1/24 → (1).
+New efficiencies are 1.25e_A and 0.75e_B.
+From the second condition: (1.25e_A + 0.75e_B) × 22 = 1 ⟹ 1.25e_A + 0.75e_B = 1/22.
+(5/4)e_A + (3/4)e_B = 1/22 ⟹ 5e_A + 3e_B = 4/22 = 2/11 → (2).
+Multiply equation (1) by 3: 3e_A + 3e_B = 3/24 = 1/8 → (3).
+Subtract equation (3) from equation (2):
+(5e_A+3e_B) - (3e_A+3e_B) = 2/11 - 1/8.
+2e_A = (16-11)/88 = 5/88.
+e_A = 5/176.
+Time for A alone = 1/e_A = 1 / (5/176) = 176/5 = 35.2 days.
+The closest integer is 35.
+The correct option is (B).",Time & Work,Arithmetic
+,Inequalities & Modulus (Absolute Values),4,"Absolute value inequalities, Rational function inequality, Sign analysis, Critical points, Interval method, Counting integer solutions",Hard,True,,,,,,,,,,,21,Find the number of integer solutions for the inequality (|x-3|-2)/(|x-5|-1) ≤ 0.,TITA,639010885,Part 1: All Questions,,MockSet1_QA,"The inequality is (|x-3|-2)/(|x-5|-1) ≤ 0.
+Find the critical points where the numerator or denominator is zero.
+Numerator: |x-3|-2 = 0 ⟹ |x-3|=2 ⟹ x-3=2 or x-3=-2 ⟹ x=5, x=1.
+Denominator: |x-5|-1 = 0 ⟹ |x-5|=1 ⟹ x-5=1 or x-5=-1 ⟹ x=6, x=4.
+The critical points, in order, are 1, 4, 5, 6. These points divide the number line into five intervals. The value of x cannot be 4 or 6.
+We test the sign of the expression in each interval:
+• Interval (-∞, 1): Let x=0. Expression = (|-3|-2)/(|-5|-1) = 1/4 > 0.
+• Interval [1, 4): Let x=2. Expression = (|-1|-2)/(|-3|-1) = -1/2 < 0. This interval is part of the solution.
+• Interval (4, 5]: Let x=4.5. Expression = (|1.5|-2)/(|-0.5|-1) = -0.5/-0.5 = 1 > 0.
+• Interval [5, 6): Let x=5.5. Expression = (|2.5|-2)/(|-0.5|-1) = 0.5/-0.5 = -1 < 0. This interval is part of the solution.
+• Interval (6, ∞): Let x=7. Expression = (|4|-2)/(|2|-1) = 2/1 > 0.
+The solution set for the inequality is [1, 4) U [5, 6).
+Integer solutions in [1, 4) are {1, 2, 3}.
+Integer solution in [5, 6) is {5}.
+The set of all integer solutions is {1, 2, 3, 5}. The number of solutions is 4.",Inequalities & Modulus (Absolute Values),Algebra
+,Probability,21,"Probability without replacement, Dependent events, Sequential probability calculation",Medium,True,,,,,,,,,,,22,"A bag contains 4 red, 5 blue, and 3 green balls. Three balls are drawn one by one without replacement. The probability that the first ball drawn is red, the second is blue, and the third is green is P/Q, where P/Q is in its simplest form. Find the value of Q-P.",TITA,520106474,Part 1: All Questions,,MockSet1_QA,"Total balls = 4 Red + 5 Blue + 3 Green = 12.
+The probability of drawing balls in the specific sequence Red, then Blue, then Green without replacement is calculated as follows:
+P(R1, B2, G3) = P(1st is Red) × P(2nd is Blue | 1st was Red) × P(3rd is Green | 1st was Red, 2nd was Blue).
+P(1st is Red) = 4/12.
+After drawing one red ball, 11 balls remain: 3R, 5B, 3G.
+P(2nd is Blue | 1st was Red) = 5/11.
+After drawing one red and one blue, 10 balls remain: 3R, 4B, 3G.
+P(3rd is Green | R1, B2) = 3/10.
+Total Probability = (4/12) × (5/11) × (3/10) = (1/3) × (5/11) × (3/10) = 5 / (11 × 10) = 5/110 = 1/22.
+The probability is 1/22. This is in simplest form, so P=1 and Q=22.
+Q-P = 22-1 = 21.
+The value is 21.",Probability,Modern Maths

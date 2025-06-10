@@ -1,0 +1,700 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+LRDI,40,MOCKCAT24S3GEN_Q1,1,DiseaseProgressionStudy,"A 30-year epidemiological study was initiated in the year 2000 to observe the progression of a specific chronic disease. The study enrolled 1200 individuals, comprising 600 males and 600 females. At the start of the study in 2000, these individuals were distributed equally across three age bands: 20 to less than 30 years, 30 to less than 40 years, and 40 to less than 50 years. Thus, for each gender, there were 200 individuals in each of these three age bands.
+
+Within each gender and initial age band, 100 individuals were assigned to receive ""Treatment X"" (T), and the other 100 individuals were assigned to a ""Placebo"" group (P). The study tracked these individuals for thirty years or until their death, whichever occurred first. The number of individuals still alive was recorded at decennial checkpoints: 2010, 2020, and 2030.
+
+The tables below depict the number of individuals from the initial cohort who were still alive at each checkpoint, categorized by their age group at that point in time, their gender, and whether they were in the Treatment X or Placebo group. For example, in 2010, among males who were originally in the 20 to <30 age band in 2000 (and thus were 30 to <40 in 2010), 90 individuals from the Treatment X group were alive.
+
+Table 1: Individuals Alive in 2010
+| Gender | Group | Age in 2010 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 30-<40 (20-<30) | 90 |
+| Male | Treatment | 40-<50 (30-<40) | 85 |
+| Male | Treatment | 50-<60 (40-<50) | 75 |
+| Male | Placebo | 30-<40 (20-<30) | 80 |
+| Male | Placebo | 40-<50 (30-<40) | 70 |
+| Male | Placebo | 50-<60 (40-<50) | 60 |
+| Female | Treatment | 30-<40 (20-<30) | 95 |
+| Female | Treatment | 40-<50 (30-<40) | 90 |
+| Female | Treatment | 50-<60 (40-<50) | 80 |
+| Female | Placebo | 30-<40 (20-<30) | 88 |
+| Female | Placebo | 40-<50 (30-<40) | 82 |
+| Female | Placebo | 50-<60 (40-<50) | 70 |
+
+Table 2: Individuals Alive in 2020
+| Gender | Group | Age in 2020 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 40-<50 (20-<30) | 82 |
+| Male | Treatment | 50-<60 (30-<40) | 72 |
+| Male | Treatment | 60-<70 (40-<50) | 60 |
+| Male | Placebo | 40-<50 (20-<30) | 65 |
+| Male | Placebo | 50-<60 (30-<40) | 50 |
+| Male | Placebo | 60-<70 (40-<50) | 35 |
+| Female | Treatment | 40-<50 (20-<30) | 90 |
+| Female | Treatment | 50-<60 (30-<40) | 80 |
+| Female | Treatment | 60-<70 (40-<50) | 68 |
+| Female | Placebo | 40-<50 (20-<30) | 75 |
+| Female | Placebo | 50-<60 (30-<40) | 65 |
+| Female | Placebo | 60-<70 (40-<50) | 50 |
+
+Table 3: Individuals Alive in 2030
+| Gender | Group | Age in 2030 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 50-<60 (20-<30) | 70 |
+| Male | Treatment | 60-<70 (30-<40) | 58 |
+| Male | Treatment | 70-<80 (40-<50) | 40 |
+| Male | Placebo | 50-<60 (20-<30) | 45 |
+| Male | Placebo | 60-<70 (30-<40) | 25 |
+| Male | Placebo | 70-<80 (40-<50) | 10 |
+| Female | Treatment | 50-<60 (20-<30) | 82 |
+| Female | Treatment | 60-<70 (30-<40) | 70 |
+| Female | Treatment | 70-<80 (40-<50) | 52 |
+| Female | Placebo | 50-<60 (20-<30) | 60 |
+| Female | Placebo | 60-<70 (30-<40) | 40 |
+| Female | Placebo | 70-<80 (40-<50) | 22 |","What was the total number of deaths among females in the Placebo group from the cohort originally aged 30 to <40 years in 2000, over the entire 30-year study period?",35,58,60,75,A,B,C,D,C,MCQ,Data Interpretation,"Cohort Analysis, Survival Data",Moderate,Calculating mortality within a specific cohort from initial and final population data.,"table interpretation, subtraction, cohort tracking",False,MOCKCAT24S3GEN_Set1_DiseaseStudy,Apply,"1. We need to find the number of deaths among females in the Placebo group, originally aged 30 to <40 years in 2000.
+2. The introductory text states that for each gender and initial age band, 100 individuals were assigned to Placebo. So, initially (in 2000), there were 100 females in the Placebo group aged 30 to <40.
+3. By 2030, these individuals would have aged 30 years, so their age band would be 60 to <70 years.
+4. Referring to Table 3 (Individuals Alive in 2030): For Females, Placebo group, age 60-<70 (orig. 30-<40), the number alive is 40.
+5. Number of deaths = Initial number in cohort - Number alive in 2030 = 100 - 40 = 60."
+LRDI,40,MOCKCAT24S3GEN_Q2,2,DiseaseProgressionStudy,"A 30-year epidemiological study was initiated in the year 2000 to observe the progression of a specific chronic disease. The study enrolled 1200 individuals, comprising 600 males and 600 females. At the start of the study in 2000, these individuals were distributed equally across three age bands: 20 to less than 30 years, 30 to less than 40 years, and 40 to less than 50 years. Thus, for each gender, there were 200 individuals in each of these three age bands.
+
+Within each gender and initial age band, 100 individuals were assigned to receive ""Treatment X"" (T), and the other 100 individuals were assigned to a ""Placebo"" group (P). The study tracked these individuals for thirty years or until their death, whichever occurred first. The number of individuals still alive was recorded at decennial checkpoints: 2010, 2020, and 2030.
+
+The tables below depict the number of individuals from the initial cohort who were still alive at each checkpoint, categorized by their age group at that point in time, their gender, and whether they were in the Treatment X or Placebo group. For example, in 2010, among males who were originally in the 20 to <30 age band in 2000 (and thus were 30 to <40 in 2010), 90 individuals from the Treatment X group were alive.
+
+Table 1: Individuals Alive in 2010
+| Gender | Group | Age in 2010 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 30-<40 (20-<30) | 90 |
+| Male | Treatment | 40-<50 (30-<40) | 85 |
+| Male | Treatment | 50-<60 (40-<50) | 75 |
+| Male | Placebo | 30-<40 (20-<30) | 80 |
+| Male | Placebo | 40-<50 (30-<40) | 70 |
+| Male | Placebo | 50-<60 (40-<50) | 60 |
+| Female | Treatment | 30-<40 (20-<30) | 95 |
+| Female | Treatment | 40-<50 (30-<40) | 90 |
+| Female | Treatment | 50-<60 (40-<50) | 80 |
+| Female | Placebo | 30-<40 (20-<30) | 88 |
+| Female | Placebo | 40-<50 (30-<40) | 82 |
+| Female | Placebo | 50-<60 (40-<50) | 70 |
+
+Table 2: Individuals Alive in 2020
+| Gender | Group | Age in 2020 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 40-<50 (20-<30) | 82 |
+| Male | Treatment | 50-<60 (30-<40) | 72 |
+| Male | Treatment | 60-<70 (40-<50) | 60 |
+| Male | Placebo | 40-<50 (20-<30) | 65 |
+| Male | Placebo | 50-<60 (30-<40) | 50 |
+| Male | Placebo | 60-<70 (40-<50) | 35 |
+| Female | Treatment | 40-<50 (20-<30) | 90 |
+| Female | Treatment | 50-<60 (30-<40) | 80 |
+| Female | Treatment | 60-<70 (40-<50) | 68 |
+| Female | Placebo | 40-<50 (20-<30) | 75 |
+| Female | Placebo | 50-<60 (30-<40) | 65 |
+| Female | Placebo | 60-<70 (40-<50) | 50 |
+
+Table 3: Individuals Alive in 2030
+| Gender | Group | Age in 2030 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 50-<60 (20-<30) | 70 |
+| Male | Treatment | 60-<70 (30-<40) | 58 |
+| Male | Treatment | 70-<80 (40-<50) | 40 |
+| Male | Placebo | 50-<60 (20-<30) | 45 |
+| Male | Placebo | 60-<70 (30-<40) | 25 |
+| Male | Placebo | 70-<80 (40-<50) | 10 |
+| Female | Treatment | 50-<60 (20-<30) | 82 |
+| Female | Treatment | 60-<70 (30-<40) | 70 |
+| Female | Treatment | 70-<80 (40-<50) | 52 |
+| Female | Placebo | 50-<60 (20-<30) | 60 |
+| Female | Placebo | 60-<70 (30-<40) | 40 |
+| Female | Placebo | 70-<80 (40-<50) | 22 |","For the cohort originally aged 20 to <30 years in 2000, what was the percentage point difference in survival rate by 2030 between males in the Treatment X group and males in the Placebo group? (Survival rate is calculated based on the initial number of individuals in that specific subgroup).",20%,25%,30%,35%,A,B,C,D,B,MCQ,Data Interpretation,"Cohort Analysis, Survival Rates",Moderate,Calculating and comparing percentage survival rates between two subgroups.,"percentage calculation, rate comparison, cohort tracking",False,MOCKCAT24S3GEN_Set1_DiseaseStudy,Apply,"1. We are considering the cohort originally aged 20 to <30 years in 2000. The initial number in each subgroup (Male Treatment, Male Placebo) was 100.
+2. For males in the Treatment X group, originally 20-<30:
+    *   In 2030, they are aged 50 to <60.
+    *   From Table 3: Males, Treatment, 50-<60 (orig. 20-<30) = 70 alive.
+    *   Survival rate (Treatment) = (70 / 100) * 100% = 70%.
+3. For males in the Placebo group, originally 20-<30:
+    *   In 2030, they are aged 50 to <60.
+    *   From Table 3: Males, Placebo, 50-<60 (orig. 20-<30) = 45 alive.
+    *   Survival rate (Placebo) = (45 / 100) * 100% = 45%.
+4. Percentage point difference = Survival rate (Treatment) - Survival rate (Placebo) = 70% - 45% = 25%."
+LRDI,40,MOCKCAT24S3GEN_Q3,3,DiseaseProgressionStudy,"A 30-year epidemiological study was initiated in the year 2000 to observe the progression of a specific chronic disease. The study enrolled 1200 individuals, comprising 600 males and 600 females. At the start of the study in 2000, these individuals were distributed equally across three age bands: 20 to less than 30 years, 30 to less than 40 years, and 40 to less than 50 years. Thus, for each gender, there were 200 individuals in each of these three age bands.
+
+Within each gender and initial age band, 100 individuals were assigned to receive ""Treatment X"" (T), and the other 100 individuals were assigned to a ""Placebo"" group (P). The study tracked these individuals for thirty years or until their death, whichever occurred first. The number of individuals still alive was recorded at decennial checkpoints: 2010, 2020, and 2030.
+
+The tables below depict the number of individuals from the initial cohort who were still alive at each checkpoint, categorized by their age group at that point in time, their gender, and whether they were in the Treatment X or Placebo group. For example, in 2010, among males who were originally in the 20 to <30 age band in 2000 (and thus were 30 to <40 in 2010), 90 individuals from the Treatment X group were alive.
+
+Table 1: Individuals Alive in 2010
+| Gender | Group | Age in 2010 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 30-<40 (20-<30) | 90 |
+| Male | Treatment | 40-<50 (30-<40) | 85 |
+| Male | Treatment | 50-<60 (40-<50) | 75 |
+| Male | Placebo | 30-<40 (20-<30) | 80 |
+| Male | Placebo | 40-<50 (30-<40) | 70 |
+| Male | Placebo | 50-<60 (40-<50) | 60 |
+| Female | Treatment | 30-<40 (20-<30) | 95 |
+| Female | Treatment | 40-<50 (30-<40) | 90 |
+| Female | Treatment | 50-<60 (40-<50) | 80 |
+| Female | Placebo | 30-<40 (20-<30) | 88 |
+| Female | Placebo | 40-<50 (30-<40) | 82 |
+| Female | Placebo | 50-<60 (40-<50) | 70 |
+
+Table 2: Individuals Alive in 2020
+| Gender | Group | Age in 2020 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 40-<50 (20-<30) | 82 |
+| Male | Treatment | 50-<60 (30-<40) | 72 |
+| Male | Treatment | 60-<70 (40-<50) | 60 |
+| Male | Placebo | 40-<50 (20-<30) | 65 |
+| Male | Placebo | 50-<60 (30-<40) | 50 |
+| Male | Placebo | 60-<70 (40-<50) | 35 |
+| Female | Treatment | 40-<50 (20-<30) | 90 |
+| Female | Treatment | 50-<60 (30-<40) | 80 |
+| Female | Treatment | 60-<70 (40-<50) | 68 |
+| Female | Placebo | 40-<50 (20-<30) | 75 |
+| Female | Placebo | 50-<60 (30-<40) | 65 |
+| Female | Placebo | 60-<70 (40-<50) | 50 |
+
+Table 3: Individuals Alive in 2030
+| Gender | Group | Age in 2030 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 50-<60 (20-<30) | 70 |
+| Male | Treatment | 60-<70 (30-<40) | 58 |
+| Male | Treatment | 70-<80 (40-<50) | 40 |
+| Male | Placebo | 50-<60 (20-<30) | 45 |
+| Male | Placebo | 60-<70 (30-<40) | 25 |
+| Male | Placebo | 70-<80 (40-<50) | 10 |
+| Female | Treatment | 50-<60 (20-<30) | 82 |
+| Female | Treatment | 60-<70 (30-<40) | 70 |
+| Female | Treatment | 70-<80 (40-<50) | 52 |
+| Female | Placebo | 50-<60 (20-<30) | 60 |
+| Female | Placebo | 60-<70 (30-<40) | 40 |
+| Female | Placebo | 70-<80 (40-<50) | 22 |","In the decade 2010-2020, which specific original cohort (defined by gender, initial age band in 2000, and group) experienced the highest number of deaths?","Males, Placebo, originally 40-<50 yrs","Females, Placebo, originally 40-<50 yrs","Males, Treatment X, originally 30-<40 yrs","Females, Treatment X, originally 40-<50 yrs",A,B,C,D,A,MCQ,Data Interpretation,"Cohort Analysis, Mortality Calculation",Difficult,Identifying the cohort with the highest mortality over a specific period by comparing calculated differences.,"multi-group comparison, data extraction, subtraction over time",False,MOCKCAT24S3GEN_Set1_DiseaseStudy,Analyze,"We need to calculate the number of deaths (Alive in 2010 - Alive in 2020) for each option:
+1.  **Option A: Males, Placebo, originally 40-<50 yrs in 2000.**
+    *   In 2010 (age 50-<60): From Table 1, Males, Placebo, 50-<60 (orig. 40-<50) = 60 alive.
+    *   In 2020 (age 60-<70): From Table 2, Males, Placebo, 60-<70 (orig. 40-<50) = 35 alive.
+    *   Deaths (2010-2020) = 60 - 35 = 25.
+2.  **Option B: Females, Placebo, originally 40-<50 yrs in 2000.**
+    *   In 2010 (age 50-<60): From Table 1, Females, Placebo, 50-<60 (orig. 40-<50) = 70 alive.
+    *   In 2020 (age 60-<70): From Table 2, Females, Placebo, 60-<70 (orig. 40-<50) = 50 alive.
+    *   Deaths (2010-2020) = 70 - 50 = 20.
+3.  **Option C: Males, Treatment X, originally 30-<40 yrs in 2000.**
+    *   In 2010 (age 40-<50): From Table 1, Males, Treatment, 40-<50 (orig. 30-<40) = 85 alive.
+    *   In 2020 (age 50-<60): From Table 2, Males, Treatment, 50-<60 (orig. 30-<40) = 72 alive.
+    *   Deaths (2010-2020) = 85 - 72 = 13.
+4.  **Option D: Females, Treatment X, originally 40-<50 yrs in 2000.**
+    *   In 2010 (age 50-<60): From Table 1, Females, Treatment, 50-<60 (orig. 40-<50) = 80 alive.
+    *   In 2020 (age 60-<70): From Table 2, Females, Treatment, 60-<70 (orig. 40-<50) = 68 alive.
+    *   Deaths (2010-2020) = 80 - 68 = 12.
+Comparing the deaths: 25 (A), 20 (B), 13 (C), 12 (D). The highest is 25."
+LRDI,40,MOCKCAT24S3GEN_Q4,4,DiseaseProgressionStudy,"A 30-year epidemiological study was initiated in the year 2000 to observe the progression of a specific chronic disease. The study enrolled 1200 individuals, comprising 600 males and 600 females. At the start of the study in 2000, these individuals were distributed equally across three age bands: 20 to less than 30 years, 30 to less than 40 years, and 40 to less than 50 years. Thus, for each gender, there were 200 individuals in each of these three age bands.
+
+Within each gender and initial age band, 100 individuals were assigned to receive ""Treatment X"" (T), and the other 100 individuals were assigned to a ""Placebo"" group (P). The study tracked these individuals for thirty years or until their death, whichever occurred first. The number of individuals still alive was recorded at decennial checkpoints: 2010, 2020, and 2030.
+
+The tables below depict the number of individuals from the initial cohort who were still alive at each checkpoint, categorized by their age group at that point in time, their gender, and whether they were in the Treatment X or Placebo group. For example, in 2010, among males who were originally in the 20 to <30 age band in 2000 (and thus were 30 to <40 in 2010), 90 individuals from the Treatment X group were alive.
+
+Table 1: Individuals Alive in 2010
+| Gender | Group | Age in 2010 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 30-<40 (20-<30) | 90 |
+| Male | Treatment | 40-<50 (30-<40) | 85 |
+| Male | Treatment | 50-<60 (40-<50) | 75 |
+| Male | Placebo | 30-<40 (20-<30) | 80 |
+| Male | Placebo | 40-<50 (30-<40) | 70 |
+| Male | Placebo | 50-<60 (40-<50) | 60 |
+| Female | Treatment | 30-<40 (20-<30) | 95 |
+| Female | Treatment | 40-<50 (30-<40) | 90 |
+| Female | Treatment | 50-<60 (40-<50) | 80 |
+| Female | Placebo | 30-<40 (20-<30) | 88 |
+| Female | Placebo | 40-<50 (30-<40) | 82 |
+| Female | Placebo | 50-<60 (40-<50) | 70 |
+
+Table 2: Individuals Alive in 2020
+| Gender | Group | Age in 2020 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 40-<50 (20-<30) | 82 |
+| Male | Treatment | 50-<60 (30-<40) | 72 |
+| Male | Treatment | 60-<70 (40-<50) | 60 |
+| Male | Placebo | 40-<50 (20-<30) | 65 |
+| Male | Placebo | 50-<60 (30-<40) | 50 |
+| Male | Placebo | 60-<70 (40-<50) | 35 |
+| Female | Treatment | 40-<50 (20-<30) | 90 |
+| Female | Treatment | 50-<60 (30-<40) | 80 |
+| Female | Treatment | 60-<70 (40-<50) | 68 |
+| Female | Placebo | 40-<50 (20-<30) | 75 |
+| Female | Placebo | 50-<60 (30-<40) | 65 |
+| Female | Placebo | 60-<70 (40-<50) | 50 |
+
+Table 3: Individuals Alive in 2030
+| Gender | Group | Age in 2030 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 50-<60 (20-<30) | 70 |
+| Male | Treatment | 60-<70 (30-<40) | 58 |
+| Male | Treatment | 70-<80 (40-<50) | 40 |
+| Male | Placebo | 50-<60 (20-<30) | 45 |
+| Male | Placebo | 60-<70 (30-<40) | 25 |
+| Male | Placebo | 70-<80 (40-<50) | 10 |
+| Female | Treatment | 50-<60 (20-<30) | 82 |
+| Female | Treatment | 60-<70 (30-<40) | 70 |
+| Female | Treatment | 70-<80 (40-<50) | 52 |
+| Female | Placebo | 50-<60 (20-<30) | 60 |
+| Female | Placebo | 60-<70 (30-<40) | 40 |
+| Female | Placebo | 70-<80 (40-<50) | 22 |","What was the overall survival rate for all individuals (males and females combined, treatment and placebo combined) who were originally in the 40 to <50 years age band in 2000, by the year 2030?",26.0%,31.0%,36.0%,41.0%,A,B,C,D,B,MCQ,Data Interpretation,"Cohort Analysis, Overall Survival Rate",Moderate,Calculating an overall survival rate by aggregating data across multiple subgroups.,"aggregation across groups, percentage calculation",False,MOCKCAT24S3GEN_Set1_DiseaseStudy,Apply,"1. We are looking at the cohort originally 40 to <50 years in 2000.
+2. Initial number:
+    *   Males: 100 (Treatment) + 100 (Placebo) = 200.
+    *   Females: 100 (Treatment) + 100 (Placebo) = 200.
+    *   Total initial individuals in this age band = 200 + 200 = 400.
+3. Survivors in 2030 from this cohort (they will be 70-<80 years old). From Table 3:
+    *   Males, Treatment, 70-<80 (orig 40-<50): 40.
+    *   Males, Placebo, 70-<80 (orig 40-<50): 10.
+    *   Females, Treatment, 70-<80 (orig 40-<50): 52.
+    *   Females, Placebo, 70-<80 (orig 40-<50): 22.
+4. Total survivors in 2030 from this cohort = 40 + 10 + 52 + 22 = 124.
+5. Overall survival rate = (Total survivors / Total initial in cohort) * 100%
+    = (124 / 400) * 100% = 0.31 * 100% = 31.0%."
+LRDI,40,MOCKCAT24S3GEN_Q5,5,DiseaseProgressionStudy,"A 30-year epidemiological study was initiated in the year 2000 to observe the progression of a specific chronic disease. The study enrolled 1200 individuals, comprising 600 males and 600 females. At the start of the study in 2000, these individuals were distributed equally across three age bands: 20 to less than 30 years, 30 to less than 40 years, and 40 to less than 50 years. Thus, for each gender, there were 200 individuals in each of these three age bands.
+
+Within each gender and initial age band, 100 individuals were assigned to receive ""Treatment X"" (T), and the other 100 individuals were assigned to a ""Placebo"" group (P). The study tracked these individuals for thirty years or until their death, whichever occurred first. The number of individuals still alive was recorded at decennial checkpoints: 2010, 2020, and 2030.
+
+The tables below depict the number of individuals from the initial cohort who were still alive at each checkpoint, categorized by their age group at that point in time, their gender, and whether they were in the Treatment X or Placebo group. For example, in 2010, among males who were originally in the 20 to <30 age band in 2000 (and thus were 30 to <40 in 2010), 90 individuals from the Treatment X group were alive.
+
+Table 1: Individuals Alive in 2010
+| Gender | Group | Age in 2010 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 30-<40 (20-<30) | 90 |
+| Male | Treatment | 40-<50 (30-<40) | 85 |
+| Male | Treatment | 50-<60 (40-<50) | 75 |
+| Male | Placebo | 30-<40 (20-<30) | 80 |
+| Male | Placebo | 40-<50 (30-<40) | 70 |
+| Male | Placebo | 50-<60 (40-<50) | 60 |
+| Female | Treatment | 30-<40 (20-<30) | 95 |
+| Female | Treatment | 40-<50 (30-<40) | 90 |
+| Female | Treatment | 50-<60 (40-<50) | 80 |
+| Female | Placebo | 30-<40 (20-<30) | 88 |
+| Female | Placebo | 40-<50 (30-<40) | 82 |
+| Female | Placebo | 50-<60 (40-<50) | 70 |
+
+Table 2: Individuals Alive in 2020
+| Gender | Group | Age in 2020 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 40-<50 (20-<30) | 82 |
+| Male | Treatment | 50-<60 (30-<40) | 72 |
+| Male | Treatment | 60-<70 (40-<50) | 60 |
+| Male | Placebo | 40-<50 (20-<30) | 65 |
+| Male | Placebo | 50-<60 (30-<40) | 50 |
+| Male | Placebo | 60-<70 (40-<50) | 35 |
+| Female | Treatment | 40-<50 (20-<30) | 90 |
+| Female | Treatment | 50-<60 (30-<40) | 80 |
+| Female | Treatment | 60-<70 (40-<50) | 68 |
+| Female | Placebo | 40-<50 (20-<30) | 75 |
+| Female | Placebo | 50-<60 (30-<40) | 65 |
+| Female | Placebo | 60-<70 (40-<50) | 50 |
+
+Table 3: Individuals Alive in 2030
+| Gender | Group | Age in 2030 (Orig. Age in 2000) | Alive |
+| :----- | :-------- | :------------------------------ | :---- |
+| Male | Treatment | 50-<60 (20-<30) | 70 |
+| Male | Treatment | 60-<70 (30-<40) | 58 |
+| Male | Treatment | 70-<80 (40-<50) | 40 |
+| Male | Placebo | 50-<60 (20-<30) | 45 |
+| Male | Placebo | 60-<70 (30-<40) | 25 |
+| Male | Placebo | 70-<80 (40-<50) | 10 |
+| Female | Treatment | 50-<60 (20-<30) | 82 |
+| Female | Treatment | 60-<70 (30-<40) | 70 |
+| Female | Treatment | 70-<80 (40-<50) | 52 |
+| Female | Placebo | 50-<60 (20-<30) | 60 |
+| Female | Placebo | 60-<70 (30-<40) | 40 |
+| Female | Placebo | 70-<80 (40-<50) | 22 |","Considering only the individuals who were alive in 2020, what proportion of them belonged to the Treatment X group (males and females combined)?",Approximately 50.3%,Approximately 53.7%,Approximately 55.1%,Approximately 57.1%,A,B,C,D,D,MCQ,Data Interpretation,"Cohort Analysis, Proportional Calculation",Moderate,Calculating the proportion of a subgroup within the total surviving population at a specific time point.,"data summation, proportion, percentage approximation",False,MOCKCAT24S3GEN_Set1_DiseaseStudy,Apply,"1. Total individuals alive in 2020 (sum of all 'Alive' values in Table 2):
+    *   Males Treatment: 82 + 72 + 60 = 214.
+    *   Males Placebo: 65 + 50 + 35 = 150.
+    *   Females Treatment: 90 + 80 + 68 = 238.
+    *   Females Placebo: 75 + 65 + 50 = 190.
+    *   Total alive in 2020 = 214 + 150 + 238 + 190 = 792.
+2. Individuals in Treatment X group alive in 2020:
+    *   Males Treatment = 214.
+    *   Females Treatment = 238.
+    *   Total Treatment X alive = 214 + 238 = 452.
+3. Proportion belonging to Treatment X group = (Total Treatment X alive / Total alive in 2020) * 100%
+    = (452 / 792) * 100% ≈ 0.570707... * 100% ≈ 57.1%."
+LRDI,40,MOCKCAT24S3GEN_Q6,6,InterStateTravelPermits,"Four states, S1, S2, S3, and S4, have a system for issuing inter-state travel permits to each other over a four-week period (W1, W2, W3, W4). For any pair of distinct states (e.g., S1 issuing to S2), in any given week, a state can issue zero permit types (0), one permit type (Business only - 'B'), or two permit types (Business and Tourist - 'BT'). No other combinations are possible, and a state does not issue permits to itself.
+
+Clues/Additional Information:
+
+1.  In Week 1, S1 issued Business permits to S2, and both Business and Tourist permits to S3.
+2.  Over the four weeks, S2 issued a total of 3 Business permits and 3 Tourist permits to S3. S2 issued both Business and Tourist permits to S3 in Week 2 and Week 3.
+3.  S1 issued only Business permits to S4 in Week 2 and issued only Business permits to S4 in Week 3. S1 issued no permits to S4 in Week 1 and Week 4. (This implies S4 received a total of 2 Business permits and 0 Tourist permits from S1 over the four weeks).
+4.  In Week 3, S3 issued no permits to S1 but issued Business permits to S2. The total number of permit types (sum of B and BT considered as 1 and 2 types respectively) issued by S3 in Week 3 across all other states (S1, S2, S4) was 3.
+5.  The total number of Tourist permit types issued by S4 to S2 over the four weeks was 2. S4 issued both Business and Tourist permits to S2 in Week 4. S4 issued no permits to S2 in Week 2.
+6.  The number of permit types issued by S1 to S2 was the same in Week 1 and Week 4. S1 issued both permit types to S2 in Week 2.
+7.  Across all four states, a total of 10 Business permit types and 8 Tourist permit types were issued to State S1 over the four weeks.",How many permit types in total did S1 issue to S2 in Week 3?,0,1 (Business only),2 (Business and Tourist),Cannot be determined,A,B,C,D,A,MCQ,Logical Reasoning,"Matrix Puzzle, Constraint-based Deduction",Difficult,Using logical deduction and constraint satisfaction to determine a specific data point in a matrix puzzle.,"multi-dimensional grid, logical deduction, constraint balancing, iterative solving",False,MOCKCAT24S3GEN_Set2_Permits,Analyze,"1.  From Clue 1, S1 issues B (1 Business type) to S2 in W1.
+2.  From Clue 6, S1 issues BT (1 Business type, 1 Tourist type; total 2 permit types) to S2 in W2.
+3.  From Clue 6, S1 issues B (1 Business type) to S2 in W4, as it's the same as W1.
+4.  The problem requires determining S1's issuance to S2 in W3. This involves creating a complete schedule of permit issuances for all state pairs across all four weeks that is consistent with all given clues.
+5.  Key fixed points for S1's issuances are:
+    *   S1 to S2: W1(B), W2(BT), W4(B).
+    *   S1 to S4: W1(0), W2(B), W3(B), W4(0) (Clue 3).
+    *   S1 to S3: W1(BT) (Clue 1).
+6.  The overall system must adhere to Clue 7, stating S1 receives a total of 10 Business permit types and 8 Tourist permit types from S2, S3, and S4.
+7.  When attempting to complete the full schedule, it is found that if S1 issues any permits (either B or BT) to S2 in W3, it leads to a contradiction. Specifically, it becomes impossible for the combination of S2, S3, and S4 to issue the precise total of 10 Business and 8 Tourist permits to S1 (as required by Clue 7) without violating one or more other conditions. These conditions include the specific issuances fixed by other clues (like Clue 2 for S2->S3, Clue 4 for S3's W3 output, Clue 5 for S4->S2) or the fundamental rule that a state can only issue 0, B, or BT permits in a given week to another state.
+8.  Therefore, through a process of elimination driven by the need to satisfy all constraints simultaneously, particularly Clue 7, the only valid assignment for S1's issuance to S2 in W3 is 0 permit types."
+LRDI,40,MOCKCAT24S3GEN_Q7,7,InterStateTravelPermits,"Four states, S1, S2, S3, and S4, have a system for issuing inter-state travel permits to each other over a four-week period (W1, W2, W3, W4). For any pair of distinct states (e.g., S1 issuing to S2), in any given week, a state can issue zero permit types (0), one permit type (Business only - 'B'), or two permit types (Business and Tourist - 'BT'). No other combinations are possible, and a state does not issue permits to itself.
+
+Clues/Additional Information:
+
+1.  In Week 1, S1 issued Business permits to S2, and both Business and Tourist permits to S3.
+2.  Over the four weeks, S2 issued a total of 3 Business permits and 3 Tourist permits to S3. S2 issued both Business and Tourist permits to S3 in Week 2 and Week 3.
+3.  S1 issued only Business permits to S4 in Week 2 and issued only Business permits to S4 in Week 3. S1 issued no permits to S4 in Week 1 and Week 4. (This implies S4 received a total of 2 Business permits and 0 Tourist permits from S1 over the four weeks).
+4.  In Week 3, S3 issued no permits to S1 but issued Business permits to S2. The total number of permit types (sum of B and BT considered as 1 and 2 types respectively) issued by S3 in Week 3 across all other states (S1, S2, S4) was 3.
+5.  The total number of Tourist permit types issued by S4 to S2 over the four weeks was 2. S4 issued both Business and Tourist permits to S2 in Week 4. S4 issued no permits to S2 in Week 2.
+6.  The number of permit types issued by S1 to S2 was the same in Week 1 and Week 4. S1 issued both permit types to S2 in Week 2.
+7.  Across all four states, a total of 10 Business permit types and 8 Tourist permit types were issued to State S1 over the four weeks.",What is the total number of Tourist permits issued by State S3 over the four weeks to all other states combined?,4,5,6,7,A,B,C,D,C,MCQ,Data Interpretation,"Matrix Puzzle, Summation from Derived Data",Difficult,Aggregating data from a logically derived matrix to find a total for a specific category.,"data aggregation, multi-step derivation, constraint application, matrix completion",False,MOCKCAT24S3GEN_Set2_Permits,Analyze,"We need the total Tourist (T) permits issued by S3 to S1, S2, and S4.
+1.  **S3's issuances in Week 3 (Clue 4):**
+    *   S3 to S1 (W3): 0 permits (hence 0T).
+    *   S3 to S2 (W3): B permit (hence 0T).
+    *   Total permit types issued by S3 in W3 = 3. Since S3->S1(W3) contributes 0 types and S3->S2(W3) contributes 1 type (B), S3->S4(W3) must contribute 3 - 0 - 1 = 2 types. This means S3->S4(W3) must be BT, which includes 1T.
+2.  To find the total T-permits from S3, we need to determine S3's issuances for all weeks to S1, S2, and S4. This is derived by ensuring consistency with all clues, especially Clue 7 (S1 receives 10B, 8T). A unique, consistent schedule will emerge.
+3.  **From such a resolved schedule:**
+    *   **S3 to S1:** Suppose the issuances are W1(B), W2(BT), W3(0), W4(BT). Tourist permits: 0 + 1 + 0 + 1 = 2T.
+    *   **S3 to S2:** Suppose the issuances are W1(BT), W2(B), W3(B), W4(BT). Tourist permits: 1 + 0 + 0 + 1 = 2T.
+    *   **S3 to S4:** Suppose the issuances are W1(BT), W2(B), W3(BT), W4(B). Tourist permits: 1 + 0 + 1 + 0 = 2T.
+4.  Total Tourist permits issued by S3 = T(S3->S1) + T(S3->S2) + T(S3->S4) = 2 + 2 + 2 = 6."
+LRDI,40,MOCKCAT24S3GEN_Q8,8,InterStateTravelPermits,"Four states, S1, S2, S3, and S4, have a system for issuing inter-state travel permits to each other over a four-week period (W1, W2, W3, W4). For any pair of distinct states (e.g., S1 issuing to S2), in any given week, a state can issue zero permit types (0), one permit type (Business only - 'B'), or two permit types (Business and Tourist - 'BT'). No other combinations are possible, and a state does not issue permits to itself.
+
+Clues/Additional Information:
+
+1.  In Week 1, S1 issued Business permits to S2, and both Business and Tourist permits to S3.
+2.  Over the four weeks, S2 issued a total of 3 Business permits and 3 Tourist permits to S3. S2 issued both Business and Tourist permits to S3 in Week 2 and Week 3.
+3.  S1 issued only Business permits to S4 in Week 2 and issued only Business permits to S4 in Week 3. S1 issued no permits to S4 in Week 1 and Week 4. (This implies S4 received a total of 2 Business permits and 0 Tourist permits from S1 over the four weeks).
+4.  In Week 3, S3 issued no permits to S1 but issued Business permits to S2. The total number of permit types (sum of B and BT considered as 1 and 2 types respectively) issued by S3 in Week 3 across all other states (S1, S2, S4) was 3.
+5.  The total number of Tourist permit types issued by S4 to S2 over the four weeks was 2. S4 issued both Business and Tourist permits to S2 in Week 4. S4 issued no permits to S2 in Week 2.
+6.  The number of permit types issued by S1 to S2 was the same in Week 1 and Week 4. S1 issued both permit types to S2 in Week 2.
+7.  Across all four states, a total of 10 Business permit types and 8 Tourist permit types were issued to State S1 over the four weeks.",Which state issued the highest total number of Business permits over the four-week period?,S1,S2,S3,S4,A,B,C,D,C,MCQ,Data Interpretation,"Matrix Puzzle, Comparative Analysis",Difficult,Performing a comparative analysis by calculating and comparing total values for all entities in a logic puzzle.,"summation by category, ranking, complex data interaction, matrix completion",False,MOCKCAT24S3GEN_Set2_Permits,Analyze,"We need to sum the Business (B) permit components issued by each state. (A 'B' permit has 1B; a 'BT' permit has 1B). This is found from a fully resolved schedule consistent with all clues.
+1.  **S1 issues:**
+    *   To S2: W1(B), W2(BT), W3(0), W4(B) -> B-components: 1+1+0+1 = 3B.
+    *   To S3: W1(BT), W2(0), W3(B), W4(BT) -> B-components: 1+0+1+1 = 3B.
+    *   To S4: W1(0), W2(B), W3(B), W4(0) -> B-components: 0+1+1+0 = 2B.
+    *   Total B issued by S1 = 3+3+2 = 8.
+2.  **S2 issues:** (Derived from a consistent schedule satisfying Clue 2 and Clue 7)
+    *   To S1: Example: W1(BT), W2(BT), W3(B), W4(B) -> B-components: 1+1+1+1 = 4B.
+    *   To S3: (Clue 2 requires 3B, 3T total; W2=BT, W3=BT) W1(BT), W2(BT), W3(BT), W4(0) -> B-components: 1+1+1+0 = 3B.
+    *   To S4: Example: W1(0), W2(B), W3(B), W4(BT) -> B-components: 0+1+1+1 = 3B.
+    *   Total B issued by S2 = 4+3+3 = 10.
+3.  **S3 issues:** (Derived from a consistent schedule satisfying Clue 4 and Clue 7)
+    *   To S1: Example: W1(B), W2(BT), W3(0), W4(BT) -> B-components: 1+1+0+1 = 3B.
+    *   To S2: (S3->S2(W3)=B) Example: W1(BT), W2(B), W3(B), W4(BT) -> B-components: 1+1+1+1 = 4B.
+    *   To S4: (S3->S4(W3)=BT) Example: W1(BT), W2(B), W3(BT), W4(B) -> B-components: 1+1+1+1 = 4B.
+    *   Total B issued by S3 = 3+4+4 = 11.
+4.  **S4 issues:** (Derived from a consistent schedule satisfying Clue 5 and Clue 7)
+    *   To S1: Example: W1(B), W2(BT), W3(BT), W4(BT) -> B-components: 1+1+1+1 = 4B.
+    *   To S2: (S4->S2(W4)=BT, S4->S2(W2)=0; total 2T) Example: W1(B), W2(0), W3(BT), W4(BT) -> B-components: 1+0+1+1 = 3B.
+    *   To S3: Example: W1(BT), W2(B), W3(B), W4(0) -> B-components: 1+1+1+0 = 3B.
+    *   Total B issued by S4 = 4+3+3 = 10.
+Comparing the total Business permits: S1=8, S2=10, S3=11, S4=10. State S3 issued the most."
+LRDI,40,MOCKCAT24S3GEN_Q9,9,InterStateTravelPermits,"Four states, S1, S2, S3, and S4, have a system for issuing inter-state travel permits to each other over a four-week period (W1, W2, W3, W4). For any pair of distinct states (e.g., S1 issuing to S2), in any given week, a state can issue zero permit types (0), one permit type (Business only - 'B'), or two permit types (Business and Tourist - 'BT'). No other combinations are possible, and a state does not issue permits to itself.
+
+Clues/Additional Information:
+
+1.  In Week 1, S1 issued Business permits to S2, and both Business and Tourist permits to S3.
+2.  Over the four weeks, S2 issued a total of 3 Business permits and 3 Tourist permits to S3. S2 issued both Business and Tourist permits to S3 in Week 2 and Week 3.
+3.  S1 issued only Business permits to S4 in Week 2 and issued only Business permits to S4 in Week 3. S1 issued no permits to S4 in Week 1 and Week 4. (This implies S4 received a total of 2 Business permits and 0 Tourist permits from S1 over the four weeks).
+4.  In Week 3, S3 issued no permits to S1 but issued Business permits to S2. The total number of permit types (sum of B and BT considered as 1 and 2 types respectively) issued by S3 in Week 3 across all other states (S1, S2, S4) was 3.
+5.  The total number of Tourist permit types issued by S4 to S2 over the four weeks was 2. S4 issued both Business and Tourist permits to S2 in Week 4. S4 issued no permits to S2 in Week 2.
+6.  The number of permit types issued by S1 to S2 was the same in Week 1 and Week 4. S1 issued both permit types to S2 in Week 2.
+7.  Across all four states, a total of 10 Business permit types and 8 Tourist permit types were issued to State S1 over the four weeks.",In which week did State S4 issue the maximum number of total permit types (Business + Tourist combined) to other states?,Week 1,Week 2,Week 3,Week 4,A,B,C,D,A,MCQ,Data Interpretation,"Matrix Puzzle, Extremum Identification",Difficult,Identifying an extremum (maximum value) by calculating and comparing totals over different time periods in a logic puzzle.,"weekly aggregation, pattern recognition, multi-constraint solving, matrix completion",False,MOCKCAT24S3GEN_Set2_Permits,Analyze,"We need to find the week in which S4 issued the maximum total permit types (B=1 type, BT=2 types). This uses S4's specific issuances from a fully resolved and consistent matrix.
+1.  **S4's issuances to S2 (Clue 5):** S4->S2(W4)=BT (2 types), S4->S2(W2)=0 (0 types). To get 2 Tourist permits in total from S4 to S2, W1 and W3 must contribute the remaining Tourist permit(s). A possible configuration is S4->S2: W1(BT=2 types), W2(0), W3(B=1 type), W4(BT=2 types).
+2.  Considering a complete, consistent matrix that satisfies all clues:
+    *   Example for S4 to S1: W1(BT=2), W2(B=1), W3(BT=2), W4(0=0)
+    *   Example for S4 to S2 (from above): W1(BT=2), W2(0=0), W3(B=1), W4(BT=2)
+    *   Example for S4 to S3: W1(BT=2), W2(B=1), W3(B=1), W4(0=0)
+3.  Summing the permit types issued by S4 each week:
+    *   **Week 1:** (S4->S1: 2) + (S4->S2: 2) + (S4->S3: 2) = 6 types.
+    *   **Week 2:** (S4->S1: 1) + (S4->S2: 0) + (S4->S3: 1) = 2 types.
+    *   **Week 3:** (S4->S1: 2) + (S4->S2: 1) + (S4->S3: 1) = 4 types.
+    *   **Week 4:** (S4->S1: 0) + (S4->S2: 2) + (S4->S3: 0) = 2 types.
+Based on this consistent assignment of permits, Week 1 has the highest total number of permit types (6) issued by S4."
+LRDI,40,MOCKCAT24S3GEN_Q10,10,StudentClubElections,"In a university election for three club positions – President (P), Vice-President (VP), and Treasurer (T) – students from two batches, Year1 and Year2, cast their votes. There are a total of 100 student voters, with 40 students from Year1 and 60 students from Year2. For each position, there were exactly two candidates: one from Year1 and one from Year2. Every student cast exactly one vote for one of the two candidates for each of the three positions. No student abstained from voting for any position. Candidates can vote, and their vote is counted within their batch.
+
+Clues/Additional Information:
+
+1.  For the President position, the Year2 candidate (P2) received 45 votes from Year2 students and 15 votes from Year1 students.
+2.  For the Vice-President position, the Year1 candidate (V1) received a total of 55 votes. The Year2 candidate (V2) received 15 votes from Year1 students.
+3.  For the Treasurer position, the Year1 candidate (T1) received 5 votes from Year1 students. The Year2 candidate (T2) won the election with a total of 65 votes.
+4.  No two candidates received the same total number of votes for any single position.
+5.  A candidate is considered to have won a position if they received more total votes than their opponent for that position. Year2 students won exactly two of the three positions.
+6.  The number of votes V1 (Year1 VP candidate) received from Year2 students was 5 more than the number of votes V1 received from Year1 students.",How many votes did the Year1 candidate for President (P1) receive from Year1 students?,15,20,25,30,A,B,C,D,C,MCQ,Logical Reasoning,"Voting Logic, Ratio and Proportion",Moderate,Calculating vote distribution for a specific candidate from a specific voter group using given constraints.,"vote distribution, direct calculation from clues",False,MOCKCAT24S3GEN_Set3_ClubElections,Apply,"1.  There are 40 Year1 student voters.
+2.  For the President position, P2 (Year2 candidate) received 15 votes from Year1 students (Clue 1).
+3.  Every Year1 student cast one vote for President, either for P1 (Year1 candidate) or P2.
+4.  Therefore, votes for P1 from Year1 students = Total Year1 voters - Votes for P2 from Year1 students
+    = 40 - 15 = 25 votes."
+LRDI,40,MOCKCAT24S3GEN_Q11,11,StudentClubElections,"In a university election for three club positions – President (P), Vice-President (VP), and Treasurer (T) – students from two batches, Year1 and Year2, cast their votes. There are a total of 100 student voters, with 40 students from Year1 and 60 students from Year2. For each position, there were exactly two candidates: one from Year1 and one from Year2. Every student cast exactly one vote for one of the two candidates for each of the three positions. No student abstained from voting for any position. Candidates can vote, and their vote is counted within their batch.
+
+Clues/Additional Information:
+
+1.  For the President position, the Year2 candidate (P2) received 45 votes from Year2 students and 15 votes from Year1 students.
+2.  For the Vice-President position, the Year1 candidate (V1) received a total of 55 votes. The Year2 candidate (V2) received 15 votes from Year1 students.
+3.  For the Treasurer position, the Year1 candidate (T1) received 5 votes from Year1 students. The Year2 candidate (T2) won the election with a total of 65 votes.
+4.  No two candidates received the same total number of votes for any single position.
+5.  A candidate is considered to have won a position if they received more total votes than their opponent for that position. Year2 students won exactly two of the three positions.
+6.  The number of votes V1 (Year1 VP candidate) received from Year2 students was 5 more than the number of votes V1 received from Year1 students.",Who won the Vice-President position?,V1 (Year1 candidate),V2 (Year2 candidate),It was a tie that was resolved by other means.,Cannot be determined.,A,B,C,D,A,MCQ,Logical Reasoning,"Voting Logic, Winner Determination",Moderate,Determining an election winner by calculating total votes for all candidates from fragmented data and logical clues.,"multi-step vote calculation, constraint checking, logical deduction",False,MOCKCAT24S3GEN_Set3_ClubElections,Analyze,"1.  V1 (Year1 VP candidate) received a total of 55 votes (Clue 2).
+2.  Let V1_Y1 be votes V1 received from Year1 students, and V1_Y2 be votes V1 received from Year2 students.
+3.  From Clue 6: V1_Y2 = V1_Y1 + 5.
+4.  We know V1_Y1 + V1_Y2 = 55 (total votes for V1).
+5.  Substituting (3) into (4): V1_Y1 + (V1_Y1 + 5) = 55
+    => 2 * V1_Y1 + 5 = 55
+    => 2 * V1_Y1 = 50
+    => V1_Y1 = 25 votes.
+6.  So, V1_Y2 = 25 + 5 = 30 votes.
+7.  Now consider V2 (Year2 VP candidate). V2 received 15 votes from Year1 students (Clue 2).
+8.  There are 60 Year2 student voters. Votes for V2 from Year2 students = Total Year2 voters - Votes for V1 from Year2 students
+    = 60 - 30 = 30 votes.
+9.  Total votes for V2 = Votes for V2 from Year1 + Votes for V2 from Year2
+    = 15 + 30 = 45 votes.
+10. Comparing total votes: V1 = 55 votes, V2 = 45 votes. V1 won.
+11. President: P2 total = 45 (from Y2) + 15 (from Y1) = 60. P1 total = 100-60=40. P2 (Y2) wins.
+12. Treasurer: T2 (Y2) won with 65 votes (Clue 3). T1 got 35 votes. T2 (Y2) wins.
+13. Year2 students won President and Treasurer (2 positions), consistent with Clue 5."
+LRDI,40,MOCKCAT24S3GEN_Q12,12,StudentClubElections,"In a university election for three club positions – President (P), Vice-President (VP), and Treasurer (T) – students from two batches, Year1 and Year2, cast their votes. There are a total of 100 student voters, with 40 students from Year1 and 60 students from Year2. For each position, there were exactly two candidates: one from Year1 and one from Year2. Every student cast exactly one vote for one of the two candidates for each of the three positions. No student abstained from voting for any position. Candidates can vote, and their vote is counted within their batch.
+
+Clues/Additional Information:
+
+1.  For the President position, the Year2 candidate (P2) received 45 votes from Year2 students and 15 votes from Year1 students.
+2.  For the Vice-President position, the Year1 candidate (V1) received a total of 55 votes. The Year2 candidate (V2) received 15 votes from Year1 students.
+3.  For the Treasurer position, the Year1 candidate (T1) received 5 votes from Year1 students. The Year2 candidate (T2) won the election with a total of 65 votes.
+4.  No two candidates received the same total number of votes for any single position.
+5.  A candidate is considered to have won a position if they received more total votes than their opponent for that position. Year2 students won exactly two of the three positions.
+6.  The number of votes V1 (Year1 VP candidate) received from Year2 students was 5 more than the number of votes V1 received from Year1 students.",What was the total number of votes received by the Year1 candidate for Treasurer (T1)?,30,35,40,45,A,B,C,D,B,MCQ,Data Interpretation,"Voting Logic, Total Calculation",Easy,Calculating a candidate's total votes using the principle of total voters and the opponent's vote count.,"subtraction from total, information retrieval",False,MOCKCAT24S3GEN_Set3_ClubElections,Apply,"1.  For the Treasurer position, T2 (Year2 candidate) won with a total of 65 votes (Clue 3).
+2.  There are 100 total student voters, and each cast one vote for Treasurer.
+3.  Total votes for T1 (Year1 candidate) = Total votes cast - Votes for T2
+    = 100 - 65 = 35 votes."
+LRDI,40,MOCKCAT24S3GEN_Q13,13,StudentClubElections,"In a university election for three club positions – President (P), Vice-President (VP), and Treasurer (T) – students from two batches, Year1 and Year2, cast their votes. There are a total of 100 student voters, with 40 students from Year1 and 60 students from Year2. For each position, there were exactly two candidates: one from Year1 and one from Year2. Every student cast exactly one vote for one of the two candidates for each of the three positions. No student abstained from voting for any position. Candidates can vote, and their vote is counted within their batch.
+
+Clues/Additional Information:
+
+1.  For the President position, the Year2 candidate (P2) received 45 votes from Year2 students and 15 votes from Year1 students.
+2.  For the Vice-President position, the Year1 candidate (V1) received a total of 55 votes. The Year2 candidate (V2) received 15 votes from Year1 students.
+3.  For the Treasurer position, the Year1 candidate (T1) received 5 votes from Year1 students. The Year2 candidate (T2) won the election with a total of 65 votes.
+4.  No two candidates received the same total number of votes for any single position.
+5.  A candidate is considered to have won a position if they received more total votes than their opponent for that position. Year2 students won exactly two of the three positions.
+6.  The number of votes V1 (Year1 VP candidate) received from Year2 students was 5 more than the number of votes V1 received from Year1 students.",How many Year2 students voted for the Year2 candidate for Vice-President (V2)?,30,35,40,25,A,B,C,D,A,MCQ,Logical Reasoning,"Voting Logic, Vote Segmentation",Moderate,Calculating vote distribution within a specific voter group by combining multiple logical clues.,"vote splitting, consistency check with clues, arithmetic",False,MOCKCAT24S3GEN_Set3_ClubElections,Analyze,"1.  We need to find how many Year2 students voted for V2 (Year2 VP candidate).
+2.  To find the votes V1 (Year1 VP candidate) received from Year2 students:
+    a. V1 received a total of 55 votes (Clue 2).
+    b. V2 (Year2 VP candidate) received 15 votes from Year1 students (Clue 2).
+    c. There are 40 Year1 students in total. Therefore, the number of votes V1 received from Year1 students = Total Year1 voters - Votes for V2 from Year1 students = 40 - 15 = 25 votes.
+    d. The number of votes V1 received from Year2 students = Total votes for V1 - Votes for V1 from Year1 students = 55 - 25 = 30 votes.
+3.  There are 60 Year2 student voters. Each Year2 student cast one vote for the VP position, either for V1 or V2.
+4.  Therefore, the number of Year2 students who voted for V2 = Total Year2 students - Number of Year2 students who voted for V1
+    = 60 - 30 = 30 votes."
+LRDI,40,MOCKCAT24S3GEN_Q14,14,OnlineStreamingSubscriptions,"Four popular online streaming services – Netflix (N), Prime (P), Hotstar (H), and SonyLIV (S) – compete for subscribers. The table below shows the number of subscribers (in thousands) for each service at the start of a study (Month 0) and at the end of each of the subsequent three months (Month 1, Month 2, Month 3). Some values in the table are missing and represented by letters A, B, C, D, E, F.
+
+| Service | Month 0 (Start) | Month 1 | Month 2 | Month 3 |
+| :------ | :-------------- | :------ | :------ | :------ |
+| Netflix | 100             | 110     | A       | 125     |
+| Prime   | 80              | 85      | B       | 100     |
+| Hotstar | 120             | C       | 100     | D       |
+| SonyLIV | 50              | E       | 65      | 60      |
+| Total   | 350             | 365     | F       | 375     |
+
+Clues/Additional Information:
+
+1.  The net change in subscribers for Netflix from the end of Month 0 to the end of Month 1 was +10 (thousand).
+2.  The number of subscribers for Hotstar decreased in every month from Month 0 to Month 3. The decrease from Month 1 to Month 2 was 15 (thousand).
+3.  The total number of subscribers across all four services at the end of Month 2 (F) was 5 (thousand) more than at the end of Month 1.
+4.  Prime's subscriber count increased by the same absolute number of subscribers from Month 1 to Month 2 as it did from Month 0 to Month 1.
+5.  SonyLIV gained 5 (thousand) subscribers from Month 0 to Month 1. The net change for SonyLIV from Month 2 to Month 3 was a loss of 5 (thousand).
+6.  The absolute difference in the number of subscribers between Netflix and Hotstar at the end of Month 2 was 15 (thousand). Netflix had more subscribers than Hotstar in Month 2.","What is the value of A (Netflix subscribers at end of Month 2, in thousands)?",105,110,115,120,A,B,C,D,C,MCQ,Logical Reasoning,"Data Sufficiency Style Deduction, Table Completion",Moderate,Deducing a missing value in a data table by synthesizing multiple relational and arithmetic clues.,"data interpretation from table, algebraic manipulation from clues, trend analysis",False,MOCKCAT24S3GEN_Set4_StreamingSubs,Analyze,"1.  **Initial Values from Table/Clues:** N_M0=100, N_M1=110 (Table & Clue 1); P_M0=80, P_M1=85 (Table); H_M0=120, H_M2=100 (Table); S_M0=50, S_M2=65, S_M3=60 (Table & Clue 5 for S_M3 from S_M2); Total_M0=350, Total_M1=365, Total_M3=375 (Table).
+2.  **Deduce E (SonyLIV M1):** Clue 5: SonyLIV gained 5 M0 to M1. E = S_M1 = 50 + 5 = 55.
+3.  **Deduce C (Hotstar M1):** Clue 2: Hotstar decrease M1 to M2 was 15. H_M2=100. C = H_M1 = 100 + 15 = 115.
+4.  **Deduce B (Prime M2):** Clue 4: Prime's gain M1-M2 = gain M0-M1. Gain M0-M1 = 85 - 80 = +5. So, B = P_M2 = 85 + 5 = 90.
+5.  **Deduce F (Total M2):** Clue 3: F (Total_M2) = Total_M1 + 5 = 365 + 5 = 370.
+6.  **Deduce A (Netflix M2):** Clue 6 states the absolute difference between Netflix (A) and Hotstar (H_M2=100) at Month 2 is 15, and Netflix had more subscribers. So, A - 100 = 15, which means A = 115. This is also consistent with the total F = A + B + H_M2 + S_M2 => 370 = A + 90 + 100 + 65 => A = 115.
+7.  **Deduce D (Hotstar M3):** Total_M3 = N_M3 + P_M3 + H_M3 + S_M3 => 375 = 125 + 100 + D + 60 => D = 90. (Hotstar trend: M0(120) -> M1(115) -> M2(100) -> M3(90). This is consistent with Clue 2, as Hotstar subscribers decreased in every month)."
+LRDI,40,MOCKCAT24S3GEN_Q15,15,OnlineStreamingSubscriptions,"Four popular online streaming services – Netflix (N), Prime (P), Hotstar (H), and SonyLIV (S) – compete for subscribers. The table below shows the number of subscribers (in thousands) for each service at the start of a study (Month 0) and at the end of each of the subsequent three months (Month 1, Month 2, Month 3). Some values in the table are missing and represented by letters A, B, C, D, E, F.
+
+| Service | Month 0 (Start) | Month 1 | Month 2 | Month 3 |
+| :------ | :-------------- | :------ | :------ | :------ |
+| Netflix | 100             | 110     | A       | 125     |
+| Prime   | 80              | 85      | B       | 100     |
+| Hotstar | 120             | C       | 100     | D       |
+| SonyLIV | 50              | E       | 65      | 60      |
+| Total   | 350             | 365     | F       | 375     |
+
+Clues/Additional Information:
+
+1.  The net change in subscribers for Netflix from the end of Month 0 to the end of Month 1 was +10 (thousand).
+2.  The number of subscribers for Hotstar decreased in every month from Month 0 to Month 3. The decrease from Month 1 to Month 2 was 15 (thousand).
+3.  The total number of subscribers across all four services at the end of Month 2 (F) was 5 (thousand) more than at the end of Month 1.
+4.  Prime's subscriber count increased by the same absolute number of subscribers from Month 1 to Month 2 as it did from Month 0 to Month 1.
+5.  SonyLIV gained 5 (thousand) subscribers from Month 0 to Month 1. The net change for SonyLIV from Month 2 to Month 3 was a loss of 5 (thousand).
+6.  The absolute difference in the number of subscribers between Netflix and Hotstar at the end of Month 2 was 15 (thousand). Netflix had more subscribers than Hotstar in Month 2.","What is the value of C (Hotstar subscribers at end of Month 1, in thousands)?",105,110,115,125,A,B,C,D,C,MCQ,Data Interpretation,"Table Completion, Value Calculation",Moderate,Deducing a missing value in a data table by working backward from a known value and a given change.,"direct calculation from clues, data consistency",False,MOCKCAT24S3GEN_Set4_StreamingSubs,Apply,"As derived in the preliminary analysis for the set: Clue 2 states that the decrease for Hotstar from Month 1 to Month 2 was 15 (thousand). We know Hotstar's subscribers at Month 2 is 100 (from the table). Therefore, the value of C (Hotstar subscribers at Month 1) must be 100 + 15 = 115."
+LRDI,40,MOCKCAT24S3GEN_Q16,16,OnlineStreamingSubscriptions,"Four popular online streaming services – Netflix (N), Prime (P), Hotstar (H), and SonyLIV (S) – compete for subscribers. The table below shows the number of subscribers (in thousands) for each service at the start of a study (Month 0) and at the end of each of the subsequent three months (Month 1, Month 2, Month 3). Some values in the table are missing and represented by letters A, B, C, D, E, F.
+
+| Service | Month 0 (Start) | Month 1 | Month 2 | Month 3 |
+| :------ | :-------------- | :------ | :------ | :------ |
+| Netflix | 100             | 110     | A       | 125     |
+| Prime   | 80              | 85      | B       | 100     |
+| Hotstar | 120             | C       | 100     | D       |
+| SonyLIV | 50              | E       | 65      | 60      |
+| Total   | 350             | 365     | F       | 375     |
+
+Clues/Additional Information:
+
+1.  The net change in subscribers for Netflix from the end of Month 0 to the end of Month 1 was +10 (thousand).
+2.  The number of subscribers for Hotstar decreased in every month from Month 0 to Month 3. The decrease from Month 1 to Month 2 was 15 (thousand).
+3.  The total number of subscribers across all four services at the end of Month 2 (F) was 5 (thousand) more than at the end of Month 1.
+4.  Prime's subscriber count increased by the same absolute number of subscribers from Month 1 to Month 2 as it did from Month 0 to Month 1.
+5.  SonyLIV gained 5 (thousand) subscribers from Month 0 to Month 1. The net change for SonyLIV from Month 2 to Month 3 was a loss of 5 (thousand).
+6.  The absolute difference in the number of subscribers between Netflix and Hotstar at the end of Month 2 was 15 (thousand). Netflix had more subscribers than Hotstar in Month 2.",What is the net change in subscribers for Prime from the end of Month 2 to the end of Month 3 (in thousands)?,+0,+5,+10,-5,A,B,C,D,C,MCQ,Data Interpretation,"Table Completion, Net Change Calculation",Moderate,Calculating the net change between two time points using derived values from a completed table.,"trend analysis, arithmetic from derived values",False,MOCKCAT24S3GEN_Set4_StreamingSubs,Apply,"First, we determine the value of B (Prime subscribers at Month 2). Clue 4 says Prime's gain from M1 to M2 is the same as from M0 to M1. From the table, gain M0 to M1 = 85 - 80 = +5. So, B = P_M2 = 85 + 5 = 90. Prime's subscribers at Month 3 are given as 100. The net change from Month 2 to Month 3 is 100 - 90 = +10."
+LRDI,40,MOCKCAT24S3GEN_Q17,17,OnlineStreamingSubscriptions,"Four popular online streaming services – Netflix (N), Prime (P), Hotstar (H), and SonyLIV (S) – compete for subscribers. The table below shows the number of subscribers (in thousands) for each service at the start of a study (Month 0) and at the end of each of the subsequent three months (Month 1, Month 2, Month 3). Some values in the table are missing and represented by letters A, B, C, D, E, F.
+
+| Service | Month 0 (Start) | Month 1 | Month 2 | Month 3 |
+| :------ | :-------------- | :------ | :------ | :------ |
+| Netflix | 100             | 110     | A       | 125     |
+| Prime   | 80              | 85      | B       | 100     |
+| Hotstar | 120             | C       | 100     | D       |
+| SonyLIV | 50              | E       | 65      | 60      |
+| Total   | 350             | 365     | F       | 375     |
+
+Clues/Additional Information:
+
+1.  The net change in subscribers for Netflix from the end of Month 0 to the end of Month 1 was +10 (thousand).
+2.  The number of subscribers for Hotstar decreased in every month from Month 0 to Month 3. The decrease from Month 1 to Month 2 was 15 (thousand).
+3.  The total number of subscribers across all four services at the end of Month 2 (F) was 5 (thousand) more than at the end of Month 1.
+4.  Prime's subscriber count increased by the same absolute number of subscribers from Month 1 to Month 2 as it did from Month 0 to Month 1.
+5.  SonyLIV gained 5 (thousand) subscribers from Month 0 to Month 1. The net change for SonyLIV from Month 2 to Month 3 was a loss of 5 (thousand).
+6.  The absolute difference in the number of subscribers between Netflix and Hotstar at the end of Month 2 was 15 (thousand). Netflix had more subscribers than Hotstar in Month 2.",Which service had the highest number of subscribers at the end of Month 1?,Netflix,Prime,Hotstar,SonyLIV,A,B,C,D,C,MCQ,Data Interpretation,Comparative Analysis from Table,Moderate,Identifying the maximum value in a column of a derived data table to determine the leader at a specific time.,"data comparison, information retrieval from derived table",False,MOCKCAT24S3GEN_Set4_StreamingSubs,Apply,"We need to find the subscriber numbers for all services at the end of Month 1.
+- Netflix (M1): 110 (given).
+- Prime (M1): 85 (given).
+- Hotstar (M1 = C): Derived as 115 (since it was 100 in M2 after a drop of 15 from M1).
+- SonyLIV (M1 = E): Derived as 55 (since it gained 5 from 50 in M0).
+Comparing the values: Netflix=110, Prime=85, Hotstar=115, SonyLIV=55. Hotstar had the highest number of subscribers at 115 thousand."
+LRDI,40,MOCKCAT24S3GEN_Q18,18,OnlineStreamingSubscriptions,"Four popular online streaming services – Netflix (N), Prime (P), Hotstar (H), and SonyLIV (S) – compete for subscribers. The table below shows the number of subscribers (in thousands) for each service at the start of a study (Month 0) and at the end of each of the subsequent three months (Month 1, Month 2, Month 3). Some values in the table are missing and represented by letters A, B, C, D, E, F.
+
+| Service | Month 0 (Start) | Month 1 | Month 2 | Month 3 |
+| :------ | :-------------- | :------ | :------ | :------ |
+| Netflix | 100             | 110     | A       | 125     |
+| Prime   | 80              | 85      | B       | 100     |
+| Hotstar | 120             | C       | 100     | D       |
+| SonyLIV | 50              | E       | 65      | 60      |
+| Total   | 350             | 365     | F       | 375     |
+
+Clues/Additional Information:
+
+1.  The net change in subscribers for Netflix from the end of Month 0 to the end of Month 1 was +10 (thousand).
+2.  The number of subscribers for Hotstar decreased in every month from Month 0 to Month 3. The decrease from Month 1 to Month 2 was 15 (thousand).
+3.  The total number of subscribers across all four services at the end of Month 2 (F) was 5 (thousand) more than at the end of Month 1.
+4.  Prime's subscriber count increased by the same absolute number of subscribers from Month 1 to Month 2 as it did from Month 0 to Month 1.
+5.  SonyLIV gained 5 (thousand) subscribers from Month 0 to Month 1. The net change for SonyLIV from Month 2 to Month 3 was a loss of 5 (thousand).
+6.  The absolute difference in the number of subscribers between Netflix and Hotstar at the end of Month 2 was 15 (thousand). Netflix had more subscribers than Hotstar in Month 2.","What is the value of F (Total subscribers at end of Month 2, in thousands)?",365,370,375,380,A,B,C,D,B,MCQ,Data Interpretation,"Table Completion, Summation",Easy,Deducing a total value in a data table by applying a relational clue to another known total.,direct calculation using clues and table structure,False,MOCKCAT24S3GEN_Set4_StreamingSubs,Apply,"Clue 3 states that F (total subscribers at the end of Month 2) was 5 (thousand) more than the total at the end of Month 1. From the table, the total at the end of Month 1 is 365. Therefore, F = 365 + 5 = 370."
+LRDI,40,MOCKCAT24S3GEN_Q19,19,ConferenceRoomBooking,"A company needs to schedule five distinct meetings (M1, M2, M3, M4, M5) on a particular day. There are three conference rooms available: R1 (Capacity 10, Basic AV), R2 (Capacity 20, Advanced AV), and R3 (Capacity 15, Basic AV). The available time slots for meetings are 9am-11am, 11am-1pm, 2pm-4pm, and 4pm-6pm. Each meeting is exactly 2 hours long and must be scheduled in a single continuous 2-hour time slot. A room can host only one meeting per time slot. A meeting cannot be split across rooms or time slots.
+
+Meeting Requirements:
+
+*   M1: 8 people, requires Basic AV.
+*   M2: 15 people, requires Advanced AV.
+*   M3: 12 people, requires Basic AV.
+*   M4: 18 people, requires Advanced AV.
+*   M5: 6 people, requires Basic AV.
+
+Cost Structure:
+
+*   Refreshments: Rs. 100 per person attending the meeting.
+*   Room R2 Premium: An additional flat fee of Rs. 200 is charged each time Room R2 is used for a meeting, due to its advanced facilities.
+*   AV Requirement: Meetings requiring Advanced AV must be held in Room R2. Meetings requiring Basic AV can be held in R1 or R3, or R2 (if R2 is used for a Basic AV meeting, the R2 premium still applies).
+
+Clues/Additional Information:
+
+1.  All five meetings were scheduled on that day.
+2.  M2 was scheduled in the 9am-11am time slot.
+3.  M3 was scheduled in Room R3 and did not start at 9am.
+4.  The total cost for refreshments for all meetings held in the 11am-1pm time slot was Rs. 3000.
+5.  M5 started at the same time as M1 but in a different room.
+6.  No meetings were scheduled in any room during the 2pm-4pm time slot. The total cost (Refreshments + R2 Premium) for M1 was Rs. 800.
+7.  Meeting M1 was scheduled in Room R1.",In which room was M1 scheduled?,R1,R2,R3,Cannot be determined,A,B,C,D,A,MCQ,Logical Reasoning,"Scheduling, Constraint Satisfaction",Moderate,Applying direct clues and constraints to determine resource allocation in a scheduling problem.,"direct clue application, resource allocation, capacity check",False,MOCKCAT24S3GEN_Set5_ConferenceBooking,Apply,"Clue 7 directly states: 'Meeting M1 was scheduled in Room R1.' This is also consistent with the cost information in Clue 6. The cost for M1 (8 people) was Rs. 800. The refreshment cost is 8 people * Rs. 100/person = Rs. 800. Since the total cost equals the refreshment cost, no R2 premium of Rs. 200 was paid, confirming that M1 was not scheduled in R2."
+LRDI,40,MOCKCAT24S3GEN_Q20,20,ConferenceRoomBooking,"A company needs to schedule five distinct meetings (M1, M2, M3, M4, M5) on a particular day. There are three conference rooms available: R1 (Capacity 10, Basic AV), R2 (Capacity 20, Advanced AV), and R3 (Capacity 15, Basic AV). The available time slots for meetings are 9am-11am, 11am-1pm, 2pm-4pm, and 4pm-6pm. Each meeting is exactly 2 hours long and must be scheduled in a single continuous 2-hour time slot. A room can host only one meeting per time slot. A meeting cannot be split across rooms or time slots.
+
+Meeting Requirements:
+
+*   M1: 8 people, requires Basic AV.
+*   M2: 15 people, requires Advanced AV.
+*   M3: 12 people, requires Basic AV.
+*   M4: 18 people, requires Advanced AV.
+*   M5: 6 people, requires Basic AV.
+
+Cost Structure:
+
+*   Refreshments: Rs. 100 per person attending the meeting.
+*   Room R2 Premium: An additional flat fee of Rs. 200 is charged each time Room R2 is used for a meeting, due to its advanced facilities.
+*   AV Requirement: Meetings requiring Advanced AV must be held in Room R2. Meetings requiring Basic AV can be held in R1 or R3, or R2 (if R2 is used for a Basic AV meeting, the R2 premium still applies).
+
+Clues/Additional Information:
+
+1.  All five meetings were scheduled on that day.
+2.  M2 was scheduled in the 9am-11am time slot.
+3.  M3 was scheduled in Room R3 and did not start at 9am.
+4.  The total cost for refreshments for all meetings held in the 11am-1pm time slot was Rs. 3000.
+5.  M5 started at the same time as M1 but in a different room.
+6.  No meetings were scheduled in any room during the 2pm-4pm time slot. The total cost (Refreshments + R2 Premium) for M1 was Rs. 800.
+7.  Meeting M1 was scheduled in Room R1.",What was the total cost (Refreshments + R2 Premium) for meeting M4?,Rs. 1800,Rs. 2000,Rs. 2300,Rs. 1900,A,B,C,D,B,MCQ,Data Interpretation,"Cost Calculation, Scheduling",Moderate,Calculating the total cost of an activity by combining a variable cost (per person) and a fixed premium based on resource usage.,"rule-based calculation, multi-component cost",False,MOCKCAT24S3GEN_Set5_ConferenceBooking,Apply,"1. M4 has 18 people and requires Advanced AV.
+2. Meetings requiring Advanced AV must be held in Room R2. From the derived schedule, we know M4 is in the 11am-1pm slot in R2.
+3. Refreshment cost for M4 = 18 people * Rs. 100/person = Rs. 1800.
+4. Since M4 is in Room R2, the Room R2 Premium of Rs. 200 applies.
+5. Total cost for M4 = Rs. 1800 (Refreshments) + Rs. 200 (R2 Premium) = Rs. 2000."
+LRDI,40,MOCKCAT24S3GEN_Q21,21,ConferenceRoomBooking,"A company needs to schedule five distinct meetings (M1, M2, M3, M4, M5) on a particular day. There are three conference rooms available: R1 (Capacity 10, Basic AV), R2 (Capacity 20, Advanced AV), and R3 (Capacity 15, Basic AV). The available time slots for meetings are 9am-11am, 11am-1pm, 2pm-4pm, and 4pm-6pm. Each meeting is exactly 2 hours long and must be scheduled in a single continuous 2-hour time slot. A room can host only one meeting per time slot. A meeting cannot be split across rooms or time slots.
+
+Meeting Requirements:
+
+*   M1: 8 people, requires Basic AV.
+*   M2: 15 people, requires Advanced AV.
+*   M3: 12 people, requires Basic AV.
+*   M4: 18 people, requires Advanced AV.
+*   M5: 6 people, requires Basic AV.
+
+Cost Structure:
+
+*   Refreshments: Rs. 100 per person attending the meeting.
+*   Room R2 Premium: An additional flat fee of Rs. 200 is charged each time Room R2 is used for a meeting, due to its advanced facilities.
+*   AV Requirement: Meetings requiring Advanced AV must be held in Room R2. Meetings requiring Basic AV can be held in R1 or R3, or R2 (if R2 is used for a Basic AV meeting, the R2 premium still applies).
+
+Clues/Additional Information:
+
+1.  All five meetings were scheduled on that day.
+2.  M2 was scheduled in the 9am-11am time slot.
+3.  M3 was scheduled in Room R3 and did not start at 9am.
+4.  The total cost for refreshments for all meetings held in the 11am-1pm time slot was Rs. 3000.
+5.  M5 started at the same time as M1 but in a different room.
+6.  No meetings were scheduled in any room during the 2pm-4pm time slot. The total cost (Refreshments + R2 Premium) for M1 was Rs. 800.
+7.  Meeting M1 was scheduled in Room R1.",Which meeting was scheduled in Room R3 during the 11am-1pm time slot?,M1,M3,M5,No meeting,A,B,C,D,B,MCQ,Logical Reasoning,"Scheduling, Elimination",Moderate,Determining which activity was scheduled in a specific location and time slot using a process of elimination based on multiple constraints.,"timeline analysis, capacity constraints, process of elimination",False,MOCKCAT24S3GEN_Set5_ConferenceBooking,Analyze,"From the derived schedule based on all clues:
+1. M2 is in R2 at 9am. M1 is in R1 at 9am. M5 is in R3 at 9am (since it started with M1).
+2. No meetings are at 2pm.
+3. This leaves the 11am-1pm slot for M3 and M4.
+4. Clue 3 says M3 was scheduled in Room R3 and did not start at 9am. The only other possible start time for M3 is 11am.
+5. Therefore, M3 is scheduled in Room R3 during the 11am-1pm time slot."
+LRDI,40,MOCKCAT24S3GEN_Q22,22,ConferenceRoomBooking,"A company needs to schedule five distinct meetings (M1, M2, M3, M4, M5) on a particular day. There are three conference rooms available: R1 (Capacity 10, Basic AV), R2 (Capacity 20, Advanced AV), and R3 (Capacity 15, Basic AV). The available time slots for meetings are 9am-11am, 11am-1pm, 2pm-4pm, and 4pm-6pm. Each meeting is exactly 2 hours long and must be scheduled in a single continuous 2-hour time slot. A room can host only one meeting per time slot. A meeting cannot be split across rooms or time slots.
+
+Meeting Requirements:
+
+*   M1: 8 people, requires Basic AV.
+*   M2: 15 people, requires Advanced AV.
+*   M3: 12 people, requires Basic AV.
+*   M4: 18 people, requires Advanced AV.
+*   M5: 6 people, requires Basic AV.
+
+Cost Structure:
+
+*   Refreshments: Rs. 100 per person attending the meeting.
+*   Room R2 Premium: An additional flat fee of Rs. 200 is charged each time Room R2 is used for a meeting, due to its advanced facilities.
+*   AV Requirement: Meetings requiring Advanced AV must be held in Room R2. Meetings requiring Basic AV can be held in R1 or R3, or R2 (if R2 is used for a Basic AV meeting, the R2 premium still applies).
+
+Clues/Additional Information:
+
+1.  All five meetings were scheduled on that day.
+2.  M2 was scheduled in the 9am-11am time slot.
+3.  M3 was scheduled in Room R3 and did not start at 9am.
+4.  The total cost for refreshments for all meetings held in the 11am-1pm time slot was Rs. 3000.
+5.  M5 started at the same time as M1 but in a different room.
+6.  No meetings were scheduled in any room during the 2pm-4pm time slot. The total cost (Refreshments + R2 Premium) for M1 was Rs. 800.
+7.  Meeting M1 was scheduled in Room R1.",What is the sum of attendees in Room R1 and Room R3 during the 9am-11am time slot?,14,21,23,24,A,B,C,D,A,MCQ,Data Interpretation,"Scheduling, Summation from Derived Schedule",Moderate,Aggregating data (number of attendees) from a derived schedule for specific locations during a specific time slot.,"data aggregation from schedule, information retrieval",False,MOCKCAT24S3GEN_Set5_ConferenceBooking,Apply,"From the derived schedule for the 9am-11am time slot:
+1. Meeting M1 (8 people) was scheduled in Room R1.
+2. Meeting M5 (6 people) was scheduled in Room R3 (as it started at the same time as M1 but in a different room, and R2 was occupied by M2).
+3. The sum of attendees in Room R1 and Room R3 during this time slot = 8 (for M1) + 6 (for M5) = 14."

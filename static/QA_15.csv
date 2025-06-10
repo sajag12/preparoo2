@@ -1,0 +1,273 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+QA,,Q45,1,,,"The ratio of the number of boys to girls in a school was 7:8. When 10 boys left the school and 10 girls joined the school, the new ratio of boys to girls became 6:9. What was the original number of girls in the school?",64,72,80,88,A,B,C,D,C,MCQ,Arithmetic,"Ratio, Proportion & Variation",Easy,Solving word problems using ratios and linear equations.,"Ratio manipulation, Linear equations, Word problem",False,MockSet1_QA,Applying,"Let the original number of boys be 7x and the original number of girls be 8x.
+After 10 boys left, the number of boys became 7x-10.
+After 10 girls joined, the number of girls became 8x+10.
+The new ratio of boys to girls is 6:9, which simplifies to 2:3.
+So, we have the equation: (7x-10)/(8x+10) = 2/3.
+Cross-multiplying gives: 3(7x-10) = 2(8x+10).
+21x - 30 = 16x + 20.
+21x - 16x = 20 + 30.
+5x = 50.
+x = 10.
+The original number of girls was 8x = 8 * 10 = 80.
+The correct option is (C)."
+QA,,Q46,2,,,"A merchant buys two articles, A and B. The cost price of article A is 20% more than the cost price of article B. He marks up article A by 25% and article B by 40%. He then sells article A at a 10% discount and article B at a 15% discount. If his total profit from selling both articles is Rs. 255, what is the cost price of article B?",Rs. 500,Rs. 600,Rs. 750,Rs. 800,A,B,C,D,C,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,Multi-step profit and loss calculation involving mark-up and discount.,"Cost price, Marked price, Discount, Profit calculation, Multiple articles, Percentage calculations",False,MockSet1_QA,Analyzing,"Let the cost price (CP) of article B be C_B.
+Then the CP of article A is C_A = C_B * (1+0.20) = 1.2 * C_B.
+Article A is marked up by 25%: Marked Price of A (MP_A) = 1.2 * C_B * (1+0.25) = 1.2 * C_B * 1.25 = 1.5 * C_B.
+Article B is marked up by 40%: Marked Price of B (MP_B) = C_B * (1+0.40) = 1.4 * C_B.
+Article A is sold at a 10% discount: Selling Price of A (SP_A) = MP_A * (1-0.10) = 1.5 * C_B * 0.9 = 1.35 * C_B.
+Profit from article A = SP_A - C_A = 1.35 * C_B - 1.2 * C_B = 0.15 * C_B.
+Article B is sold at a 15% discount: Selling Price of B (SP_B) = MP_B * (1-0.15) = 1.4 * C_B * 0.85 = 1.19 * C_B.
+Profit from article B = SP_B - C_B = 1.19 * C_B - C_B = 0.19 * C_B.
+The total profit from selling both articles is Rs. 255.
+Total Profit = Profit from A + Profit from B.
+255 = 0.15 * C_B + 0.19 * C_B.
+255 = 0.34 * C_B.
+C_B = 255 / 0.34 = 25500 / 34 = 750.
+The cost price of article B is Rs. 750.
+The correct option is (C)."
+QA,,Q47,3,,,"Let N be a positive integer such that N = 2^a * 3^b, where a, b are non-negative integers. If N has 30 factors and 2N has 40 factors, find the number of factors of 6N.",,,,,,,,,44,TITA,Algebra,Number Systems,Medium,Using the formula for the number of factors and solving simultaneous equations.,"Number of factors, Prime factorization, Properties of factors",True,MockSet1_QA,Applying,"Let N = 2^a * 3^b.
+The number of factors of N is τ(N) = (a+1)(b+1).
+Given τ(N) = 30, so (a+1)(b+1) = 30. (1)
+Consider 2N. 2N = 2 * (2^a * 3^b) = 2^(a+1) * 3^b.
+The number of factors of 2N is τ(2N) = ((a+1)+1)(b+1) = (a+2)(b+1).
+Given τ(2N) = 40, so (a+2)(b+1) = 40. (2)
+Divide (2) by (1): (a+2)(b+1) / ((a+1)(b+1)) = 40/30 = 4/3.
+(a+2)/(a+1) = 4/3.
+3(a+2) = 4(a+1) => 3a+6 = 4a+4 => a = 2.
+Substitute a=2 into (1): (2+1)(b+1) = 30 => 3(b+1) = 30 => b+1 = 10 => b = 9.
+We need the number of factors of 6N.
+6N = (2*3) * N = (2*3) * (2^a * 3^b) = 2^(a+1) * 3^(b+1).
+Substitute a=2, b=9: 6N = 2^(2+1) * 3^(9+1) = 2^3 * 3^10.
+The number of factors of 6N is τ(6N) = (3+1)(10+1) = 4 * 11 = 44.
+The number of factors of 6N is 44."
+QA,,Q48,4,,,"A manufacturer sells an item to a wholesaler at a 20% profit. The wholesaler sells the same item to a retailer at a 10% profit. The retailer marks the item up by 50% of his cost price but then offers a 20% discount on this marked-up price to a customer. If the customer paid Rs. 1188 for the item, what was the original manufacturing cost of the item?",Rs. 600,Rs. 625,Rs. 750,Rs. 800,A,B,C,D,C,MCQ,Arithmetic,"Profit, Loss & Discount",Medium,Solving successive percentage change problems in a supply chain.,"Chain transactions, Percentage profit, Mark-up, Discount calculation",False,MockSet1_QA,Applying,"Let the Manufacturing Cost (MC) be C.
+Manufacturer's Selling Price (SP_M) = C * (1+0.20) = 1.2*C. This is the Wholesaler's Cost Price (CP_W).
+Wholesaler's Selling Price (SP_W) = CP_W * (1+0.10) = 1.2*C * 1.1 = 1.32*C. This is the Retailer's Cost Price (CP_R).
+Retailer's Marked Price (MP_R) = CP_R * (1+0.50) = 1.32*C * 1.5 = 1.98*C.
+Retailer's Selling Price (SP_R) to customer = MP_R * (1-0.20) = 1.98*C * 0.8 = 1.584*C.
+The customer paid Rs. 1188.
+So, 1.584*C = 1188.
+C = 1188 / 1.584 = 1188000 / 1584 = 750.
+The manufacturing cost C = Rs. 750.
+The correct option is (C)."
+QA,,Q49,5,,,A rectangular box is inscribed in a sphere such that all its vertices lie on the sphere. The square of the length of the main diagonal of the box is given as 625 sq. cm. What is the radius of the sphere in cm?,10,12.5,15,17.5,A,B,C,D,B,MCQ,Geometry & Mensuration,"Mensuration - 3D (Volume & Surface Area: Cuboids, Spheres)",Hard,Understanding the relationship between a sphere's diameter and the diagonal of an inscribed cuboid.,"Rectangular box, Inscribed sphere, Diagonal of cuboid",False,MockSet1_QA,Analyzing,"The main diagonal of a rectangular box inscribed in a sphere is equal to the diameter of the sphere.
+Let d_box be the length of the main diagonal of the box.
+The problem states that the square of the length of the main diagonal is 625 sq. cm.
+So, (d_box)^2 = 625.
+d_box = sqrt(625) = 25 cm.
+The diameter of the circumscribing sphere, D_sphere = d_box = 25 cm.
+The radius of the sphere, R_sphere = D_sphere / 2 = 25 / 2 = 12.5 cm.
+The correct option is (B)."
+QA,,Q50,6,,,"In a triangle ABC, points D, E, F are on sides BC, CA, AB respectively such that AD, BE, CF are the medians. G is the centroid of the triangle. If the area of triangle GBD is 28 sq. cm, what is the area of triangle AFE in sq. cm?",28,35,42,49,A,B,C,D,C,MCQ,Geometry & Mensuration,"Geometry (Triangles - Properties, Area Ratios)",Hard,"Properties of medians, centroid, and area ratios in triangles, including the midpoint theorem.","Medians, Centroid, Area of triangle properties, Midpoint theorem properties, Ratio of areas",False,MockSet1_QA,Analyzing,"A property of medians and centroid is that the three medians divide the triangle into 6 smaller triangles of equal area. △GBD is one of these 6 triangles.
+Therefore, Area(GBD) = (1/6) * Area(ABC).
+Given Area(GBD) = 28 sq. cm.
+So, (1/6) * Area(ABC) = 28.
+Area(ABC) = 28 * 6 = 168 sq. cm.
+Points E and F are midpoints of sides CA and AB respectively. △AFE is formed by joining these midpoints.
+By the midpoint theorem, the line segment FE is parallel to BC and its length is half the length of BC.
+Thus, △AFE is similar to △ABC. The ratio of corresponding sides is AF/AB = AE/AC = FE/BC = 1/2.
+The ratio of the areas of two similar triangles is the square of the ratio of their corresponding sides.
+Area(AFE) / Area(ABC) = (1/2)^2 = 1/4.
+Area(AFE) = (1/4) * Area(ABC) = (1/4) * 168 = 42 sq. cm.
+The correct option is (C)."
+QA,,Q51,7,,,"A sum of money was lent at simple interest at a certain rate for 2 years. If it had been lent at compound interest (compounded annually) at the same rate, the interest would have been Rs. 120 more. If the sum was lent at compound interest (compounded annually) at a rate 5% higher than the original rate for 2 years, the compound interest earned in this case would have been Rs. 367.50 more than the compound interest earned at the original rate for 2 years. Find the original rate of interest per annum.",10%,12%,15%,20%,A,B,C,D,D,MCQ,Arithmetic,Compound Interest,Hard,"Forming and solving equations based on the difference between SI and CI, and differences between two CIs.","Simple interest vs Compound interest, Difference in CI and SI, Solving for rate, System of equations",False,MockSet1_QA,Analyzing,"Let P be the principal and R be the original rate of interest (as a decimal).
+Simple Interest (SI) for 2 years = P*R*2 = 2PR.
+Compound Interest (CI) for 2 years is CI_orig = P(1+R)^2 - P = 2PR + PR^2.
+The difference CI_orig - SI = (2PR + PR^2) - 2PR = PR^2.
+Given PR^2 = 120. (1)
+The new rate R_new = R+0.05.
+Compound interest at the new rate for 2 years is CI_new = P(1+R_new)^2 - P.
+Given CI_new - CI_orig = 367.50.
+[P(1+R+0.05)^2 - P] - [P(1+R)^2 - P] = 367.50.
+P[(1+R+0.05)^2 - (1+R)^2] = 367.50.
+Using a^2-b^2 = (a-b)(a+b): P[ (0.05) * (1+R+0.05 + 1+R) ] = 367.50.
+P[ 0.05 * (2R + 2.05) ] = 367.50.
+P(0.1R + 0.1025) = 367.50. (2)
+From (1), P = 120/R^2. Substitute into (2):
+(120/R^2) * (0.1R + 0.1025) = 367.50.
+12/R + 12.3/R^2 = 367.50.
+Multiply by R^2: 12R + 12.3 = 367.5R^2.
+367.5R^2 - 12R - 12.3 = 0.
+Testing the options. Let's try R=20% = 0.2.
+367.5(0.2)^2 - 12(0.2) - 12.3 = 367.5(0.04) - 2.4 - 12.3 = 14.7 - 2.4 - 12.3 = 0.
+The equation is satisfied for R=0.2. So the original rate is 20%.
+The correct option is (D)."
+QA,,Q52,8,,,"In a triangle ABC, D is a point on BC such that BD:DC = 2:3. E is the midpoint of AD. If the area of triangle ABE is 18 sq. units, find the area of triangle ABC in sq. units.",,,,,,,,,90,TITA,Geometry & Mensuration,"Geometry (Triangles - Properties, Area Ratios)",Medium,Using area ratio properties based on base division and medians in triangles.,"Area of triangle, Ratio of bases and areas, Median property (line from vertex to midpoint)",True,MockSet1_QA,Applying,"D is a point on BC such that BD:DC = 2:3. This means Area(ABD) = (2/5)Area(ABC).
+E is the midpoint of AD. In △ABD, BE is a line from vertex B to the midpoint of AD. Thus, BE divides △ABD into two triangles of equal area: Area(ABE) = Area(BDE) = (1/2)Area(ABD).
+Given Area(ABE) = 18 sq. units.
+So, Area(ABD) = 2 * Area(ABE) = 2 * 18 = 36 sq. units.
+Since Area(ABD) = (2/5)Area(ABC):
+36 = (2/5)Area(ABC).
+Area(ABC) = (36 * 5) / 2 = 18 * 5 = 90 sq. units.
+The area of triangle ABC is 90."
+QA,,Q53,9,,,"A car travels from P to Q at a constant speed. If its speed were increased by 10 km/hr, it would have taken 1 hour less to cover the distance. If its speed were decreased by 10 km/hr, it would have taken 2 hours more. What is the distance PQ in km?",100 km,120 km,150 km,180 km,A,B,C,D,B,MCQ,Arithmetic,"Time, Speed & Distance (General)",Medium,Solving TSD problems by setting up and solving a system of equations.,"Distance-Speed-Time relationship, Forming equations from conditions, Solving system of equations",False,MockSet1_QA,Applying,"Let D be the distance, S be the usual speed, and T be the usual time. D=ST.
+If speed is (S+10), time is (T-1). So D=(S+10)(T-1).
+ST = (S+10)(T-1) => ST = ST - S + 10T - 10 => S = 10T - 10. (1)
+If speed is (S-10), time is (T+2). So D=(S-10)(T+2).
+ST = (S-10)(T+2) => ST = ST + 2S - 10T - 20 => 2S = 10T + 20 => S = 5T + 10. (2)
+Equating (1) and (2):
+10T - 10 = 5T + 10.
+5T = 20 => T = 4 hours.
+Substitute T=4 into equation (1): S = 10(4) - 10 = 30 km/hr.
+Distance D = ST = 30 * 4 = 120 km.
+The correct option is (B)."
+QA,,Q54,10,,,"Pipe A can fill a tank in 12 hours. Pipe B can fill the same tank in 18 hours. Pipe C can empty the full tank in X hours. All three pipes are opened together. However, Pipe C is closed 3 hours before the tank is completely filled. If the tank gets filled in a total of 9 hours, find the value of X.",,,,,,,,,24,TITA,Arithmetic,Pipes & Cisterns,Medium,Calculating work done by pipes with varying schedules.,"Work rate of pipes, Filling and emptying, Combined work, Variable schedule (pipe closing early)",True,MockSet1_QA,Applying,"Let the total volume of the tank be LCM(12, 18) = 36 units.
+Rate of A = 36/12 = +3 units/hr.
+Rate of B = 36/18 = +2 units/hr.
+Rate of C = -36/X units/hr.
+The tank is filled in 9 hours. Pipe C runs for 9-3=6 hours.
+Pipes A and B run for all 9 hours.
+Total work done = 1 (or 36 units).
+Work done by A in 9 hours = 9 * 3 = 27 units.
+Work done by B in 9 hours = 9 * 2 = 18 units.
+Work done by C in 6 hours = 6 * (-36/X) = -216/X units.
+Total work = 27 + 18 - 216/X = 36.
+45 - 216/X = 36.
+45 - 36 = 216/X.
+9 = 216/X.
+X = 216 / 9 = 24.
+The value of X is 24."
+QA,,Q55,11,,,What is the remainder when N = (1!)^3 + (2!)^3 + (3!)^3 + (4!)^3 + (5!)^3 + ... + (100!)^3 is divided by 36?,0,9,17,25,A,B,C,D,B,MCQ,Algebra,Number Systems,Hard,Finding remainders of a series of factorials using modular arithmetic.,"Factorials, Remainders, Modular arithmetic (mod 36), Sum of series of factorials",False,MockSet1_QA,Analyzing,"We need to find the remainder when N is divided by 36. Let's evaluate the first few terms modulo 36.
+(1!)^3 = 1^3 = 1 ≡ 1 (mod 36).
+(2!)^3 = 2^3 = 8 ≡ 8 (mod 36).
+(3!)^3 = 6^3 = 216. Since 216 = 6 * 36, (3!)^3 ≡ 0 (mod 36).
+(4!)^3 = 24^3. Since 24 is a multiple of 6 and 4, 24^2 = 576 = 16 * 36, so 24^2 ≡ 0 (mod 36). Thus, 24^3 ≡ 0 (mod 36).
+(5!)^3 = 120^3. 120 is a multiple of 12. 120 = 10*12. 120^2 is divisible by 144, which is 4*36. So 120^2 ≡ 0 (mod 36). Thus, (5!)^3 ≡ 0 (mod 36).
+For any n ≥ 6, n! contains 6! = 720 as a factor. Since 720 = 20 * 36, n! is a multiple of 36. Therefore, (n!)^3 will also be a multiple of 36. So, (n!)^3 ≡ 0 (mod 36) for all n ≥ 6.
+So, we only need to sum the remainders of the first two terms.
+N ≡ (1!)^3 + (2!)^3 + 0 + 0 + ... (mod 36).
+N ≡ 1 + 8 (mod 36).
+N ≡ 9 (mod 36).
+The remainder is 9.
+The correct option is (B)."
+QA,,Q56,12,,,"The sum of the first 15 terms of an arithmetic progression is 255. If the 5th term of this progression is 11, find its common difference.",,,,,,,,,2,TITA,Algebra,Sequences & Series (AP),Easy,Using formulas for sum and nth term of an AP to solve for the common difference.,"Arithmetic progression, Sum of n terms formula, Nth term formula",True,MockSet1_QA,Applying,"Let the arithmetic progression have first term a and common difference d.
+Sum of first n terms: S_n = n/2 * [2a + (n-1)d].
+Given S_15 = 255.
+255 = 15/2 * [2a + (15-1)d] = 15/2 * [2a + 14d] = 15 * (a+7d).
+255 / 15 = a+7d => 17 = a+7d. (1)
+Nth term: T_n = a + (n-1)d.
+Given T_5 = 11.
+11 = a + (5-1)d = a + 4d. (2)
+We have a system of two linear equations:
+1. a + 7d = 17
+2. a + 4d = 11
+Subtracting equation (2) from (1): (a+7d) - (a+4d) = 17 - 11.
+3d = 6 => d = 2.
+The common difference is 2."
+QA,,Q57,13,,,"A solution contains 25% acid. When 10 litres of water are added to this solution, the concentration of acid becomes 15%. If, to this new diluted solution, 'x' litres of a 50% acid solution are added, the final acid concentration in the mixture becomes 25%. Find the value of 'x'.",5,6,8,10,A,B,C,D,D,MCQ,Arithmetic,Mixtures & Alligations,Medium,Solving multi-step mixture problems involving dilution and fortification.,"Concentration of solutions, Acid-water mixture, Dilution by adding water, Fortification by adding concentrated solution",False,MockSet1_QA,Applying,"Let the initial volume of the solution be V litres.
+Initial amount of acid = 0.25V litres.
+When 10 litres of water are added, the new volume becomes V+10 litres. The amount of acid remains 0.25V.
+The new concentration is 0.25V / (V+10) = 0.15.
+0.25V = 0.15(V+10) => 0.25V = 0.15V + 1.5 => 0.10V = 1.5 => V = 15 litres.
+The diluted solution has a volume of 15+10=25 litres and contains 0.25*15 = 3.75 litres of acid.
+Now, 'x' litres of a 50% acid solution are added.
+Amount of acid added = 0.50x.
+Total acid in new mixture = 3.75 + 0.50x.
+Total volume of new mixture = 25+x.
+Final concentration is 25% or 0.25.
+(3.75 + 0.50x) / (25+x) = 0.25.
+3.75 + 0.50x = 0.25(25+x) = 6.25 + 0.25x.
+0.50x - 0.25x = 6.25 - 3.75.
+0.25x = 2.5.
+x = 2.5 / 0.25 = 10.
+The value of 'x' is 10.
+The correct option is (D)."
+QA,,Q58,14,,,"If log_12(81) = p, then log_6(27) is equal to:",3p / (p+2),6p / (p+4),3p / (p+4),6p / (4-p),A,B,C,D,B,MCQ,Algebra,Logarithms,Hard,Advanced manipulation of logarithmic expressions using the change of base formula.,"Logarithm properties (power rule, change of base), Algebraic manipulation of log expressions",False,MockSet1_QA,Analyzing,"Given log_12(81) = p => log_12(3^4) = p => 4*log_12(3) = p => log_12(3) = p/4.
+Using the change of base formula (to base 3): log_12(3) = log_3(3) / log_3(12) = 1 / log_3(2^2 * 3) = 1 / (2*log_3(2) + 1).
+So, 1 / (2*log_3(2) + 1) = p/4.
+4 = p(2*log_3(2) + 1) => 4 = 2p*log_3(2) + p => 2p*log_3(2) = 4-p => log_3(2) = (4-p)/(2p).
+We need to find log_6(27) = log_6(3^3) = 3*log_6(3).
+Using change of base: 3*log_6(3) = 3 * [log_3(3) / log_3(6)] = 3 / log_3(2*3) = 3 / (log_3(2) + log_3(3)) = 3 / (log_3(2) + 1).
+Substitute the expression for log_3(2):
+log_6(27) = 3 / [((4-p)/(2p)) + 1] = 3 / [(4-p+2p)/(2p)] = 3 / [(4+p)/(2p)] = 6p / (4+p).
+The correct option is (B)."
+QA,,Q59,15,,,"If the roots of the quadratic equation x^2 - (k+1)x + (k^2-k-2) = 0 are α and β such that α^2 + β^2 = 9, find the sum of all possible real values of k.",1,2,-1,4,A,B,C,D,B,MCQ,Algebra,Quadratic Equations,Medium,"Using Vieta's formulas and the condition on the roots, while checking the discriminant for real roots.","Roots of quadratic equation, Vieta's formulas, Symmetric functions of roots (α^2 + β^2), Discriminant for real roots condition",False,MockSet1_QA,Applying,"From Vieta's formulas: α+β = k+1 and αβ = k^2-k-2.
+Given α^2 + β^2 = 9.
+We know α^2 + β^2 = (α+β)^2 - 2αβ.
+So, 9 = (k+1)^2 - 2(k^2-k-2).
+9 = (k^2+2k+1) - (2k^2-2k-4).
+9 = -k^2 + 4k + 5.
+-k^2 + 4k - 4 = 0 => k^2 - 4k + 4 = 0 => (k-2)^2 = 0.
+This gives k=2 as the only possible value from this condition.
+We must also ensure the roots α, β are real. The discriminant D_x must be ≥ 0.
+D_x = (-(k+1))^2 - 4(k^2-k-2) ≥ 0.
+(k^2+2k+1) - 4k^2+4k+8 ≥ 0.
+-3k^2 + 6k + 9 ≥ 0.
+k^2 - 2k - 3 ≤ 0.
+(k-3)(k+1) ≤ 0.
+This holds for -1 ≤ k ≤ 3.
+Our value k=2 lies within this range, so it is a valid solution.
+Since k=2 is the only possible value, the sum of all possible values is 2.
+The correct option is (B)."
+QA,,Q60,16,,,"Let g(x) = x^2 + 3x - 4. If g(f(x)) = x^2 - x - 2, where f(x) is a linear function of x, find the product of the roots of f(x)=0.",-1,1,-2,2,A,B,C,D,D,MCQ,Algebra,Functions & Graphs,Hard,Analyzing composite functions and finding roots of a component function.,"Composite functions g(f(x)), Finding roots of f(x) using properties of g(x), Quadratic functions",False,MockSet1_QA,Analyzing,"Given g(x) = x^2 + 3x - 4 and g(f(x)) = x^2 - x - 2.
+Substituting f(x) into g(x), we get: (f(x))^2 + 3f(x) - 4 = x^2 - x - 2.
+We want to find the product of the roots of f(x)=0. Let x be a root of f(x)=0, which means f(x)=0.
+Substitute f(x)=0 into the composite function equation:
+(0)^2 + 3(0) - 4 = x^2 - x - 2.
+-4 = x^2 - x - 2.
+x^2 - x + 2 = 0.
+The values of x that satisfy this equation are precisely the roots of f(x)=0.
+For a quadratic equation Ax^2+Bx+C=0, the product of the roots is C/A.
+For x^2 - x + 2 = 0, the product of the roots is 2/1 = 2.
+The correct option is (D)."
+QA,,Q61,17,,,"In a circle with center O, AB is a chord. A tangent drawn at point A on the circle intersects the line BO extended (through O, away from B) at point T. If ∠OAB = 25°, find the measure of ∠ATB.",20°,25°,30°,40°,A,B,C,D,D,MCQ,Geometry & Mensuration,"Geometry (Circles - Properties, Tangents)",Medium,"Using properties of circles, tangents, and triangles to find angles.","Circle properties, Tangent-radius perpendicularity, Isosceles triangle properties, Angle sum property of triangles",False,MockSet1_QA,Applying,"O is the center. OA and OB are radii, so OA=OB. Thus △OAB is isosceles.
+Given ∠OAB = 25°, so ∠OBA = 25°.
+In △OAB, ∠AOB = 180° - (25°+25°) = 130°.
+AT is tangent at A, so radius OA is perpendicular to tangent AT. Thus, ∠OAT = 90°.
+The points are collinear in the order T-O-B. So ∠AOT and ∠AOB are supplementary.
+∠AOT = 180° - ∠AOB = 180° - 130° = 50°.
+In △AOT, the sum of angles is 180°.
+∠ATO + ∠TAO + ∠AOT = 180°.
+∠ATO + 90° + 50° = 180°.
+∠ATO + 140° = 180°.
+∠ATO = 40°. ∠ATB is the same as ∠ATO.
+The correct option is (D)."
+QA,,Q62,18,,,"A solid metallic sphere of radius 10.5 cm is melted and recast into a number of smaller identical cones, each of radius 3.5 cm and height 7 cm. Find the number of such cones formed.",,,,,,,,,54,TITA,Geometry & Mensuration,"Mensuration - 3D (Volume & Surface Area: Spheres, Cones)",Medium,Applying volume formulas and the principle of conservation of volume.,"Volume of sphere, Volume of cone, Conservation of volume (melting and recasting)",True,MockSet1_QA,Applying,"Radius of sphere R = 10.5 cm = 21/2 cm.
+Volume of sphere V_s = (4/3)πR^3 = (4/3)π(21/2)^3 = (4/3)π(9261/8) = 4630.5π cm^3.
+Radius of cone r = 3.5 cm = 7/2 cm. Height of cone h = 7 cm.
+Volume of one cone V_c = (1/3)πr^2h = (1/3)π(7/2)^2(7) = (1/3)π(49/4)(7) = (343π)/12 cm^3.
+Number of cones N = V_s / V_c = (4630.5π) / ((343π)/12) = (4630.5 * 12) / 343 = 55566 / 343 = 162.
+Alternate calculation: N = [(4/3)π(21/2)^3] / [(1/3)π(7/2)^2(7)] = [4(21/2)^3] / [(7/2)^2(7)] = [4 * 9261/8] / [49/4 * 7] = [4630.5] / [343/4] = 4630.5 * 4 / 343 = 18522 / 343 = 54.
+The number of cones formed is 54."
+QA,,Q63,19,,,The price of petrol increased by 25%. By what percentage must a car owner reduce his consumption of petrol so that his expenditure on petrol increases by only 5%?,,,,,,,,,16,TITA,Arithmetic,Percentages,Easy,"Solving problems involving percentage change in price, consumption, and expenditure.","Percentage increase, Expenditure, Consumption adjustment",True,MockSet1_QA,Applying,"Let the initial price be P and initial consumption be C. Initial expenditure E = P * C.
+The new price P' = P(1+0.25) = 1.25P.
+Let the new consumption be C'. The new expenditure E' = P' * C' = 1.25P * C'.
+The expenditure increases by 5%, so E' = E(1+0.05) = 1.05E = 1.05PC.
+Equating the expressions for E':
+1.25P * C' = 1.05PC.
+1.25C' = 1.05C.
+C' = (1.05 / 1.25) * C = (105 / 125) * C = (21/25)C.
+The reduction in consumption is C - C' = C - (21/25)C = (4/25)C.
+Percentage reduction = ((4/25)C / C) * 100% = (4/25) * 100% = 16%.
+The percentage reduction is 16."
+QA,,Q64,20,,,"P, Q, and R can complete a piece of work in 20, 30, and 60 days respectively. They decide to work in a cycle: P works on day 1, Q on day 2, R on day 3, then P again on day 4, and so on. If they follow this cycle, on which day will the work be completed?",,,,,,,,,30,TITA,Arithmetic,Time & Work,Medium,Solving time and work problems with a cyclic work pattern.,"Work rate, Cyclic work pattern, LCM for work units, Work completion day",True,MockSet1_QA,Applying,"Let the total work be LCM(20, 30, 60) = 60 units.
+P's rate = 60/20 = 3 units/day.
+Q's rate = 60/30 = 2 units/day.
+R's rate = 60/60 = 1 unit/day.
+In one 3-day cycle (P, then Q, then R), the work done is 3 + 2 + 1 = 6 units.
+Total work to be done = 60 units.
+Number of full cycles needed = Total work / Work per cycle = 60 / 6 = 10 cycles.
+Each cycle takes 3 days.
+Total time taken = 10 cycles * 3 days/cycle = 30 days.
+The work will be completed exactly at the end of the 10th cycle, which is on the 30th day.
+The work is completed on the 30th day."
+QA,,Q65,21,,,"If f(x) is a function such that f(xy) = f(x) + f(y) for all positive real numbers x, y. If f(2) = 3 and f(3) = 5, what is the value of f(72)?",,,,,,,,,19,TITA,Algebra,Functions & Graphs,Medium,Using properties of logarithmic-like functional equations.,"Functional equations, Properties of logarithmic functions, f(xy)=f(x)+f(y)",True,MockSet1_QA,Applying,"The functional equation is f(xy) = f(x)+f(y). This implies f(a*b*c) = f(a)+f(b)+f(c) and f(x^n) = n*f(x).
+We need to find f(72).
+First, prime factorize 72: 72 = 8 * 9 = 2^3 * 3^2.
+So, f(72) = f(2^3 * 3^2).
+Using the properties of the function:
+f(72) = f(2^3) + f(3^2).
+f(72) = 3*f(2) + 2*f(3).
+Given f(2)=3 and f(3)=5.
+f(72) = 3*(3) + 2*(5) = 9 + 10 = 19.
+The value of f(72) is 19."
+QA,,Q66,22,,,What is the sum of all three-digit numbers that leave a remainder of 3 when divided by 7?,,,,,,,,,70821,TITA,Algebra,Number Systems,Medium,Finding the sum of an arithmetic progression derived from number properties.,"Arithmetic progression, Three-digit numbers, Remainder properties, Sum of AP",True,MockSet1_QA,Applying,"We are looking for three-digit numbers N such that N = 7k+3 for some integer k.
+The smallest three-digit number is 100. To find the first term: 7k+3 ≥ 100 => 7k ≥ 97 => k ≥ 13.85. So, the smallest k is 14. First number = 7(14)+3 = 101.
+The largest three-digit number is 999. To find the last term: 7k+3 ≤ 999 => 7k ≤ 996 => k ≤ 142.28. So, the largest k is 142. Last number = 7(142)+3 = 997.
+The sequence of numbers is an arithmetic progression: 101, 108, ..., 997.
+First term a = 101, last term l = 997, common difference d = 7.
+Number of terms n = (last k - first k) + 1 = (142 - 14) + 1 = 129.
+The sum of an AP is S_n = n/2 * (a+l).
+S_129 = 129/2 * (101+997) = 129/2 * (1098) = 129 * 549 = 70821.
+The sum is 70821."

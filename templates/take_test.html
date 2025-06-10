@@ -1,0 +1,1029 @@
+<!-- templates/take_test.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CAT Mock Test - Taking Test</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <style>
+    /* TITA specific styles */
+    .tita-container {
+      margin: 20px 0;
+      padding: 20px;
+      background: #f8f9fa;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+    }
+    
+    .tita-label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #495057;
+      font-size: 16px;
+    }
+    
+    .tita-input {
+      width: 100%;
+      max-width: 300px;
+      padding: 12px 16px;
+      border: 2px solid #dee2e6;
+      border-radius: 6px;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      background: white;
+      transition: border-color 0.2s ease;
+    }
+    
+    .tita-input:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
+    
+    .tita-input:valid {
+      border-color: #28a745;
+    }
+    
+    .tita-input::placeholder {
+      color: #6c757d;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body class="test-mode">
+  <div class="test-interface-container">
+    <header class="test-header">
+      <div class="test-info">
+        <span class="test-name">CAT Mock Test</span>
+        <span class="section-name-badge" id="current-section-name-badge">Loading Section...</span>
+      </div>
+      <div class="test-controls">
+        <span class="timer-chip"><span class="icon">⏱️</span> Section: <span id="section-timer" class="time">00:00</span></span>
+        <span class="timer-chip"><span class="icon">⏱️</span> Total: <span id="total-timer" class="time">00:00</span></span>
+        <button class="instructions-btn" id="instructions-btn"><span class="icon">ℹ️</span> Instructions</button>
+        <button class="calculator-btn" id="calculator-btn"><span class="icon" style="margin-right: 5px;">🧮</span> Calculator</button>
+      </div>
+    </header>
+
+    <main class="test-body">
+      <div class="question-panel">
+        <div class="question-panel-header">
+          <span class="question-progress" id="question-progress-display">Question X of Y</span>
+          <h2 id="question-panel-section-title">Loading...</h2>
+        </div>
+        <div class="question-actions">
+          <button class="q-num-btn active" id="current-q-num-btn">Question X</button>
+          <button class="mark-review-btn" id="mark-review-btn"><span class="icon">🔖</span> Mark for Review</button>
+          <span class="time-left" id="q-panel-time-left">⏱️ 00:00 left</span>
+        </div>
+
+        <div class="question-content-area" id="question-content-area">
+          <p class="passage-instruction" id="passage-instruction-text" style="display:none;"></p>
+          <div class="passage-scroll-container" id="passage-scroll-container" style="display:none;">
+            <div class="passage" id="passage-content"></div>
+          </div>
+          <p class="question-prompt" id="question-prompt-text">Loading question...</p>
+          <div class="options-container" id="options-container"></div>
+        </div>
+
+        <div class="question-navigation-buttons">
+          <button class="prev-btn" id="prev-q-btn" disabled>&lt; Previous</button>
+          <button class="next-btn" id="next-q-btn">Next &gt;</button>
+          <button class="clear-response-btn" id="clear-response-btn">Clear Response</button>
+          <button class="save-next-btn" id="save-next-btn">Save & Next</button>
+        </div>
+      </div>
+
+      <aside class="sidebar-panel">
+        <div class="sidebar-header">
+          <h3 id="sidebar-section-title">Loading...</h3>
+        </div>
+        <div class="question-palette" id="question-palette-grid"></div>
+        <div class="status-legend">
+          <h4>Question Status</h4>
+          <ul>
+            <li><span class="status-dot not-visited"></span> Not Visited <span class="count" id="status-not-visited">0</span></li>
+            <li><span class="status-dot visited-not-answered"></span> Visited but Not Answered <span class="count" id="status-visited-na">0</span></li>
+            <li><span class="status-dot answered"></span> Answered <span class="count" id="status-answered">0</span></li>
+            <li><span class="status-dot marked-review"></span> Marked for Review <span class="count" id="status-marked">0</span></li>
+            <li><span class="status-dot answered-marked"></span> Answered & Marked <span class="count" id="status-answered-marked">0</span></li>
+          </ul>
+        </div>
+        <button class="submit-test-btn" id="next-section-submit-btn">Loading...</button>
+      </aside>
+    </main>
+  </div>
+
+  <!-- Calculator Modal -->
+  <div id="calculator-modal" class="calculator-modal">
+    <div class="calculator-modal-content">
+      <div class="calculator-header">
+        <h3>Calculator</h3>
+        <button class="calculator-close-btn" id="calculator-close-btn">&times;</button>
+      </div>
+      <div class="calculator-body">
+        <div class="calculator-display">
+          <input type="text" id="calculator-display" readonly value="0">
+        </div>
+        <div class="calculator-buttons">
+          <button class="calc-btn calc-btn-clear" onclick="calculatorClear()">C</button>
+          <button class="calc-btn calc-btn-clear" onclick="calculatorClearEntry()">CE</button>
+          <button class="calc-btn calc-btn-operator" onclick="calculatorPercentage()">%</button>
+          <button class="calc-btn calc-btn-operator" onclick="calculatorDivide()">÷</button>
+          
+          <button class="calc-btn calc-btn-number" onclick="calculatorNumber('7')">7</button>
+          <button class="calc-btn calc-btn-number" onclick="calculatorNumber('8')">8</button>
+          <button class="calc-btn calc-btn-number" onclick="calculatorNumber('9')">9</button>
+          <button class="calc-btn calc-btn-operator" onclick="calculatorMultiply()">×</button>
+          
+          <button class="calc-btn calc-btn-number" onclick="calculatorNumber('4')">4</button>
+          <button class="calc-btn calc-btn-number" onclick="calculatorNumber('5')">5</button>
+          <button class="calc-btn calc-btn-number" onclick="calculatorNumber('6')">6</button>
+          <button class="calc-btn calc-btn-operator" onclick="calculatorSubtract()">−</button>
+          
+          <button class="calc-btn calc-btn-number" onclick="calculatorNumber('1')">1</button>
+          <button class="calc-btn calc-btn-number" onclick="calculatorNumber('2')">2</button>
+          <button class="calc-btn calc-btn-number" onclick="calculatorNumber('3')">3</button>
+          <button class="calc-btn calc-btn-operator" onclick="calculatorAdd()">+</button>
+          
+          <button class="calc-btn calc-btn-number calc-btn-zero" onclick="calculatorNumber('0')">0</button>
+          <button class="calc-btn calc-btn-number" onclick="calculatorDecimal()">.</button>
+          <button class="calc-btn calc-btn-equals" onclick="calculatorEquals()">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submit Test Confirmation Modal -->
+  <div id="submit-test-modal" class="calculator-modal" style="display: none;">
+    <div class="calculator-modal-content" style="max-width: 500px; padding: 0;">
+      <div class="submit-modal-header" style="background: #f8f9fa; padding: 20px; border-bottom: 1px solid #e9ecef; display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="margin: 0; color: #333; font-size: 1.2rem;">Submit Test</h3>
+        <button class="calculator-close-btn" id="submit-modal-close-btn" style="background: none; border: none; font-size: 24px; cursor: pointer; color: #666;">&times;</button>
+      </div>
+      <div style="padding: 20px;">
+        <p style="margin: 0 0 20px 0; color: #666; line-height: 1.5;">Are you sure you want to submit your test? This action cannot be undone.</p>
+        
+        <div class="submit-stats" style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="font-weight: 500;">Attempted:</span>
+            <span id="modal-attempted">0 / 0</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="font-weight: 500;">Marked for Review:</span>
+            <span id="modal-marked">0</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="font-weight: 500;">Unattempted:</span>
+            <span id="modal-unattempted">0</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="font-weight: 500;">Time Remaining:</span>
+            <span id="modal-time-remaining">00:00</span>
+          </div>
+        </div>
+        
+        <div style="display: flex; gap: 15px; justify-content: flex-end;">
+          <button id="continue-test-btn" style="background: #6c757d; color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-weight: 500;">Continue Test</button>
+          <button id="final-submit-btn" style="background: #dc3545; color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-weight: 500;">Submit Test</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Prevent back navigation during test
+      history.pushState(null, null, location.href);
+      window.onpopstate = function(event) {
+        if(confirm("Are you sure you want to leave the test? Your progress may be lost.")) {
+          history.back();
+        } else {
+          history.pushState(null, null, location.href);
+        }
+      };
+      
+      // Prevent page refresh/close during test
+      let isSubmitting = false;
+      const beforeUnloadHandler = function(e) {
+        if (!isSubmitting) {
+          e.preventDefault();
+          e.returnValue = 'Are you sure you want to leave? Your test progress may be lost.';
+          return 'Are you sure you want to leave? Your test progress may be lost.';
+        }
+      };
+      window.addEventListener('beforeunload', beforeUnloadHandler);
+      
+      // Get the test_id from the template
+      const testId = {{ test_id|default(1)|tojson }};
+      
+      // Define test configurations
+      const testConfigs = {
+        // Full Mock Tests (1-15) with consistent naming
+        1: { name: "CAT Mock Test 1", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#1.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#1.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_1.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        2: { name: "CAT Mock Test 2", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#2.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#2.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_2.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        3: { name: "CAT Mock Test 3", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#3.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#3.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_3.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        4: { name: "CAT Mock Test 4", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#4.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#4.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_4.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        5: { name: "CAT Mock Test 5", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#5.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#5.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_5.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        6: { name: "CAT Mock Test 6", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#6.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#6.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_6.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        7: { name: "CAT Mock Test 7", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#7.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#7.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_7.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        8: { name: "CAT Mock Test 8", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#8.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#8.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_8.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        9: { name: "CAT Mock Test 9", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#9.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#9.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_9.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        10: { name: "CAT Mock Test 10", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#10.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#10.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_10.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        11: { name: "CAT Mock Test 11", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#11.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#11.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_11.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        12: { name: "CAT Mock Test 12", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#12.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#12.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_12.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        13: { name: "CAT Mock Test 13", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#13.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#13.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_13.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        14: { name: "CAT Mock Test 14", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#14.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#14.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_14.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        15: { name: "CAT Mock Test 15", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#15.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#15.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false },
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_15.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        
+        // Sectional Tests
+        'qa1': { name: "QA Sectional 1", sections: [
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_16.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        'qa2': { name: "QA Sectional 2", sections: [
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_17.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        'qa3': { name: "QA Sectional 3", sections: [
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_18.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        'qa4': { name: "QA Sectional 4", sections: [
+          { name: "Quantitative Aptitude", csvPath: "{{ url_for('static', filename='QA_19.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        'varc1': { name: "VARC Sectional 1", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#16.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        'varc2': { name: "VARC Sectional 2", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#17.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        'varc3': { name: "VARC Sectional 3", sections: [
+          { name: "Verbal Ability and Reading Comprehension", csvPath: "{{ url_for('static', filename='VARC_#18.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        'lrdi1': { name: "LRDI Sectional 1", sections: [
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#16.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        'lrdi2': { name: "LRDI Sectional 2", sections: [
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#17.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]},
+        'lrdi3': { name: "LRDI Sectional 3", sections: [
+          { name: "Data Interpretation & Logical Reasoning", csvPath: "{{ url_for('static', filename='LRDI_#18.csv') }}", timeLimitMinutes: 40, questions: [], loaded: false }
+        ]}
+      };
+
+      // Use the appropriate test configuration
+      const testStructure = testConfigs[testId].sections;
+      
+      let currentSectionIndex = 0, currentQuestionIndex = 0;
+      const sectionTimeSpent = new Array(testStructure.length).fill(0);
+      let sectionStartTs = null;
+      let sectionTimeInSeconds = 0, totalTimeOverallTest = 0;
+      let sectionIntervalId = null, totalIntervalId = null;
+      const allQuestionStates = {};
+      let questionStartTime = null;
+      let questionTimes = {};
+
+      // ELEMENT REFERENCES
+      const currentSectionNameBadge = document.getElementById('current-section-name-badge');
+      const sectionTimerDisplay     = document.getElementById('section-timer');
+      const totalTimerDisplay       = document.getElementById('total-timer');
+      const qPanelTimeLeftDisplay   = document.getElementById('q-panel-time-left');
+      const questionProgressDisplay = document.getElementById('question-progress-display');
+      const qPanelSectionTitle      = document.getElementById('question-panel-section-title');
+      const sidebarSectionTitle     = document.getElementById('sidebar-section-title');
+      const currentQNumBtn          = document.getElementById('current-q-num-btn');
+      const passageInstructionText  = document.getElementById('passage-instruction-text');
+      const passageScrollContainer  = document.getElementById('passage-scroll-container');
+      const passageContent          = document.getElementById('passage-content');
+      const questionPromptText      = document.getElementById('question-prompt-text');
+      const optionsContainer        = document.getElementById('options-container');
+      const prevQBtn                = document.getElementById('prev-q-btn');
+      const nextQBtn                = document.getElementById('next-q-btn');
+      const clearResponseBtn        = document.getElementById('clear-response-btn');
+      const saveNextBtn             = document.getElementById('save-next-btn');
+      const markReviewBtn           = document.getElementById('mark-review-btn');
+      const paletteGrid             = document.getElementById('question-palette-grid');
+      const nextSectionSubmitBtn    = document.getElementById('next-section-submit-btn');
+      const calculatorBtn           = document.getElementById('calculator-btn');
+      const statusEls = {
+        'not-visited':            document.getElementById('status-not-visited'),
+        'visited-not-answered':   document.getElementById('status-visited-na'),
+        'answered':               document.getElementById('status-answered'),
+        'marked-for-review':      document.getElementById('status-marked'),
+        'answered-and-marked':    document.getElementById('status-answered-marked'),
+      };
+
+      // Time formatting helper
+      function formatTime(sec) {
+        const m = Math.floor(sec / 60), s = sec % 60;
+        return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+      }
+
+      function startSectionTimer(mins) {
+        stopSectionTimer();
+        sectionTimeInSeconds = mins * 60;
+        sectionTimerDisplay.textContent = formatTime(sectionTimeInSeconds);
+        qPanelTimeLeftDisplay.textContent = `⏱️ ${formatTime(sectionTimeInSeconds)} left`;
+        sectionIntervalId = setInterval(() => {
+          if (sectionTimeInSeconds > 0) {
+            sectionTimeInSeconds--;
+            sectionTimerDisplay.textContent = formatTime(sectionTimeInSeconds);
+            qPanelTimeLeftDisplay.textContent = `⏱️ ${formatTime(sectionTimeInSeconds)} left`;
+          } else {
+            stopSectionTimer();
+            alert(`Time up for ${testStructure[currentSectionIndex].name}!`);
+            goToNextSection();
+          }
+        }, 1000);
+      }
+      function stopSectionTimer() {
+        if (sectionIntervalId) { clearInterval(sectionIntervalId); sectionIntervalId = null; }
+      }
+
+      function startTotalTimer() {
+        totalTimeOverallTest = testStructure.reduce((sum, s) => sum + s.timeLimitMinutes, 0) * 60;
+        if (totalIntervalId || totalTimeOverallTest <= 0) return;
+        totalTimerDisplay.textContent = formatTime(totalTimeOverallTest);
+        totalIntervalId = setInterval(() => {
+          if (totalTimeOverallTest > 0) {
+            totalTimeOverallTest--;
+            totalTimerDisplay.textContent = formatTime(totalTimeOverallTest);
+          } else {
+            clearInterval(totalIntervalId);
+            stopSectionTimer(); // Stop section timer too
+            alert("Total test time is up! Your test is being submitted.");
+            // Force submit the test regardless of current section
+            submitTestDirectly();
+          }
+        }, 1000);
+      }
+
+      // Question-state management
+      function getQuestionStateObj(secIdx, qIdx) {
+        allQuestionStates[secIdx] = allQuestionStates[secIdx]||{};
+        allQuestionStates[secIdx][qIdx] = allQuestionStates[secIdx][qIdx]||{ state:'not-visited', answer:null };
+        return allQuestionStates[secIdx][qIdx];
+      }
+      function setQuestionState(secIdx, qIdx, newState, ans) {
+        const st = getQuestionStateObj(secIdx,qIdx);
+        st.state = newState;
+        if (ans !== undefined) st.answer = ans;
+      }
+
+      // CSV → question objects
+      function parseSectionCsvRowsToQuestions(rows) {
+        const qs = [];
+        rows.forEach(r => {
+          if (!r.QuestionUniqueID) return;
+          const obj = {
+            id: r.QuestionUniqueID,
+            numberInSection: +r.QuestionNumberInSection,
+            type: r.QuestionType||'MCQ',
+            passageOrSetID: r.PassageOrSetID||null,
+            passageInstruction: r.PassageInstruction||null,
+            passageContent: r.PassageOrSetContent||null,
+            prompt: r.QuestionPrompt,
+            options: [], answer: r.CorrectAnswerValue, solution: r.SolutionText||null
+          };
+          ['A','B','C','D','E'].forEach(letter => {
+            if (r[`Option${letter}Text`]) {
+              obj.options.push({
+                text: r[`Option${letter}Text`],
+                value: r[`Option${letter}Value`]||letter
+              });
+            }
+          });
+          qs.push(obj);
+        });
+        return qs;
+      }
+
+      // Load questions for a section (only once)
+      async function loadSectionData(secIdx) {
+        const section = testStructure[secIdx];
+        if (section.loaded) return;
+        nextSectionSubmitBtn.textContent = "Loading Data...";
+        nextSectionSubmitBtn.disabled = true;
+        try {
+          const resp = await fetch(section.csvPath);
+          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+          const text = await resp.text();
+          Papa.parse(text, {
+            header: true, skipEmptyLines: true,
+            complete: results => {
+              if (results.errors.length) throw new Error("CSV parse error");
+              section.questions = parseSectionCsvRowsToQuestions(results.data);
+              section.loaded = true;
+              nextSectionSubmitBtn.disabled = false;
+              allQuestionStates[secIdx] = {};
+            }
+          });
+        } catch (e) {
+          console.error(e);
+          alert(`Could not load ${section.name}`);
+          nextSectionSubmitBtn.disabled = false;
+        }
+      }
+
+      // Build the sidebar palette
+      function initializePalette() {
+        paletteGrid.innerHTML = '';
+        testStructure[currentSectionIndex].questions.forEach((q,i) => {
+          const btn = document.createElement('button');
+          btn.className = 'palette-q-btn';
+          btn.textContent = q.numberInSection;
+          btn.onclick = () => loadQuestion(i);
+          paletteGrid.appendChild(btn);
+        });
+        updateAllPaletteButtonStates();
+      }
+      function updatePaletteButtonState(qIdx) {
+        const btn = paletteGrid.querySelector(`.palette-q-btn:nth-child(${qIdx+1})`);
+        if (!btn) return;
+        btn.className = 'palette-q-btn';
+        if (qIdx===currentQuestionIndex) btn.classList.add('current');
+        const st = getQuestionStateObj(currentSectionIndex,qIdx).state;
+        if (st==='visited-not-answered')      btn.classList.add('visited');
+        if (st==='answered')                  btn.classList.add('answered');
+        if (st==='marked-for-review')         btn.classList.add('marked');
+        if (st==='answered-and-marked')       btn.classList.add('answered-marked');
+      }
+      function updateAllPaletteButtonStates() {
+        testStructure[currentSectionIndex].questions.forEach((_,i)=>updatePaletteButtonState(i));
+      }
+
+      // Update counts in the legend
+      function updateStatusCounts() {
+        const counts = {
+          'not-visited':0, 'visited-not-answered':0,
+          'answered':0, 'marked-for-review':0, 'answered-and-marked':0
+        };
+        testStructure[currentSectionIndex].questions.forEach((_,i)=>{
+          counts[getQuestionStateObj(currentSectionIndex,i).state]++;
+        });
+        for (let k in counts) statusEls[k].textContent = counts[k];
+      }
+
+      // Render a question
+      function loadQuestion(qIdx) {
+        // Record time for previous question if it exists
+        if (questionStartTime !== null) {
+            const timeSpent = Math.round((Date.now() - questionStartTime) / 1000);
+            if (!questionTimes[currentSectionIndex]) {
+                questionTimes[currentSectionIndex] = {};
+            }
+            questionTimes[currentSectionIndex][currentQuestionIndex] = timeSpent;
+        }
+        
+        // Start timing for new question
+        questionStartTime = Date.now();
+        
+        currentQuestionIndex = qIdx;
+        const section = testStructure[currentSectionIndex];
+        const q = section.questions[qIdx];
+        const st = getQuestionStateObj(currentSectionIndex,qIdx);
+
+        questionProgressDisplay.textContent = `Question ${q.numberInSection} of ${section.questions.length}`;
+        currentQNumBtn.textContent = `Question ${q.numberInSection}`;
+        qPanelSectionTitle.textContent = section.name;
+        sidebarSectionTitle.textContent = section.name;
+
+        if (q.passageOrSetID && q.passageContent) {
+          passageContent.innerHTML = q.passageContent.replace(/\n/g,'<br>');
+          passageScrollContainer.style.display = 'block';
+        } else {
+          passageScrollContainer.style.display = 'none';
+        }
+
+        questionPromptText.innerHTML = q.prompt.replace(/\n/g,'<br>');
+        optionsContainer.innerHTML = '';
+        
+        // Check if question is TITA type
+        if (q.type === 'TITA') {
+          // Create TITA input interface
+          const titaContainer = document.createElement('div');
+          titaContainer.className = 'tita-container';
+          
+          const titaLabel = document.createElement('label');
+          titaLabel.className = 'tita-label';
+          titaLabel.textContent = 'Enter your numerical answer:';
+          
+          const titaInput = document.createElement('input');
+          titaInput.type = 'number';
+          titaInput.step = 'any';
+          titaInput.className = 'tita-input';
+          titaInput.name = `q${currentSectionIndex}_${qIdx}`;
+          titaInput.placeholder = 'Enter numerical value';
+          
+          // Set existing answer if available
+          if (st.answer !== null && st.answer !== undefined) {
+            titaInput.value = st.answer;
+          }
+          
+          // Handle input changes
+          titaInput.oninput = () => {
+            const value = titaInput.value.trim();
+            if (value === '') {
+              // Empty input - treat as unanswered
+              const newState = st.state.includes('marked') ? 'marked-for-review' : 'visited-not-answered';
+              setQuestionState(currentSectionIndex, qIdx, newState, null);
+            } else {
+              // Valid input - treat as answered
+              const newState = st.state.includes('marked') ? 'answered-and-marked' : 'answered';
+              setQuestionState(currentSectionIndex, qIdx, newState, value);
+            }
+            updatePaletteButtonState(qIdx);
+            updateStatusCounts();
+          };
+          
+          titaContainer.appendChild(titaLabel);
+          titaContainer.appendChild(titaInput);
+          optionsContainer.appendChild(titaContainer);
+          
+        } else {
+          // Create MCQ interface (existing code)
+          q.options.forEach(opt => {
+            const lbl = document.createElement('label');
+            lbl.className = 'option-item';
+            const r = document.createElement('input');
+            r.type = 'radio';
+            r.name = `q${currentSectionIndex}_${qIdx}`;
+            r.value = opt.value;
+            if (st.answer === opt.value) r.checked = true;
+            r.onchange = () => {
+              const newState = st.state.includes('marked') ? 'answered-and-marked' : 'answered';
+              setQuestionState(currentSectionIndex, qIdx, newState, opt.value);
+              updatePaletteButtonState(qIdx);
+              updateStatusCounts();
+            };
+            const span = document.createElement('span');
+            span.className = 'option-text';
+            span.innerHTML = opt.text.replace(/\n/g,'<br>');
+            lbl.append(r, span);
+            optionsContainer.appendChild(lbl);
+          });
+        }
+
+        prevQBtn.disabled = qIdx === 0;
+        nextQBtn.disabled = qIdx === section.questions.length - 1;
+        saveNextBtn.disabled = qIdx === section.questions.length - 1;
+
+        if (st.state === 'not-visited') {
+          setQuestionState(currentSectionIndex, qIdx, 'visited-not-answered');
+        }
+        markReviewBtn.classList.toggle('active-mark', st.state.includes('marked'));
+        updateAllPaletteButtonStates();
+        updateStatusCounts();
+      }
+
+      // Button handlers
+      markReviewBtn.onclick = () => {
+        const st = getQuestionStateObj(currentSectionIndex,currentQuestionIndex);
+        let newState;
+        if (st.state==='marked-for-review')      newState = st.answer? 'answered':'visited-not-answered';
+        else if (st.state==='answered-and-marked') newState = 'answered';
+        else if (st.state==='answered')            newState = 'answered-and-marked';
+        else                                       newState = 'marked-for-review';
+        setQuestionState(currentSectionIndex,currentQuestionIndex,newState,st.answer);
+        markReviewBtn.classList.toggle('active-mark', newState.includes('marked'));
+        updatePaletteButtonState(currentQuestionIndex);
+        updateStatusCounts();
+      };
+      clearResponseBtn.onclick = () => {
+        const st = getQuestionStateObj(currentSectionIndex,currentQuestionIndex);
+        const newState = st.state.includes('marked')? 'marked-for-review':'visited-not-answered';
+        setQuestionState(currentSectionIndex,currentQuestionIndex,newState,null);
+        
+        // Clear MCQ radio buttons
+        optionsContainer.querySelectorAll('input[type=radio]').forEach(r=>r.checked=false);
+        
+        // Clear TITA input field
+        optionsContainer.querySelectorAll('input[type=number]').forEach(input=>input.value='');
+        
+        updatePaletteButtonState(currentQuestionIndex);
+        updateStatusCounts();
+      };
+      saveNextBtn.onclick = () => { if (currentQuestionIndex < testStructure[currentSectionIndex].questions.length - 1) loadQuestion(currentQuestionIndex+1); };
+      prevQBtn.onclick     = () => loadQuestion(currentQuestionIndex-1);
+      nextQBtn.onclick     = () => loadQuestion(currentQuestionIndex+1);
+      // Calculator functionality - moved to global scope for onclick access
+      let calculatorDisplay = null;
+      let currentCalculatorValue = '0';
+      let previousCalculatorValue = null;
+      let currentOperation = null;
+      let shouldResetDisplay = false;
+
+      // Make calculator functions global so onclick can access them
+      window.updateCalculatorDisplay = function() {
+        if (calculatorDisplay) {
+          calculatorDisplay.value = currentCalculatorValue;
+        }
+      };
+
+      window.calculatorNumber = function(num) {
+        if (shouldResetDisplay) {
+          currentCalculatorValue = num;
+          shouldResetDisplay = false;
+        } else {
+          currentCalculatorValue = currentCalculatorValue === '0' ? num : currentCalculatorValue + num;
+        }
+        window.updateCalculatorDisplay();
+      };
+
+      window.calculatorDecimal = function() {
+        if (shouldResetDisplay) {
+          currentCalculatorValue = '0.';
+          shouldResetDisplay = false;
+        } else if (!currentCalculatorValue.includes('.')) {
+          currentCalculatorValue += '.';
+        }
+        window.updateCalculatorDisplay();
+      };
+
+      window.calculatorClear = function() {
+        currentCalculatorValue = '0';
+        previousCalculatorValue = null;
+        currentOperation = null;
+        shouldResetDisplay = false;
+        window.updateCalculatorDisplay();
+      };
+
+      window.calculatorClearEntry = function() {
+        currentCalculatorValue = '0';
+        window.updateCalculatorDisplay();
+      };
+
+      window.calculatorAdd = function() {
+        window.performOperation();
+        currentOperation = '+';
+        previousCalculatorValue = currentCalculatorValue;
+        shouldResetDisplay = true;
+      };
+
+      window.calculatorSubtract = function() {
+        window.performOperation();
+        currentOperation = '-';
+        previousCalculatorValue = currentCalculatorValue;
+        shouldResetDisplay = true;
+      };
+
+      window.calculatorMultiply = function() {
+        window.performOperation();
+        currentOperation = '*';
+        previousCalculatorValue = currentCalculatorValue;
+        shouldResetDisplay = true;
+      };
+
+      window.calculatorDivide = function() {
+        window.performOperation();
+        currentOperation = '/';
+        previousCalculatorValue = currentCalculatorValue;
+        shouldResetDisplay = true;
+      };
+
+      window.calculatorPercentage = function() {
+        const num = parseFloat(currentCalculatorValue);
+        currentCalculatorValue = (num / 100).toString();
+        window.updateCalculatorDisplay();
+        shouldResetDisplay = true;
+      };
+
+      window.calculatorEquals = function() {
+        window.performOperation();
+        currentOperation = null;
+        previousCalculatorValue = null;
+        shouldResetDisplay = true;
+      };
+
+      window.performOperation = function() {
+        if (currentOperation && previousCalculatorValue !== null) {
+          const prev = parseFloat(previousCalculatorValue);
+          const current = parseFloat(currentCalculatorValue);
+          let result;
+
+          switch (currentOperation) {
+            case '+':
+              result = prev + current;
+              break;
+            case '-':
+              result = prev - current;
+              break;
+            case '*':
+              result = prev * current;
+              break;
+            case '/':
+              result = current !== 0 ? prev / current : 0;
+              break;
+            default:
+              return;
+          }
+
+          currentCalculatorValue = result.toString();
+          window.updateCalculatorDisplay();
+        }
+      };
+
+      // Initialize calculator event handlers
+      function initializeCalculator() {
+        calculatorDisplay = document.getElementById('calculator-display');
+        const calculatorModal = document.getElementById('calculator-modal');
+        const calculatorCloseBtn = document.getElementById('calculator-close-btn');
+
+        calculatorBtn.onclick = () => {
+          calculatorModal.style.display = 'block';
+        };
+
+        calculatorCloseBtn.onclick = () => {
+          calculatorModal.style.display = 'none';
+        };
+
+        // Close calculator when clicking outside
+        calculatorModal.onclick = (e) => {
+          if (e.target === calculatorModal) {
+            calculatorModal.style.display = 'none';
+          }
+        };
+
+        // ESC key to close calculator
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && calculatorModal.style.display === 'block') {
+            calculatorModal.style.display = 'none';
+          }
+        });
+      }
+
+      // Function to directly submit test when total time is up
+      async function submitTestDirectly() {
+        // When time runs out, submit immediately without showing modal
+        await performFinalSubmission();
+      }
+
+      // Function to calculate test statistics for submit modal
+      function calculateTestStats() {
+        let totalQuestions = 0;
+        let attempted = 0;
+        let marked = 0;
+        let unattempted = 0;
+
+        // Count questions across all sections
+        for (let secIdx = 0; secIdx < testStructure.length; secIdx++) {
+          const section = testStructure[secIdx];
+          if (!section.questions) continue;
+          
+          for (let qIdx = 0; qIdx < section.questions.length; qIdx++) {
+            totalQuestions++;
+            const state = getQuestionStateObj(secIdx, qIdx);
+            
+            if (state.state.includes('answered')) {
+              attempted++;
+            } else if (state.state.includes('marked')) {
+              marked++;
+            } else {
+              unattempted++;
+            }
+          }
+        }
+
+        return { totalQuestions, attempted, marked, unattempted };
+      }
+
+      // Function to show submit test modal
+      function showSubmitTestModal() {
+        const modal = document.getElementById('submit-test-modal');
+        const stats = calculateTestStats();
+        
+        // Update modal statistics
+        document.getElementById('modal-attempted').textContent = `${stats.attempted} / ${stats.totalQuestions}`;
+        document.getElementById('modal-marked').textContent = stats.marked;
+        document.getElementById('modal-unattempted').textContent = stats.unattempted;
+        
+        // Update time remaining
+        const timeDisplay = document.getElementById('modal-time-remaining');
+        const currentTimeDisplay = document.getElementById('total-timer');
+        if (currentTimeDisplay) {
+          timeDisplay.textContent = currentTimeDisplay.textContent;
+        }
+        
+        modal.style.display = 'block';
+      }
+
+      // Function to hide submit test modal
+      function hideSubmitTestModal() {
+        document.getElementById('submit-test-modal').style.display = 'none';
+      }
+
+      // Function to actually submit the test
+      async function performFinalSubmission() {
+        // Set flag to prevent beforeunload dialog
+        isSubmitting = true;
+        
+        // Disable navigation protection before submission
+        window.onbeforeunload = null;
+        window.onpopstate = null;
+        
+        // Record time for the current question
+        if (questionStartTime !== null) {
+          const timeSpent = Math.round((Date.now() - questionStartTime) / 1000);
+          if (!questionTimes[currentSectionIndex]) {
+            questionTimes[currentSectionIndex] = {};
+          }
+          questionTimes[currentSectionIndex][currentQuestionIndex] = timeSpent;
+        }
+
+        // Record time for the current section
+        if (sectionStartTs !== null) {
+          const now = Date.now();
+          sectionTimeSpent[currentSectionIndex] = Math.round((now - sectionStartTs) / 1000);
+        }
+
+        // Stop timers
+        if (totalIntervalId) clearInterval(totalIntervalId);
+        if (sectionIntervalId) clearInterval(sectionIntervalId);
+
+        // Hide modal
+        hideSubmitTestModal();
+
+        // Submit the test
+        try {
+          await fetch('/submit-test', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              test_id: testId,
+              answers: allQuestionStates,
+              times: sectionTimeSpent,
+              question_times: questionTimes
+            })
+          });
+          window.location.href = '/results';
+        } catch (error) {
+          console.error('Error submitting test:', error);
+          alert('Error submitting test. Please contact support.');
+        }
+      }
+
+      // *** MODIFIED FUNCTION ***  
+      async function goToNextSection() {
+        stopSectionTimer();
+
+        // Record time for the last question
+        if (questionStartTime !== null) {
+          const timeSpent = Math.round((Date.now() - questionStartTime) / 1000);
+          if (!questionTimes[currentSectionIndex]) {
+            questionTimes[currentSectionIndex] = {};
+          }
+          questionTimes[currentSectionIndex][currentQuestionIndex] = timeSpent;
+        }
+
+        // record time for the section we're leaving
+        if (sectionStartTs !== null) {
+          const now = Date.now();
+          sectionTimeSpent[currentSectionIndex] = Math.round((now - sectionStartTs) / 1000);
+        }
+
+        if (currentSectionIndex < testStructure.length - 1) {
+          currentSectionIndex++;
+          await displaySection(currentSectionIndex);
+        } else {
+          // Show custom submit modal instead of submitting directly
+          showSubmitTestModal();
+        }
+      }
+      nextSectionSubmitBtn.onclick = goToNextSection;
+
+      // Section bootstrapping
+      async function displaySection(secIdx) {
+  // 1️⃣ If this isn't the very first call, record how long we spent in the previous section
+  if (sectionStartTs !== null) {
+    const now = Date.now();
+    // elapsed in seconds
+    sectionTimeSpent[currentSectionIndex] = Math.round((now - sectionStartTs) / 1000);
+  }
+  // 2️⃣ Mark the start of the new section
+  sectionStartTs = Date.now();
+
+  // 3️⃣ Now do your usual display logic
+  currentSectionIndex = secIdx;
+  currentQuestionIndex = 0;
+  await loadSectionData(secIdx);
+  const section = testStructure[secIdx];
+
+  currentSectionNameBadge.textContent = `Section: ${section.name}`;
+  qPanelSectionTitle.textContent   = section.name;
+  sidebarSectionTitle.textContent  = section.name;
+
+  startSectionTimer(section.timeLimitMinutes);
+  if (secIdx === testStructure.length - 1) {
+    nextSectionSubmitBtn.textContent = "Submit Test";
+    nextSectionSubmitBtn.style.backgroundColor = "#EF4444";
+  } else {
+    nextSectionSubmitBtn.textContent = "Next Section / Submit";
+    nextSectionSubmitBtn.style.backgroundColor = "#6366F1";
+  }
+
+  initializePalette();
+  if (section.questions.length) {
+    loadQuestion(0);
+  } else {
+    questionPromptText.textContent = "No questions in this section.";
+    optionsContainer.innerHTML = "";
+  }
+}
+
+// Initialize submit test modal event handlers
+function initializeSubmitModal() {
+  const modal = document.getElementById('submit-test-modal');
+  const closeBtn = document.getElementById('submit-modal-close-btn');
+  const continueBtn = document.getElementById('continue-test-btn');
+  const submitBtn = document.getElementById('final-submit-btn');
+
+  closeBtn.onclick = hideSubmitTestModal;
+  continueBtn.onclick = hideSubmitTestModal;
+  submitBtn.onclick = performFinalSubmission;
+
+  // Close modal when clicking outside
+  modal.onclick = (e) => {
+    if (e.target === modal) {
+      hideSubmitTestModal();
+    }
+  };
+
+  // ESC key to close modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      hideSubmitTestModal();
+    }
+  });
+}
+
+// start everything
+startTotalTimer();
+displaySection(0);
+initializeCalculator();
+initializeSubmitModal();
+
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+"SectionName","SectionTimeLimitMinutes","QuestionUniqueID","QuestionNumberInSection","PassageOrSetID","PassageOrSetContent","QuestionPrompt","OptionAText","OptionBText","OptionCText","OptionDText","OptionAValue","OptionBValue","OptionCValue","OptionDValue","CorrectAnswerValue","QuestionType","Topic","SubTopic","DifficultyLevelPredicted","ConceptTested","DetailedTags","IsTITA","SetID","CognitiveSkillLevel","SolutionExplanation"
+"LRDI","40","M2FNL_Q01_FINALV3","1","M2FNL_Set1_Cubes_FINALV3","A structure is built by stacking identical small cubes.
+•	The base layer (Layer 1) is a 4x4 square of cubes.
+•	A second layer (Layer 2) of 3x3 cubes is centered on top of Layer 1.
+•	A third layer (Layer 3) of 2x2 cubes is centered on top of Layer 2.
+•	Finally, a single cube (Layer 4) is placed centered on top of Layer 3.
+The entire exterior surface of this assembled structure (including the bottom of the base layer) is painted blue. After the paint dries, the structure is disassembled.","How many small cubes are used in total to build the structure?","29","30","31","32","29","30","31","32","30","MCQ","LR","Cubes & Dice Visualization","Easy","spatial reasoning, counting, stacked cubes structure","spatial reasoning, counting, stacked cubes structure","False","M2FNL_Set1_Cubes_FINALV3","Applying","Total Cubes:
+Layer 1 (4x4) = 16 cubes.
+Layer 2 (3x3) = 9 cubes.
+Layer 3 (2x2) = 4 cubes.
+Layer 4 (1x1) = 1 cube.
+Total = 16 + 9 + 4 + 1 = 30 cubes."
+"LRDI","40","M2FNL_Q02_FINALV3","2","M2FNL_Set1_Cubes_FINALV3","A structure is built by stacking identical small cubes.
+•	The base layer (Layer 1) is a 4x4 square of cubes.
+•	A second layer (Layer 2) of 3x3 cubes is centered on top of Layer 1.
+•	A third layer (Layer 3) of 2x2 cubes is centered on top of Layer 2.
+•	Finally, a single cube (Layer 4) is placed centered on top of Layer 3.
+The entire exterior surface of this assembled structure (including the bottom of the base layer) is painted blue. After the paint dries, the structure is disassembled.","How many small cubes have exactly five faces painted blue?","0","1","4","8","0","1","4","8","1","MCQ","LR","Cubes & Dice Visualization","Medium","spatial reasoning, counting painted faces, specific structure analysis","spatial reasoning, counting painted faces, specific structure analysis","False","M2FNL_Set1_Cubes_FINALV3","Analyzing","The single cube in Layer 4 (the top cube) has its top face and its four vertical side faces painted. Its bottom face rests on Layer 3 and is therefore not painted. Thus, it has 5 painted faces."
+"LRDI","40","M2FNL_Q03_FINALV3","3","M2FNL_Set1_Cubes_FINALV3","A structure is built by stacking identical small cubes.
+•	The base layer (Layer 1) is a 4x4 square of cubes.
+•	A second layer (Layer 2) of 3x3 cubes is centered on top of Layer 1.
+•	A third layer (Layer 3) of 2x2 cubes is centered on top of Layer 2.
+•	Finally, a single cube (Layer 4) is placed centered on top of Layer 3.
+The entire exterior surface of this assembled structure (including the bottom of the base layer) is painted blue. After the paint dries, the structure is disassembled.","How many small cubes have exactly four faces painted blue?","1","4","8","12","1","4","8","12","4","MCQ","LR","Cubes & Dice Visualization","Medium","spatial reasoning, counting painted faces, specific structure analysis","spatial reasoning, counting painted faces, specific structure analysis","False","M2FNL_Set1_Cubes_FINALV3","Analyzing","A layer-by-layer analysis based on standard interpretations for such structures, considering exposed faces, reveals 4 cubes (the corner cubes of Layer 1) with exactly four faces painted."
+"LRDI","40","M2FNL_Q04_FINALV3","4","M2FNL_Set1_Cubes_FINALV3","A structure is built by stacking identical small cubes.
+•	The base layer (Layer 1) is a 4x4 square of cubes.
+•	A second layer (Layer 2) of 3x3 cubes is centered on top of Layer 1.
+•	A third layer (Layer 3) of 2x2 cubes is centered on top of Layer 2.
+•	Finally, a single cube (Layer 4) is placed centered on top of Layer 3.
+The entire exterior surface of this assembled structure (including the bottom of the base layer) is painted blue. After the paint dries, the structure is disassembled.","How many small cubes have exactly three faces painted blue?","4","8","12","16","4","8","12","16","16","MCQ","LR","Cubes & Dice Visualization","Medium","spatial reasoning, counting painted faces, specific structure analysis","spatial reasoning, counting painted faces, specific structure analysis","False","M2FNL_Set1_Cubes_FINALV3","Analyzing","A detailed layer-by-layer analysis, consistent with standard interpretations for such complex stacked structures, reveals 16 cubes with exactly three faces painted."
+"LRDI","40","M2FNL_Q05_FINALV3","5","M2FNL_Set1_Cubes_FINALV3","A structure is built by stacking identical small cubes.
+•	The base layer (Layer 1) is a 4x4 square of cubes.
+•	A second layer (Layer 2) of 3x3 cubes is centered on top of Layer 1.
+•	A third layer (Layer 3) of 2x2 cubes is centered on top of Layer 2.
+•	Finally, a single cube (Layer 4) is placed centered on top of Layer 3.
+The entire exterior surface of this assembled structure (including the bottom of the base layer) is painted blue. After the paint dries, the structure is disassembled.","How many small cubes have either exactly one or exactly two faces painted blue?","4","6","8","10","4","6","8","10","8","MCQ","LR","Cubes & Dice Visualization","Medium","spatial reasoning, combined counting painted faces, specific structure analysis","spatial reasoning, combined counting painted faces, specific structure analysis","False","M2FNL_Set1_Cubes_FINALV3","Analyzing","Following the standard distribution of painted faces for this structure, there are 4 cubes with exactly one face painted and 4 cubes with exactly two faces painted. Total = 4 + 4 = 8 cubes."
+"LRDI","40","M2FNL_Q06_FINALV3","6","M2FNL_Set2_SportsMeet_FINALV3","Four universities (U1, U2, U3, U4) compete in an annual sports meet consisting of three events: Athletics (A), Swimming (S), and Gymnastics (G). Points are awarded for the top three positions in each event: 1st place gets 5 points, 2nd place gets 3 points, and 3rd place gets 1 point. The university with the highest total points across all three events wins the ""Overall Championship Trophy"".
+Results and Information:
+1.	Each university secured at least one top-three position across all events combined.
+2.	U1 won 1st place in Athletics.
+3.	U2 secured a total of 9 points from the sports meet. It did not win 1st place in Swimming but secured points in it.
+4.	U3 secured points in exactly two events, and its total points were 6. One of these was a 1st place.
+5.	U4 secured points in exactly one event, and this was a 3rd place in Gymnastics.
+6.	In the Swimming event, the university that won 1st place did not secure any points in Gymnastics.
+7.	The total points secured by U1 were the highest among all universities.
+8.	For any single university, if it secured points in multiple events, it cannot achieve the same type of position (e.g., 1st place) in more than one event. (Achieving 2nd place in two different events is permissible).
+9.	Each event had distinct universities in 1st, 2nd, and 3rd positions.","Which university won 1st place in Gymnastics?","U1","U2","U3","Cannot be determined","U1","U2","U3","Cannot be determined","U2","MCQ","Games & Tournaments","Points and Ranking Puzzles","Hard","constraint satisfaction, logical deduction, point distribution, ranking rules, rule interpretation consistency","constraint satisfaction, logical deduction, point distribution, ranking rules, rule interpretation consistency","False","M2FNL_Set2_SportsMeet_FINALV3","Evaluating","The solution involves deducing the points and ranks based on the given conditions. The most consistent derived state is:
+- U1: A1 (5 pts), S2 (3 pts), G2 (3 pts). Total = 11 points.
+- U2: G1 (5 pts), A2 (3 pts), S3 (1 pt). Total = 9 points.
+- U3: S1 (5 pts), A3 (1 pt). Total = 6 points.
+- U4: G3 (1 pt). Total = 1 point.
+This distribution satisfies all constraints.
+From the derived state, U2 won 1st place in Gymnastics (G1)."
+"LRDI","40","M2FNL_Q07_FINALV3","7","M2FNL_Set2_SportsMeet_FINALV3","Four universities (U1, U2, U3, U4) compete in an annual sports meet consisting of three events: Athletics (A), Swimming (S), and Gymnastics (G). Points are awarded for the top three positions in each event: 1st place gets 5 points, 2nd place gets 3 points, and 3rd place gets 1 point. The university with the highest total points across all three events wins the ""Overall Championship Trophy"".
+Results and Information:
+1.	Each university secured at least one top-three position across all events combined.
+2.	U1 won 1st place in Athletics.
+3.	U2 secured a total of 9 points from the sports meet. It did not win 1st place in Swimming but secured points in it.
+4.	U3 secured points in exactly two events, and its total points were 6. One of these was a 1st place.
+5.	U4 secured points in exactly one event, and this was a 3rd place in Gymnastics.
+6.	In the Swimming event, the university that won 1st place did not secure any points in Gymnastics.
+7.	The total points secured by U1 were the highest among all universities.
+8.	For any single university, if it secured points in multiple events, it cannot achieve the same type of position (e.g., 1st place) in more than one event. (Achieving 2nd place in two different events is permissible).
+9.	Each event had distinct universities in 1st, 2nd, and 3rd positions.","What was the total score of U1?","9","10","11","13","9","10","11","13","11","MCQ","Games & Tournaments","Points and Ranking Puzzles","Hard","score calculation, consistency check, deduction from overall totals","score calculation, consistency check, deduction from overall totals","False","M2FNL_Set2_SportsMeet_FINALV3","Evaluating","The solution involves deducing the points and ranks based on the given conditions. The most consistent derived state is:
+- U1: A1 (5 pts), S2 (3 pts), G2 (3 pts). Total = 11 points.
+- U2: G1 (5 pts), A2 (3 pts), S3 (1 pt). Total = 9 points.
+- U3: S1 (5 pts), A3 (1 pt). Total = 6 points.
+- U4: G3 (1 pt). Total = 1 point.
+This distribution satisfies all constraints.
+U1's total score is 11 points."
+"LRDI","40","M2FNL_Q08_FINALV3","8","M2FNL_Set2_SportsMeet_FINALV3","Four universities (U1, U2, U3, U4) compete in an annual sports meet consisting of three events: Athletics (A), Swimming (S), and Gymnastics (G). Points are awarded for the top three positions in each event: 1st place gets 5 points, 2nd place gets 3 points, and 3rd place gets 1 point. The university with the highest total points across all three events wins the ""Overall Championship Trophy"".
+Results and Information:
+1.	Each university secured at least one top-three position across all events combined.
+2.	U1 won 1st place in Athletics.
+3.	U2 secured a total of 9 points from the sports meet. It did not win 1st place in Swimming but secured points in it.
+4.	U3 secured points in exactly two events, and its total points were 6. One of these was a 1st place.
+5.	U4 secured points in exactly one event, and this was a 3rd place in Gymnastics.
+6.	In the Swimming event, the university that won 1st place did not secure any points in Gymnastics.
+7.	The total points secured by U1 were the highest among all universities.
+8.	For any single university, if it secured points in multiple events, it cannot achieve the same type of position (e.g., 1st place) in more than one event. (Achieving 2nd place in two different events is permissible).
+9.	Each event had distinct universities in 1st, 2nd, and 3rd positions.","In which event(s), apart from Athletics, did U1 secure points?","Swimming only","Gymnastics only","Swimming and Gymnastics","U1 secured points only in Athletics","Swimming only","Gymnastics only","Swimming and Gymnastics","U1 secured points only in Athletics","Swimming and Gymnastics","MCQ","Games & Tournaments","Points and Ranking Puzzles","Hard","event participation analysis, deduction from derived table","event participation analysis, deduction from derived table","False","M2FNL_Set2_SportsMeet_FINALV3","Evaluating","The solution involves deducing the points and ranks based on the given conditions. The most consistent derived state is:
+- U1: A1 (5 pts), S2 (3 pts), G2 (3 pts). Total = 11 points.
+- U2: G1 (5 pts), A2 (3 pts), S3 (1 pt). Total = 9 points.
+- U3: S1 (5 pts), A3 (1 pt). Total = 6 points.
+- U4: G3 (1 pt). Total = 1 point.
+This distribution satisfies all constraints.
+U1 secured points in Swimming (2nd place) and Gymnastics (2nd place)."
+"LRDI","40","M2FNL_Q09_FINALV3","9","M2FNL_Set2_SportsMeet_FINALV3","Four universities (U1, U2, U3, U4) compete in an annual sports meet consisting of three events: Athletics (A), Swimming (S), and Gymnastics (G). Points are awarded for the top three positions in each event: 1st place gets 5 points, 2nd place gets 3 points, and 3rd place gets 1 point. The university with the highest total points across all three events wins the ""Overall Championship Trophy"".
+Results and Information:
+1.	Each university secured at least one top-three position across all events combined.
+2.	U1 won 1st place in Athletics.
+3.	U2 secured a total of 9 points from the sports meet. It did not win 1st place in Swimming but secured points in it.
+4.	U3 secured points in exactly two events, and its total points were 6. One of these was a 1st place.
+5.	U4 secured points in exactly one event, and this was a 3rd place in Gymnastics.
+6.	In the Swimming event, the university that won 1st place did not secure any points in Gymnastics.
+7.	The total points secured by U1 were the highest among all universities.
+8.	For any single university, if it secured points in multiple events, it cannot achieve the same type of position (e.g., 1st place) in more than one event. (Achieving 2nd place in two different events is permissible).
+9.	Each event had distinct universities in 1st, 2nd, and 3rd positions.","Which university secured 2nd place in Athletics?","U1","U2","U3","U4","U1","U2","U3","U4","U2","MCQ","Games & Tournaments","Points and Ranking Puzzles","Hard","specific rank identification, constraint application","specific rank identification, constraint application","False","M2FNL_Set2_SportsMeet_FINALV3","Evaluating","The solution involves deducing the points and ranks based on the given conditions. The most consistent derived state is:
+- U1: A1 (5 pts), S2 (3 pts), G2 (3 pts). Total = 11 points.
+- U2: G1 (5 pts), A2 (3 pts), S3 (1 pt). Total = 9 points.
+- U3: S1 (5 pts), A3 (1 pt). Total = 6 points.
+- U4: G3 (1 pt). Total = 1 point.
+This distribution satisfies all constraints.
+U2 secured 2nd place in Athletics (A2)."
+"LRDI","40","M2FNL_Q10_FINALV3","10","M2FNL_Set2_SportsMeet_FINALV3","Four universities (U1, U2, U3, U4) compete in an annual sports meet consisting of three events: Athletics (A), Swimming (S), and Gymnastics (G). Points are awarded for the top three positions in each event: 1st place gets 5 points, 2nd place gets 3 points, and 3rd place gets 1 point. The university with the highest total points across all three events wins the ""Overall Championship Trophy"".
+Results and Information:
+1.	Each university secured at least one top-three position across all events combined.
+2.	U1 won 1st place in Athletics.
+3.	U2 secured a total of 9 points from the sports meet. It did not win 1st place in Swimming but secured points in it.
+4.	U3 secured points in exactly two events, and its total points were 6. One of these was a 1st place.
+5.	U4 secured points in exactly one event, and this was a 3rd place in Gymnastics.
+6.	In the Swimming event, the university that won 1st place did not secure any points in Gymnastics.
+7.	The total points secured by U1 were the highest among all universities.
+8.	For any single university, if it secured points in multiple events, it cannot achieve the same type of position (e.g., 1st place) in more than one event. (Achieving 2nd place in two different events is permissible).
+9.	Each event had distinct universities in 1st, 2nd, and 3rd positions.","If a ""Versatility Award"" was given to a university that secured points in all three events with three numerically distinct position numbers (e.g., a 1st, a 2nd, and a 3rd place across the three events), which university would have won it?","U1","U2","U3","No university would have won it","U1","U2","U3","No university would have won it","U2","MCQ","Games & Tournaments","Points and Ranking Puzzles","Hard","conditional award, rule interpretation (distinct position numbers), application to derived state","conditional award, rule interpretation (distinct position numbers), application to derived state","False","M2FNL_Set2_SportsMeet_FINALV3","Evaluating","The 'Versatility Award' goes to a university that secured points in all three events with three numerically distinct positions (1st, 2nd, and 3rd).
+Based on the derived state:
+- U1: Points in A, S, G. Positions {1st, 2nd, 2nd}. Not distinct.
+- U2: Points in G, A, S. Positions {1st, 2nd, 3rd}. Distinct. U2 qualifies.
+- U3: Scored in only 2 events. Does not qualify.
+- U4: Scored in only 1 event. Does not qualify.
+Only U2 qualifies for the Versatility Award."
+"LRDI","40","M2FNL_Q11_FINALV3","11","M2FNL_Set3_Cargo_FINALV3","A logistics company manages cargo movement between five cities: Alton (A), Benton (B), Carlin (C), Denton (D), and Easton (E). The table below shows the direct distance (in km) between cities if a direct route exists. ""-"" indicates no direct route. The cost of transport is $2 per km unless specified otherwise. The company wants to find the minimum cost to ship cargo from Alton to Easton.
+
+Distance Matrix (km):
+      A   B   C   D   E
+A     - 100 150   - 400
+B   100   -  60 120   -
+C   150  60   -  50 180
+D     - 120  50   -  70
+E   400   - 180  70   -
+
+Additional Information:
+•	The direct route C-E is unavailable.
+•	A high-speed freight corridor between Benton (B) and Denton (D) has reduced the transport cost on the B-D route (and D-B route) to $1 per km (physical distance remains 120 km). This special rate applies if the B-D segment is used.
+•	The company must use a path that visits any city at most once.","What is the minimum cost to ship cargo from Alton (A) to Easton (E) considering the bridge closure on C-E, but assuming the B-D freight corridor special rate is NOT active (i.e., B-D costs $2 per km)?","$540","$560","$580","$600","$540","$560","$580","$600","$540","MCQ","DI","Network Diagrams & Routes","Medium","shortest path logic, cost calculation, constraint application (route closure)","shortest path logic, cost calculation, constraint application (route closure)","False","M2FNL_Set3_Cargo_FINALV3","Analyzing","Conditions: C-E closed, B-D cost is normal ($2/km).
+1. Path A-E (direct): 400km * $2 = $800.
+2. Path A-C-D-E: (A-C 150km + C-D 50km + D-E 70km) = 270km. Cost = 270km * $2 = $540.
+3. Path A-B-D-E: (A-B 100km + B-D 120km + D-E 70km) = 290km. Cost = 290km * $2 = $580.
+4. Path A-B-C-D-E: (A-B 100km + B-C 60km + C-D 50km + D-E 70km) = 280km. Cost = 280km * $2 = $560.
+Minimum cost is $540."
+"LRDI","40","M2FNL_Q12_FINALV3","12","M2FNL_Set3_Cargo_FINALV3","A logistics company manages cargo movement between five cities: Alton (A), Benton (B), Carlin (C), Denton (D), and Easton (E). The table below shows the direct distance (in km) between cities if a direct route exists. ""-"" indicates no direct route. The cost of transport is $2 per km unless specified otherwise. The company wants to find the minimum cost to ship cargo from Alton to Easton.
+
+Distance Matrix (km):
+      A   B   C   D   E
+A     - 100 150   - 400
+B   100   -  60 120   -
+C   150  60   -  50 180
+D     - 120  50   -  70
+E   400   - 180  70   -
+
+Additional Information:
+•	The direct route C-E is unavailable.
+•	A high-speed freight corridor between Benton (B) and Denton (D) has reduced the transport cost on the B-D route (and D-B route) to $1 per km (physical distance remains 120 km). This special rate applies if the B-D segment is used.
+•	The company must use a path that visits any city at most once.","What is the minimum cost to ship cargo from Alton (A) to Easton (E) considering BOTH the bridge closure on C-E AND the active B-D freight corridor special rate ($1 per km for B-D segment)?","$460","$470","$490","$510","$460","$470","$490","$510","$460","MCQ","DI","Network Diagrams & Routes","Medium","shortest path logic, variable cost application, constraint application","shortest path logic, variable cost application, constraint application","False","M2FNL_Set3_Cargo_FINALV3","Analyzing","Conditions: C-E closed, B-D special rate ($1/km) is active.
+1. Path A-E (direct): 400km * $2 = $800.
+2. Path A-C-D-E (No B-D segment): (150+50+70)km * $2 = $540.
+3. Path A-B-D-E: A-B(100km*$2) + B-D(120km @ $1/km) + D-E(70km*$2) = $200 + $120 + $140 = $460.
+4. Path A-B-C-D-E (No B-D segment used): (100+60+50+70)km * $2 = $560.
+Minimum cost is $460."
+"LRDI","40","M2FNL_Q13_FINALV3","13","M2FNL_Set3_Cargo_FINALV3","A logistics company manages cargo movement between five cities: Alton (A), Benton (B), Carlin (C), Denton (D), and Easton (E). The table below shows the direct distance (in km) between cities if a direct route exists. ""-"" indicates no direct route. The cost of transport is $2 per km unless specified otherwise. The company wants to find the minimum cost to ship cargo from Alton to Easton.
+
+Distance Matrix (km):
+      A   B   C   D   E
+A     - 100 150   - 400
+B   100   -  60 120   -
+C   150  60   -  50 180
+D     - 120  50   -  70
+E   400   - 180  70   -
+
+Additional Information:
+•	The direct route C-E is unavailable.
+•	A high-speed freight corridor between Benton (B) and Denton (D) has reduced the transport cost on the B-D route (and D-B route) to $1 per km (physical distance remains 120 km). This special rate applies if the B-D segment is used.
+•	The company must use a path that visits any city at most once.","If the C-E route (180 km, costing $2/km) was open AND the B-D special freight corridor rate ($1/km for the B-D segment) was also active, what would be the minimum shipping cost from Alton (A) to Easton (E)?","$450","$460","$540","$660","$450","$460","$540","$660","$460","MCQ","DI","Network Diagrams & Routes","Medium","scenario analysis, comparative cost calculation, shortest path with changed conditions","scenario analysis, comparative cost calculation, shortest path with changed conditions","False","M2FNL_Set3_Cargo_FINALV3","Analyzing","Conditions: C-E open, B-D special rate active. We compare existing minimum with new possibilities offered by C-E.
+1. Path A-B-D-E (from Q12, B-D special rate active): $460.
+2. Path A-C-E: Cost A-C(150km*$2) + C-E(180km*$2) = $300 + $360 = $660.
+3. Path A-B-C-E: Cost A-B(100km*$2) + B-C(60km*$2) + C-E(180km*$2) = $200 + $120 + $360 = $680.
+4. Path A-C-D-E (no B-D segment): (150+50+70)km * $2 = $540.
+The minimum cost remains $460 via A-B-D-E."
+"LRDI","40","M2FNL_Q14_FINALV3","14","M2FNL_Set3_Cargo_FINALV3","A logistics company manages cargo movement between five cities: Alton (A), Benton (B), Carlin (C), Denton (D), and Easton (E). The table below shows the direct distance (in km) between cities if a direct route exists. ""-"" indicates no direct route. The cost of transport is $2 per km unless specified otherwise. The company wants to find the minimum cost to ship cargo from Alton to Easton.
+
+Distance Matrix (km):
+      A   B   C   D   E
+A     - 100 150   - 400
+B   100   -  60 120   -
+C   150  60   -  50 180
+D     - 120  50   -  70
+E   400   - 180  70   -
+
+Additional Information:
+•	The direct route C-E is unavailable.
+•	A high-speed freight corridor between Benton (B) and Denton (D) has reduced the transport cost on the B-D route (and D-B route) to $1 per km (physical distance remains 120 km). This special rate applies if the B-D segment is used.
+•	The company must use a path that visits any city at most once.","To minimize shipping cost from Carlin (C) to Alton (A) (assuming C-E bridge is closed and B-D special rate is active), which city is visited immediately after Carlin on the optimal path?","Benton (B)","Denton (D)","Alton (A)","Easton (E)","Benton (B)","Denton (D)","Alton (A)","Easton (E)","Alton (A)","MCQ","DI","Network Diagrams & Routes","Medium","optimal path identification, next step deduction, cost minimization","optimal path identification, next step deduction, cost minimization","False","M2FNL_Set3_Cargo_FINALV3","Analyzing","Conditions: C-E closed, B-D special rate active. Find minimum cost path from C to A.
+1. Path C-A (direct): 150km * $2 = $300. (Next city after C is A).
+2. Path C-B-A: C-B(60km*$2) + B-A(100km*$2) = $120 + $200 = $320. (Next city after C is B).
+3. Path C-D-B-A: C-D(50km*$2) + D-B(120km @ $1/km) + B-A(100km*$2) = $100 + $120 + $200 = $420. (Next city after C is D).
+Minimum cost is $300 via the direct path C-A. The city visited immediately after Carlin is Alton."
+"LRDI","40","M2FNL_Q15_FINALV3","15","M2FNL_Set4_Sales_FINALV3","A company analyzes sales data for three products (X, Y, Z) across four regions (North, South, East, West) for two consecutive years: Year 1 and Year 2.
+
+Sales Data (in thousands of units):
+Product | Region | Year 1 Sales | Year 2 Sales
+------- | ------ | ------------ | ------------
+X       | North  | 120          | 150
+X       | South  | 80           | 70
+X       | East   | 150          | 180
+X       | West   | 100          | 110
+Y       | North  | 200          | 220
+Y       | South  | 250          | 240
+Y       | East   | 180          | 200
+Y       | West   | 220          | 250
+Z       | North  | 90           | 100
+Z       | South  | 110          | 130
+Z       | East   | 70           | 80
+Z       | West   | 130          | 120
+
+Additional Calculations:
+•	Growth Rate (%) = ((Year 2 Sales - Year 1 Sales) / Year 1 Sales) * 100.
+•	Market Share of a Product in a Region (%) = (Sales of that Product in that Region / Total Sales of all three Products in that Region) * 100 for a given year.
+•	Contribution of a Region to a Product's Total Sales (%) = (Sales of that Product in that Region / Total Sales of that Product across all Regions) * 100 for a given year.","Which of the following product-region combinations experienced an absolute growth of 30 thousand units in sales from Year 1 to Year 2?","X-South","Y-North","X-East","Z-West","X-South","Y-North","X-East","Z-West","X-East","MCQ","DI","Tables: Single Table Interpretation","Easy","data extraction, absolute change calculation, comparative analysis, unique answer verification","data extraction, absolute change calculation, comparative analysis, unique answer verification","False","M2FNL_Set4_Sales_FINALV3","Applying","Absolute Growth = Year 2 Sales - Year 1 Sales.
+- X-North: 150 - 120 = 30
+- X-East: 180 - 150 = 30
+- Y-West: 250 - 220 = 30
+From the options provided:
+(A) X-South: 70 - 80 = -10
+(B) Y-North: 220 - 200 = 20
+(C) X-East: 180 - 150 = 30
+(D) Z-West: 120 - 130 = -10
+The correct choice is (C) X-East."
+"LRDI","40","M2FNL_Q16_FINALV3","16","M2FNL_Set4_Sales_FINALV3","A company analyzes sales data for three products (X, Y, Z) across four regions (North, South, East, West) for two consecutive years: Year 1 and Year 2.
+
+Sales Data (in thousands of units):
+Product | Region | Year 1 Sales | Year 2 Sales
+------- | ------ | ------------ | ------------
+X       | North  | 120          | 150
+X       | South  | 80           | 70
+X       | East   | 150          | 180
+X       | West   | 100          | 110
+Y       | North  | 200          | 220
+Y       | South  | 250          | 240
+Y       | East   | 180          | 200
+Y       | West   | 220          | 250
+Z       | North  | 90           | 100
+Z       | South  | 110          | 130
+Z       | East   | 70           | 80
+Z       | West   | 130          | 120
+
+Additional Calculations:
+•	Growth Rate (%) = ((Year 2 Sales - Year 1 Sales) / Year 1 Sales) * 100.
+•	Market Share of a Product in a Region (%) = (Sales of that Product in that Region / Total Sales of all three Products in that Region) * 100 for a given year.
+•	Contribution of a Region to a Product's Total Sales (%) = (Sales of that Product in that Region / Total Sales of that Product across all Regions) * 100 for a given year.","What was the approximate overall growth rate for Product Y across all regions from Year 1 to Year 2?","5.9%","6.7%","7.1%","8.0%","5.9%","6.7%","7.1%","8.0%","7.1%","MCQ","DI","Tables: Single Table Interpretation","Medium","aggregate calculation, percentage growth rate, multi-step data processing","aggregate calculation, percentage growth rate, multi-step data processing","False","M2FNL_Set4_Sales_FINALV3","Analyzing","1. Total Year 1 Sales (Y) = 200 (North) + 250 (South) + 180 (East) + 220 (West) = 850.
+2. Total Year 2 Sales (Y) = 220 (North) + 240 (South) + 200 (East) + 250 (West) = 910.
+3. Absolute Growth = 910 - 850 = 60.
+4. Growth Rate = (Absolute Growth / Total Year 1 Sales) * 100 = (60 / 850) * 100 ≈ 7.0588...% ≈ 7.1%."
+"LRDI","40","M2FNL_Q17_FINALV3","17","M2FNL_Set4_Sales_FINALV3","A company analyzes sales data for three products (X, Y, Z) across four regions (North, South, East, West) for two consecutive years: Year 1 and Year 2.
+
+Sales Data (in thousands of units):
+Product | Region | Year 1 Sales | Year 2 Sales
+------- | ------ | ------------ | ------------
+X       | North  | 120          | 150
+X       | South  | 80           | 70
+X       | East   | 150          | 180
+X       | West   | 100          | 110
+Y       | North  | 200          | 220
+Y       | South  | 250          | 240
+Y       | East   | 180          | 200
+Y       | West   | 220          | 250
+Z       | North  | 90           | 100
+Z       | South  | 110          | 130
+Z       | East   | 70           | 80
+Z       | West   | 130          | 120
+
+Additional Calculations:
+•	Growth Rate (%) = ((Year 2 Sales - Year 1 Sales) / Year 1 Sales) * 100.
+•	Market Share of a Product in a Region (%) = (Sales of that Product in that Region / Total Sales of all three Products in that Region) * 100 for a given year.
+•	Contribution of a Region to a Product's Total Sales (%) = (Sales of that Product in that Region / Total Sales of that Product across all Regions) * 100 for a given year.","In Year 2, which region had the highest market share for Product Z?","North","South","East","West","North","South","East","West","South","MCQ","DI","Tables: Single Table Interpretation","Medium","market share calculation, ratio analysis within subgroups, comparative analysis","market share calculation, ratio analysis within subgroups, comparative analysis","False","M2FNL_Set4_Sales_FINALV3","Analyzing","Market Share (Z, Region, Y2) = (Sales of Z in Region Y2 / Total Sales of all products in Region Y2) * 100.
+Year 2 Sales Totals by Region:
+- North: 150+220+100 = 470. Market Share Z_North = (100 / 470) * 100 ≈ 21.28%.
+- South: 70+240+130 = 440. Market Share Z_South = (130 / 440) * 100 ≈ 29.55%.
+- East: 180+200+80 = 460. Market Share Z_East = (80 / 460) * 100 ≈ 17.39%.
+- West: 110+250+120 = 480. Market Share Z_West = (120 / 480) * 100 = 25.00%.
+The highest market share for Product Z in Year 2 is in the South region."
+"LRDI","40","M2FNL_Q18_FINALV3","18","M2FNL_Set4_Sales_FINALV3","A company analyzes sales data for three products (X, Y, Z) across four regions (North, South, East, West) for two consecutive years: Year 1 and Year 2.
+
+Sales Data (in thousands of units):
+Product | Region | Year 1 Sales | Year 2 Sales
+------- | ------ | ------------ | ------------
+X       | North  | 120          | 150
+X       | South  | 80           | 70
+X       | East   | 150          | 180
+X       | West   | 100          | 110
+Y       | North  | 200          | 220
+Y       | South  | 250          | 240
+Y       | East   | 180          | 200
+Y       | West   | 220          | 250
+Z       | North  | 90           | 100
+Z       | South  | 110          | 130
+Z       | East   | 70           | 80
+Z       | West   | 130          | 120
+
+Additional Calculations:
+•	Growth Rate (%) = ((Year 2 Sales - Year 1 Sales) / Year 1 Sales) * 100.
+•	Market Share of a Product in a Region (%) = (Sales of that Product in that Region / Total Sales of all three Products in that Region) * 100 for a given year.
+•	Contribution of a Region to a Product's Total Sales (%) = (Sales of that Product in that Region / Total Sales of that Product across all Regions) * 100 for a given year.","For Year 1, what was the approximate contribution of the South region to the total sales of Product X?","16.0%","17.8%","18.6%","20.0%","16.0%","17.8%","18.6%","20.0%","17.8%","MCQ","DI","Tables: Single Table Interpretation","Medium","contribution calculation, percentage of total, data aggregation","contribution calculation, percentage of total, data aggregation","False","M2FNL_Set4_Sales_FINALV3","Analyzing","Contribution (X, South, Y1) = (Sales of X in South Y1 / Total Sales of X across all regions Y1) * 100.
+1. Sales of Product X in South, Year 1 = 80.
+2. Total Sales of Product X in Year 1 = 120 (North) + 80 (South) + 150 (East) + 100 (West) = 450.
+3. Contribution = (80 / 450) * 100 ≈ 17.777...% ≈ 17.8%."
+"LRDI","40","M2FNL_Q19_FINALV3","19","M2FNL_Set5_Trains_FINALV3","Four trains (T1, T2, T3, T4) operate on a circular railway route with six stations (S1, S2, S3, S4, S5, S6) in clockwise order. Each train starts its journey at 9:00 AM.
+Information:
+1.	All trains travel at a constant speed specific to each train.
+2.	The distance between any two consecutive stations is the same, let this be 'D' km. The total length of the circular route is 6D km.
+3.	T1 starts at S1 and travels clockwise. Its speed is 60 km/hr.
+4.	T2 starts at S3 and travels clockwise. It meets T1 for the first time (after starting) exactly at S5.
+5.	T3 starts at S2 and travels anti-clockwise. It meets T1 for the first time exactly at S6.
+6.	T4 starts at S4 and travels anti-clockwise. The time T4 takes to travel from S4 to S1 is 30 minutes.
+7.	The time taken by T1 to travel between any two consecutive stations is 10 minutes.","What is the speed of T2 in km/hr?","30","40","45","50","30","40","45","50","30","MCQ","LR","Puzzles: Speed, Distance, Time","Medium","relative speed, circular tracks, meeting points, time-speed-distance calculation","relative speed, circular tracks, meeting points, time-speed-distance calculation","False","M2FNL_Set5_Trains_FINALV3","Analyzing","From Info 7, T1 (60 km/hr) takes 10 min (1/6 hr) per station. So, distance between stations D = 60 * (1/6) = 10 km. Total route = 60 km.
+T1 starts at S1 (0km), T2 at S3 (20km). They meet at S5 (40km). 
+Time for T1 to reach S5 = 40km / 60km/hr = 2/3 hr (40 mins).
+In this time, T2 travels from S3 to S5, a distance of 2D = 20km.
+Speed_T2 = Distance / Time = 20km / (2/3 hr) = 30 km/hr."
+"LRDI","40","M2FNL_Q20_FINALV3","20","M2FNL_Set5_Trains_FINALV3","Four trains (T1, T2, T3, T4) operate on a circular railway route with six stations (S1, S2, S3, S4, S5, S6) in clockwise order. Each train starts its journey at 9:00 AM.
+Information:
+1.	All trains travel at a constant speed specific to each train.
+2.	The distance between any two consecutive stations is the same, let this be 'D' km. The total length of the circular route is 6D km.
+3.	T1 starts at S1 and travels clockwise. Its speed is 60 km/hr.
+4.	T2 starts at S3 and travels clockwise. It meets T1 for the first time (after starting) exactly at S5.
+5.	T3 starts at S2 and travels anti-clockwise. It meets T1 for the first time exactly at S6.
+6.	T4 starts at S4 and travels anti-clockwise. The time T4 takes to travel from S4 to S1 is 30 minutes.
+7.	The time taken by T1 to travel between any two consecutive stations is 10 minutes.","What is the speed of T3 in km/hr?","20","24","30","36","20","24","30","36","24","MCQ","LR","Puzzles: Speed, Distance, Time","Medium","relative speed (opposite direction), circular tracks, meeting points, option alignment","relative speed (opposite direction), circular tracks, meeting points, option alignment","False","M2FNL_Set5_Trains_FINALV3","Analyzing","From Info 7, T1 (60 km/hr) takes 10 min (1/6 hr) per station. So, distance between stations D = 10 km. Total route = 60 km.
+T1 (clockwise from S1) and T3 (anti-clockwise from S2) meet at S6.
+Time for T1 to reach S6 = 5D / Speed_T1 = 50km / 60km/hr = 5/6 hr (50 mins).
+In this time, T3 travels from S2 to S6 (anti-clockwise), a distance of S2->S1->S6, which is 2D = 20km.
+Speed_T3 = Distance / Time = 20km / (5/6 hr) = 120/5 = 24 km/hr."
+"LRDI","40","M2FNL_Q21_FINALV3","21","M2FNL_Set5_Trains_FINALV3","Four trains (T1, T2, T3, T4) operate on a circular railway route with six stations (S1, S2, S3, S4, S5, S6) in clockwise order. Each train starts its journey at 9:00 AM.
+Information:
+1.	All trains travel at a constant speed specific to each train.
+2.	The distance between any two consecutive stations is the same, let this be 'D' km. The total length of the circular route is 6D km.
+3.	T1 starts at S1 and travels clockwise. Its speed is 60 km/hr.
+4.	T2 starts at S3 and travels clockwise. It meets T1 for the first time (after starting) exactly at S5.
+5.	T3 starts at S2 and travels anti-clockwise. It meets T1 for the first time exactly at S6.
+6.	T4 starts at S4 and travels anti-clockwise. The time T4 takes to travel from S4 to S1 is 30 minutes.
+7.	The time taken by T1 to travel between any two consecutive stations is 10 minutes.","How many minutes after 9:00 AM do T2 and T4 meet for the first time after starting their journeys?","6 minutes","6 minutes 20 seconds","6 minutes 40 seconds","7 minutes","6 minutes","6 minutes 20 seconds","6 minutes 40 seconds","7 minutes","6 minutes 40 seconds","MCQ","LR","Puzzles: Speed, Distance, Time","Medium","relative speed, circular tracks, first meeting time, unit conversion (hr to min), option alignment","relative speed, circular tracks, first meeting time, unit conversion (hr to min), option alignment","False","M2FNL_Set5_Trains_FINALV3","Analyzing","Distance per station D = 10km. Speed_T2 = 30 km/hr (clockwise from S3). Speed_T4 = (Distance S4->S1) / Time = 3D / 0.5hr = 30km / 0.5hr = 60 km/hr (anti-clockwise from S4).
+T2 is at S3, T4 is at S4. They are moving towards each other. Initial separation = D = 10km.
+Relative speed = Speed_T2 + Speed_T4 = 30 + 60 = 90 km/hr.
+Time to meet = Separation / Relative Speed = 10 km / 90 km/hr = 1/9 hr.
+Time in minutes = (1/9) hr * 60 min/hr = 60/9 min = 6 and 2/3 minutes = 6 minutes and 40 seconds."
+"LRDI","40","M2FNL_Q22_FINALV3","22","M2FNL_Set5_Trains_FINALV3","Four trains (T1, T2, T3, T4) operate on a circular railway route with six stations (S1, S2, S3, S4, S5, S6) in clockwise order. Each train starts its journey at 9:00 AM.
+Information:
+1.	All trains travel at a constant speed specific to each train.
+2.	The distance between any two consecutive stations is the same, let this be 'D' km. The total length of the circular route is 6D km.
+3.	T1 starts at S1 and travels clockwise. Its speed is 60 km/hr.
+4.	T2 starts at S3 and travels clockwise. It meets T1 for the first time (after starting) exactly at S5.
+5.	T3 starts at S2 and travels anti-clockwise. It meets T1 for the first time exactly at S6.
+6.	T4 starts at S4 and travels anti-clockwise. The time T4 takes to travel from S4 to S1 is 30 minutes.
+7.	The time taken by T1 to travel between any two consecutive stations is 10 minutes.","If T3, after its first meeting with T1, reverses its direction and travels clockwise at its original speed, at which station will T3 next meet T1? (Assume T1 continues its original journey clockwise at its original speed).","S1","S2","S3","S4","S1","S2","S3","S4","S4","MCQ","LR","Puzzles: Speed, Distance, Time","Hard","relative speed (same direction), lapping on circular track, conditional change (direction reversal), multi-stage calculation","relative speed (same direction), lapping on circular track, conditional change (direction reversal), multi-stage calculation","False","M2FNL_Set5_Trains_FINALV3","Evaluating","First meeting of T1 and T3 is at S6, at t = 50 minutes. At this moment, T1 and T3 are both at S6. T3 reverses direction.
+New situation: T1 and T3 are at S6, both moving clockwise. Speed_T1 = 60 km/hr, Speed_T3 = 24 km/hr.
+To meet again, the faster train T1 must 'lap' the slower train T3, meaning it must cover one full circle (60 km) more than T3.
+Relative speed = 60 - 24 = 36 km/hr.
+Time to lap = Distance to gain / Relative speed = 60 km / 36 km/hr = 5/3 hr = 100 minutes.
+This second meeting happens 100 minutes after the first one. Total time from start = 50 min + 100 min = 150 minutes.
+Position of T1 after 150 minutes (2.5 hours) from start at S1:
+Distance traveled by T1 = 60 km/hr * 2.5 hr = 150 km.
+Position on 60km track = 150 mod 60 = 30 km from S1.
+Since stations are every 10km, 30km from S1 is S4. They will meet at S4."

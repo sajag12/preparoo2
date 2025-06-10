@@ -1,0 +1,250 @@
+CognitiveSkillLevel,ConceptTested,CorrectAnswerValue,DetailedTags,DifficultyLevelPredicted,IsTITA,OptionAText,OptionAValue,OptionBText,OptionBValue,OptionCText,OptionCValue,OptionDText,OptionDValue,PassageOrSetContent,PassageOrSetID,QuestionNumberInSection,QuestionPrompt,QuestionType,QuestionUniqueID,SectionName,SectionTimeLimitMinutes,SetID,SolutionExplanation,SubTopic,Topic
+Application,Sum and Nth Term of Arithmetic Progression,59,"Arithmetic Progression, Sum of AP",Easy,False,59,59,63,63,67,67,71,71,,,1,"The sum of the first 11 terms of an arithmetic progression is 253. If the sum of the first 6 terms is 78, what is the value of the 15th term of this progression?",MCQ,Q45,Quantitative Ability,40,MockSet1_QA,"Let the arithmetic progression have first term 'a' and common difference 'd'.
+Sum of first n terms = Sₙ = (n/2)[2a + (n-1)d].
+Given S₁₁ = 253:
+(11/2)[2a + (11-1)d] = 253 => 11(a + 5d) = 253 => a + 5d = 23 ...(1)
+Given S₆ = 78:
+(6/2)[2a + (6-1)d] = 78 => 3[2a + 5d] = 78 => 2a + 5d = 26 ...(2)
+Subtracting equation (1) from equation (2): (2a + 5d) - (a + 5d) = 26 - 23 => a = 3.
+Substitute a = 3 into equation (1): 3 + 5d = 23 => 5d = 20 => d = 4.
+The 15th term, T₁₅ = a + (15-1)d = a + 14d = 3 + 14(4) = 3 + 56 = 59.
+The correct option is A.","Sequences & Series (AP, GP, HP, Special Series)",Algebra
+Analysis,Properties of Touching Circles and Inscribed Circles,49π * ( (2/√3) - 1 )²,"Touching Circles, Inscribed Circle, Equilateral Triangle, Area Calculation",Hard,False,(49/3) * (7 - 4√3)π,(49/3) * (7 - 4√3)π,49π * (2 - √3)²,49π * (2 - √3)²,49π * ( (2/√3) - 1 )²,49π * ( (2/√3) - 1 )²,(49/9) * (4√3 - 7)π,(49/9) * (4√3 - 7)π,,,2,"Three circles, each of radius 7 cm, touch each other externally. What is the area (in cm²) of the largest circle that can be inscribed in the region bounded by these three circles, touching all of them?",MCQ,Q46,Quantitative Ability,40,MockSet1_QA,"Let r be the radius of the three equal circles, so r = 7 cm. The centers of the three circles form an equilateral triangle with side length 2r = 14 cm. The center of the small inscribed circle is the centroid of this triangle. The radius (R_s) can be found by subtracting the radius 'r' from the distance between the triangle's vertex and its centroid. This leads to the formula:
+R_s = r * ( (2/√3) - 1 ).
+R_s = 7 * ( (2/√3) - 1 ) cm.
+Area of this small inscribed circle = π * (R_s)² = π * [7 * ( (2/√3) - 1 )]² = 49π * ( (2/√3) - 1 )².
+The correct option is C.","Circles (Properties, Chords, Tangents, Secants)",Geometry
+Application,Ratio and Proportion in Age-based problems,60,"Ages, Ratio, Linear Equations",Easy,False,40,40,50,50,60,60,70,70,,,3,"The present ages of Arin and Bipul are in the ratio 3:4. Ten years ago, the ratio of Arin's age to their age difference was 2:1. In how many years from now will Arin's age be 90% of Bipul's age?",MCQ,Q47,Quantitative Ability,40,MockSet1_QA,"Let the present ages of Arin and Bipul be 3x and 4x respectively.
+Their age difference is 4x - 3x = x.
+Ten years ago, Arin's age was 3x - 10.
+Given ratio: (Arin's age ten years ago) / (Their age difference) = 2:1
+(3x - 10) / x = 2/1 => 3x - 10 = 2x => x = 10.
+Present ages: Arin = 3(10) = 30 years, Bipul = 4(10) = 40 years.
+Let 'y' be the number of years from now when Arin's age will be 90% of Bipul's age.
+Arin's age after y years = 30 + y. Bipul's age after y years = 40 + y.
+30 + y = 0.90 * (40 + y) => 30 + y = (9/10) * (40 + y) => 300 + 10y = 360 + 9y => y = 60.
+The correct option is C.","Ratio, Proportion & Variation",Arithmetic
+Application,Properties of Logarithms,9,"Logarithm Properties, Solving Logarithmic Equations",Medium,True,,,,,,,,,,,4,"If x is a positive real number such that log₃(x² + 6x + k) + log₁̸₃(x + 3) = log₃(x+3), find the value of k.",TITA,Q48,Quantitative Ability,40,MockSet1_QA,"The equation is log₃(x² + 6x + k) + log₁̸₃(x + 3) = log₃(x+3).
+This can be rewritten as log₃(x² + 6x + k) - log₃(x + 3) = log₃(x+3).
+log₃(x² + 6x + k) = 2log₃(x + 3).
+log₃(x² + 6x + k) = log₃((x + 3)²).
+Equating the arguments:
+x² + 6x + k = (x + 3)²
+x² + 6x + k = x² + 6x + 9
+k = 9.
+Domain check: For k=9, x²+6x+9 = (x+3)². Since x > 0, (x+3)² > 0. The argument is valid.
+The answer is 9.",Logarithms,Algebra
+Application,Successive Percentage Change,40000,"Percentage Increase, Percentage Decrease, Population",Easy,False,39000,39000,40000,40000,40500,40500,41000,41000,,,5,"The population of a town increased by 15% from 2019 to 2020, and then decreased by 10% from 2020 to 2021. If the population in 2021 was 41,400, what was the population in 2019?",MCQ,Q49,Quantitative Ability,40,MockSet1_QA,"Let the population in 2019 be P.
+Population in 2020 = P * (1 + 15/100) = P * 1.15.
+Population in 2021 = (P * 1.15) * (1 - 10/100) = P * 1.15 * 0.90 = P * 1.035.
+Given population in 2021 is 41,400.
+P * 1.035 = 41,400
+P = 41,400 / 1.035 = 40,000.
+The population in 2019 was 40,000.
+The correct option is B.",Percentages,Arithmetic
+Analysis,Profit/Loss with Marked Price and Successive Discounts,300,"Cost Price, Marked Price, Successive Discounts, Profit Calculation",Medium,False,240,240,260,260,280,280,300,300,,,6,"A shopkeeper bought an item for Rs. X. He marked it up by 60%. He then sold it to a customer after offering two successive discounts of 20% and 15%. In this transaction, the shopkeeper made a profit of Rs. 220. If he had sold the item after a single discount of 30% on the marked price, what would have been his profit in Rs.?",MCQ,Q50,Quantitative Ability,40,MockSet1_QA,"Let the cost price (CP) be Rs. X. Marked Price (MP) = 1.6X.
+SP after two successive discounts (20%, 15%) = 1.6X * 0.80 * 0.85 = 1.6X * 0.68 = 1.088X.
+Profit = SP - CP = 1.088X - X = 0.088X.
+Given profit = Rs. 220. So, 0.088X = 220 => X = 220 / 0.088 = 2500.
+CP = Rs. 2500. MP = 1.6 * 2500 = Rs. 4000.
+If sold after a single discount of 30% on MP:
+New SP = MP * (1 - 0.30) = 4000 * 0.70 = Rs. 2800.
+New Profit = New SP - CP = 2800 - 2500 = Rs. 300.
+The correct option is D.","Profit, Loss & Discount",Arithmetic
+Analysis,"Volume of Frustum and Sphere, Recasting of Solids",3185,"Cone, Frustum, Sphere, Volume, Recasting Solids, Similar Cones",Hard,True,,,,,,,,,,,7,"A right circular cone has a base radius of 21 cm and a height of 30 cm. It's sliced by a plane parallel to its base at 1/3rd of its height from the vertex. The smaller cone (top part) is removed. If the remaining frustum is melted and recast into a solid sphere, find the cube of the radius of this sphere.",TITA,Q51,Quantitative Ability,40,MockSet1_QA,"Original cone: base radius R = 21 cm, height H = 30 cm.
+Volume of original cone V_orig = (1/3)πR²H = (1/3)π(21)²(30) = 4410π cm³.
+The cone is sliced at height h_s = H/3 from the vertex. The volume of the small cone removed is V_small = (h_s/H)³ * V_orig = (1/3)³ * V_orig = V_orig / 27.
+Volume of frustum V_f = V_orig - V_small = V_orig * (1 - 1/27) = (26/27) * V_orig.
+V_f = (26/27) * 4410π.
+This is melted and recast into a sphere of radius r_sp. Volume of sphere V_sp = (4/3)π(r_sp)³.
+Setting volumes equal: (4/3)π(r_sp)³ = (26/27) * 4410π.
+(r_sp)³ = (26/27) * 4410 * (3/4) = (26 * 4410) / 36 = (13 * 4410) / 18 = 13 * 245 = 3185.
+The question asks for the cube of the radius, which is (r_sp)³.
+The answer is 3185.","Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Geometry
+Application,Calculating CI Rate and applying it to find SI,4800,"Compound Interest, Simple Interest, Rate Calculation",Medium,False,Rs. 4800,4800,Rs. 5400,5400,Rs. 4500,4500,Rs. 6000,6000,,,8,"A sum of money amounts to Rs. 10368 in 2 years and Rs. 11197.44 in 3 years at a certain rate percent per annum, when interest is compounded annually. What is the simple interest on a sum of Rs. 15000 at the same rate of interest for 4 years?",MCQ,Q52,Quantitative Ability,40,MockSet1_QA,"Let P be the principal and r be the annual interest rate.
+Amount after 2 years = P(1 + r/100)² = 10368 ...(1)
+Amount after 3 years = P(1 + r/100)³ = 11197.44 ...(2)
+Divide (2) by (1): (1 + r/100) = 11197.44 / 10368 = 1.08.
+So, r/100 = 0.08 => r = 8%.
+Simple Interest (SI) = (Principal * Rate * Time) / 100.
+SI = (15000 * 8 * 4) / 100 = 150 * 32 = 4800.
+The correct option is A.",Compound Interest,Arithmetic
+Application,Composite Divisibility Rules,2,"Divisibility by 72, Divisibility by 8, Divisibility by 9, Multiple cases",Medium,False,2,2,5,5,7,7,11,11,,,9,A five-digit number 7A5B4 is divisible by 72. What is the smallest possible value of A + B?,MCQ,Q53,Quantitative Ability,40,MockSet1_QA,"The number 7A5B4 must be divisible by 72, so by 8 and 9.
+Divisibility by 8: Last three digits 5B4 must be divisible by 8.
+Possible values for 5B4 are 504 (B=0), 544 (B=4), 584 (B=8).
+Divisibility by 9: Sum of digits 7+A+5+B+4 = 16+A+B must be divisible by 9.
+Case 1: B=0. Sum = 16+A. For 16+A to be divisible by 9, 16+A = 18 => A=2. (A+B = 2+0 = 2).
+Case 2: B=4. Sum = 16+A+4 = 20+A. For 20+A to be divisible by 9, 20+A = 27 => A=7. (A+B = 7+4 = 11).
+Case 3: B=8. Sum = 16+A+8 = 24+A. For 24+A to be divisible by 9, 24+A = 27 => A=3. (A+B = 3+8 = 11).
+The possible values for A+B are 2 and 11. The smallest possible value is 2.
+The correct option is A.",Divisibility Rules,Number System
+Application,Application of Remainder Theorem,13,"Remainder Theorem, Solving System of Linear Equations",Medium,True,,,,,,,,,,,10,"A polynomial P(x) = x³ + ax² + bx + c leaves a remainder of 7 when divided by (x-1), a remainder of 10 when divided by (x-2), and P(0) = -2. What is the value of P(3)?",TITA,Q54,Quantitative Ability,40,MockSet1_QA,"P(x) = x³ + ax² + bx + c.
+By Remainder Theorem, P(1) = 7 and P(2) = 10.
+Given P(0) = -2. P(0) = 0³ + a(0)² + b(0) + c = c. So, c = -2.
+P(1) = 1³ + a(1)² + b(1) + c = 1 + a + b - 2 = 7 => a + b = 8. ...(i)
+P(2) = 2³ + a(2)² + b(2) + c = 8 + 4a + 2b - 2 = 10 => 4a + 2b = 4 => 2a + b = 2. ...(ii)
+Subtracting equation (i) from (ii): (2a + b) - (a + b) = 2 - 8 => a = -6.
+Substitute a = -6 into (i): -6 + b = 8 => b = 14.
+So, P(x) = x³ - 6x² + 14x - 2.
+We need to find P(3).
+P(3) = 3³ - 6(3²) + 14(3) - 2 = 27 - 54 + 42 - 2 = 13.
+The answer is 13.",Polynomials (Higher degree equations),Algebra
+Application,Work and Time with Positive and Negative Rates,Emptied in 30 hours,"Work Rate, Filling Tank, Emptying Tank, Net Rate, Multi-stage process",Medium,False,Filled in 30 hours,Filled in 30 hours,Emptied in 30 hours,Emptied in 30 hours,Filled in 15 hours,Filled in 15 hours,Emptied in 15 hours,Emptied in 15 hours,,,11,"Pipe A can fill a tank in 20 hours, and Pipe B can fill the same tank in 30 hours. Pipe C can empty the full tank in 15 hours. Pipes A and B are opened together for 6 hours. Then, Pipe B is closed and Pipe C is opened along with Pipe A. In how many more hours will the tank be emptied?",MCQ,Q55,Quantitative Ability,40,MockSet1_QA,"Rate of Pipe A = +1/20 tank/hour.
+Rate of Pipe B = +1/30 tank/hour.
+Rate of Pipe C = -1/15 tank/hour.
+For the first 6 hours, A and B work together. Combined rate = 1/20 + 1/30 = (3+2)/60 = 5/60 = 1/12 tank/hour.
+Fraction of tank filled in 6 hours = 6 * (1/12) = 1/2.
+Now, B is closed, and A and C are open. Combined rate = 1/20 - 1/15 = (3-4)/60 = -1/60 tank/hour.
+The negative sign indicates the tank is emptying.
+Time to empty the filled portion (1/2 tank) = (Amount to empty) / (Rate of emptying) = (1/2) / (1/60) = 30 hours.
+So, the tank will be emptied in 30 more hours.
+The correct option is B.",Pipes & Cisterns,Arithmetic
+Analysis,Solving Absolute Value Inequalities,4,"Modulus, Absolute Value Inequality, Squaring method, Quadratic Inequality",Hard,False,4,4,5,5,6,6,7,7,,,12,Find the number of integer solutions for the inequality |x² - 4x - 20| ≤ |x - 8|.,MCQ,Q56,Quantitative Ability,40,MockSet1_QA,"The inequality is |x² - 4x - 20| ≤ |x - 8|. We can square both sides since they are non-negative.
+(x² - 4x - 20)² ≤ (x - 8)²
+(x² - 4x - 20)² - (x - 8)² ≤ 0
+Using the difference of squares formula a² - b² = (a - b)(a + b):
+[(x² - 4x - 20) - (x - 8)] * [(x² - 4x - 20) + (x - 8)] ≤ 0
+(x² - 5x - 12) * (x² - 3x - 28) ≤ 0
+Factor the second quadratic: x² - 3x - 28 = (x - 7)(x + 4).
+Find roots for the first quadratic using formula x = [-b ± sqrt(b²-4ac)]/2a: x = [5 ± sqrt(25 - 4(1)(-12))]/2 = (5 ± √73)/2. Approx. values are (5 ± 8.54)/2, which are -1.77 and 6.77.
+The four roots (critical points) in order are: -4, -1.77, 6.77, 7.
+The expression (x² - 5x - 12)(x - 7)(x + 4) must be ≤ 0.
+Testing intervals:
+- x > 7: All factors positive -> Product is positive.
+- 6.77 < x < 7: (x-6.77) is positive, (x-7) is negative. -> Product is negative.
+- -1.77 < x < 6.77: Both factors of first quadratic are negative. -> Product is positive.
+- -4 < x < -1.77: (x+1.77) is negative, (x+4) is positive. -> Product is negative.
+- x < -4: All factors negative -> Product is positive.
+We need the intervals where the product is ≤ 0. These are [-4, -1.77] and [6.77, 7].
+Integer solutions in [-4, -1.77] are -4, -3, -2. (3 integers)
+Integer solution in [6.77, 7] is 7. (1 integer)
+Total integer solutions = 3 + 1 = 4.
+The correct option is A.",Inequalities (Linear & Quadratic),Algebra
+Application,Forming and Solving Quadratic Equations in TSD,50,"Speed, Distance, Time, Quadratic Equation",Medium,True,,,,,,,,,,,13,"An express train takes 2 hours less than a passenger train to travel 600 km. If the speed of the express train is 10 km/hr more than that of the passenger train, what is the speed of the passenger train in km/hr?",TITA,Q57,Quantitative Ability,40,MockSet1_QA,"Let the speed of the passenger train be S_p km/hr. Then the speed of the express train is (S_p + 10) km/hr.
+Distance = 600 km.
+Time for passenger train T_p = 600 / S_p.
+Time for express train T_e = 600 / (S_p + 10).
+Given T_p - T_e = 2 hours.
+600/S_p - 600/(S_p + 10) = 2.
+Dividing by 2: 300/S_p - 300/(S_p + 10) = 1.
+300 * [(S_p + 10) - S_p] / [S_p * (S_p + 10)] = 1.
+300 * 10 = S_p² + 10*S_p.
+S_p² + 10*S_p - 3000 = 0.
+Factoring the quadratic: (S_p + 60)(S_p - 50) = 0.
+Since speed cannot be negative, S_p = 50 km/hr.
+The answer is 50.","Time, Speed & Distance (General)",Arithmetic
+Analysis,Mixture replacement problems,40,"Mixture Removal, Replacement, Ratio Change, Algebraic Setup",Hard,True,,,,,,,,,,,14,"A 120-liter mixture contains milk and water in the ratio 5:3. 'x' liters of the mixture is removed and replaced with 'x' liters of pure milk. If the final quantity of milk is 3 times the final quantity of water, find the value of x.",TITA,Q58,Quantitative Ability,40,MockSet1_QA,"Initial mixture = 120 liters. Milk:Water = 5:3.
+Initial milk = (5/8) * 120 = 75 liters. Initial water = (3/8) * 120 = 45 liters.
+'x' liters of mixture is removed. The milk removed is (5/8)x and water removed is (3/8)x.
+Milk remaining = 75 - (5/8)x. Water remaining = 45 - (3/8)x.
+'x' liters of pure milk is added.
+Final milk = (75 - 5x/8) + x = 75 + 3x/8.
+Final water = 45 - 3x/8.
+Given: Final milk = 3 * Final water.
+75 + 3x/8 = 3 * (45 - 3x/8)
+75 + 3x/8 = 135 - 9x/8
+3x/8 + 9x/8 = 135 - 75
+12x/8 = 60
+3x/2 = 60 => x = 40.
+The answer is 40.",Mixtures & Alligations,Arithmetic
+Application,Relative Speed of objects moving towards each other,2:15 PM,"Relative Speed, Meeting Point",Easy,False,1:30 PM,1:30 PM,2:00 PM,2:00 PM,2:15 PM,2:15 PM,1:45 PM,1:45 PM,,,15,"Two cities A and B are 390 km apart. A train starts from A at 10 AM and travels towards B at 65 km/hr. Another train starts from B at 11 AM and travels towards A at 35 km/hr. At what time (H:MM AM/PM, e.g., 2:15 PM) do they meet?",MCQ,Q59,Quantitative Ability,40,MockSet1_QA,"Distance between A and B = 390 km.
+Train 1 from A starts at 10 AM at 65 km/hr.
+Train 2 from B starts at 11 AM at 35 km/hr.
+In the first hour (10 AM to 11 AM), only Train 1 moves. Distance covered = 65 km/hr * 1 hr = 65 km.
+At 11 AM, the remaining distance between the trains is 390 - 65 = 325 km.
+Now, both trains are moving towards each other. Their relative speed is the sum of their speeds = 65 + 35 = 100 km/hr.
+Time taken to meet = Remaining Distance / Relative Speed = 325 km / 100 km/hr = 3.25 hours.
+3.25 hours is 3 hours and 0.25 * 60 = 15 minutes.
+Meeting time will be 3 hours and 15 minutes after 11 AM.
+Meeting Time = 11:00 AM + 3h 15m = 2:15 PM.
+The correct option is C.","Time, Speed & Distance (General)",Arithmetic
+Analysis,Permutations with Grouping constraints,48,"Arrangement, Distinct Objects, Grouping, Factorial",Medium,False,24,24,48,48,72,72,96,96,,,16,"There are 3 distinct red balls, 2 distinct blue balls, and 2 distinct green balls. In how many ways can these balls be arranged in a row such that all balls of the same color are together, and the blue balls are always between the red and green balls?",MCQ,Q60,Quantitative Ability,40,MockSet1_QA,"Step 1: Treat each color group as a single block. We have a Red block (R), a Blue block (B), and a Green block (G).
+Step 2: Arrange these blocks. The condition is that the blue balls are always between the red and green balls. This means the arrangement of blocks must be either (Red, Blue, Green) or (Green, Blue, Red). So there are 2 ways to arrange the blocks.
+Step 3: Arrange the distinct balls within each block.
+- The 3 distinct red balls can be arranged in 3! = 6 ways.
+- The 2 distinct blue balls can be arranged in 2! = 2 ways.
+- The 2 distinct green balls can be arranged in 2! = 2 ways.
+Step 4: The total number of arrangements is the product of the number of ways from each step.
+Total ways = (Ways to arrange blocks) × (Internal arrangements of Red) × (Internal arrangements of Blue) × (Internal arrangements of Green)
+Total ways = 2 × 3! × 2! × 2! = 2 × 6 × 2 × 2 = 48.
+The correct option is B.",Permutations & Combinations,Modern Maths
+Analysis,Area properties of Medians and Centroid,108,"Medians, Centroid, Area Ratios in Triangles",Hard,True,,,,,,,,,,,17,"In triangle ABC, D and E are points on sides AB and AC respectively such that AD = (1/3)AB and AE = (1/2)AC (E is the midpoint of AC). The medians from B (which is BE) and C intersect at G. If the area of quadrilateral BDGE is 42 cm², what is the area of triangle ABC in cm²?",TITA,Q61,Quantitative Ability,40,MockSet1_QA,"Let Area(ABC) = S.
+Since E is the midpoint of AC, BE is a median. The intersection of medians is the centroid, G. So G is the centroid of triangle ABC.
+The centroid divides the triangle into three triangles of equal area: Area(ABG) = Area(BCG) = Area(CAG) = S/3.
+In triangle ABG, D is a point on AB such that AD = (1/3)AB. The line segment DG divides triangle ABG. Triangles ADG and ABG share the same altitude from vertex G to the base AB.
+The ratio of their areas is equal to the ratio of their bases: Area(ADG) / Area(ABG) = AD / AB = 1/3.
+So, Area(ADG) = (1/3) * Area(ABG) = (1/3) * (S/3) = S/9.
+BE is a median, so Area(ABE) = (1/2) * Area(ABC) = S/2.
+The area of quadrilateral BDGE is the area of triangle ABE minus the area of triangle ADG.
+Area(BDGE) = Area(ABE) - Area(ADG) = S/2 - S/9 = (9S - 2S) / 18 = 7S/18.
+We are given that Area(BDGE) = 42 cm².
+7S/18 = 42 => S = (42 * 18) / 7 = 6 * 18 = 108.
+The area of triangle ABC is 108 cm².
+The answer is 108.","Triangles (Properties, Congruence, Similarity)",Geometry
+Analysis,Remainder calculation using Modular Arithmetic and Fermat's Little Theorem,8,"Modular Arithmetic, Fermat's Little Theorem, Cyclicity of Powers",Hard,True,,,,,,,,,,,18,What is the remainder when (17²⁰²³ + 19²⁰²³ + 23²⁰²³) is divided by 13?,TITA,Q62,Quantitative Ability,40,MockSet1_QA,"We need to find (17²⁰²³ + 19²⁰²³ + 23²⁰²³) mod 13.
+First, reduce the bases modulo 13:
+17 ≡ 4 (mod 13)
+19 ≡ 6 (mod 13)
+23 ≡ 10 ≡ -3 (mod 13)
+So the expression becomes (4²⁰²³ + 6²⁰²³ + (-3)²⁰²³) mod 13.
+By Fermat's Little Theorem, a^(p-1) ≡ 1 (mod p) for a prime p. Here p=13. So a¹² ≡ 1 (mod 13).
+We need to reduce the exponent 2023 modulo 12.
+2023 = 12 × 168 + 7. So 2023 ≡ 7 (mod 12).
+This means a²⁰²³ ≡ a⁷ (mod 13).
+The expression is now (4⁷ + 6⁷ + (-3)⁷) mod 13.
+Calculate each term:
+4²=16≡3, 4³≡3*4=12≡-1. So 4⁷=(4³)²*4¹≡(-1)²*4 ≡ 4 (mod 13).
+6²=36≡10≡-3, 6³≡6*(-3)=-18≡8, 6⁶≡8²=64≡12≡-1. So 6⁷=6⁶*6¹≡-1*6 ≡ -6 ≡ 7 (mod 13).
+(-3)²=9, (-3)³=-27≡-1. So (-3)⁷=((-3)³)²*(-3)¹≡(-1)²*(-3) ≡ -3 ≡ 10 (mod 13).
+Sum of remainders = 4 + 7 + 10 = 21.
+21 mod 13 = 8.
+The remainder is 8.",Remainders (incl. Remainder Theorem),Number System
+Application,Profit/Loss in a chain of transactions,2500,"Chain Transaction, Profit Calculation, Cost Price",Easy,False,Rs. 2000,2000,Rs. 2250,2250,Rs. 2500,2500,Rs. 2750,2750,,,19,"Rahul sells an article to Simran at a profit of 20%. Simran marks it up by 30% and then sells it to Tarun giving a discount of 10%. If Tarun paid Rs. 3510 for the article, what was the cost price of the article for Rahul?",MCQ,Q63,Quantitative Ability,40,MockSet1_QA,"Let Rahul's cost price (CP) be C.
+Rahul sells to Simran at 20% profit. Simran's cost price = C * (1 + 20/100) = 1.2C.
+Simran marks it up by 30%. Marked Price = 1.2C * (1 + 30/100) = 1.2C * 1.3 = 1.56C.
+Simran sells to Tarun at a 10% discount. Tarun's price = Marked Price * (1 - 10/100) = 1.56C * 0.9 = 1.404C.
+We are given that Tarun paid Rs. 3510.
+So, 1.404C = 3510.
+C = 3510 / 1.404 = 2500.
+Rahul's cost price was Rs. 2500.
+The correct option is C.","Profit, Loss & Discount",Arithmetic
+Analysis,Area properties of a Trapezium based on similar triangles,600,"Trapezium, Similar Triangles, Area of Trapezium, Area of Triangle Properties",Medium,False,500,500,576,576,600,600,625,625,,,20,"In a trapezium PQRS, PQ || RS. The diagonals PR and QS intersect at O. If PQ = 24 cm and RS = 36 cm, and the area of triangle POQ is 96 cm², find the area of trapezium PQRS in cm².",MCQ,Q64,Quantitative Ability,40,MockSet1_QA,"In trapezium PQRS with PQ || RS, triangles POQ and ROS are similar because corresponding angles are equal (alternate interior angles and vertically opposite angles).
+The ratio of their corresponding sides is PQ/RS = 24/36 = 2/3.
+The ratio of their areas is the square of the ratio of their sides: Area(POQ) / Area(ROS) = (2/3)² = 4/9.
+Given Area(POQ) = 96 cm², we have 96 / Area(ROS) = 4/9.
+Area(ROS) = 96 * 9 / 4 = 24 * 9 = 216 cm².
+In a trapezium, the areas of the two triangles formed by the diagonals on the non-parallel sides are equal. So, Area(POS) = Area(QOR).
+Also, triangles POQ and POS share a common height from vertex P to the base QS. So, Area(POS) / Area(POQ) = OS / OQ. From similarity, OS/OQ = RS/PQ = 3/2.
+Area(POS) = Area(POQ) * (OS/OQ) = 96 * (3/2) = 144 cm².
+So, Area(QOR) = 144 cm².
+Total area of trapezium PQRS = Area(POQ) + Area(ROS) + Area(POS) + Area(QOR)
+Area(PQRS) = 96 + 216 + 144 + 144 = 600 cm².
+The correct option is C.","Quadrilaterals & Polygons (Properties, Diagonals)",Geometry
+Application,Vieta's Formulas and Symmetric Functions of Roots,1849/40,"Roots of Quadratic, Sum of Roots, Product of Roots, Symmetric Functions of Roots, Algebraic Manipulation",Medium,False,1930/37,1930/37,1849/40,1849/40,2023/43,2023/43,2107/33,2107/33,,,21,"If α and β are the roots of the quadratic equation x² - 7x + 3 = 0, then what is the value of ((α²+β²)²)/(α² + β² - αβ)?",MCQ,Q65,Quantitative Ability,40,MockSet1_QA,"For the quadratic equation x² - 7x + 3 = 0, the roots are α and β.
+By Vieta's formulas:
+Sum of roots: α + β = -(-7)/1 = 7.
+Product of roots: αβ = 3/1 = 3.
+We need to find the value of (α² + β²) and then substitute it into the given expression.
+α² + β² = (α + β)² - 2αβ = (7)² - 2(3) = 49 - 6 = 43.
+Now, let's evaluate the expression: ((α²+β²)²)/(α² + β² - αβ).
+Numerator = (α² + β²)² = (43)² = 1849.
+Denominator = (α² + β²) - αβ = 43 - 3 = 40.
+The value of the expression is 1849/40.
+The correct option is B.",Quadratic Equations,Algebra
+Analysis,Solving linear recurrence relations by finding patterns,137,"Recursive Function, Sequence, Pattern Recognition, Summation of series",Hard,True,,,,,,,,,,,22,"A function f(n) is defined for positive integers n as follows: f(1) = 2, f(2) = 5, and for n > 2, f(n) = 2f(n-1) - f(n-2) + 3. Find the value of f(10).",TITA,Q66,Quantitative Ability,40,MockSet1_QA,"The recurrence relation is f(n) - f(n-1) = f(n-1) - f(n-2) + 3.
+Let g(n) = f(n) - f(n-1). Then g(n) = g(n-1) + 3.
+This shows that g(n) is an arithmetic progression with common difference 3.
+g(2) = f(2) - f(1) = 5 - 2 = 3.
+So, g(n) is an AP: 3, 6, 9, ... with g(n) = 3(n-1) for n ≥ 2.
+So, f(n) - f(n-1) = 3(n-1).
+We can write f(n) as a sum:
+f(n) = f(1) + [f(2)-f(1)] + [f(3)-f(2)] + ... + [f(n)-f(n-1)]
+f(n) = f(1) + Σ (f(k) - f(k-1)) for k=2 to n
+f(n) = f(1) + Σ g(k) for k=2 to n
+f(n) = 2 + Σ 3(k-1) for k=2 to n
+Let j = k-1. The sum becomes Σ 3j for j=1 to n-1.
+f(n) = 2 + 3 * Σ j for j=1 to n-1
+f(n) = 2 + 3 * [(n-1)n / 2].
+We need to find f(10).
+f(10) = 2 + 3 * [(10-1)(10) / 2] = 2 + 3 * [9 * 5] = 2 + 3 * 45 = 2 + 135 = 137.
+The answer is 137.","Functions (Domain, Range, Types, Graphs, Inverse)",Algebra

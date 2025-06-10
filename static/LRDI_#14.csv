@@ -1,0 +1,320 @@
+"SectionName","SectionTimeLimitMinutes","QuestionUniqueID","QuestionNumberInSection","PassageOrSetID","PassageOrSetContent","QuestionPrompt","OptionAText","OptionBText","OptionCText","OptionDText","OptionAValue","OptionBValue","OptionCValue","OptionDValue","CorrectAnswerValue","QuestionType","Topic","SubTopic","DifficultyLevelPredicted","ConceptTested","DetailedTags","IsTITA","SetID","CognitiveSkillLevel","SolutionExplanation"
+"Logical Reasoning and Data Interpretation","","Q25","1","Set1_Artifacts","An archaeological team has unearthed five Artifacts (A1, A2, A3, A4, A5) from a newly discovered site. Each artifact belongs to one of three historical Periods: Early (E), Middle (M), or Late (L). The team uses a Carbon Dating process which yields a ""Plausibility Score"" (PS, an integer from 1 to 10) for each artifact being from each period. An artifact is assigned to the period for which it has the highest unique PS. If an artifact has the same highest PS for multiple periods, its period is ""Undetermined"" initially.
+Known Information:
+•	No two artifacts have the same PS for the same period. (e.g., PS(A1,E) ≠ PS(A2,E)).
+•	Each artifact is ultimately assigned to exactly one period (E, M, or L).
+•	The sum of PS for A1 across all three periods is 15. PS(A1,E) > PS(A1,M).
+•	A2 is from Period M. Its PS(A2,M) is 9. PS(A2,E) is 2 less than PS(A2,L).
+•	A3 is from Period L. Its PS(A3,L) = PS(A1,E) + 1. The sum of PS(A3,E) and PS(A3,M) is 10, and PS(A3,E) < PS(A3,M); additionally, both PS(A3,E) and PS(A3,M) are less than PS(A3,L).
+•	A4 had an initial ""Undetermined"" status because PS(A4,E) = PS(A4,M). PS(A4,L) was 3 less than this tied score. A4 was later assigned to Period E based on contextual excavation data.
+•	A5 is from Period M. PS(A5,M) is 10, which is the highest PS recorded for any artifact in Period M. PS(A5,L) = PS(A4,E) - 2.
+•	Exactly two artifacts are from Period E. Exactly one artifact is from Period L. (This implies two are from Period M).
+•	The average PS of artifacts assigned to Period E is 7.5.
+•	The PS values are integers from 1 to 10.","What is the Plausibility Score of Artifact A1 for Period M (PS(A1,M))?","3","4","5","6","A","B","C","D","B","MCQ","LR","Puzzles: Mathematical / Number-based","Hard","constraint satisfaction, integer properties, multi-variable deduction, case analysis","constraint satisfaction, integer properties, multi-variable deduction, case analysis","False","MockSet_Artifacts_FinalV3","Analysis","The final consistent Plausibility Score table derived from all constraints is:
+• A1: E=8, M=4, L=3 (Period E)
+• A2: E=6, M=9, L=8 (Period M)
+• A3: E=2, M=8, L=9 (Period L)
+• A4: E=7, M=7, L=4 (Period E, by contextual data)
+• A5: E=1, M=10, L=5 (Period M)
+
+From the table, PS(A1,M) = 4."
+"Logical Reasoning and Data Interpretation","","Q26","2","Set1_Artifacts","An archaeological team has unearthed five Artifacts (A1, A2, A3, A4, A5) from a newly discovered site. Each artifact belongs to one of three historical Periods: Early (E), Middle (M), or Late (L). The team uses a Carbon Dating process which yields a ""Plausibility Score"" (PS, an integer from 1 to 10) for each artifact being from each period. An artifact is assigned to the period for which it has the highest unique PS. If an artifact has the same highest PS for multiple periods, its period is ""Undetermined"" initially.
+Known Information:
+•	No two artifacts have the same PS for the same period. (e.g., PS(A1,E) ≠ PS(A2,E)).
+•	Each artifact is ultimately assigned to exactly one period (E, M, or L).
+•	The sum of PS for A1 across all three periods is 15. PS(A1,E) > PS(A1,M).
+•	A2 is from Period M. Its PS(A2,M) is 9. PS(A2,E) is 2 less than PS(A2,L).
+•	A3 is from Period L. Its PS(A3,L) = PS(A1,E) + 1. The sum of PS(A3,E) and PS(A3,M) is 10, and PS(A3,E) < PS(A3,M); additionally, both PS(A3,E) and PS(A3,M) are less than PS(A3,L).
+•	A4 had an initial ""Undetermined"" status because PS(A4,E) = PS(A4,M). PS(A4,L) was 3 less than this tied score. A4 was later assigned to Period E based on contextual excavation data.
+•	A5 is from Period M. PS(A5,M) is 10, which is the highest PS recorded for any artifact in Period M. PS(A5,L) = PS(A4,E) - 2.
+•	Exactly two artifacts are from Period E. Exactly one artifact is from Period L. (This implies two are from Period M).
+•	The average PS of artifacts assigned to Period E is 7.5.
+•	The PS values are integers from 1 to 10.","Which artifact has the lowest Plausibility Score for Period L among all five artifacts?","A1","A2","A4","A5","A","B","C","D","A","MCQ","LR","Puzzles: Mathematical / Number-based","Hard","constraint satisfaction, comparative analysis, deduction from derived table","constraint satisfaction, comparative analysis, deduction from derived table","False","MockSet_Artifacts_FinalV3","Analysis","Based on the derived table, the Plausibility Scores for Period L are: PS(A1,L)=3, PS(A2,L)=8, PS(A3,L)=9, PS(A4,L)=4, PS(A5,L)=5. The lowest score is 3, which belongs to Artifact A1."
+"Logical Reasoning and Data Interpretation","","Q27","3","Set1_Artifacts","An archaeological team has unearthed five Artifacts (A1, A2, A3, A4, A5) from a newly discovered site. Each artifact belongs to one of three historical Periods: Early (E), Middle (M), or Late (L). The team uses a Carbon Dating process which yields a ""Plausibility Score"" (PS, an integer from 1 to 10) for each artifact being from each period. An artifact is assigned to the period for which it has the highest unique PS. If an artifact has the same highest PS for multiple periods, its period is ""Undetermined"" initially.
+Known Information:
+•	No two artifacts have the same PS for the same period. (e.g., PS(A1,E) ≠ PS(A2,E)).
+•	Each artifact is ultimately assigned to exactly one period (E, M, or L).
+•	The sum of PS for A1 across all three periods is 15. PS(A1,E) > PS(A1,M).
+•	A2 is from Period M. Its PS(A2,M) is 9. PS(A2,E) is 2 less than PS(A2,L).
+•	A3 is from Period L. Its PS(A3,L) = PS(A1,E) + 1. The sum of PS(A3,E) and PS(A3,M) is 10, and PS(A3,E) < PS(A3,M); additionally, both PS(A3,E) and PS(A3,M) are less than PS(A3,L).
+•	A4 had an initial ""Undetermined"" status because PS(A4,E) = PS(A4,M). PS(A4,L) was 3 less than this tied score. A4 was later assigned to Period E based on contextual excavation data.
+•	A5 is from Period M. PS(A5,M) is 10, which is the highest PS recorded for any artifact in Period M. PS(A5,L) = PS(A4,E) - 2.
+•	Exactly two artifacts are from Period E. Exactly one artifact is from Period L. (This implies two are from Period M).
+•	The average PS of artifacts assigned to Period E is 7.5.
+•	The PS values are integers from 1 to 10.","What is the sum of the Plausibility Scores for Artifact A5 across all three periods?","16","17","18","19","A","B","C","D","A","MCQ","LR","Puzzles: Mathematical / Number-based","Hard","constraint satisfaction, summation, multi-step deduction, uniqueness constraints","constraint satisfaction, summation, multi-step deduction, uniqueness constraints","False","MockSet_Artifacts_FinalV3","Analysis","For Artifact A5, the scores from the derived table are PS(A5,E)=1, PS(A5,M)=10, PS(A5,L)=5. The sum is 1 + 10 + 5 = 16."
+"Logical Reasoning and Data Interpretation","","Q28","4","Set1_Artifacts","An archaeological team has unearthed five Artifacts (A1, A2, A3, A4, A5) from a newly discovered site. Each artifact belongs to one of three historical Periods: Early (E), Middle (M), or Late (L). The team uses a Carbon Dating process which yields a ""Plausibility Score"" (PS, an integer from 1 to 10) for each artifact being from each period. An artifact is assigned to the period for which it has the highest unique PS. If an artifact has the same highest PS for multiple periods, its period is ""Undetermined"" initially.
+Known Information:
+•	No two artifacts have the same PS for the same period. (e.g., PS(A1,E) ≠ PS(A2,E)).
+•	Each artifact is ultimately assigned to exactly one period (E, M, or L).
+•	The sum of PS for A1 across all three periods is 15. PS(A1,E) > PS(A1,M).
+•	A2 is from Period M. Its PS(A2,M) is 9. PS(A2,E) is 2 less than PS(A2,L).
+•	A3 is from Period L. Its PS(A3,L) = PS(A1,E) + 1. The sum of PS(A3,E) and PS(A3,M) is 10, and PS(A3,E) < PS(A3,M); additionally, both PS(A3,E) and PS(A3,M) are less than PS(A3,L).
+•	A4 had an initial ""Undetermined"" status because PS(A4,E) = PS(A4,M). PS(A4,L) was 3 less than this tied score. A4 was later assigned to Period E based on contextual excavation data.
+•	A5 is from Period M. PS(A5,M) is 10, which is the highest PS recorded for any artifact in Period M. PS(A5,L) = PS(A4,E) - 2.
+•	Exactly two artifacts are from Period E. Exactly one artifact is from Period L. (This implies two are from Period M).
+•	The average PS of artifacts assigned to Period E is 7.5.
+•	The PS values are integers from 1 to 10.","What is the Plausibility Score of Artifact A4 for Period L (PS(A4,L))?","2","3","4","5","A","B","C","D","C","MCQ","LR","Puzzles: Mathematical / Number-based","Hard","constraint satisfaction, direct deduction from established scenario","constraint satisfaction, direct deduction from established scenario","False","MockSet_Artifacts_FinalV3","Analysis","From the derived table, PS(A4,L) = 4."
+"Logical Reasoning and Data Interpretation","","Q29","5","Set1_Artifacts","An archaeological team has unearthed five Artifacts (A1, A2, A3, A4, A5) from a newly discovered site. Each artifact belongs to one of three historical Periods: Early (E), Middle (M), or Late (L). The team uses a Carbon Dating process which yields a ""Plausibility Score"" (PS, an integer from 1 to 10) for each artifact being from each period. An artifact is assigned to the period for which it has the highest unique PS. If an artifact has the same highest PS for multiple periods, its period is ""Undetermined"" initially.
+Known Information:
+•	No two artifacts have the same PS for the same period. (e.g., PS(A1,E) ≠ PS(A2,E)).
+•	Each artifact is ultimately assigned to exactly one period (E, M, or L).
+•	The sum of PS for A1 across all three periods is 15. PS(A1,E) > PS(A1,M).
+•	A2 is from Period M. Its PS(A2,M) is 9. PS(A2,E) is 2 less than PS(A2,L).
+•	A3 is from Period L. Its PS(A3,L) = PS(A1,E) + 1. The sum of PS(A3,E) and PS(A3,M) is 10, and PS(A3,E) < PS(A3,M); additionally, both PS(A3,E) and PS(A3,M) are less than PS(A3,L).
+•	A4 had an initial ""Undetermined"" status because PS(A4,E) = PS(A4,M). PS(A4,L) was 3 less than this tied score. A4 was later assigned to Period E based on contextual excavation data.
+•	A5 is from Period M. PS(A5,M) is 10, which is the highest PS recorded for any artifact in Period M. PS(A5,L) = PS(A4,E) - 2.
+•	Exactly two artifacts are from Period E. Exactly one artifact is from Period L. (This implies two are from Period M).
+•	The average PS of artifacts assigned to Period E is 7.5.
+•	The PS values are integers from 1 to 10.","If, due to recalibration, PS(A2,L) were to become 7 (all other initial scores remaining the same, and Constraint 1 still holds for all L-scores), what would be the new assigned period for Artifact A2?","Early (E)","Middle (M)","Late (L)","Undetermined","A","B","C","D","B","MCQ","LR","Puzzles: Mathematical / Number-based","Hard","conditional logic, impact analysis, consistency check under new conditions","conditional logic, impact analysis, consistency check under new conditions","False","MockSet_Artifacts_FinalV3","Evaluation","Original A2 scores: PS(A2,E)=6, PS(A2,M)=9, PS(A2,L)=8. A2 is assigned to Period M.
+If PS(A2,L) becomes 7, then PS(A2,E) (which is 2 less than PS(A2,L)) becomes 7-2=5.
+The new Plausibility Scores for Artifact A2 are: PS(A2,E)=5, PS(A2,M)=9 (unchanged), PS(A2,L)=7.
+The highest unique PS is 9 for Period M. Thus, A2 is still assigned to Period M.
+This change does not violate distinctness constraints for E-scores {8,5,2,7,1} or L-scores {3,7,9,4,5}."
+"Logical Reasoning and Data Interpretation","","Q30","6","Set2_Logistics","A company transports goods from a central Warehouse (W) to three Distribution Centers (DC1, DC2, DC3) using two types of Trucks: Type A (capacity 10 tons) and Type B (capacity 15 tons). The goods are then moved from DCs to Retail Hubs (R1, R2, R3, R4, R5) using smaller Vans (capacity 5 tons).
+Network and Flow Data for a Specific Day:
+•	Total goods dispatched from W: 300 tons.
+•	All trucks departing W were fully loaded.
+•	DC1 received goods only from Type A trucks. DC2 received goods only from Type B trucks. DC3 received goods from both Type A and Type B trucks.
+•	The number of Type A trucks that went to DC3 was equal to the number of Type B trucks that went to DC3.
+•	Total goods received by DC1 was 80 tons.
+•	Goods flow from DCs to Retail Hubs:
+o	DC1 supplies only R1 and R2. All goods received by DC1 are distributed equally between R1 and R2.
+o	DC2 supplies only R3 and R4. Goods sent to R3 from DC2 were 30 tons more than goods sent to R4 from DC2.
+o	DC3 supplies only R5. All goods received by DC3 are sent to R5.
+•	All vans used for transport from DCs to Retail Hubs were fully loaded.
+•	The number of van trips from DC2 to R3 was equal to the number of van trips from DC1 to R1.
+•	Total goods received by R5 (and thus by DC3) were 100 tons.","How many Type B trucks departed from the Warehouse (W) in total?","8","10","12","14","A","B","C","D","C","MCQ","DI","Caselets / Paragraph DI","Medium","multi-step calculation, flow analysis, integer constraints, system of equations","multi-step calculation, flow analysis, integer constraints, system of equations","False","MockSet_Logistics_FinalV3","Analysis","Summary of Derived Values:
+• DC1 received 80 tons (via 8 Type A trucks).
+• DC3 received 100 tons. Since N(A_DC3)=N(B_DC3)=k, then 10k+15k=100 => 25k=100 => k=4. So, 4 Type A and 4 Type B trucks went to DC3.
+• Total goods = 300 tons. DC2 received 300 - DC1(80) - DC3(100) = 120 tons.
+• DC2 received goods only from Type B trucks, so number of Type B trucks to DC2 = 120 / 15 = 8 trucks.
+
+Total Type B trucks = (Trucks to DC2) + (Trucks to DC3) = 8 + 4 = 12."
+"Logical Reasoning and Data Interpretation","","Q31","7","Set2_Logistics","A company transports goods from a central Warehouse (W) to three Distribution Centers (DC1, DC2, DC3) using two types of Trucks: Type A (capacity 10 tons) and Type B (capacity 15 tons). The goods are then moved from DCs to Retail Hubs (R1, R2, R3, R4, R5) using smaller Vans (capacity 5 tons).
+Network and Flow Data for a Specific Day:
+•	Total goods dispatched from W: 300 tons.
+•	All trucks departing W were fully loaded.
+•	DC1 received goods only from Type A trucks. DC2 received goods only from Type B trucks. DC3 received goods from both Type A and Type B trucks.
+•	The number of Type A trucks that went to DC3 was equal to the number of Type B trucks that went to DC3.
+•	Total goods received by DC1 was 80 tons.
+•	Goods flow from DCs to Retail Hubs:
+o	DC1 supplies only R1 and R2. All goods received by DC1 are distributed equally between R1 and R2.
+o	DC2 supplies only R3 and R4. Goods sent to R3 from DC2 were 30 tons more than goods sent to R4 from DC2.
+o	DC3 supplies only R5. All goods received by DC3 are sent to R5.
+•	All vans used for transport from DCs to Retail Hubs were fully loaded.
+•	The number of van trips from DC2 to R3 was equal to the number of van trips from DC1 to R1.
+•	Total goods received by R5 (and thus by DC3) were 100 tons.","What was the total quantity of goods (in tons) received by DC2?","90","100","120","150","A","B","C","D","C","MCQ","DI","Caselets / Paragraph DI","Medium","data consistency, flow balance, deduction from totals","data consistency, flow balance, deduction from totals","False","MockSet_Logistics_FinalV3","Analysis","Total goods dispatched from W = 300 tons. Goods to DC1 = 80 tons. Goods to DC3 = 100 tons. The remaining goods must have gone to DC2. 
+Goods to DC2 = 300 - 80 - 100 = 120 tons."
+"Logical Reasoning and Data Interpretation","","Q32","8","Set2_Logistics","A company transports goods from a central Warehouse (W) to three Distribution Centers (DC1, DC2, DC3) using two types of Trucks: Type A (capacity 10 tons) and Type B (capacity 15 tons). The goods are then moved from DCs to Retail Hubs (R1, R2, R3, R4, R5) using smaller Vans (capacity 5 tons).
+Network and Flow Data for a Specific Day:
+•	Total goods dispatched from W: 300 tons.
+•	All trucks departing W were fully loaded.
+•	DC1 received goods only from Type A trucks. DC2 received goods only from Type B trucks. DC3 received goods from both Type A and Type B trucks.
+•	The number of Type A trucks that went to DC3 was equal to the number of Type B trucks that went to DC3.
+•	Total goods received by DC1 was 80 tons.
+•	Goods flow from DCs to Retail Hubs:
+o	DC1 supplies only R1 and R2. All goods received by DC1 are distributed equally between R1 and R2.
+o	DC2 supplies only R3 and R4. Goods sent to R3 from DC2 were 30 tons more than goods sent to R4 from DC2.
+o	DC3 supplies only R5. All goods received by DC3 are sent to R5.
+•	All vans used for transport from DCs to Retail Hubs were fully loaded.
+•	The number of van trips from DC2 to R3 was equal to the number of van trips from DC1 to R1.
+•	Total goods received by R5 (and thus by DC3) were 100 tons.","How many van trips were made from DC2 to R4?","2","6","9","12","A","B","C","D","A","MCQ","DI","Caselets / Paragraph DI","Medium","linked constraints, unit conversion, logical deduction chain","linked constraints, unit conversion, logical deduction chain","False","MockSet_Logistics_FinalV3","Analysis","1. DC1 received 80 tons and sent goods equally to R1 and R2, so 40 tons to R1.
+2. Van trips from DC1 to R1 = 40 tons / 5 tons/trip = 8 trips.
+3. Van trips from DC2 to R3 = Van trips from DC1 to R1 = 8 trips.
+4. Goods sent from DC2 to R3 = 8 trips * 5 tons/trip = 40 tons.
+5. Goods to R3 (40 tons) were 30 tons more than goods to R4. So, Goods to R4 = 40 - 30 = 10 tons.
+6. Van trips from DC2 to R4 = 10 tons / 5 tons/trip = 2 trips."
+"Logical Reasoning and Data Interpretation","","Q33","9","Set2_Logistics","A company transports goods from a central Warehouse (W) to three Distribution Centers (DC1, DC2, DC3) using two types of Trucks: Type A (capacity 10 tons) and Type B (capacity 15 tons). The goods are then moved from DCs to Retail Hubs (R1, R2, R3, R4, R5) using smaller Vans (capacity 5 tons).
+Network and Flow Data for a Specific Day:
+•	Total goods dispatched from W: 300 tons.
+•	All trucks departing W were fully loaded.
+•	DC1 received goods only from Type A trucks. DC2 received goods only from Type B trucks. DC3 received goods from both Type A and Type B trucks.
+•	The number of Type A trucks that went to DC3 was equal to the number of Type B trucks that went to DC3.
+•	Total goods received by DC1 was 80 tons.
+•	Goods flow from DCs to Retail Hubs:
+o	DC1 supplies only R1 and R2. All goods received by DC1 are distributed equally between R1 and R2.
+o	DC2 supplies only R3 and R4. Goods sent to R3 from DC2 were 30 tons more than goods sent to R4 from DC2.
+o	DC3 supplies only R5. All goods received by DC3 are sent to R5.
+•	All vans used for transport from DCs to Retail Hubs were fully loaded.
+•	The number of van trips from DC2 to R3 was equal to the number of van trips from DC1 to R1.
+•	Total goods received by R5 (and thus by DC3) were 100 tons.","What is the absolute difference between the total number of Type A trucks and Type B trucks used for dispatches from W?","0","2","4","6","A","B","C","D","A","MCQ","DI","Caselets / Paragraph DI","Medium","aggregate calculation, comparative analysis from derived values","aggregate calculation, comparative analysis from derived values","False","MockSet_Logistics_FinalV3","Analysis","• Total Type A trucks = (Trucks to DC1) + (Trucks to DC3) = (80 tons / 10) + 4 = 8 + 4 = 12 trucks.
+• Total Type B trucks = (Trucks to DC2) + (Trucks to DC3) = (120 tons / 15) + 4 = 8 + 4 = 12 trucks.
+• The absolute difference = |12 - 12| = 0."
+"Logical Reasoning and Data Interpretation","","Q34","10","Set3_TeamEval","Four project teams (Alpha, Beta, Gamma, Delta) were evaluated on three criteria: Innovation (I), Timeliness (T), and Cost-Effectiveness (C). Each criterion was scored on a scale of 1 to 5 (integers only). An Overall Performance Score (OPS) was calculated using weights: OPS = wII + wTT + wC*C. The weights (wI, wT, wC) are distinct values from the set {0.2, 0.3, 0.5}.
+Known Information:
+•	No two teams had the same score on any single criterion.
+•	Team Alpha's OPS was 3.8. Alpha scored 5 in Innovation and 3 in Timeliness.
+•	Team Beta scored 4 in Innovation and 2 in Cost-Effectiveness. Beta's OPS was 3.6.
+•	Team Gamma scored 1 in Timeliness. Gamma's score in Cost-Effectiveness was 2 points higher than its score in Innovation. Gamma's OPS was 2.4.
+•	Team Delta scored 3 in Cost-Effectiveness. Delta's score in Innovation was equal to its score in Timeliness.
+•	The weight for Innovation (wI) was less than the weight for Timeliness (wT).
+•	The sum of scores for all teams in the Timeliness criterion was 10.","What is the weight for Cost-Effectiveness (wC)?","0.2","0.3","0.5","Cannot be determined","A","B","C","D","A","MCQ","LR","Puzzles: Mathematical / Number-based","Hard","weighted average, system of equations, constraint satisfaction, elimination of cases","weighted average, system of equations, constraint satisfaction, elimination of cases","False","MockSet_TeamEval_FinalV3","Analysis","The weight for Cost-Effectiveness (wC) is 0.2. 
+Derivation:
+• Weights (wI, wT, wC) are distinct values from {0.2, 0.3, 0.5}. We also know wI < wT.
+• Alpha's data: 3.8 = wI*I_A + wT*T_A + wC*C_A. We are given I_A=5, T_A=3. So, 3.8 = 5*wI + 3*wT + C_A*wC. C_A is an integer from 1 to 5.
+• The only combination of weights that satisfies wI < wT is {wI=0.3, wT=0.5, wC=0.2}.
+• Let's test this: 3.8 = 5(0.3) + 3(0.5) + C_A(0.2) = 1.5 + 1.5 + 0.2*C_A = 3.0 + 0.2*C_A.
+• This gives 0.8 = 0.2*C_A, which means C_A = 4. This is a valid integer score.
+• Thus, the weights must be wI=0.3, wT=0.5, wC=0.2. The weight for Cost-Effectiveness (wC) is 0.2."
+"Logical Reasoning and Data Interpretation","","Q35","11","Set3_TeamEval","Four project teams (Alpha, Beta, Gamma, Delta) were evaluated on three criteria: Innovation (I), Timeliness (T), and Cost-Effectiveness (C). Each criterion was scored on a scale of 1 to 5 (integers only). An Overall Performance Score (OPS) was calculated using weights: OPS = wII + wTT + wC*C. The weights (wI, wT, wC) are distinct values from the set {0.2, 0.3, 0.5}.
+Known Information:
+•	No two teams had the same score on any single criterion.
+•	Team Alpha's OPS was 3.8. Alpha scored 5 in Innovation and 3 in Timeliness.
+•	Team Beta scored 4 in Innovation and 2 in Cost-Effectiveness. Beta's OPS was 3.6.
+•	Team Gamma scored 1 in Timeliness. Gamma's score in Cost-Effectiveness was 2 points higher than its score in Innovation. Gamma's OPS was 2.4.
+•	Team Delta scored 3 in Cost-Effectiveness. Delta's score in Innovation was equal to its score in Timeliness.
+•	The weight for Innovation (wI) was less than the weight for Timeliness (wT).
+•	The sum of scores for all teams in the Timeliness criterion was 10.","What was Team Beta's score in Timeliness (T)?","1","2","4","5","A","B","C","D","C","MCQ","LR","Puzzles: Mathematical / Number-based","Hard","constraint satisfaction (distinct scores), interconnected deductions","constraint satisfaction (distinct scores), interconnected deductions","False","MockSet_TeamEval_FinalV3","Analysis","Team Beta's score in Timeliness (T_B) is 4. 
+Derivation:
+• From Q10, we know the weights are wI=0.3, wT=0.5, wC=0.2.
+• For Beta: I_B=4, C_B=2, OPS_B=3.6.
+• 3.6 = wI*I_B + wT*T_B + wC*C_B
+• 3.6 = 0.3(4) + 0.5(T_B) + 0.2(2)
+• 3.6 = 1.2 + 0.5*T_B + 0.4
+• 3.6 = 1.6 + 0.5*T_B
+• 2.0 = 0.5*T_B => T_B = 4."
+"Logical Reasoning and Data Interpretation","","Q36","12","Set3_TeamEval","Four project teams (Alpha, Beta, Gamma, Delta) were evaluated on three criteria: Innovation (I), Timeliness (T), and Cost-Effectiveness (C). Each criterion was scored on a scale of 1 to 5 (integers only). An Overall Performance Score (OPS) was calculated using weights: OPS = wII + wTT + wC*C. The weights (wI, wT, wC) are distinct values from the set {0.2, 0.3, 0.5}.
+Known Information:
+•	No two teams had the same score on any single criterion.
+•	Team Alpha's OPS was 3.8. Alpha scored 5 in Innovation and 3 in Timeliness.
+•	Team Beta scored 4 in Innovation and 2 in Cost-Effectiveness. Beta's OPS was 3.6.
+•	Team Gamma scored 1 in Timeliness. Gamma's score in Cost-Effectiveness was 2 points higher than its score in Innovation. Gamma's OPS was 2.4.
+•	Team Delta scored 3 in Cost-Effectiveness. Delta's score in Innovation was equal to its score in Timeliness.
+•	The weight for Innovation (wI) was less than the weight for Timeliness (wT).
+•	The sum of scores for all teams in the Timeliness criterion was 10.","What was Team Delta's Overall Performance Score (OPS)?","2.1","2.2","3.1","3.7","A","B","C","D","B","MCQ","LR","Puzzles: Mathematical / Number-based","Hard","deriving unknown scores, application of weights, OPS calculation","deriving unknown scores, application of weights, OPS calculation","False","MockSet_TeamEval_FinalV3","Analysis","Team Delta's Overall Performance Score (OPS_D) is 2.2.
+Derivation:
+• First, find Delta's scores. We know T_A=3, T_B=4 (from Q11), T_G=1. The sum of T scores is 10. So, T_D = 10 - 3 - 4 - 1 = 2.
+• For Delta, I_D = T_D, so I_D=2. We are given C_D=3.
+• Using the weights wI=0.3, wT=0.5, wC=0.2:
+• OPS_D = wI*I_D + wT*T_D + wC*C_D = 0.3(2) + 0.5(2) + 0.2(3) = 0.6 + 1.0 + 0.6 = 2.2."
+"Logical Reasoning and Data Interpretation","","Q37","13","Set3_TeamEval","Four project teams (Alpha, Beta, Gamma, Delta) were evaluated on three criteria: Innovation (I), Timeliness (T), and Cost-Effectiveness (C). Each criterion was scored on a scale of 1 to 5 (integers only). An Overall Performance Score (OPS) was calculated using weights: OPS = wII + wTT + wC*C. The weights (wI, wT, wC) are distinct values from the set {0.2, 0.3, 0.5}.
+Known Information:
+•	No two teams had the same score on any single criterion.
+•	Team Alpha's OPS was 3.8. Alpha scored 5 in Innovation and 3 in Timeliness.
+•	Team Beta scored 4 in Innovation and 2 in Cost-Effectiveness. Beta's OPS was 3.6.
+•	Team Gamma scored 1 in Timeliness. Gamma's score in Cost-Effectiveness was 2 points higher than its score in Innovation. Gamma's OPS was 2.4.
+•	Team Delta scored 3 in Cost-Effectiveness. Delta's score in Innovation was equal to its score in Timeliness.
+•	The weight for Innovation (wI) was less than the weight for Timeliness (wT).
+•	The sum of scores for all teams in the Timeliness criterion was 10.","Which team had the highest Overall Performance Score (OPS)?","Alpha","Beta","Gamma","Delta","A","B","C","D","A","MCQ","LR","Puzzles: Mathematical / Number-based","Hard","comparative analysis of OPS from derived scores","comparative analysis of OPS from derived scores","False","MockSet_TeamEval_FinalV3","Evaluation","The OPS scores for the teams are:
+• Alpha: 3.8 (given)
+• Beta: 3.6 (given)
+• Delta: 2.2 (calculated in Q12)
+• Gamma: 2.4 (given)
+Comparing the scores {3.8, 3.6, 2.4, 2.2}, the highest score belongs to Team Alpha."
+"Logical Reasoning and Data Interpretation","","Q38","14","Set4_Enrollment","A university offers three elective courses: Advanced Analytics (AA), Behavioral Economics (BE), and Strategic Leadership (SL). A total of 250 students are enrolled in at least one of these electives.
+Data on Enrollment:
+•	The number of students enrolled in AA only is equal to the number of students enrolled in BE only, and this number is also equal to the number of students enrolled in SL only. Let this number be X.
+•	The number of students enrolled in exactly two courses is 90.
+•	Among those enrolled in exactly two courses:
+o	Students in (AA and BE, but not SL), let this be N_AB, is 5 more than students in (AA and SL, but not BE), let this be N_AS. So N_AB = N_AS + 5.
+o	Students in (BE and SL, but not AA), let this be N_BS, is 10 less than N_AB. So N_BS = N_AB - 10.
+•	The number of students enrolled in SL (total) is 115.
+•	The number of students enrolled in BE (total) is 120.
+•	The number of students enrolled in all three courses (AA, BE, and SL), let this be N_ABC, is 20% of X (the number of students enrolled only in AA). (i.e., N_ABC = 0.20 * X).","How many students are enrolled in all three courses (AA, BE, and SL)?","5","10","15","20","A","B","C","D","B","MCQ","DI","Venn Diagrams / Set Theory (LR focus)","Hard","set theory, system of linear equations, percentage interpretation, integer solutions, consistency analysis","set theory, system of linear equations, percentage interpretation, integer solutions, consistency analysis","False","MockSet_CourseEnroll_FinalV3","Analysis","Students enrolled in all three courses (N_ABC) = 10.
+Derivation:
+1. Solve for 'exactly two' enrollments: N_AB + N_AS + N_BS = 90. Given N_AB = N_AS+5 and N_BS = N_AB-10 = (N_AS+5)-10 = N_AS-5. Substitute into the sum: (N_AS+5) + N_AS + (N_AS-5) = 90 => 3*N_AS = 90 => N_AS=30. From this, N_AB=35 and N_BS=25.
+2. Set up the total enrollment equation: Total = (Only AA + Only BE + Only SL) + (Exactly Two) + (All Three) = 250. This becomes: 3*X + 90 + N_ABC = 250.
+3. Use the relation N_ABC = 0.2*X. Substitute into the equation: 3X + 90 + 0.2X = 250 => 3.2X = 160 => X = 50.
+4. Calculate N_ABC: N_ABC = 0.2 * X = 0.2 * 50 = 10."
+"Logical Reasoning and Data Interpretation","","Q39","15","Set4_Enrollment","A university offers three elective courses: Advanced Analytics (AA), Behavioral Economics (BE), and Strategic Leadership (SL). A total of 250 students are enrolled in at least one of these electives.
+Data on Enrollment:
+•	The number of students enrolled in AA only is equal to the number of students enrolled in BE only, and this number is also equal to the number of students enrolled in SL only. Let this number be X.
+•	The number of students enrolled in exactly two courses is 90.
+•	Among those enrolled in exactly two courses:
+o	Students in (AA and BE, but not SL), let this be N_AB, is 5 more than students in (AA and SL, but not BE), let this be N_AS. So N_AB = N_AS + 5.
+o	Students in (BE and SL, but not AA), let this be N_BS, is 10 less than N_AB. So N_BS = N_AB - 10.
+•	The number of students enrolled in SL (total) is 115.
+•	The number of students enrolled in BE (total) is 120.
+•	The number of students enrolled in all three courses (AA, BE, and SL), let this be N_ABC, is 20% of X (the number of students enrolled only in AA). (i.e., N_ABC = 0.20 * X).","How many students are enrolled in AA only?","25","40","50","60","A","B","C","D","C","MCQ","DI","Venn Diagrams / Set Theory (LR focus)","Hard","set theory, direct deduction from solved system values","set theory, direct deduction from solved system values","False","MockSet_CourseEnroll_FinalV3","Analysis","The number of students enrolled in AA only is represented by X. As calculated in the solution for the previous question, we derived 3.2X = 160, which gives X = 50."
+"Logical Reasoning and Data Interpretation","","Q40","16","Set4_Enrollment","A university offers three elective courses: Advanced Analytics (AA), Behavioral Economics (BE), and Strategic Leadership (SL). A total of 250 students are enrolled in at least one of these electives.
+Data on Enrollment:
+•	The number of students enrolled in AA only is equal to the number of students enrolled in BE only, and this number is also equal to the number of students enrolled in SL only. Let this number be X.
+•	The number of students enrolled in exactly two courses is 90.
+•	Among those enrolled in exactly two courses:
+o	Students in (AA and BE, but not SL), let this be N_AB, is 5 more than students in (AA and SL, but not BE), let this be N_AS. So N_AB = N_AS + 5.
+o	Students in (BE and SL, but not AA), let this be N_BS, is 10 less than N_AB. So N_BS = N_AB - 10.
+•	The number of students enrolled in SL (total) is 115.
+•	The number of students enrolled in BE (total) is 120.
+•	The number of students enrolled in all three courses (AA, BE, and SL), let this be N_ABC, is 20% of X (the number of students enrolled only in AA). (i.e., N_ABC = 0.20 * X).","What is the total number of students enrolled in Advanced Analytics (AA)?","115","120","125","130","A","B","C","D","C","MCQ","DI","Venn Diagrams / Set Theory (LR focus)","Hard","set theory, calculating total for a specific set, summation of components","set theory, calculating total for a specific set, summation of components","False","MockSet_CourseEnroll_FinalV3","Analysis","Total students in AA = (AA only) + (AA and BE only) + (AA and SL only) + (All three).
+Using the derived values: X + N_AB + N_AS + N_ABC = 50 + 35 + 30 + 10 = 125."
+"Logical Reasoning and Data Interpretation","","Q41","17","Set4_Enrollment","A university offers three elective courses: Advanced Analytics (AA), Behavioral Economics (BE), and Strategic Leadership (SL). A total of 250 students are enrolled in at least one of these electives.
+Data on Enrollment:
+•	The number of students enrolled in AA only is equal to the number of students enrolled in BE only, and this number is also equal to the number of students enrolled in SL only. Let this number be X.
+•	The number of students enrolled in exactly two courses is 90.
+•	Among those enrolled in exactly two courses:
+o	Students in (AA and BE, but not SL), let this be N_AB, is 5 more than students in (AA and SL, but not BE), let this be N_AS. So N_AB = N_AS + 5.
+o	Students in (BE and SL, but not AA), let this be N_BS, is 10 less than N_AB. So N_BS = N_AB - 10.
+•	The number of students enrolled in SL (total) is 115.
+•	The number of students enrolled in BE (total) is 120.
+•	The number of students enrolled in all three courses (AA, BE, and SL), let this be N_ABC, is 20% of X (the number of students enrolled only in AA). (i.e., N_ABC = 0.20 * X).","How many students are enrolled in SL but not in BE?","40","50","70","80","A","B","C","D","D","MCQ","DI","Venn Diagrams / Set Theory (LR focus)","Hard","set theory, calculating specific overlaps and exclusions","set theory, calculating specific overlaps and exclusions","False","MockSet_CourseEnroll_FinalV3","Analysis","Students enrolled in SL but not in BE are composed of two distinct groups: those enrolled in 'SL only' and those enrolled in 'SL and AA only'.
+This is calculated as (SL only) + N_AS. 
+Using the derived values: X + N_AS = 50 + 30 = 80."
+"Logical Reasoning and Data Interpretation","","Q42","18","Set4_Enrollment","A university offers three elective courses: Advanced Analytics (AA), Behavioral Economics (BE), and Strategic Leadership (SL). A total of 250 students are enrolled in at least one of these electives.
+Data on Enrollment:
+•	The number of students enrolled in AA only is equal to the number of students enrolled in BE only, and this number is also equal to the number of students enrolled in SL only. Let this number be X.
+•	The number of students enrolled in exactly two courses is 90.
+•	Among those enrolled in exactly two courses:
+o	Students in (AA and BE, but not SL), let this be N_AB, is 5 more than students in (AA and SL, but not BE), let this be N_AS. So N_AB = N_AS + 5.
+o	Students in (BE and SL, but not AA), let this be N_BS, is 10 less than N_AB. So N_BS = N_AB - 10.
+•	The number of students enrolled in SL (total) is 115.
+•	The number of students enrolled in BE (total) is 120.
+•	The number of students enrolled in all three courses (AA, BE, and SL), let this be N_ABC, is 20% of X (the number of students enrolled only in AA). (i.e., N_ABC = 0.20 * X).","If 5 students who were enrolled in all three courses dropped BE (but remained enrolled in AA and SL), what would be the new number of students enrolled in SL only?","50","55","60","65","A","B","C","D","A","MCQ","DI","Venn Diagrams / Set Theory (LR focus)","Hard","conditional change analysis, impact on set component counts","conditional change analysis, impact on set component counts","False","MockSet_CourseEnroll_FinalV3","Evaluation","The change described involves students moving from the 'all three' category (AA & BE & SL) to the 'AA & SL only' category. This change affects the counts of N_ABC (decreases by 5) and N_AS (increases by 5). It does not affect the number of students who are enrolled in 'SL only', as those students are, by definition, not enrolled in AA or BE. Therefore, the number of students in SL only remains unchanged at 50."
+"Logical Reasoning and Data Interpretation","","Q43_revised","19","Set5_Scheduling","Five speakers (S1, S2, S3, S4, S5), who are distinct individuals, are to be scheduled for five consecutive time slots (Slot 1 to Slot 5) at a conference. Each slot will have exactly one speaker. Each speaker is from one of two domains: Technology (Tech) or Management (Mgmt).
+Scheduling Conditions (Revised):
+1.	There are three Tech speakers and two Mgmt speakers.
+2.	S1 (the person) is a Tech speaker.
+3.	S3 (the person) is a Tech speaker.
+4.	S4 (the person) is a Mgmt speaker and is not scheduled in Slot 1 or Slot 5.
+5.	No two Mgmt speakers are scheduled in consecutive slots.
+6.	S2 (the person) is scheduled in Slot 3.
+7.	S5 (the person) is a Management speaker.
+8.	S1 is scheduled in Slot 2, and S3 is scheduled in Slot 5.","In which slot is Speaker S4 scheduled?","Slot 1","Slot 2","Slot 3","Slot 4","A","B","C","D","D","MCQ","LR","Arrangements: Linear","Hard","scheduling, multiple constraints, logical deduction, slot assignment","scheduling, multiple constraints, logical deduction, slot assignment","False","MockSet_ConfSpeakers_FinalV3_Revised","Analysis","Speaker S4 is scheduled in Slot 4.
+Derivation of the full schedule:
+1. Fixed Positions: S1 in Slot 2 (C8), S2 in Slot 3 (C6), S3 in Slot 5 (C8).
+2. Current Schedule: __ (Slot 1), S1 (Slot 2), S2 (Slot 3), __ (Slot 4), S3 (Slot 5).
+3. S4(Mgmt) cannot be in Slot 1 or 5 (C4). The only available slots are 1 and 4. Therefore, S4 must be in Slot 4.
+4. Current Schedule: __ (Slot 1), S1 (Slot 2), S2 (Slot 3), S4 (Slot 4), S3 (Slot 5).
+5. The only remaining speaker is S5, who must go in the last empty slot, Slot 1.
+6. Final Schedule: S5 | S1 | S2 | S4 | S3. This confirms S4 is in Slot 4."
+"Logical Reasoning and Data Interpretation","","Q44_revised","20","Set5_Scheduling","Five speakers (S1, S2, S3, S4, S5), who are distinct individuals, are to be scheduled for five consecutive time slots (Slot 1 to Slot 5) at a conference. Each slot will have exactly one speaker. Each speaker is from one of two domains: Technology (Tech) or Management (Mgmt).
+Scheduling Conditions (Revised):
+1.	There are three Tech speakers and two Mgmt speakers.
+2.	S1 (the person) is a Tech speaker.
+3.	S3 (the person) is a Tech speaker.
+4.	S4 (the person) is a Mgmt speaker and is not scheduled in Slot 1 or Slot 5.
+5.	No two Mgmt speakers are scheduled in consecutive slots.
+6.	S2 (the person) is scheduled in Slot 3.
+7.	S5 (the person) is a Management speaker.
+8.	S1 is scheduled in Slot 2, and S3 is scheduled in Slot 5.","Which of the following correctly lists the domains of the speakers S1, S2, and S3 respectively?","Tech, Tech, Tech","Tech, Mgmt, Tech","Mgmt, Tech, Tech","Tech, Tech, Mgmt","A","B","C","D","A","MCQ","LR","Arrangements: Linear","Hard","scheduling, domain identification, deduction from constraints","scheduling, domain identification, deduction from constraints","False","MockSet_ConfSpeakers_FinalV3_Revised","Analysis","Domains are derived as follows:
+• S1 is Tech (Condition 2).
+• S3 is Tech (Condition 3).
+• S4 is Mgmt (Condition 4).
+• S5 is Mgmt (Condition 7).
+• There are three Tech speakers and two Mgmt speakers in total (Condition 1). We have identified two Tech (S1, S3) and two Mgmt (S4, S5) speakers. The remaining speaker, S2, must be the third Tech speaker.
+• Therefore, S1, S2, and S3 are all Tech speakers."
+"Logical Reasoning and Data Interpretation","","Q45_revised","21","Set5_Scheduling","Five speakers (S1, S2, S3, S4, S5), who are distinct individuals, are to be scheduled for five consecutive time slots (Slot 1 to Slot 5) at a conference. Each slot will have exactly one speaker. Each speaker is from one of two domains: Technology (Tech) or Management (Mgmt).
+Scheduling Conditions (Revised):
+1.	There are three Tech speakers and two Mgmt speakers.
+2.	S1 (the person) is a Tech speaker.
+3.	S3 (the person) is a Tech speaker.
+4.	S4 (the person) is a Mgmt speaker and is not scheduled in Slot 1 or Slot 5.
+5.	No two Mgmt speakers are scheduled in consecutive slots.
+6.	S2 (the person) is scheduled in Slot 3.
+7.	S5 (the person) is a Management speaker.
+8.	S1 is scheduled in Slot 2, and S3 is scheduled in Slot 5.","Who is scheduled in Slot 1?","S1","S2","S4","S5","A","B","C","D","D","MCQ","LR","Arrangements: Linear","Hard","scheduling, speaker identification, direct deduction from schedule","scheduling, speaker identification, direct deduction from schedule","False","MockSet_ConfSpeakers_FinalV3_Revised","Analysis","Based on the fully derived schedule [S5 | S1 | S2 | S4 | S3], the speaker in Slot 1 is S5."
+"Logical Reasoning and Data Interpretation","","Q46_revised","22","Set5_Scheduling","Five speakers (S1, S2, S3, S4, S5), who are distinct individuals, are to be scheduled for five consecutive time slots (Slot 1 to Slot 5) at a conference. Each slot will have exactly one speaker. Each speaker is from one of two domains: Technology (Tech) or Management (Mgmt).
+Scheduling Conditions (Revised):
+1.	There are three Tech speakers and two Mgmt speakers.
+2.	S1 (the person) is a Tech speaker.
+3.	S3 (the person) is a Tech speaker.
+4.	S4 (the person) is a Mgmt speaker and is not scheduled in Slot 1 or Slot 5.
+5.	No two Mgmt speakers are scheduled in consecutive slots.
+6.	S2 (the person) is scheduled in Slot 3.
+7.	S5 (the person) is a Management speaker.
+8.	S1 is scheduled in Slot 2, and S3 is scheduled in Slot 5.","If, due to a last-minute change, the speaker in Slot 4 (originally S4) and Slot 5 (originally S3) were to swap their slots (their domains remaining S4(M) and S3(T)), which condition would then be violated?","Condition 4: S4 (the person) is a Mgmt speaker and is not scheduled in Slot 1 or Slot 5.","Condition 5: No two Mgmt speakers are scheduled in consecutive slots.","Condition 8: S3 is scheduled in Slot 5.","More than one condition would be violated.","A","B","C","D","D","MCQ","LR","Arrangements: Linear","Hard","scheduling, conditional change analysis, constraint violation identification, impact assessment","scheduling, conditional change analysis, constraint violation identification, impact assessment","False","MockSet_ConfSpeakers_FinalV3_Revised","Evaluation","Original schedule: S5(M) | S1(T) | S2(T) | S4(M) | S3(T).
+New schedule after swapping Slot 4 and Slot 5 speakers: S5(M) | S1(T) | S2(T) | S3(T) | S4(M).
+Let's check the conditions against the new schedule:
+- Condition 4: 'S4...is not scheduled in Slot 1 or Slot 5.' In the new schedule, S4 is in Slot 5. This condition is VIOLATED.
+- Condition 5: 'No two Mgmt speakers are scheduled in consecutive slots.' The Mgmt speakers are S5 (Slot 1) and S4 (Slot 5). They are not consecutive. This condition is NOT violated.
+- Condition 8: 'S1 is scheduled in Slot 2, and S3 is scheduled in Slot 5.' In the new schedule, S3 is in Slot 4, not Slot 5. This condition is VIOLATED.
+Since both Condition 4 and Condition 8 are violated, the correct answer is that more than one condition would be violated."

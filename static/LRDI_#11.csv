@@ -1,0 +1,481 @@
+"SectionName","SectionTimeLimitMinutes","QuestionUniqueID","QuestionNumberInSection","PassageOrSetID","PassageOrSetContent","QuestionPrompt","OptionAText","OptionBText","OptionCText","OptionDText","OptionAValue","OptionBValue","OptionCValue","OptionDValue","CorrectAnswerValue","QuestionType","Topic","SubTopic","DifficultyLevelPredicted","ConceptTested","DetailedTags","IsTITA","SetID","CognitiveSkillLevel","SolutionExplanation"
+"Part 1: All Questions","","MOCKXYZ001_Q1","1","MOCKXYZ001_Set1_GrandSlam","The Grand Slam Tennis Tournament is a 64-player single-elimination knockout event. Players are seeded from 1 (highest) to 64 (lowest) before the first round. In any match, if an upset does not occur, the higher-seeded player (lower numerical seed value) wins. An upset occurs if a lower-seeded player (higher numerical seed value) defeats a higher-seeded player. The tournament has 6 rounds (Round 1, Round 2, Round 3, Quarterfinals, Semifinals, Final).
+Additional Information:
+1.	The total number of upsets in the entire tournament was exactly 5.
+2.	No player seeded 33 or lower won more than one match in the tournament. Any player seeded 33 or lower who won a match in Round 1 was eliminated in Round 2 by a player seeded in the top 32.
+3.	Exactly two players seeded in the top 8 lost in Round 1. Both were defeated by players seeded between 33 and 40 (inclusive).
+4.	The player seeded 1 won the tournament by defeating player seeded 6 in the Final.
+5.	Player seeded 2 lost in a Semifinal match to player seeded 1.
+6.	Player seeded 3 won their first two matches and was then eliminated in Round 3 by player seeded 14. Player seeded 14 was subsequently eliminated in the Quarterfinals.
+7.	Exactly one player seeded between 9 and 16 (inclusive) reached the Quarterfinals. This player was seeded 14.
+8.	Of the 5 upsets in the tournament, two occurred in Round 1 (as per clue 3). Of the remaining three upsets, exactly two occurred in Round 2 and these involved a player seeded 9-16 losing to a player seeded 17-32. The final upset occurred in Round 3.","What was the lowest possible seed of a player who reached the Quarterfinals?","14","19","20","21","A","B","C","D","D","MCQ","Logical Reasoning","Games & Tournaments, Knockout Tournament","Difficult","constraint satisfaction, tournament structure, seeding, upsets, logical deduction, path reconstruction","constraint satisfaction, tournament structure, seeding, upsets, logical deduction, path reconstruction","False","MOCKXYZ001_Set1_GrandSlam","Logical Deduction","1. Based on the deduction above, the QFists are 5 from Top-8, S14, and two from 17-32 (e.g., S_Upset_17/32_C and S_Upset_17/32_D).
+2. Let's consider specific seeds for the two 17-32 QFists. They caused upsets in R2 against 9-16 seeds. Suppose S20 (seed 20) beat S12 and S21 (seed 21) beat S11. These are the two players from 17-32 who reach QF.
+3. The group of QFist seeds would be {S1, S2, S6, T8_Rem1, T8_Rem2 (e.g., S4, S7)}, {S14}, {S20, S21}.
+4. The lowest seed (highest numerical value) among these example QF seeds is 21.
+    If S19 and S20 were the 17-32 QFists, lowest would be 20. If S21 and S22 were the 17-32 QFists, lowest would be 22.
+    To find the *lowest possible seed*, we want the highest numerical value among the two 17-32 QFists. Standard tournament pairings often try to make sums of seeds in a round section consistent. E.g., in a section of 16, seed 9 plays 24, 10 plays 23, 11 plays 22, 12 plays 21. If seed 21 (17-32 range) upsets seed 12 (9-16 range), and seed 22 (17-32 range) upsets seed 11 (9-16 range), then 21 and 22 are potential QFists from this group.
+    If S21 and S22 reach QF, the lowest seed among all QFists is S22.
+    Consider pairings in R2: (9 vs 24), (10 vs 23), (11 vs 22), (12 vs 21), (13 vs 20), (14 vs 19), (15 vs 18), (16 vs 17).
+    If the two R2 upsets are by S21 (def. S12) and S20 (def. S13), then S20 and S21 reach QF (after their R3 wins). The highest numerical seed among QFists would be 21.
+    Thus, the lowest seed (highest numerical value) that can reach the QF from this group is 21. (If S17-S32 were S_Upset_C and S_Upset_D, the max possible seed is 32. But they must beat seeds from 9-16. For S32 to beat S9, S10, ... S16 is possible).
+    The question asks for the lowest possible seed (highest numerical value). The player seeds from the 17-32 group that reach QF are S_Upset_17/32_C and S_Upset_17/32_D. The highest these could be is S32, but they would need to beat someone from 9-16 and then win R3. Example QF list seeds: S1, S2, S4, S6, S7, S14, S20, S21. Lowest seed here is 21.
+    This fits option D."
+"Part 1: All Questions","","MOCKXYZ001_Q2","2","MOCKXYZ001_Set1_GrandSlam","The Grand Slam Tennis Tournament is a 64-player single-elimination knockout event. Players are seeded from 1 (highest) to 64 (lowest) before the first round. In any match, if an upset does not occur, the higher-seeded player (lower numerical seed value) wins. An upset occurs if a lower-seeded player (higher numerical seed value) defeats a higher-seeded player. The tournament has 6 rounds (Round 1, Round 2, Round 3, Quarterfinals, Semifinals, Final).
+Additional Information:
+1.	The total number of upsets in the entire tournament was exactly 5.
+2.	No player seeded 33 or lower won more than one match in the tournament. Any player seeded 33 or lower who won a match in Round 1 was eliminated in Round 2 by a player seeded in the top 32.
+3.	Exactly two players seeded in the top 8 lost in Round 1. Both were defeated by players seeded between 33 and 40 (inclusive).
+4.	The player seeded 1 won the tournament by defeating player seeded 6 in the Final.
+5.	Player seeded 2 lost in a Semifinal match to player seeded 1.
+6.	Player seeded 3 won their first two matches and was then eliminated in Round 3 by player seeded 14. Player seeded 14 was subsequently eliminated in the Quarterfinals.
+7.	Exactly one player seeded between 9 and 16 (inclusive) reached the Quarterfinals. This player was seeded 14.
+8.	Of the 5 upsets in the tournament, two occurred in Round 1 (as per clue 3). Of the remaining three upsets, exactly two occurred in Round 2 and these involved a player seeded 9-16 losing to a player seeded 17-32. The final upset occurred in Round 3.","Which of the following statements MUST be true?","Player seeded 4 reached the Semifinals.","No player seeded 17-32 reached the Semifinals.","Player seeded 7 was eliminated in the Quarterfinals.","Player seeded 14 won exactly two matches in the tournament.","A","B","C","D","B","MCQ","Logical Reasoning","Games & Tournaments, Knockout Tournament","Difficult","constraint satisfaction, logical necessity, player progression, upsets, consistency check","constraint satisfaction, logical necessity, player progression, upsets, consistency check","False","MOCKXYZ001_Set1_GrandSlam","Logical Deduction","1. Quarterfinalists are: 5 from Top-8 (S1, S2, S6, T8_Rem1, T8_Rem2), S14, and two from 17-32 (e.g., S20, S21).
+2. QF Matches (no upsets allowed here as all 5 are accounted for):
+    *   S1 def. one of {S20, S21}
+    *   S2 def. the other of {S20, S21}
+    *   S6 def. S14
+    *   T8_Rem1 def. T8_Rem2 (assuming T8_Rem1 is higher seeded than T8_Rem2, e.g. S4 def. S7).
+3. Semifinalists are the winners: S1, S2, S6, and T8_Rem1 (a Top-8 seed).
+4. All four semifinalists are from the Top-8 seeds. Therefore, no player seeded 17-32 reached the Semifinals. This statement (B) MUST be true.
+5. Let's check other options:
+    A) Player seeded 4 reached the Semifinals. Not necessarily. S4 could be one of T8_Loser1 or T8_Loser2 (eliminated R1). If S4 is not an R1 loser, S4 would be T8_Rem1 (if S4 is the highest seed among T8_Rem1, T8_Rem2) and would reach SF. But if, for example, S4 and S5 were R1 losers, then T8_Rem1 would be S7 (assuming S7 def. S8 in QF), so S4 wouldn't reach SF. Thus, A is not ""MUST be true"".
+    C) Player seeded 7 was eliminated in the Quarterfinals. Not necessarily. If S4 and S5 were R1 losers, then T8_Rem1 could be S7 (def. S8 in QF), and S7 would reach SF. If S7 was an R1 loser, it was eliminated in R1. If S7 was T8_Rem2 and lost to S4 (T8_Rem1) in QF, then C is true. Since S7's fate varies, C is not ""MUST be true"".
+    D) Player seeded 14 won exactly two matches. S14 won R1 (no upset), R2 (no upset), and R3 (upset vs S3). That's 3 wins before losing in QF. So, D is false.
+Statement B is true."
+"Part 1: All Questions","","MOCKXYZ001_Q3","3","MOCKXYZ001_Set1_GrandSlam","The Grand Slam Tennis Tournament is a 64-player single-elimination knockout event. Players are seeded from 1 (highest) to 64 (lowest) before the first round. In any match, if an upset does not occur, the higher-seeded player (lower numerical seed value) wins. An upset occurs if a lower-seeded player (higher numerical seed value) defeats a higher-seeded player. The tournament has 6 rounds (Round 1, Round 2, Round 3, Quarterfinals, Semifinals, Final).
+Additional Information:
+1.	The total number of upsets in the entire tournament was exactly 5.
+2.	No player seeded 33 or lower won more than one match in the tournament. Any player seeded 33 or lower who won a match in Round 1 was eliminated in Round 2 by a player seeded in the top 32.
+3.	Exactly two players seeded in the top 8 lost in Round 1. Both were defeated by players seeded between 33 and 40 (inclusive).
+4.	The player seeded 1 won the tournament by defeating player seeded 6 in the Final.
+5.	Player seeded 2 lost in a Semifinal match to player seeded 1.
+6.	Player seeded 3 won their first two matches and was then eliminated in Round 3 by player seeded 14. Player seeded 14 was subsequently eliminated in the Quarterfinals.
+7.	Exactly one player seeded between 9 and 16 (inclusive) reached the Quarterfinals. This player was seeded 14.
+8.	Of the 5 upsets in the tournament, two occurred in Round 1 (as per clue 3). Of the remaining three upsets, exactly two occurred in Round 2 and these involved a player seeded 9-16 losing to a player seeded 17-32. The final upset occurred in Round 3.","Who defeated player seeded 4 in the tournament?","Player seeded 1","Player seeded 2","Player seeded 6","Player seeded 7","A","B","C","D","C","MCQ","Logical Reasoning","Games & Tournaments, Knockout Tournament","Difficult","constraint satisfaction, path reconstruction, tournament bracket logic, opponent identification","constraint satisfaction, path reconstruction, tournament bracket logic, opponent identification","False","MOCKXYZ001_Set1_GrandSlam","Logical Deduction","1. The question asks who defeated player seeded 4 (S4).
+2. If S4 was one of the two Top-8 seeds who lost in Round 1 (Clue 3), S4 was defeated by a player seeded 33-40. This option is not available, implying S4 progressed further.
+3. If S4 is not an R1 loser: S4 is one of T8_Remaining1 or T8_Remaining2. The pool for these two and the two R1 Top-8 losers is {S4, S5, S7, S8}.
+4. S4 is the highest seed in this pool {S4,S5,S7,S8}. If S4 is not an R1 loser, S4 must be T8_Remaining1 (the winner of the QF match between T8_Remaining1 and T8_Remaining2). S4 would defeat T8_Remaining2 (e.g., S5, S7, or S8) in the Quarterfinals (no upset).
+5. The Semifinalists are S1, S2, S6, and S4 (as T8_Remaining1).
+6. The Semifinal pairings are (S1 vs S2) and (S6 vs S4) (Clue 5 implies S1 and S2 are in one SF; therefore, S6 and S4 must be in the other).
+7. S1 won the tournament by defeating S6 in the Final (Clue 4). So S6 won its Semifinal.
+8. Therefore, in the Semifinal S6 vs S4, S6 defeated S4.
+Player seeded 4 was defeated by player seeded 6."
+"Part 1: All Questions","","MOCKXYZ001_Q4","4","MOCKXYZ001_Set1_GrandSlam","The Grand Slam Tennis Tournament is a 64-player single-elimination knockout event. Players are seeded from 1 (highest) to 64 (lowest) before the first round. In any match, if an upset does not occur, the higher-seeded player (lower numerical seed value) wins. An upset occurs if a lower-seeded player (higher numerical seed value) defeats a higher-seeded player. The tournament has 6 rounds (Round 1, Round 2, Round 3, Quarterfinals, Semifinals, Final).
+Additional Information:
+1.	The total number of upsets in the entire tournament was exactly 5.
+2.	No player seeded 33 or lower won more than one match in the tournament. Any player seeded 33 or lower who won a match in Round 1 was eliminated in Round 2 by a player seeded in the top 32.
+3.	Exactly two players seeded in the top 8 lost in Round 1. Both were defeated by players seeded between 33 and 40 (inclusive).
+4.	The player seeded 1 won the tournament by defeating player seeded 6 in the Final.
+5.	Player seeded 2 lost in a Semifinal match to player seeded 1.
+6.	Player seeded 3 won their first two matches and was then eliminated in Round 3 by player seeded 14. Player seeded 14 was subsequently eliminated in the Quarterfinals.
+7.	Exactly one player seeded between 9 and 16 (inclusive) reached the Quarterfinals. This player was seeded 14.
+8.	Of the 5 upsets in the tournament, two occurred in Round 1 (as per clue 3). Of the remaining three upsets, exactly two occurred in Round 2 and these involved a player seeded 9-16 losing to a player seeded 17-32. The final upset occurred in Round 3.","What is the sum of the seeds of the two players who lost in the Semifinals (other than the overall runner-up)?","3","6","9","Cannot be determined","A","B","C","D","D","MCQ","Logical Reasoning","Games & Tournaments, Knockout Tournament","Difficult","tournament structure, semi-finalists, seed identification, summation, ambiguity resolution","tournament structure, semi-finalists, seed identification, summation, ambiguity resolution","False","MOCKXYZ001_Set1_GrandSlam","Logical Deduction","1. The overall runner-up is Player seeded 6 (lost to S1 in the Final, Clue 4).
+2. The two players who lost in the Semifinals are S2 (defeated by S1, Clue 5) and the player defeated by S6.
+3. From Q3's reasoning, the player defeated by S6 in the Semifinals is T8_Remaining1 (the higher-seeded player from the T8_Remaining1 vs T8_Remaining2 QF match).
+4. The identity of T8_Remaining1 depends on which two Top-8 seeds from {S4, S5, S7, S8} lost in Round 1.
+    *   Scenario 1: If S7 and S8 were the R1 losers, then T8_Remaining1 = S4 (who would have beaten S5 in QF). The SF losers are S2 and S4. Sum of their seeds = 2 + 4 = 6.
+    *   Scenario 2: If S4 and S5 were the R1 losers, then T8_Remaining1 = S7 (who would have beaten S8 in QF). The SF losers are S2 and S7. Sum of their seeds = 2 + 7 = 9.
+    *   Scenario 3: If S5 and S8 were the R1 losers, then T8_Remaining1 = S4 (who would have beaten S7 in QF). The SF losers are S2 and S4. Sum = 2 + 4 = 6.
+    *   Scenario 4: If S4 and S8 were the R1 losers, then T8_Remaining1 = S5 (who would have beaten S7 in QF). The SF losers are S2 and S5. Sum = 2 + 5 = 7. (Option 7 is not present, but this is a valid outcome).
+5. Since the sum can be 6 (Option B) or 9 (Option C), and depends on which Top-8 seeds lost in R1 (which is not uniquely determined by the clues), the sum cannot be determined."
+"Part 1: All Questions","","MOCKXYZ001_Q5","5","MOCKXYZ001_Set1_GrandSlam","The Grand Slam Tennis Tournament is a 64-player single-elimination knockout event. Players are seeded from 1 (highest) to 64 (lowest) before the first round. In any match, if an upset does not occur, the higher-seeded player (lower numerical seed value) wins. An upset occurs if a lower-seeded player (higher numerical seed value) defeats a higher-seeded player. The tournament has 6 rounds (Round 1, Round 2, Round 3, Quarterfinals, Semifinals, Final).
+Additional Information:
+1.	The total number of upsets in the entire tournament was exactly 5.
+2.	No player seeded 33 or lower won more than one match in the tournament. Any player seeded 33 or lower who won a match in Round 1 was eliminated in Round 2 by a player seeded in the top 32.
+3.	Exactly two players seeded in the top 8 lost in Round 1. Both were defeated by players seeded between 33 and 40 (inclusive).
+4.	The player seeded 1 won the tournament by defeating player seeded 6 in the Final.
+5.	Player seeded 2 lost in a Semifinal match to player seeded 1.
+6.	Player seeded 3 won their first two matches and was then eliminated in Round 3 by player seeded 14. Player seeded 14 was subsequently eliminated in the Quarterfinals.
+7.	Exactly one player seeded between 9 and 16 (inclusive) reached the Quarterfinals. This player was seeded 14.
+8.	Of the 5 upsets in the tournament, two occurred in Round 1 (as per clue 3). Of the remaining three upsets, exactly two occurred in Round 2 and these involved a player seeded 9-16 losing to a player seeded 17-32. The final upset occurred in Round 3.","How many players seeded outside the top 16 reached at least Round 3?","2","3","4","5","A","B","C","D","C","MCQ","Logical Reasoning","Games & Tournaments, Knockout Tournament","Difficult","player progression, counting, seed-based filtering, round qualification","player progression, counting, seed-based filtering, round qualification","False","MOCKXYZ001_Set1_GrandSlam","Logical Deduction","Players seeded outside the top 16 are those seeded 17 to 64. We need to find how many reached at least Round 3.
+1. Players seeded 33-64:
+    *   Two players seeded 33-40 (S_Upset_33/40_A, S_Upset_33/40_B) caused R1 upsets (Clue 3).
+    *   According to Clue 2, these players won only one match (R1) and were eliminated in Round 2. Thus, they did not reach Round 3.
+    *   Other players seeded 33+ either lost in R1 (if they played a Top-32 seed, no upset) or won at most one match and were out by R2 end (Clue 2). So, no player seeded 33+ reached Round 3.
+2. Players seeded 17-32:
+    *   Two players from this group (S_Upset_17/32_C, S_Upset_17/32_D) caused upsets in R2 against 9-16 seeds (Clue 8). By winning their R2 matches, they reached Round 3. (2 players)
+    *   Consider the two players S_Upset_33/40_A and S_Upset_33/40_B (seeds 33-40) who caused upsets in R1. According to Clue 2, these players were then eliminated in R2 by players seeded in the top 32. Let these top-32 winners be P_Top32_X and P_Top32_Y.
+    *   P_Top32_X and P_Top32_Y must be from the 17-32 seed range. In a standard draw, an R1 upset winner like S_Upset_33/40_A (e.g., S36 who beat S5) would typically play a seed from the 17-24 or 25-32 range in Round 2 (e.g., S28). S28 (a Top-32 player) defeats S36. This is not an upset for S28.
+    *   These two players (P_Top32_X, P_Top32_Y from the 17-32 range) win their R2 matches and thus reach Round 3. These players are distinct from S_Upset_17/32_C and S_Upset_17/32_D because their R2 wins were not upsets. (2 players)
+3. Any other player from 17-32, if they won R1, would typically play a 1-16 seed in R2. They would lose unless they caused an upset. All upsets are accounted for (2 in R2 by S_Upset_17/32_C/D, 1 in R3 by S14, 2 in R1 by S33-40). So no other 17-32 seed reaches R3.
+4. Total players seeded outside the top 16 reaching Round 3 = 2 (S_Upset_17/32_C and S_Upset_17/32_D) + 2 (P_Top32_X and P_Top32_Y) = 4 players. All these 4 players are from the 17-32 seed range."
+"Part 1: All Questions","","MOCKXYZ001_Q6","6","MOCKXYZ001_Set2_DigSite","An archaeologist is planning routes between key points at a dig site. The points are Camp (C), Relic Sites (R1, R2, R3, R4), and Tool Caches (T1, T2). All paths are bidirectional and the time taken to traverse a path segment is the same in either direction. Travel is only possible along the defined direct paths.
+Direct Path Travel Times:
+•	From Camp (C) to Relic Site 1 (R1) is 20 minutes.
+•	From Camp (C) to Relic Site 2 (R2) is 30 minutes.
+•	From Camp (C) to Tool Cache 1 (T1) is 15 minutes.
+•	From Relic Site 1 (R1) to Relic Site 3 (R3) is 25 minutes.
+•	From Relic Site 1 (R1) to Tool Cache 2 (T2) is 35 minutes.
+•	From Relic Site 2 (R2) to Relic Site 4 (R4) is 40 minutes.
+•	From Relic Site 2 (R2) to Tool Cache 2 (T2) is 20 minutes.
+•	From Relic Site 3 (R3) to Relic Site 4 (R4) is 10 minutes.
+•	From Tool Cache 1 (T1) to Tool Cache 2 (T2) is 50 minutes.","What is the shortest time required to travel from Camp (C) to Relic Site 4 (R4)?","55 minutes","60 minutes","65 minutes","70 minutes","A","B","C","D","A","MCQ","Data Interpretation","Network Diagram, Shortest Path","Moderate","pathfinding, time calculation, network analysis, visual interpretation","pathfinding, time calculation, network analysis, visual interpretation","False","MOCKXYZ001_Set2_DigSite","Optimization","To find the shortest time from Camp (C) to Relic Site 4 (R4):
+1.	Path C -> R2 -> R4: Time = (C to R2) + (R2 to R4) = 30 + 40 = 70 minutes.
+2.	Path C -> R1 -> R3 -> R4: Time = (C to R1) + (R1 to R3) + (R3 to R4) = 20 + 25 + 10 = 55 minutes.
+3.	Other paths involving T1 or T2 can be explored:
+    o   C -> T1 -> T2 -> R2 -> R4 = 15 + 50 + 20 + 40 = 125 minutes.
+    o   C -> R1 -> T2 -> R2 -> R4 = 20 + 35 + 20 + 40 = 115 minutes.
+The shortest path is C -> R1 -> R3 -> R4, taking 55 minutes."
+"Part 1: All Questions","","MOCKXYZ001_Q7","7","MOCKXYZ001_Set2_DigSite","An archaeologist is planning routes between key points at a dig site. The points are Camp (C), Relic Sites (R1, R2, R3, R4), and Tool Caches (T1, T2). All paths are bidirectional and the time taken to traverse a path segment is the same in either direction. Travel is only possible along the defined direct paths.
+Direct Path Travel Times:
+•	From Camp (C) to Relic Site 1 (R1) is 20 minutes.
+•	From Camp (C) to Relic Site 2 (R2) is 30 minutes.
+•	From Camp (C) to Tool Cache 1 (T1) is 15 minutes.
+•	From Relic Site 1 (R1) to Relic Site 3 (R3) is 25 minutes.
+•	From Relic Site 1 (R1) to Tool Cache 2 (T2) is 35 minutes.
+•	From Relic Site 2 (R2) to Relic Site 4 (R4) is 40 minutes.
+•	From Relic Site 2 (R2) to Tool Cache 2 (T2) is 20 minutes.
+•	From Relic Site 3 (R3) to Relic Site 4 (R4) is 10 minutes.
+•	From Tool Cache 1 (T1) to Tool Cache 2 (T2) is 50 minutes.","An archaeologist needs to travel from Relic Site 3 (R3) to Tool Cache 1 (T1), then proceed to Relic Site 2 (R2), and finally return to Relic Site 3 (R3). What is the minimum total travel time for this entire journey, assuming no time is spent at the intermediate points?","115 minutes","120 minutes","125 minutes","155 minutes","A","B","C","D","D","MCQ","Data Interpretation","Network Diagram, Route Planning","Moderate","sequential pathfinding, time summation, network optimization, multi-leg journey","sequential pathfinding, time summation, network optimization, multi-leg journey","False","MOCKXYZ001_Set2_DigSite","Optimization","The journey requires visiting points in the sequence R3 (start) -> T1 -> R2 -> R3 (end). We find the shortest time for each leg:
+1.	Leg 1: Shortest path from R3 to T1.
+    o   R3 -> R1 (25 min) -> C (20 min) -> T1 (15 min). Total = 25 + 20 + 15 = 60 minutes.
+    o   Other R3 to T1 paths: R3 -> R4 (10) -> R2 (40) -> C (30) -> T1 (15) = 95 min. R3 -> R1 (25) -> T2 (35) -> T1 (50) = 110 min. So, 60 min is shortest.
+2.	Leg 2: Shortest path from T1 to R2.
+    o   T1 -> C (15 min) -> R2 (30 min). Total = 15 + 30 = 45 minutes.
+    o   Other T1 to R2 paths: T1 -> T2 (50) -> R2 (20) = 70 min. So, 45 min is shortest.
+3.	Leg 3: Shortest path from R2 to R3.
+    o   R2 -> R4 (40 min) -> R3 (10 min). Total = 40 + 10 = 50 minutes.
+    o   Other R2 to R3 paths: R2 -> C (30 min) -> R1 (20 min) -> R3 (25 min) = 75 min. R2 -> T2 (20 min) -> R1 (35 min) -> R3 (25 min) = 80 min. So, 50 min is shortest.
+The minimum total travel time for the entire journey is the sum of the shortest times for these three legs:
+Total Time = 60 + 45 + 50 = 155 minutes."
+"Part 1: All Questions","","MOCKXYZ001_Q8","8","MOCKXYZ001_Set2_DigSite","An archaeologist is planning routes between key points at a dig site. The points are Camp (C), Relic Sites (R1, R2, R3, R4), and Tool Caches (T1, T2). All paths are bidirectional and the time taken to traverse a path segment is the same in either direction. Travel is only possible along the defined direct paths.
+Direct Path Travel Times:
+•	From Camp (C) to Relic Site 1 (R1) is 20 minutes.
+•	From Camp (C) to Relic Site 2 (R2) is 30 minutes.
+•	From Camp (C) to Tool Cache 1 (T1) is 15 minutes.
+•	From Relic Site 1 (R1) to Relic Site 3 (R3) is 25 minutes.
+•	From Relic Site 1 (R1) to Tool Cache 2 (T2) is 35 minutes.
+•	From Relic Site 2 (R2) to Relic Site 4 (R4) is 40 minutes.
+•	From Relic Site 2 (R2) to Tool Cache 2 (T2) is 20 minutes.
+•	From Relic Site 3 (R3) to Relic Site 4 (R4) is 10 minutes.
+•	From Tool Cache 1 (T1) to Tool Cache 2 (T2) is 50 minutes.","If the path between Relic Site 1 (R1) and Relic Site 3 (R3) becomes unusable, what would be the new shortest time to travel from Camp (C) to Relic Site 3 (R3)?","65 minutes","70 minutes","75 minutes","80 minutes","A","B","C","D","D","MCQ","Data Interpretation","Network Diagram, Conditional Shortest Path","Moderate","pathfinding, constraint alteration, network re-evaluation, alternative routes","pathfinding, constraint alteration, network re-evaluation, alternative routes","False","MOCKXYZ001_Set2_DigSite","Optimization","The direct path segment R1-R3 (25 minutes) is unusable. We need the new shortest time from C to R3.
+1.	The original shortest path C -> R1 -> R3 (20 + 25 = 45 minutes) used the R1-R3 segment, so it's no longer available or necessarily the shortest.
+2.	Consider alternative paths from C to R3:
+    o   Path C -> R2 -> R4 -> R3: Time = (C to R2) + (R2 to R4) + (R4 to R3) = 30 + 40 + 10 = 80 minutes.
+    o   Path via R1 but avoiding R1-R3 direct: C -> R1 (20 min). From R1, to get to R3 without using R1-R3:
+           R1 -> T2 (35 min) -> R2 (20 min) -> R4 (40 min) -> R3 (10 min). Path R1 to R3 = 35+20+40+10 = 105 min. Total C -> R1 -> ... -> R3 = 20 + 105 = 125 minutes.
+           R1 -> C (20 min) -> R2 (30 min) -> R4 (40 min) -> R3 (10 min). Path R1 to R3 (via C and R2) = 20+30+40+10 = 100 min. Total C -> R1 -> C -> ... -> R3 = 20 + 100 = 120 minutes (This route is C->R1->C->R2->R4->R3).
+    o   Other paths like C -> T1 -> T2 -> R2 -> R4 -> R3 are C(15)T1(50)T2(20)R2(40)R4(10)R3 = 135 minutes.
+The new shortest path is C -> R2 -> R4 -> R3, taking 80 minutes."
+"Part 1: All Questions","","MOCKXYZ001_Q9","9","MOCKXYZ001_Set2_DigSite","An archaeologist is planning routes between key points at a dig site. The points are Camp (C), Relic Sites (R1, R2, R3, R4), and Tool Caches (T1, T2). All paths are bidirectional and the time taken to traverse a path segment is the same in either direction. Travel is only possible along the defined direct paths.
+Direct Path Travel Times:
+•	From Camp (C) to Relic Site 1 (R1) is 20 minutes.
+•	From Camp (C) to Relic Site 2 (R2) is 30 minutes.
+•	From Camp (C) to Tool Cache 1 (T1) is 15 minutes.
+•	From Relic Site 1 (R1) to Relic Site 3 (R3) is 25 minutes.
+•	From Relic Site 1 (R1) to Tool Cache 2 (T2) is 35 minutes.
+•	From Relic Site 2 (R2) to Relic Site 4 (R4) is 40 minutes.
+•	From Relic Site 2 (R2) to Tool Cache 2 (T2) is 20 minutes.
+•	From Relic Site 3 (R3) to Relic Site 4 (R4) is 10 minutes.
+•	From Tool Cache 1 (T1) to Tool Cache 2 (T2) is 50 minutes.","The archaeologist wants to create a new direct path between Camp (C) and Relic Site 3 (R3). What is the maximum possible time this new path could take such that it would be preferred over any existing route(s) between C and R3?","40 minutes","44 minutes","50 minutes","54 minutes","A","B","C","D","B","MCQ","Data Interpretation","Network Diagram, Path Comparison","Moderate","path evaluation, optimization condition, time comparison, logical inference","path evaluation, optimization condition, time comparison, logical inference","False","MOCKXYZ001_Set2_DigSite","Optimization","1.	The current shortest time to travel from Camp (C) to Relic Site 3 (R3) using existing paths is via R1:
+    C -> R1 (20 minutes) -> R3 (25 minutes). Total = 45 minutes.
+    (Other paths: C->R2->R4->R3 = 30+40+10 = 80 mins. So 45 mins is indeed shortest).
+2.	If a new direct path C-R3 is created, it would be preferred if its travel time is less than this current shortest time of 45 minutes.
+3.	For the new path to be preferred, its time must be < 45 minutes.
+4.	The maximum possible time for this new path, such that it is still the preferred (i.e., shortest) route, would be any integer value just less than 45. Given integer options, 44 minutes is the largest integer value strictly less than 45."
+"Part 1: All Questions","","MOCKXYZ001_Q10","10","MOCKXYZ001_Set3_TerritoryControl","Two players, Red and Blue, play a game on a linear board of 7 empty cells, C1 to C7, arranged from left to right.
+Rules of the game:
+1.	Players take turns placing one marker of their color (Red or Blue) onto any one of the empty cells. Red makes the first move.
+2.	The game ends when all 7 cells are filled.
+3.	A player achieves an ""Instant Win"" if, at any point, they place a marker that forms an unbroken sequence of exactly three of their own markers in adjacent cells (a ""block of three""). If this happens, the game ends immediately, and that player is the winner.
+4.	If all cells are filled and no player has achieved an ""Instant Win"", the winner is the player who has more markers on the board. If they have an equal number of markers, the game is a draw.
+5.	It is known that in a particular game played according to these rules, all 7 cells were filled, and no player achieved an ""Instant Win"".
+The following is a partial sequence of moves from that specific game (R_Ci means Red played on Cell i, B_Cj means Blue played on Cell j):
+•	Move 1: R_C4 (Red plays on Cell 4)
+•	Move 2: B_C2 (Blue plays on Cell 2)
+•	Move 3: R_C1 (Red plays on Cell 1)
+•	Move 4: B_C5 (Blue plays on Cell 5)
+•	Move 5: R_C3 (Red plays on Cell 3)
+•	After these 5 moves, Red did not place their marker on Cell 7 on Move 7 (Red's fourth move).","Which cell was occupied on Move 6?","C6 by Red","C6 by Blue","C7 by Red","C7 by Blue","A","B","C","D","D","MCQ","Logical Reasoning","Games & Puzzles, Sequential Logic","Moderate","game theory, move deduction, constraint application, case analysis, process of elimination","game theory, move deduction, constraint application, case analysis, process of elimination","False","MOCKXYZ001_Set3_TerritoryControl","Sequential Logic","1.	Board state after Move 5 (R_C3): Cells C1,C2,C3,C4,C5 are R,B,R,R,B. Cells C6, C7 are empty.
+    Configuration: R B R R B _ _
+2.	It is Blue's turn for Move 6. Red plays Move 7 (Red's fourth move).
+3.	Clue: ""Red did not place their marker on Cell 7 on Move 7"".
+4.	Rule 5: All 7 cells were filled, and no player achieved an ""Instant Win"".
+5.	Consider Blue's options for Move 6 (placing on C6 or C7):
+    o   Option 1: Blue plays B_C6 on Move 6. The board becomes R B R R B B _. Cell C7 is empty.
+           For Move 7 (Red's turn), Red must play R_C7 (the only remaining empty cell).
+           The final board is R B R R B B R. In this scenario, Red placed their marker on Cell 7 on Move 7. This contradicts the given clue (""Red did not place their marker on Cell 7 on Move 7""). So, Blue could not have played B_C6.
+    o   Option 2: Blue plays B_C7 on Move 6. The board becomes R B R R B _ B. Cell C6 is empty.
+           For Move 7 (Red's turn), Red must play R_C6.
+           The final board is R B R R B R B. In this scenario, Red placed their marker on Cell 6 on Move 7. This is consistent with the clue (""Red did not place their marker on Cell 7 on Move 7"").
+6.	Since Option 1 leads to a contradiction, Option 2 must be what happened.
+Therefore, on Move 6, Blue occupied Cell 7."
+"Part 1: All Questions","","MOCKXYZ001_Q11","11","MOCKXYZ001_Set3_TerritoryControl","Two players, Red and Blue, play a game on a linear board of 7 empty cells, C1 to C7, arranged from left to right.
+Rules of the game:
+1.	Players take turns placing one marker of their color (Red or Blue) onto any one of the empty cells. Red makes the first move.
+2.	The game ends when all 7 cells are filled.
+3.	A player achieves an ""Instant Win"" if, at any point, they place a marker that forms an unbroken sequence of exactly three of their own markers in adjacent cells (a ""block of three""). If this happens, the game ends immediately, and that player is the winner.
+4.	If all cells are filled and no player has achieved an ""Instant Win"", the winner is the player who has more markers on the board. If they have an equal number of markers, the game is a draw.
+5.	It is known that in a particular game played according to these rules, all 7 cells were filled, and no player achieved an ""Instant Win"".
+The following is a partial sequence of moves from that specific game (R_Ci means Red played on Cell i, B_Cj means Blue played on Cell j):
+•	Move 1: R_C4 (Red plays on Cell 4)
+•	Move 2: B_C2 (Blue plays on Cell 2)
+•	Move 3: R_C1 (Red plays on Cell 1)
+•	Move 4: B_C5 (Blue plays on Cell 5)
+•	Move 5: R_C3 (Red plays on Cell 3)
+•	After these 5 moves, Red did not place their marker on Cell 7 on Move 7 (Red's fourth move).","What was the final configuration of markers on the board from C1 to C7?","RBRRBRB","RBRRBBR","RBRBRBR","BRBRRBR","A","B","C","D","A","MCQ","Logical Reasoning","Games & Puzzles, State Reconstruction","Moderate","game theory, logical deduction, final state determination, sequential reasoning","game theory, logical deduction, final state determination, sequential reasoning","False","MOCKXYZ001_Set3_TerritoryControl","Sequential Logic","Based on the deduction in Q10:
+1.	Board after 5 moves: C1(R), C2(B), C3(R), C4(R), C5(B), C6(), C7().
+    Configuration: R B R R B _ _
+2.	Move 6 (Blue): B_C7. Board becomes: C1(R), C2(B), C3(R), C4(R), C5(B), C6(_), C7(B).
+    Configuration: R B R R B _ B
+3.	Move 7 (Red): R_C6 (the only empty cell). Board becomes: C1(R), C2(B), C3(R), C4(R), C5(B), C6(R), C7(B).
+    Configuration: R B R R B R B
+The final configuration from C1 to C7 is RBRRBRB."
+"Part 1: All Questions","","MOCKXYZ001_Q12","12","MOCKXYZ001_Set3_TerritoryControl","Two players, Red and Blue, play a game on a linear board of 7 empty cells, C1 to C7, arranged from left to right.
+Rules of the game:
+1.	Players take turns placing one marker of their color (Red or Blue) onto any one of the empty cells. Red makes the first move.
+2.	The game ends when all 7 cells are filled.
+3.	A player achieves an ""Instant Win"" if, at any point, they place a marker that forms an unbroken sequence of exactly three of their own markers in adjacent cells (a ""block of three""). If this happens, the game ends immediately, and that player is the winner.
+4.	If all cells are filled and no player has achieved an ""Instant Win"", the winner is the player who has more markers on the board. If they have an equal number of markers, the game is a draw.
+5.	It is known that in a particular game played according to these rules, all 7 cells were filled, and no player achieved an ""Instant Win"".
+The following is a partial sequence of moves from that specific game (R_Ci means Red played on Cell i, B_Cj means Blue played on Cell j):
+•	Move 1: R_C4 (Red plays on Cell 4)
+•	Move 2: B_C2 (Blue plays on Cell 2)
+•	Move 3: R_C1 (Red plays on Cell 1)
+•	Move 4: B_C5 (Blue plays on Cell 5)
+•	Move 5: R_C3 (Red plays on Cell 3)
+•	After these 5 moves, Red did not place their marker on Cell 7 on Move 7 (Red's fourth move).","Who won this specific game?","Red","Blue","It was a Draw","Cannot be determined from the information","A","B","C","D","A","MCQ","Logical Reasoning","Games & Puzzles, Outcome Determination","Easy","game rules, win condition application, counting markers","game rules, win condition application, counting markers","False","MOCKXYZ001_Set3_TerritoryControl","Application","1.	The final board configuration is RBRRBRB (from Q11).
+2.	Count Red markers: C1(R), C3(R), C4(R), C6(R). Total = 4 Red markers.
+3.	Count Blue markers: C2(B), C5(B), C7(B). Total = 3 Blue markers.
+4.	Rule 5 states that no player achieved an ""Instant Win"".
+5.	Rule 4 states that if all cells are filled and no Instant Win, the winner is the player with more markers.
+6.	Red has 4 markers, Blue has 3 markers. Red has more markers than Blue.
+Therefore, Red won the game."
+"Part 1: All Questions","","MOCKXYZ001_Q13","13","MOCKXYZ001_Set3_TerritoryControl","Two players, Red and Blue, play a game on a linear board of 7 empty cells, C1 to C7, arranged from left to right.
+Rules of the game:
+1.	Players take turns placing one marker of their color (Red or Blue) onto any one of the empty cells. Red makes the first move.
+2.	The game ends when all 7 cells are filled.
+3.	A player achieves an ""Instant Win"" if, at any point, they place a marker that forms an unbroken sequence of exactly three of their own markers in adjacent cells (a ""block of three""). If this happens, the game ends immediately, and that player is the winner.
+4.	If all cells are filled and no player has achieved an ""Instant Win"", the winner is the player who has more markers on the board. If they have an equal number of markers, the game is a draw.
+5.	It is known that in a particular game played according to these rules, all 7 cells were filled, and no player achieved an ""Instant Win"".
+The following is a partial sequence of moves from that specific game (R_Ci means Red played on Cell i, B_Cj means Blue played on Cell j):
+•	Move 1: R_C4 (Red plays on Cell 4)
+•	Move 2: B_C2 (Blue plays on Cell 2)
+•	Move 3: R_C1 (Red plays on Cell 1)
+•	Move 4: B_C5 (Blue plays on Cell 5)
+•	Move 5: R_C3 (Red plays on Cell 3)
+•	After these 5 moves, Red did not place their marker on Cell 7 on Move 7 (Red's fourth move).","If the rule about ""Instant Win"" (Rule 3) was removed, but all other rules and the exact sequence of 7 moves played in this specific game remained the same, who would have won the game?","Red","Blue","It would have been a Draw","The winner would remain the same","A","B","C","D","A","MCQ","Logical Reasoning","Games & Puzzles, Rule Alteration Impact","Moderate","game theory, conditional reasoning, outcome comparison, hypothetical scenario","game theory, conditional reasoning, outcome comparison, hypothetical scenario","False","MOCKXYZ001_Set3_TerritoryControl","Hypothetical Reasoning","1.	The specific game sequence resulted in the final board RBRRBRB.
+2.	In this game, as per Rule 5, no ""Instant Win"" occurred. Red won by having more markers (Rule 4), with 4 Red markers versus 3 Blue markers.
+3.	If Rule 3 (""Instant Win"") was removed, but all other rules and the exact sequence of 7 moves played in this specific game remained the same, the game would still proceed through the same 7 moves because the problem states the sequence of moves is unchanged. The game would end when all cells are filled.
+4.	Since no ""Instant Win"" actually occurred in the original game sequence, the removal of Rule 3 does not change how the game played out or the final board state.
+5.	The win condition would then rely solely on Rule 4 (more markers, or draw if equal).
+6.	The board RBRRBRB has Red (4 markers) > Blue (3 markers). Red would still be the winner.
+Therefore, Red would have won the game."
+"Part 1: All Questions","","MOCKXYZ001_Q14","14","MOCKXYZ001_Set4_ProjectAlloc","A company allocates its employees across four departments (Tech, Sales, Ops, HR) to work on three types of projects (Alpha, Beta, Gamma). Each department can work on multiple project types, and a project type can be handled by multiple departments. The table below provides some data for various department-project combinations. Profit = Revenue - Budget. Profit per Employee = Profit / Number of Employees. All numerical values in the table are exact.
+Department	Project Type	Num Employees	Budget (Lakhs INR)	Duration (Months)	Revenue (Lakhs INR)
+Tech	Alpha	20	150	6	250
+Tech	Beta	15	100	4	A
+Sales	Alpha	10	B	5	150
+Sales	Gamma	25	200	8	350
+Ops	Beta	30	220	C	400
+Ops	Gamma	12	90	3	160
+HR	Beta	8	50	3	70
+HR	Gamma	D	30	2	40
+Additional Information:
+1.	The Profit for Tech department's Beta project was 80 Lakhs INR.
+2.	The Budget for Sales department's Alpha project resulted in a Profit per Employee of 7 Lakhs INR for that specific project.
+3.	The Duration for Ops department's Beta project was 7 months. The Profit from this project was the highest among all individual department-project combinations listed.
+4.	The total number of employees across all listed department-project combinations was 125.
+5.	The Profit for Ops department's Gamma project was 70 Lakhs INR.","What is the value of A (Revenue for Tech Beta project, in Lakhs INR)?","160","180","200","220","A","B","C","D","B","MCQ","Data Interpretation","Multi-Table Analysis, Financial Data","Moderate","data extraction, formula application, profit calculation, missing value deduction","data extraction, formula application, profit calculation, missing value deduction","False","MOCKXYZ001_Set4_ProjectAlloc","Data Calculation","As derived above using Additional Information 1:
+For Tech - Beta: Profit = Revenue - Budget.
+Given Profit = 80 Lakhs INR and Budget = 100 Lakhs INR.
+80 = A - 100.
+A = 180 Lakhs INR."
+"Part 1: All Questions","","MOCKXYZ001_Q15","15","MOCKXYZ001_Set4_ProjectAlloc","A company allocates its employees across four departments (Tech, Sales, Ops, HR) to work on three types of projects (Alpha, Beta, Gamma). Each department can work on multiple project types, and a project type can be handled by multiple departments. The table below provides some data for various department-project combinations. Profit = Revenue - Budget. Profit per Employee = Profit / Number of Employees. All numerical values in the table are exact.
+Department	Project Type	Num Employees	Budget (Lakhs INR)	Duration (Months)	Revenue (Lakhs INR)
+Tech	Alpha	20	150	6	250
+Tech	Beta	15	100	4	A
+Sales	Alpha	10	B	5	150
+Sales	Gamma	25	200	8	350
+Ops	Beta	30	220	C	400
+Ops	Gamma	12	90	3	160
+HR	Beta	8	50	3	70
+HR	Gamma	D	30	2	40
+Additional Information:
+1.	The Profit for Tech department's Beta project was 80 Lakhs INR.
+2.	The Budget for Sales department's Alpha project resulted in a Profit per Employee of 7 Lakhs INR for that specific project.
+3.	The Duration for Ops department's Beta project was 7 months. The Profit from this project was the highest among all individual department-project combinations listed.
+4.	The total number of employees across all listed department-project combinations was 125.
+5.	The Profit for Ops department's Gamma project was 70 Lakhs INR.","Which department-project combination had the highest Profit per Employee?","Tech - Alpha","Sales - Alpha","Sales - Gamma","Ops - Beta","A","B","C","D","B","MCQ","Data Interpretation","Multi-Table Analysis, Ratio Calculation","Difficult","data synthesis, profit per employee, comparative analysis, multi-step calculation, data completion","data synthesis, profit per employee, comparative analysis, multi-step calculation, data completion","False","MOCKXYZ001_Set4_ProjectAlloc","Data Synthesis","Calculate Profit per Employee (PPE = Profit / Num Employees) for all:
+1.	Tech - Alpha: Profit = 250-150=100. Emp=20. PPE = 100/20 = 5.00.
+2.	Tech - Beta: Profit = 80 (Add. Info 1). Emp=15. PPE = 80/15 = 5.33 (approx).
+3.	Sales - Alpha: PPE = 7 (given by Add. Info 2). Profit = 150-80=70. PPE = 70/10 = 7.00.
+4.	Sales - Gamma: Profit = 350-200=150. Emp=25. PPE = 150/25 = 6.00.
+5.	Ops - Beta: Profit = 400-220=180 (Add. Info 3). Emp=30. PPE = 180/30 = 6.00.
+6.	Ops - Gamma: Profit = 160-90=70 (Add. Info 5). Emp=12. PPE = 70/12 = 5.83 (approx).
+7.	HR - Beta: Profit = 70-50=20. Emp=8. PPE = 20/8 = 2.50.
+8.	HR - Gamma: Profit = 40-30=10. Emp=D=5. PPE = 10/5 = 2.00.
+Comparing all PPEs: {5.00, 5.33, 7.00, 6.00, 6.00, 5.83, 2.50, 2.00}.
+The highest PPE is 7.00, for Sales - Alpha."
+"Part 1: All Questions","","MOCKXYZ001_Q16","16","MOCKXYZ001_Set4_ProjectAlloc","A company allocates its employees across four departments (Tech, Sales, Ops, HR) to work on three types of projects (Alpha, Beta, Gamma). Each department can work on multiple project types, and a project type can be handled by multiple departments. The table below provides some data for various department-project combinations. Profit = Revenue - Budget. Profit per Employee = Profit / Number of Employees. All numerical values in the table are exact.
+Department	Project Type	Num Employees	Budget (Lakhs INR)	Duration (Months)	Revenue (Lakhs INR)
+Tech	Alpha	20	150	6	250
+Tech	Beta	15	100	4	A
+Sales	Alpha	10	B	5	150
+Sales	Gamma	25	200	8	350
+Ops	Beta	30	220	C	400
+Ops	Gamma	12	90	3	160
+HR	Beta	8	50	3	70
+HR	Gamma	D	30	2	40
+Additional Information:
+1.	The Profit for Tech department's Beta project was 80 Lakhs INR.
+2.	The Budget for Sales department's Alpha project resulted in a Profit per Employee of 7 Lakhs INR for that specific project.
+3.	The Duration for Ops department's Beta project was 7 months. The Profit from this project was the highest among all individual department-project combinations listed.
+4.	The total number of employees across all listed department-project combinations was 125.
+5.	The Profit for Ops department's Gamma project was 70 Lakhs INR.","What is the total budget allocated to Project Type Beta across all departments that undertook it?","320 Lakhs INR","350 Lakhs INR","370 Lakhs INR","400 Lakhs INR","A","B","C","D","C","MCQ","Data Interpretation","Multi-Table Analysis, Data Aggregation","Moderate","data filtering, summation, budget analysis by type","data filtering, summation, budget analysis by type","False","MOCKXYZ001_Set4_ProjectAlloc","Data Calculation","Project Type Beta was undertaken by:
+•	Tech - Beta: Budget = 100 Lakhs INR.
+•	Ops - Beta: Budget = 220 Lakhs INR.
+•	HR - Beta: Budget = 50 Lakhs INR.
+Total budget for Project Type Beta = 100 + 220 + 50 = 370 Lakhs INR."
+"Part 1: All Questions","","MOCKXYZ001_Q17","17","MOCKXYZ001_Set4_ProjectAlloc","A company allocates its employees across four departments (Tech, Sales, Ops, HR) to work on three types of projects (Alpha, Beta, Gamma). Each department can work on multiple project types, and a project type can be handled by multiple departments. The table below provides some data for various department-project combinations. Profit = Revenue - Budget. Profit per Employee = Profit / Number of Employees. All numerical values in the table are exact.
+Department	Project Type	Num Employees	Budget (Lakhs INR)	Duration (Months)	Revenue (Lakhs INR)
+Tech	Alpha	20	150	6	250
+Tech	Beta	15	100	4	A
+Sales	Alpha	10	B	5	150
+Sales	Gamma	25	200	8	350
+Ops	Beta	30	220	C	400
+Ops	Gamma	12	90	3	160
+HR	Beta	8	50	3	70
+HR	Gamma	D	30	2	40
+Additional Information:
+1.	The Profit for Tech department's Beta project was 80 Lakhs INR.
+2.	The Budget for Sales department's Alpha project resulted in a Profit per Employee of 7 Lakhs INR for that specific project.
+3.	The Duration for Ops department's Beta project was 7 months. The Profit from this project was the highest among all individual department-project combinations listed.
+4.	The total number of employees across all listed department-project combinations was 125.
+5.	The Profit for Ops department's Gamma project was 70 Lakhs INR.","What is the average number of employees per project undertaken by the Sales department?","15.0","17.5","20.0","22.5","A","B","C","D","B","MCQ","Data Interpretation","Multi-Table Analysis, Average Calculation","Moderate","data aggregation, averaging by department, employee count analysis","data aggregation, averaging by department, employee count analysis","False","MOCKXYZ001_Set4_ProjectAlloc","Data Calculation","Sales department undertook two projects:
+•	Sales - Alpha: Num Employees = 10.
+•	Sales - Gamma: Num Employees = 25.
+Total employees for Sales department projects = 10 + 25 = 35.
+Number of projects undertaken by Sales = 2.
+Average number of employees per project = Total employees / Number of projects = 35 / 2 = 17.5."
+"Part 1: All Questions","","MOCKXYZ001_Q18","18","MOCKXYZ001_Set4_ProjectAlloc","A company allocates its employees across four departments (Tech, Sales, Ops, HR) to work on three types of projects (Alpha, Beta, Gamma). Each department can work on multiple project types, and a project type can be handled by multiple departments. The table below provides some data for various department-project combinations. Profit = Revenue - Budget. Profit per Employee = Profit / Number of Employees. All numerical values in the table are exact.
+Department	Project Type	Num Employees	Budget (Lakhs INR)	Duration (Months)	Revenue (Lakhs INR)
+Tech	Alpha	20	150	6	250
+Tech	Beta	15	100	4	A
+Sales	Alpha	10	B	5	150
+Sales	Gamma	25	200	8	350
+Ops	Beta	30	220	C	400
+Ops	Gamma	12	90	3	160
+HR	Beta	8	50	3	70
+HR	Gamma	D	30	2	40
+Additional Information:
+1.	The Profit for Tech department's Beta project was 80 Lakhs INR.
+2.	The Budget for Sales department's Alpha project resulted in a Profit per Employee of 7 Lakhs INR for that specific project.
+3.	The Duration for Ops department's Beta project was 7 months. The Profit from this project was the highest among all individual department-project combinations listed.
+4.	The total number of employees across all listed department-project combinations was 125.
+5.	The Profit for Ops department's Gamma project was 70 Lakhs INR.","If the duration of the HR Gamma project was increased by 1 month, and its budget increased by 10 Lakhs INR, but its revenue remained unchanged, what would be its new Profit?","0 Lakhs INR","10 Lakhs INR","-10 Lakhs INR","5 Lakhs INR","A","B","C","D","A","MCQ","Data Interpretation","Multi-Table Analysis, Conditional Calculation","Moderate","conditional change, profit recalculation, impact analysis, sensitivity","conditional change, profit recalculation, impact analysis, sensitivity","False","MOCKXYZ001_Set4_ProjectAlloc","Data Calculation","For HR - Gamma project:
+Original Revenue = 40 Lakhs INR. Original Budget = 30 Lakhs INR. Original Profit = 40 - 30 = 10 Lakhs INR.
+Changes: Duration increased by 1 month (not directly relevant to profit calculation here). Budget increased by 10 Lakhs INR. Revenue remained unchanged.
+New Budget = Original Budget + 10 = 30 + 10 = 40 Lakhs INR.
+New Revenue = Original Revenue = 40 Lakhs INR.
+New Profit = New Revenue - New Budget = 40 - 40 = 0 Lakhs INR."
+"Part 1: All Questions","","MOCKXYZ001_Q19","19","MOCKXYZ001_Set5_FestivalMetrics","A festival organizer tracks performance metrics for four types of performances (Music, Dance, Theatre, Comedy) across three cities (Axia, Boria, Ceston). Data for Audience count, Revenue, Cost, and average audience Rating (on a 1-10 scale) is collected. Profit is calculated as Revenue - Cost. Some data points are provided in the table below, while others are missing (indicated by A, B, C, D, E, F). All monetary values are in thousands of currency units.
+City	Performance Type	Audience	Revenue (000s)	Cost (000s)	Rating (1-10)
+Axia	Music	500	250	150	8.5
+Axia	Dance	300	120	A	7.0
+Axia	Theatre	200	100	80	9.0
+Boria	Music	700	B	180	7.5
+Boria	Comedy	400	200	100	C
+Boria	Theatre	250	130	90	8.2
+Ceston	Dance	D	180	120	7.8
+Ceston	Comedy	600	280	E	8.8
+Ceston	Music	350	150	100	F
+Additional Information:
+1.	The Profit for Axia's Dance performance was 30.
+2.	The total Revenue from Boria's Music performance was 300.
+3.	The audience-weighted average rating for Comedy performances in Boria and Ceston was 8.48.
+4.	The total Audience for Dance performances across Axia and Ceston was 750.
+5.	The Profit from Ceston's Comedy performance was 130.
+6.	The rating for Ceston's Music performance (F) was 6.5. The total Profit from all Music performances across the three cities was 270.","What was the Cost (A) for Axia's Dance performance?","70","80","90","100","A","B","C","D","C","MCQ","Data Interpretation","Tabular Data, Missing Value Deduction","Moderate","data extraction, formula application, cost calculation from profit","data extraction, formula application, cost calculation from profit","False","MOCKXYZ001_Set5_FestivalMetrics","Data Calculation","From the initial derivations using Additional Information 1:
+For Axia's Dance performance: Profit = Revenue - Cost.
+30 = 120 - A.
+A = 120 - 30 = 90.
+The Cost (A) for Axia's Dance performance was 90."
+"Part 1: All Questions","","MOCKXYZ001_Q20","20","MOCKXYZ001_Set5_FestivalMetrics","A festival organizer tracks performance metrics for four types of performances (Music, Dance, Theatre, Comedy) across three cities (Axia, Boria, Ceston). Data for Audience count, Revenue, Cost, and average audience Rating (on a 1-10 scale) is collected. Profit is calculated as Revenue - Cost. Some data points are provided in the table below, while others are missing (indicated by A, B, C, D, E, F). All monetary values are in thousands of currency units.
+City	Performance Type	Audience	Revenue (000s)	Cost (000s)	Rating (1-10)
+Axia	Music	500	250	150	8.5
+Axia	Dance	300	120	A	7.0
+Axia	Theatre	200	100	80	9.0
+Boria	Music	700	B	180	7.5
+Boria	Comedy	400	200	100	C
+Boria	Theatre	250	130	90	8.2
+Ceston	Dance	D	180	120	7.8
+Ceston	Comedy	600	280	E	8.8
+Ceston	Music	350	150	100	F
+Additional Information:
+1.	The Profit for Axia's Dance performance was 30.
+2.	The total Revenue from Boria's Music performance was 300.
+3.	The audience-weighted average rating for Comedy performances in Boria and Ceston was 8.48.
+4.	The total Audience for Dance performances across Axia and Ceston was 750.
+5.	The Profit from Ceston's Comedy performance was 130.
+6.	The rating for Ceston's Music performance (F) was 6.5. The total Profit from all Music performances across the three cities was 270.","Which performance type had the highest total audience across all three cities combined?","Music","Dance","Theatre","Comedy","A","B","C","D","A","MCQ","Data Interpretation","Tabular Data, Data Aggregation","Moderate","data synthesis, summation across categories, comparative analysis, audience totals","data synthesis, summation across categories, comparative analysis, audience totals","False","MOCKXYZ001_Set5_FestivalMetrics","Data Synthesis","Total Audience for each performance type:
+•	Music: Axia(500) + Boria(700) + Ceston(350) = 1550.
+•	Dance: Axia(300) + Ceston(D=450) = 300 + 450 = 750.
+•	Theatre: Axia(200) + Boria(250) = 450. (Ceston does not have Theatre listed)
+•	Comedy: Boria(400) + Ceston(600) = 1000. (Axia does not have Comedy listed)
+Comparing the totals: Music (1550), Dance (750), Theatre (450), Comedy (1000).
+Music has the highest total audience (1550)."
+"Part 1: All Questions","","MOCKXYZ001_Q21","21","MOCKXYZ001_Set5_FestivalMetrics","A festival organizer tracks performance metrics for four types of performances (Music, Dance, Theatre, Comedy) across three cities (Axia, Boria, Ceston). Data for Audience count, Revenue, Cost, and average audience Rating (on a 1-10 scale) is collected. Profit is calculated as Revenue - Cost. Some data points are provided in the table below, while others are missing (indicated by A, B, C, D, E, F). All monetary values are in thousands of currency units.
+City	Performance Type	Audience	Revenue (000s)	Cost (000s)	Rating (1-10)
+Axia	Music	500	250	150	8.5
+Axia	Dance	300	120	A	7.0
+Axia	Theatre	200	100	80	9.0
+Boria	Music	700	B	180	7.5
+Boria	Comedy	400	200	100	C
+Boria	Theatre	250	130	90	8.2
+Ceston	Dance	D	180	120	7.8
+Ceston	Comedy	600	280	E	8.8
+Ceston	Music	350	150	100	F
+Additional Information:
+1.	The Profit for Axia's Dance performance was 30.
+2.	The total Revenue from Boria's Music performance was 300.
+3.	The audience-weighted average rating for Comedy performances in Boria and Ceston was 8.48.
+4.	The total Audience for Dance performances across Axia and Ceston was 750.
+5.	The Profit from Ceston's Comedy performance was 130.
+6.	The rating for Ceston's Music performance (F) was 6.5. The total Profit from all Music performances across the three cities was 270.","What was the overall Profit generated by the city of Boria from all its listed performances?","220","240","260","280","A","B","C","D","C","MCQ","Data Interpretation","Tabular Data, Financial Calculation","Moderate","profit calculation, city-wise aggregation, data synthesis from table","profit calculation, city-wise aggregation, data synthesis from table","False","MOCKXYZ001_Set5_FestivalMetrics","Data Synthesis","Profit for Boria's performances: Profit = Revenue - Cost.
+•	Boria - Music: Revenue (B=300) - Cost (180) = 120.
+•	Boria - Comedy: Revenue (200) - Cost (100) = 100.
+•	Boria - Theatre: Revenue (130) - Cost (90) = 40.
+Total Profit for Boria = Profit(Music) + Profit(Comedy) + Profit(Theatre) = 120 + 100 + 40 = 260."
+"Part 1: All Questions","","MOCKXYZ001_Q22","22","MOCKXYZ001_Set5_FestivalMetrics","A festival organizer tracks performance metrics for four types of performances (Music, Dance, Theatre, Comedy) across three cities (Axia, Boria, Ceston). Data for Audience count, Revenue, Cost, and average audience Rating (on a 1-10 scale) is collected. Profit is calculated as Revenue - Cost. Some data points are provided in the table below, while others are missing (indicated by A, B, C, D, E, F). All monetary values are in thousands of currency units.
+City	Performance Type	Audience	Revenue (000s)	Cost (000s)	Rating (1-10)
+Axia	Music	500	250	150	8.5
+Axia	Dance	300	120	A	7.0
+Axia	Theatre	200	100	80	9.0
+Boria	Music	700	B	180	7.5
+Boria	Comedy	400	200	100	C
+Boria	Theatre	250	130	90	8.2
+Ceston	Dance	D	180	120	7.8
+Ceston	Comedy	600	280	E	8.8
+Ceston	Music	350	150	100	F
+Additional Information:
+1.	The Profit for Axia's Dance performance was 30.
+2.	The total Revenue from Boria's Music performance was 300.
+3.	The audience-weighted average rating for Comedy performances in Boria and Ceston was 8.48.
+4.	The total Audience for Dance performances across Axia and Ceston was 750.
+5.	The Profit from Ceston's Comedy performance was 130.
+6.	The rating for Ceston's Music performance (F) was 6.5. The total Profit from all Music performances across the three cities was 270.","Which of the following statements is necessarily true?","Boria had the highest average rating across its performances.","Ceston's Music performance had a higher Revenue per Audience than Boria's Music performance.","The total cost for all Theatre performances was greater than the total cost for all Dance performances.","The performance with the highest individual audience rating was in Axia.","A","B","C","D","D","MCQ","Data Interpretation","Tabular Data, Statement Verification","Difficult","multi-statement evaluation, average calculation (weighted), ratio comparison, data lookup, logical necessity, data consistency","multi-statement evaluation, average calculation (weighted), ratio comparison, data lookup, logical necessity, data consistency","False","MOCKXYZ001_Set5_FestivalMetrics","Evaluation","List all individual audience ratings from the completed table (using C=8.0, F=6.5):
+•	Axia: Music (8.5), Dance (7.0), Theatre (9.0)
+•	Boria: Music (7.5), Comedy (C=8.0), Theatre (8.2)
+•	Ceston: Dance (Rating for D audience is 7.8), Comedy (8.8), Music (F=6.5)
+Evaluate statements:
+A) Boria had the highest average rating across its performances.
+    To check this, we calculate the audience-weighted average rating for each city:
+    Axia Avg Rating = (500*8.5 + 300*7.0 + 200*9.0) / (500+300+200) = (4250 + 2100 + 1800) / 1000 = 8150 / 1000 = 8.15.
+    Boria Avg Rating = (700*7.5 + 400*8.0 + 250*8.2) / (700+400+250) = (5250 + 3200 + 2050) / 1350 = 10500 / 1350 ≈ 7.78.
+    Ceston Avg Rating = (450*7.8 + 600*8.8 + 350*6.5) / (450+600+350) = (3510 + 5280 + 2275) / 1400 = 11065 / 1400 ≈ 7.90.
+    Axia has the highest average rating (8.15). Statement A is false.
+
+B) Ceston's Music performance had a higher Revenue per Audience than Boria's Music performance.
+    Ceston Music: Revenue = 150, Audience = 350. Rev/Aud = 150/350 = 15/35 = 3/7.
+    Boria Music: Revenue (B=300), Audience = 700. Rev/Aud = 300/700 = 30/70 = 3/7.
+    The Revenue per Audience is equal for both (3/7). Statement B is false.
+
+C) The total cost for all Theatre performances was greater than the total cost for all Dance performances.
+    Total Cost Theatre = Cost(Axia Theatre, 80) + Cost(Boria Theatre, 90) = 80 + 90 = 170.
+    Total Cost Dance = Cost(Axia Dance, A=90) + Cost(Ceston Dance, 120) = 90 + 120 = 210.
+    170 is not greater than 210. Statement C is false.
+
+D) The performance with the highest individual audience rating was in Axia.
+    The individual ratings are: Axia [Music 8.5, Dance 7.0, Theatre 9.0], Boria [Music 7.5, Comedy 8.0, Theatre 8.2], Ceston [Dance 7.8, Comedy 8.8, Music 6.5].
+    The highest single rating among all these is 9.0, which was for Axia's Theatre performance. This performance was in Axia. Statement D is true."

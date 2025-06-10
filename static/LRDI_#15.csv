@@ -1,0 +1,604 @@
+"SectionName","SectionTimeLimitMinutes","QuestionUniqueID","QuestionNumberInSection","PassageOrSetID","PassageOrSetContent","QuestionPrompt","OptionAText","OptionBText","OptionCText","OptionDText","OptionAValue","OptionBValue","OptionCValue","OptionDValue","CorrectAnswerValue","QuestionType","Topic","SubTopic","DifficultyLevelPredicted","ConceptTested","DetailedTags","IsTITA","SetID","CognitiveSkillLevel","SolutionExplanation"
+"Logical Reasoning & Data Interpretation","40","Q25_rev","1","MockGenFINAL_S1_rev","Set 1 of 5: Artifact Authenticity at a Museum
+
+A museum curator is evaluating the authenticity of five recently acquired artifacts (A1, A2, A3, A4, A5) using three distinct analytical tests (Test X, Test Y, Test Z). Each test can yield a result of ""Authentic"" (A), ""Inconclusive"" (I), or ""Fake"" (F) for each artifact. An artifact is declared ""Genuine"" only if it yields ""Authentic"" in at least two tests and ""Fake"" in no test.
+
+Test Results and Conditions:
+1.  Exactly *one* artifact was declared ""Genuine"".
+2.  Artifact A3 yielded ""Authentic"" in Test X and Test Y.
+3.  Test Z yielded ""Fake"" for artifact A2 and ""Authentic"" for artifact A4.
+4.  No artifact yielded the same result in all three tests (e.g., A-A-A, F-F-F, I-I-I are not possible).
+5.  If an artifact yielded ""Authentic"" in Test X, it did not yield ""Fake"" in Test Y.
+6.  Artifact A1 yielded ""Inconclusive"" in more tests than any other artifact. (This means A1 has either two or three 'I' results. By rule 4, A1 cannot be (I,I,I), so A1 has exactly two 'I' results).
+7.  Artifact A5 yielded ""Authentic"" in exactly one test.
+8.  Among the artifacts not declared ""Genuine"" (i.e., A1, A2, A4, A5), exactly one had ""Fake"" as a result in Test Y.
+9.  The total number of ""Authentic"" results yielded by Test X across all five artifacts was equal to the total number of ""Authentic"" results yielded by Test Y across all five artifacts.
+10. Artifact A4 was not declared ""Genuine"".","Which artifact was declared ""Genuine""?","A1","A2","A3","A5","A1","A2","A3","A5","A3","MCQ","LR","Puzzles: Conditional Logic","Hard","Puzzles: Conditional Logic","multi-condition evaluation, truth-table logic, constraint satisfaction, deductive reasoning","False","MockGenFINAL_S1_rev","Evaluating","1.  Definition of Genuine: At least two 'A's and no 'F's.
+2.  Artifact A3 yields 'A' in Test X and Test Y (Rule 2). For A3 to be Genuine, its Test Z result cannot be 'F'. By Rule 4 (no A-A-A), Test Z for A3 must be 'I'. So, A3 = (A, A, I). This artifact has two 'A's and no 'F's, so A3 is Genuine.
+3.  Rule 1 states exactly one artifact is Genuine. Since A3 is Genuine, it is the only one.
+4.  Artifact A2 has Test Z = F (Rule 3), so A2 is not Genuine.
+5.  Artifact A4 has Test Z = A (Rule 3) but is not Genuine (Rule 10).
+6.  Artifact A5 has exactly one 'A' (Rule 7). To be Genuine, an artifact needs at least two 'A's, so A5 is not Genuine.
+7.  Artifact A1: Rule 6 states A1 has two 'I' results. If A1 were Genuine, it would need two 'A's and no 'F's (e.g., A,A,I), which means it would have only one 'I'. If A1 is (A,I,I) (to satisfy Rule 5 and Rule 6), it has only one 'A' and is therefore not Genuine.
+Therefore, A3 is the only Genuine artifact."
+"Logical Reasoning & Data Interpretation","40","Q26_rev","2","MockGenFINAL_S1_rev","Set 1 of 5: Artifact Authenticity at a Museum
+
+A museum curator is evaluating the authenticity of five recently acquired artifacts (A1, A2, A3, A4, A5) using three distinct analytical tests (Test X, Test Y, Test Z). Each test can yield a result of ""Authentic"" (A), ""Inconclusive"" (I), or ""Fake"" (F) for each artifact. An artifact is declared ""Genuine"" only if it yields ""Authentic"" in at least two tests and ""Fake"" in no test.
+
+Test Results and Conditions:
+1.  Exactly *one* artifact was declared ""Genuine"".
+2.  Artifact A3 yielded ""Authentic"" in Test X and Test Y.
+3.  Test Z yielded ""Fake"" for artifact A2 and ""Authentic"" for artifact A4.
+4.  No artifact yielded the same result in all three tests (e.g., A-A-A, F-F-F, I-I-I are not possible).
+5.  If an artifact yielded ""Authentic"" in Test X, it did not yield ""Fake"" in Test Y.
+6.  Artifact A1 yielded ""Inconclusive"" in more tests than any other artifact. (This means A1 has either two or three 'I' results. By rule 4, A1 cannot be (I,I,I), so A1 has exactly two 'I' results).
+7.  Artifact A5 yielded ""Authentic"" in exactly one test.
+8.  Among the artifacts not declared ""Genuine"" (i.e., A1, A2, A4, A5), exactly one had ""Fake"" as a result in Test Y.
+9.  The total number of ""Authentic"" results yielded by Test X across all five artifacts was equal to the total number of ""Authentic"" results yielded by Test Y across all five artifacts.
+10. Artifact A4 was not declared ""Genuine"".","What was the result of Test Y for artifact A1?","Authentic","Inconclusive","Fake","Cannot be determined","Authentic","Inconclusive","Fake","Cannot be determined","Inconclusive","MCQ","LR","Puzzles: Conditional Logic","Hard","Puzzles: Conditional Logic","multi-condition evaluation, deduction, constraint satisfaction, matrix derivation","False","MockGenFINAL_S1_rev","Evaluating","1.  From Q1, A3 is the only Genuine artifact.
+2.  Artifact A1 has two 'I' results (Rule 6). Since A1 is not Genuine, its results can include 'F' or have fewer than two 'A's.
+3.  Let's establish the full results table based on all rules:
+    *   A3 = (A, A, I) - Genuine (from Q1 solution).
+    *   A2: Test Z = F (Rule 3). A2 is not Genuine.
+    *   A4: Test Z = A (Rule 3). A4 is not Genuine (Rule 10).
+    *   A5: Exactly one 'A' (Rule 7). Not Genuine.
+    *   A1: Two 'I's (Rule 6). Not Genuine.
+4.  Consider Rule 5: If Test X result is 'A', then Test Y result is not 'F'.
+5.  Consider Rule 6: A1 has two 'I's. If A1 = (A,I,I), Rule 5 (Test X = A implies Test Y != F) is satisfied (Test Y = I).
+6.  Consider Rule 8: Among non-Genuine {A1, A2, A4, A5}, exactly one had Test Y = F.
+7.  Consider Rule 9: Number of 'A's in Test X = Number of 'A's in Test Y.
+8.  A consistent matrix satisfying all rules:
+    *   A1: (A, I, I) -> Not Genuine (1 'A'). Two 'I's.
+    *   A2: (I, F, F) -> Not Genuine (contains 'F's). Test Z = F.
+    *   A3: (A, A, I) -> Genuine. Test X = A, Test Y = A.
+    *   A4: (F, I, A) -> Not Genuine (contains 'F'). Test Z = A.
+    *   A5: (I, A, F) -> Not Genuine (contains 'F'). One 'A' (Test Y = A).
+9.  Check this matrix against all rules:
+    *   Rule 1: A3 is the sole Genuine artifact. (OK)
+    *   Rule 2: A3 (Test X = A, Test Y = A). (OK). A3 Test Z = I (no A-A-A from Rule 4). (OK)
+    *   Rule 3: A2 Test Z = F, A4 Test Z = A. (OK)
+    *   Rule 4: No identical results in any row. A1(A,I,I), A2(I,F,F), A3(A,A,I), A4(F,I,A), A5(I,A,F). (All OK)
+    *   Rule 5: (Test X = A implies Test Y != F): A1(Test X = A, Test Y = I) OK; A3(Test X = A, Test Y = A) OK.
+    *   Rule 6: A1 has two 'I' results (derived as (A,I,I)). In the established consistent matrix, artifact A2 has one 'I' (I,F,F), A3 has one 'I' (A,A,I), A4 has one 'I' (F,I,A), and A5 has one 'I' (I,A,F). Thus, A1 with two 'I' results has 'Inconclusive' in more tests than any other artifact. (OK)
+    *   Rule 7: A5 has one 'A'. A5 = (I,A,F). (OK)
+    *   Rule 8: Non-Genuine artifacts are {A1,A2,A4,A5}. Test Y results: A1(I), A2(F), A4(I), A5(A). Exactly one Test Y = F (A2). (OK)
+    *   Rule 9: Number of 'A's in Test X: A1(A), A3(A) -> 2. Number of 'A's in Test Y: A3(A), A5(A) -> 2. (OK)
+    *   Rule 10: A4 is not Genuine. (OK)
+10. The derived matrix is consistent. For A1, the results are (A,I,I). Test Y for A1 is 'I'."
+"Logical Reasoning & Data Interpretation","40","Q27_rev","3","MockGenFINAL_S1_rev","Set 1 of 5: Artifact Authenticity at a Museum
+
+A museum curator is evaluating the authenticity of five recently acquired artifacts (A1, A2, A3, A4, A5) using three distinct analytical tests (Test X, Test Y, Test Z). Each test can yield a result of ""Authentic"" (A), ""Inconclusive"" (I), or ""Fake"" (F) for each artifact. An artifact is declared ""Genuine"" only if it yields ""Authentic"" in at least two tests and ""Fake"" in no test.
+
+Test Results and Conditions:
+1.  Exactly *one* artifact was declared ""Genuine"".
+2.  Artifact A3 yielded ""Authentic"" in Test X and Test Y.
+3.  Test Z yielded ""Fake"" for artifact A2 and ""Authentic"" for artifact A4.
+4.  No artifact yielded the same result in all three tests (e.g., A-A-A, F-F-F, I-I-I are not possible).
+5.  If an artifact yielded ""Authentic"" in Test X, it did not yield ""Fake"" in Test Y.
+6.  Artifact A1 yielded ""Inconclusive"" in more tests than any other artifact. (This means A1 has either two or three 'I' results. By rule 4, A1 cannot be (I,I,I), so A1 has exactly two 'I' results).
+7.  Artifact A5 yielded ""Authentic"" in exactly one test.
+8.  Among the artifacts not declared ""Genuine"" (i.e., A1, A2, A4, A5), exactly one had ""Fake"" as a result in Test Y.
+9.  The total number of ""Authentic"" results yielded by Test X across all five artifacts was equal to the total number of ""Authentic"" results yielded by Test Y across all five artifacts.
+10. Artifact A4 was not declared ""Genuine"".","How many ""Fake"" results did Test X yield in total across all five artifacts?","0","1","2","3","0","1","2","3","1","MCQ","LR","Puzzles: Conditional Logic","Hard","Puzzles: Conditional Logic","counting from matrix, multi-condition evaluation, constraint satisfaction","False","MockGenFINAL_S1_rev","Evaluating","Using the validated matrix from Solution Q2:
+A1:(A,I,I); A2:(I,F,F); A3:(A,A,I); A4:(F,I,A); A5:(I,A,F).
+Test X Results: A1(A), A2(I), A3(A), A4(F), A5(I).
+Number of ""Fake"" results in Test X = 1 (from A4)."
+"Logical Reasoning & Data Interpretation","40","Q28_rev","4","MockGenFINAL_S1_rev","Set 1 of 5: Artifact Authenticity at a Museum
+
+A museum curator is evaluating the authenticity of five recently acquired artifacts (A1, A2, A3, A4, A5) using three distinct analytical tests (Test X, Test Y, Test Z). Each test can yield a result of ""Authentic"" (A), ""Inconclusive"" (I), or ""Fake"" (F) for each artifact. An artifact is declared ""Genuine"" only if it yields ""Authentic"" in at least two tests and ""Fake"" in no test.
+
+Test Results and Conditions:
+1.  Exactly *one* artifact was declared ""Genuine"".
+2.  Artifact A3 yielded ""Authentic"" in Test X and Test Y.
+3.  Test Z yielded ""Fake"" for artifact A2 and ""Authentic"" for artifact A4.
+4.  No artifact yielded the same result in all three tests (e.g., A-A-A, F-F-F, I-I-I are not possible).
+5.  If an artifact yielded ""Authentic"" in Test X, it did not yield ""Fake"" in Test Y.
+6.  Artifact A1 yielded ""Inconclusive"" in more tests than any other artifact. (This means A1 has either two or three 'I' results. By rule 4, A1 cannot be (I,I,I), so A1 has exactly two 'I' results).
+7.  Artifact A5 yielded ""Authentic"" in exactly one test.
+8.  Among the artifacts not declared ""Genuine"" (i.e., A1, A2, A4, A5), exactly one had ""Fake"" as a result in Test Y.
+9.  The total number of ""Authentic"" results yielded by Test X across all five artifacts was equal to the total number of ""Authentic"" results yielded by Test Y across all five artifacts.
+10. Artifact A4 was not declared ""Genuine"".","Which artifact yielded ""Fake"" in Test Y?","A1","A2","A4","A5","A1","A2","A4","A5","A2","MCQ","LR","Puzzles: Conditional Logic","Hard","Puzzles: Conditional Logic","deduction from matrix, constraint satisfaction, specific rule application","False","MockGenFINAL_S1_rev","Evaluating","Using the validated matrix from Solution Q2:
+A1:(A,I,I); A2:(I,F,F); A3:(A,A,I); A4:(F,I,A); A5:(I,A,F).
+Test Y results: A1(I), A2(F), A3(A), A4(I), A5(A).
+Artifact A2 yielded ""Fake"" in Test Y."
+"Logical Reasoning & Data Interpretation","40","Q29_rev","5","MockGenFINAL_S2_rev","Set 2 of 5: Hexagonal Colony Pathway Lighting
+
+A new residential colony is designed with housing clusters arranged in a hexagonal grid. There are 7 main clusters: a central cluster C1, surrounded by C2, C3, C4, C5, C6, C7 in clockwise order. Each outer cluster is adjacent to C1 and to its two neighboring outer clusters (e.g., C2 is adjacent to C1, C3, and C7). Pathways connect adjacent clusters. Three types of lights are used: Solar (S), LED (L), and Halogen (H).
+
+Lighting Plan Rules:
+1.  Each pathway between any two adjacent clusters must have exactly one type of light.
+2.  No two pathways sharing a common outer cluster (C2-C7) as an endpoint can have the same type of light. (e.g., lights on C1-C2, C2-C3, C2-C7 must be distinct types S, L, H in some order).
+3.  Pathways connected to the central cluster C1 (i.e., C1-C2, C1-C3, ..., C1-C7) must follow a repeating pattern of S, L, H, in that specific sequence, starting with C1-C2 being S. (So, C1-C2 is S, C1-C3 is L, C1-C4 is H, C1-C5 is S, C1-C6 is L, C1-C7 is H). There are 6 such pathways from C1 to the outer ring C2 through C7.
+4.  The pathway C2-C3 has a Halogen (H) light.
+5.  The pathway C4-C5 has an LED (L) light.
+6.  The total number of Halogen (H) lights used on pathways not connected to C1 (i.e., pathways between outer clusters C2-C3, C3-C4, etc.) is exactly 2.
+7.  Pathways exist between C1 and each of C2-C7 (6 pathways), and between adjacent outer clusters (C2-C3, C3-C4, C4-C5, C5-C6, C6-C7, C7-C2) (6 pathways). Total 12 pathways.","What type of light is installed on the pathway C1-C5?","Solar (S)","LED (L)","Halogen (H)","Cannot be determined","Solar (S)","LED (L)","Halogen (H)","Cannot be determined","Solar (S)","MCQ","LR","Arrangements: Complex (Multi-dimensional, floor puzzles, etc.)","Medium","Arrangements: Complex (Multi-dimensional, floor puzzles, etc.)","spatial reasoning, pattern recognition, constraint-based placement, hexagonal grid","False","MockGenFINAL_S2_rev","Analyzing","Rule 3 specifies the pattern for lights on pathways connected to C1: S, L, H, S, L, H.
+C1-C2: S
+C1-C3: L
+C1-C4: H
+C1-C5: S
+Therefore, the light on C1-C5 is Solar (S)."
+"Logical Reasoning & Data Interpretation","40","Q30_rev","6","MockGenFINAL_S2_rev","Set 2 of 5: Hexagonal Colony Pathway Lighting
+
+A new residential colony is designed with housing clusters arranged in a hexagonal grid. There are 7 main clusters: a central cluster C1, surrounded by C2, C3, C4, C5, C6, C7 in clockwise order. Each outer cluster is adjacent to C1 and to its two neighboring outer clusters (e.g., C2 is adjacent to C1, C3, and C7). Pathways connect adjacent clusters. Three types of lights are used: Solar (S), LED (L), and Halogen (H).
+
+Lighting Plan Rules:
+1.  Each pathway between any two adjacent clusters must have exactly one type of light.
+2.  No two pathways sharing a common outer cluster (C2-C7) as an endpoint can have the same type of light. (e.g., lights on C1-C2, C2-C3, C2-C7 must be distinct types S, L, H in some order).
+3.  Pathways connected to the central cluster C1 (i.e., C1-C2, C1-C3, ..., C1-C7) must follow a repeating pattern of S, L, H, in that specific sequence, starting with C1-C2 being S. (So, C1-C2 is S, C1-C3 is L, C1-C4 is H, C1-C5 is S, C1-C6 is L, C1-C7 is H). There are 6 such pathways from C1 to the outer ring C2 through C7.
+4.  The pathway C2-C3 has a Halogen (H) light.
+5.  The pathway C4-C5 has an LED (L) light.
+6.  The total number of Halogen (H) lights used on pathways not connected to C1 (i.e., pathways between outer clusters C2-C3, C3-C4, etc.) is exactly 2.
+7.  Pathways exist between C1 and each of C2-C7 (6 pathways), and between adjacent outer clusters (C2-C3, C3-C4, C4-C5, C5-C6, C6-C7, C7-C2) (6 pathways). Total 12 pathways.","How many pathways in total have LED (L) lights installed?","3","4","5","6","3","4","5","6","4","MCQ","LR","Arrangements: Complex (Multi-dimensional, floor puzzles, etc.)","Hard","Arrangements: Complex (Multi-dimensional, floor puzzles, etc.)","counting, exhaustive enumeration from rules, spatial logic, hexagonal grid, constraint interaction","False","MockGenFINAL_S2_rev","Evaluating","1.  Lights on pathways connected to C1 (Rule 3):
+    C1-C2: S
+    C1-C3: L
+    C1-C4: H
+    C1-C5: S
+    C1-C6: L
+    C1-C7: H
+    LED lights from these pathways: C1-C3 (L), C1-C6 (L). (Total 2 LEDs).
+2.  Lights on pathways between outer clusters (Rule 2: lights at each outer cluster must be distinct):
+    *   At C2: Adjacent pathways are C1-C2 (S), C2-C3, C7-C2. Rule 4 states C2-C3 is H. For distinctness (S,L,H) at C2, C7-C2 must be L.
+    *   At C3: Adjacent pathways are C1-C3 (L), C2-C3 (H), C3-C4. For distinctness, C3-C4 must be S.
+    *   At C4: Adjacent pathways are C1-C4 (H), C3-C4 (S), C4-C5. Rule 5 states C4-C5 is L. This is consistent (H,S,L).
+    *   At C5: Adjacent pathways are C1-C5 (S), C4-C5 (L), C5-C6. For distinctness, C5-C6 must be H.
+    *   At C6: Adjacent pathways are C1-C6 (L), C5-C6 (H), C6-C7. For distinctness, C6-C7 must be S.
+    *   At C7: Adjacent pathways are C1-C7 (H), C6-C7 (S), C7-C2. For distinctness, C7-C2 must be L. (This matches what we found for C2).
+3.  Outer pathway lights: C2-C3(H), C3-C4(S), C4-C5(L), C5-C6(H), C6-C7(S), C7-C2(L).
+4.  Check Rule 6: Total Halogen (H) lights on outer pathways is 2. From our list: C2-C3(H) and C5-C6(H). This is exactly 2. (OK)
+5.  Total LED lights:
+    From C1 pathways: 2 (C1-C3, C1-C6).
+    From Outer pathways: C4-C5(L), C7-C2(L) -> 2 LEDs.
+    Total LED lights = 2 + 2 = 4."
+"Logical Reasoning & Data Interpretation","40","Q31_rev","7","MockGenFINAL_S2_rev","Set 2 of 5: Hexagonal Colony Pathway Lighting
+
+A new residential colony is designed with housing clusters arranged in a hexagonal grid. There are 7 main clusters: a central cluster C1, surrounded by C2, C3, C4, C5, C6, C7 in clockwise order. Each outer cluster is adjacent to C1 and to its two neighboring outer clusters (e.g., C2 is adjacent to C1, C3, and C7). Pathways connect adjacent clusters. Three types of lights are used: Solar (S), LED (L), and Halogen (H).
+
+Lighting Plan Rules:
+1.  Each pathway between any two adjacent clusters must have exactly one type of light.
+2.  No two pathways sharing a common outer cluster (C2-C7) as an endpoint can have the same type of light. (e.g., lights on C1-C2, C2-C3, C2-C7 must be distinct types S, L, H in some order).
+3.  Pathways connected to the central cluster C1 (i.e., C1-C2, C1-C3, ..., C1-C7) must follow a repeating pattern of S, L, H, in that specific sequence, starting with C1-C2 being S. (So, C1-C2 is S, C1-C3 is L, C1-C4 is H, C1-C5 is S, C1-C6 is L, C1-C7 is H). There are 6 such pathways from C1 to the outer ring C2 through C7.
+4.  The pathway C2-C3 has a Halogen (H) light.
+5.  The pathway C4-C5 has an LED (L) light.
+6.  The total number of Halogen (H) lights used on pathways not connected to C1 (i.e., pathways between outer clusters C2-C3, C3-C4, etc.) is exactly 2.
+7.  Pathways exist between C1 and each of C2-C7 (6 pathways), and between adjacent outer clusters (C2-C3, C3-C4, C4-C5, C5-C6, C6-C7, C7-C2) (6 pathways). Total 12 pathways.","What type of light is installed on the pathway C3-C4?","Solar (S)","LED (L)","Halogen (H)","Cannot be determined","Solar (S)","LED (L)","Halogen (H)","Cannot be determined","Solar (S)","MCQ","LR","Arrangements: Complex (Multi-dimensional, floor puzzles, etc.)","Hard","Arrangements: Complex (Multi-dimensional, floor puzzles, etc.)","logical deduction, constraint interaction, spatial identification, hexagonal grid","False","MockGenFINAL_S2_rev","Evaluating","From the derived pathway lights in the solution for Q6 (step 3), the light on pathway C3-C4 is Solar (S)."
+"Logical Reasoning & Data Interpretation","40","Q32_rev","8","MockGenFINAL_S2_rev","Set 2 of 5: Hexagonal Colony Pathway Lighting
+
+A new residential colony is designed with housing clusters arranged in a hexagonal grid. There are 7 main clusters: a central cluster C1, surrounded by C2, C3, C4, C5, C6, C7 in clockwise order. Each outer cluster is adjacent to C1 and to its two neighboring outer clusters (e.g., C2 is adjacent to C1, C3, and C7). Pathways connect adjacent clusters. Three types of lights are used: Solar (S), LED (L), and Halogen (H).
+
+Lighting Plan Rules:
+1.  Each pathway between any two adjacent clusters must have exactly one type of light.
+2.  No two pathways sharing a common outer cluster (C2-C7) as an endpoint can have the same type of light. (e.g., lights on C1-C2, C2-C3, C2-C7 must be distinct types S, L, H in some order).
+3.  Pathways connected to the central cluster C1 (i.e., C1-C2, C1-C3, ..., C1-C7) must follow a repeating pattern of S, L, H, in that specific sequence, starting with C1-C2 being S. (So, C1-C2 is S, C1-C3 is L, C1-C4 is H, C1-C5 is S, C1-C6 is L, C1-C7 is H). There are 6 such pathways from C1 to the outer ring C2 through C7.
+4.  The pathway C2-C3 has a Halogen (H) light.
+5.  The pathway C4-C5 has an LED (L) light.
+6.  The total number of Halogen (H) lights used on pathways not connected to C1 (i.e., pathways between outer clusters C2-C3, C3-C4, etc.) is exactly 2.
+7.  Pathways exist between C1 and each of C2-C7 (6 pathways), and between adjacent outer clusters (C2-C3, C3-C4, C4-C5, C5-C6, C6-C7, C7-C2) (6 pathways). Total 12 pathways.","Which of the following pathways has a Halogen (H) light?","C1-C3","C5-C6","C6-C7","C1-C2","C1-C3","C5-C6","C6-C7","C1-C2","C5-C6","MCQ","LR","Arrangements: Complex (Multi-dimensional, floor puzzles, etc.)","Medium","Arrangements: Complex (Multi-dimensional, floor puzzles, etc.)","specific identification, rule interaction, hexagonal grid, option checking","False","MockGenFINAL_S2_rev","Analyzing","Derived lights:
+C1 Paths: C1-C2(S), C1-C3(L), C1-C4(H), C1-C5(S), C1-C6(L), C1-C7(H).
+Outer Paths: C2-C3(H), C3-C4(S), C4-C5(L), C5-C6(H), C6-C7(S), C7-C2(L).
+Checking options:
+(A) C1-C3 is L.
+(B) C5-C6 is H.
+(C) C6-C7 is S.
+(D) C1-C2 is S.
+The only pathway with a Halogen (H) light among the options is C5-C6."
+"Logical Reasoning & Data Interpretation","40","Q33_rev","9","MockGenFINAL_S2_rev","Set 2 of 5: Hexagonal Colony Pathway Lighting
+
+A new residential colony is designed with housing clusters arranged in a hexagonal grid. There are 7 main clusters: a central cluster C1, surrounded by C2, C3, C4, C5, C6, C7 in clockwise order. Each outer cluster is adjacent to C1 and to its two neighboring outer clusters (e.g., C2 is adjacent to C1, C3, and C7). Pathways connect adjacent clusters. Three types of lights are used: Solar (S), LED (L), and Halogen (H).
+
+Lighting Plan Rules:
+1.  Each pathway between any two adjacent clusters must have exactly one type of light.
+2.  No two pathways sharing a common outer cluster (C2-C7) as an endpoint can have the same type of light. (e.g., lights on C1-C2, C2-C3, C2-C7 must be distinct types S, L, H in some order).
+3.  Pathways connected to the central cluster C1 (i.e., C1-C2, C1-C3, ..., C1-C7) must follow a repeating pattern of S, L, H, in that specific sequence, starting with C1-C2 being S. (So, C1-C2 is S, C1-C3 is L, C1-C4 is H, C1-C5 is S, C1-C6 is L, C1-C7 is H). There are 6 such pathways from C1 to the outer ring C2 through C7.
+4.  The pathway C2-C3 has a Halogen (H) light.
+5.  The pathway C4-C5 has an LED (L) light.
+6.  The total number of Halogen (H) lights used on pathways not connected to C1 (i.e., pathways between outer clusters C2-C3, C3-C4, etc.) is exactly 2.
+7.  Pathways exist between C1 and each of C2-C7 (6 pathways), and between adjacent outer clusters (C2-C3, C3-C4, C4-C5, C5-C6, C6-C7, C7-C2) (6 pathways). Total 12 pathways.","If the cost of installing Solar, LED, and Halogen lights per pathway is $100, $80, and $120 respectively, what is the total installation cost for all 12 pathways in the colony?","$1180","$1200","$1220","$1240","$1180","$1200","$1220","$1240","$1200","MCQ","DI","Reasoning-based DI","Medium","Reasoning-based DI","quantitative reasoning from LR context, cost calculation from derived counts","False","MockGenFINAL_S2_rev","Analyzing","1.  Pathways connected to C1 (6 pathways): From Rule 3 (S,L,H,S,L,H), there are 2 Solar, 2 LED, 2 Halogen.
+    Cost for C1 pathways = 2 * $100 (S) + 2 * $80 (L) + 2 * $120 (H)
+    = $200 + $160 + $240 = $600.
+2.  Pathways between outer clusters (6 pathways): As derived in Q6 solution: C2-C3(H), C3-C4(S), C4-C5(L), C5-C6(H), C6-C7(S), C7-C2(L).
+    This set also contains 2 Solar, 2 LED, 2 Halogen.
+    Cost for outer pathways = 2 * $100 (S) + 2 * $80 (L) + 2 * $120 (H)
+    = $200 + $160 + $240 = $600.
+3.  Total installation cost = Cost for C1 pathways + Cost for outer pathways
+    = $600 + $600 = $1200."
+"Logical Reasoning & Data Interpretation","40","Q34_rev","10","MockGenFINAL_S3_rev","Set 3 of 5: Project Funding Allocation
+
+A research grant committee has $1,000,000 to distribute among four distinct research projects: P1, P2, P3, and P4. The funding will be allocated in discrete units of $10,000.
+
+Allocation Rules:
+1.  Each project must receive at least $100,000.
+2.  P1 must receive exactly twice the amount allocated to P2.
+3.  P3's allocation must be a multiple of $50,000 and must be at least $200,000.
+4.  P4 receives $50,000 more than P2.
+5.  No two projects can receive the exact same amount of funding.
+6.  The difference between the highest and lowest allocated funding amount among the four projects is exactly $200,000.","What is the funding allocated to Project P1?","$200,000","$300,000","$350,000","$400,000","$200,000","$300,000","$350,000","$400,000","$300,000","MCQ","DI","Caselets / Paragraph DI","Medium","Caselets / Paragraph DI","algebraic modeling, constraint satisfaction, solving equations, integer solutions","False","MockGenFINAL_S3_rev","Analyzing","Let the funding amounts for P1, P2, P3, P4 be A, B, C, D respectively, in units of $10,000. The total funding is 100 units ($1,000,000).
+Rules:
+1.  A, B, C, D >= 10 (at least $100,000).
+2.  A = 2B.
+3.  C must be a multiple of 5 (since $50,000 is 5 units of $10,000) and C >= 20 ($200,000).
+4.  D = B + 5.
+5.  A, B, C, D must be distinct.
+6.  Highest allocation - Lowest allocation = 20 ($200,000).
+Sum of allocations: A + B + C + D = 100.
+Substitute A and D: (2B) + B + C + (B + 5) = 100
+4B + C + 5 = 100
+4B + C = 95.
+
+We need to find an integer B >= 10 such that C = 95 - 4B satisfies C >= 20 and C is a multiple of 5.
+Also, the set {2B, B, C, B+5} must be distinct and satisfy Rule 6.
+
+Let's test values for B:
+*   If B = 10: A = 20, D = 15. C = 95 - 4(10) = 55.
+    Amounts: {20, 10, 55, 15}. All >= 10. C = 55 (multiple of 5, >=20). Distinct.
+    Highest = 55, Lowest = 10. Difference = 55 - 10 = 45. (Fails Rule 6, diff must be 20).
+*   If B = 11: A = 22, D = 16. C = 95 - 4(11) = 51. (Fails Rule 3, C not multiple of 5).
+*   If B = 12: A = 24, D = 17. C = 95 - 4(12) = 47. (Fails Rule 3).
+*   If B = 13: A = 26, D = 18. C = 95 - 4(13) = 43. (Fails Rule 3).
+*   If B = 14: A = 28, D = 19. C = 95 - 4(14) = 39. (Fails Rule 3).
+*   If B = 15: A = 30, D = 20. C = 95 - 4(15) = 35.
+    Amounts: {30, 15, 35, 20}. All >= 10. C = 35 (multiple of 5, >=20). Distinct.
+    Highest = 35, Lowest = 15. Difference = 35 - 15 = 20. (Satisfies Rule 6).
+This is a valid solution.
+P1's funding (A) is 30 units, which is 30 * $10,000 = $300,000."
+"Logical Reasoning & Data Interpretation","40","Q35_rev","11","MockGenFINAL_S3_rev","Set 3 of 5: Project Funding Allocation
+
+A research grant committee has $1,000,000 to distribute among four distinct research projects: P1, P2, P3, and P4. The funding will be allocated in discrete units of $10,000.
+
+Allocation Rules:
+1.  Each project must receive at least $100,000.
+2.  P1 must receive exactly twice the amount allocated to P2.
+3.  P3's allocation must be a multiple of $50,000 and must be at least $200,000.
+4.  P4 receives $50,000 more than P2.
+5.  No two projects can receive the exact same amount of funding.
+6.  The difference between the highest and lowest allocated funding amount among the four projects is exactly $200,000.","What is the funding allocated to Project P3?","$200,000","$250,000","$300,000","$350,000","$200,000","$250,000","$300,000","$350,000","$350,000","MCQ","DI","Caselets / Paragraph DI","Medium","Caselets / Paragraph DI","algebraic modeling, constraint satisfaction, direct deduction from solution","False","MockGenFINAL_S3_rev","Analyzing","From the solution of Q10, the amounts are:
+P1 (A) = $300,000 (30 units)
+P2 (B) = $150,000 (15 units)
+P3 (C) = $350,000 (35 units)
+P4 (D) = $200,000 (20 units)
+The funding allocated to Project P3 (C) is $350,000."
+"Logical Reasoning & Data Interpretation","40","Q36_rev","12","MockGenFINAL_S3_rev","Set 3 of 5: Project Funding Allocation
+
+A research grant committee has $1,000,000 to distribute among four distinct research projects: P1, P2, P3, and P4. The funding will be allocated in discrete units of $10,000.
+
+Allocation Rules:
+1.  Each project must receive at least $100,000.
+2.  P1 must receive exactly twice the amount allocated to P2.
+3.  P3's allocation must be a multiple of $50,000 and must be at least $200,000.
+4.  P4 receives $50,000 more than P2.
+5.  No two projects can receive the exact same amount of funding.
+6.  The difference between the highest and lowest allocated funding amount among the four projects is exactly $200,000.","How many projects receive funding greater than $250,000?","0","1","2","3","0","1","2","3","2","MCQ","DI","Caselets / Paragraph DI","Easy","Caselets / Paragraph DI","data interpretation from conditions, counting based on criteria","False","MockGenFINAL_S3_rev","Applying","The funding amounts are P1 = $300,000, P2 = $150,000, P3 = $350,000, P4 = $200,000.
+Projects with funding greater than $250,000 are:
+P1 ($300,000)
+P3 ($350,000)
+There are 2 such projects."
+"Logical Reasoning & Data Interpretation","40","Q37_rev","13","MockGenFINAL_S3_rev","Set 3 of 5: Project Funding Allocation
+
+A research grant committee has $1,000,000 to distribute among four distinct research projects: P1, P2, P3, and P4. The funding will be allocated in discrete units of $10,000.
+
+Allocation Rules:
+1.  Each project must receive at least $100,000.
+2.  P1 must receive exactly twice the amount allocated to P2.
+3.  P3's allocation must be a multiple of $50,000 and must be at least $200,000.
+4.  P4 receives $50,000 more than P2.
+5.  No two projects can receive the exact same amount of funding.
+6.  The difference between the highest and lowest allocated funding amount among the four projects is exactly $200,000.","If the total grant money available was $1,050,000 instead of $1,000,000, and all other conditions *except Rule 6 (the highest-lowest difference must be exactly $200,000)* remained the same, which project's funding would necessarily increase if the additional $50,000 is allocated entirely to one of the original projects (P1, P2, P3, or P4), while still satisfying rules 1, 2, 3, 4, and 5?","P1","P2","P3","P4","P1","P2","P3","P4","P3","MCQ","DI","Caselets / Paragraph DI","Hard","Caselets / Paragraph DI","conditional analysis, scenario testing, constraint re-evaluation, algebraic reasoning","False","MockGenFINAL_S3_rev","Evaluating","Original funding: P1 = 30, P2 = 15, P3 = 35, P4 = 20 (units of $10,000). Total = 100 units.
+New total = $1,050,000 = 105 units. Additional 5 units ($50,000) are allocated to one project.
+Rules 1, 2, 3, 4, 5 must still be met. Rule 6 (difference = 20) is explicitly excluded for this question.
+
+Original set of amounts: {P1=30, P2=15, P3=35, P4=20}.
+We consider adding 5 units to one of these projects and check if Rules 1-5 hold for the new set of four amounts (where the other three amounts remain as original).
+
+Case 1: If P1 receives the extra 5 units. New P1 = 35.
+The amounts would be {35, 15, 35, 20}. This violates Rule 5 (P1 = P3).
+
+Case 2: If P2 receives the extra 5 units. New P2 = 20.
+The amounts would be {30, 20, 35, 20}. This violates Rule 5 (P2 = P4).
+
+Case 3: If P3 receives the extra 5 units. New P3 = 40.
+The amounts would be {30, 15, 40, 20}.
+Let's check Rules 1-5 for this set {A=30, B=15, C=40, D=20}:
+1.  All >= 10: {30,15,40,20}. (OK)
+2.  A = 2B: 30 = 2 * 15. (OK)
+3.  C multiple of 5, C >= 20: 40 is a multiple of 5 and >= 20. (OK)
+4.  D = B + 5: 20 = 15 + 5. (OK)
+5.  Distinct: {30,15,40,20}. All distinct. (OK)
+The sum is 30 + 15 + 40 + 20 = 105. This allocation is valid under the modified conditions.
+
+Case 4: If P4 receives the extra 5 units. New P4 = 25.
+The amounts would be {30, 15, 35, 25}.
+Here D = 25, B = 15. Rule 4 (D = B + 5) becomes 25 = 15 + 5, which is 25 = 20. This is false. Thus, Rule 4 is violated.
+
+The only project that can receive the additional $50,000 while satisfying Rules 1, 2, 3, 4, and 5, assuming the other project amounts (and their relationships if not directly affected) are maintained from the original solution, is P3."
+"Logical Reasoning & Data Interpretation","40","Q38_rev","14","MockGenFINAL_S4_rev","Set 4 of 5: Task Scheduling Algorithm
+
+An algorithm schedules five tasks (T1, T2, T3, T4, T5) on three identical processors (P1, P2, P3). Each task has a specific processing time and a dependency (some tasks can only start after another task is completed). The algorithm aims to minimize the makespan (the time when the last task completes).
+
+Task Details:
+*   T1: 3 hours
+*   T2: 4 hours
+*   T3: 2 hours
+*   T4: 5 hours
+*   T5: 3 hours
+
+Dependencies:
+*   T2 can only start after T1 is completed.
+*   T4 can only start after T1 is completed.
+*   T5 can only start after T3 is completed.
+
+Scheduling Rules:
+1.  A processor can work on only one task at a time. A task, once started on a processor, runs to completion on that processor without interruption.
+2.  If multiple tasks are ready (all dependencies met, processor available), the algorithm picks the task with the longest processing time first. If there's a tie in processing time, it picks the task with the lower numerical ID (T1 before T2, etc.).
+3.  If multiple processors are free when a task is ready to be scheduled, the algorithm assigns it to the processor with the lower numerical ID (P1 before P2, P2 before P3).
+4.  All tasks and processors are available from time = 0.","Which processor completes task T4?","P1","P2","P3","P1 or P2","P1","P2","P3","P1 or P2","P1","MCQ","LR","Puzzles: Scheduling","Medium","Puzzles: Scheduling","scheduling algorithm, dependency tracking, processor allocation, Gantt chart logic, priority rules","False","MockGenFINAL_S4_rev","Analyzing","Schedule tasks based on rules:
+Time 0:
+*   Ready tasks: T1 (3h), T3 (2h).
+*   Priority: T1 (longest processing time) > T3.
+*   P1 takes T1. P2 takes T3. P3 is idle.
+*   P1: T1 [0 -> 3]
+*   P2: T3 [0 -> 2]
+*   P3: Idle
+
+Time 2: T3 completes. P2 becomes free.
+*   Task T5 (3h) becomes ready (dependency T3 met).
+*   P2 takes T5.
+*   P1: T1 [0 -> 3]
+*   P2: T3 [0 -> 2] -> T5 [2 -> 5]
+*   P3: Idle
+
+Time 3: T1 completes. P1 becomes free.
+*   Tasks T2 (4h, dependency T1) and T4 (5h, dependency T1) become ready.
+*   Priority: T4 (longest) > T2.
+*   P1 takes T4.
+*   Now check for T2. P3 is free.
+*   P3 takes T2.
+*   P1: T1 [0 -> 3] -> T4 [3 -> 8]
+*   P2: T3 [0 -> 2] -> T5 [2 -> 5]
+*   P3: T2 [3 -> 7]
+
+Processor states:
+P1: T1 (0-3), T4 (3-8)
+P2: T3 (0-2), T5 (2-5)
+P3: T2 (3-7)
+
+Task T4 is completed by P1."
+"Logical Reasoning & Data Interpretation","40","Q39_rev","15","MockGenFINAL_S4_rev","Set 4 of 5: Task Scheduling Algorithm
+
+An algorithm schedules five tasks (T1, T2, T3, T4, T5) on three identical processors (P1, P2, P3). Each task has a specific processing time and a dependency (some tasks can only start after another task is completed). The algorithm aims to minimize the makespan (the time when the last task completes).
+
+Task Details:
+*   T1: 3 hours
+*   T2: 4 hours
+*   T3: 2 hours
+*   T4: 5 hours
+*   T5: 3 hours
+
+Dependencies:
+*   T2 can only start after T1 is completed.
+*   T4 can only start after T1 is completed.
+*   T5 can only start after T3 is completed.
+
+Scheduling Rules:
+1.  A processor can work on only one task at a time. A task, once started on a processor, runs to completion on that processor without interruption.
+2.  If multiple tasks are ready (all dependencies met, processor available), the algorithm picks the task with the longest processing time first. If there's a tie in processing time, it picks the task with the lower numerical ID (T1 before T2, etc.).
+3.  If multiple processors are free when a task is ready to be scheduled, the algorithm assigns it to the processor with the lower numerical ID (P1 before P2, P2 before P3).
+4.  All tasks and processors are available from time = 0.","What is the completion time of task T2?","7 hours","8 hours","9 hours","10 hours","7 hours","8 hours","9 hours","10 hours","7 hours","MCQ","LR","Puzzles: Scheduling","Medium","Puzzles: Scheduling","scheduling algorithm, time tracking, Gantt chart logic","False","MockGenFINAL_S4_rev","Analyzing","From the schedule derived in Q14:
+Task T2 is assigned to P3 at time 3. Its processing time is 4 hours.
+Completion time of T2 = Start time + Processing time = 3 + 4 = 7 hours."
+"Logical Reasoning & Data Interpretation","40","Q40_rev","16","MockGenFINAL_S4_rev","Set 4 of 5: Task Scheduling Algorithm
+
+An algorithm schedules five tasks (T1, T2, T3, T4, T5) on three identical processors (P1, P2, P3). Each task has a specific processing time and a dependency (some tasks can only start after another task is completed). The algorithm aims to minimize the makespan (the time when the last task completes).
+
+Task Details:
+*   T1: 3 hours
+*   T2: 4 hours
+*   T3: 2 hours
+*   T4: 5 hours
+*   T5: 3 hours
+
+Dependencies:
+*   T2 can only start after T1 is completed.
+*   T4 can only start after T1 is completed.
+*   T5 can only start after T3 is completed.
+
+Scheduling Rules:
+1.  A processor can work on only one task at a time. A task, once started on a processor, runs to completion on that processor without interruption.
+2.  If multiple tasks are ready (all dependencies met, processor available), the algorithm picks the task with the longest processing time first. If there's a tie in processing time, it picks the task with the lower numerical ID (T1 before T2, etc.).
+3.  If multiple processors are free when a task is ready to be scheduled, the algorithm assigns it to the processor with the lower numerical ID (P1 before P2, P2 before P3).
+4.  All tasks and processors are available from time = 0.","What is the makespan (completion time of the last task)?","8 hours","9 hours","10 hours","11 hours","8 hours","9 hours","10 hours","11 hours","8 hours","MCQ","LR","Puzzles: Scheduling","Medium","Puzzles: Scheduling","makespan calculation, scheduling simulation, Gantt chart logic","False","MockGenFINAL_S4_rev","Analyzing","Completion times of all tasks:
+T1: 3 hours (on P1)
+T3: 2 hours (on P2)
+T5: 5 hours (on P2, starts at 2, duration 3)
+T2: 7 hours (on P3, starts at 3, duration 4)
+T4: 8 hours (on P1, starts at 3, duration 5)
+The makespan is the time when the last task completes. This is 8 hours."
+"Logical Reasoning & Data Interpretation","40","Q41_rev","17","MockGenFINAL_S4_rev","Set 4 of 5: Task Scheduling Algorithm
+
+An algorithm schedules five tasks (T1, T2, T3, T4, T5) on three identical processors (P1, P2, P3). Each task has a specific processing time and a dependency (some tasks can only start after another task is completed). The algorithm aims to minimize the makespan (the time when the last task completes).
+
+Task Details:
+*   T1: 3 hours
+*   T2: 4 hours
+*   T3: 2 hours
+*   T4: 5 hours
+*   T5: 3 hours
+
+Dependencies:
+*   T2 can only start after T1 is completed.
+*   T4 can only start after T1 is completed.
+*   T5 can only start after T3 is completed.
+
+Scheduling Rules:
+1.  A processor can work on only one task at a time. A task, once started on a processor, runs to completion on that processor without interruption.
+2.  If multiple tasks are ready (all dependencies met, processor available), the algorithm picks the task with the longest processing time first. If there's a tie in processing time, it picks the task with the lower numerical ID (T1 before T2, etc.).
+3.  If multiple processors are free when a task is ready to be scheduled, the algorithm assigns it to the processor with the lower numerical ID (P1 before P2, P2 before P3).
+4.  All tasks and processors are available from time = 0.","How many hours does processor P3 remain idle from time = 0 until the makespan is reached?","1 hour","2 hours","3 hours","4 hours","1 hour","2 hours","3 hours","4 hours","4 hours","MCQ","LR","Puzzles: Scheduling","Medium","Puzzles: Scheduling","resource utilization, idle time calculation, scheduling analysis, Gantt chart logic","False","MockGenFINAL_S4_rev","Analyzing","Processor P3's schedule: T2 [3 -> 7].
+The makespan is 8 hours.
+P3 is idle from time 0 to time 3 (start of T2). Idle duration = 3 - 0 = 3 hours.
+P3 is busy from time 3 to time 7.
+P3 is idle from time 7 (completion of T2) to makespan (time 8). Idle duration = 8 - 7 = 1 hour.
+Total idle time for P3 = 3 hours + 1 hour = 4 hours."
+"Logical Reasoning & Data Interpretation","40","Q42_rev","18","MockGenFINAL_S5_rev","Set 5 of 5: Multi-Layered Network Security Protocol
+
+A company uses a 3-layered security protocol for accessing its central database.
+Layer 1: Biometric Scan (BS) - Pass (P) or Fail (F)
+Layer 2: Passcode Entry (PE) - Pass (P) or Fail (F)
+Layer 3: Voice Recognition (VR) - Pass (P) or Fail (F)
+Access is granted only if an employee passes a specific combination of layers. There are four employee categories (E1, E2, E3, E4) with different access rules.
+A total of 500 access attempts were made in a month.
+
+Data on Access Attempts and Rules:
+1.  E1 (Executives): Must pass BS and PE. VR is not required for access. (Access if BS = P AND PE = P)
+2.  E2 (Managers): Must pass PE and VR. BS is not required for access. (Access if PE = P AND VR = P)
+3.  E3 (Analysts): Must pass BS and VR. PE is not required for access. (Access if BS = P AND VR = P)
+4.  E4 (Interns): Must pass any two of the three layers. (Access if (BS = P AND PE = P) OR (BS = P AND VR = P) OR (PE = P AND VR = P); this includes passing all three).
+5.  For each category of employee, the outcomes of the three layers (BS, PE, VR) are independent of each other, unless specified otherwise by a rule for that category.
+6.  Distribution of attempts: E1 = 20% (100 attempts), E2 = 30% (150 attempts), E3 = 25% (125 attempts), E4 = 25% (125 attempts).
+7.  For E1 employees: P(BS = P for E1) = 0.7. Given an E1 passed BS, P(PE = P | BS = P for E1) = 0.9.
+8.  For E2 employees: P(PE = P for E2) = 0.8, P(VR = P for E2) = 0.75.
+9.  For E3 employees: P(BS = P for E3) = 0.6. If an E3 attempt failed BS, it also always failed VR (P(VR = P | BS = F for E3) = 0). The pass rate P(VR = P | BS = P for E3) = 0.8.
+10. For E4 employees: P(BS = P for E4) = 0.8. If an E4 attempt passed BS, it also passed PE (P(PE = P | BS = P for E4) = 1). The pass rate P(VR = P for E4) = 0.5 (this applies independently of BS/PE status). If an E4 attempt failed BS, its P(PE = P | BS = F for E4) = 0.5.","How many access attempts by E1 employees were successful?","56","63","70","90","56","63","70","90","63","MCQ","DI","Reasoning-based DI","Medium","Reasoning-based DI","conditional probability, multi-layered rules, data synthesis, percentage calculation","False","MockGenFINAL_S5_rev","Analyzing","E1 (Executives) attempts = 100 (20% of 500).
+Access rule for E1: BS = P AND PE = P.
+P(BS = P for E1) = 0.7.
+Number of E1 attempts passing BS = 100 * 0.7 = 70.
+Given an E1 passed BS, P(PE = P | BS = P for E1) = 0.9.
+Number of E1 attempts passing BS AND PE (successful) = (Number passing BS) * P(PE = P | BS = P for E1)
+= 70 * 0.9 = 63."
+"Logical Reasoning & Data Interpretation","40","Q43_rev","19","MockGenFINAL_S5_rev","Set 5 of 5: Multi-Layered Network Security Protocol
+
+A company uses a 3-layered security protocol for accessing its central database.
+Layer 1: Biometric Scan (BS) - Pass (P) or Fail (F)
+Layer 2: Passcode Entry (PE) - Pass (P) or Fail (F)
+Layer 3: Voice Recognition (VR) - Pass (P) or Fail (F)
+Access is granted only if an employee passes a specific combination of layers. There are four employee categories (E1, E2, E3, E4) with different access rules.
+A total of 500 access attempts were made in a month.
+
+Data on Access Attempts and Rules:
+1.  E1 (Executives): Must pass BS and PE. VR is not required for access. (Access if BS = P AND PE = P)
+2.  E2 (Managers): Must pass PE and VR. BS is not required for access. (Access if PE = P AND VR = P)
+3.  E3 (Analysts): Must pass BS and VR. PE is not required for access. (Access if BS = P AND VR = P)
+4.  E4 (Interns): Must pass any two of the three layers. (Access if (BS = P AND PE = P) OR (BS = P AND VR = P) OR (PE = P AND VR = P); this includes passing all three).
+5.  For each category of employee, the outcomes of the three layers (BS, PE, VR) are independent of each other, unless specified otherwise by a rule for that category.
+6.  Distribution of attempts: E1 = 20% (100 attempts), E2 = 30% (150 attempts), E3 = 25% (125 attempts), E4 = 25% (125 attempts).
+7.  For E1 employees: P(BS = P for E1) = 0.7. Given an E1 passed BS, P(PE = P | BS = P for E1) = 0.9.
+8.  For E2 employees: P(PE = P for E2) = 0.8, P(VR = P for E2) = 0.75.
+9.  For E3 employees: P(BS = P for E3) = 0.6. If an E3 attempt failed BS, it also always failed VR (P(VR = P | BS = F for E3) = 0). The pass rate P(VR = P | BS = P for E3) = 0.8.
+10. For E4 employees: P(BS = P for E4) = 0.8. If an E4 attempt passed BS, it also passed PE (P(PE = P | BS = P for E4) = 1). The pass rate P(VR = P for E4) = 0.5 (this applies independently of BS/PE status). If an E4 attempt failed BS, its P(PE = P | BS = F for E4) = 0.5.","What is the total number of successful access attempts across all employee categories? (If your answer is a non-integer, choose the closest integer option)","315","319","323","327","315","319","323","327","319","MCQ","DI","Reasoning-based DI","Hard","Reasoning-based DI","aggregate statistics, percentage calculation, multi-group analysis, probabilistic reasoning, case analysis","False","MockGenFINAL_S5_rev","Evaluating","Calculate successful attempts for each category:
+1.  E1 Success = 63 (from Q18).
+
+2.  E2 (Managers) attempts = 150 (30% of 500).
+    Access rule for E2: PE = P AND VR = P.
+    P(PE = P for E2) = 0.8, P(VR = P for E2) = 0.75. These are independent.
+    P(Success for E2) = P(PE = P) * P(VR = P) = 0.8 * 0.75 = 0.6.
+    Number of E2 successful attempts = 150 * 0.6 = 90.
+
+3.  E3 (Analysts) attempts = 125 (25% of 500).
+    Access rule for E3: BS = P AND VR = P.
+    P(BS = P for E3) = 0.6.
+    P(VR = P | BS = P for E3) = 0.8.
+    P(Success for E3) = P(BS = P for E3) * P(VR = P | BS = P for E3) (since if BS = F, access is impossible because VR would also fail as per Rule 9: P(VR = P | BS = F for E3) = 0).
+    P(Success for E3) = 0.6 * 0.8 = 0.48.
+    Number of E3 successful attempts = 125 * 0.48 = 60.
+
+4.  E4 (Interns) attempts = 125 (25% of 500).
+    Access rule for E4: Pass any two of three layers.
+    P(BS = P for E4) = 0.8. So, P(BS = F for E4) = 0.2.
+    P(PE = P | BS = P for E4) = 1. So, if BS = P, then PE = P.
+    P(PE = P | BS = F for E4) = 0.5. So, P(PE = F | BS = F for E4) = 0.5.
+    P(VR = P for E4) = 0.5 (independent). So, P(VR = F for E4) = 0.5.
+
+    Successful E4 combinations (at least two Passes):
+    a) BS = P, PE = P, VR = P:
+       Probability = P(BS = P) * P(PE = P | BS = P) * P(VR = P) = 0.8 * 1 * 0.5 = 0.4.
+       Attempts = 125 * 0.4 = 50. (Access: BS,PE,VR all P)
+    b) BS = P, PE = P, VR = F:
+       Probability = P(BS = P) * P(PE = P | BS = P) * P(VR = F) = 0.8 * 1 * 0.5 = 0.4.
+       Attempts = 125 * 0.4 = 50. (Access: BS,PE pass; VR fails -> 2 passes)
+    c) BS = F, PE = P, VR = P:
+       Probability = P(BS = F) * P(PE = P | BS = F) * P(VR = P) = 0.2 * 0.5 * 0.5 = 0.05.
+       Attempts = 125 * 0.05 = 6.25. (Access: PE,VR pass; BS fails -> 2 passes)
+    d) BS = P, PE = F, VR = P: This case is impossible because for E4, if BS = P, then PE = P (Rule 10).
+
+    Total successful E4 attempts = 50 (for PPP) + 50 (for PPF) + 6.25 (for FPP) = 106.25.
+
+Total successful attempts = E1 + E2 + E3 + E4
+= 63 + 90 + 60 + 106.25 = 319.25.
+Closest integer option is 319."
+"Logical Reasoning & Data Interpretation","40","Q44_rev","20","MockGenFINAL_S5_rev","Set 5 of 5: Multi-Layered Network Security Protocol
+
+A company uses a 3-layered security protocol for accessing its central database.
+Layer 1: Biometric Scan (BS) - Pass (P) or Fail (F)
+Layer 2: Passcode Entry (PE) - Pass (P) or Fail (F)
+Layer 3: Voice Recognition (VR) - Pass (P) or Fail (F)
+Access is granted only if an employee passes a specific combination of layers. There are four employee categories (E1, E2, E3, E4) with different access rules.
+A total of 500 access attempts were made in a month.
+
+Data on Access Attempts and Rules:
+1.  E1 (Executives): Must pass BS and PE. VR is not required for access. (Access if BS = P AND PE = P)
+2.  E2 (Managers): Must pass PE and VR. BS is not required for access. (Access if PE = P AND VR = P)
+3.  E3 (Analysts): Must pass BS and VR. PE is not required for access. (Access if BS = P AND VR = P)
+4.  E4 (Interns): Must pass any two of the three layers. (Access if (BS = P AND PE = P) OR (BS = P AND VR = P) OR (PE = P AND VR = P); this includes passing all three).
+5.  For each category of employee, the outcomes of the three layers (BS, PE, VR) are independent of each other, unless specified otherwise by a rule for that category.
+6.  Distribution of attempts: E1 = 20% (100 attempts), E2 = 30% (150 attempts), E3 = 25% (125 attempts), E4 = 25% (125 attempts).
+7.  For E1 employees: P(BS = P for E1) = 0.7. Given an E1 passed BS, P(PE = P | BS = P for E1) = 0.9.
+8.  For E2 employees: P(PE = P for E2) = 0.8, P(VR = P for E2) = 0.75.
+9.  For E3 employees: P(BS = P for E3) = 0.6. If an E3 attempt failed BS, it also always failed VR (P(VR = P | BS = F for E3) = 0). The pass rate P(VR = P | BS = P for E3) = 0.8.
+10. For E4 employees: P(BS = P for E4) = 0.8. If an E4 attempt passed BS, it also passed PE (P(PE = P | BS = P for E4) = 1). The pass rate P(VR = P for E4) = 0.5 (this applies independently of BS/PE status). If an E4 attempt failed BS, its P(PE = P | BS = F for E4) = 0.5.","How many E3 employees failed to gain access?","42","50","65","77","42","50","65","77","65","MCQ","DI","Reasoning-based DI","Medium","Reasoning-based DI","subgroup analysis, failure rate calculation, conditional logic, application of rules","False","MockGenFINAL_S5_rev","Analyzing","E3 (Analysts) attempts = 125.
+Number of successful E3 attempts = 60 (from Q19 calculation).
+Number of E3 employees who failed to gain access = Total E3 attempts - Successful E3 attempts
+= 125 - 60 = 65."
+"Logical Reasoning & Data Interpretation","40","Q45_rev","21","MockGenFINAL_S5_rev","Set 5 of 5: Multi-Layered Network Security Protocol
+
+A company uses a 3-layered security protocol for accessing its central database.
+Layer 1: Biometric Scan (BS) - Pass (P) or Fail (F)
+Layer 2: Passcode Entry (PE) - Pass (P) or Fail (F)
+Layer 3: Voice Recognition (VR) - Pass (P) or Fail (F)
+Access is granted only if an employee passes a specific combination of layers. There are four employee categories (E1, E2, E3, E4) with different access rules.
+A total of 500 access attempts were made in a month.
+
+Data on Access Attempts and Rules:
+1.  E1 (Executives): Must pass BS and PE. VR is not required for access. (Access if BS = P AND PE = P)
+2.  E2 (Managers): Must pass PE and VR. BS is not required for access. (Access if PE = P AND VR = P)
+3.  E3 (Analysts): Must pass BS and VR. PE is not required for access. (Access if BS = P AND VR = P)
+4.  E4 (Interns): Must pass any two of the three layers. (Access if (BS = P AND PE = P) OR (BS = P AND VR = P) OR (PE = P AND VR = P); this includes passing all three).
+5.  For each category of employee, the outcomes of the three layers (BS, PE, VR) are independent of each other, unless specified otherwise by a rule for that category.
+6.  Distribution of attempts: E1 = 20% (100 attempts), E2 = 30% (150 attempts), E3 = 25% (125 attempts), E4 = 25% (125 attempts).
+7.  For E1 employees: P(BS = P for E1) = 0.7. Given an E1 passed BS, P(PE = P | BS = P for E1) = 0.9.
+8.  For E2 employees: P(PE = P for E2) = 0.8, P(VR = P for E2) = 0.75.
+9.  For E3 employees: P(BS = P for E3) = 0.6. If an E3 attempt failed BS, it also always failed VR (P(VR = P | BS = F for E3) = 0). The pass rate P(VR = P | BS = P for E3) = 0.8.
+10. For E4 employees: P(BS = P for E4) = 0.8. If an E4 attempt passed BS, it also passed PE (P(PE = P | BS = P for E4) = 1). The pass rate P(VR = P for E4) = 0.5 (this applies independently of BS/PE status). If an E4 attempt failed BS, its P(PE = P | BS = F for E4) = 0.5.","For E4 employees, how many attempts passed BS and PE but failed VR?","35","40","50","62.5","35","40","50","62.5","50","MCQ","DI","Reasoning-based DI","Medium","Reasoning-based DI","specific case counting, rule application, conditional probabilities","False","MockGenFINAL_S5_rev","Analyzing","For E4 employees, we want attempts that passed BS and PE but failed VR.
+This means BS = P AND PE = P AND VR = F.
+Number of E4 attempts = 125.
+P(BS = P for E4) = 0.8.
+Given BS = P, P(PE = P | BS = P for E4) = 1 (Rule 10). So, if BS = P, PE is automatically P.
+P(VR = F for E4) = 1 - P(VR = P for E4) = 1 - 0.5 = 0.5 (VR is independent unless specified).
+Number of attempts (BS = P AND PE = P AND VR = F) = N(E4) * P(BS = P) * P(PE = P | BS = P) * P(VR = F)
+= 125 * 0.8 * 1 * 0.5
+= 125 * 0.4 = 50."
+"Logical Reasoning & Data Interpretation","40","Q46_rev","22","MockGenFINAL_S5_rev","Set 5 of 5: Multi-Layered Network Security Protocol
+
+A company uses a 3-layered security protocol for accessing its central database.
+Layer 1: Biometric Scan (BS) - Pass (P) or Fail (F)
+Layer 2: Passcode Entry (PE) - Pass (P) or Fail (F)
+Layer 3: Voice Recognition (VR) - Pass (P) or Fail (F)
+Access is granted only if an employee passes a specific combination of layers. There are four employee categories (E1, E2, E3, E4) with different access rules.
+A total of 500 access attempts were made in a month.
+
+Data on Access Attempts and Rules:
+1.  E1 (Executives): Must pass BS and PE. VR is not required for access. (Access if BS = P AND PE = P)
+2.  E2 (Managers): Must pass PE and VR. BS is not required for access. (Access if PE = P AND VR = P)
+3.  E3 (Analysts): Must pass BS and VR. PE is not required for access. (Access if BS = P AND VR = P)
+4.  E4 (Interns): Must pass any two of the three layers. (Access if (BS = P AND PE = P) OR (BS = P AND VR = P) OR (PE = P AND VR = P); this includes passing all three).
+5.  For each category of employee, the outcomes of the three layers (BS, PE, VR) are independent of each other, unless specified otherwise by a rule for that category.
+6.  Distribution of attempts: E1 = 20% (100 attempts), E2 = 30% (150 attempts), E3 = 25% (125 attempts), E4 = 25% (125 attempts).
+7.  For E1 employees: P(BS = P for E1) = 0.7. Given an E1 passed BS, P(PE = P | BS = P for E1) = 0.9.
+8.  For E2 employees: P(PE = P for E2) = 0.8, P(VR = P for E2) = 0.75.
+9.  For E3 employees: P(BS = P for E3) = 0.6. If an E3 attempt failed BS, it also always failed VR (P(VR = P | BS = F for E3) = 0). The pass rate P(VR = P | BS = P for E3) = 0.8.
+10. For E4 employees: P(BS = P for E4) = 0.8. If an E4 attempt passed BS, it also passed PE (P(PE = P | BS = P for E4) = 1). The pass rate P(VR = P for E4) = 0.5 (this applies independently of BS/PE status). If an E4 attempt failed BS, its P(PE = P | BS = F for E4) = 0.5.","What is the number of access attempts by E2 employees that passed PE but failed VR?","15","30","45","60","15","30","45","60","30","MCQ","DI","Reasoning-based DI","Easy","Reasoning-based DI","conditional probability, direct calculation from given rates, independent events","False","MockGenFINAL_S5_rev","Applying","E2 (Managers) attempts = 150.
+We want attempts that passed PE but failed VR. (PE = P AND VR = F).
+P(PE = P for E2) = 0.8.
+P(VR = P for E2) = 0.75, so P(VR = F for E2) = 1 - 0.75 = 0.25.
+PE and VR are independent for E2.
+Number of attempts (PE = P AND VR = F) = N(E2) * P(PE = P for E2) * P(VR = F for E2)
+= 150 * 0.8 * 0.25
+= 150 * 0.2 = 30."

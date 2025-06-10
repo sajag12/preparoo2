@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ stats.section_name }} Analysis - Preparoo 🦘</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: white;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header - Matching index.html */
+    .header {
+      background: #fff;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #6b7280;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #333;
+    }
+
+    .login-btn {
+      background: #f3f4f6;
+      color: #374151;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      border: 1px solid #d1d5db;
+    }
+
+    .login-btn:hover {
+      background: #e5e7eb;
+      color: #1f2937;
+    }
+
+    .user-menu {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    .logout-btn {
+      background: none;
+      border: 1px solid #ddd;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      color: #666;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    
+    .logout-btn:hover {
+      background: #f5f5f5;
+      border-color: #ccc;
+    }
+
+    /* Main Content */
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 20px;
+    }
+
+    .page-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    /* Results Summary - Preparoo Colors */
+    .results-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .summary-item {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      transition: all 0.3s ease;
+    }
+
+    .summary-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .summary-item .label {
+      font-size: 1rem;
+      color: #6b7280;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .summary-item .score {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #8b5cf6;
+      display: block;
+    }
+
+    /* Next Steps Section - Preparoo Style */
+    .next-steps-section {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      margin: 3rem 0;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .next-steps-title {
+      color: #8b5cf6;
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 2rem 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .next-steps-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .next-step-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+      min-width: 220px;
+      justify-content: center;
+    }
+
+    .next-step-btn.primary {
+      background: #8b5cf6;
+      color: white;
+    }
+
+    .next-step-btn.primary:hover {
+      background: #7c3aed;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(139, 92, 246, 0.25);
+    }
+
+    .next-step-btn.secondary {
+      background: white;
+      color: #374151;
+      border: 1px solid #d1d5db;
+    }
+
+    .next-step-btn.secondary:hover {
+      background: #f9fafb;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .next-step-btn.retake {
+      background: #f59e0b;
+      color: white;
+      border-color: #f59e0b;
+    }
+
+    .next-step-btn.retake:hover {
+      background: #d97706;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(245, 158, 11, 0.25);
+    }
+
+    .btn-icon {
+      font-size: 1.1rem;
+      display: inline-block;
+    }
+
+    .btn-text {
+      display: inline-block;
+    }
+
+    /* Performance Metrics */
+    .performance-metrics {
+      margin: 3rem 0;
+    }
+
+    .metrics-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .metric {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      transition: all 0.3s ease;
+    }
+
+    .metric:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .metric .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .metric .label {
+      font-size: 0.9rem;
+      color: #6b7280;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+    }
+
+    .metric .value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #8b5cf6;
+    }
+
+    /* SWOT Analysis - Preparoo Style */
+    .swot-analysis {
+      margin: 3rem 0;
+    }
+
+    .swot-analysis h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: #1f2937;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .swot-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .swot-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      transition: all 0.3s ease;
+    }
+
+    .swot-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .swot-card.strengths {
+      border-left: 4px solid #10b981;
+    }
+
+    .swot-card.weaknesses {
+      border-left: 4px solid #ef4444;
+    }
+
+    .swot-card.opportunities {
+      border-left: 4px solid #8b5cf6;
+    }
+
+    .swot-card.threats {
+      border-left: 4px solid #f59e0b;
+    }
+
+    .swot-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .swot-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .swot-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .swot-item strong {
+      color: #1f2937;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .swot-item p {
+      color: #6b7280;
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: #e5e7eb;
+      color: #374151;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* Insights Section */
+    .insights-section {
+      margin: 3rem 0;
+    }
+
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+    }
+
+    .insight-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      transition: all 0.3s ease;
+    }
+
+    .insight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .insight-card.missed-opps {
+      border-left: 4px solid #10b981;
+    }
+
+    .insight-card.time-wasters {
+      border-left: 4px solid #ef4444;
+    }
+
+    .insight-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 1.5rem;
+    }
+
+    .insight-card ul {
+      list-style: none;
+    }
+
+    .insight-card li {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      border: 1px solid #f1f5f9;
+    }
+
+    .insight-card li p {
+      color: #374151;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    .points {
+      background: #10b981;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    .metrics {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .metrics span {
+      background: #e5e7eb;
+      color: #374151;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .time {
+      background: #ddd6fe !important;
+      color: #7c3aed !important;
+    }
+
+    .correct {
+      background: #dcfce7 !important;
+      color: #16a34a !important;
+    }
+
+    .wrong {
+      background: #fee2e2 !important;
+      color: #dc2626 !important;
+    }
+
+    /* Final Actions */
+    .results-actions {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .results-actions h3 {
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 1.5rem;
+      color: #8b5cf6;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .results-actions > div {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .action-btn.primary {
+      background: #8b5cf6;
+      color: white;
+    }
+
+    .action-btn.primary:hover {
+      background: #7c3aed;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(139, 92, 246, 0.25);
+    }
+
+    .action-btn.secondary {
+      background: white;
+      color: #374151;
+      border: 1px solid #d1d5db;
+    }
+
+    .action-btn.secondary:hover {
+      background: #f9fafb;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 20px;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .page-title {
+        font-size: 2rem;
+      }
+
+      .results-summary {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .next-steps-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .next-step-btn {
+        width: 100%;
+        min-width: auto;
+        max-width: 300px;
+      }
+
+      .metrics-card {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .swot-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .insights-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .main-content {
+        padding: 1rem 20px;
+      }
+
+      .next-steps-section {
+        padding: 2rem 1rem;
+        margin: 2rem 0;
+      }
+
+      .results-actions > div {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .action-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .metrics-card {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="/" class="logo">Preparoo 🦘</a>
+      <div class="nav-links">
+        <a href="/">Our Method</a>
+        <a href="/mock-tests">Full-length Mocks</a>
+        <a href="/mock-tests">Sectionals</a>
+        
+        {% if current_user.is_authenticated %}
+          <div class="user-menu">
+            <div class="user-info">
+              {% if current_user.avatar_url %}
+                <img src="{{ current_user.avatar_url }}" alt="{{ current_user.name }}" class="user-avatar">
+              {% endif %}
+              <span>{{ current_user.name }}</span>
+            </div>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+          </div>
+        {% else %}
+          <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+        {% endif %}
+      </div>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <h1 class="page-title">{{ stats.section_name }} Analysis</h1>
+
+    <!-- SUMMARY BANNER -->
+    <div class="results-summary">
+      <div class="summary-item">
+        <span class="label">Score</span>
+        <span class="score">{{ stats.score }}/{{ stats.total_possible }}</span>
+      </div>
+      <div class="summary-item">
+        <span class="label">Time Spent</span>
+        <span class="score">{{ stats.time_spent }}</span>
+      </div>
+      <div class="summary-item">
+        <span class="label">Accuracy</span>
+        <span class="score">{{ stats.accuracy }}%</span>
+      </div>
+    </div>
+
+    <!-- NEXT STEPS BANNER -->
+    <section class="next-steps-section">
+      <div class="next-steps-container">
+        <h2 class="next-steps-title">Next Steps</h2>
+        <div class="next-steps-buttons">
+          <a href="/review-answers" class="next-step-btn primary">
+            <span class="btn-icon">📝</span>
+            <span class="btn-text">Review Answers & Solutions</span>
+          </a>
+          
+          {% if stats.test_id %}
+            <!-- Retake This Test Button -->
+            {% if stats.test_id|string|startswith('qa') %}
+              <!-- QA Sectional Test -->
+              <a href="{{ url_for('qa_sectional_' + stats.test_id|string|last) }}?retake=true" class="next-step-btn retake">
+                <span class="btn-icon">🔄</span>
+                <span class="btn-text">Retake This Test</span>
+              </a>
+            {% elif stats.test_id|string|startswith('varc') %}
+              <!-- VARC Sectional Test -->
+              <a href="{{ url_for('varc_sectional_' + stats.test_id|string|last) }}?retake=true" class="next-step-btn retake">
+                <span class="btn-icon">🔄</span>
+                <span class="btn-text">Retake This Test</span>
+              </a>
+            {% elif stats.test_id|string|startswith('lrdi') %}
+              <!-- LRDI Sectional Test -->
+              <a href="{{ url_for('lrdi_sectional_' + stats.test_id|string|last) }}?retake=true" class="next-step-btn retake">
+                <span class="btn-icon">🔄</span>
+                <span class="btn-text">Retake This Test</span>
+              </a>
+            {% endif %}
+          {% endif %}
+          
+          <a href="/mock-tests" class="next-step-btn secondary">
+            <span class="btn-icon">📊</span>
+            <span class="btn-text">Take Another Test</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFORMANCE METRICS -->
+    <section class="performance-metrics">
+      <div class="metrics-card">
+        <div class="metric">
+          <span class="icon">✅</span>
+          <div class="label">Correct</div>
+          <div class="value">{{ stats.correct }}</div>
+        </div>
+        <div class="metric">
+          <span class="icon">❌</span>
+          <div class="label">Incorrect</div>
+          <div class="value">{{ stats.wrong }}</div>
+        </div>
+        <div class="metric">
+          <span class="icon">⏭️</span>
+          <div class="label">Skipped</div>
+          <div class="value">{{ stats.skipped }}</div>
+        </div>
+        <div class="metric">
+          <span class="icon">⏱️</span>
+          <div class="label">Avg. Time per Question</div>
+          <div class="value">{{ stats.avg_time_per_question }}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SWOT ANALYSIS -->
+    <section class="swot-analysis">
+      <h2>🎯 Question Selection Strategy Analysis</h2>
+      <div class="swot-grid">
+        <!-- Strengths -->
+        <div class="swot-card strengths">
+          <h3><span class="icon">⭐</span> Strengths</h3>
+          {% for strength in stats.swot_analysis.strengths %}
+          <div class="swot-item">
+            <strong>{{ strength.title }}</strong>
+            <p>{{ strength.description }}</p>
+            <div class="tags">
+              {% for tag in strength.tags %}
+              <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <!-- Weaknesses -->
+        <div class="swot-card weaknesses">
+          <h3><span class="icon">❗</span> Weaknesses</h3>
+          {% for weakness in stats.swot_analysis.weaknesses %}
+          <div class="swot-item">
+            <strong>{{ weakness.title }}</strong>
+            <p>{{ weakness.description }}</p>
+            <div class="tags">
+              {% for tag in weakness.tags %}
+              <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <!-- Opportunities -->
+        <div class="swot-card opportunities">
+          <h3><span class="icon">💡</span> Opportunities</h3>
+          {% for opportunity in stats.swot_analysis.opportunities %}
+          <div class="swot-item">
+            <strong>{{ opportunity.title }}</strong>
+            <p>{{ opportunity.description }}</p>
+            <div class="tags">
+              {% for tag in opportunity.tags %}
+              <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <!-- Threats -->
+        <div class="swot-card threats">
+          <h3><span class="icon">⚠️</span> Threats</h3>
+          {% for threat in stats.swot_analysis.threats %}
+          <div class="swot-item">
+            <strong>{{ threat.title }}</strong>
+            <p>{{ threat.description }}</p>
+            <div class="tags">
+              {% for tag in threat.tags %}
+              <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHTS: Missed Opportunities & Time Wasters -->
+    <section class="insights-section">
+      <div class="insights-grid">
+        <div class="insight-card missed-opps">
+          <h4>Missed Opportunities</h4>
+          <ul>
+            {% for opp in stats.missed_opportunities %}
+            <li>
+              <p>{{ opp.text }}</p>
+              <div class="tags">
+                {% for tag in opp.tags %}
+                  <span class="tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+              <div class="points">+{{ opp.points }} pts</div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="insight-card time-wasters">
+          <h4>Time Wasters</h4>
+          <ul>
+            {% for tw in stats.time_wasters %}
+            <li>
+              <p>{{ tw.text }}</p>
+              <div class="tags">
+                {% for tag in tw.tags %}
+                  <span class="tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+              <div class="metrics">
+                <span class="time">⏱️ {{ tw.time_spent }}</span>
+                <span class="correct">✅ {{ tw.correct }}</span>
+                <span class="wrong">❌ {{ tw.wrong }}</span>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAVIGATION ACTIONS -->
+    <div class="results-actions">
+      <h3>Ready to hop into your next challenge? 🦘</h3>
+      <div>
+        <a href="/review-answers" class="action-btn primary">
+          📝 Review Answers & Solutions
+        </a>
+        <a href="/mock-tests" class="action-btn secondary">
+          🔄 Take Another Test
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add hover effects for action buttons
+    document.querySelectorAll('.action-btn').forEach(btn => {
+      btn.addEventListener('mouseenter', () => {
+        btn.style.transform = 'translateY(-2px)';
+        btn.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translateY(0)';
+        btn.style.boxShadow = 'none';
+      });
+    });
+  </script>
+
+</body>
+</html> 

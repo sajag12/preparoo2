@@ -1,0 +1,404 @@
+"SectionName","SectionTimeLimitMinutes","QuestionUniqueID","QuestionNumberInSection","PassageOrSetID","PassageOrSetContent","QuestionPrompt","OptionAText","OptionBText","OptionCText","OptionDText","OptionAValue","OptionBValue","OptionCValue","OptionDValue","CorrectAnswerValue","QuestionType","Topic","SubTopic","DifficultyLevelPredicted","ConceptTested","DetailedTags","IsTITA","SetID","CognitiveSkillLevel","SolutionExplanation"
+"LRDI","40","MOCKFNL020_Q1","1","MOCKFNL020_Set1_Chess","The Grand Masters Chess Tournament is a 64-player knockout event. Players are seeded 1 (highest) to 64 (lowest) before the tournament begins. In each match, unless specified otherwise as an ""upset"", the higher-seeded player wins. An ""upset"" occurs when a lower-seeded player defeats a higher-seeded player. The tournament proceeds in rounds, with winners advancing until a single champion is determined. Pairings in each round are based on the original seedings of the advancing players, following standard knockout procedure (e.g., in a block of 4 advancing players with original seeds S1<S2<S3<S4, S1 plays S4 and S2 plays S3).
+Information about the tournament:
+i. There were exactly 4 upsets in Round 1. In all these 4 upsets, the winning player was originally seeded between 33 and 40 (inclusive), and their opponent was originally seeded between 25 and 32 (inclusive).
+ii. No player who won a match in Round 1 due to an upset advanced past Round 2.
+iii. The player seeded 7th reached the final and was the runner-up.
+iv. The player seeded 3rd was eliminated in the quarter-finals by the player seeded 6th. This was the only match in the quarter-finals that was an upset.
+v. Exactly two of the players originally seeded in the top 4 (i.e., seeds 1, 2, 3, 4) reached the semi-finals. The player seeded 1st won the tournament.
+vi. The player seeded 2nd was eliminated in Round 3 (round of 16) by the player who eventually became the runner-up.","How many matches were played in the entire tournament?","60","61","63","64","A","B","C","D","C","MCQ","Logical Reasoning","Games & Tournaments","Difficult","Structure of a single-elimination knockout tournament","knockout tournament, seeding, upsets","False","MOCKFNL020_Set1_Chess","Application","In a knockout tournament with N players, exactly N-1 matches are required to determine a single winner, as each match eliminates one player. With 64 players, the total number of matches is 64 - 1 = 63."
+"LRDI","40","MOCKFNL020_Q2","2","MOCKFNL020_Set1_Chess","The Grand Masters Chess Tournament is a 64-player knockout event. Players are seeded 1 (highest) to 64 (lowest) before the tournament begins. In each match, unless specified otherwise as an ""upset"", the higher-seeded player wins. An ""upset"" occurs when a lower-seeded player defeats a higher-seeded player. The tournament proceeds in rounds, with winners advancing until a single champion is determined. Pairings in each round are based on the original seedings of the advancing players, following standard knockout procedure (e.g., in a block of 4 advancing players with original seeds S1<S2<S3<S4, S1 plays S4 and S2 plays S3).
+Information about the tournament:
+i. There were exactly 4 upsets in Round 1. In all these 4 upsets, the winning player was originally seeded between 33 and 40 (inclusive), and their opponent was originally seeded between 25 and 32 (inclusive).
+ii. No player who won a match in Round 1 due to an upset advanced past Round 2.
+iii. The player seeded 7th reached the final and was the runner-up.
+iv. The player seeded 3rd was eliminated in the quarter-finals by the player seeded 6th. This was the only match in the quarter-finals that was an upset.
+v. Exactly two of the players originally seeded in the top 4 (i.e., seeds 1, 2, 3, 4) reached the semi-finals. The player seeded 1st won the tournament.
+vi. The player seeded 2nd was eliminated in Round 3 (round of 16) by the player who eventually became the runner-up.","What was the seed of the player who was the runner-up in the tournament?","2","5","6","7","A","B","C","D","D","MCQ","Logical Reasoning","Games & Tournaments","Difficult","Information retrieval from clues","knockout tournament, seeding, player progression","False","MOCKFNL020_Set1_Chess","Understanding","Clue (iii) directly states: 'The player seeded 7th reached the final and was the runner-up.' Therefore, the seed of the runner-up was 7."
+"LRDI","40","MOCKFNL020_Q3","3","MOCKFNL020_Set1_Chess","The Grand Masters Chess Tournament is a 64-player knockout event. Players are seeded 1 (highest) to 64 (lowest) before the tournament begins. In each match, unless specified otherwise as an ""upset"", the higher-seeded player wins. An ""upset"" occurs when a lower-seeded player defeats a higher-seeded player. The tournament proceeds in rounds, with winners advancing until a single champion is determined. Pairings in each round are based on the original seedings of the advancing players, following standard knockout procedure (e.g., in a block of 4 advancing players with original seeds S1<S2<S3<S4, S1 plays S4 and S2 plays S3).
+Information about the tournament:
+i. There were exactly 4 upsets in Round 1. In all these 4 upsets, the winning player was originally seeded between 33 and 40 (inclusive), and their opponent was originally seeded between 25 and 32 (inclusive).
+ii. No player who won a match in Round 1 due to an upset advanced past Round 2.
+iii. The player seeded 7th reached the final and was the runner-up.
+iv. The player seeded 3rd was eliminated in the quarter-finals by the player seeded 6th. This was the only match in the quarter-finals that was an upset.
+v. Exactly two of the players originally seeded in the top 4 (i.e., seeds 1, 2, 3, 4) reached the semi-finals. The player seeded 1st won the tournament.
+vi. The player seeded 2nd was eliminated in Round 3 (round of 16) by the player who eventually became the runner-up.","Which of the following players was definitely NOT eliminated by the tournament winner (Seed 1)?","Seed 33","Seed 17","Seed 9","Seed 4","A","B","C","D","D","MCQ","Logical Reasoning","Games & Tournaments","Difficult","Deducing tournament bracket and elimination paths","knockout tournament, player path tracing, elimination analysis","False","MOCKFNL020_Set1_Chess","Analysis","From the clues, we deduce the semi-finalists are Seed 1, Seed 4, Seed 6, and Seed 7. For a final between Seed 1 (winner) and Seed 7 (runner-up), they must have been in different semi-final matches. Based on standard knockout brackets, the likely semi-finals are (Seed 1 vs Seed 6) and (Seed 4 vs Seed 7). Seed 1 beats Seed 6 to advance. In the other semi-final, Seed 7 must have beaten Seed 4 to advance to the final. Therefore, Seed 4 was eliminated by Seed 7, not by Seed 1."
+"LRDI","40","MOCKFNL020_Q4","4","MOCKFNL020_Set1_Chess","The Grand Masters Chess Tournament is a 64-player knockout event. Players are seeded 1 (highest) to 64 (lowest) before the tournament begins. In each match, unless specified otherwise as an ""upset"", the higher-seeded player wins. An ""upset"" occurs when a lower-seeded player defeats a higher-seeded player. The tournament proceeds in rounds, with winners advancing until a single champion is determined. Pairings in each round are based on the original seedings of the advancing players, following standard knockout procedure (e.g., in a block of 4 advancing players with original seeds S1<S2<S3<S4, S1 plays S4 and S2 plays S3).
+Information about the tournament:
+i. There were exactly 4 upsets in Round 1. In all these 4 upsets, the winning player was originally seeded between 33 and 40 (inclusive), and their opponent was originally seeded between 25 and 32 (inclusive).
+ii. No player who won a match in Round 1 due to an upset advanced past Round 2.
+iii. The player seeded 7th reached the final and was the runner-up.
+iv. The player seeded 3rd was eliminated in the quarter-finals by the player seeded 6th. This was the only match in the quarter-finals that was an upset.
+v. Exactly two of the players originally seeded in the top 4 (i.e., seeds 1, 2, 3, 4) reached the semi-finals. The player seeded 1st won the tournament.
+vi. The player seeded 2nd was eliminated in Round 3 (round of 16) by the player who eventually became the runner-up.","What is the minimum possible seed of a player who caused an upset in Round 1 and reached Round 2?","33","35","38","40","A","B","C","D","A","MCQ","Logical Reasoning","Games & Tournaments","Moderate","Direct interpretation of a condition","knockout tournament, seeding, upset definition","False","MOCKFNL020_Set1_Chess","Understanding","Clue (i) states that in all Round 1 upsets, 'the winning player was originally seeded between 33 and 40 (inclusive)'. The question asks for the minimum possible seed of such a player. Within the range [33, 40], the minimum seed number is 33."
+"LRDI","40","MOCKFNL020_Q5","5","MOCKFNL020_Set1_Chess","The Grand Masters Chess Tournament is a 64-player knockout event. Players are seeded 1 (highest) to 64 (lowest) before the tournament begins. In each match, unless specified otherwise as an ""upset"", the higher-seeded player wins. An ""upset"" occurs when a lower-seeded player defeats a higher-seeded player. The tournament proceeds in rounds, with winners advancing until a single champion is determined. Pairings in each round are based on the original seedings of the advancing players, following standard knockout procedure (e.g., in a block of 4 advancing players with original seeds S1<S2<S3<S4, S1 plays S4 and S2 plays S3).
+Information about the tournament:
+i. There were exactly 4 upsets in Round 1. In all these 4 upsets, the winning player was originally seeded between 33 and 40 (inclusive), and their opponent was originally seeded between 25 and 32 (inclusive).
+ii. No player who won a match in Round 1 due to an upset advanced past Round 2.
+iii. The player seeded 7th reached the final and was the runner-up.
+iv. The player seeded 3rd was eliminated in the quarter-finals by the player seeded 6th. This was the only match in the quarter-finals that was an upset.
+v. Exactly two of the players originally seeded in the top 4 (i.e., seeds 1, 2, 3, 4) reached the semi-finals. The player seeded 1st won the tournament.
+vi. The player seeded 2nd was eliminated in Round 3 (round of 16) by the player who eventually became the runner-up.","If the player seeded 5th was eliminated in the semi-finals, who eliminated them?","Seed 1","Seed 4","Seed 6","Seed 7","A","B","C","D","A","MCQ","Logical Reasoning","Games & Tournaments","Difficult","Applying tournament logic to a hypothetical scenario","knockout tournament, hypothetical scenario, bracket logic","False","MOCKFNL020_Set1_Chess","Evaluation","This is a hypothetical question. The original semi-finalists were {1, 4, 6, 7}. If Seed 5 reaches the SF, they would most likely replace Seed 6, who came from the same quarter of the draw as Seed 3. The new SF pool is {1, 4, 5, 7}. To maintain a Seed 1 vs Seed 7 final, the semi-final pairings, based on standard bracketing, would be (Seed 1 vs Seed 5) and (Seed 4 vs Seed 7). Since Seed 1 won the tournament, they must win their semi-final match. Therefore, Seed 1 would eliminate Seed 5."
+"LRDI","40","MOCKFNL020_Q6","6","MOCKFNL020_Set2_Metro","A new metro system connects five key locations: Central Hub (CH), North Point (NP), South End (SE), West Gate (WG), and East Plaza (EP). Trains run on specific routes with defined travel times and halt times. All travel is along the lines shown in the schematic (the schematic is described textually).
+Network Connections and Travel Times (in minutes between adjacent stations):
+• Central Hub (CH) is directly connected to:
+ o North Point (NP): 10 minutes
+ o South End (SE): 12 minutes
+ o West Gate (WG): 8 minutes
+ o East Plaza (EP): 15 minutes
+• North Point (NP) is also directly connected to West Gate (WG): 18 minutes.
+• South End (SE) is also directly connected to East Plaza (EP): 20 minutes.
+• There are no other direct connections between NP, SE, WG, and EP apart from those involving CH or listed above.
+Halt Times:
+• Trains halt for exactly 1 minute at NP, SE, WG, and EP if these stations are intermediate stops on a journey.
+• Trains halt for exactly 2 minutes at CH if it is an intermediate stop on a journey.
+• Terminus stations do not have intermediate halt times for the start/end of a journey segment.
+Defined Service Line Paths (these describe potential routes, not exclusive operational lines):
+• Path Option 1 (P1): NP - CH - SE
+• Path Option 2 (P2): WG - CH - EP
+• Path Option 3 (P3): NP - WG - CH","What is the minimum time taken to travel from NP to SE using Path Option 1 (P1)?","22 minutes","23 minutes","24 minutes","25 minutes","A","B","C","D","C","MCQ","Data Interpretation","Network & Paths","Moderate","Calculating travel time along a specified path including halts","network diagram, travel time calculation, halt times","False","MOCKFNL020_Set2_Metro","Application","The path is NP - CH - SE. The total time is the sum of travel times and halt times at intermediate stations. 
+Travel time from NP to CH = 10 minutes.
+Halt time at CH (intermediate station) = 2 minutes.
+Travel time from CH to SE = 12 minutes.
+Total time = 10 + 2 + 12 = 24 minutes."
+"LRDI","40","MOCKFNL020_Q7","7","MOCKFNL020_Set2_Metro","A new metro system connects five key locations: Central Hub (CH), North Point (NP), South End (SE), West Gate (WG), and East Plaza (EP). Trains run on specific routes with defined travel times and halt times. All travel is along the lines shown in the schematic (the schematic is described textually).
+Network Connections and Travel Times (in minutes between adjacent stations):
+• Central Hub (CH) is directly connected to:
+ o North Point (NP): 10 minutes
+ o South End (SE): 12 minutes
+ o West Gate (WG): 8 minutes
+ o East Plaza (EP): 15 minutes
+• North Point (NP) is also directly connected to West Gate (WG): 18 minutes.
+• South End (SE) is also directly connected to East Plaza (EP): 20 minutes.
+• There are no other direct connections between NP, SE, WG, and EP apart from those involving CH or listed above.
+Halt Times:
+• Trains halt for exactly 1 minute at NP, SE, WG, and EP if these stations are intermediate stops on a journey.
+• Trains halt for exactly 2 minutes at CH if it is an intermediate stop on a journey.
+• Terminus stations do not have intermediate halt times for the start/end of a journey segment.
+Defined Service Line Paths (these describe potential routes, not exclusive operational lines):
+• Path Option 1 (P1): NP - CH - SE
+• Path Option 2 (P2): WG - CH - EP
+• Path Option 3 (P3): NP - WG - CH","A passenger wants to travel from WG to SE. Which of the following represents the shortest travel time, considering all possible paths using the given connections?","WG - CH - SE","WG - NP - CH - SE","WG - NP - CH - EP - SE","WG - CH - EP - SE","A","B","C","D","A","MCQ","Data Interpretation","Network & Paths","Moderate","Finding the shortest path by comparing total travel times of possible routes","shortest path, comparative time calculation, multi-segment journey","False","MOCKFNL020_Set2_Metro","Analysis","We need to calculate the time for each possible path from WG to SE and find the minimum.
+Path 1 (WG - CH - SE): Travel(WG-CH) + Halt(CH) + Travel(CH-SE) = 8 + 2 + 12 = 22 minutes.
+Path 2 (WG - NP - CH - SE): Travel(WG-NP) + Halt(NP) + Travel(NP-CH) + Halt(CH) + Travel(CH-SE) = 18 + 1 + 10 + 2 + 12 = 43 minutes.
+Path 3 (WG - CH - EP - SE): Travel(WG-CH) + Halt(CH) + Travel(CH-EP) + Halt(EP) + Travel(EP-SE) = 8 + 2 + 15 + 1 + 20 = 46 minutes.
+Comparing the times, the shortest path is WG - CH - SE with a time of 22 minutes."
+"LRDI","40","MOCKFNL020_Q8","8","MOCKFNL020_Set2_Metro","A new metro system connects five key locations: Central Hub (CH), North Point (NP), South End (SE), West Gate (WG), and East Plaza (EP). Trains run on specific routes with defined travel times and halt times. All travel is along the lines shown in the schematic (the schematic is described textually).
+Network Connections and Travel Times (in minutes between adjacent stations):
+• Central Hub (CH) is directly connected to:
+ o North Point (NP): 10 minutes
+ o South End (SE): 12 minutes
+ o West Gate (WG): 8 minutes
+ o East Plaza (EP): 15 minutes
+• North Point (NP) is also directly connected to West Gate (WG): 18 minutes.
+• South End (SE) is also directly connected to East Plaza (EP): 20 minutes.
+• There are no other direct connections between NP, SE, WG, and EP apart from those involving CH or listed above.
+Halt Times:
+• Trains halt for exactly 1 minute at NP, SE, WG, and EP if these stations are intermediate stops on a journey.
+• Trains halt for exactly 2 minutes at CH if it is an intermediate stop on a journey.
+• Terminus stations do not have intermediate halt times for the start/end of a journey segment.
+Defined Service Line Paths (these describe potential routes, not exclusive operational lines):
+• Path Option 1 (P1): NP - CH - SE
+• Path Option 2 (P2): WG - CH - EP
+• Path Option 3 (P3): NP - WG - CH","If a direct track WG-SE with a travel time of 25 minutes (excluding halts) is added, what would be the new shortest time from NP to SE?","23 minutes","24 minutes","43 minutes","44 minutes","A","B","C","D","B","MCQ","Data Interpretation","Network & Paths","Moderate","Recalculating shortest path after a network modification","conditional network change, shortest path recalculation","False","MOCKFNL020_Set2_Metro","Analysis","We need to find the shortest time from NP to SE with the new track. 
+Original shortest path: NP - CH - SE = 10 (travel) + 2 (halt) + 12 (travel) = 24 minutes.
+New possible path via the added track: NP - WG - SE.
+Time = Travel(NP-WG) + Halt(WG) + Travel(WG-SE) = 18 + 1 + 25 = 44 minutes.
+Comparing the two paths, the original path (NP - CH - SE) is still shorter at 24 minutes."
+"LRDI","40","MOCKFNL020_Q9","9","MOCKFNL020_Set2_Metro","A new metro system connects five key locations: Central Hub (CH), North Point (NP), South End (SE), West Gate (WG), and East Plaza (EP). Trains run on specific routes with defined travel times and halt times. All travel is along the lines shown in the schematic (the schematic is described textually).
+Network Connections and Travel Times (in minutes between adjacent stations):
+• Central Hub (CH) is directly connected to:
+ o North Point (NP): 10 minutes
+ o South End (SE): 12 minutes
+ o West Gate (WG): 8 minutes
+ o East Plaza (EP): 15 minutes
+• North Point (NP) is also directly connected to West Gate (WG): 18 minutes.
+• South End (SE) is also directly connected to East Plaza (EP): 20 minutes.
+• There are no other direct connections between NP, SE, WG, and EP apart from those involving CH or listed above.
+Halt Times:
+• Trains halt for exactly 1 minute at NP, SE, WG, and EP if these stations are intermediate stops on a journey.
+• Trains halt for exactly 2 minutes at CH if it is an intermediate stop on a journey.
+• Terminus stations do not have intermediate halt times for the start/end of a journey segment.
+Defined Service Line Paths (these describe potential routes, not exclusive operational lines):
+• Path Option 1 (P1): NP - CH - SE
+• Path Option 2 (P2): WG - CH - EP
+• Path Option 3 (P3): NP - WG - CH","A special non-stop express service is planned from NP to EP. This service uses existing tracks and aims for the shortest travel time. It does not halt at any intermediate station, but if it passes through CH as part of its route, it incurs a 1-minute pass-through time at CH instead of the usual halt. What would be the travel time for this express service?","25 minutes","26 minutes","41 minutes","42 minutes","A","B","C","D","B","MCQ","Data Interpretation","Network & Paths","Difficult","Applying special conditions to path calculation","special conditions (express), shortest path, pass-through time","False","MOCKFNL020_Set2_Metro","Analysis","We need to find the shortest express time from NP to EP. Halts at intermediate stations are 0, except for a 1-minute pass-through at CH.
+Path 1 (NP - CH - EP): Travel(NP-CH) + Pass-through(CH) + Travel(CH-EP) = 10 + 1 + 15 = 26 minutes.
+Path 2 (NP - WG - CH - EP): Travel(NP-WG) + Travel(WG-CH) + Pass-through(CH) + Travel(CH-EP) = 18 + 8 + 1 + 15 = 42 minutes. (No halt at WG).
+The shortest time is 26 minutes via the NP - CH - EP route."
+"LRDI","40","MOCKFNL020_Q10","10","MOCKFNL020_Set2_Metro","A new metro system connects five key locations: Central Hub (CH), North Point (NP), South End (SE), West Gate (WG), and East Plaza (EP). Trains run on specific routes with defined travel times and halt times. All travel is along the lines shown in the schematic (the schematic is described textually).
+Network Connections and Travel Times (in minutes between adjacent stations):
+• Central Hub (CH) is directly connected to:
+ o North Point (NP): 10 minutes
+ o South End (SE): 12 minutes
+ o West Gate (WG): 8 minutes
+ o East Plaza (EP): 15 minutes
+• North Point (NP) is also directly connected to West Gate (WG): 18 minutes.
+• South End (SE) is also directly connected to East Plaza (EP): 20 minutes.
+• There are no other direct connections between NP, SE, WG, and EP apart from those involving CH or listed above.
+Halt Times:
+• Trains halt for exactly 1 minute at NP, SE, WG, and EP if these stations are intermediate stops on a journey.
+• Trains halt for exactly 2 minutes at CH if it is an intermediate stop on a journey.
+• Terminus stations do not have intermediate halt times for the start/end of a journey segment.
+Defined Service Line Paths (these describe potential routes, not exclusive operational lines):
+• Path Option 1 (P1): NP - CH - SE
+• Path Option 2 (P2): WG - CH - EP
+• Path Option 3 (P3): NP - WG - CH","If the direct track between NP and WG (involved in Path Option 3) is temporarily closed, and a passenger at NP wants to reach EP, what is the minimum travel time?","27 minutes","28 minutes","39 minutes","40 minutes","A","B","C","D","A","MCQ","Data Interpretation","Network & Paths","Moderate","Recalculating shortest path after a link closure","conditional network change (closure), shortest path recalculation","False","MOCKFNL020_Set2_Metro","Application","With the NP-WG track closed, the only way for a passenger at NP to leave the station is via the track to CH. Therefore, any journey from NP to EP must start with NP-CH. The shortest path becomes NP - CH - EP.
+Time = Travel(NP-CH) + Halt(CH) + Travel(CH-EP) = 10 + 2 + 15 = 27 minutes."
+"LRDI","40","MOCKFNL020_Q11","11","MOCKFNL020_Set3_Artifacts","An archaeological team is analyzing artifacts from three ancient sites (S1, S2, S3). Each artifact is classified by its Period (Early, Middle, Late) and Material (Clay, Bronze, Iron). All counts are positive integers.
+Table 1: Number of Artifacts by Site and Period
+| Site | Early Period | Middle Period | Late Period | Total Artifacts from Site |
+|-------|--------------|---------------|-------------|---------------------------|
+| S1    | 40           | A             | 30          | 120                       |
+| S2    | B            | 50            | C           | 110                       |
+| S3    | 25           | 35            | D           | E                         |
+| Total | F            | G             | H           | I                         |
+Table 2: Material Composition by Period (All Sites Combined)
+| Period      | Clay Artifacts | Bronze Artifacts | Iron Artifacts | Total Artifacts in Period |
+|-------------|----------------|------------------|----------------|---------------------------|
+| Early       | J              | 30               | 25             | F (Same F as in Table 1)  |
+| Middle      | 60             | K                | 40             | G (Same G as in Table 1)  |
+| Late        | 30             | L                | M              | H (Same H as in Table 1)  |
+| Total       | 135            | N                | O              | I (Same I as in Table 1)  |
+Additional Information:
+1. The number of artifacts from the Middle Period at Site S1 (A) was equal to the number of artifacts from the Middle Period at Site S2.
+2. The total number of artifacts from the Early Period across all sites (F) was 100.
+3. The number of Iron artifacts from the Late Period (M) was equal to the number of Iron artifacts from the Middle Period.
+4. The total number of Bronze artifacts across all sites (N) was 90.
+5. At Site S3, the number of artifacts from the Late Period (D) was 5 more than the number of artifacts from the Middle Period at Site S3.","What is the total number of artifacts from Site S3 (E)?","90","95","100","105","A","B","C","D","C","MCQ","Data Interpretation","Hybrid DI-LR (Tables)","Moderate","Completing a data table using multiple constraints","table completion, data deduction, sum constraint","False","MOCKFNL020_Set3_Artifacts","Analysis","First, we need to find the value of D (Late Period at S3). From info 5, D = (Middle Period at S3) + 5. From Table 1, Middle Period at S3 is 35. So, D = 35 + 5 = 40. 
+Now we can find E (Total Artifacts from Site S3) by summing the row for S3 in Table 1: E = (Early S3) + (Middle S3) + (Late S3) = 25 + 35 + D = 25 + 35 + 40 = 100."
+"LRDI","40","MOCKFNL020_Q12","12","MOCKFNL020_Set3_Artifacts","An archaeological team is analyzing artifacts from three ancient sites (S1, S2, S3). Each artifact is classified by its Period (Early, Middle, Late) and Material (Clay, Bronze, Iron). All counts are positive integers.
+Table 1: Number of Artifacts by Site and Period
+| Site | Early Period | Middle Period | Late Period | Total Artifacts from Site |
+|-------|--------------|---------------|-------------|---------------------------|
+| S1    | 40           | A             | 30          | 120                       |
+| S2    | B            | 50            | C           | 110                       |
+| S3    | 25           | 35            | D           | E                         |
+| Total | F            | G             | H           | I                         |
+Table 2: Material Composition by Period (All Sites Combined)
+| Period      | Clay Artifacts | Bronze Artifacts | Iron Artifacts | Total Artifacts in Period |
+|-------------|----------------|------------------|----------------|---------------------------|
+| Early       | J              | 30               | 25             | F (Same F as in Table 1)  |
+| Middle      | 60             | K                | 40             | G (Same G as in Table 1)  |
+| Late        | 30             | L                | M              | H (Same H as in Table 1)  |
+| Total       | 135            | N                | O              | I (Same I as in Table 1)  |
+Additional Information:
+1. The number of artifacts from the Middle Period at Site S1 (A) was equal to the number of artifacts from the Middle Period at Site S2.
+2. The total number of artifacts from the Early Period across all sites (F) was 100.
+3. The number of Iron artifacts from the Late Period (M) was equal to the number of Iron artifacts from the Middle Period.
+4. The total number of Bronze artifacts across all sites (N) was 90.
+5. At Site S3, the number of artifacts from the Late Period (D) was 5 more than the number of artifacts from the Middle Period at Site S3.","How many Clay artifacts were from the Early Period (J)?","35","40","45","50","A","B","C","D","C","MCQ","Data Interpretation","Hybrid DI-LR (Tables)","Moderate","Completing a data table by linking values across tables","table completion, data deduction, using totals","False","MOCKFNL020_Set3_Artifacts","Analysis","From info 2, F (Total Early Period artifacts) = 100. This value F is the total for the Early Period row in Table 2. In Table 2, the sum for the Early Period is: J (Clay) + 30 (Bronze) + 25 (Iron) = F. So, J + 30 + 25 = 100. This gives J = 100 - 55 = 45."
+"LRDI","40","MOCKFNL020_Q13","13","MOCKFNL020_Set3_Artifacts","An archaeological team is analyzing artifacts from three ancient sites (S1, S2, S3). Each artifact is classified by its Period (Early, Middle, Late) and Material (Clay, Bronze, Iron). All counts are positive integers.
+Table 1: Number of Artifacts by Site and Period
+| Site | Early Period | Middle Period | Late Period | Total Artifacts from Site |
+|-------|--------------|---------------|-------------|---------------------------|
+| S1    | 40           | A             | 30          | 120                       |
+| S2    | B            | 50            | C           | 110                       |
+| S3    | 25           | 35            | D           | E                         |
+| Total | F            | G             | H           | I                         |
+Table 2: Material Composition by Period (All Sites Combined)
+| Period      | Clay Artifacts | Bronze Artifacts | Iron Artifacts | Total Artifacts in Period |
+|-------------|----------------|------------------|----------------|---------------------------|
+| Early       | J              | 30               | 25             | F (Same F as in Table 1)  |
+| Middle      | 60             | K                | 40             | G (Same G as in Table 1)  |
+| Late        | 30             | L                | M              | H (Same H as in Table 1)  |
+| Total       | 135            | N                | O              | I (Same I as in Table 1)  |
+Additional Information:
+1. The number of artifacts from the Middle Period at Site S1 (A) was equal to the number of artifacts from the Middle Period at Site S2.
+2. The total number of artifacts from the Early Period across all sites (F) was 100.
+3. The number of Iron artifacts from the Late Period (M) was equal to the number of Iron artifacts from the Middle Period.
+4. The total number of Bronze artifacts across all sites (N) was 90.
+5. At Site S3, the number of artifacts from the Late Period (D) was 5 more than the number of artifacts from the Middle Period at Site S3.","What is the total number of Iron artifacts across all sites and periods (O)?","95","100","105","110","A","B","C","D","C","MCQ","Data Interpretation","Hybrid DI-LR (Tables)","Moderate","Completing a data table using multiple constraints and column sums","table completion, data deduction, using totals","False","MOCKFNL020_Set3_Artifacts","Analysis","To find O (Total Iron artifacts), we need to sum the Iron Artifacts column in Table 2. The values are 25 (Early), 40 (Middle), and M (Late). We need to find M first. Info 3 states M (Iron Late) = Iron Middle. From Table 2, Iron Middle is 40. So, M = 40. Now, we can calculate O: O = 25 + 40 + M = 25 + 40 + 40 = 105."
+"LRDI","40","MOCKFNL020_Q14","14","MOCKFNL020_Set3_Artifacts","An archaeological team is analyzing artifacts from three ancient sites (S1, S2, S3). Each artifact is classified by its Period (Early, Middle, Late) and Material (Clay, Bronze, Iron). All counts are positive integers.
+Table 1: Number of Artifacts by Site and Period
+| Site | Early Period | Middle Period | Late Period | Total Artifacts from Site |
+|-------|--------------|---------------|-------------|---------------------------|
+| S1    | 40           | A             | 30          | 120                       |
+| S2    | B            | 50            | C           | 110                       |
+| S3    | 25           | 35            | D           | E                         |
+| Total | F            | G             | H           | I                         |
+Table 2: Material Composition by Period (All Sites Combined)
+| Period      | Clay Artifacts | Bronze Artifacts | Iron Artifacts | Total Artifacts in Period |
+|-------------|----------------|------------------|----------------|---------------------------|
+| Early       | J              | 30               | 25             | F (Same F as in Table 1)  |
+| Middle      | 60             | K                | 40             | G (Same G as in Table 1)  |
+| Late        | 30             | L                | M              | H (Same H as in Table 1)  |
+| Total       | 135            | N                | O              | I (Same I as in Table 1)  |
+Additional Information:
+1. The number of artifacts from the Middle Period at Site S1 (A) was equal to the number of artifacts from the Middle Period at Site S2.
+2. The total number of artifacts from the Early Period across all sites (F) was 100.
+3. The number of Iron artifacts from the Late Period (M) was equal to the number of Iron artifacts from the Middle Period.
+4. The total number of Bronze artifacts across all sites (N) was 90.
+5. At Site S3, the number of artifacts from the Late Period (D) was 5 more than the number of artifacts from the Middle Period at Site S3.","If the number of Clay artifacts from Site S1 was 55, then how many Bronze artifacts were from Site S2?","25","30","35","Cannot be determined","A","B","C","D","D","MCQ","Data Interpretation","Hybrid DI-LR (Tables)","Difficult","Assessing data sufficiency from multiple interlinked tables","conditional data, table completion, data sufficiency inference","False","MOCKFNL020_Set3_Artifacts","Evaluation","The question asks for 'Bronze artifacts from Site S2'. The provided tables link Site to Period (Table 1) and Period to Material (Table 2). There is no information linking Site to Material for a breakdown. We only have totals. The additional information 'Clay artifacts from Site S1 was 55' gives a single data point (Site 1 x Clay) but does not provide a rule or relationship that would allow us to determine the material breakdown for any other site. Therefore, the number of Bronze artifacts from Site S2 cannot be determined."
+"LRDI","40","MOCKFNL020_Q15","15","MOCKFNL020_Set4_Projects","A company allocates its 75 employees across three project types: Alpha, Beta, and Gamma. Each employee is assigned to exactly one project type and belongs to one of three departments: R&D, Marketing, or Operations.
+Budget per Staff-Month (BPSM) is defined as: (Project Budget × 100) / (Staff Count on Project × Duration in Months), where Budget is in INR Crores and BPSM is in INR Lakhs. All Staff Counts are integers and Durations are in Months.
+Table 1: Project Metrics
+| Project Type | Budget (INR Crores) | Staff Count | Duration (Months) | Budget per Staff-Month (INR Lakhs) |
+|--------------|---------------------|-------------|-------------------|------------------------------------|
+| Alpha        | 120                 | 20          | A                 | 0.5                                |
+| Beta         | B                   | 30          | 10                | C                                  |
+| Gamma        | 150                 | D           | 15                | 0.4                                |
+Table 2: Departmental Staff Allocation to Project Types
+| Department | Staff on Alpha | Staff on Beta | Staff on Gamma | Total Staff in Dept |
+|------------|----------------|---------------|----------------|-----------------------|
+| R&D        | 10             | E             | 5              | F                     |
+| Marketing  | G              | 15            | H              | 30                    |
+| Operations | 5              | I             | J              | K                     |
+Additional Information:
+1. The Duration for Project Alpha (A) was 12 months.
+2. The total staff in the R&D department (F) was equal to the Staff Count on Project Gamma (D).
+3. The Budget per Staff-Month for Project Beta (C) was 0.1 Lakhs higher than that for Project Alpha.
+4. The number of Marketing staff on Project Alpha (G) was equal to the number of Operations staff on Project Alpha.
+5. The total staff in the Operations department (K) was 20.","What was the Budget for Project Beta (B) in INR Crores?","150","160","180","200","A","B","C","D","C","MCQ","Data Interpretation","Hybrid DI-LR (Multi-Table Finance)","Moderate","Applying a formula with careful unit interpretation and using linked data","table completion, formula application, unit interpretation","False","MOCKFNL020_Set4_Projects","Analysis","First, we must interpret the BPSM formula. The provided definition (with 'x 100') leads to a BPSM of 50 for Alpha, contradicting the table's 0.5. The correct interpretation is BPSM (Lakhs) = [Budget (Crores) * 100 (Lakhs/Crore)] / (Staff * Months). Simplified: BPSM = Budget(Crores) / (Staff * Months). Let's use this. 
+1. From Info 3, BPSM for Beta (C) = BPSM Alpha + 0.1 = 0.5 + 0.1 = 0.6 Lakhs.
+2. For Project Beta, BPSM = Budget / (Staff * Duration) => 0.6 = B / (30 * 10).
+3. B = 0.6 * 300 = 180. The budget for Project Beta (B) is 180 INR Crores."
+"LRDI","40","MOCKFNL020_Q16","16","MOCKFNL020_Set4_Projects","A company allocates its 75 employees across three project types: Alpha, Beta, and Gamma. Each employee is assigned to exactly one project type and belongs to one of three departments: R&D, Marketing, or Operations.
+Budget per Staff-Month (BPSM) is defined as: (Project Budget × 100) / (Staff Count on Project × Duration in Months), where Budget is in INR Crores and BPSM is in INR Lakhs. All Staff Counts are integers and Durations are in Months.
+Table 1: Project Metrics
+| Project Type | Budget (INR Crores) | Staff Count | Duration (Months) | Budget per Staff-Month (INR Lakhs) |
+|--------------|---------------------|-------------|-------------------|------------------------------------|
+| Alpha        | 120                 | 20          | A                 | 0.5                                |
+| Beta         | B                   | 30          | 10                | C                                  |
+| Gamma        | 150                 | D           | 15                | 0.4                                |
+Table 2: Departmental Staff Allocation to Project Types
+| Department | Staff on Alpha | Staff on Beta | Staff on Gamma | Total Staff in Dept |
+|------------|----------------|---------------|----------------|-----------------------|
+| R&D        | 10             | E             | 5              | F                     |
+| Marketing  | G              | 15            | H              | 30                    |
+| Operations | 5              | I             | J              | K                     |
+Additional Information:
+1. The Duration for Project Alpha (A) was 12 months.
+2. The total staff in the R&D department (F) was equal to the Staff Count on Project Gamma (D).
+3. The Budget per Staff-Month for Project Beta (C) was 0.1 Lakhs higher than that for Project Alpha.
+4. The number of Marketing staff on Project Alpha (G) was equal to the number of Operations staff on Project Alpha.
+5. The total staff in the Operations department (K) was 20.","How many staff from the R&D department were allocated to Project Beta (E)?","5","10","15","20","A","B","C","D","B","MCQ","Data Interpretation","Hybrid DI-LR (Multi-Table Finance)","Moderate","Deducing values in a table by linking information from multiple tables and clues","table completion, data deduction from linked tables","False","MOCKFNL020_Set4_Projects","Analysis","1. Find Staff on Gamma (D). Using BPSM = Budget/(Staff*Duration) for Gamma: 0.4 = 150 / (D * 15) => 0.4 = 10 / D => D = 10 / 0.4 = 25.
+2. From Info 2, Total R&D staff (F) = Staff on Gamma (D) = 25.
+3. Look at the R&D row in Table 2: Staff(Alpha) + Staff(Beta) + Staff(Gamma) = Total Staff. So, 10 + E + 5 = F.
+4. Since F = 25, we have 10 + E + 5 = 25 => 15 + E = 25 => E = 10. So, 10 R&D staff were on Project Beta."
+"LRDI","40","MOCKFNL020_Q17","17","MOCKFNL020_Set4_Projects","A company allocates its 75 employees across three project types: Alpha, Beta, and Gamma. Each employee is assigned to exactly one project type and belongs to one of three departments: R&D, Marketing, or Operations.
+Budget per Staff-Month (BPSM) is defined as: (Project Budget × 100) / (Staff Count on Project × Duration in Months), where Budget is in INR Crores and BPSM is in INR Lakhs. All Staff Counts are integers and Durations are in Months.
+Table 1: Project Metrics
+| Project Type | Budget (INR Crores) | Staff Count | Duration (Months) | Budget per Staff-Month (INR Lakhs) |
+|--------------|---------------------|-------------|-------------------|------------------------------------|
+| Alpha        | 120                 | 20          | A                 | 0.5                                |
+| Beta         | B                   | 30          | 10                | C                                  |
+| Gamma        | 150                 | D           | 15                | 0.4                                |
+Table 2: Departmental Staff Allocation to Project Types
+| Department | Staff on Alpha | Staff on Beta | Staff on Gamma | Total Staff in Dept |
+|------------|----------------|---------------|----------------|-----------------------|
+| R&D        | 10             | E             | 5              | F                     |
+| Marketing  | G              | 15            | H              | 30                    |
+| Operations | 5              | I             | J              | K                     |
+Additional Information:
+1. The Duration for Project Alpha (A) was 12 months.
+2. The total staff in the R&D department (F) was equal to the Staff Count on Project Gamma (D).
+3. The Budget per Staff-Month for Project Beta (C) was 0.1 Lakhs higher than that for Project Alpha.
+4. The number of Marketing staff on Project Alpha (G) was equal to the number of Operations staff on Project Alpha.
+5. The total staff in the Operations department (K) was 20.","What is the sum of staff allocated to Project Gamma from Marketing (H) and Operations (J)?","10","15","20","25","A","B","C","D","C","MCQ","Data Interpretation","Hybrid DI-LR (Multi-Table Finance)","Moderate","Completing tables and calculating a sum of derived values","table completion, sum of derived values","False","MOCKFNL020_Set4_Projects","Analysis","1. Find Total Staff on Gamma (D). From previous solutions, D = 25.
+2. This total is the sum of staff from each department working on Gamma: R&D_Gamma + Mkt_Gamma + Ops_Gamma = 25.
+3. From Table 2, R&D_Gamma = 5. Mkt_Gamma = H. Ops_Gamma = J.
+4. So, 5 + H + J = 25.
+5. This means H + J = 20. The sum of staff from Marketing (H) and Operations (J) on Project Gamma is 20."
+"LRDI","40","MOCKFNL020_Q18","18","MOCKFNL020_Set4_Projects","A company allocates its 75 employees across three project types: Alpha, Beta, and Gamma. Each employee is assigned to exactly one project type and belongs to one of three departments: R&D, Marketing, or Operations.
+Budget per Staff-Month (BPSM) is defined as: (Project Budget × 100) / (Staff Count on Project × Duration in Months), where Budget is in INR Crores and BPSM is in INR Lakhs. All Staff Counts are integers and Durations are in Months.
+Table 1: Project Metrics
+| Project Type | Budget (INR Crores) | Staff Count | Duration (Months) | Budget per Staff-Month (INR Lakhs) |
+|--------------|---------------------|-------------|-------------------|------------------------------------|
+| Alpha        | 120                 | 20          | A                 | 0.5                                |
+| Beta         | B                   | 30          | 10                | C                                  |
+| Gamma        | 150                 | D           | 15                | 0.4                                |
+Table 2: Departmental Staff Allocation to Project Types
+| Department | Staff on Alpha | Staff on Beta | Staff on Gamma | Total Staff in Dept |
+|------------|----------------|---------------|----------------|-----------------------|
+| R&D        | 10             | E             | 5              | F                     |
+| Marketing  | G              | 15            | H              | 30                    |
+| Operations | 5              | I             | J              | K                     |
+Additional Information:
+1. The Duration for Project Alpha (A) was 12 months.
+2. The total staff in the R&D department (F) was equal to the Staff Count on Project Gamma (D).
+3. The Budget per Staff-Month for Project Beta (C) was 0.1 Lakhs higher than that for Project Alpha.
+4. The number of Marketing staff on Project Alpha (G) was equal to the number of Operations staff on Project Alpha.
+5. The total staff in the Operations department (K) was 20.","Which department had the highest number of its staff allocated to a single project type?","R&D","Marketing","Operations","Both R&D and Marketing had the same highest number","A","B","C","D","B","MCQ","Data Interpretation","Hybrid DI-LR (Multi-Table Finance)","Difficult","Comparative analysis across categories after table completion","comparative analysis, identifying maximum allocation within department","False","MOCKFNL020_Set4_Projects","Analysis","First, we need to complete the allocation table (Table 2). Based on previous deductions:
+- E = 10.
+- G = Ops Staff on Alpha = 5 (from Info 4).
+- H + J = 20. We also know Total Staff on Gamma (D) = 25. So R&D(5) + H + J = 25, which gives H+J=20. Further, for Marketing row: G(5) + 15 + H = 30 => H=10. This means J=10.
+Now let's review allocations for each department:
+- R&D: Alpha=10, Beta=10, Gamma=5. The max for R&D is 10.
+- Marketing: Alpha=5, Beta=15, Gamma=10. The max for Marketing is 15.
+- Operations: Alpha=5, Beta=5, Gamma=10. The max for Operations is 10.
+Comparing the maximums (10, 15, 10), Marketing has the highest number of staff (15) allocated to a single project (Beta)."
+"LRDI","40","MOCKFNL020_Q19","19","MOCKFNL020_Set5_Islands","Four islands – Ignis, Terra, Aer, and Unda – compete for prosperity over 4 rounds. Each island starts with 10 Wood (W), 10 Stone (S), and 20 Food (F). Each round, an island performs exactly one action. Resources cannot be negative. Victory Points (VP) are awarded for building.
+Actions available each round:
+• Gather Wood (GW): Gain 5 Wood.
+• Gather Stone (GS): Gain 5 Stone.
+• Gather Food (GF): Gain 10 Food.
+• Build Settlement (BS): Costs 10 Wood and 5 Stone. Yields 5 VP. An island can have a maximum of two settlements.
+• Build Ship: Costs 5 Wood and 10 Stone. An island can have a maximum of one ship. (No trading actions are used by any island in this game).
+Information on Island Strategies:
+i. Ignis built two settlements by the end of Round 4. Ignis's actions, in order, were: Gather Wood, Build Settlement, Gather Wood, Build Settlement.
+ii. Terra built exactly one settlement and did not build a ship. Terra's actions in order were: Gather Wood, Build Settlement, Gather Food, Gather Food.
+iii. Aer built exactly one ship and no settlements. Aer's actions in order were: Gather Stone, Build Ship, Gather Wood, Gather Wood.
+iv. Unda built exactly one settlement and no ship. Unda's actions in order were: Gather Wood, Gather Wood, Gather Stone, Build Settlement.
+v. Each island always had sufficient resources for their chosen actions in each round. At the end of the game, exactly two islands had a Victory Point score of 5, while the other two islands had distinct Victory Point scores different from 5 and from each other.","How many Victory Points did Terra accumulate at the end of Round 4?","0","5","10","15","A","B","C","D","B","MCQ","Logical Reasoning","Games & Logic","Moderate","Tracking state changes based on a sequence of actions","resource management, strategy analysis, VP calculation, rule application","False","MOCKFNL020_Set5_Islands","Application","We track Terra's actions and resources. Start: W10 S10 F20 VP0. 
+- R1 (GW): W becomes 15.
+- R2 (BS - Build Settlement): Costs 10W, 5S. W becomes 5, S becomes 5. Gains 5 VP. VP is now 5.
+- R3 (GF): F becomes 30.
+- R4 (GF): F becomes 40.
+Terra's only VP-gaining action was building one settlement. At the end of Round 4, Terra has 5 VP."
+"LRDI","40","MOCKFNL020_Q20","20","MOCKFNL020_Set5_Islands","Four islands – Ignis, Terra, Aer, and Unda – compete for prosperity over 4 rounds. Each island starts with 10 Wood (W), 10 Stone (S), and 20 Food (F). Each round, an island performs exactly one action. Resources cannot be negative. Victory Points (VP) are awarded for building.
+Actions available each round:
+• Gather Wood (GW): Gain 5 Wood.
+• Gather Stone (GS): Gain 5 Stone.
+• Gather Food (GF): Gain 10 Food.
+• Build Settlement (BS): Costs 10 Wood and 5 Stone. Yields 5 VP. An island can have a maximum of two settlements.
+• Build Ship: Costs 5 Wood and 10 Stone. An island can have a maximum of one ship. (No trading actions are used by any island in this game).
+Information on Island Strategies:
+i. Ignis built two settlements by the end of Round 4. Ignis's actions, in order, were: Gather Wood, Build Settlement, Gather Wood, Build Settlement.
+ii. Terra built exactly one settlement and did not build a ship. Terra's actions in order were: Gather Wood, Build Settlement, Gather Food, Gather Food.
+iii. Aer built exactly one ship and no settlements. Aer's actions in order were: Gather Stone, Build Ship, Gather Wood, Gather Wood.
+iv. Unda built exactly one settlement and no ship. Unda's actions in order were: Gather Wood, Gather Wood, Gather Stone, Build Settlement.
+v. Each island always had sufficient resources for their chosen actions in each round. At the end of the game, exactly two islands had a Victory Point score of 5, while the other two islands had distinct Victory Point scores different from 5 and from each other.","What was the total amount of Wood remaining with Aer at the end of Round 4?","0","5","10","15","A","B","C","D","D","MCQ","Logical Reasoning","Games & Logic","Moderate","Tracking resource changes based on a sequence of actions","resource tracking, action sequence deduction","False","MOCKFNL020_Set5_Islands","Application","We track Aer's Wood. Start: 10W.
+- R1 (GS): No change to Wood. W=10.
+- R2 (Build Ship): Costs 5W, 10S. Wood becomes 10 - 5 = 5W.
+- R3 (GW): Gains 5W. Wood becomes 5 + 5 = 10W.
+- R4 (GW): Gains 5W. Wood becomes 10 + 5 = 15W.
+At the end of Round 4, Aer has 15 Wood."
+"LRDI","40","MOCKFNL020_Q21","21","MOCKFNL020_Set5_Islands","Four islands – Ignis, Terra, Aer, and Unda – compete for prosperity over 4 rounds. Each island starts with 10 Wood (W), 10 Stone (S), and 20 Food (F). Each round, an island performs exactly one action. Resources cannot be negative. Victory Points (VP) are awarded for building.
+Actions available each round:
+• Gather Wood (GW): Gain 5 Wood.
+• Gather Stone (GS): Gain 5 Stone.
+• Gather Food (GF): Gain 10 Food.
+• Build Settlement (BS): Costs 10 Wood and 5 Stone. Yields 5 VP. An island can have a maximum of two settlements.
+• Build Ship: Costs 5 Wood and 10 Stone. An island can have a maximum of one ship. (No trading actions are used by any island in this game).
+Information on Island Strategies:
+i. Ignis built two settlements by the end of Round 4. Ignis's actions, in order, were: Gather Wood, Build Settlement, Gather Wood, Build Settlement.
+ii. Terra built exactly one settlement and did not build a ship. Terra's actions in order were: Gather Wood, Build Settlement, Gather Food, Gather Food.
+iii. Aer built exactly one ship and no settlements. Aer's actions in order were: Gather Stone, Build Ship, Gather Wood, Gather Wood.
+iv. Unda built exactly one settlement and no ship. Unda's actions in order were: Gather Wood, Gather Wood, Gather Stone, Build Settlement.
+v. Each island always had sufficient resources for their chosen actions in each round. At the end of the game, exactly two islands had a Victory Point score of 5, while the other two islands had distinct Victory Point scores different from 5 and from each other.","Which island had the most Food remaining at the end of Round 4?","Ignis","Terra","Aer","Unda","A","B","C","D","B","MCQ","Logical Reasoning","Games & Logic","Moderate","Comparing final resource states across multiple entities","comparative analysis (resources), end-state calculation from actions","False","MOCKFNL020_Set5_Islands","Analysis","We need to find the final Food count for each island. All start with 20 Food. We only need to check if they performed the 'Gather Food' (GF) action, which adds 10 Food.
+- Ignis: No GF actions. Final Food = 20.
+- Terra: Two GF actions. Final Food = 20 + 10 + 10 = 40.
+- Aer: No GF actions. Final Food = 20.
+- Unda: No GF actions. Final Food = 20.
+Terra has the most Food (40) at the end."
+"LRDI","40","MOCKFNL020_Q22","22","MOCKFNL020_Set5_Islands","Four islands – Ignis, Terra, Aer, and Unda – compete for prosperity over 4 rounds. Each island starts with 10 Wood (W), 10 Stone (S), and 20 Food (F). Each round, an island performs exactly one action. Resources cannot be negative. Victory Points (VP) are awarded for building.
+Actions available each round:
+• Gather Wood (GW): Gain 5 Wood.
+• Gather Stone (GS): Gain 5 Stone.
+• Gather Food (GF): Gain 10 Food.
+• Build Settlement (BS): Costs 10 Wood and 5 Stone. Yields 5 VP. An island can have a maximum of two settlements.
+• Build Ship: Costs 5 Wood and 10 Stone. An island can have a maximum of one ship. (No trading actions are used by any island in this game).
+Information on Island Strategies:
+i. Ignis built two settlements by the end of Round 4. Ignis's actions, in order, were: Gather Wood, Build Settlement, Gather Wood, Build Settlement.
+ii. Terra built exactly one settlement and did not build a ship. Terra's actions in order were: Gather Wood, Build Settlement, Gather Food, Gather Food.
+iii. Aer built exactly one ship and no settlements. Aer's actions in order were: Gather Stone, Build Ship, Gather Wood, Gather Wood.
+iv. Unda built exactly one settlement and no ship. Unda's actions in order were: Gather Wood, Gather Wood, Gather Stone, Build Settlement.
+v. Each island always had sufficient resources for their chosen actions in each round. At the end of the game, exactly two islands had a Victory Point score of 5, while the other two islands had distinct Victory Point scores different from 5 and from each other.","What is the sum of the number of ships built and the number of settlements built by all four islands combined by the end of Round 4?","5","6","7","8","A","B","C","D","A","MCQ","Logical Reasoning","Games & Logic","Moderate","Aggregating results after tracking multiple entities","counting constructions, aggregation from individual outcomes","False","MOCKFNL020_Set5_Islands","Application","We count the number of constructions from the information given:
+- Ignis (Clue i): Built two settlements.
+- Terra (Clue ii): Built one settlement, no ship.
+- Aer (Clue iii): Built one ship, no settlements.
+- Unda (Clue iv): Built one settlement, no ship.
+Total Settlements = 2 (Ignis) + 1 (Terra) + 0 (Aer) + 1 (Unda) = 4.
+Total Ships = 0 (Ignis) + 0 (Terra) + 1 (Aer) + 0 (Unda) = 1.
+Sum of ships and settlements = 4 + 1 = 5."

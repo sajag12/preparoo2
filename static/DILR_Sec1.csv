@@ -1,0 +1,246 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel
+LRDI,40,LRDI_Mock1_01,1,LRDI_Set1,"Directions for questions 1 to 5: Study the information below and answer the questions that follow.
+
+A chain of boutique stores, ""Artisanals Inc."", operates in five cities: A, B, C, D, and E. They sell three categories of products: Handicrafts (H), Apparel (A), and Gourmet Foods (F). The company tracks sales revenue (in lakhs of Rupees) and customer footfall (number of unique customers) for each product category in each city for the year 2023. Some data is presented in the table below.
+
+City,Product Category,Sales Revenue (lakhs),Customer Footfall,Average Revenue per Customer (Rupees)
+A,H,60,1200,
+A,A,150,,750
+A,F,,800,375
+B,H,90,,600
+B,A,,1000,900
+B,F,75,500,
+C,H,,1600,375
+C,A,120,,
+C,F,90,600,
+D,H,70,1400,
+D,A,105,700,
+D,F,,,400
+E,H,110,2200,
+E,A,,1500,600
+E,F,60,,500
+",What was the total customer footfall for Gourmet Foods in City D?,450,500,550,600,A,B,C,D,A,Data Interpretation,Data Interpretation and Logical Reasoning,Table Analysis,Medium,,,FALSE,LRDI_Set1,
+LRDI,40,LRDI_Mock1_02,2,LRDI_Set1,"Directions for questions 1 to 5: Study the information below and answer the questions that follow.
+
+A chain of boutique stores, ""Artisanals Inc."", operates in five cities: A, B, C, D, and E. They sell three categories of products: Handicrafts (H), Apparel (A), and Gourmet Foods (F). The company tracks sales revenue (in lakhs of Rupees) and customer footfall (number of unique customers) for each product category in each city for the year 2023. Some data is presented in the table below.
+
+City,Product Category,Sales Revenue (lakhs),Customer Footfall,Average Revenue per Customer (Rupees)
+A,H,60,1200,
+A,A,150,,750
+A,F,,800,375
+B,H,90,,600
+B,A,,1000,900
+B,F,75,500,
+C,H,,1600,375
+C,A,120,,
+C,F,90,600,
+D,H,70,1400,
+D,A,105,700,
+D,F,,,400
+E,H,110,2200,
+E,A,,1500,600
+E,F,60,,500
+",Which city had the highest total sales revenue across all three product categories?,City A,City B,City C,City E,A,B,C,D,C,Data Interpretation,Data Interpretation and Logical Reasoning,Table Analysis,Medium,,,FALSE,LRDI_Set1,
+LRDI,40,LRDI_Mock1_03,3,LRDI_Set1,"Directions for questions 1 to 5: Study the information below and answer the questions that follow.
+
+A chain of boutique stores, ""Artisanals Inc."", operates in five cities: A, B, C, D, and E. They sell three categories of products: Handicrafts (H), Apparel (A), and Gourmet Foods (F). The company tracks sales revenue (in lakhs of Rupees) and customer footfall (number of unique customers) for each product category in each city for the year 2023. Some data is presented in the table below.
+
+City,Product Category,Sales Revenue (lakhs),Customer Footfall,Average Revenue per Customer (Rupees)
+A,H,60,1200,
+A,A,150,,750
+A,F,,800,375
+B,H,90,,600
+B,A,,1000,900
+B,F,75,500,
+C,H,,1600,375
+C,A,120,,
+C,F,90,600,
+D,H,70,1400,
+D,A,105,700,
+D,F,,,400
+E,H,110,2200,
+E,A,,1500,600
+E,F,60,,500
+",What was the average revenue per customer (in Rupees) for Apparel in City C?,500,1500,640,750,A,B,C,D,B,Data Interpretation,Data Interpretation and Logical Reasoning,Table Analysis,Medium,,,FALSE,LRDI_Set1,
+LRDI,40,LRDI_Mock1_04,4,LRDI_Set1,"Directions for questions 1 to 5: Study the information below and answer the questions that follow.
+
+A chain of boutique stores, ""Artisanals Inc."", operates in five cities: A, B, C, D, and E. They sell three categories of products: Handicrafts (H), Apparel (A), and Gourmet Foods (F). The company tracks sales revenue (in lakhs of Rupees) and customer footfall (number of unique customers) for each product category in each city for the year 2023. Some data is presented in the table below.
+
+City,Product Category,Sales Revenue (lakhs),Customer Footfall,Average Revenue per Customer (Rupees)
+A,H,60,1200,
+A,A,150,,750
+A,F,,800,375
+B,H,90,,600
+B,A,,1000,900
+B,F,75,500,
+C,H,,1600,375
+C,A,120,,
+C,F,90,600,
+D,H,70,1400,
+D,A,105,700,
+D,F,,,400
+E,H,110,2200,
+E,A,,1500,600
+E,F,60,,500
+",The number of cities where the customer footfall for Handicrafts was greater than or equal to 1500 is:,1,2,3,4,A,B,C,D,C,Data Interpretation,Data Interpretation and Logical Reasoning,Table Analysis,Medium,,,FALSE,LRDI_Set1,
+LRDI,40,LRDI_Mock1_05,5,LRDI_Set1,"Directions for questions 1 to 5: Study the information below and answer the questions that follow.
+
+A chain of boutique stores, ""Artisanals Inc."", operates in five cities: A, B, C, D, and E. They sell three categories of products: Handicrafts (H), Apparel (A), and Gourmet Foods (F). The company tracks sales revenue (in lakhs of Rupees) and customer footfall (number of unique customers) for each product category in each city for the year 2023. Some data is presented in the table below.
+
+City,Product Category,Sales Revenue (lakhs),Customer Footfall,Average Revenue per Customer (Rupees)
+A,H,60,1200,
+A,A,150,,750
+A,F,,800,375
+B,H,90,,600
+B,A,,1000,900
+B,F,75,500,
+C,H,,1600,375
+C,A,120,,
+C,F,90,600,
+D,H,70,1400,
+D,A,105,700,
+D,F,,,400
+E,H,110,2200,
+E,A,,1500,600
+E,F,60,,500
+","If the company decides to run a promotion in the city and product category combination that has the lowest average revenue per customer, which combination would it be?","City A, Gourmet Foods","City D, Handicrafts","City B, Handicrafts","City C, Apparel",A,B,C,D,A,Data Interpretation,Data Interpretation and Logical Reasoning,Table Analysis,Medium,,,FALSE,LRDI_Set1,
+LRDI,40,LRDI_Mock1_06,6,LRDI_Set2,"Six managers – Arin, Ben, Cara, Dan, Esha, and Fay – work in three different departments: Sales (S), Technology (T), and Human Resources (H).
+Each department has exactly two managers. Each manager has a distinct company ID from 1 to 6.
+They are all seated around a circular table for a strategy meeting with the following conditions:
+1. No two managers from the same department are seated next to each other.
+2. Ben, from Sales, has company ID 3 and is seated immediately to the left of the manager with company ID 1.
+3. Esha is from Human Resources and is seated opposite Dan. Dan is not from Human Resources.
+4. The manager with company ID 1 is from Human Resources. Cara does not have company ID 1.
+5. The manager with company ID 6 is from Sales and is not seated next to Dan.
+6. Fay's company ID is higher than Cara's, and both are in the same department.
+7. The manager with company ID 2 is seated opposite the manager with company ID 5.
+8. Cara is not seated next to Ben.",Who has company ID 1?,Arin,Fay,Cara,Dan,A,B,C,D,Esha,Logical Reasoning,Data Interpretation and Logical Reasoning,Seating Arrangement,Medium,,,FALSE,LRDI_Set2,
+LRDI,40,LRDI_Mock1_07,7,LRDI_Set2,"Six managers – Arin, Ben, Cara, Dan, Esha, and Fay – work in three different departments: Sales (S), Technology (T), and Human Resources (H).
+Each department has exactly two managers. Each manager has a distinct company ID from 1 to 6.
+They are all seated around a circular table for a strategy meeting with the following conditions:
+1. No two managers from the same department are seated next to each other.
+2. Ben, from Sales, has company ID 3 and is seated immediately to the left of the manager with company ID 1.
+3. Esha is from Human Resources and is seated opposite Dan. Dan is not from Human Resources.
+4. The manager with company ID 1 is from Human Resources. Cara does not have company ID 1.
+5. The manager with company ID 6 is from Sales and is not seated next to Dan.
+6. Fay's company ID is higher than Cara's, and both are in the same department.
+7. The manager with company ID 2 is seated opposite the manager with company ID 5.
+8. Cara is not seated next to Ben.",What is Cara's company ID?,2,4,5,6,A,B,C,D,A,Logical Reasoning,Data Interpretation and Logical Reasoning,Seating Arrangement,Medium,,,FALSE,LRDI_Set2,
+LRDI,40,LRDI_Mock1_08,8,LRDI_Set2,"Six managers – Arin, Ben, Cara, Dan, Esha, and Fay – work in three different departments: Sales (S), Technology (T), and Human Resources (H).
+Each department has exactly two managers. Each manager has a distinct company ID from 1 to 6.
+They are all seated around a circular table for a strategy meeting with the following conditions:
+1. No two managers from the same department are seated next to each other.
+2. Ben, from Sales, has company ID 3 and is seated immediately to the left of the manager with company ID 1.
+3. Esha is from Human Resources and is seated opposite Dan. Dan is not from Human Resources.
+4. The manager with company ID 1 is from Human Resources. Cara does not have company ID 1.
+5. The manager with company ID 6 is from Sales and is not seated next to Dan.
+6. Fay's company ID is higher than Cara's, and both are in the same department.
+7. The manager with company ID 2 is seated opposite the manager with company ID 5.
+8. Cara is not seated next to Ben.",Which pair of managers are from the Human Resources department?,Arin and Dan,Esha and Arin,Fay and Dan,Fay and Cara,A,B,C,D,B,Logical Reasoning,Data Interpretation and Logical Reasoning,Seating Arrangement,Medium,,,FALSE,LRDI_Set2,
+LRDI,40,LRDI_Mock1_09,9,LRDI_Set2,"Six managers – Arin, Ben, Cara, Dan, Esha, and Fay – work in three different departments: Sales (S), Technology (T), and Human Resources (H).
+Each department has exactly two managers. Each manager has a distinct company ID from 1 to 6.
+They are all seated around a circular table for a strategy meeting with the following conditions:
+1. No two managers from the same department are seated next to each other.
+2. Ben, from Sales, has company ID 3 and is seated immediately to the left of the manager with company ID 1.
+3. Esha is from Human Resources and is seated opposite Dan. Dan is not from Human Resources.
+4. The manager with company ID 1 is from Human Resources. Cara does not have company ID 1.
+5. The manager with company ID 6 is from Sales and is not seated next to Dan.
+6. Fay's company ID is higher than Cara's, and both are in the same department.
+7. The manager with company ID 2 is seated opposite the manager with company ID 5.
+8. Cara is not seated next to Ben.",Who is seated immediately to the left of Dan?,Arin,Ben,Cara,Fay,A,B,C,D,A,Logical Reasoning,Data Interpretation and Logical Reasoning,Seating Arrangement,Medium,,,FALSE,LRDI_Set2,
+LRDI,40,LRDI_Mock1_10,10,LRDI_Set2,"Six managers – Arin, Ben, Cara, Dan, Esha, and Fay – work in three different departments: Sales (S), Technology (T), and Human Resources (H).
+Each department has exactly two managers. Each manager has a distinct company ID from 1 to 6.
+They are all seated around a circular table for a strategy meeting with the following conditions:
+1. No two managers from the same department are seated next to each other.
+2. Ben, from Sales, has company ID 3 and is seated immediately to the left of the manager with company ID 1.
+3. Esha is from Human Resources and is seated opposite Dan. Dan is not from Human Resources.
+4. The manager with company ID 1 is from Human Resources. Cara does not have company ID 1.
+5. The manager with company ID 6 is from Sales and is not seated next to Dan.
+6. Fay's company ID is higher than Cara's, and both are in the same department.
+7. The manager with company ID 2 is seated opposite the manager with company ID 5.
+8. Cara is not seated next to Ben.","If the managers are listed in decreasing order of their company IDs, who is third on this list?",Ben,Dan,Fay,Esha,A,B,C,D,C,Logical Reasoning,Data Interpretation and Logical Reasoning,Seating Arrangement,Medium,,,FALSE,LRDI_Set2,
+LRDI,40,LRDI_Mock1_11,11,LRDI_Set3,"A game called ""LetterShift"" involves transforming a 5-letter word using only the letters A, B, C, D, E.
+Each position is numbered 1 to 5.
+A transformation step applies rules in order:
+1. If position is prime (2,3,5), shift forward by 2 in the alphabet (A→C, B→D, C→E, D→A, E→B).
+2. If letter is a vowel (A,E) and position is not prime, shift backward by 1 (A→E, E→D).
+3. If letter is a consonant immediately to the left of another consonant and Rule 1 did not apply, shift forward by 1 (A→B, B→C, C→D, D→E, E→A).
+4. Otherwise, no change.","If the starting word is ""BACED"", what is the word after one transformation step?",CCECA,DBCCD,DAAED,EBACD,A,B,C,D,A,Logical Reasoning,Data Interpretation and Logical Reasoning,Rule-Based Transformation,Medium,,,FALSE,LRDI_Set3,
+LRDI,40,LRDI_Mock1_12,12,LRDI_Set3,"A game called ""LetterShift"" involves transforming a 5-letter word using only the letters A, B, C, D, E.
+Each position is numbered 1 to 5.
+A transformation step applies rules in order:
+1. If position is prime (2,3,5), shift forward by 2 in the alphabet (A→C, B→D, C→E, D→A, E→B).
+2. If letter is a vowel (A,E) and position is not prime, shift backward by 1 (A→E, E→D).
+3. If letter is a consonant immediately to the left of another consonant and Rule 1 did not apply, shift forward by 1 (A→B, B→C, C→D, D→E, E→A).
+4. Otherwise, no change.","If the word after one transformation step is ""AEAEA"", which of the following could have been the original word?",CCCCC,ECECE,CAECA,BABAB,A,B,C,D,,Logical Reasoning,Data Interpretation and Logical Reasoning,Rule-Based Transformation,Medium,,,FALSE,LRDI_Set3,
+LRDI,40,LRDI_Mock1_13,13,LRDI_Set3,"A game called ""LetterShift"" involves transforming a 5-letter word using only the letters A, B, C, D, E.
+Each position is numbered 1 to 5.
+A transformation step applies rules in order:
+1. If position is prime (2,3,5), shift forward by 2 in the alphabet (A→C, B→D, C→E, D→A, E→B).
+2. If letter is a vowel (A,E) and position is not prime, shift backward by 1 (A→E, E→D).
+3. If letter is a consonant immediately to the left of another consonant and Rule 1 did not apply, shift forward by 1 (A→B, B→C, C→D, D→E, E→A).
+4. Otherwise, no change.","If the starting word is ""CEDAB"", how many letters change in the first transformation step?",2,3,4,5,A,B,C,D,D,Logical Reasoning,Data Interpretation and Logical Reasoning,Rule-Based Transformation,Medium,,,FALSE,LRDI_Set3,
+LRDI,40,LRDI_Mock1_14,14,LRDI_Set3,"A game called ""LetterShift"" involves transforming a 5-letter word using only the letters A, B, C, D, E.
+Each position is numbered 1 to 5.
+A transformation step applies rules in order:
+1. If position is prime (2,3,5), shift forward by 2 in the alphabet (A→C, B→D, C→E, D→A, E→B).
+2. If letter is a vowel (A,E) and position is not prime, shift backward by 1 (A→E, E→D).
+3. If letter is a consonant immediately to the left of another consonant and Rule 1 did not apply, shift forward by 1 (A→B, B→C, C→D, D→E, E→A).
+4. Otherwise, no change.","If the starting word is ""BBBAD"" and it undergoes two transformation steps, what is the word after the second step?",DDBCA,EEDAB,CDAAE,BBDCA,A,B,C,D,C,Logical Reasoning,Data Interpretation and Logical Reasoning,Rule-Based Transformation,Medium,,,FALSE,LRDI_Set3,
+LRDI,40,LRDI_Mock1_15,15,LRDI_Set3,"A game called ""LetterShift"" involves transforming a 5-letter word using only the letters A, B, C, D, E.
+Each position is numbered 1 to 5.
+A transformation step applies rules in order:
+1. If position is prime (2,3,5), shift forward by 2 in the alphabet (A→C, B→D, C→E, D→A, E→B).
+2. If letter is a vowel (A,E) and position is not prime, shift backward by 1 (A→E, E→D).
+3. If letter is a consonant immediately to the left of another consonant and Rule 1 did not apply, shift forward by 1 (A→B, B→C, C→D, D→E, E→A).
+4. Otherwise, no change.","A word transforms to ""DAXEC"" after one step, where X is unknown. If the original word was ""BEZAE"", where Z is unknown, what is X?",A,B,C,D,A,B,C,D,,Logical Reasoning,Data Interpretation and Logical Reasoning,Rule-Based Transformation,Medium,,,FALSE,LRDI_Set3,
+LRDI,40,LRDI_Mock1_16,16,LRDI_Set4,"A university committee must be formed with exactly 5 members from eight eligible professors:
+Arts: A, B, C; Science: S, T, U; Engineering: X, Y.
+Constraints:
+- At least one professor from each discipline.
+- If A is selected, S must be selected.
+- If B is selected, X cannot be selected.
+- C and T cannot both be selected.
+- If U is selected, exactly one Arts professor must be selected.
+- Y can only be selected if T is also selected.
+- At most two professors from Science can be selected.","If Professor U is selected for the committee, which professor MUST also be selected?",Professor A,Professor X,Professor S,Professor C,A,B,C,D,,Logical Reasoning,Data Interpretation and Logical Reasoning,Selection & Combinations,Medium,,,FALSE,LRDI_Set4,
+LRDI,40,LRDI_Mock1_17,17,LRDI_Set4,"A university committee must be formed with exactly 5 members from eight eligible professors:
+Arts: A, B, C; Science: S, T, U; Engineering: X, Y.
+Constraints:
+- At least one professor from each discipline.
+- If A is selected, S must be selected.
+- If B is selected, X cannot be selected.
+- C and T cannot both be selected.
+- If U is selected, exactly one Arts professor must be selected.
+- Y can only be selected if T is also selected.
+- At most two professors from Science can be selected.",Which combination of professors is NOT a valid committee?,"A, S, U, X, C","B, C, S, T, Y","A, S, T, X, Y","C, S, U, X, B",A,B,C,D,A,Logical Reasoning,Data Interpretation and Logical Reasoning,Selection & Combinations,Medium,,,FALSE,LRDI_Set4,
+LRDI,40,LRDI_Mock1_18,18,LRDI_Set4,"A university committee must be formed with exactly 5 members from eight eligible professors:
+Arts: A, B, C; Science: S, T, U; Engineering: X, Y.
+Constraints:
+- At least one professor from each discipline.
+- If A is selected, S must be selected.
+- If B is selected, X cannot be selected.
+- C and T cannot both be selected.
+- If U is selected, exactly one Arts professor must be selected.
+- Y can only be selected if T is also selected.
+- At most two professors from Science can be selected.","If B and Y are selected, who are the other three members in a valid committee?","A, S, T","C, S, U","A, C, T","S, U, T",A,B,C,D,A,Logical Reasoning,Data Interpretation and Logical Reasoning,Selection & Combinations,Medium,,,FALSE,LRDI_Set4,
+LRDI,40,LRDI_Mock1_19,19,LRDI_Set4,"A university committee must be formed with exactly 5 members from eight eligible professors:
+Arts: A, B, C; Science: S, T, U; Engineering: X, Y.
+Constraints:
+- At least one professor from each discipline.
+- If A is selected, S must be selected.
+- If B is selected, X cannot be selected.
+- C and T cannot both be selected.
+- If U is selected, exactly one Arts professor must be selected.
+- Y can only be selected if T is also selected.
+- At most two professors from Science can be selected.","If exactly one Arts professor is C, which statement MUST be true?",S and U selected,X and S selected,S selected and Y not selected,U selected and X not selected,A,B,C,D,C,Logical Reasoning,Data Interpretation and Logical Reasoning,Selection & Combinations,Medium,,,FALSE,LRDI_Set4,
+LRDI,40,LRDI_Mock1_20,20,LRDI_Set4,"A university committee must be formed with exactly 5 members from eight eligible professors:
+Arts: A, B, C; Science: S, T, U; Engineering: X, Y.
+Constraints:
+- At least one professor from each discipline.
+- If A is selected, S must be selected.
+- If B is selected, X cannot be selected.
+- C and T cannot both be selected.
+- If U is selected, exactly one Arts professor must be selected.
+- Y can only be selected if T is also selected.
+- At most two professors from Science can be selected.","If X and Y are both selected, which professor CANNOT be on the committee?",Professor A,Professor C,Professor S,Professor U,A,B,C,D,D,Logical Reasoning,Data Interpretation and Logical Reasoning,Selection & Combinations,Medium,,,FALSE,LRDI_Set4,

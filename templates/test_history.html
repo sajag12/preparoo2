@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Overview - CAT Prep</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --primary-light: #6366f1;
+            --secondary-color: #1e293b;
+            --accent-color: #06b6d4;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        .page-subtitle {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .main-content {
+            padding: 3rem 0;
+            min-height: calc(100vh - 200px);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.125rem;
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .test-card {
+            background: var(--card-background);
+            border-radius: 1rem;
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .test-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .test-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .test-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .test-date {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            background: var(--background-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+        }
+
+        .score-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--background-color);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .score-main {
+            text-align: center;
+        }
+
+        .score-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .score-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-top: 0.25rem;
+        }
+
+        .accuracy-circle {
+            position: relative;
+            width: 60px;
+            height: 60px;
+        }
+
+        .accuracy-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .metric-item {
+            text-align: center;
+            padding: 0.75rem;
+            background: rgba(var(--primary-color), 0.05);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(var(--primary-color), 0.1);
+        }
+
+        .metric-value {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .metric-correct .metric-value { color: var(--success-color); }
+        .metric-wrong .metric-value { color: var(--danger-color); }
+        .metric-skipped .metric-value { color: var(--warning-color); }
+
+        .card-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border: none;
+            color: white;
+            padding: 0.625rem 1.25rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .btn-primary-custom:hover {
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            border: 1.5px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.625rem 1.25rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .btn-outline-custom:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background: rgba(var(--primary-color), 0.05);
+            text-decoration: none;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--card-background);
+            border-radius: 1rem;
+            border: 2px dashed var(--border-color);
+            margin: 2rem 0;
+        }
+
+        .empty-icon {
+            font-size: 4rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            opacity: 0.5;
+        }
+
+        .empty-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .empty-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+
+        .back-button {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: var(--background-color);
+            color: var(--text-primary);
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-breadcrumb {
+            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .breadcrumb-item {
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb-item.active {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .test-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .card-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Breadcrumb -->
+    <nav class="nav-breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="{{ url_for('home') }}" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('mock_tests_page') }}" class="text-decoration-none">Mock Tests</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Performance Overview</li>
+                </ol>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h1 class="page-title">
+                            <i class="fas fa-chart-line me-3"></i>Performance Overview
+                        </h1>
+                        <p class="page-subtitle">Track your progress and analyze your test performance</p>
+                    </div>
+                    <a href="{{ url_for('mock_tests_page') }}" class="back-button">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to Tests</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <!-- Full Mock Tests Section -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <div class="section-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    Full Mock Tests
+                </h2>
+                <div class="d-flex align-items-center gap-3">
+                    <span class="badge bg-primary fs-6">{{ full_mock_results|length }} Tests Completed</span>
+                </div>
+            </div>
+
+            {% if full_mock_results %}
+                <div class="test-grid">
+                    {% for result in full_mock_results %}
+                    <div class="test-card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="test-title">Mock Test {{ result.test_id }}</h3>
+                                <span class="test-date">{{ result.created_at.strftime('%b %d, %Y at %I:%M %p') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="score-section">
+                            <div class="score-main">
+                                <div class="score-value">{{ result.total_score or 0 }}</div>
+                                <div class="score-label">Total Score</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="accuracy-circle">
+                                    <svg width="60" height="60" style="transform: rotate(-90deg)">
+                                        <circle cx="30" cy="30" r="25" fill="none" stroke="#e2e8f0" stroke-width="4"/>
+                                        <circle cx="30" cy="30" r="25" fill="none" stroke="var(--primary-color)" stroke-width="4" 
+                                                stroke-dasharray="{{ (result.accuracy or 0) * 157 / 100 }} 157" stroke-linecap="round"/>
+                                    </svg>
+                                    <div class="accuracy-text">{{ "%.0f"|format(result.accuracy or 0) }}%</div>
+                                </div>
+                                <div class="score-label mt-1">Accuracy</div>
+                            </div>
+                        </div>
+                        
+                        <div class="metrics-grid">
+                            <div class="metric-item metric-correct">
+                                <div class="metric-value">{{ result.correct or 0 }}</div>
+                                <div class="metric-label">Correct</div>
+                            </div>
+                            <div class="metric-item metric-wrong">
+                                <div class="metric-value">{{ result.wrong or 0 }}</div>
+                                <div class="metric-label">Wrong</div>
+                            </div>
+                            <div class="metric-item metric-skipped">
+                                <div class="metric-value">{{ result.skipped or 0 }}</div>
+                                <div class="metric-label">Skipped</div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <a href="{{ url_for('view_result', result_id=result.id) }}" class="btn-primary-custom">
+                                <i class="fas fa-eye"></i>
+                                <span>View Analysis</span>
+                            </a>
+                            <a href="{{ url_for('mock_test_' + result.test_id) }}?retake=true" class="btn-outline-custom">
+                                <i class="fas fa-redo"></i>
+                                <span>Retake</span>
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <i class="fas fa-clipboard-check empty-icon"></i>
+                    <h3 class="empty-title">No Full Mock Tests Yet</h3>
+                    <p class="empty-description">Start your preparation with a comprehensive full-length CAT mock test</p>
+                    <a href="{{ url_for('mock_tests_page') }}" class="btn-primary-custom">
+                        <i class="fas fa-play"></i>
+                        <span>Take Your First Mock Test</span>
+                    </a>
+                </div>
+            {% endif %}
+        </section>
+
+        <!-- Sectional Tests Section -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <div class="section-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    Sectional Tests
+                </h2>
+                <div class="d-flex align-items-center gap-3">
+                    <span class="badge bg-secondary fs-6">{{ sectional_results|length }} Tests Completed</span>
+                </div>
+            </div>
+
+            {% if sectional_results %}
+                <div class="test-grid">
+                    {% for result in sectional_results %}
+                    <div class="test-card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="test-title">{{ result.test_name.replace('Sectional Mock - ', '') }}</h3>
+                                <span class="test-date">{{ result.created_at.strftime('%b %d, %Y at %I:%M %p') }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="score-section">
+                            <div class="score-main">
+                                <div class="score-value">{{ result.total_score or 0 }}</div>
+                                <div class="score-label">Section Score</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="accuracy-circle">
+                                    <svg width="60" height="60" style="transform: rotate(-90deg)">
+                                        <circle cx="30" cy="30" r="25" fill="none" stroke="#e2e8f0" stroke-width="4"/>
+                                        <circle cx="30" cy="30" r="25" fill="none" stroke="var(--accent-color)" stroke-width="4" 
+                                                stroke-dasharray="{{ (result.accuracy or 0) * 157 / 100 }} 157" stroke-linecap="round"/>
+                                    </svg>
+                                    <div class="accuracy-text">{{ "%.0f"|format(result.accuracy or 0) }}%</div>
+                                </div>
+                                <div class="score-label mt-1">Accuracy</div>
+                            </div>
+                        </div>
+                        
+                        <div class="metrics-grid">
+                            <div class="metric-item metric-correct">
+                                <div class="metric-value">{{ result.correct or 0 }}</div>
+                                <div class="metric-label">Correct</div>
+                            </div>
+                            <div class="metric-item metric-wrong">
+                                <div class="metric-value">{{ result.wrong or 0 }}</div>
+                                <div class="metric-label">Wrong</div>
+                            </div>
+                            <div class="metric-item metric-skipped">
+                                <div class="metric-value">{{ result.skipped or 0 }}</div>
+                                <div class="metric-label">Skipped</div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-actions">
+                            <a href="{{ url_for('view_result', result_id=result.id) }}" class="btn-primary-custom">
+                                <i class="fas fa-eye"></i>
+                                <span>View Analysis</span>
+                            </a>
+                            {% if result.test_id|string|startswith('qa') %}
+                                <a href="{{ url_for('qa_sectional_' + result.test_id|string|last) }}?retake=true" class="btn-outline-custom">
+                                    <i class="fas fa-redo"></i>
+                                    <span>Retake</span>
+                                </a>
+                            {% elif result.test_id|string|startswith('varc') %}
+                                <a href="{{ url_for('varc_sectional_' + result.test_id|string|last) }}?retake=true" class="btn-outline-custom">
+                                    <i class="fas fa-redo"></i>
+                                    <span>Retake</span>
+                                </a>
+                            {% elif result.test_id|string|startswith('lrdi') %}
+                                <a href="{{ url_for('lrdi_sectional_' + result.test_id|string|last) }}?retake=true" class="btn-outline-custom">
+                                    <i class="fas fa-redo"></i>
+                                    <span>Retake</span>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <i class="fas fa-puzzle-piece empty-icon"></i>
+                    <h3 class="empty-title">No Sectional Tests Yet</h3>
+                    <p class="empty-description">Practice with focused sectional tests to strengthen specific areas</p>
+                    <a href="{{ url_for('mock_tests_page') }}" class="btn-primary-custom">
+                        <i class="fas fa-play"></i>
+                        <span>Take Your First Sectional Test</span>
+                    </a>
+                </div>
+            {% endif %}
+        </section>
+
+        {% if not full_mock_results and not sectional_results %}
+            <div class="empty-state">
+                <i class="fas fa-chart-line empty-icon"></i>
+                <h3 class="empty-title">Welcome to Your Performance Dashboard</h3>
+                <p class="empty-description">Start your CAT preparation journey by taking your first test. All your results will be tracked here.</p>
+                <a href="{{ url_for('mock_tests_page') }}" class="btn-primary-custom btn-lg">
+                    <i class="fas fa-rocket"></i>
+                    <span>Begin Your CAT Journey</span>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

@@ -1,0 +1,281 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+QA,40,Q155,1,,,"The cost of a specialty metal alloy when in spherical form varies directly as the cube of its radius. A spherical bead of this alloy with radius 'r' costs Rs. 12,000. A coin is to be made from this alloy with radius '1.5r' and thickness '0.8t', where 't' is a standard thickness unit. The cost of the alloy when in coin form varies directly as the square of its coin-radius and directly as its coin-thickness. If 10% of the coin's material by volume is an impurity (costing negligible), what is the effective cost of the valuable alloy material in this specific coin, assuming the constant of variation for cost per unit (radius² × thickness) for the coin is the same as the constant of variation for cost per unit (radius³) for the sphere when the standard thickness unit 't' is equal to the sphere's radius 'r'?","Rs. 21,870","Rs. 24,300","Rs. 19,440","Rs. 29,160",A,B,C,D,C,MCQ,Arithmetic,"Ratio, Proportion & Variation",Hard,"Joint Variation, Cost Calculation, Percentage Impurity","Joint Variation, Cost Calculation, Percentage Impurity, Volume interpretation",False,MockSet_CAT_Final_CleanV4,Analyzing,"Let the constant of variation be K.
+For a sphere, Cost = K * (radius)³. For Coin A (sphere): 12,000 = K * r³. So, K = 12000/r³.
+For a coin, Cost = K_coin * (radius_coin)² * (thickness_coin).
+The problem states ""assuming the constant of variation... for the coin is the same as ... for the sphere when t=r"". This implies if we consider a hypothetical coin with radius 'r' and thickness 'r', its cost factor (r² * r = r³) would use the same K as the sphere. So K_coin = K.
+Coin B: radius_coin = 1.5r, thickness_coin = 0.8r (since t=r for establishing K's value context).
+Cost of Coin B (if pure material) = K * (1.5r)² * (0.8r)
+= (12000/r³) * (2.25r²) * (0.8r) = (12000/r³) * (1.8r³) = 12000 * 1.8 = Rs. 21,600.
+10% of Coin B's material is impurity, so 90% is valuable material.
+Effective cost of valuable material in Coin B = 0.90 * Cost_B_pure
+= 0.90 * 21600 = Rs. 19,440.
+The correct option is (C)."
+QA,40,Q156,2,,,"In triangle ABC, the coordinates of vertex A are (1, 7), and the midpoint of side BC is D(-2, 3). The coordinates of the centroid G of the triangle are (x, y). If 3x + 2y = k/3, where k is an integer, find the value of k.",,,,,,,,,17,TITA,Geometry,"Coordinate Geometry (Distance, Section, Slope, Line Equations, Area)",Medium,"Centroid, Section Formula, Median Properties","Centroid Formula, Median Properties, Section Formula",True,MockSet_CAT_Final_CleanV4,Applying,"A(1, 7), D(-2, 3) is midpoint of BC.
+The centroid G divides the median AD in the ratio 2:1 (AG:GD = 2:1).
+Coordinates of G(x,y) are found using the section formula:
+x = (2*D_x + 1*A_x) / (2+1) = (2*(-2) + 1*1) / 3 = (-4+1)/3 = -3/3 = -1.
+y = (2*D_y + 1*A_y) / (2+1) = (2*3 + 1*7) / 3 = (6+7)/3 = 13/3.
+Given 3x + 2y = k/3.
+Substitute x=-1 and y=13/3:
+3(-1) + 2(13/3) = k/3.
+-3 + 26/3 = k/3.
+(-9+26)/3 = k/3.
+17/3 = k/3.
+So, k = 17.
+Answer: 17."
+QA,40,Q157,3,,,"A loan of Rs. 33,100 is to be repaid in three equal annual installments. The rate of compound interest is 10% per annum, compounded annually. However, for the third year only, an additional processing fee of 2% on the principal outstanding at the beginning of the third year is added to the amount due before the final installment is paid. What is the value of each installment, rounded to the nearest rupee?","Rs. 13,310","Rs. 13,382","Rs. 13,882","Rs. 14,015",A,B,C,D,B,MCQ,Arithmetic,Compound Interest,Hard,"CI Installments, Variable Rate/Fee","Compound Interest Installments, Variable Rate/Fee in one year, Loan Repayment",False,MockSet_CAT_Final_CleanV4,Analyzing,"Let P = 33100, X = installment, r = 0.1.
+Balance after 1st year: P₁ = P(1.1) - X.
+Balance after 2nd year (Principal for 3rd year): P₂ = P₁(1.1) - X = (P(1.1)-X)(1.1) - X = P(1.1)² - 1.1X - X.
+For 3rd year, interest rate = 10%, processing fee = 2% on P₂.
+Amount to be cleared by final installment = P₂(1+0.10) + 0.02P₂ = P₂(1.10 + 0.02) = P₂(1.12).
+This amount must be equal to the installment X. So, X = P₂(1.12).
+X = (P(1.1)² - X(1.1) - X) * 1.12
+X = (33100 * 1.21 - 2.1X) * 1.12
+X = (40051 - 2.1X) * 1.12
+X = 40051 * 1.12 - 2.1X * 1.12
+X = 44857.12 - 2.352X
+X + 2.352X = 44857.12
+3.352X = 44857.12
+X = 44857.12 / 3.352 ≈ 13382.195...
+Rounded to the nearest rupee, X = 13382.
+The correct option is (B)."
+QA,40,Q158,4,,,"A person P starts walking from point X to point Y at a certain uniform speed. If P increases this speed by 20%, P saves 1 hour in journey time. If, instead, P had started 30 minutes late from X, by what percentage must P increase the usual speed to reach Y exactly on the originally scheduled time?",10%,9.09%,11.11%,12.5%,A,B,C,D,B,MCQ,Arithmetic,"Time, Speed & Distance (General)",Hard,"Speed-Time Relationship, Percentage Change","Speed-Time Trade-offs, Conditional Changes (Late Start), Percentage Increase in Speed",False,MockSet_CAT_Final_CleanV4,Analyzing,"Let usual speed be S, usual time T. Distance D = ST.
+New speed S' = S(1+0.20) = 1.2S. New time T' = D/(1.2S) = (ST)/(1.2S) = T/1.2 = T/(6/5) = 5T/6.
+Time saved = T - T' = T - 5T/6 = T/6.
+Given T/6 = 1 hour => T = 6 hours (usual time).
+Started 30 min (0.5 hr) late. Time available to reach on schedule = T - 0.5 = 6 - 0.5 = 5.5 hours.
+Distance D must be covered in 5.5 hours.
+Let new required speed be S_req. S_req × 5.5 = D = S × 6.
+S_req = S × (6 / 5.5) = S × (60 / 55) = S × (12 / 11).
+Increase in speed = S_req - S = S(12/11) - S = S/11.
+Percentage increase = ((S/11) / S) × 100 = (1/11) × 100 ≈ 9.0909...%.
+The correct option is (B)."
+QA,40,Q159,5,,,"An 80-litre mixture contains liquids A and B in the ratio 5:3. When 24 litres of this mixture is drawn off and replaced with 24 litres of liquid B, the ratio of A to B in the mixture changes. Then, 'x' litres of this new mixture is drawn off and replaced with 'x' litres of liquid A. If the final quantity of liquid A in the (still 80-litre) mixture is 45.5 litres, find the value of 'x'. (Enter your answer as an integer if it is an integer, otherwise round to two decimal places if necessary).",,,,,,,,,18.67,TITA,Arithmetic,Mixtures & Alligations,Hard,Multi-stage Mixture Removal and Replacement,"Multi-stage Removal and Replacement, Unknown Quantity, System of Equations",True,MockSet_CAT_Final_CleanV4,Analyzing,"Initial V = 80L. A:B = 5:3. So A_init = (5/8)*80 = 50L, B_init = (3/8)*80 = 30L.
+Step 1: 24L mixture removed.
+A_out1 = (5/8)*24 = 15L. B_out1 = (3/8)*24 = 9L.
+Remaining: A_rem1 = 50-15 = 35L. B_rem1 = 30-9 = 21L. (Volume = 56L)
+24L of B added:
+A_mix2 = 35L. B_mix2 = 21+24 = 45L. Total Volume_mix2 = 56+24 = 80L.
+Ratio A:B in mix2 = 35:45 = 7:9.
+Step 2: 'x' litres of mix2 (A:B=7:9) removed.
+A_out2 = (7/(7+9))x = (7/16)x.
+Remaining A2 = A_mix2 - A_out2 = 35 - (7/16)x.
+'x' litres of A added:
+Final A = A_rem2 + x = (35 - (7/16)x) + x = 35 + (9/16)x.
+Given Final A = 45.5L.
+35 + (9/16)x = 45.5.
+(9/16)x = 45.5 - 35 = 10.5.
+x = (10.5 × 16) / 9 = (21/2 × 16) / 9 = (21 × 8) / 9 = (7 × 8) / 3 = 56/3.
+56/3 = 18.666...
+Rounding to two decimal places as per instruction for non-integer TITA: x = 18.67.
+Answer: 18.67."
+QA,40,Q160,6,,,"The polynomial P(x) = x⁴ + ax³ + bx² - 20x + 24 has (x-2) as a factor. When P(x) is divided by (x+1), the remainder is 30. If (x-k) is also a factor of P(x), where k is an integer different from 2 and k is also different from 1, what is a possible value of k?",-3,-2,-4,3,A,B,C,D,B,MCQ,Algebra,Polynomials (Higher degree equations),Medium,Factor Theorem and Remainder Theorem,"Factor Theorem, Remainder Theorem, Solving for Coefficients, Finding Other Roots",False,MockSet_CAT_Final_CleanV4,Applying,"P(x) = x⁴ + ax³ + bx² - 20x + 24.
+(x-2) is a factor => P(2)=0: 16 + 8a + 4b - 40 + 24 = 0 => 8a + 4b = 0 => 2a + b = 0 (1).
+P(-1)=30: 1 - a + b + 20 + 24 = 30 => -a + b + 45 = 30 => -a + b = -15 (2).
+From (1), b = -2a. Substitute into (2): -a - 2a = -15 => -3a = -15 => a = 5.
+So, b = -2(5) = -10.
+P(x) = x⁴ + 5x³ - 10x² - 20x + 24.
+We know (x-2) is a factor.
+P(1) = 1 + 5 - 10 - 20 + 24 = 0. So (x-1) is a factor.
+P(-2) = (-2)⁴ + 5(-2)³ - 10(-2)² - 20(-2) + 24 = 16 - 40 - 40 + 40 + 24 = 0. So (x+2) is a factor.
+P(-6) = (-6)⁴ + 5(-6)³ - 10(-6)² - 20(-6) + 24 = 1296 - 1080 - 360 + 120 + 24 = 1440 - 1440 = 0. So (x+6) is a factor.
+The factors are (x-2), (x-1), (x+2), (x+6).
+k is an integer different from 2 and k is also different from 1.
+Possible values for k are -2 or -6.
+Option B is -2.
+The correct option is (B)."
+QA,40,Q161,7,,,"Two circles with radii 9 cm and 4 cm touch each other externally. A direct common tangent AB touches the circles at A and B respectively. A third, smaller circle with radius 'r' cm touches these two circles externally and also touches the tangent AB. Find the value of 'r'.",1.00 cm,1.24 cm,1.44 cm,1.56 cm,A,B,C,D,C,MCQ,Geometry,"Circles (Properties, Chords, Tangents, Secants)",Hard,Descartes' Theorem (Kissing Circles),"Descartes' Theorem (Kissing Circles), Tangent Properties, System of equations with radii",False,MockSet_CAT_Final_CleanV4,Analyzing,"For two circles with radii R and r touching externally, and a smaller circle with radius r_s touching both of them externally and their direct common tangent, the formula is:
+1/√r_s = 1/√R + 1/√r.
+Given R=9 cm, r=4 cm.
+1/√r_s = 1/√9 + 1/√4 = 1/3 + 1/2 = (2+3)/6 = 5/6.
+√r_s = 6/5.
+r_s = (6/5)² = 36/25 = 1.44 cm.
+The correct option is (C)."
+QA,40,Q162,8,,,"A number when successively divided by 8, 5, and 3 leaves remainders 3, 2, and 1 respectively. If the order of the divisors is reversed (i.e., the original number is first divided by 3, the first quotient by 5, and the second quotient by 8), what will be the sum of the three new remainders obtained?",,,,,,,,,9,TITA,Number System,Remainders (incl. Remainder Theorem),Medium,"Successive Division, Remainder Theorem","Successive Division Remainders, Reversing Divisors, Finding the number",True,MockSet_CAT_Final_CleanV4,Applying,"Let N be the number.
+From bottom up:
+Let the last quotient be q₃.
+q₂ = 3q₃ + 1
+q₁ = 5q₂ + 2 = 5(3q₃ + 1) + 2 = 15q₃ + 5 + 2 = 15q₃ + 7
+N = 8q₁ + 3 = 8(15q₃ + 7) + 3 = 120q₃ + 56 + 3 = 120q₃ + 59.
+The smallest positive such number N is when q₃ = 0, so N = 59.
+Now, divide N=59 by 3, then the first quotient by 5, then the second quotient by 8.
+1.	59 ÷ 3: Quotient Q₁' = 19, Remainder R₁' = 2.
+2.	19 ÷ 5: Quotient Q₂' = 3, Remainder R₂' = 4.
+3.	3 ÷ 8: Quotient Q₃' = 0, Remainder R₃' = 3.
+The new remainders are R₁'=2, R₂'=4, R₃'=3.
+Sum of these new remainders = 2 + 4 + 3 = 9.
+Answer: 9."
+QA,40,Q163,9,,,A and B run on a circular track of 600m. Their speeds are 30m/s and 20m/s respectively. They start at the same time from the same point. A gives B a head start of 5 seconds (meaning B starts running 5 seconds before A starts). They run in opposite directions. How many distinct points on the track will they meet at?,1,2,5,10,A,B,C,D,C,MCQ,Arithmetic,"Time, Speed & Distance (General)",Medium,"Circular Motion, Relative Speed, Distinct Meeting Points","Circular Motion, Opposite Direction, Head Start, Distinct Meeting Points",False,MockSet_CAT_Final_CleanV4,Applying,"Let L be the length of the track = 600m. S_A = 30m/s, S_B = 20m/s.
+B starts 5 seconds before A. Distance covered by B in these 5s = S_B × 5 = 20 × 5 = 100m.
+When A starts from the starting point (SP), B is at 100m from SP (measured along the track).
+They run in opposite directions.
+For distinct meeting points when moving in opposite directions (assuming they start from the same point at the same time), the number of distinct points is given by the sum of the terms in the simplified ratio of their speeds.
+Ratio of speeds S_A:S_B = 30:20 = 3:2.
+Number of distinct meeting points = 3+2 = 5.
+The head start affects the location of the first meeting point, but not the number of distinct meeting points over many cycles.
+The correct option is (C)."
+QA,40,Q164,10,,,"In an examination, 70% of students passed in Physics and 65% passed in Chemistry. 10% of students failed in both subjects. If 270 students passed in both Physics and Chemistry, what was the total number of students who appeared for the examination?",400,450,500,600,A,B,C,D,D,MCQ,Arithmetic,Percentages,Medium,"Set Theory, Venn Diagrams, Percentages","Set Theory Application, Venn Diagrams, Passed/Failed in multiple subjects",False,MockSet_CAT_Final_CleanV4,Applying,"Let P be the event of passing Physics, C be the event of passing Chemistry.
+P(Pass P) = 0.70. P(Pass C) = 0.65.
+P(Fail Both) = 0.10.
+P(Pass at least one) = P(P ∪ C) = 1 - P(Fail Both) = 1 - 0.10 = 0.90.
+We know P(P ∪ C) = P(Pass P) + P(Pass C) - P(Pass P ∩ Pass C).
+0.90 = 0.70 + 0.65 - P(Pass P ∩ Pass C).
+0.90 = 1.35 - P(Pass P ∩ Pass C).
+P(Pass P ∩ Pass C) = 1.35 - 0.90 = 0.45.
+So, 45% of the total students passed in both subjects.
+Let T be the total number of students.
+0.45 × T = 270.
+T = 270 / 0.45 = 27000 / 45 = 600.
+Total number of students = 600.
+The correct option is (D)."
+QA,40,Q165,11,,,"In triangle ABC, D is a point on BC such that AD is the angle bisector of ∠A. If AB = 12 cm, AC = 18 cm, and the area of triangle ABD is 40 cm², find the area of triangle ABC in cm².",,,,,,,,,100,TITA,Geometry,"Triangles (Properties, Congruence, Similarity)",Easy,"Angle Bisector Theorem, Ratio of Areas","Angle Bisector Theorem, Ratio of Areas (triangles with same height)",True,MockSet_CAT_Final_CleanV4,Understanding,"AD is the angle bisector of ∠A.
+The ratio of areas of triangles ABD and ADC, which share a common vertex A and whose bases BD and DC are on the same line BC, is equal to the ratio of their bases BD/DC.
+Area(ΔABD) / Area(ΔADC) = BD/DC.
+By Angle Bisector Theorem, BD/DC = AB/AC.
+So, Area(ΔABD) / Area(ΔADC) = AB/AC = 12/18 = 2/3.
+Given Area(ΔABD) = 40 cm².
+40 / Area(ΔADC) = 2/3.
+Area(ΔADC) = (40 × 3) / 2 = 20 × 3 = 60 cm².
+Area(ΔABC) = Area(ΔABD) + Area(ΔADC) = 40 + 60 = 100 cm².
+Answer: 100."
+QA,40,Q166,12,,,"A trader marks his goods at 50% above the cost price. He then offers a discount such that he makes a net profit of 20%. If he had offered twice this discount percentage on the marked price, what would have been his profit or loss percentage?",10% Profit,5% Profit,10% Loss,"No profit, no loss",A,B,C,D,C,MCQ,Arithmetic,"Profit, Loss & Discount",Medium,"Markup, Discount, Profit/Loss Calculation","Markup, Discount for Target Profit, Effect of Changing Discount",False,MockSet_CAT_Final_CleanV4,Applying,"Let Cost Price (CP) = 100.
+Marks up by 50% => Marked Price (MP) = 100 + 50 = 150.
+Makes a net profit of 20% => Selling Price (SP) = 100 + 20 = 120.
+Discount given = MP - SP = 150 - 120 = 30.
+Discount percentage = (Discount / MP) × 100 = (30 / 150) × 100 = (1/5) × 100 = 20%.
+If he had offered twice this discount percentage:
+New discount percentage = 2 × 20% = 40%.
+New discount amount = 40% of MP = 0.40 × 150 = 60.
+New SP = MP - New discount amount = 150 - 60 = 90.
+Original CP = 100, New SP = 90.
+Since New SP < CP, it's a loss. Loss = 100 - 90 = 10.
+Loss percentage = (Loss / CP) × 100 = (10 / 100) × 100 = 10%.
+The correct option is (C)."
+QA,40,Q167,13,,,"If logₓ(x²-x-1) = 0 and logᵧ(x) = 1/2, find the value of y. (x and y are positive real numbers, x≠1, y≠1).",,,,,,,,,4,TITA,Algebra,Logarithms,Easy,Logarithm Definition and Properties,"Logarithmic Equations, Definition of Logarithm, Basic Properties",True,MockSet_CAT_Final_CleanV4,Understanding,"Equation 1: logₓ(x²-x-1) = 0.
+For the logarithm to be defined: base x > 0 and x ≠ 1. Argument x²-x-1 > 0.
+From logₓ(x²-x-1) = 0, we have x²-x-1 = x⁰ = 1.
+x²-x-2 = 0.
+Factoring: (x-2)(x+1) = 0.
+Possible values for x are x=2 or x=-1.
+Since x > 0, we must have x=2.
+Check argument condition for x=2: x²-x-1 = 2²-2-1 = 4-2-1 = 1 > 0. This is satisfied.
+So, x=2.
+Equation 2: logᵧ(x) = 1/2. Substitute x=2:
+logᵧ(2) = 1/2.
+For the logarithm to be defined: base y > 0 and y ≠ 1. Argument 2 > 0 (satisfied).
+From the definition of logarithm: y^(1/2) = 2.
+√y = 2.
+Squaring both sides: y = 4.
+This satisfies y > 0 and y ≠ 1.
+Answer: 4."
+QA,40,Q168,14,,,"The average score of 30 students in a class test is 65. Later it was found that the score of one student was misread as 87 instead of 57, and the score of another student was misread as 42 instead of 72. Furthermore, the marks of 5 students, whose average score was 60, were not included at all in the initial calculation. What is the correct average score of all 35 students in the class, rounded to two decimal places?",63.86,64.00,64.14,64.29,A,B,C,D,D,MCQ,Arithmetic,Averages & Weighted Averages,Medium,"Correcting Averages, Adding new data","Correcting Incorrect Averages, Multiple Misreads, Addition of New Data",False,MockSet_CAT_Final_CleanV4,Applying,"Initial sum for 30 students = 30 × 65 = 1950.
+Score misread as 87 instead of 57: Correction = 57 - 87 = -30.
+Score misread as 42 instead of 72: Correction = 72 - 42 = +30.
+Net correction for these two misreads = -30 + 30 = 0.
+So, the sum of scores for these 30 students, correctly read, is 1950 + 0 = 1950.
+5 students not included, their average score was 60.
+Sum of scores for these 5 students = 5 × 60 = 300.
+Total correct sum for all (30+5)=35 students = 1950 + 300 = 2250.
+Correct average for all 35 students = Total sum / Total students = 2250 / 35.
+2250 / 35 = (5 × 450) / (5 × 7) = 450 / 7.
+450/7 ≈ 64.2857...
+Rounded to two decimal places, the average is 64.29.
+The correct option is (D)."
+QA,40,Q169,15,,,"How many distinct 6-digit numbers can be formed using the digits 1, 1, 2, 2, 2, 3 such that all the '1's appear before all the '2's, and all the '2's appear before the '3'? (e.g., 112223 is one such number)",1,3,6,10,A,B,C,D,A,MCQ,Modern Maths,Permutations & Combinations,Easy,Arrangement with Strict Ordering Constraint,"Arrangements with Identical Items, Strict Relative Positioning Constraint",False,MockSet_CAT_Final_CleanV4,Understanding,"The digits are 1, 1, 2, 2, 2, 3.
+The condition ""all the '1's appear before all the '2's, and all the '2's appear before the '3'"" means the structure of the number must be (block of 1s) followed by (block of 2s) followed by (block of 3s).
+Since there are two '1's, three '2's, and one '3', the only number that can be formed under this condition is 112223.
+There is only 1 such distinct number.
+The correct option is (A)."
+QA,40,Q170,16,,,"Pipes A, B and C are attached to a cistern. A and B can fill it in 20 and 30 minutes respectively, while C can empty it in 15 minutes. Pipes A and B are kept open for 8 minutes. Then pipe A is closed and pipe C is opened along with B. After how many minutes from the moment C was opened will the cistern be empty?",,,,,,,,,20,TITA,Arithmetic,Pipes & Cisterns,Medium,"Work-Rate, Pipes & Cisterns, Staged Work","Work Done in Stages, Inlet and Outlet Pipes, Calculating Time to Empty",True,MockSet_CAT_Final_CleanV4,Applying,"Let tank capacity be LCM(20, 30, 15) = 60 units.
+Rate of A = 60/20 = +3 units/min.
+Rate of B = 60/30 = +2 units/min.
+Rate of C = 60/15 = -4 units/min (emptying).
+Pipes A and B are open for 8 minutes.
+Combined rate (A+B) = 3 + 2 = 5 units/min.
+Work done in 8 minutes = 5 units/min × 8 min = 40 units.
+So, 40 units of water are in the cistern.
+Then pipe A is closed, and pipe C is opened along with B.
+Combined rate (B+C) = Rate B + Rate C = 2 + (-4) = -2 units/min.
+Since the rate is negative, the cistern will empty.
+Amount of water to be emptied = 40 units.
+Time to empty = Amount / |Net Rate| = 40 units / 2 units/min = 20 minutes.
+Answer: 20."
+QA,40,Q171,17,,,The solution set for the inequality |x² - 4x - 1| > 4 is:,"(-∞, -1) ∪ (1, 3) ∪ (5, ∞)","(-1, 1) ∪ (3, 5)","(-∞, -1) ∪ (5, ∞)","(-∞, 1) ∪ (3, ∞)",A,B,C,D,A,MCQ,Algebra,Inequalities (Linear & Quadratic),Hard,Modulus Inequalities with Quadratic Expressions,"Modulus Inequalities, Quadratic Expression inside Modulus, Case Analysis",False,MockSet_CAT_Final_CleanV4,Analyzing,"|x² - 4x - 1| > 4.
+This implies two separate inequalities:
+1.	x² - 4x - 1 > 4
+x² - 4x - 5 > 0
+(x-5)(x+1) > 0
+This holds when x < -1 or x > 5.
+2.	x² - 4x - 1 < -4
+x² - 4x + 3 < 0
+(x-1)(x-3) < 0
+This holds when 1 < x < 3.
+The solution set is the union of the solutions from Case 1 and Case 2:
+(-∞, -1) ∪ (1, 3) ∪ (5, ∞).
+The correct option is (A)."
+QA,40,Q172,18,,,A certain sum of money doubles itself in 6 years at simple interest. In how many years will it become 5 times itself at a rate of interest that is 50% higher than the original rate?,12 years,15 years,16 years,18 years,A,B,C,D,C,MCQ,Arithmetic,Simple Interest,Medium,"Simple Interest Time Calculation, Rate Change","SI N-tupling time, Rate Change",False,MockSet_CAT_Final_CleanV4,Applying,"Let Principal = P. Sum doubles (Amount = 2P) in 6 years at SI.
+SI earned = 2P - P = P.
+Using SI = (P×R×T)/100:
+P = (P × R × 6) / 100 => 1 = 6R/100 => R = 100/6 = 50/3 %.
+New rate R' = R + 50% of R = R × (1 + 0.50) = R × 1.5.
+R' = (50/3) × (3/2) = 25%.
+We want sum to become 5 times (Amount = 5P).
+New SI = 5P - P = 4P.
+Let new time be T'.
+4P = (P × R' × T') / 100.
+4P = (P × 25 × T') / 100.
+4 = (25 T') / 100.
+4 = T' / 4.
+T' = 16 years.
+The correct option is (C)."
+QA,40,Q173,19,,,The sum of the first 'n' terms of a sequence is given by S_n = 2n³ - n² + 4n. Find the value of the 5th term of this sequence.,,,,,,,,,117,TITA,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Medium,Finding nth term from Sum of n terms,"Sum of n terms given as polynomial (non-quadratic), Finding nth term (Tn=Sn-Sn-1)",True,MockSet_CAT_Final_CleanV4,Applying,"S_n = 2n³ - n² + 4n.
+The nth term T_n = S_n - S_(n-1) for n > 1.
+We need T₅.
+S₅ = 2(5³) - (5)² + 4(5) = 2(125) - 25 + 20 = 250 - 25 + 20 = 245.
+S₄ = 2(4³) - (4)² + 4(4) = 2(64) - 16 + 16 = 128.
+T₅ = S₅ - S₄ = 245 - 128 = 117.
+Answer: 117."
+QA,40,Q174,20,,,"A regular pyramid has a square base of side length 10 cm. Its slant height (the altitude of its triangular faces) is 13 cm. This pyramid is cut by a plane parallel to its base, midway between the base and the apex (i.e., the height of the frustum is half the height of the original pyramid). What is the total surface area of the frustum formed?",320 cm²,330 cm²,360 cm²,390 cm²,A,B,C,D,A,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Hard,"Frustum of a Pyramid, Total Surface Area, Similar Solids","Frustum of a Pyramid, Total Surface Area, Similar Solids, Properties of Regular Pyramid",False,MockSet_CAT_Final_CleanV4,Analyzing,"Regular pyramid with square base: side a = 10 cm. Slant height L = 13 cm.
+Height of pyramid H = √(L² - (a/2)²) = √(13² - 5²) = √(169 - 25) = √144 = 12 cm.
+The pyramid is cut midway, so height of small removed pyramid h_s = H/2 = 12/2 = 6 cm.
+By similarity, side of base of small pyramid a_s = a/2 = 10/2 = 5 cm.
+Slant height of small pyramid L_s = L/2 = 13/2 = 6.5 cm.
+TSA of frustum = Area(Bottom Base) + Area(Top Base) + LSA(Frustum).
+Area(Bottom Base) = a² = 10² = 100 cm².
+Area(Top Base) = a_s² = 5² = 25 cm².
+LSA(Frustum) = LSA(Big Pyramid) - LSA(Small Pyramid).
+LSA(Big Pyramid) = (1/2) × Perimeter of Base × Slant Height L = (1/2) × (4 × 10) × 13 = 20 × 13 = 260 cm².
+LSA(Small Pyramid) = (1/2) × Perimeter of Base × Slant Height L_s = (1/2) × (4 × 5) × 6.5 = 10 × 6.5 = 65 cm².
+LSA(Frustum) = 260 - 65 = 195 cm².
+TSA(Frustum) = 100 + 25 + 195 = 320 cm².
+The correct option is (A)."
+QA,40,Q175,21,,,"Boat A starts from point P downstream. Simultaneously, Boat B starts from point Q (which is 60 km downstream from P) also in the downstream direction. The speed of Boat A in still water is 15 km/hr and the speed of Boat B in still water is 10 km/hr. The speed of the stream is 5 km/hr. After how much time will Boat A overtake Boat B?",6 hours,8 hours,10 hours,12 hours,A,B,C,D,D,MCQ,Arithmetic,"Time, Speed & Distance (Boats & Streams)",Medium,Relative Speed in Boats & Streams,"Two Boats in a Stream (Same Direction), Overtaking, Relative Speed",False,MockSet_CAT_Final_CleanV4,Applying,"Speed of Boat A in still water S_A = 15 km/hr.
+Speed of Boat B in still water S_B = 10 km/hr.
+Speed of stream S_S = 5 km/hr.
+Both boats move downstream.
+Effective downstream speed of A = S_A + S_S = 15 + 5 = 20 km/hr.
+Effective downstream speed of B = S_B + S_S = 10 + 5 = 15 km/hr.
+Boat A starts at P. Boat B starts at Q, 60 km downstream from P.
+Since Boat A is faster than Boat B (20 km/hr > 15 km/hr), A will eventually overtake B.
+Relative speed of A with respect to B = Speed_A_downstream - Speed_B_downstream
+= 20 - 15 = 5 km/hr.
+Initial distance between A and B = 60 km.
+Time to overtake = Initial Distance / Relative Speed = 60 km / 5 km/hr = 12 hours.
+The correct option is (D)."
+QA,40,Q176,22,,,"Find the number of ways to distribute 10 identical chocolates among 4 children such that each child gets at least one chocolate, but no child gets more than 4 chocolates.",,,,,,,,,44,TITA,Modern Maths,Permutations & Combinations,Hard,Distribution of Identical Items with Upper and Lower Bound Constraints,"Distribution of Identical Items, Upper and Lower Bound Constraints, Inclusion-Exclusion",True,MockSet_CAT_Final_CleanV4,Analyzing,"Distribute N=10 identical chocolates among k=4 children.
+Condition 1: Each child gets at least one: x₁ + x₂ + x₃ + x₄ = 10, where xᵢ ≥ 1.
+Let yᵢ = xᵢ - 1, so yᵢ ≥ 0.
+(y₁+1) + (y₂+1) + (y₃+1) + (y₄+1) = 10 => y₁ + y₂ + y₃ + y₄ = 6.
+Number of non-negative solutions = C(N'+k-1, k-1) = C(6+4-1, 4-1) = C(9,3).
+C(9,3) = (9×8×7)/(3×2×1) = 3×4×7 = 84.
+Condition 2: No child gets more than 4 chocolates: xᵢ ≤ 4. This means yᵢ ≤ 3.
+We use inclusion-exclusion. Total ways (with xᵢ≥1) is 84.
+Subtract cases where at least one child gets > 4 (i.e., xᵢ ≥ 5, so yᵢ ≥ 4).
+Let child 1 get at least 5: y₁ ≥ 4. Let y₁ = y'₁ + 4.
+(y'₁+4) + y₂ + y₃ + y₄ = 6 => y'₁ + y₂ + y₃ + y₄ = 2.
+Number of solutions for this = C(2+4-1, 4-1) = C(5,3) = 10.
+There are C(4,1) = 4 ways to choose which child gets at least 5. So, 4 × 10 = 40 cases to subtract.
+Can two children get at least 5? x₁≥5, x₂≥5. Then x₁+x₂≥10. Since x₃≥1, x₄≥1, sum x₁+x₂+x₃+x₄ ≥ 10+1+1 = 12. But sum is 10. So, two children cannot simultaneously get ≥ 5 chocolates.
+So, number of ways = Total ways (xᵢ≥1) - Ways where (at least one xᵢ≥5).
+= 84 - 40 = 44.
+Answer: 44."

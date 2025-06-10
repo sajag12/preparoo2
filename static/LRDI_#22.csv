@@ -1,0 +1,1037 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+LRDI,40,MOCKXYZ001_Q1,1,MOCKXYZ001_Set1_DiseaseProgression,"Set 1 of 5: Disease Progression Study
+A longitudinal study tracked 1200 individuals from the year 2000 for 30 years, or until death, whichever came first. At the start of the study in 2000, 600 individuals were infected with Disease A and 600 with Disease B. For each disease, 300 individuals were initially in Stage 1 of the disease and 300 were in Stage 2.
+The disease progresses from Stage 1 to Stage 2 to Stage 3, after which death may occur. Individuals cannot recover or skip stages. Every 10 years (at checkpoints 2010, 2020, 2030), surviving individuals who are in Stage 1 or Stage 2 progress to the next stage. Individuals in Stage 3 may either die in the subsequent decade or survive and remain in Stage 3 at the next checkpoint.
+A ""Co-morbidity Factor (CF)"" is recorded for individuals upon reaching Stage 3. If an individual's CF is greater than 1.5, they are considered ""High CF"".
+The table below shows the number of individuals alive at each checkpoint, categorized by disease and stage. Some values are missing.
+Year	Disease	Stage 1 (Alive)	Stage 2 (Alive)	Stage 3 (Alive)	Total Alive (Disease)	High CF (among Stage 3)
+2000	A	300	300	0	600	N/A
+	B	300	300	0	600	N/A
+2010	A	0	280	290	570	100
+	B	0	?	285	555	150
+2020	A	0	0	450	?	150
+	B	0	0	410	410	190
+2030	A	0	0	?	250	90
+	B	0	0	200	?	?
+Additional Clues:
+1.	The total number of deaths from Disease A between 2000 and 2010 was 30.
+2.	For Disease B, the number of individuals alive in Stage 2 in 2010 was 270.
+3.	The number of deaths from Disease A between 2010 and 2020 was four times the number of deaths from Disease A between 2000 and 2010.
+4.	The number of individuals with Disease B who were High CF and in Stage 3 in 2030 was 110.
+5.	The total number of individuals alive with Disease A in 2020 was 450.
+6.	The number of deaths from Disease B between 2020 and 2030 was 10 more than the number of deaths from Disease A in the same period.",What was the total number of deaths from Disease B between 2000 and 2010?,30,35,40,45,A,B,C,D,D,MCQ,Data Interpretation,Longitudinal Study Analysis,Moderate,"data interpretation, table analysis, cohort tracking, subtraction","data interpretation, table analysis, cohort tracking, subtraction",False,MOCKXYZ001_Set1_DiseaseProgression,Analyzing,"First, let's fill in the table using the clues and basic progression logic.
+Initial (2000): Disease A (Stage 1=300, Stage 2=300, Stage 3=0, Total=600), Disease B (Stage 1=300, Stage 2=300, Stage 3=0, Total=600).
+2000-2010 Decade:
+•	Disease A: Clue 1 states deaths from Disease A (2000-2010) = 30.
+From the table, for Disease A in 2010: Stage 2 (Alive) = 280, Stage 3 (Alive) = 290.
+Individuals from Stage 1 (2000) who progressed to Stage 2 (2010) and survived = 280. Deaths from this S1 cohort = 300 - 280 = 20.
+Individuals from Stage 2 (2000) who progressed to Stage 3 (2010) and survived = 290. Deaths from this S2 cohort = 300 - 290 = 10.
+Total deaths for Disease A (2000-2010) = 20 + 10 = 30. This matches Clue 1.
+Total Alive A (2010) = 280 + 290 = 570.
+•	Disease B: From the table, for Disease B in 2010: Stage 3 (Alive) = 285.
+Clue 2 states for Disease B, Stage 2 (Alive) in 2010 = 270.
+Individuals from Stage 1 (2000) who progressed to Stage 2 (2010) and survived = 270. Deaths from this S1 cohort = 300 - 270 = 30.
+Individuals from Stage 2 (2000) who progressed to Stage 3 (2010) and survived = 285. Deaths from this S2 cohort = 300 - 285 = 15.
+Total deaths for Disease B (2000-2010) = 30 + 15 = 45.
+Total Alive B (2010) = 270 + 285 = 555.
+2010-2020 Decade:
+•	Disease A: Clue 3 states deaths from Disease A (2010-2020) = 4 * Deaths A (2000-2010) = 4 * 30 = 120.
+Clue 5 states Total Alive A (2020) = 450. From the table, Stage 3 (Alive) for A in 2020 = 450. This is consistent as all survivors must be in Stage 3 by 2020 if they started in S1 or S2 in 2000.
+Verification: Total Alive A (2010) = 570. Deaths A (2010-2020) = 570 - 450 = 120. This matches.
+•	Disease B: From the table, Stage 3 (Alive) for B in 2020 = 410, so Total Alive B (2020) = 410.
+Deaths B (2010-2020) = Total Alive B (2010) - Total Alive B (2020) = 555 - 410 = 145.
+2020-2030 Decade:
+•	Disease A: From the table, Total Alive A (2030) = 250. So Stage 3 (Alive) for A in 2030 = 250.
+Deaths A (2020-2030) = Total Alive A (2020) - Total Alive A (2030) = 450 - 250 = 200.
+•	Disease B: Clue 6 states deaths from Disease B (2020-2030) = Deaths A (2020-2030) + 10 = 200 + 10 = 210.
+Total Alive B (2030) = Total Alive B (2020) - Deaths B (2020-2030) = 410 - 210 = 200.
+From the table, Stage 3 (Alive) for B in 2030 = 200. This is consistent.
+Clue 4 informs about High CF for B S3 2030, which fills a cell in the provided table but isn't strictly needed for these count-based questions.
+
+Solution:
+From the calculations in the preamble: Total deaths for Disease B between 2000 and 2010 was 45."
+LRDI,40,MOCKXYZ001_Q2,2,MOCKXYZ001_Set1_DiseaseProgression,"Set 1 of 5: Disease Progression Study
+A longitudinal study tracked 1200 individuals from the year 2000 for 30 years, or until death, whichever came first. At the start of the study in 2000, 600 individuals were infected with Disease A and 600 with Disease B. For each disease, 300 individuals were initially in Stage 1 of the disease and 300 were in Stage 2.
+The disease progresses from Stage 1 to Stage 2 to Stage 3, after which death may occur. Individuals cannot recover or skip stages. Every 10 years (at checkpoints 2010, 2020, 2030), surviving individuals who are in Stage 1 or Stage 2 progress to the next stage. Individuals in Stage 3 may either die in the subsequent decade or survive and remain in Stage 3 at the next checkpoint.
+A ""Co-morbidity Factor (CF)"" is recorded for individuals upon reaching Stage 3. If an individual's CF is greater than 1.5, they are considered ""High CF"".
+The table below shows the number of individuals alive at each checkpoint, categorized by disease and stage. Some values are missing.
+Year	Disease	Stage 1 (Alive)	Stage 2 (Alive)	Stage 3 (Alive)	Total Alive (Disease)	High CF (among Stage 3)
+2000	A	300	300	0	600	N/A
+	B	300	300	0	600	N/A
+2010	A	0	280	290	570	100
+	B	0	?	285	555	150
+2020	A	0	0	450	?	150
+	B	0	0	410	410	190
+2030	A	0	0	?	250	90
+	B	0	0	200	?	?
+Additional Clues:
+1.	The total number of deaths from Disease A between 2000 and 2010 was 30.
+2.	For Disease B, the number of individuals alive in Stage 2 in 2010 was 270.
+3.	The number of deaths from Disease A between 2010 and 2020 was four times the number of deaths from Disease A between 2000 and 2010.
+4.	The number of individuals with Disease B who were High CF and in Stage 3 in 2030 was 110.
+5.	The total number of individuals alive with Disease A in 2020 was 450.
+6.	The number of deaths from Disease B between 2020 and 2030 was 10 more than the number of deaths from Disease A in the same period.",How many individuals with Disease A were alive in Stage 3 in 2030?,150,200,250,300,A,B,C,D,C,MCQ,Data Interpretation,Longitudinal Study Analysis,Easy,"data interpretation, table reading","data interpretation, table reading",False,MOCKXYZ001_Set1_DiseaseProgression,Applying,"First, let's fill in the table using the clues and basic progression logic.
+Initial (2000): Disease A (Stage 1=300, Stage 2=300, Stage 3=0, Total=600), Disease B (Stage 1=300, Stage 2=300, Stage 3=0, Total=600).
+2000-2010 Decade:
+•	Disease A: Clue 1 states deaths from Disease A (2000-2010) = 30.
+From the table, for Disease A in 2010: Stage 2 (Alive) = 280, Stage 3 (Alive) = 290.
+Individuals from Stage 1 (2000) who progressed to Stage 2 (2010) and survived = 280. Deaths from this S1 cohort = 300 - 280 = 20.
+Individuals from Stage 2 (2000) who progressed to Stage 3 (2010) and survived = 290. Deaths from this S2 cohort = 300 - 290 = 10.
+Total deaths for Disease A (2000-2010) = 20 + 10 = 30. This matches Clue 1.
+Total Alive A (2010) = 280 + 290 = 570.
+•	Disease B: From the table, for Disease B in 2010: Stage 3 (Alive) = 285.
+Clue 2 states for Disease B, Stage 2 (Alive) in 2010 = 270.
+Individuals from Stage 1 (2000) who progressed to Stage 2 (2010) and survived = 270. Deaths from this S1 cohort = 300 - 270 = 30.
+Individuals from Stage 2 (2000) who progressed to Stage 3 (2010) and survived = 285. Deaths from this S2 cohort = 300 - 285 = 15.
+Total deaths for Disease B (2000-2010) = 30 + 15 = 45.
+Total Alive B (2010) = 270 + 285 = 555.
+2010-2020 Decade:
+•	Disease A: Clue 3 states deaths from Disease A (2010-2020) = 4 * Deaths A (2000-2010) = 4 * 30 = 120.
+Clue 5 states Total Alive A (2020) = 450. From the table, Stage 3 (Alive) for A in 2020 = 450. This is consistent as all survivors must be in Stage 3 by 2020 if they started in S1 or S2 in 2000.
+Verification: Total Alive A (2010) = 570. Deaths A (2010-2020) = 570 - 450 = 120. This matches.
+•	Disease B: From the table, Stage 3 (Alive) for B in 2020 = 410, so Total Alive B (2020) = 410.
+Deaths B (2010-2020) = Total Alive B (2010) - Total Alive B (2020) = 555 - 410 = 145.
+2020-2030 Decade:
+•	Disease A: From the table, Total Alive A (2030) = 250. So Stage 3 (Alive) for A in 2030 = 250.
+Deaths A (2020-2030) = Total Alive A (2020) - Total Alive A (2030) = 450 - 250 = 200.
+•	Disease B: Clue 6 states deaths from Disease B (2020-2030) = Deaths A (2020-2030) + 10 = 200 + 10 = 210.
+Total Alive B (2030) = Total Alive B (2020) - Deaths B (2020-2030) = 410 - 210 = 200.
+From the table, Stage 3 (Alive) for B in 2030 = 200. This is consistent.
+Clue 4 informs about High CF for B S3 2030, which fills a cell in the provided table but isn't strictly needed for these count-based questions.
+
+Solution:
+From the calculations in the preamble: Individuals with Disease A alive in Stage 3 in 2030 = 250."
+LRDI,40,MOCKXYZ001_Q3,3,MOCKXYZ001_Set1_DiseaseProgression,"Set 1 of 5: Disease Progression Study
+A longitudinal study tracked 1200 individuals from the year 2000 for 30 years, or until death, whichever came first. At the start of the study in 2000, 600 individuals were infected with Disease A and 600 with Disease B. For each disease, 300 individuals were initially in Stage 1 of the disease and 300 were in Stage 2.
+The disease progresses from Stage 1 to Stage 2 to Stage 3, after which death may occur. Individuals cannot recover or skip stages. Every 10 years (at checkpoints 2010, 2020, 2030), surviving individuals who are in Stage 1 or Stage 2 progress to the next stage. Individuals in Stage 3 may either die in the subsequent decade or survive and remain in Stage 3 at the next checkpoint.
+A ""Co-morbidity Factor (CF)"" is recorded for individuals upon reaching Stage 3. If an individual's CF is greater than 1.5, they are considered ""High CF"".
+The table below shows the number of individuals alive at each checkpoint, categorized by disease and stage. Some values are missing.
+Year	Disease	Stage 1 (Alive)	Stage 2 (Alive)	Stage 3 (Alive)	Total Alive (Disease)	High CF (among Stage 3)
+2000	A	300	300	0	600	N/A
+	B	300	300	0	600	N/A
+2010	A	0	280	290	570	100
+	B	0	?	285	555	150
+2020	A	0	0	450	?	150
+	B	0	0	410	410	190
+2030	A	0	0	?	250	90
+	B	0	0	200	?	?
+Additional Clues:
+1.	The total number of deaths from Disease A between 2000 and 2010 was 30.
+2.	For Disease B, the number of individuals alive in Stage 2 in 2010 was 270.
+3.	The number of deaths from Disease A between 2010 and 2020 was four times the number of deaths from Disease A between 2000 and 2010.
+4.	The number of individuals with Disease B who were High CF and in Stage 3 in 2030 was 110.
+5.	The total number of individuals alive with Disease A in 2020 was 450.
+6.	The number of deaths from Disease B between 2020 and 2030 was 10 more than the number of deaths from Disease A in the same period.",What was the total number of deaths from Disease B across the entire 30-year study period (2000-2030)?,350,400,450,500,A,B,C,D,B,MCQ,Data Interpretation,Longitudinal Study Analysis,Moderate,"data interpretation, cumulative calculation, multi-step deduction","data interpretation, cumulative calculation, multi-step deduction",False,MOCKXYZ001_Set1_DiseaseProgression,Analyzing,"First, let's fill in the table using the clues and basic progression logic.
+Initial (2000): Disease A (Stage 1=300, Stage 2=300, Stage 3=0, Total=600), Disease B (Stage 1=300, Stage 2=300, Stage 3=0, Total=600).
+2000-2010 Decade:
+•	Disease A: Clue 1 states deaths from Disease A (2000-2010) = 30.
+From the table, for Disease A in 2010: Stage 2 (Alive) = 280, Stage 3 (Alive) = 290.
+Individuals from Stage 1 (2000) who progressed to Stage 2 (2010) and survived = 280. Deaths from this S1 cohort = 300 - 280 = 20.
+Individuals from Stage 2 (2000) who progressed to Stage 3 (2010) and survived = 290. Deaths from this S2 cohort = 300 - 290 = 10.
+Total deaths for Disease A (2000-2010) = 20 + 10 = 30. This matches Clue 1.
+Total Alive A (2010) = 280 + 290 = 570.
+•	Disease B: From the table, for Disease B in 2010: Stage 3 (Alive) = 285.
+Clue 2 states for Disease B, Stage 2 (Alive) in 2010 = 270.
+Individuals from Stage 1 (2000) who progressed to Stage 2 (2010) and survived = 270. Deaths from this S1 cohort = 300 - 270 = 30.
+Individuals from Stage 2 (2000) who progressed to Stage 3 (2010) and survived = 285. Deaths from this S2 cohort = 300 - 285 = 15.
+Total deaths for Disease B (2000-2010) = 30 + 15 = 45.
+Total Alive B (2010) = 270 + 285 = 555.
+2010-2020 Decade:
+•	Disease A: Clue 3 states deaths from Disease A (2010-2020) = 4 * Deaths A (2000-2010) = 4 * 30 = 120.
+Clue 5 states Total Alive A (2020) = 450. From the table, Stage 3 (Alive) for A in 2020 = 450. This is consistent as all survivors must be in Stage 3 by 2020 if they started in S1 or S2 in 2000.
+Verification: Total Alive A (2010) = 570. Deaths A (2010-2020) = 570 - 450 = 120. This matches.
+•	Disease B: From the table, Stage 3 (Alive) for B in 2020 = 410, so Total Alive B (2020) = 410.
+Deaths B (2010-2020) = Total Alive B (2010) - Total Alive B (2020) = 555 - 410 = 145.
+2020-2030 Decade:
+•	Disease A: From the table, Total Alive A (2030) = 250. So Stage 3 (Alive) for A in 2030 = 250.
+Deaths A (2020-2030) = Total Alive A (2020) - Total Alive A (2030) = 450 - 250 = 200.
+•	Disease B: Clue 6 states deaths from Disease B (2020-2030) = Deaths A (2020-2030) + 10 = 200 + 10 = 210.
+Total Alive B (2030) = Total Alive B (2020) - Deaths B (2020-2030) = 410 - 210 = 200.
+From the table, Stage 3 (Alive) for B in 2030 = 200. This is consistent.
+Clue 4 informs about High CF for B S3 2030, which fills a cell in the provided table but isn't strictly needed for these count-based questions.
+
+Solution:
+Total deaths for Disease B over the 30-year period:
+Deaths (2000-2010) = 45.
+Deaths (2010-2020) = 145.
+Deaths (2020-2030) = 210.
+Total = 45 + 145 + 210 = 400."
+LRDI,40,MOCKXYZ001_Q4,4,MOCKXYZ001_Set1_DiseaseProgression,"Set 1 of 5: Disease Progression Study
+A longitudinal study tracked 1200 individuals from the year 2000 for 30 years, or until death, whichever came first. At the start of the study in 2000, 600 individuals were infected with Disease A and 600 with Disease B. For each disease, 300 individuals were initially in Stage 1 of the disease and 300 were in Stage 2.
+The disease progresses from Stage 1 to Stage 2 to Stage 3, after which death may occur. Individuals cannot recover or skip stages. Every 10 years (at checkpoints 2010, 2020, 2030), surviving individuals who are in Stage 1 or Stage 2 progress to the next stage. Individuals in Stage 3 may either die in the subsequent decade or survive and remain in Stage 3 at the next checkpoint.
+A ""Co-morbidity Factor (CF)"" is recorded for individuals upon reaching Stage 3. If an individual's CF is greater than 1.5, they are considered ""High CF"".
+The table below shows the number of individuals alive at each checkpoint, categorized by disease and stage. Some values are missing.
+Year	Disease	Stage 1 (Alive)	Stage 2 (Alive)	Stage 3 (Alive)	Total Alive (Disease)	High CF (among Stage 3)
+2000	A	300	300	0	600	N/A
+	B	300	300	0	600	N/A
+2010	A	0	280	290	570	100
+	B	0	?	285	555	150
+2020	A	0	0	450	?	150
+	B	0	0	410	410	190
+2030	A	0	0	?	250	90
+	B	0	0	200	?	?
+Additional Clues:
+1.	The total number of deaths from Disease A between 2000 and 2010 was 30.
+2.	For Disease B, the number of individuals alive in Stage 2 in 2010 was 270.
+3.	The number of deaths from Disease A between 2010 and 2020 was four times the number of deaths from Disease A between 2000 and 2010.
+4.	The number of individuals with Disease B who were High CF and in Stage 3 in 2030 was 110.
+5.	The total number of individuals alive with Disease A in 2020 was 450.
+6.	The number of deaths from Disease B between 2020 and 2030 was 10 more than the number of deaths from Disease A in the same period.","In the decade 2010-2020, which disease resulted in a higher number of deaths?",Disease A,Disease B,Both had equal deaths,Cannot be determined,A,B,C,D,B,MCQ,Data Interpretation,Longitudinal Study Analysis,Moderate,"data interpretation, comparison, subtraction","data interpretation, comparison, subtraction",False,MOCKXYZ001_Set1_DiseaseProgression,Analyzing,"First, let's fill in the table using the clues and basic progression logic.
+Initial (2000): Disease A (Stage 1=300, Stage 2=300, Stage 3=0, Total=600), Disease B (Stage 1=300, Stage 2=300, Stage 3=0, Total=600).
+2000-2010 Decade:
+•	Disease A: Clue 1 states deaths from Disease A (2000-2010) = 30.
+From the table, for Disease A in 2010: Stage 2 (Alive) = 280, Stage 3 (Alive) = 290.
+Individuals from Stage 1 (2000) who progressed to Stage 2 (2010) and survived = 280. Deaths from this S1 cohort = 300 - 280 = 20.
+Individuals from Stage 2 (2000) who progressed to Stage 3 (2010) and survived = 290. Deaths from this S2 cohort = 300 - 290 = 10.
+Total deaths for Disease A (2000-2010) = 20 + 10 = 30. This matches Clue 1.
+Total Alive A (2010) = 280 + 290 = 570.
+•	Disease B: From the table, for Disease B in 2010: Stage 3 (Alive) = 285.
+Clue 2 states for Disease B, Stage 2 (Alive) in 2010 = 270.
+Individuals from Stage 1 (2000) who progressed to Stage 2 (2010) and survived = 270. Deaths from this S1 cohort = 300 - 270 = 30.
+Individuals from Stage 2 (2000) who progressed to Stage 3 (2010) and survived = 285. Deaths from this S2 cohort = 300 - 285 = 15.
+Total deaths for Disease B (2000-2010) = 30 + 15 = 45.
+Total Alive B (2010) = 270 + 285 = 555.
+2010-2020 Decade:
+•	Disease A: Clue 3 states deaths from Disease A (2010-2020) = 4 * Deaths A (2000-2010) = 4 * 30 = 120.
+Clue 5 states Total Alive A (2020) = 450. From the table, Stage 3 (Alive) for A in 2020 = 450. This is consistent as all survivors must be in Stage 3 by 2020 if they started in S1 or S2 in 2000.
+Verification: Total Alive A (2010) = 570. Deaths A (2010-2020) = 570 - 450 = 120. This matches.
+•	Disease B: From the table, Stage 3 (Alive) for B in 2020 = 410, so Total Alive B (2020) = 410.
+Deaths B (2010-2020) = Total Alive B (2010) - Total Alive B (2020) = 555 - 410 = 145.
+2020-2030 Decade:
+•	Disease A: From the table, Total Alive A (2030) = 250. So Stage 3 (Alive) for A in 2030 = 250.
+Deaths A (2020-2030) = Total Alive A (2020) - Total Alive A (2030) = 450 - 250 = 200.
+•	Disease B: Clue 6 states deaths from Disease B (2020-2030) = Deaths A (2020-2030) + 10 = 200 + 10 = 210.
+Total Alive B (2030) = Total Alive B (2020) - Deaths B (2020-2030) = 410 - 210 = 200.
+From the table, Stage 3 (Alive) for B in 2030 = 200. This is consistent.
+Clue 4 informs about High CF for B S3 2030, which fills a cell in the provided table but isn't strictly needed for these count-based questions.
+
+Solution:
+From the calculations in the preamble: Deaths from Disease A (2010-2020) = 120. Deaths from Disease B (2010-2020) = 145. Disease B had more deaths."
+LRDI,40,MOCKXYZ001_Q5,5,MOCKXYZ001_Set1_DiseaseProgression,"Set 1 of 5: Disease Progression Study
+A longitudinal study tracked 1200 individuals from the year 2000 for 30 years, or until death, whichever came first. At the start of the study in 2000, 600 individuals were infected with Disease A and 600 with Disease B. For each disease, 300 individuals were initially in Stage 1 of the disease and 300 were in Stage 2.
+The disease progresses from Stage 1 to Stage 2 to Stage 3, after which death may occur. Individuals cannot recover or skip stages. Every 10 years (at checkpoints 2010, 2020, 2030), surviving individuals who are in Stage 1 or Stage 2 progress to the next stage. Individuals in Stage 3 may either die in the subsequent decade or survive and remain in Stage 3 at the next checkpoint.
+A ""Co-morbidity Factor (CF)"" is recorded for individuals upon reaching Stage 3. If an individual's CF is greater than 1.5, they are considered ""High CF"".
+The table below shows the number of individuals alive at each checkpoint, categorized by disease and stage. Some values are missing.
+Year	Disease	Stage 1 (Alive)	Stage 2 (Alive)	Stage 3 (Alive)	Total Alive (Disease)	High CF (among Stage 3)
+2000	A	300	300	0	600	N/A
+	B	300	300	0	600	N/A
+2010	A	0	280	290	570	100
+	B	0	?	285	555	150
+2020	A	0	0	450	?	150
+	B	0	0	410	410	190
+2030	A	0	0	?	250	90
+	B	0	0	200	?	?
+Additional Clues:
+1.	The total number of deaths from Disease A between 2000 and 2010 was 30.
+2.	For Disease B, the number of individuals alive in Stage 2 in 2010 was 270.
+3.	The number of deaths from Disease A between 2010 and 2020 was four times the number of deaths from Disease A between 2000 and 2010.
+4.	The number of individuals with Disease B who were High CF and in Stage 3 in 2030 was 110.
+5.	The total number of individuals alive with Disease A in 2020 was 450.
+6.	The number of deaths from Disease B between 2020 and 2030 was 10 more than the number of deaths from Disease A in the same period.",What was the total number of individuals alive with Disease B at the end of the study in 2030?,150,200,250,110,A,B,C,D,B,MCQ,Data Interpretation,Longitudinal Study Analysis,Easy,"data interpretation, table analysis, subtraction","data interpretation, table analysis, subtraction",False,MOCKXYZ001_Set1_DiseaseProgression,Applying,"First, let's fill in the table using the clues and basic progression logic.
+Initial (2000): Disease A (Stage 1=300, Stage 2=300, Stage 3=0, Total=600), Disease B (Stage 1=300, Stage 2=300, Stage 3=0, Total=600).
+2000-2010 Decade:
+•	Disease A: Clue 1 states deaths from Disease A (2000-2010) = 30.
+From the table, for Disease A in 2010: Stage 2 (Alive) = 280, Stage 3 (Alive) = 290.
+Individuals from Stage 1 (2000) who progressed to Stage 2 (2010) and survived = 280. Deaths from this S1 cohort = 300 - 280 = 20.
+Individuals from Stage 2 (2000) who progressed to Stage 3 (2010) and survived = 290. Deaths from this S2 cohort = 300 - 290 = 10.
+Total deaths for Disease A (2000-2010) = 20 + 10 = 30. This matches Clue 1.
+Total Alive A (2010) = 280 + 290 = 570.
+•	Disease B: From the table, for Disease B in 2010: Stage 3 (Alive) = 285.
+Clue 2 states for Disease B, Stage 2 (Alive) in 2010 = 270.
+Individuals from Stage 1 (2000) who progressed to Stage 2 (2010) and survived = 270. Deaths from this S1 cohort = 300 - 270 = 30.
+Individuals from Stage 2 (2000) who progressed to Stage 3 (2010) and survived = 285. Deaths from this S2 cohort = 300 - 285 = 15.
+Total deaths for Disease B (2000-2010) = 30 + 15 = 45.
+Total Alive B (2010) = 270 + 285 = 555.
+2010-2020 Decade:
+•	Disease A: Clue 3 states deaths from Disease A (2010-2020) = 4 * Deaths A (2000-2010) = 4 * 30 = 120.
+Clue 5 states Total Alive A (2020) = 450. From the table, Stage 3 (Alive) for A in 2020 = 450. This is consistent as all survivors must be in Stage 3 by 2020 if they started in S1 or S2 in 2000.
+Verification: Total Alive A (2010) = 570. Deaths A (2010-2020) = 570 - 450 = 120. This matches.
+•	Disease B: From the table, Stage 3 (Alive) for B in 2020 = 410, so Total Alive B (2020) = 410.
+Deaths B (2010-2020) = Total Alive B (2010) - Total Alive B (2020) = 555 - 410 = 145.
+2020-2030 Decade:
+•	Disease A: From the table, Total Alive A (2030) = 250. So Stage 3 (Alive) for A in 2030 = 250.
+Deaths A (2020-2030) = Total Alive A (2020) - Total Alive A (2030) = 450 - 250 = 200.
+•	Disease B: Clue 6 states deaths from Disease B (2020-2030) = Deaths A (2020-2030) + 10 = 200 + 10 = 210.
+Total Alive B (2030) = Total Alive B (2020) - Deaths B (2020-2030) = 410 - 210 = 200.
+From the table, Stage 3 (Alive) for B in 2030 = 200. This is consistent.
+Clue 4 informs about High CF for B S3 2030, which fills a cell in the provided table but isn't strictly needed for these count-based questions.
+
+Solution:
+From the calculations in the preamble: Total number of individuals alive with Disease B at the end of 2030 = 200."
+LRDI,40,MOCKXYZ001_Q6,6,MOCKXYZ001_Set2_ProjectAllocations,"Set 2 of 5: Inter-City Project Allocations
+Four smart cities – Nova, Solara, Terra, and Luna – undertake development projects across four quarters of a year (Q1, Q2, Q3, Q4). In any quarter, a city can undertake at most one project, chosen from three types: Environmental (E), Infrastructure (I), or Technology (T). The funding for each project is an integer value in millions, from 0 to 3 million, inclusive (i.e., 0, 1, 2, or 3 million).
+The table below provides partial information on the project types and funding for some cities and quarters.
+City	Quarter	Project Type	Funding (Millions)
+Nova	Q1	E	2
+	Q2	I	?
+	Q3	T	1
+	Q4	?	2
+Solara	Q1	I	3
+	Q2	T	2
+	Q3	E	2
+	Q4	I	?
+Terra	Q1	T	1
+	Q2	E	0
+	Q3	?	1
+	Q4	T	0
+Luna	Q1	E	3
+	Q2	?	1
+	Q3	I	2
+	Q4	E	3
+Additional Clues:
+1.	Nova's funding in Q2 was 3 million. Its Q4 project was of type E.
+2.	Solara's funding in Q4 was 1 million.
+3.	Terra's project in Q3 was of type I.
+4.	Luna's project in Q2 was of type T.
+5.	The total funding for Q1 across all four cities was 9 million.
+6.	The total funding for Q2, Q3, and Q4 was the same for each of these quarters.
+7.	Each city undertook at least one project of each type (E, I, T) during the year. For Terra, any Infrastructure (I) project it undertook had funding of 1 million or less.
+8.	The total funding for the city of Luna over the year was 9 million.",What was the total funding for Terra over the year (in millions)?,1,2,3,4,A,B,C,D,B,MCQ,Data Interpretation,Table-based DI,Easy,"data interpretation, table completion, summation","data interpretation, table completion, summation",False,MOCKXYZ001_Set2_ProjectAllocations,Applying,"First, let's complete the table using the information provided and clues.
+The final completed project allocation and funding table:
+| City   | Quarter | Project Type | Funding (Millions) |
+| :----- | :------ | :----------- | :----------------- |
+| Nova   | Q1      | E            | 2                  |
+|        | Q2      | I            | 3                  |
+|        | Q3      | T            | 1                  |
+|        | Q4      | E            | 2                  |
+| Solara | Q1      | I            | 3                  |
+|        | Q2      | T            | 2                  |
+|        | Q3      | E            | 2                  |
+|        | Q4      | I            | 1                  |
+| Terra  | Q1      | T            | 1                  |
+|        | Q2      | E            | 0                  |
+|        | Q3      | I            | 1                  |
+|        | Q4      | T            | 0                  |
+| Luna   | Q1      | E            | 3                  |
+|        | Q2      | T            | 1                  |
+|        | Q3      | I            | 2                  |
+|        | Q4      | E            | 3                  |
+
+Solution:
+Total funding for Terra = Funding(Q1) + Funding(Q2) + Funding(Q3) + Funding(Q4)
+= 1 + 0 + 1 + 0 = 2 million."
+LRDI,40,MOCKXYZ001_Q7,7,MOCKXYZ001_Set2_ProjectAllocations,"Set 2 of 5: Inter-City Project Allocations
+Four smart cities – Nova, Solara, Terra, and Luna – undertake development projects across four quarters of a year (Q1, Q2, Q3, Q4). In any quarter, a city can undertake at most one project, chosen from three types: Environmental (E), Infrastructure (I), or Technology (T). The funding for each project is an integer value in millions, from 0 to 3 million, inclusive (i.e., 0, 1, 2, or 3 million).
+The table below provides partial information on the project types and funding for some cities and quarters.
+City	Quarter	Project Type	Funding (Millions)
+Nova	Q1	E	2
+	Q2	I	?
+	Q3	T	1
+	Q4	?	2
+Solara	Q1	I	3
+	Q2	T	2
+	Q3	E	2
+	Q4	I	?
+Terra	Q1	T	1
+	Q2	E	0
+	Q3	?	1
+	Q4	T	0
+Luna	Q1	E	3
+	Q2	?	1
+	Q3	I	2
+	Q4	E	3
+Additional Clues:
+1.	Nova's funding in Q2 was 3 million. Its Q4 project was of type E.
+2.	Solara's funding in Q4 was 1 million.
+3.	Terra's project in Q3 was of type I.
+4.	Luna's project in Q2 was of type T.
+5.	The total funding for Q1 across all four cities was 9 million.
+6.	The total funding for Q2, Q3, and Q4 was the same for each of these quarters.
+7.	Each city undertook at least one project of each type (E, I, T) during the year. For Terra, any Infrastructure (I) project it undertook had funding of 1 million or less.
+8.	The total funding for the city of Luna over the year was 9 million.",In which quarter was the total funding across all four cities the lowest?,Q1,Q2,Q3,"Q2, Q3, and Q4 had equally the lowest total funding.",A,B,C,D,D,MCQ,Data Interpretation,Table-based DI,Moderate,"data interpretation, comparison, multi-step deduction","data interpretation, comparison, multi-step deduction",False,MOCKXYZ001_Set2_ProjectAllocations,Analyzing,"First, let's complete the table using the information provided and clues.
+The final completed project allocation and funding table:
+| City   | Quarter | Project Type | Funding (Millions) |
+| :----- | :------ | :----------- | :----------------- |
+| Nova   | Q1      | E            | 2                  |
+|        | Q2      | I            | 3                  |
+|        | Q3      | T            | 1                  |
+|        | Q4      | E            | 2                  |
+| Solara | Q1      | I            | 3                  |
+|        | Q2      | T            | 2                  |
+|        | Q3      | E            | 2                  |
+|        | Q4      | I            | 1                  |
+| Terra  | Q1      | T            | 1                  |
+|        | Q2      | E            | 0                  |
+|        | Q3      | I            | 1                  |
+|        | Q4      | T            | 0                  |
+| Luna   | Q1      | E            | 3                  |
+|        | Q2      | T            | 1                  |
+|        | Q3      | I            | 2                  |
+|        | Q4      | E            | 3                  |
+
+Solution:
+Total funding for Q1 = 9 million.
+Total funding for Q2 = 6 million.
+Total funding for Q3 = 6 million.
+Total funding for Q4 = 6 million.
+The lowest total funding was 6 million, which occurred in Q2, Q3, and Q4."
+LRDI,40,MOCKXYZ001_Q8,8,MOCKXYZ001_Set2_ProjectAllocations,"Set 2 of 5: Inter-City Project Allocations
+Four smart cities – Nova, Solara, Terra, and Luna – undertake development projects across four quarters of a year (Q1, Q2, Q3, Q4). In any quarter, a city can undertake at most one project, chosen from three types: Environmental (E), Infrastructure (I), or Technology (T). The funding for each project is an integer value in millions, from 0 to 3 million, inclusive (i.e., 0, 1, 2, or 3 million).
+The table below provides partial information on the project types and funding for some cities and quarters.
+City	Quarter	Project Type	Funding (Millions)
+Nova	Q1	E	2
+	Q2	I	?
+	Q3	T	1
+	Q4	?	2
+Solara	Q1	I	3
+	Q2	T	2
+	Q3	E	2
+	Q4	I	?
+Terra	Q1	T	1
+	Q2	E	0
+	Q3	?	1
+	Q4	T	0
+Luna	Q1	E	3
+	Q2	?	1
+	Q3	I	2
+	Q4	E	3
+Additional Clues:
+1.	Nova's funding in Q2 was 3 million. Its Q4 project was of type E.
+2.	Solara's funding in Q4 was 1 million.
+3.	Terra's project in Q3 was of type I.
+4.	Luna's project in Q2 was of type T.
+5.	The total funding for Q1 across all four cities was 9 million.
+6.	The total funding for Q2, Q3, and Q4 was the same for each of these quarters.
+7.	Each city undertook at least one project of each type (E, I, T) during the year. For Terra, any Infrastructure (I) project it undertook had funding of 1 million or less.
+8.	The total funding for the city of Luna over the year was 9 million.",Which city had the highest total funding for Environmental (E) projects over the year?,Nova,Solara,Terra,Luna,A,B,C,D,D,MCQ,Data Interpretation,Table-based DI,Moderate,"data interpretation, conditional summation, comparison","data interpretation, conditional summation, comparison",False,MOCKXYZ001_Set2_ProjectAllocations,Analyzing,"First, let's complete the table using the information provided and clues.
+The final completed project allocation and funding table:
+| City   | Quarter | Project Type | Funding (Millions) |
+| :----- | :------ | :----------- | :----------------- |
+| Nova   | Q1      | E            | 2                  |
+|        | Q2      | I            | 3                  |
+|        | Q3      | T            | 1                  |
+|        | Q4      | E            | 2                  |
+| Solara | Q1      | I            | 3                  |
+|        | Q2      | T            | 2                  |
+|        | Q3      | E            | 2                  |
+|        | Q4      | I            | 1                  |
+| Terra  | Q1      | T            | 1                  |
+|        | Q2      | E            | 0                  |
+|        | Q3      | I            | 1                  |
+|        | Q4      | T            | 0                  |
+| Luna   | Q1      | E            | 3                  |
+|        | Q2      | T            | 1                  |
+|        | Q3      | I            | 2                  |
+|        | Q4      | E            | 3                  |
+
+Solution:
+Funding for Environmental (E) projects:
+Nova: Q1(E,2) + Q4(E,2) = 4 million.
+Solara: Q3(E,2) = 2 million.
+Terra: Q2(E,0) = 0 million.
+Luna: Q1(E,3) + Q4(E,3) = 6 million.
+Luna had the highest total funding for E projects."
+LRDI,40,MOCKXYZ001_Q9,9,MOCKXYZ001_Set2_ProjectAllocations,"Set 2 of 5: Inter-City Project Allocations
+Four smart cities – Nova, Solara, Terra, and Luna – undertake development projects across four quarters of a year (Q1, Q2, Q3, Q4). In any quarter, a city can undertake at most one project, chosen from three types: Environmental (E), Infrastructure (I), or Technology (T). The funding for each project is an integer value in millions, from 0 to 3 million, inclusive (i.e., 0, 1, 2, or 3 million).
+The table below provides partial information on the project types and funding for some cities and quarters.
+City	Quarter	Project Type	Funding (Millions)
+Nova	Q1	E	2
+	Q2	I	?
+	Q3	T	1
+	Q4	?	2
+Solara	Q1	I	3
+	Q2	T	2
+	Q3	E	2
+	Q4	I	?
+Terra	Q1	T	1
+	Q2	E	0
+	Q3	?	1
+	Q4	T	0
+Luna	Q1	E	3
+	Q2	?	1
+	Q3	I	2
+	Q4	E	3
+Additional Clues:
+1.	Nova's funding in Q2 was 3 million. Its Q4 project was of type E.
+2.	Solara's funding in Q4 was 1 million.
+3.	Terra's project in Q3 was of type I.
+4.	Luna's project in Q2 was of type T.
+5.	The total funding for Q1 across all four cities was 9 million.
+6.	The total funding for Q2, Q3, and Q4 was the same for each of these quarters.
+7.	Each city undertook at least one project of each type (E, I, T) during the year. For Terra, any Infrastructure (I) project it undertook had funding of 1 million or less.
+8.	The total funding for the city of Luna over the year was 9 million.",How many projects in total across all cities and all quarters received funding of exactly 2 million?,4,5,6,7,A,B,C,D,B,MCQ,Data Interpretation,Table-based DI,Moderate,"data interpretation, counting, specific value identification","data interpretation, counting, specific value identification",False,MOCKXYZ001_Set2_ProjectAllocations,Analyzing,"First, let's complete the table using the information provided and clues.
+The final completed project allocation and funding table:
+| City   | Quarter | Project Type | Funding (Millions) |
+| :----- | :------ | :----------- | :----------------- |
+| Nova   | Q1      | E            | 2                  |
+|        | Q2      | I            | 3                  |
+|        | Q3      | T            | 1                  |
+|        | Q4      | E            | 2                  |
+| Solara | Q1      | I            | 3                  |
+|        | Q2      | T            | 2                  |
+|        | Q3      | E            | 2                  |
+|        | Q4      | I            | 1                  |
+| Terra  | Q1      | T            | 1                  |
+|        | Q2      | E            | 0                  |
+|        | Q3      | I            | 1                  |
+|        | Q4      | T            | 0                  |
+| Luna   | Q1      | E            | 3                  |
+|        | Q2      | T            | 1                  |
+|        | Q3      | I            | 2                  |
+|        | Q4      | E            | 3                  |
+
+Solution:
+We count the projects that received exactly 2 million in funding from the final table:
+Nova: Q1(E,2), Q4(E,2) – (2 projects)
+Solara: Q2(T,2), Q3(E,2) – (2 projects)
+Terra: None
+Luna: Q3(I,2) – (1 project)
+Total projects with funding of 2 million = 2 + 2 + 0 + 1 = 5 projects."
+LRDI,40,MOCKXYZ001_Q10,10,MOCKXYZ001_Set3_CoursePerformance,"Set 3 of 5: University Course Registrations & Performance
+At a university, students from the Engineering (Eng) department must take both Quantum Physics (QP) and Behavioral Economics (BE) courses. Students from the Arts (Art) department can opt to take exactly one of these two courses, but not both. Student performance is graded as Distinction (D), Merit (M), Pass (P), or Fail (F).
+A Type Alpha scholarship is awarded to Engineering students who achieve a Distinction in both QP and BE. A Type Beta scholarship is awarded to Engineering students who achieve a Distinction in one course and a Merit in the other.
+There are a total of 100 Engineering students and 100 Arts students.
+The distribution of Arts students is: 40 took QP and 60 took BE.
+The table below shows the grade distribution for Engineering students in QP and BE. Some values are missing.
+Course	Department	Distinction	Merit	Pass	Fail	Total
+QP	Eng	30	50	10	A	100
+BE	Eng	20	B	30	10	100
+Additional Clues:
+1.	The number of Engineering students who failed QP (value A) is 10.
+2.	The number of Engineering students who got Merit in BE (value B) is 40.
+3.	For Arts students taking QP: 5 got Distinction, 8 failed. The number who got Merit was 3 more than who got Pass.
+4.	For Arts students taking BE: 10 got Distinction, 10 failed. The number who got Merit was 10 more than who got Pass.
+5.	Among Engineering students:
+o	Exactly 20 students achieved a Distinction in both QP and BE.
+o	Exactly 10 students achieved a Distinction in QP and a Merit in BE.
+o	No Engineering student who got Merit in QP achieved a Distinction in BE.",How many Arts students received a Merit grade in Quantum Physics?,12,15,18,27,A,B,C,D,B,MCQ,Logical Reasoning,Data Arrangement,Moderate,"constraint satisfaction, ratio and proportion, logical deduction","constraint satisfaction, ratio and proportion, logical deduction",False,MOCKXYZ001_Set3_CoursePerformance,Analyzing,"First, let's establish the complete grade distributions based on the information.
+Total Engineering (Eng) students = 100. Total Arts (Art) students = 100.
+Arts students in Quantum Physics (QP) = 40. Arts students in Behavioral Economics (BE) = 60.
+Engineering Students' Grades:
+From Clue 1, Eng QP Fail (A in the table) = 10. The table for Eng QP is D=30, M=50, P=10. So, F=10 for QP. (Total 30+50+10+10 = 100).
+From Clue 2, Eng BE Merit (B in the table) = 40. The table for Eng BE is D=20, P=30, F=10. So, M=40 for BE. (Total 20+40+30+10 = 100).
+The fully derived Eng Grades are:
+QP Eng: D=30, M=50, P=10, F=10.
+BE Eng: D=20, M=40, P=30, F=10.
+Arts Students' Grades:
+Clue 3 (Arts QP): D=5, F=8. Total Arts students in QP = 40. The remaining students for Merit (M_arts_qp) and Pass (P_arts_qp) = 40 - 5 - 8 = 27.
+Given M_arts_qp = P_arts_qp + 3.
+Let P_arts_qp = x. Then M_arts_qp = x + 3.
+x + (x+3) = 27 => 2x + 3 = 27 => 2x = 24 => x = 12.
+So, P_arts_qp = 12, and M_arts_qp = 15.
+Arts QP grades: D=5, M=15, P=12, F=8.
+Clue 4 (Arts BE): D=10, F=10. Total Arts students in BE = 60. The remaining students for Merit (M_arts_be) and Pass (P_arts_be) = 60 - 10 - 10 = 40.
+Given M_arts_be = P_arts_be + 10.
+Let P_arts_be = y. Then M_arts_be = y + 10.
+y + (y+10) = 40 => 2y + 10 = 40 => 2y = 30 => y = 15.
+So, P_arts_be = 15, and M_arts_be = 25.
+Arts BE grades: D=10, M=25, P=15, F=10.
+
+Solution:
+From the derivation for Arts students taking QP (using Clue 3), the number of Arts students who received a Merit grade in Quantum Physics was 15."
+LRDI,40,MOCKXYZ001_Q11,11,MOCKXYZ001_Set3_CoursePerformance,"Set 3 of 5: University Course Registrations & Performance
+At a university, students from the Engineering (Eng) department must take both Quantum Physics (QP) and Behavioral Economics (BE) courses. Students from the Arts (Art) department can opt to take exactly one of these two courses, but not both. Student performance is graded as Distinction (D), Merit (M), Pass (P), or Fail (F).
+A Type Alpha scholarship is awarded to Engineering students who achieve a Distinction in both QP and BE. A Type Beta scholarship is awarded to Engineering students who achieve a Distinction in one course and a Merit in the other.
+There are a total of 100 Engineering students and 100 Arts students.
+The distribution of Arts students is: 40 took QP and 60 took BE.
+The table below shows the grade distribution for Engineering students in QP and BE. Some values are missing.
+Course	Department	Distinction	Merit	Pass	Fail	Total
+QP	Eng	30	50	10	A	100
+BE	Eng	20	B	30	10	100
+Additional Clues:
+1.	The number of Engineering students who failed QP (value A) is 10.
+2.	The number of Engineering students who got Merit in BE (value B) is 40.
+3.	For Arts students taking QP: 5 got Distinction, 8 failed. The number who got Merit was 3 more than who got Pass.
+4.	For Arts students taking BE: 10 got Distinction, 10 failed. The number who got Merit was 10 more than who got Pass.
+5.	Among Engineering students:
+o	Exactly 20 students achieved a Distinction in both QP and BE.
+o	Exactly 10 students achieved a Distinction in QP and a Merit in BE.
+o	No Engineering student who got Merit in QP achieved a Distinction in BE.",What is the total number of students (Engineering and Arts combined) who failed Behavioral Economics?,10,18,20,28,A,B,C,D,C,MCQ,Logical Reasoning,Data Arrangement,Easy,"data interpretation, summation","data interpretation, summation",False,MOCKXYZ001_Set3_CoursePerformance,Applying,"First, let's establish the complete grade distributions based on the information.
+Total Engineering (Eng) students = 100. Total Arts (Art) students = 100.
+Arts students in Quantum Physics (QP) = 40. Arts students in Behavioral Economics (BE) = 60.
+Engineering Students' Grades:
+From Clue 1, Eng QP Fail (A in the table) = 10. The table for Eng QP is D=30, M=50, P=10. So, F=10 for QP. (Total 30+50+10+10 = 100).
+From Clue 2, Eng BE Merit (B in the table) = 40. The table for Eng BE is D=20, P=30, F=10. So, M=40 for BE. (Total 20+40+30+10 = 100).
+The fully derived Eng Grades are:
+QP Eng: D=30, M=50, P=10, F=10.
+BE Eng: D=20, M=40, P=30, F=10.
+Arts Students' Grades:
+Clue 3 (Arts QP): D=5, F=8. Total Arts students in QP = 40. The remaining students for Merit (M_arts_qp) and Pass (P_arts_qp) = 40 - 5 - 8 = 27.
+Given M_arts_qp = P_arts_qp + 3.
+Let P_arts_qp = x. Then M_arts_qp = x + 3.
+x + (x+3) = 27 => 2x + 3 = 27 => 2x = 24 => x = 12.
+So, P_arts_qp = 12, and M_arts_qp = 15.
+Arts QP grades: D=5, M=15, P=12, F=8.
+Clue 4 (Arts BE): D=10, F=10. Total Arts students in BE = 60. The remaining students for Merit (M_arts_be) and Pass (P_arts_be) = 60 - 10 - 10 = 40.
+Given M_arts_be = P_arts_be + 10.
+Let P_arts_be = y. Then M_arts_be = y + 10.
+y + (y+10) = 40 => 2y + 10 = 40 => 2y = 30 => y = 15.
+So, P_arts_be = 15, and M_arts_be = 25.
+Arts BE grades: D=10, M=25, P=15, F=10.
+
+Solution:
+Number of Engineering students who failed BE = 10 (from the derived Eng BE grade distribution).
+Number of Arts students who failed BE = 10 (from the derived Arts BE grade distribution using Clue 4).
+Total students (Engineering and Arts combined) who failed BE = 10 + 10 = 20."
+LRDI,40,MOCKXYZ001_Q12,12,MOCKXYZ001_Set3_CoursePerformance,"Set 3 of 5: University Course Registrations & Performance
+At a university, students from the Engineering (Eng) department must take both Quantum Physics (QP) and Behavioral Economics (BE) courses. Students from the Arts (Art) department can opt to take exactly one of these two courses, but not both. Student performance is graded as Distinction (D), Merit (M), Pass (P), or Fail (F).
+A Type Alpha scholarship is awarded to Engineering students who achieve a Distinction in both QP and BE. A Type Beta scholarship is awarded to Engineering students who achieve a Distinction in one course and a Merit in the other.
+There are a total of 100 Engineering students and 100 Arts students.
+The distribution of Arts students is: 40 took QP and 60 took BE.
+The table below shows the grade distribution for Engineering students in QP and BE. Some values are missing.
+Course	Department	Distinction	Merit	Pass	Fail	Total
+QP	Eng	30	50	10	A	100
+BE	Eng	20	B	30	10	100
+Additional Clues:
+1.	The number of Engineering students who failed QP (value A) is 10.
+2.	The number of Engineering students who got Merit in BE (value B) is 40.
+3.	For Arts students taking QP: 5 got Distinction, 8 failed. The number who got Merit was 3 more than who got Pass.
+4.	For Arts students taking BE: 10 got Distinction, 10 failed. The number who got Merit was 10 more than who got Pass.
+5.	Among Engineering students:
+o	Exactly 20 students achieved a Distinction in both QP and BE.
+o	Exactly 10 students achieved a Distinction in QP and a Merit in BE.
+o	No Engineering student who got Merit in QP achieved a Distinction in BE.",How many Engineering students were awarded a Type Beta scholarship?,0,10,20,30,A,B,C,D,B,MCQ,Logical Reasoning,Data Arrangement,Moderate,"constraint satisfaction, case analysis, conditional counting","constraint satisfaction, case analysis, conditional counting",False,MOCKXYZ001_Set3_CoursePerformance,Analyzing,"First, let's establish the complete grade distributions based on the information.
+Total Engineering (Eng) students = 100. Total Arts (Art) students = 100.
+Arts students in Quantum Physics (QP) = 40. Arts students in Behavioral Economics (BE) = 60.
+Engineering Students' Grades:
+From Clue 1, Eng QP Fail (A in the table) = 10. The table for Eng QP is D=30, M=50, P=10. So, F=10 for QP. (Total 30+50+10+10 = 100).
+From Clue 2, Eng BE Merit (B in the table) = 40. The table for Eng BE is D=20, P=30, F=10. So, M=40 for BE. (Total 20+40+30+10 = 100).
+The fully derived Eng Grades are:
+QP Eng: D=30, M=50, P=10, F=10.
+BE Eng: D=20, M=40, P=30, F=10.
+Arts Students' Grades:
+Clue 3 (Arts QP): D=5, F=8. Total Arts students in QP = 40. The remaining students for Merit (M_arts_qp) and Pass (P_arts_qp) = 40 - 5 - 8 = 27.
+Given M_arts_qp = P_arts_qp + 3.
+Let P_arts_qp = x. Then M_arts_qp = x + 3.
+x + (x+3) = 27 => 2x + 3 = 27 => 2x = 24 => x = 12.
+So, P_arts_qp = 12, and M_arts_qp = 15.
+Arts QP grades: D=5, M=15, P=12, F=8.
+Clue 4 (Arts BE): D=10, F=10. Total Arts students in BE = 60. The remaining students for Merit (M_arts_be) and Pass (P_arts_be) = 60 - 10 - 10 = 40.
+Given M_arts_be = P_arts_be + 10.
+Let P_arts_be = y. Then M_arts_be = y + 10.
+y + (y+10) = 40 => 2y + 10 = 40 => 2y = 30 => y = 15.
+So, P_arts_be = 15, and M_arts_be = 25.
+Arts BE grades: D=10, M=25, P=15, F=10.
+
+Solution:
+Type Beta scholarship is awarded to Engineering students who achieve a Distinction in one course and a Merit in the other.
+As detailed in the preamble using Clue 5:
+- Number of students with D in QP and M in BE = 10.
+- Number of students with M in QP and D in BE = 0 (due to the specific constraint ""No Engineering student who got Merit in QP achieved a Distinction in BE"").
+Total Type Beta scholars = 10 + 0 = 10."
+LRDI,40,MOCKXYZ001_Q13,13,MOCKXYZ001_Set3_CoursePerformance,"Set 3 of 5: University Course Registrations & Performance
+At a university, students from the Engineering (Eng) department must take both Quantum Physics (QP) and Behavioral Economics (BE) courses. Students from the Arts (Art) department can opt to take exactly one of these two courses, but not both. Student performance is graded as Distinction (D), Merit (M), Pass (P), or Fail (F).
+A Type Alpha scholarship is awarded to Engineering students who achieve a Distinction in both QP and BE. A Type Beta scholarship is awarded to Engineering students who achieve a Distinction in one course and a Merit in the other.
+There are a total of 100 Engineering students and 100 Arts students.
+The distribution of Arts students is: 40 took QP and 60 took BE.
+The table below shows the grade distribution for Engineering students in QP and BE. Some values are missing.
+Course	Department	Distinction	Merit	Pass	Fail	Total
+QP	Eng	30	50	10	A	100
+BE	Eng	20	B	30	10	100
+Additional Clues:
+1.	The number of Engineering students who failed QP (value A) is 10.
+2.	The number of Engineering students who got Merit in BE (value B) is 40.
+3.	For Arts students taking QP: 5 got Distinction, 8 failed. The number who got Merit was 3 more than who got Pass.
+4.	For Arts students taking BE: 10 got Distinction, 10 failed. The number who got Merit was 10 more than who got Pass.
+5.	Among Engineering students:
+o	Exactly 20 students achieved a Distinction in both QP and BE.
+o	Exactly 10 students achieved a Distinction in QP and a Merit in BE.
+o	No Engineering student who got Merit in QP achieved a Distinction in BE.","If a new ""Type Gamma"" scholarship was introduced for Arts students who achieved Distinction in their chosen course (either QP or BE), how many Arts students would receive it?",5,10,15,25,A,B,C,D,C,MCQ,Logical Reasoning,Data Arrangement,Moderate,"conditional counting, data interpretation","conditional counting, data interpretation",False,MOCKXYZ001_Set3_CoursePerformance,Analyzing,"First, let's establish the complete grade distributions based on the information.
+Total Engineering (Eng) students = 100. Total Arts (Art) students = 100.
+Arts students in Quantum Physics (QP) = 40. Arts students in Behavioral Economics (BE) = 60.
+Engineering Students' Grades:
+From Clue 1, Eng QP Fail (A in the table) = 10. The table for Eng QP is D=30, M=50, P=10. So, F=10 for QP. (Total 30+50+10+10 = 100).
+From Clue 2, Eng BE Merit (B in the table) = 40. The table for Eng BE is D=20, P=30, F=10. So, M=40 for BE. (Total 20+40+30+10 = 100).
+The fully derived Eng Grades are:
+QP Eng: D=30, M=50, P=10, F=10.
+BE Eng: D=20, M=40, P=30, F=10.
+Arts Students' Grades:
+Clue 3 (Arts QP): D=5, F=8. Total Arts students in QP = 40. The remaining students for Merit (M_arts_qp) and Pass (P_arts_qp) = 40 - 5 - 8 = 27.
+Given M_arts_qp = P_arts_qp + 3.
+Let P_arts_qp = x. Then M_arts_qp = x + 3.
+x + (x+3) = 27 => 2x + 3 = 27 => 2x = 24 => x = 12.
+So, P_arts_qp = 12, and M_arts_qp = 15.
+Arts QP grades: D=5, M=15, P=12, F=8.
+Clue 4 (Arts BE): D=10, F=10. Total Arts students in BE = 60. The remaining students for Merit (M_arts_be) and Pass (P_arts_be) = 60 - 10 - 10 = 40.
+Given M_arts_be = P_arts_be + 10.
+Let P_arts_be = y. Then M_arts_be = y + 10.
+y + (y+10) = 40 => 2y + 10 = 40 => 2y = 30 => y = 15.
+So, P_arts_be = 15, and M_arts_be = 25.
+Arts BE grades: D=10, M=25, P=15, F=10.
+
+Solution:
+Type Gamma scholarship is for Arts students achieving Distinction in their chosen course (either QP or BE).
+Number of Arts students achieving Distinction in QP = 5.
+Number of Arts students achieving Distinction in BE = 10.
+Since Arts students take only one of these courses, these are distinct groups of students.
+Total Arts students receiving Type Gamma scholarship = 5 (from QP) + 10 (from BE) = 15."
+LRDI,40,MOCKXYZ001_Q14,14,MOCKXYZ001_Set4_InvestmentFunds,"Set 4 of 5: Investment Fund Allocations
+Four investment funds – Alpha, Beta, Gamma, and Delta – participated in a series of 6 investment rounds. In each round, the four funds formed two distinct pairs, with each fund belonging to exactly one pair. A pair of funds could not be the same in two consecutive rounds.
+In each round, if a pair of funds decided to make an investment, they chose between a High Impact (IH) investment resulting in a $2M change or a Low Impact (IL) investment resulting in a $1M change. If an investment was made, one fund in the pair gained the chosen amount from the other fund in the pair. If they decided not to invest (NI), no money was exchanged.
+Each fund started with $20M before Round 1. A fund's Volatility Index (VI) is defined as the difference between its maximum and minimum capital amounts observed at the end of any of the 6 rounds (including the end of Round 0, which is the initial capital).
+The table below provides partial information about the capital (in $M) each fund had at the end of certain rounds. It specifically notes every time a fund's capital was exactly $20M, or when it reached its personal maximum or minimum capital across the 6 rounds.
+End of Round	Alpha	Beta	Gamma	Delta
+0 (Initial)	20	20	20	20
+1	Max (22)		Min (18)	
+2	20	Max (21)		20
+3			20	20
+4			Max (22)	20
+5	20	Min (18)		
+6	Min (18)	20		Max (23)
+Additional Clues:
+1.  Beta's capital at the end of Round 1 was $19M.
+2.  Delta's capital at the end of Round 1 was $21M.
+3.  In Round 1, Alpha was paired with Gamma. Beta was paired with Delta. Both pairs made an investment.
+4.  In Round 4, Alpha was paired with Gamma and an IH investment was made. The pair of Beta and Delta made No Investment (NI).
+5.  The Volatility Index (VI) for Alpha was $4M. The Volatility Index for Gamma was also $4M.
+6.  Throughout the 6 rounds, Delta's capital never fell below $19M. Gamma's capital never exceeded $22M.",What was the capital of Alpha at the end of Round 3 (in $M)?,19,20,21,22,A,B,C,D,B,MCQ,Logical Reasoning,Games & Tournaments,Moderate,"logical deduction, path tracing, constraint satisfaction","logical deduction, path tracing, constraint satisfaction",False,MOCKXYZ001_Set4_InvestmentFunds,Analyzing,"Let's track capital changes round by round.
+Final Capital Path Summary:
+| Round | Alpha | Beta  | Gamma | Delta | Pairings & Transactions                                     |
+| :---- | :---- | :---- | :---- | :---- | :---------------------------------------------------------- |
+| R0    | 20    | 20    | 20    | 20    | Initial                                                     |
+| R1    | 22    | 19    | 18    | 21    | (A,G): A wins IH; (B,D): D wins IL                          |
+| R2    | 20    | 21    | 19    | 20    | (A,B): B wins IH; (G,D): G wins IL                          |
+| R3    | 20    | 20    | 20    | 20    | (A,D): NI;        (B,G): G wins IL                          |
+| R4    | 18    | 20    | 22    | 20    | (A,G): G wins IH; (B,D): NI                                 |
+| R5    | 20    | 18    | 21    | 21    | (A,B): A wins IH; (G,D): D wins IL                          |
+| R6    | 18    | 20    | 19    | 23    | (A,D): D wins IH; (B,G): B wins IH                          |
+
+Solution:
+From the derived capital path, Alpha's capital at the end of Round 3 was $20M."
+LRDI,40,MOCKXYZ001_Q15,15,MOCKXYZ001_Set4_InvestmentFunds,"Set 4 of 5: Investment Fund Allocations
+Four investment funds – Alpha, Beta, Gamma, and Delta – participated in a series of 6 investment rounds. In each round, the four funds formed two distinct pairs, with each fund belonging to exactly one pair. A pair of funds could not be the same in two consecutive rounds.
+In each round, if a pair of funds decided to make an investment, they chose between a High Impact (IH) investment resulting in a $2M change or a Low Impact (IL) investment resulting in a $1M change. If an investment was made, one fund in the pair gained the chosen amount from the other fund in the pair. If they decided not to invest (NI), no money was exchanged.
+Each fund started with $20M before Round 1. A fund's Volatility Index (VI) is defined as the difference between its maximum and minimum capital amounts observed at the end of any of the 6 rounds (including the end of Round 0, which is the initial capital).
+The table below provides partial information about the capital (in $M) each fund had at the end of certain rounds. It specifically notes every time a fund's capital was exactly $20M, or when it reached its personal maximum or minimum capital across the 6 rounds.
+End of Round	Alpha	Beta	Gamma	Delta
+0 (Initial)	20	20	20	20
+1	Max (22)		Min (18)	
+2	20	Max (21)		20
+3			20	20
+4			Max (22)	20
+5	20	Min (18)		
+6	Min (18)	20		Max (23)
+Additional Clues:
+1.  Beta's capital at the end of Round 1 was $19M.
+2.  Delta's capital at the end of Round 1 was $21M.
+3.  In Round 1, Alpha was paired with Gamma. Beta was paired with Delta. Both pairs made an investment.
+4.  In Round 4, Alpha was paired with Gamma and an IH investment was made. The pair of Beta and Delta made No Investment (NI).
+5.  The Volatility Index (VI) for Alpha was $4M. The Volatility Index for Gamma was also $4M.
+6.  Throughout the 6 rounds, Delta's capital never fell below $19M. Gamma's capital never exceeded $22M.",What was the Volatility Index (VI) for Fund Beta?,$2M,$3M,$4M,$5M,A,B,C,D,B,MCQ,Logical Reasoning,Games & Tournaments,Moderate,"derived metric calculation, min-max identification","derived metric calculation, min-max identification",False,MOCKXYZ001_Set4_InvestmentFunds,Analyzing,"Let's track capital changes round by round.
+Final Capital Path Summary:
+| Round | Alpha | Beta  | Gamma | Delta | Pairings & Transactions                                     |
+| :---- | :---- | :---- | :---- | :---- | :---------------------------------------------------------- |
+| R0    | 20    | 20    | 20    | 20    | Initial                                                     |
+| R1    | 22    | 19    | 18    | 21    | (A,G): A wins IH; (B,D): D wins IL                          |
+| R2    | 20    | 21    | 19    | 20    | (A,B): B wins IH; (G,D): G wins IL                          |
+| R3    | 20    | 20    | 20    | 20    | (A,D): NI;        (B,G): G wins IL                          |
+| R4    | 18    | 20    | 22    | 20    | (A,G): G wins IH; (B,D): NI                                 |
+| R5    | 20    | 18    | 21    | 21    | (A,B): A wins IH; (G,D): D wins IL                          |
+| R6    | 18    | 20    | 19    | 23    | (A,D): D wins IH; (B,G): B wins IH                          |
+
+Solution:
+Beta's capital path: 20 (R0), 19 (R1), 21 (R2), 20 (R3), 20 (R4), 18 (R5), 20 (R6).
+Maximum capital for Beta = $21M (at end of R2).
+Minimum capital for Beta = $18M (at end of R5).
+Volatility Index (VI) for Beta = Max - Min = 21 - 18 = $3M."
+LRDI,40,MOCKXYZ001_Q16,16,MOCKXYZ001_Set4_InvestmentFunds,"Set 4 of 5: Investment Fund Allocations
+Four investment funds – Alpha, Beta, Gamma, and Delta – participated in a series of 6 investment rounds. In each round, the four funds formed two distinct pairs, with each fund belonging to exactly one pair. A pair of funds could not be the same in two consecutive rounds.
+In each round, if a pair of funds decided to make an investment, they chose between a High Impact (IH) investment resulting in a $2M change or a Low Impact (IL) investment resulting in a $1M change. If an investment was made, one fund in the pair gained the chosen amount from the other fund in the pair. If they decided not to invest (NI), no money was exchanged.
+Each fund started with $20M before Round 1. A fund's Volatility Index (VI) is defined as the difference between its maximum and minimum capital amounts observed at the end of any of the 6 rounds (including the end of Round 0, which is the initial capital).
+The table below provides partial information about the capital (in $M) each fund had at the end of certain rounds. It specifically notes every time a fund's capital was exactly $20M, or when it reached its personal maximum or minimum capital across the 6 rounds.
+End of Round	Alpha	Beta	Gamma	Delta
+0 (Initial)	20	20	20	20
+1	Max (22)		Min (18)	
+2	20	Max (21)		20
+3			20	20
+4			Max (22)	20
+5	20	Min (18)		
+6	Min (18)	20		Max (23)
+Additional Clues:
+1.  Beta's capital at the end of Round 1 was $19M.
+2.  Delta's capital at the end of Round 1 was $21M.
+3.  In Round 1, Alpha was paired with Gamma. Beta was paired with Delta. Both pairs made an investment.
+4.  In Round 4, Alpha was paired with Gamma and an IH investment was made. The pair of Beta and Delta made No Investment (NI).
+5.  The Volatility Index (VI) for Alpha was $4M. The Volatility Index for Gamma was also $4M.
+6.  Throughout the 6 rounds, Delta's capital never fell below $19M. Gamma's capital never exceeded $22M.",Which fund had its capital at $20M at the end of the most number of rounds (including Round 0)?,Alpha,Beta,Gamma,Delta,A,B,C,D,D,MCQ,Logical Reasoning,Games & Tournaments,Moderate,"counting occurrences, data tracking","counting occurrences, data tracking",False,MOCKXYZ001_Set4_InvestmentFunds,Analyzing,"Let's track capital changes round by round.
+Final Capital Path Summary:
+| Round | Alpha | Beta  | Gamma | Delta | Pairings & Transactions                                     |
+| :---- | :---- | :---- | :---- | :---- | :---------------------------------------------------------- |
+| R0    | 20    | 20    | 20    | 20    | Initial                                                     |
+| R1    | 22    | 19    | 18    | 21    | (A,G): A wins IH; (B,D): D wins IL                          |
+| R2    | 20    | 21    | 19    | 20    | (A,B): B wins IH; (G,D): G wins IL                          |
+| R3    | 20    | 20    | 20    | 20    | (A,D): NI;        (B,G): G wins IL                          |
+| R4    | 18    | 20    | 22    | 20    | (A,G): G wins IH; (B,D): NI                                 |
+| R5    | 20    | 18    | 21    | 21    | (A,B): A wins IH; (G,D): D wins IL                          |
+| R6    | 18    | 20    | 19    | 23    | (A,D): D wins IH; (B,G): B wins IH                          |
+
+Solution:
+Occurrences of $20M end-of-round capital for each fund:
+Alpha: R0, R2, R3, R5 (4 times).
+Beta: R0, R3, R4, R6 (4 times).
+Gamma: R0, R3 (2 times).
+Delta: R0, R2, R3, R4 (4 times).
+Alpha, Beta, and Delta each had their capital at $20M for 4 rounds, which is the most number of times. Since Delta is one of these funds and is provided as an option, it is a correct answer."
+LRDI,40,MOCKXYZ001_Q17,17,MOCKXYZ001_Set4_InvestmentFunds,"Set 4 of 5: Investment Fund Allocations
+Four investment funds – Alpha, Beta, Gamma, and Delta – participated in a series of 6 investment rounds. In each round, the four funds formed two distinct pairs, with each fund belonging to exactly one pair. A pair of funds could not be the same in two consecutive rounds.
+In each round, if a pair of funds decided to make an investment, they chose between a High Impact (IH) investment resulting in a $2M change or a Low Impact (IL) investment resulting in a $1M change. If an investment was made, one fund in the pair gained the chosen amount from the other fund in the pair. If they decided not to invest (NI), no money was exchanged.
+Each fund started with $20M before Round 1. A fund's Volatility Index (VI) is defined as the difference between its maximum and minimum capital amounts observed at the end of any of the 6 rounds (including the end of Round 0, which is the initial capital).
+The table below provides partial information about the capital (in $M) each fund had at the end of certain rounds. It specifically notes every time a fund's capital was exactly $20M, or when it reached its personal maximum or minimum capital across the 6 rounds.
+End of Round	Alpha	Beta	Gamma	Delta
+0 (Initial)	20	20	20	20
+1	Max (22)		Min (18)	
+2	20	Max (21)		20
+3			20	20
+4			Max (22)	20
+5	20	Min (18)		
+6	Min (18)	20		Max (23)
+Additional Clues:
+1.  Beta's capital at the end of Round 1 was $19M.
+2.  Delta's capital at the end of Round 1 was $21M.
+3.  In Round 1, Alpha was paired with Gamma. Beta was paired with Delta. Both pairs made an investment.
+4.  In Round 4, Alpha was paired with Gamma and an IH investment was made. The pair of Beta and Delta made No Investment (NI).
+5.  The Volatility Index (VI) for Alpha was $4M. The Volatility Index for Gamma was also $4M.
+6.  Throughout the 6 rounds, Delta's capital never fell below $19M. Gamma's capital never exceeded $22M.","In which round was Gamma paired with Beta, resulting in Gamma winning an IL investment?",Round 2,Round 3,Round 5,Round 6,A,B,C,D,B,MCQ,Logical Reasoning,Games & Tournaments,Difficult,"event identification, multi-condition check, logical deduction, constraint satisfaction","event identification, multi-condition check, logical deduction, constraint satisfaction",False,MOCKXYZ001_Set4_InvestmentFunds,Evaluating,"Let's track capital changes round by round.
+Final Capital Path Summary:
+| Round | Alpha | Beta  | Gamma | Delta | Pairings & Transactions                                     |
+| :---- | :---- | :---- | :---- | :---- | :---------------------------------------------------------- |
+| R0    | 20    | 20    | 20    | 20    | Initial                                                     |
+| R1    | 22    | 19    | 18    | 21    | (A,G): A wins IH; (B,D): D wins IL                          |
+| R2    | 20    | 21    | 19    | 20    | (A,B): B wins IH; (G,D): G wins IL                          |
+| R3    | 20    | 20    | 20    | 20    | (A,D): NI;        (B,G): G wins IL                          |
+| R4    | 18    | 20    | 22    | 20    | (A,G): G wins IH; (B,D): NI                                 |
+| R5    | 20    | 18    | 21    | 21    | (A,B): A wins IH; (G,D): D wins IL                          |
+| R6    | 18    | 20    | 19    | 23    | (A,D): D wins IH; (B,G): B wins IH                          |
+
+Solution:
+The question asks: ""In which round was Gamma paired with Beta, resulting in Gamma winning an IL investment?""
+From our derived path and pairings:
+Round 1: Pairs (A,G), (B,D). Gamma was not paired with Beta, or Gamma lost.
+Round 2: Pairs (A,B), (G,D). Gamma was paired with Delta and won IL.
+Round 3: Pairs (A,D), (B,G). Gamma was paired with Beta. G_R2=$19M, B_R2=$21M. Gamma won $1M (IL) from Beta, resulting in G_R3=$20M and B_R3=$20M. This matches the condition.
+Round 4: Pairs (A,G), (B,D). Gamma was paired with Alpha and won IH.
+Round 5: Pairs (A,B), (G,D). Gamma was paired with Delta and lost IL.
+Round 6: Pairs (A,D), (B,G). Gamma was paired with Beta and lost IH.
+The condition is met in Round 3."
+LRDI,40,MOCKXYZ001_Q18,18,MOCKXYZ001_Set4_InvestmentFunds,"Set 4 of 5: Investment Fund Allocations
+Four investment funds – Alpha, Beta, Gamma, and Delta – participated in a series of 6 investment rounds. In each round, the four funds formed two distinct pairs, with each fund belonging to exactly one pair. A pair of funds could not be the same in two consecutive rounds.
+In each round, if a pair of funds decided to make an investment, they chose between a High Impact (IH) investment resulting in a $2M change or a Low Impact (IL) investment resulting in a $1M change. If an investment was made, one fund in the pair gained the chosen amount from the other fund in the pair. If they decided not to invest (NI), no money was exchanged.
+Each fund started with $20M before Round 1. A fund's Volatility Index (VI) is defined as the difference between its maximum and minimum capital amounts observed at the end of any of the 6 rounds (including the end of Round 0, which is the initial capital).
+The table below provides partial information about the capital (in $M) each fund had at the end of certain rounds. It specifically notes every time a fund's capital was exactly $20M, or when it reached its personal maximum or minimum capital across the 6 rounds.
+End of Round	Alpha	Beta	Gamma	Delta
+0 (Initial)	20	20	20	20
+1	Max (22)		Min (18)	
+2	20	Max (21)		20
+3			20	20
+4			Max (22)	20
+5	20	Min (18)		
+6	Min (18)	20		Max (23)
+Additional Clues:
+1.  Beta's capital at the end of Round 1 was $19M.
+2.  Delta's capital at the end of Round 1 was $21M.
+3.  In Round 1, Alpha was paired with Gamma. Beta was paired with Delta. Both pairs made an investment.
+4.  In Round 4, Alpha was paired with Gamma and an IH investment was made. The pair of Beta and Delta made No Investment (NI).
+5.  The Volatility Index (VI) for Alpha was $4M. The Volatility Index for Gamma was also $4M.
+6.  Throughout the 6 rounds, Delta's capital never fell below $19M. Gamma's capital never exceeded $22M.",What was the combined capital of Alpha and Delta at the end of Round 5 (in $M)?,39,40,41,42,A,B,C,D,C,MCQ,Logical Reasoning,Games & Tournaments,Easy,"data retrieval, summation","data retrieval, summation",False,MOCKXYZ001_Set4_InvestmentFunds,Applying,"Let's track capital changes round by round.
+Final Capital Path Summary:
+| Round | Alpha | Beta  | Gamma | Delta | Pairings & Transactions                                     |
+| :---- | :---- | :---- | :---- | :---- | :---------------------------------------------------------- |
+| R0    | 20    | 20    | 20    | 20    | Initial                                                     |
+| R1    | 22    | 19    | 18    | 21    | (A,G): A wins IH; (B,D): D wins IL                          |
+| R2    | 20    | 21    | 19    | 20    | (A,B): B wins IH; (G,D): G wins IL                          |
+| R3    | 20    | 20    | 20    | 20    | (A,D): NI;        (B,G): G wins IL                          |
+| R4    | 18    | 20    | 22    | 20    | (A,G): G wins IH; (B,D): NI                                 |
+| R5    | 20    | 18    | 21    | 21    | (A,B): A wins IH; (G,D): D wins IL                          |
+| R6    | 18    | 20    | 19    | 23    | (A,D): D wins IH; (B,G): B wins IH                          |
+
+Solution:
+At the end of Round 5: Alpha's capital = $20M. Delta's capital = $21M.
+Combined capital of Alpha and Delta = $20M + $21M = $41M."
+LRDI,40,MOCKXYZ001_Q19,19,MOCKXYZ001_Set5_ResearchPapers,"Set 5 of 5: Research Paper Publication Matrix
+Five researchers – Anya, Ben, Clara, Dev, and Elara – publish papers in four academic journals: J1, J2, J3, and J4. Each researcher published between 1 and 3 papers in total during the year. A researcher cannot publish more than one paper in the same journal in that year.
+Each journal has an Impact Factor (IF): J1 (IF=5), J2 (IF=4), J3 (IF=3), J4 (IF=2).
+A researcher's Annual Impact Score (AIS) is the sum of the Impact Factors of the journals in which they published.
+A ""Collaboration Bonus"" is applied: If Anya and Ben both publish in the same journal, each of their individual AIS scores gets a 10% bonus (calculated on their base AIS from sum of IFs). This bonus applies for each such common journal.
+The table below shows which journals each researcher published in (1 for published, 0 for not). Some entries are missing.
+Researcher	J1 (IF 5)	J2 (IF 4)	J3 (IF 3)	J4 (IF 2)	Total Papers
+Anya	1	0	1	A	3
+Ben	B	1	0	0	2
+Clara	0	C	1	0	2
+Dev	1	0	D	1	2
+Elara	0	1	E	1	F
+Additional Clues:
+1.	Anya published in J4 (so A=1).
+2.	Ben published in J1 (so B=1).
+3.	Clara published in J2 (so C=1).
+4.	Dev did not publish in J3 (so D=0).
+5.	Elara published in J3 (so E=1), and her total number of papers was 3 (so F=3).
+6.	The total number of papers published in J1 was 3.
+7.	The total number of papers published in J3 was equal to the total number of papers published in J2.
+8.	Exactly one researcher had a final AIS (after any applicable bonus) of 9.9.",What is Clara's final Annual Impact Score (AIS)?,6.3,7,7.7,9,A,B,C,D,B,MCQ,Data Interpretation,Hybrid DI-LR Matrix,Moderate,"formula application, data lookup","formula application, data lookup",False,MOCKXYZ001_Set5_ResearchPapers,Analyzing,"First, let's determine the full publication matrix and calculate the scores.
+The completed publication matrix (1 if published, 0 if not):
+| Researcher | J1 (IF 5) | J2 (IF 4) | J3 (IF 3) | J4 (IF 2) | Total Papers |
+| :--------- | :-------- | :-------- | :-------- | :-------- | :----------- |
+| Anya       | 1         | 0         | 1         | 1         | 3            |
+| Ben        | 1         | 1         | 0         | 0         | 2            |
+| Clara      | 0         | 1         | 1         | 0         | 2            |
+| Dev        | 1         | 0         | 0         | 1         | 2            |
+| Elara      | 0         | 1         | 1         | 1         | 3            |
+Base AIS Calculation:
+Anya: (1*5) + (1*3) + (1*2) = 10.
+Ben: (1*5) + (1*4) = 9.
+Clara: (1*4) + (1*3) = 7.
+Dev: (1*5) + (1*2) = 7.
+Elara: (1*4) + (1*3) + (1*2) = 9.
+Collaboration Bonus: Applies if Anya and Ben both publish in the same journal.
+Anya published in J1, J3, J4. Ben published in J1, J2.
+They both published in Journal J1. So, a 10% bonus applies to each of their base AIS.
+Anya's Final AIS = 10 * 1.10 = 11.
+Ben's Final AIS = 9 * 1.10 = 9.9.
+Clara, Dev, Elara receive no bonus. Their Final AIS = Base AIS.
+Final AIS scores: Anya=11, Ben=9.9, Clara=7, Dev=7, Elara=9.
+Clue 8 (Exactly one researcher had a final AIS of 9.9) is consistent with Ben's score.
+
+Solution:
+Clara's publications are J2 (IF=4) and J3 (IF=3). Her Base AIS = 4 + 3 = 7.
+The collaboration bonus rule mentioned is specifically between Anya and Ben. Clara is not involved in this bonus.
+Thus, Clara's final AIS is her Base AIS, which is 7."
+LRDI,40,MOCKXYZ001_Q20,20,MOCKXYZ001_Set5_ResearchPapers,"Set 5 of 5: Research Paper Publication Matrix
+Five researchers – Anya, Ben, Clara, Dev, and Elara – publish papers in four academic journals: J1, J2, J3, and J4. Each researcher published between 1 and 3 papers in total during the year. A researcher cannot publish more than one paper in the same journal in that year.
+Each journal has an Impact Factor (IF): J1 (IF=5), J2 (IF=4), J3 (IF=3), J4 (IF=2).
+A researcher's Annual Impact Score (AIS) is the sum of the Impact Factors of the journals in which they published.
+A ""Collaboration Bonus"" is applied: If Anya and Ben both publish in the same journal, each of their individual AIS scores gets a 10% bonus (calculated on their base AIS from sum of IFs). This bonus applies for each such common journal.
+The table below shows which journals each researcher published in (1 for published, 0 for not). Some entries are missing.
+Researcher	J1 (IF 5)	J2 (IF 4)	J3 (IF 3)	J4 (IF 2)	Total Papers
+Anya	1	0	1	A	3
+Ben	B	1	0	0	2
+Clara	0	C	1	0	2
+Dev	1	0	D	1	2
+Elara	0	1	E	1	F
+Additional Clues:
+1.	Anya published in J4 (so A=1).
+2.	Ben published in J1 (so B=1).
+3.	Clara published in J2 (so C=1).
+4.	Dev did not publish in J3 (so D=0).
+5.	Elara published in J3 (so E=1), and her total number of papers was 3 (so F=3).
+6.	The total number of papers published in J1 was 3.
+7.	The total number of papers published in J3 was equal to the total number of papers published in J2.
+8.	Exactly one researcher had a final AIS (after any applicable bonus) of 9.9.",How many papers in total were published in Journal J4?,1,2,3,Cannot be determined,A,B,C,D,C,MCQ,Logical Reasoning,Matrix Completion,Moderate,"constraint satisfaction, summation","constraint satisfaction, summation",False,MOCKXYZ001_Set5_ResearchPapers,Analyzing,"First, let's determine the full publication matrix and calculate the scores.
+The completed publication matrix (1 if published, 0 if not):
+| Researcher | J1 (IF 5) | J2 (IF 4) | J3 (IF 3) | J4 (IF 2) | Total Papers |
+| :--------- | :-------- | :-------- | :-------- | :-------- | :----------- |
+| Anya       | 1         | 0         | 1         | 1         | 3            |
+| Ben        | 1         | 1         | 0         | 0         | 2            |
+| Clara      | 0         | 1         | 1         | 0         | 2            |
+| Dev        | 1         | 0         | 0         | 1         | 2            |
+| Elara      | 0         | 1         | 1         | 1         | 3            |
+Base AIS Calculation:
+Anya: (1*5) + (1*3) + (1*2) = 10.
+Ben: (1*5) + (1*4) = 9.
+Clara: (1*4) + (1*3) = 7.
+Dev: (1*5) + (1*2) = 7.
+Elara: (1*4) + (1*3) + (1*2) = 9.
+Collaboration Bonus: Applies if Anya and Ben both publish in the same journal.
+Anya published in J1, J3, J4. Ben published in J1, J2.
+They both published in Journal J1. So, a 10% bonus applies to each of their base AIS.
+Anya's Final AIS = 10 * 1.10 = 11.
+Ben's Final AIS = 9 * 1.10 = 9.9.
+Clara, Dev, Elara receive no bonus. Their Final AIS = Base AIS.
+Final AIS scores: Anya=11, Ben=9.9, Clara=7, Dev=7, Elara=9.
+Clue 8 (Exactly one researcher had a final AIS of 9.9) is consistent with Ben's score.
+
+Solution:
+From the completed publication matrix:
+Anya published in J4.
+Ben did not publish in J4.
+Clara did not publish in J4.
+Dev published in J4.
+Elara published in J4.
+Total papers published in Journal J4 = 1 (Anya) + 0 (Ben) + 0 (Clara) + 1 (Dev) + 1 (Elara) = 3."
+LRDI,40,MOCKXYZ001_Q21,21,MOCKXYZ001_Set5_ResearchPapers,"Set 5 of 5: Research Paper Publication Matrix
+Five researchers – Anya, Ben, Clara, Dev, and Elara – publish papers in four academic journals: J1, J2, J3, and J4. Each researcher published between 1 and 3 papers in total during the year. A researcher cannot publish more than one paper in the same journal in that year.
+Each journal has an Impact Factor (IF): J1 (IF=5), J2 (IF=4), J3 (IF=3), J4 (IF=2).
+A researcher's Annual Impact Score (AIS) is the sum of the Impact Factors of the journals in which they published.
+A ""Collaboration Bonus"" is applied: If Anya and Ben both publish in the same journal, each of their individual AIS scores gets a 10% bonus (calculated on their base AIS from sum of IFs). This bonus applies for each such common journal.
+The table below shows which journals each researcher published in (1 for published, 0 for not). Some entries are missing.
+Researcher	J1 (IF 5)	J2 (IF 4)	J3 (IF 3)	J4 (IF 2)	Total Papers
+Anya	1	0	1	A	3
+Ben	B	1	0	0	2
+Clara	0	C	1	0	2
+Dev	1	0	D	1	2
+Elara	0	1	E	1	F
+Additional Clues:
+1.	Anya published in J4 (so A=1).
+2.	Ben published in J1 (so B=1).
+3.	Clara published in J2 (so C=1).
+4.	Dev did not publish in J3 (so D=0).
+5.	Elara published in J3 (so E=1), and her total number of papers was 3 (so F=3).
+6.	The total number of papers published in J1 was 3.
+7.	The total number of papers published in J3 was equal to the total number of papers published in J2.
+8.	Exactly one researcher had a final AIS (after any applicable bonus) of 9.9.",Which researcher had the second highest final AIS?,Anya,Ben,Dev,Elara,A,B,C,D,B,MCQ,Data Interpretation,Hybrid DI-LR Matrix,Moderate,"ranking, comparison, bonus calculation","ranking, comparison, bonus calculation",False,MOCKXYZ001_Set5_ResearchPapers,Analyzing,"First, let's determine the full publication matrix and calculate the scores.
+The completed publication matrix (1 if published, 0 if not):
+| Researcher | J1 (IF 5) | J2 (IF 4) | J3 (IF 3) | J4 (IF 2) | Total Papers |
+| :--------- | :-------- | :-------- | :-------- | :-------- | :----------- |
+| Anya       | 1         | 0         | 1         | 1         | 3            |
+| Ben        | 1         | 1         | 0         | 0         | 2            |
+| Clara      | 0         | 1         | 1         | 0         | 2            |
+| Dev        | 1         | 0         | 0         | 1         | 2            |
+| Elara      | 0         | 1         | 1         | 1         | 3            |
+Base AIS Calculation:
+Anya: (1*5) + (1*3) + (1*2) = 10.
+Ben: (1*5) + (1*4) = 9.
+Clara: (1*4) + (1*3) = 7.
+Dev: (1*5) + (1*2) = 7.
+Elara: (1*4) + (1*3) + (1*2) = 9.
+Collaboration Bonus: Applies if Anya and Ben both publish in the same journal.
+Anya published in J1, J3, J4. Ben published in J1, J2.
+They both published in Journal J1. So, a 10% bonus applies to each of their base AIS.
+Anya's Final AIS = 10 * 1.10 = 11.
+Ben's Final AIS = 9 * 1.10 = 9.9.
+Clara, Dev, Elara receive no bonus. Their Final AIS = Base AIS.
+Final AIS scores: Anya=11, Ben=9.9, Clara=7, Dev=7, Elara=9.
+Clue 8 (Exactly one researcher had a final AIS of 9.9) is consistent with Ben's score.
+
+Solution:
+The final AIS scores are:
+Anya: 11
+Ben: 9.9
+Elara: 9
+Clara: 7
+Dev: 7
+Ranking these scores from highest to lowest: 11 (Anya), 9.9 (Ben), 9 (Elara), 7 (Clara & Dev).
+The second highest final AIS is 9.9, which belongs to Ben."
+LRDI,40,MOCKXYZ001_Q22,22,MOCKXYZ001_Set5_ResearchPapers,"Set 5 of 5: Research Paper Publication Matrix
+Five researchers – Anya, Ben, Clara, Dev, and Elara – publish papers in four academic journals: J1, J2, J3, and J4. Each researcher published between 1 and 3 papers in total during the year. A researcher cannot publish more than one paper in the same journal in that year.
+Each journal has an Impact Factor (IF): J1 (IF=5), J2 (IF=4), J3 (IF=3), J4 (IF=2).
+A researcher's Annual Impact Score (AIS) is the sum of the Impact Factors of the journals in which they published.
+A ""Collaboration Bonus"" is applied: If Anya and Ben both publish in the same journal, each of their individual AIS scores gets a 10% bonus (calculated on their base AIS from sum of IFs). This bonus applies for each such common journal.
+The table below shows which journals each researcher published in (1 for published, 0 for not). Some entries are missing.
+Researcher	J1 (IF 5)	J2 (IF 4)	J3 (IF 3)	J4 (IF 2)	Total Papers
+Anya	1	0	1	A	3
+Ben	B	1	0	0	2
+Clara	0	C	1	0	2
+Dev	1	0	D	1	2
+Elara	0	1	E	1	F
+Additional Clues:
+1.	Anya published in J4 (so A=1).
+2.	Ben published in J1 (so B=1).
+3.	Clara published in J2 (so C=1).
+4.	Dev did not publish in J3 (so D=0).
+5.	Elara published in J3 (so E=1), and her total number of papers was 3 (so F=3).
+6.	The total number of papers published in J1 was 3.
+7.	The total number of papers published in J3 was equal to the total number of papers published in J2.
+8.	Exactly one researcher had a final AIS (after any applicable bonus) of 9.9.","Suppose the Collaboration Bonus rule is entirely replaced. The new rule is: 'If Clara and Elara both publish in Journal J2, each of them receives a 10% bonus on their base AIS. No other collaboration bonuses apply.' What would be Elara's new final AIS under this new rule?",9,9.9,10,10.8,A,B,C,D,B,MCQ,Data Interpretation,Hybrid DI-LR Matrix,Difficult,"conditional calculation, rule modification, percentage application","conditional calculation, rule modification, percentage application",False,MOCKXYZ001_Set5_ResearchPapers,Evaluating,"First, let's determine the full publication matrix and calculate the scores.
+The completed publication matrix (1 if published, 0 if not):
+| Researcher | J1 (IF 5) | J2 (IF 4) | J3 (IF 3) | J4 (IF 2) | Total Papers |
+| :--------- | :-------- | :-------- | :-------- | :-------- | :----------- |
+| Anya       | 1         | 0         | 1         | 1         | 3            |
+| Ben        | 1         | 1         | 0         | 0         | 2            |
+| Clara      | 0         | 1         | 1         | 0         | 2            |
+| Dev        | 1         | 0         | 0         | 1         | 2            |
+| Elara      | 0         | 1         | 1         | 1         | 3            |
+Base AIS Calculation:
+Anya: (1*5) + (1*3) + (1*2) = 10.
+Ben: (1*5) + (1*4) = 9.
+Clara: (1*4) + (1*3) = 7.
+Dev: (1*5) + (1*2) = 7.
+Elara: (1*4) + (1*3) + (1*2) = 9.
+
+Solution:
+The original Collaboration Bonus rule (Anya & Ben) is replaced for this question.
+New rule: ""If Clara and Elara both publish in Journal J2, each of them receives a 10% bonus on their base AIS. No other collaboration bonuses apply.""
+Elara's publications: J2 (IF=4), J3 (IF=3), J4 (IF=2). Elara's Base AIS = 4+3+2 = 9.
+Clara's publications: J2 (IF=4), J3 (IF=3).
+Clara and Elara both published in Journal J2.
+Under the new rule, Elara receives a 10% bonus on her base AIS.
+Elara's new final AIS = 9 * 1.10 = 9.9.
+(Clara would also receive a bonus, but the question asks for Elara's AIS)."

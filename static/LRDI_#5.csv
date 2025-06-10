@@ -1,0 +1,496 @@
+"SectionName","SectionTimeLimitMinutes","QuestionUniqueID","QuestionNumberInSection","PassageOrSetID","PassageOrSetContent","QuestionPrompt","OptionAText","OptionBText","OptionCText","OptionDText","OptionAValue","OptionBValue","OptionCValue","OptionDValue","CorrectAnswerValue","QuestionType","Topic","SubTopic","DifficultyLevelPredicted","ConceptTested","DetailedTags","IsTITA","SetID","CognitiveSkillLevel","SolutionExplanation"
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q1","1","CATMOCKDLR001_Set1_GlobalCollaboration","The Global Research Collaboration Index (OCI) for five key research nations – Innovatia, Progressa, Erudita, Scientia, and Technologia – was assessed decennially in 2000, 2010, and 2020. The OCI, on a 0-100 scale, reflects a nation's overall engagement in international scientific collaboration. Each nation's OCI is a sum of its collaboration efforts across four primary fields: Quantum Physics (QP), Bio-Engineering (BE), AI & Robotics (AR), and Sustainable Energy (SE). The contribution of each field is expressed as a percentage of that nation's OCI for that year, and these percentages sum to 100% for each nation in each assessment year. OCI values are always integers.
+Collaboration Intensity Bands are defined as: Low (OCI 0-25), Medium (OCI 26-50), High (OCI 51-75), Very High (OCI 76-100).
+Partial OCI and Field Percentage Data:
+Nation	Year	OCI	QP (%)	BE (%)	AR (%)	SE (%)	OCI Band
+Innovatia	2000	60	25	30	?	25	High
+Innovatia	2010	?	20	25	30	25	High
+Innovatia	2020	85	15	?	35	30	Very High
+Progressa	2000	40	30	20	30	?	Medium
+Progressa	2010	55	?	25	25	25	High
+Progressa	2020	65	20	30	?	25	High
+Erudita	2000	75	10	40	30	20	?
+Erudita	2010	60	15	?	25	25	High
+Erudita	2020	50	?	30	20	30	Medium
+Scientia	2000	50	40	10	20	30	Medium
+Scientia	2010	?	35	15	25	25	Medium
+Scientia	2020	30	30	20	?	20	Medium
+Technologia	2000	30	20	?	30	30	Medium
+Technologia	2010	50	25	25	25	?	Medium
+Technologia	2020	70	?	30	20	20	High
+Additional Information:
+1.	For Innovatia in 2000, the OCI points from AR were 12. For Innovatia in 2020, the OCI points from BE were 17.
+2.	Innovatia's OCI in 2010 was 10 points higher than its OCI in 2000.
+3.	For Progressa, the percentage contribution of QP to its OCI in 2010 was 25%. The percentage contribution of AR to its OCI in 2020 was also 25%.
+4.	Erudita's OCI Band in 2000 was 'High'. The percentage contribution of BE to Erudita's OCI in 2010 was 35%.
+5.	Scientia's OCI in 2010 was 5 points lower than its OCI in 2000.
+6.	For Technologia, the OCI points from BE in 2000 were 6. The percentage contribution of SE to its OCI in 2010 was 25%.
+7.	Across all years, for any given nation, the percentage contribution of any single field to its OCI was always a multiple of 5%, and all OCI values are integers.","What was the OCI for Innovatia in 2010?","65","70","75","80","65","70","75","80","70","MCQ","Data Interpretation","Table Analysis, Logical Deduction","Moderate","Table completion using logical deduction and percentage calculations.","data extraction, clue integration, direct calculation","False","CATMOCKDLR001_Set1_GlobalCollaboration","Analyzing","Innovatia's OCI in 2000 is 60 (given in table). Clue 2 states Innovatia's OCI in 2010 was 10 points higher than its OCI in 2000. So, OCI (Innovatia, 2010) = 60 + 10 = 70."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q2","2","CATMOCKDLR001_Set1_GlobalCollaboration","The Global Research Collaboration Index (OCI) for five key research nations – Innovatia, Progressa, Erudita, Scientia, and Technologia – was assessed decennially in 2000, 2010, and 2020. The OCI, on a 0-100 scale, reflects a nation's overall engagement in international scientific collaboration. Each nation's OCI is a sum of its collaboration efforts across four primary fields: Quantum Physics (QP), Bio-Engineering (BE), AI & Robotics (AR), and Sustainable Energy (SE). The contribution of each field is expressed as a percentage of that nation's OCI for that year, and these percentages sum to 100% for each nation in each assessment year. OCI values are always integers.
+Collaboration Intensity Bands are defined as: Low (OCI 0-25), Medium (OCI 26-50), High (OCI 51-75), Very High (OCI 76-100).
+Partial OCI and Field Percentage Data:
+Nation	Year	OCI	QP (%)	BE (%)	AR (%)	SE (%)	OCI Band
+Innovatia	2000	60	25	30	?	25	High
+Innovatia	2010	?	20	25	30	25	High
+Innovatia	2020	85	15	?	35	30	Very High
+Progressa	2000	40	30	20	30	?	Medium
+Progressa	2010	55	?	25	25	25	High
+Progressa	2020	65	20	30	?	25	High
+Erudita	2000	75	10	40	30	20	?
+Erudita	2010	60	15	?	25	25	High
+Erudita	2020	50	?	30	20	30	Medium
+Scientia	2000	50	40	10	20	30	Medium
+Scientia	2010	?	35	15	25	25	Medium
+Scientia	2020	30	30	20	?	20	Medium
+Technologia	2000	30	20	?	30	30	Medium
+Technologia	2010	50	25	25	25	?	Medium
+Technologia	2020	70	?	30	20	20	High
+Additional Information:
+1.	For Innovatia in 2000, the OCI points from AR were 12. For Innovatia in 2020, the OCI points from BE were 17.
+2.	Innovatia's OCI in 2010 was 10 points higher than its OCI in 2000.
+3.	For Progressa, the percentage contribution of QP to its OCI in 2010 was 25%. The percentage contribution of AR to its OCI in 2020 was also 25%.
+4.	Erudita's OCI Band in 2000 was 'High'. The percentage contribution of BE to Erudita's OCI in 2010 was 35%.
+5.	Scientia's OCI in 2010 was 5 points lower than its OCI in 2000.
+6.	For Technologia, the OCI points from BE in 2000 were 6. The percentage contribution of SE to its OCI in 2010 was 25%.
+7.	Across all years, for any given nation, the percentage contribution of any single field to its OCI was always a multiple of 5%, and all OCI values are integers.","What was the percentage contribution of SE to Progressa's OCI in 2020?","20%","25%","30%","15%","20%","25%","30%","15%","25%","MCQ","Data Interpretation","Table Analysis, Percentage Calculation","Moderate","Table completion using logical deduction and percentage calculations.","clue interpretation, percentage calculation, sum to 100%","False","CATMOCKDLR001_Set1_GlobalCollaboration","Analyzing","For Progressa in 2020, the OCI is 65 (given). The table provides QP=20% and BE=30%. Clue 3 states that the percentage contribution of AR to its OCI in 2020 was 25%. Since the percentages must sum to 100%, SE% = 100% - (20% + 30% + 25%) = 100% - 75% = 25%."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q3","3","CATMOCKDLR001_Set1_GlobalCollaboration","The Global Research Collaboration Index (OCI) for five key research nations – Innovatia, Progressa, Erudita, Scientia, and Technologia – was assessed decennially in 2000, 2010, and 2020. The OCI, on a 0-100 scale, reflects a nation's overall engagement in international scientific collaboration. Each nation's OCI is a sum of its collaboration efforts across four primary fields: Quantum Physics (QP), Bio-Engineering (BE), AI & Robotics (AR), and Sustainable Energy (SE). The contribution of each field is expressed as a percentage of that nation's OCI for that year, and these percentages sum to 100% for each nation in each assessment year. OCI values are always integers.
+Collaboration Intensity Bands are defined as: Low (OCI 0-25), Medium (OCI 26-50), High (OCI 51-75), Very High (OCI 76-100).
+Partial OCI and Field Percentage Data:
+Nation	Year	OCI	QP (%)	BE (%)	AR (%)	SE (%)	OCI Band
+Innovatia	2000	60	25	30	?	25	High
+Innovatia	2010	?	20	25	30	25	High
+Innovatia	2020	85	15	?	35	30	Very High
+Progressa	2000	40	30	20	30	?	Medium
+Progressa	2010	55	?	25	25	25	High
+Progressa	2020	65	20	30	?	25	High
+Erudita	2000	75	10	40	30	20	?
+Erudita	2010	60	15	?	25	25	High
+Erudita	2020	50	?	30	20	30	Medium
+Scientia	2000	50	40	10	20	30	Medium
+Scientia	2010	?	35	15	25	25	Medium
+Scientia	2020	30	30	20	?	20	Medium
+Technologia	2000	30	20	?	30	30	Medium
+Technologia	2010	50	25	25	25	?	Medium
+Technologia	2020	70	?	30	20	20	High
+Additional Information:
+1.	For Innovatia in 2000, the OCI points from AR were 12. For Innovatia in 2020, the OCI points from BE were 17.
+2.	Innovatia's OCI in 2010 was 10 points higher than its OCI in 2000.
+3.	For Progressa, the percentage contribution of QP to its OCI in 2010 was 25%. The percentage contribution of AR to its OCI in 2020 was also 25%.
+4.	Erudita's OCI Band in 2000 was 'High'. The percentage contribution of BE to Erudita's OCI in 2010 was 35%.
+5.	Scientia's OCI in 2010 was 5 points lower than its OCI in 2000.
+6.	For Technologia, the OCI points from BE in 2000 were 6. The percentage contribution of SE to its OCI in 2010 was 25%.
+7.	Across all years, for any given nation, the percentage contribution of any single field to its OCI was always a multiple of 5%, and all OCI values are integers.","In 2020, which nation had the highest OCI points attributed to Sustainable Energy (SE)?","Innovatia","Progressa","Erudita","Technologia","Innovatia","Progressa","Erudita","Technologia","Innovatia","MCQ","Data Interpretation","Table Analysis, Comparative Analysis","Moderate","Table completion using logical deduction and percentage calculations.","derived value calculation, comparison across entities","False","CATMOCKDLR001_Set1_GlobalCollaboration","Analyzing","We need to calculate the OCI points from Sustainable Energy (SE) for each nation in 2020. SE OCI points = Total OCI * SE%.
+Innovatia: 85 * 0.30 = 25.5
+Progressa: 65 * 0.25 = 16.25
+Erudita: 50 * 0.30 = 15
+Scientia: 30 * 0.20 = 6
+Technologia: 70 * 0.20 = 14
+Comparing these values, Innovatia (25.5 points) had the highest OCI points attributed to SE in 2020."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q4","4","CATMOCKDLR001_Set1_GlobalCollaboration","The Global Research Collaboration Index (OCI) for five key research nations – Innovatia, Progressa, Erudita, Scientia, and Technologia – was assessed decennially in 2000, 2010, and 2020. The OCI, on a 0-100 scale, reflects a nation's overall engagement in international scientific collaboration. Each nation's OCI is a sum of its collaboration efforts across four primary fields: Quantum Physics (QP), Bio-Engineering (BE), AI & Robotics (AR), and Sustainable Energy (SE). The contribution of each field is expressed as a percentage of that nation's OCI for that year, and these percentages sum to 100% for each nation in each assessment year. OCI values are always integers.
+Collaboration Intensity Bands are defined as: Low (OCI 0-25), Medium (OCI 26-50), High (OCI 51-75), Very High (OCI 76-100).
+Partial OCI and Field Percentage Data:
+Nation	Year	OCI	QP (%)	BE (%)	AR (%)	SE (%)	OCI Band
+Innovatia	2000	60	25	30	?	25	High
+Innovatia	2010	?	20	25	30	25	High
+Innovatia	2020	85	15	?	35	30	Very High
+Progressa	2000	40	30	20	30	?	Medium
+Progressa	2010	55	?	25	25	25	High
+Progressa	2020	65	20	30	?	25	High
+Erudita	2000	75	10	40	30	20	?
+Erudita	2010	60	15	?	25	25	High
+Erudita	2020	50	?	30	20	30	Medium
+Scientia	2000	50	40	10	20	30	Medium
+Scientia	2010	?	35	15	25	25	Medium
+Scientia	2020	30	30	20	?	20	Medium
+Technologia	2000	30	20	?	30	30	Medium
+Technologia	2010	50	25	25	25	?	Medium
+Technologia	2020	70	?	30	20	20	High
+Additional Information:
+1.	For Innovatia in 2000, the OCI points from AR were 12. For Innovatia in 2020, the OCI points from BE were 17.
+2.	Innovatia's OCI in 2010 was 10 points higher than its OCI in 2000.
+3.	For Progressa, the percentage contribution of QP to its OCI in 2010 was 25%. The percentage contribution of AR to its OCI in 2020 was also 25%.
+4.	Erudita's OCI Band in 2000 was 'High'. The percentage contribution of BE to Erudita's OCI in 2010 was 35%.
+5.	Scientia's OCI in 2010 was 5 points lower than its OCI in 2000.
+6.	For Technologia, the OCI points from BE in 2000 were 6. The percentage contribution of SE to its OCI in 2010 was 25%.
+7.	Across all years, for any given nation, the percentage contribution of any single field to its OCI was always a multiple of 5%, and all OCI values are integers.","For Erudita, what was the absolute difference in OCI points attributed to Quantum Physics (QP) between 2000 and 2020?","1.5","2.0","2.5","3.0","1.5","2.0","2.5","3.0","2.5","MCQ","Data Interpretation","Table Analysis, Absolute Difference","Moderate","Table completion using logical deduction and percentage calculations.","multi-step calculation, data extraction","False","CATMOCKDLR001_Set1_GlobalCollaboration","Analyzing","For Erudita in 2000: OCI = 75, QP% = 10%. QP points = 75 * 0.10 = 7.5.
+For Erudita in 2020: OCI = 50. From our filled table, QP% = 20%. QP points = 50 * 0.20 = 10.
+The absolute difference in OCI points attributed to QP between 2000 and 2020 is |10 - 7.5| = 2.5."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q5","5","CATMOCKDLR001_Set1_GlobalCollaboration","The Global Research Collaboration Index (OCI) for five key research nations – Innovatia, Progressa, Erudita, Scientia, and Technologia – was assessed decennially in 2000, 2010, and 2020. The OCI, on a 0-100 scale, reflects a nation's overall engagement in international scientific collaboration. Each nation's OCI is a sum of its collaboration efforts across four primary fields: Quantum Physics (QP), Bio-Engineering (BE), AI & Robotics (AR), and Sustainable Energy (SE). The contribution of each field is expressed as a percentage of that nation's OCI for that year, and these percentages sum to 100% for each nation in each assessment year. OCI values are always integers.
+Collaboration Intensity Bands are defined as: Low (OCI 0-25), Medium (OCI 26-50), High (OCI 51-75), Very High (OCI 76-100).
+Partial OCI and Field Percentage Data:
+Nation	Year	OCI	QP (%)	BE (%)	AR (%)	SE (%)	OCI Band
+Innovatia	2000	60	25	30	?	25	High
+Innovatia	2010	?	20	25	30	25	High
+Innovatia	2020	85	15	?	35	30	Very High
+Progressa	2000	40	30	20	30	?	Medium
+Progressa	2010	55	?	25	25	25	High
+Progressa	2020	65	20	30	?	25	High
+Erudita	2000	75	10	40	30	20	?
+Erudita	2010	60	15	?	25	25	High
+Erudita	2020	50	?	30	20	30	Medium
+Scientia	2000	50	40	10	20	30	Medium
+Scientia	2010	?	35	15	25	25	Medium
+Scientia	2020	30	30	20	?	20	Medium
+Technologia	2000	30	20	?	30	30	Medium
+Technologia	2010	50	25	25	25	?	Medium
+Technologia	2020	70	?	30	20	20	High
+Additional Information:
+1.	For Innovatia in 2000, the OCI points from AR were 12. For Innovatia in 2020, the OCI points from BE were 17.
+2.	Innovatia's OCI in 2010 was 10 points higher than its OCI in 2000.
+3.	For Progressa, the percentage contribution of QP to its OCI in 2010 was 25%. The percentage contribution of AR to its OCI in 2020 was also 25%.
+4.	Erudita's OCI Band in 2000 was 'High'. The percentage contribution of BE to Erudita's OCI in 2010 was 35%.
+5.	Scientia's OCI in 2010 was 5 points lower than its OCI in 2000.
+6.	For Technologia, the OCI points from BE in 2000 were 6. The percentage contribution of SE to its OCI in 2010 was 25%.
+7.	Across all years, for any given nation, the percentage contribution of any single field to its OCI was always a multiple of 5%, and all OCI values are integers.","Which of the following groups of nations ALL experienced a continuous increase in their OCI from 2000 to 2010 to 2020?","Innovatia, Erudita","Progressa, Technologia","Innovatia, Progressa, Technologia","Innovatia, Scientia","Innovatia, Erudita","Progressa, Technologia","Innovatia, Progressa, Technologia","Innovatia, Scientia","Innovatia, Progressa, Technologia","MCQ","Data Interpretation","Table Analysis, Trend Analysis","Moderate","Table completion using logical deduction and percentage calculations.","trend identification, comparison across time","False","CATMOCKDLR001_Set1_GlobalCollaboration","Analyzing","We examine the OCI progression for each nation:
+Innovatia: 2000 (60) -> 2010 (70) -> 2020 (85). This is a continuous increase.
+Progressa: 2000 (40) -> 2010 (55) -> 2020 (65). This is a continuous increase.
+Erudita: 2000 (75) -> 2010 (60) -> 2020 (50). This is a continuous decrease.
+Scientia: 2000 (50) -> 2010 (45) -> 2020 (30). This is a continuous decrease.
+Technologia: 2000 (30) -> 2010 (50) -> 2020 (70). This is a continuous increase.
+Thus, Innovatia, Progressa, and Technologia all experienced a continuous increase in their OCI."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q6","6","CATMOCKDLR001_Set2_SmartCityRPS","Four city districts – Aerilon (A), Brynn (B), Cygnus (C), and Solara (S) – receive daily allocations of smart city resources. The allocation is quantified by a ""Resource Priority Score"" (RPS), an integer from 0 to 4, assigned to each district each day from Monday (Mon) to Friday (Fri). The total RPS for the entire city (sum of RPS for A, B, C, S) on any given day cannot exceed 10.
+Partial RPS Data:
+District	Mon	Tue	Wed	Thu	Fri	Total RPS (Week)
+Aerilon	3	A1	4	1	A2	10
+Brynn	B1	3	0	B2	3	9
+Cygnus	2	C1	C2	3	1	10
+Solara	4	S1	1	2	S2	13
+Total (City)	T1	T2	T3	T4	T5	42
+Additional Information:
+1.	The city operated at its maximum possible total RPS capacity (10) only on Monday. On all other days, the total city RPS was strictly less than 10 but was always at least 6.
+2.	The total city RPS was the same on Tuesday, Wednesday, Thursday, and Friday.
+3.	Cygnus and Aerilon never received an RPS of 0 on any day. Brynn received an RPS of 0 on exactly one day (which is shown in the table as Wednesday).
+4.	On Tuesday, Brynn's RPS was equal to Solara's RPS. Aerilon's RPS on Tuesday was 1.
+5.	The sum of RPS for Aerilon and Cygnus on Wednesday was 7. Brynn's RPS on Thursday was 2.
+6.	Solara's RPS on Friday was equal to its RPS on Tuesday.","What was the total city RPS on Thursday?","6","7","8","9","6","7","8","9","8","MCQ","Logical Reasoning","Constraint Satisfaction, Grid Puzzle Logic","Easy","Constraint satisfaction in a grid-based puzzle.","direct deduction from clues, sum constraints","False","CATMOCKDLR001_Set2_SmartCityRPS","Applying","As derived in step 3 of the main solution, the total city RPS on Monday is 10. The total for the week is 42. The totals for Tuesday, Wednesday, Thursday, and Friday are equal (X). So, 10 + 4X = 42, which gives 4X = 32, so X = 8. Thus, the total city RPS on Thursday was 8."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q7","7","CATMOCKDLR001_Set2_SmartCityRPS","Four city districts – Aerilon (A), Brynn (B), Cygnus (C), and Solara (S) – receive daily allocations of smart city resources. The allocation is quantified by a ""Resource Priority Score"" (RPS), an integer from 0 to 4, assigned to each district each day from Monday (Mon) to Friday (Fri). The total RPS for the entire city (sum of RPS for A, B, C, S) on any given day cannot exceed 10.
+Partial RPS Data:
+District	Mon	Tue	Wed	Thu	Fri	Total RPS (Week)
+Aerilon	3	A1	4	1	A2	10
+Brynn	B1	3	0	B2	3	9
+Cygnus	2	C1	C2	3	1	10
+Solara	4	S1	1	2	S2	13
+Total (City)	T1	T2	T3	T4	T5	42
+Additional Information:
+1.	The city operated at its maximum possible total RPS capacity (10) only on Monday. On all other days, the total city RPS was strictly less than 10 but was always at least 6.
+2.	The total city RPS was the same on Tuesday, Wednesday, Thursday, and Friday.
+3.	Cygnus and Aerilon never received an RPS of 0 on any day. Brynn received an RPS of 0 on exactly one day (which is shown in the table as Wednesday).
+4.	On Tuesday, Brynn's RPS was equal to Solara's RPS. Aerilon's RPS on Tuesday was 1.
+5.	The sum of RPS for Aerilon and Cygnus on Wednesday was 7. Brynn's RPS on Thursday was 2.
+6.	Solara's RPS on Friday was equal to its RPS on Tuesday.","What was Brynn's RPS on Monday (B1)?","0","1","2","3","0","1","2","3","1","MCQ","Logical Reasoning","Constraint Satisfaction, Grid Puzzle Logic","Moderate","Constraint satisfaction in a grid-based puzzle.","table completion, row sum logic","False","CATMOCKDLR001_Set2_SmartCityRPS","Analyzing","After filling in the grid based on all clues, Brynn's weekly total is 9. The known values for Brynn are Tue=3, Wed=0, Thu=2, Fri=3. So, B1 + 3 + 0 + 2 + 3 = 9. This simplifies to B1 + 8 = 9, which means B1 = 1. Therefore, Brynn's RPS on Monday was 1."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q8","8","CATMOCKDLR001_Set2_SmartCityRPS","Four city districts – Aerilon (A), Brynn (B), Cygnus (C), and Solara (S) – receive daily allocations of smart city resources. The allocation is quantified by a ""Resource Priority Score"" (RPS), an integer from 0 to 4, assigned to each district each day from Monday (Mon) to Friday (Fri). The total RPS for the entire city (sum of RPS for A, B, C, S) on any given day cannot exceed 10.
+Partial RPS Data:
+District	Mon	Tue	Wed	Thu	Fri	Total RPS (Week)
+Aerilon	3	A1	4	1	A2	10
+Brynn	B1	3	0	B2	3	9
+Cygnus	2	C1	C2	3	1	10
+Solara	4	S1	1	2	S2	13
+Total (City)	T1	T2	T3	T4	T5	42
+Additional Information:
+1.	The city operated at its maximum possible total RPS capacity (10) only on Monday. On all other days, the total city RPS was strictly less than 10 but was always at least 6.
+2.	The total city RPS was the same on Tuesday, Wednesday, Thursday, and Friday.
+3.	Cygnus and Aerilon never received an RPS of 0 on any day. Brynn received an RPS of 0 on exactly one day (which is shown in the table as Wednesday).
+4.	On Tuesday, Brynn's RPS was equal to Solara's RPS. Aerilon's RPS on Tuesday was 1.
+5.	The sum of RPS for Aerilon and Cygnus on Wednesday was 7. Brynn's RPS on Thursday was 2.
+6.	Solara's RPS on Friday was equal to its RPS on Tuesday.","What was Aerilon's RPS on Friday (A2)?","0","1","2","3","0","1","2","3","1","MCQ","Logical Reasoning","Constraint Satisfaction, Grid Puzzle Logic","Moderate","Constraint satisfaction in a grid-based puzzle.","table completion, row sum logic","False","CATMOCKDLR001_Set2_SmartCityRPS","Analyzing","After filling in the grid based on all clues, Aerilon's weekly total is 10. The known values for Aerilon are Mon=3, Tue=1, Wed=4, Thu=1. So, 3 + 1 + 4 + 1 + A2 = 10. This simplifies to 9 + A2 = 10, which means A2 = 1. Therefore, Aerilon's RPS on Friday was 1."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q9","9","CATMOCKDLR001_Set2_SmartCityRPS","Four city districts – Aerilon (A), Brynn (B), Cygnus (C), and Solara (S) – receive daily allocations of smart city resources. The allocation is quantified by a ""Resource Priority Score"" (RPS), an integer from 0 to 4, assigned to each district each day from Monday (Mon) to Friday (Fri). The total RPS for the entire city (sum of RPS for A, B, C, S) on any given day cannot exceed 10.
+Partial RPS Data:
+District	Mon	Tue	Wed	Thu	Fri	Total RPS (Week)
+Aerilon	3	A1	4	1	A2	10
+Brynn	B1	3	0	B2	3	9
+Cygnus	2	C1	C2	3	1	10
+Solara	4	S1	1	2	S2	13
+Total (City)	T1	T2	T3	T4	T5	42
+Additional Information:
+1.	The city operated at its maximum possible total RPS capacity (10) only on Monday. On all other days, the total city RPS was strictly less than 10 but was always at least 6.
+2.	The total city RPS was the same on Tuesday, Wednesday, Thursday, and Friday.
+3.	Cygnus and Aerilon never received an RPS of 0 on any day. Brynn received an RPS of 0 on exactly one day (which is shown in the table as Wednesday).
+4.	On Tuesday, Brynn's RPS was equal to Solara's RPS. Aerilon's RPS on Tuesday was 1.
+5.	The sum of RPS for Aerilon and Cygnus on Wednesday was 7. Brynn's RPS on Thursday was 2.
+6.	Solara's RPS on Friday was equal to its RPS on Tuesday.","On how many days did Solara have an RPS greater than Cygnus's RPS?","1","2","3","4","1","2","3","4","3","MCQ","Logical Reasoning","Constraint Satisfaction, Grid Puzzle Logic","Moderate","Constraint satisfaction in a grid-based puzzle.","cell-wise comparison, completed table analysis","False","CATMOCKDLR001_Set2_SmartCityRPS","Analyzing","We compare Solara's (S) RPS with Cygnus's (C) RPS for each day from the completed table:
+Monday: S=4, C=2 (S > C)
+Tuesday: S=3, C=1 (S > C)
+Wednesday: S=1, C=3 (S < C)
+Thursday: S=2, C=3 (S < C)
+Friday: S=3, C=1 (S > C)
+Solara had a greater RPS than Cygnus on Monday, Tuesday, and Friday, which is 3 days."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q10","10","CATMOCKDLR001_Set3_ProjectPerformance","Five distinct projects (P1 to P5) were undertaken by teams at Innovate University. Each project team consisted of exactly three students. Each project was evaluated on two criteria: Innovation Score (IS) and Execution Score (ES), both integers out of 50. The Project Impact Score (PIS) for a project is the sum of its IS and ES. PIS scores are categorized as: High (>80), Medium (61-80 inclusive), or Low (<=60). All IS and ES values are positive integers.
+Partial Score Data:
+Project	IS	ES	PIS	PIS Category
+P1	40	E1	P1S	?
+P2	I2	E2	P2S	Medium
+P3	45	E3	P3S	?
+P4	I4	30	55	Low
+P5	50	40	P5S	High
+Additional Information:
+1.	The average Project Impact Score (PIS) across all five projects was 72.
+2.	Exactly two projects were categorized as 'High' impact, and exactly two projects were categorized as 'Medium' impact.
+3.	For exactly two projects, the Innovation Score (IS) was greater than the Execution Score (ES). One of these was P5.
+4.	No project had its IS equal to its ES. All IS and ES values (which are positive integers) across all projects were multiples of 5.
+5.	The Execution Score for P1 was 5 points higher than its Innovation Score. The Innovation Score for P2 was 30.
+6.	The Project Impact Score for P3 was the same as that for P2.
+7.	The Innovation Score for P4 was 25.","What was the Execution Score for Project P1 (E1)?","35","40","45","50","35","40","45","50","45","MCQ","Data Interpretation","Table Analysis, Equation Solving from Clues","Moderate","Logical deduction with arithmetic constraints (sum, average).","sum and average, multi-step deduction, category assignment","False","CATMOCKDLR001_Set3_ProjectPerformance","Analyzing","From the problem table, P1's Innovation Score (IS) is 40. Clue 5 states that the Execution Score for P1 (E1) was 5 points higher than its Innovation Score. So, E1 = 40 + 5 = 45."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q11","11","CATMOCKDLR001_Set3_ProjectPerformance","Five distinct projects (P1 to P5) were undertaken by teams at Innovate University. Each project team consisted of exactly three students. Each project was evaluated on two criteria: Innovation Score (IS) and Execution Score (ES), both integers out of 50. The Project Impact Score (PIS) for a project is the sum of its IS and ES. PIS scores are categorized as: High (>80), Medium (61-80 inclusive), or Low (<=60). All IS and ES values are positive integers.
+Partial Score Data:
+Project	IS	ES	PIS	PIS Category
+P1	40	E1	P1S	?
+P2	I2	E2	P2S	Medium
+P3	45	E3	P3S	?
+P4	I4	30	55	Low
+P5	50	40	P5S	High
+Additional Information:
+1.	The average Project Impact Score (PIS) across all five projects was 72.
+2.	Exactly two projects were categorized as 'High' impact, and exactly two projects were categorized as 'Medium' impact.
+3.	For exactly two projects, the Innovation Score (IS) was greater than the Execution Score (ES). One of these was P5.
+4.	No project had its IS equal to its ES. All IS and ES values (which are positive integers) across all projects were multiples of 5.
+5.	The Execution Score for P1 was 5 points higher than its Innovation Score. The Innovation Score for P2 was 30.
+6.	The Project Impact Score for P3 was the same as that for P2.
+7.	The Innovation Score for P4 was 25.","What was the Project Impact Score for Project P2 (P2S)?","60","65","70","75","60","65","70","75","65","MCQ","Data Interpretation","Table Analysis, Equation Solving from Clues","Moderate","Logical deduction with arithmetic constraints (sum, average).","derived value calculation, sum constraints","False","CATMOCKDLR001_Set3_ProjectPerformance","Analyzing","From Clue 1, the total PIS = 72 * 5 = 360. We can find the PIS for P1 (40+45=85), P4 (55), and P5 (50+40=90). Let P2S = x. From Clue 6, P3S = x. So, 360 = P1S + P2S + P3S + P4S + P5S => 360 = 85 + x + x + 55 + 90. This gives 360 = 230 + 2x, so 2x = 130, and x = 65. Thus, P2S = 65."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q12","12","CATMOCKDLR001_Set3_ProjectPerformance","Five distinct projects (P1 to P5) were undertaken by teams at Innovate University. Each project team consisted of exactly three students. Each project was evaluated on two criteria: Innovation Score (IS) and Execution Score (ES), both integers out of 50. The Project Impact Score (PIS) for a project is the sum of its IS and ES. PIS scores are categorized as: High (>80), Medium (61-80 inclusive), or Low (<=60). All IS and ES values are positive integers.
+Partial Score Data:
+Project	IS	ES	PIS	PIS Category
+P1	40	E1	P1S	?
+P2	I2	E2	P2S	Medium
+P3	45	E3	P3S	?
+P4	I4	30	55	Low
+P5	50	40	P5S	High
+Additional Information:
+1.	The average Project Impact Score (PIS) across all five projects was 72.
+2.	Exactly two projects were categorized as 'High' impact, and exactly two projects were categorized as 'Medium' impact.
+3.	For exactly two projects, the Innovation Score (IS) was greater than the Execution Score (ES). One of these was P5.
+4.	No project had its IS equal to its ES. All IS and ES values (which are positive integers) across all projects were multiples of 5.
+5.	The Execution Score for P1 was 5 points higher than its Innovation Score. The Innovation Score for P2 was 30.
+6.	The Project Impact Score for P3 was the same as that for P2.
+7.	The Innovation Score for P4 was 25.","Which PIS Category did Project P3 fall into?","High","Medium","Low","Cannot be determined","High","Medium","Low","Cannot be determined","Medium","MCQ","Data Interpretation","Table Analysis, Category Definition","Easy","Logical deduction with arithmetic constraints (sum, average).","applying definitions, reading derived table","False","CATMOCKDLR001_Set3_ProjectPerformance","Applying","From Clue 6, P3's PIS is the same as P2's PIS. We calculated P2's PIS to be 65. PIS scores are categorized as Medium if they are between 61-80 inclusive. Since 61 <= 65 <= 80, Project P3 falls into the Medium category."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q13","13","CATMOCKDLR001_Set3_ProjectPerformance","Five distinct projects (P1 to P5) were undertaken by teams at Innovate University. Each project team consisted of exactly three students. Each project was evaluated on two criteria: Innovation Score (IS) and Execution Score (ES), both integers out of 50. The Project Impact Score (PIS) for a project is the sum of its IS and ES. PIS scores are categorized as: High (>80), Medium (61-80 inclusive), or Low (<=60). All IS and ES values are positive integers.
+Partial Score Data:
+Project	IS	ES	PIS	PIS Category
+P1	40	E1	P1S	?
+P2	I2	E2	P2S	Medium
+P3	45	E3	P3S	?
+P4	I4	30	55	Low
+P5	50	40	P5S	High
+Additional Information:
+1.	The average Project Impact Score (PIS) across all five projects was 72.
+2.	Exactly two projects were categorized as 'High' impact, and exactly two projects were categorized as 'Medium' impact.
+3.	For exactly two projects, the Innovation Score (IS) was greater than the Execution Score (ES). One of these was P5.
+4.	No project had its IS equal to its ES. All IS and ES values (which are positive integers) across all projects were multiples of 5.
+5.	The Execution Score for P1 was 5 points higher than its Innovation Score. The Innovation Score for P2 was 30.
+6.	The Project Impact Score for P3 was the same as that for P2.
+7.	The Innovation Score for P4 was 25.","What was the Execution Score for Project P3 (E3)?","15","20","25","30","15","20","25","30","20","MCQ","Data Interpretation","Table Analysis, Equation Solving from Clues","Moderate","Logical deduction with arithmetic constraints (sum, average).","derived value calculation, consistency check","False","CATMOCKDLR001_Set3_ProjectPerformance","Analyzing","We know P3's PIS is 65 and its IS is 45 (from the table). Since PIS = IS + ES, the Execution Score for P3 (E3) is P3S - P3 IS = 65 - 45 = 20."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q14","14","CATMOCKDLR001_Set3_ProjectPerformance","Five distinct projects (P1 to P5) were undertaken by teams at Innovate University. Each project team consisted of exactly three students. Each project was evaluated on two criteria: Innovation Score (IS) and Execution Score (ES), both integers out of 50. The Project Impact Score (PIS) for a project is the sum of its IS and ES. PIS scores are categorized as: High (>80), Medium (61-80 inclusive), or Low (<=60). All IS and ES values are positive integers.
+Partial Score Data:
+Project	IS	ES	PIS	PIS Category
+P1	40	E1	P1S	?
+P2	I2	E2	P2S	Medium
+P3	45	E3	P3S	?
+P4	I4	30	55	Low
+P5	50	40	P5S	High
+Additional Information:
+1.	The average Project Impact Score (PIS) across all five projects was 72.
+2.	Exactly two projects were categorized as 'High' impact, and exactly two projects were categorized as 'Medium' impact.
+3.	For exactly two projects, the Innovation Score (IS) was greater than the Execution Score (ES). One of these was P5.
+4.	No project had its IS equal to its ES. All IS and ES values (which are positive integers) across all projects were multiples of 5.
+5.	The Execution Score for P1 was 5 points higher than its Innovation Score. The Innovation Score for P2 was 30.
+6.	The Project Impact Score for P3 was the same as that for P2.
+7.	The Innovation Score for P4 was 25.","How many projects had an Execution Score (ES) of 35 or more?","1","2","3","4","1","2","3","4","3","MCQ","Data Interpretation","Table Analysis, Counting","Moderate","Logical deduction with arithmetic constraints (sum, average).","data scanning, condition checking","False","CATMOCKDLR001_Set3_ProjectPerformance","Analyzing","The Execution Scores (ES) for the projects are:
+P1: ES = 45
+P2: ES = 35
+P3: ES = 20
+P4: ES = 30
+P5: ES = 40
+Projects with an ES of 35 or more are P1 (45), P2 (35), and P5 (40). There are 3 such projects."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q15","15","CATMOCKDLR001_Set4_TournamentStrategy","Four players – Kael, Lyra, Orion, and Vega – participated in a 6-round tournament. In each round, the players formed two disjoint pairs, with each player playing exactly one game. A player never faced the same opponent in two consecutive rounds. All players started with 0 points.
+Game outcomes were Win (2 base points for winner, 0 for loser) or Loss. Before each game, one of the two players in a pair could issue a ""Challenge.""
+•	If a Challenger won, they received an additional +1 bonus point (total 3 points for the game).
+•	If a Challenger lost, their opponent (the winner) received an additional +1 bonus point (total 3 points for the game for the opponent).
+•	If no Challenge was issued, the winner received 2 base points and the loser 0.
+End-of-Round Points Table (Partial Information):
+The table shows each player's total points at the end of certain rounds. Some entries are specific values. 'Min' indicates that the score at the end of this round was the player's minimum score achieved across all six rounds (R1-R6). 'Max' indicates that the score at the end of this round was the player's maximum score achieved across all six rounds (R1-R6). If a specific score is given, it's the score for that round.
+Player	R0	R1	R2	R3	R4	R5	R6
+Kael	0	Min	3	P3K	5	P5K	Max
+Lyra	0	0	P2L	5	Max	7	7
+Orion	0	P1O	5	P3O	5	P5O	P6O
+Vega	0	0	Min	0	3	Max	P6V
+Additional Information:
+1.	Kael's score at the end of R1 was 3. Vega's score at the end of R2 was 0, and this was her minimum score for the entire tournament (R1-R6).
+2.	Lyra's score at the end of R4 was 7, and this was her maximum score for the entire tournament (R1-R6). Orion's score at the end of R6 was 8. Vega's score at the end of R6 was 5.
+3.	Kael and Orion had the same score at the end of R3, which was 5 points. Lyra's score at the end of R2 was 2.
+4.	A challenge was issued in exactly one game pair in each of the six rounds. The player who issued the challenge won the game in all six instances where a challenge was made.
+5.	Kael played Lyra in Round 1, and Kael won by issuing a challenge. Orion played Vega in Round 1 (this game did not have a challenge).
+6.	In Round 6, Kael played Vega (this game did not have a challenge). Lyra played Orion, and Orion won by issuing a challenge.
+7.	The total sum of points of all four players at the end of Round 2 was 10. The total sum of points of all four players at the end of Round 5 was 25.","Who did Kael play against in Round 2?","Lyra","Orion","Vega","Cannot be determined","Lyra","Orion","Vega","Cannot be determined","Orion","MCQ","Logical Reasoning","Games and Tournaments, Scheduling","Moderate","State-based reasoning in a tournament setting.","round-wise deduction, pairing constraints, point tracking","False","CATMOCKDLR001_Set4_TournamentStrategy","Analyzing","From Round 1 to Round 2, the scores changed as follows: Kael (3->3) gained +0, Lyra (0->2) gained +2, Orion (2->5) gained +3, Vega (0->0) gained +0. A +3 gain means a challenged win (by Orion) and a +2 gain means a normal win (by Lyra). Kael and Vega both lost. Thus, Orion must have played Kael (and won with a challenge), and Lyra must have played Vega (and won normally). This is consistent with the non-repetition of pairings from R1 (K-L, O-V). So Kael played Orion in R2."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q16","16","CATMOCKDLR001_Set4_TournamentStrategy","Four players – Kael, Lyra, Orion, and Vega – participated in a 6-round tournament. In each round, the players formed two disjoint pairs, with each player playing exactly one game. A player never faced the same opponent in two consecutive rounds. All players started with 0 points.
+Game outcomes were Win (2 base points for winner, 0 for loser) or Loss. Before each game, one of the two players in a pair could issue a ""Challenge.""
+•	If a Challenger won, they received an additional +1 bonus point (total 3 points for the game).
+•	If a Challenger lost, their opponent (the winner) received an additional +1 bonus point (total 3 for the opponent).
+•	If no Challenge was issued, the winner received 2 base points and the loser 0.
+End-of-Round Points Table (Partial Information):
+The table shows each player's total points at the end of certain rounds. Some entries are specific values. 'Min' indicates that the score at the end of this round was the player's minimum score achieved across all six rounds (R1-R6). 'Max' indicates that the score at the end of this round was the player's maximum score achieved across all six rounds (R1-R6). If a specific score is given, it's the score for that round.
+Player	R0	R1	R2	R3	R4	R5	R6
+Kael	0	Min	3	P3K	5	P5K	Max
+Lyra	0	0	P2L	5	Max	7	7
+Orion	0	P1O	5	P3O	5	P5O	P6O
+Vega	0	0	Min	0	3	Max	P6V
+Additional Information:
+1.	Kael's score at the end of R1 was 3. Vega's score at the end of R2 was 0, and this was her minimum score for the entire tournament (R1-R6).
+2.	Lyra's score at the end of R4 was 7, and this was her maximum score for the entire tournament (R1-R6). Orion's score at the end of R6 was 8. Vega's score at the end of R6 was 5.
+3.	Kael and Orion had the same score at the end of R3, which was 5 points. Lyra's score at the end of R2 was 2.
+4.	A challenge was issued in exactly one game pair in each of the six rounds. The player who issued the challenge won the game in all six instances where a challenge was made.
+5.	Kael played Lyra in Round 1, and Kael won by issuing a challenge. Orion played Vega in Round 1 (this game did not have a challenge).
+6.	In Round 6, Kael played Vega (this game did not have a challenge). Lyra played Orion, and Orion won by issuing a challenge.
+7.	The total sum of points of all four players at the end of Round 2 was 10. The total sum of points of all four players at the end of Round 5 was 25.","What was Vega's score at the end of Round 5 (which was also her tournament maximum)?","3","4","5","6","3","4","5","6","5","MCQ","Logical Reasoning","Games and Tournaments, Point Tracking","Easy","State-based reasoning in a tournament setting.","direct extraction from solved schedule","False","CATMOCKDLR001_Set4_TournamentStrategy","Applying","Following the round-by-round score deduction, Vega's score progression was: R0(0) -> R1(0) -> R2(0) -> R3(0) -> R4(3). In Round 5, the pairings were (K-O) and (L-V). Vega beat Lyra in a normal game, gaining +2 points. Her score at the end of Round 5 was 3 + 2 = 5."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q17","17","CATMOCKDLR001_Set4_TournamentStrategy","Four players – Kael, Lyra, Orion, and Vega – participated in a 6-round tournament. In each round, the players formed two disjoint pairs, with each player playing exactly one game. A player never faced the same opponent in two consecutive rounds. All players started with 0 points.
+Game outcomes were Win (2 base points for winner, 0 for loser) or Loss. Before each game, one of the two players in a pair could issue a ""Challenge.""
+•	If a Challenger won, they received an additional +1 bonus point (total 3 points for the game).
+•	If a Challenger lost, their opponent (the winner) received an additional +1 bonus point (total 3 for the opponent).
+•	If no Challenge was issued, the winner received 2 base points and the loser 0.
+End-of-Round Points Table (Partial Information):
+The table shows each player's total points at the end of certain rounds. Some entries are specific values. 'Min' indicates that the score at the end of this round was the player's minimum score achieved across all six rounds (R1-R6). 'Max' indicates that the score at the end of this round was the player's maximum score achieved across all six rounds (R1-R6). If a specific score is given, it's the score for that round.
+Player	R0	R1	R2	R3	R4	R5	R6
+Kael	0	Min	3	P3K	5	P5K	Max
+Lyra	0	0	P2L	5	Max	7	7
+Orion	0	P1O	5	P3O	5	P5O	P6O
+Vega	0	0	Min	0	3	Max	P6V
+Additional Information:
+1.	Kael's score at the end of R1 was 3. Vega's score at the end of R2 was 0, and this was her minimum score for the entire tournament (R1-R6).
+2.	Lyra's score at the end of R4 was 7, and this was her maximum score for the entire tournament (R1-R6). Orion's score at the end of R6 was 8. Vega's score at the end of R6 was 5.
+3.	Kael and Orion had the same score at the end of R3, which was 5 points. Lyra's score at the end of R2 was 2.
+4.	A challenge was issued in exactly one game pair in each of the six rounds. The player who issued the challenge won the game in all six instances where a challenge was made.
+5.	Kael played Lyra in Round 1, and Kael won by issuing a challenge. Orion played Vega in Round 1 (this game did not have a challenge).
+6.	In Round 6, Kael played Vega (this game did not have a challenge). Lyra played Orion, and Orion won by issuing a challenge.
+7.	The total sum of points of all four players at the end of Round 2 was 10. The total sum of points of all four players at the end of Round 5 was 25.","In which round(s) did Orion issue a challenge and win?","Round 2 only","Round 6 only","Round 2 and Round 6","Round 4 only","Round 2 only","Round 6 only","Round 2 and Round 6","Round 4 only","Round 2 and Round 6","MCQ","Logical Reasoning","Games and Tournaments, Rule Application","Moderate","State-based reasoning in a tournament setting.","identifying specific game events, challenge mechanism","False","CATMOCKDLR001_Set4_TournamentStrategy","Analyzing","We track who issued a challenge and won each round based on the +3 point gains:
+R1: Kael (+3).
+R2: Orion (+3).
+R3: Lyra (+3).
+R4: Vega (+3).
+R5: Kael (+3).
+R6: Orion (+3, as given in Clue 6).
+Therefore, Orion issued a challenge and won in Round 2 and Round 6."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q18","18","CATMOCKDLR001_Set4_TournamentStrategy","Four players – Kael, Lyra, Orion, and Vega – participated in a 6-round tournament. In each round, the players formed two disjoint pairs, with each player playing exactly one game. A player never faced the same opponent in two consecutive rounds. All players started with 0 points.
+Game outcomes were Win (2 base points for winner, 0 for loser) or Loss. Before each game, one of the two players in a pair could issue a ""Challenge.""
+•	If a Challenger won, they received an additional +1 bonus point (total 3 points for the game).
+•	If a Challenger lost, their opponent (the winner) received an additional +1 bonus point (total 3 for the opponent).
+•	If no Challenge was issued, the winner received 2 base points and the loser 0.
+End-of-Round Points Table (Partial Information):
+The table shows each player's total points at the end of certain rounds. Some entries are specific values. 'Min' indicates that the score at the end of this round was the player's minimum score achieved across all six rounds (R1-R6). 'Max' indicates that the score at the end of this round was the player's maximum score achieved across all six rounds (R1-R6). If a specific score is given, it's the score for that round.
+Player	R0	R1	R2	R3	R4	R5	R6
+Kael	0	Min	3	P3K	5	P5K	Max
+Lyra	0	0	P2L	5	Max	7	7
+Orion	0	P1O	5	P3O	5	P5O	P6O
+Vega	0	0	Min	0	3	Max	P6V
+Additional Information:
+1.	Kael's score at the end of R1 was 3. Vega's score at the end of R2 was 0, and this was her minimum score for the entire tournament (R1-R6).
+2.	Lyra's score at the end of R4 was 7, and this was her maximum score for the entire tournament (R1-R6). Orion's score at the end of R6 was 8. Vega's score at the end of R6 was 5.
+3.	Kael and Orion had the same score at the end of R3, which was 5 points. Lyra's score at the end of R2 was 2.
+4.	A challenge was issued in exactly one game pair in each of the six rounds. The player who issued the challenge won the game in all six instances where a challenge was made.
+5.	Kael played Lyra in Round 1, and Kael won by issuing a challenge. Orion played Vega in Round 1 (this game did not have a challenge).
+6.	In Round 6, Kael played Vega (this game did not have a challenge). Lyra played Orion, and Orion won by issuing a challenge.
+7.	The total sum of points of all four players at the end of Round 2 was 10. The total sum of points of all four players at the end of Round 5 was 25.","What was the highest score achieved by Kael during the tournament (at the end of any round R1-R6)?","7","8","9","10","7","8","9","10","10","MCQ","Logical Reasoning","Games and Tournaments, Extremes","Moderate","State-based reasoning in a tournament setting.","tracking maximum values, overall tournament state","False","CATMOCKDLR001_Set4_TournamentStrategy","Analyzing","Kael's scores at the end of each round were: R1=3, R2=3, R3=5, R4=5, R5=8, R6=10. The highest score Kael achieved was 10, at the end of Round 6."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q19","19","CATMOCKDLR001_Set5_ArtefactDating","An archaeology team is analyzing five ancient artefacts (A1, A2, A3, A4, A5) discovered at a single excavation site. Each artefact is believed to have originated from one of four possible ancient civilizations (C1: Indus Valley, C2: Mesopotamian, C3: Egyptian, C4: Minoan) and belongs to one of three distinct historical periods (P1: Early Bronze Age, P2: Middle Bronze Age, P3: Late Bronze Age). Each artefact has a unique combination of Civilization and Period. The team uses two primary dating techniques: Carbon Dating (CD) which gives a year range, and Thermoluminescence (TL) which gives a specific estimated year. An artefact's ""Confidence Score"" (CS) for its assigned period is derived from how well the CD range and TL year align with established period timelines.
+Established Period Timelines:
+•	P1 (Early Bronze Age): 3300 BCE – 2000 BCE (inclusive of 2000 BCE)
+•	P2 (Middle Bronze Age): 2000 BCE – 1600 BCE (exclusive of 2000 BCE, inclusive of 1600 BCE)
+•	P3 (Late Bronze Age): 1600 BCE – 1200 BCE (exclusive of 1600 BCE, inclusive of 1200 BCE)
+Artefact Dating Data & Confidence Score Rules:
+•	An artefact is assigned to Period Px if its TL date falls strictly within Px's start and end years (or is equal to the end year if Px is P1, P2, P3; or equal to start year if Px is P1) AND its CD range has a ""substantial overlap"" with Px.
+•	""Substantial overlap"" means at least 50% (i.e., >= 50%) of the CD range's length falls within the years of Period Px.
+•	Confidence Score (CS) = (Overlap_Years_CD_with_Assigned_Period / Length_of_CD_Range) * 100. CS is rounded to the nearest integer. If the conditions for assignment to any period are not met, the artefact is ""Unclassified"" for period and CS=0.
+Artefact Data:
+Artefact	Civilization	CD Range (BCE)	TL Date (BCE)	Assigned Period	CS
+A1	C1	3100 – 2050	2100	?	?
+A2	?	2200 – 1800	1900	P2	50
+A3	C3	1750 – 1250	1550	?	?
+A4	C2	1600 – 1000	?	P3	67
+A5	?	3200 – 3000	3100	P1	100
+Additional Information:
+1.	No two artefacts are from the same Civilization AND the same Period.
+2.	A2 is from Civilization C4 (Minoan).
+3.	The TL Date for A4 is 1400 BCE.
+4.	The actual properties and data of Artefact A1 (Civilization C1, CD Range 3100-2050 BCE, TL Date 2100 BCE) resulted in it being definitively assigned to Period P1 for the purpose of uniqueness checks with other artefacts.
+5.	Exactly two artefacts are from Civilization C3 (Egyptian). One of these is A3. The other C3 artefact is from Period P1.
+6.	Artefact A5 is from Civilization C3 (Egyptian).","What is the Confidence Score (CS) for Artefact A1, based on its listed CD Range and TL Date when evaluated against Period P1?","0 (Unclassified for P1)","83","95","100","0 (Unclassified for P1)","83","95","100","100","MCQ","Data Interpretation","Rule-based Calculation, Logical Deduction","Difficult","Application of complex, multi-conditional rules for classification and scoring.","date interpretation, overlap calculation, percentage rule, clue evaluation","False","CATMOCKDLR001_Set5_ArtefactDating","Evaluating","Artefact A1: Civ C1, CD Range 3100–2050 BCE (Length 1050 years), TL Date 2100 BCE. Clue 4 states A1 was definitively assigned to Period P1.
+Period P1 is [3300 BCE, 2000 BCE] (i.e., dates X such that X <= 3300 BCE and X >= 2000 BCE). The TL Date 2100 BCE falls within P1.
+The CD Range [3100 BCE, 2050 BCE] (i.e., dates Y such that Y <= 3100 BCE and Y >= 2050 BCE) is entirely contained within P1 (as 3300 >= 3100 and 2050 >= 2000).
+Thus, the Overlap Length is equal to the CD Range Length, which is 1050 years.
+The substantial overlap condition (Overlap Length / CD Range Length >= 0.5) is met: 1050 / 1050 = 1.0 >= 0.5.
+Confidence Score (CS) = (Overlap Length / CD Range Length) * 100 = (1050 / 1050) * 100 = 100."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q20","20","CATMOCKDLR001_Set5_ArtefactDating","An archaeology team is analyzing five ancient artefacts (A1, A2, A3, A4, A5) discovered at a single excavation site. Each artefact is believed to have originated from one of four possible ancient civilizations (C1: Indus Valley, C2: Mesopotamian, C3: Egyptian, C4: Minoan) and belongs to one of three distinct historical periods (P1: Early Bronze Age, P2: Middle Bronze Age, P3: Late Bronze Age). Each artefact has a unique combination of Civilization and Period. The team uses two primary dating techniques: Carbon Dating (CD) which gives a year range, and Thermoluminescence (TL) which gives a specific estimated year. An artefact's ""Confidence Score"" (CS) for its assigned period is derived from how well the CD range and TL year align with established period timelines.
+Established Period Timelines:
+•	P1 (Early Bronze Age): 3300 BCE – 2000 BCE (inclusive of 2000 BCE)
+•	P2 (Middle Bronze Age): 2000 BCE – 1600 BCE (exclusive of 2000 BCE, inclusive of 1600 BCE)
+•	P3 (Late Bronze Age): 1600 BCE – 1200 BCE (exclusive of 1600 BCE, inclusive of 1200 BCE)
+Artefact Dating Data & Confidence Score Rules:
+•	An artefact is assigned to Period Px if its TL date falls strictly within Px's start and end years (or is equal to the end year if Px is P1, P2, P3; or equal to start year if Px is P1) AND its CD range has a ""substantial overlap"" with Px.
+•	""Substantial overlap"" means at least 50% (i.e., >= 50%) of the CD range's length falls within the years of Period Px.
+•	Confidence Score (CS) = (Overlap_Years_CD_with_Assigned_Period / Length_of_CD_Range) * 100. CS is rounded to the nearest integer. If the conditions for assignment to any period are not met, the artefact is ""Unclassified"" for period and CS=0.
+Artefact Data:
+Artefact	Civilization	CD Range (BCE)	TL Date (BCE)	Assigned Period	CS
+A1	C1	3100 – 2050	2100	?	?
+A2	?	2200 – 1800	1900	P2	50
+A3	C3	1750 – 1250	1550	?	?
+A4	C2	1600 – 1000	?	P3	67
+A5	?	3200 – 3000	3100	P1	100
+Additional Information:
+1.	No two artefacts are from the same Civilization AND the same Period.
+2.	A2 is from Civilization C4 (Minoan).
+3.	The TL Date for A4 is 1400 BCE.
+4.	The actual properties and data of Artefact A1 (Civilization C1, CD Range 3100-2050 BCE, TL Date 2100 BCE) resulted in it being definitively assigned to Period P1 for the purpose of uniqueness checks with other artefacts.
+5.	Exactly two artefacts are from Civilization C3 (Egyptian). One of these is A3. The other C3 artefact is from Period P1.
+6.	Artefact A5 is from Civilization C3 (Egyptian).","Which Period is Artefact A3 assigned to, based on its listed CD Range and TL Date?","P1 (Early Bronze Age)","P2 (Middle Bronze Age)","P3 (Late Bronze Age)","Unclassified","P1 (Early Bronze Age)","P2 (Middle Bronze Age)","P3 (Late Bronze Age)","Unclassified","P3 (Late Bronze Age)","MCQ","Data Interpretation","Rule-based Calculation, Logical Deduction","Moderate","Application of complex, multi-conditional rules for classification and scoring.","period assignment, date range analysis, overlap rule","False","CATMOCKDLR001_Set5_ArtefactDating","Analyzing","Artefact A3: Civ C3, CD Range 1750–1250 BCE (Length 500 years), TL Date 1550 BCE.
+Period P3 is (1600 BCE, 1200 BCE] (i.e., dates X such that X < 1600 BCE and X >= 1200 BCE). The TL Date 1550 BCE falls within P3 (1550 < 1600 and 1550 >= 1200).
+The CD Range is [1750 BCE, 1250 BCE]. The overlap between this CD range and P3 is the interval (1600 BCE, 1250 BCE]. The length of this overlap is 1600 - 1250 = 350 years.
+The length of A3's CD range is 500 years. For substantial overlap, (Overlap Length / CD Range Length) must be >= 0.5. Here, 350 / 500 = 0.7, which is >= 0.5.
+Since both conditions (TL date in period, substantial overlap) are met for P3, Artefact A3 is assigned to Period P3."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q21","21","CATMOCKDLR001_Set5_ArtefactDating","An archaeology team is analyzing five ancient artefacts (A1, A2, A3, A4, A5) discovered at a single excavation site. Each artefact is believed to have originated from one of four possible ancient civilizations (C1: Indus Valley, C2: Mesopotamian, C3: Egyptian, C4: Minoan) and belongs to one of three distinct historical periods (P1: Early Bronze Age, P2: Middle Bronze Age, P3: Late Bronze Age). Each artefact has a unique combination of Civilization and Period. The team uses two primary dating techniques: Carbon Dating (CD) which gives a year range, and Thermoluminescence (TL) which gives a specific estimated year. An artefact's ""Confidence Score"" (CS) for its assigned period is derived from how well the CD range and TL year align with established period timelines.
+Established Period Timelines:
+•	P1 (Early Bronze Age): 3300 BCE – 2000 BCE (inclusive of 2000 BCE)
+•	P2 (Middle Bronze Age): 2000 BCE – 1600 BCE (exclusive of 2000 BCE, inclusive of 1600 BCE)
+•	P3 (Late Bronze Age): 1600 BCE – 1200 BCE (exclusive of 1600 BCE, inclusive of 1200 BCE)
+Artefact Dating Data & Confidence Score Rules:
+•	An artefact is assigned to Period Px if its TL date falls strictly within Px's start and end years (or is equal to the end year if Px is P1, P2, P3; or equal to start year if Px is P1) AND its CD range has a ""substantial overlap"" with Px.
+•	""Substantial overlap"" means at least 50% (i.e., >= 50%) of the CD range's length falls within the years of Period Px.
+•	Confidence Score (CS) = (Overlap_Years_CD_with_Assigned_Period / Length_of_CD_Range) * 100. CS is rounded to the nearest integer. If the conditions for assignment to any period are not met, the artefact is ""Unclassified"" for period and CS=0.
+Artefact Data:
+Artefact	Civilization	CD Range (BCE)	TL Date (BCE)	Assigned Period	CS
+A1	C1	3100 – 2050	2100	?	?
+A2	?	2200 – 1800	1900	P2	50
+A3	C3	1750 – 1250	1550	?	?
+A4	C2	1600 – 1000	?	P3	67
+A5	?	3200 – 3000	3100	P1	100
+Additional Information:
+1.	No two artefacts are from the same Civilization AND the same Period.
+2.	A2 is from Civilization C4 (Minoan).
+3.	The TL Date for A4 is 1400 BCE.
+4.	The actual properties and data of Artefact A1 (Civilization C1, CD Range 3100-2050 BCE, TL Date 2100 BCE) resulted in it being definitively assigned to Period P1 for the purpose of uniqueness checks with other artefacts.
+5.	Exactly two artefacts are from Civilization C3 (Egyptian). One of these is A3. The other C3 artefact is from Period P1.
+6.	Artefact A5 is from Civilization C3 (Egyptian).","Which Artefact ID, other than A3, is from Civilization C3?","A1","A2","A4","A5","A1","A2","A4","A5","A5","MCQ","Logical Reasoning","Constraint Satisfaction, Deductive Reasoning","Moderate","Application of complex, multi-conditional rules for classification and scoring.","multi-clue integration, identification","False","CATMOCKDLR001_Set5_ArtefactDating","Analyzing","Clue 5 states that exactly two artefacts are from Civilization C3, and A3 is one of them. The other C3 artefact is from Period P1.
+Clue 6 states that Artefact A5 is from Civilization C3.
+We can verify that A5 belongs to Period P1 based on its data (TL 3100 BCE is in P1, and CD range 3200-3000 is fully within P1). This matches Clue 5. Therefore, Artefact A5 is the other C3 artefact."
+"Logical Reasoning and Data Interpretation","","CATMOCKDLR001_Q22","22","CATMOCKDLR001_Set5_ArtefactDating","An archaeology team is analyzing five ancient artefacts (A1, A2, A3, A4, A5) discovered at a single excavation site. Each artefact is believed to have originated from one of four possible ancient civilizations (C1: Indus Valley, C2: Mesopotamian, C3: Egyptian, C4: Minoan) and belongs to one of three distinct historical periods (P1: Early Bronze Age, P2: Middle Bronze Age, P3: Late Bronze Age). Each artefact has a unique combination of Civilization and Period. The team uses two primary dating techniques: Carbon Dating (CD) which gives a year range, and Thermoluminescence (TL) which gives a specific estimated year. An artefact's ""Confidence Score"" (CS) for its assigned period is derived from how well the CD range and TL year align with established period timelines.
+Established Period Timelines:
+•	P1 (Early Bronze Age): 3300 BCE – 2000 BCE (inclusive of 2000 BCE)
+•	P2 (Middle Bronze Age): 2000 BCE – 1600 BCE (exclusive of 2000 BCE, inclusive of 1600 BCE)
+•	P3 (Late Bronze Age): 1600 BCE – 1200 BCE (exclusive of 1600 BCE, inclusive of 1200 BCE)
+Artefact Dating Data & Confidence Score Rules:
+•	An artefact is assigned to Period Px if its TL date falls strictly within Px's start and end years (or is equal to the end year if Px is P1, P2, P3; or equal to start year if Px is P1) AND its CD range has a ""substantial overlap"" with Px.
+•	""Substantial overlap"" means at least 50% (i.e., >= 50%) of the CD range's length falls within the years of Period Px.
+•	Confidence Score (CS) = (Overlap_Years_CD_with_Assigned_Period / Length_of_CD_Range) * 100. CS is rounded to the nearest integer. If the conditions for assignment to any period are not met, the artefact is ""Unclassified"" for period and CS=0.
+Artefact Data:
+Artefact	Civilization	CD Range (BCE)	TL Date (BCE)	Assigned Period	CS
+A1	C1	3100 – 2050	2100	?	?
+A2	?	2200 – 1800	1900	P2	50
+A3	C3	1750 – 1250	1550	?	?
+A4	C2	1600 – 1000	?	P3	67
+A5	?	3200 – 3000	3100	P1	100
+Additional Information:
+1.	No two artefacts are from the same Civilization AND the same Period.
+2.	A2 is from Civilization C4 (Minoan).
+3.	The TL Date for A4 is 1400 BCE.
+4.	The actual properties and data of Artefact A1 (Civilization C1, CD Range 3100-2050 BCE, TL Date 2100 BCE) resulted in it being definitively assigned to Period P1 for the purpose of uniqueness checks with other artefacts.
+5.	Exactly two artefacts are from Civilization C3 (Egyptian). One of these is A3. The other C3 artefact is from Period P1.
+6.	Artefact A5 is from Civilization C3 (Egyptian).","What is the calculated Confidence Score (CS) for Artefact A3 based on its listed CD Range, TL Date, and its assigned period from Q20?","60","70","80","90","60","70","80","90","70","MCQ","Data Interpretation","Rule-based Calculation, Logical Deduction","Moderate","Application of complex, multi-conditional rules for classification and scoring.","data application, percentage rule, rounding","False","CATMOCKDLR001_Set5_ArtefactDating","Analyzing","A3's CD Range is [1750 BCE, 1250 BCE] (Length 500 years). Its assigned period from Q20 is P3, which is (1600 BCE, 1200 BCE].
+The overlap of A3's CD range with P3 is the interval (1600 BCE, 1250 BCE], which has a length of 1600 - 1250 = 350 years.
+CS = (Overlap Length / CD Range Length) * 100
+CS = (350 / 500) * 100 = 0.7 * 100 = 70.
+The CS is rounded to the nearest integer, which is 70."

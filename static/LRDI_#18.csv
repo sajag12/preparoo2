@@ -1,0 +1,804 @@
+"SectionName","SectionTimeLimitMinutes","QuestionUniqueID","QuestionNumberInSection","PassageOrSetID","PassageOrSetContent","QuestionPrompt","OptionAText","OptionBText","OptionCText","OptionDText","OptionAValue","OptionBValue","OptionCValue","OptionDValue","CorrectAnswerValue","QuestionType","Topic","SubTopic","DifficultyLevelPredicted","ConceptTested","DetailedTags","IsTITA","SetID","CognitiveSkillLevel","SolutionExplanation"
+"LRDI","","Q1","1","Set 1 of 5: Inter-City Cargo Fleet Operations","A logistics company manages cargo movement between five cities: A, B, C, D, and E. They have a fleet of three types of trucks: Type X (capacity 10 tons), Type Y (capacity 15 tons), and Type Z (capacity 20 tons). The company operates on a weekly schedule.
+Data and Conditions:
+1.	The total cargo (in tons) to be moved from a designated origin city to designated destination cities each week is fixed.
+2.	Each truck type has a specific operating cost per 100 km and a fixed weekly maintenance downtime.
+    *   Type X: Cost = ₹500 / 100 km; Downtime = 1 day/week.
+    *   Type Y: Cost = ₹700 / 100 km; Downtime = 1.5 days/week.
+    *   Type Z: Cost = ₹900 / 100 km; Downtime = 2 days/week.
+    (A week has 7 days. Operational days = 7 - Downtime).
+3.	A truck makes multiple trips if necessary. Loading/unloading time is included in trip time.
+4.	The distance matrix (in km, one way) is as follows. Assume routes are direct.
+
+    | From/To | A   | B   | C   | D   | E   |
+    |---------|-----|-----|-----|-----|-----|
+    | A       | -   | 150 | 200 | 300 | 250 |
+    | B       | 150 | -   | 100 | 180 | 350 |
+    | C       | 200 | 100 | -   | 120 | 220 |
+    | D       | 300 | 180 | 120 | -   | 100 |
+    | E       | 250 | 350 | 220 | 100 | -   |
+
+5.	Total cargo to be moved in Week 1:
+    *   From A to C: 60 tons
+    *   From B to D: 75 tons
+    *   From C to E: 40 tons
+    *   From D to A: 50 tons
+6.	Company Policy:
+    *   For any given origin-destination pair, only one type of truck is used for all trips related to that pair’s weekly cargo.
+    *   The company aims to minimize total weekly operating costs. All cargo must be served.
+    *   A truck is operational for 10 hours a day. Average speed including loading/unloading considerations is 50 km/hr.
+    *   A ""trip cycle"" involves going from origin to destination, unloading, and returning to origin. A truck can complete a full trip cycle and make one delivery of its capacity if the total round trip time is ≤ 10 hours. For routes where the round trip > 10 hours, a truck delivers its capacity at the destination on Day N and can only be considered available back at origin for another load on Day N+1 (effectively taking one full operational day for the delivery and one for the return positioning). For simplicity, assume that if a round trip is, for example, 12 hours, it takes 1 full operational day to make the delivery, and the truck is ready for a new cycle (from origin) the next operational day. Each distinct delivery of capacity consumes one ""truck operational day unit"" for calculation against available operational days.","For the A to C cargo movement (60 tons), which truck type should be chosen to minimize the number of truck-days utilized (number of trucks × operational days used by those trucks for this specific cargo)?","Type X","Type Y","Type Z","Type Y or Type Z are equally optimal","A","B","C","D","C","MCQ","Logical Reasoning","Optimization","Medium","Resource Optimization under Constraints","scheduling, resource optimization, operational constraints, comparative analysis, trip calculation","False","MockSetFin_S1","Analysis","Route A-C: Distance = 200 km. Round trip = 400 km.
+Average speed = 50 km/hr. Time per round trip = 400 km / 50 km/hr = 8 hours.
+Since 8 hours ≤ 10 hours, a truck completes one trip cycle and makes one delivery per operational day.
+Each delivery consumes 1 ""truck operational day unit"".
+Cargo from A to C = 60 tons.
+*   Type X (10 tons/trip): Needs 60/10 = 6 trips. Total truck-days = 6.
+*   Type Y (15 tons/trip): Needs 60/15 = 4 trips. Total truck-days = 4.
+*   Type Z (20 tons/trip): Needs 60/20 = 3 trips. Total truck-days = 3.
+Type Z uses the minimum number of truck-days (3).
+The correct answer is (C) Type Z."
+"LRDI","","Q2","2","Set 1 of 5: Inter-City Cargo Fleet Operations","A logistics company manages cargo movement between five cities: A, B, C, D, and E. They have a fleet of three types of trucks: Type X (capacity 10 tons), Type Y (capacity 15 tons), and Type Z (capacity 20 tons). The company operates on a weekly schedule.
+Data and Conditions:
+1.	The total cargo (in tons) to be moved from a designated origin city to designated destination cities each week is fixed.
+2.	Each truck type has a specific operating cost per 100 km and a fixed weekly maintenance downtime.
+    *   Type X: Cost = ₹500 / 100 km; Downtime = 1 day/week.
+    *   Type Y: Cost = ₹700 / 100 km; Downtime = 1.5 days/week.
+    *   Type Z: Cost = ₹900 / 100 km; Downtime = 2 days/week.
+    (A week has 7 days. Operational days = 7 - Downtime).
+3.	A truck makes multiple trips if necessary. Loading/unloading time is included in trip time.
+4.	The distance matrix (in km, one way) is as follows. Assume routes are direct.
+
+    | From/To | A   | B   | C   | D   | E   |
+    |---------|-----|-----|-----|-----|-----|
+    | A       | -   | 150 | 200 | 300 | 250 |
+    | B       | 150 | -   | 100 | 180 | 350 |
+    | C       | 200 | 100 | -   | 120 | 220 |
+    | D       | 300 | 180 | 120 | -   | 100 |
+    | E       | 250 | 350 | 220 | 100 | -   |
+
+5.	Total cargo to be moved in Week 1:
+    *   From A to C: 60 tons
+    *   From B to D: 75 tons
+    *   From C to E: 40 tons
+    *   From D to A: 50 tons
+6.	Company Policy:
+    *   For any given origin-destination pair, only one type of truck is used for all trips related to that pair’s weekly cargo.
+    *   The company aims to minimize total weekly operating costs. All cargo must be served.
+    *   A truck is operational for 10 hours a day. Average speed including loading/unloading considerations is 50 km/hr.
+    *   A ""trip cycle"" involves going from origin to destination, unloading, and returning to origin. A truck can complete a full trip cycle and make one delivery of its capacity if the total round trip time is ≤ 10 hours. For routes where the round trip > 10 hours, a truck delivers its capacity at the destination on Day N and can only be considered available back at origin for another load on Day N+1 (effectively taking one full operational day for the delivery and one for the return positioning). For simplicity, assume that if a round trip is, for example, 12 hours, it takes 1 full operational day to make the delivery, and the truck is ready for a new cycle (from origin) the next operational day. Each distinct delivery of capacity consumes one ""truck operational day unit"" for calculation against available operational days.","If the company only has two Type Z trucks available for the entire week's operations (handling all four O-D pairs), what is the minimum unserved cargo in tons for Week 1, assuming these two trucks are optimally assigned?","0 tons","5 tons","10 tons","25 tons","A","B","C","D","D","MCQ","Logical Reasoning","Optimization","Medium","Capacity and Resource Constraint Analysis","scheduling, capacity constraint, resource limitation, operational day accounting","False","MockSetFin_S1","Analysis","Total cargo for Week 1:
+A to C: 60 tons
+B to D: 75 tons
+C to E: 40 tons
+D to A: 50 tons
+Total = 60 + 75 + 40 + 50 = 225 tons.
+Two Type Z trucks are available.
+Type Z downtime = 2 days/week. Operational days per truck = 7 - 2 = 5 days.
+Total operational truck-days for two Type Z trucks = 2 trucks * 5 days/truck = 10 truck-days.
+The policy for ""truck operational day unit"" (Condition 6.6 last sentence) states ""Each distinct delivery of capacity consumes one 'truck operational day unit'"". This applies regardless of whether the trip is short (<10h round trip) or long (>10h round trip leading to next-day availability).
+Capacity of Type Z truck = 20 tons/trip.
+Since each delivery uses 1 truck operational day unit, the total capacity of the two Type Z trucks for the week is:
+10 truck-days * 20 tons/truck-day = 200 tons.
+Total cargo to be moved = 225 tons.
+Maximum cargo that can be moved = 200 tons.
+Unserved cargo = 225 tons - 200 tons = 25 tons.
+The correct answer is (D) 25 tons."
+"LRDI","","Q3","3","Set 1 of 5: Inter-City Cargo Fleet Operations","A logistics company manages cargo movement between five cities: A, B, C, D, and E. They have a fleet of three types of trucks: Type X (capacity 10 tons), Type Y (capacity 15 tons), and Type Z (capacity 20 tons). The company operates on a weekly schedule.
+Data and Conditions:
+1.	The total cargo (in tons) to be moved from a designated origin city to designated destination cities each week is fixed.
+2.	Each truck type has a specific operating cost per 100 km and a fixed weekly maintenance downtime.
+    *   Type X: Cost = ₹500 / 100 km; Downtime = 1 day/week.
+    *   Type Y: Cost = ₹700 / 100 km; Downtime = 1.5 days/week.
+    *   Type Z: Cost = ₹900 / 100 km; Downtime = 2 days/week.
+    (A week has 7 days. Operational days = 7 - Downtime).
+3.	A truck makes multiple trips if necessary. Loading/unloading time is included in trip time.
+4.	The distance matrix (in km, one way) is as follows. Assume routes are direct.
+
+    | From/To | A   | B   | C   | D   | E   |
+    |---------|-----|-----|-----|-----|-----|
+    | A       | -   | 150 | 200 | 300 | 250 |
+    | B       | 150 | -   | 100 | 180 | 350 |
+    | C       | 200 | 100 | -   | 120 | 220 |
+    | D       | 300 | 180 | 120 | -   | 100 |
+    | E       | 250 | 350 | 220 | 100 | -   |
+
+5.	Total cargo to be moved in Week 1:
+    *   From A to C: 60 tons
+    *   From B to D: 75 tons
+    *   From C to E: 40 tons
+    *   From D to A: 50 tons
+6.	Company Policy:
+    *   For any given origin-destination pair, only one type of truck is used for all trips related to that pair’s weekly cargo.
+    *   The company aims to minimize total weekly operating costs. All cargo must be served.
+    *   A truck is operational for 10 hours a day. Average speed including loading/unloading considerations is 50 km/hr.
+    *   A ""trip cycle"" involves going from origin to destination, unloading, and returning to origin. A truck can complete a full trip cycle and make one delivery of its capacity if the total round trip time is ≤ 10 hours. For routes where the round trip > 10 hours, a truck delivers its capacity at the destination on Day N and can only be considered available back at origin for another load on Day N+1 (effectively taking one full operational day for the delivery and one for the return positioning). For simplicity, assume that if a round trip is, for example, 12 hours, it takes 1 full operational day to make the delivery, and the truck is ready for a new cycle (from origin) the next operational day. Each distinct delivery of capacity consumes one ""truck operational day unit"" for calculation against available operational days.","Consider the B to D cargo (75 tons). If only Type Y trucks are used, what is the minimum number of Type Y trucks required to ensure all 75 tons are moved within Week 1?","1","2","3","4","A","B","C","D","A","MCQ","Logical Reasoning","Optimization","Medium","Resource Management and Scheduling","scheduling, resource management, trip calculation, operational day accounting","False","MockSetFin_S1","Application","Cargo from B to D = 75 tons.
+Type Y trucks are used (capacity 15 tons/trip).
+Number of trips required = 75 tons / 15 tons/trip = 5 trips.
+Route B-D: Distance = 180 km. Round trip = 360 km.
+Time per round trip = 360 km / 50 km/hr = 7.2 hours.
+Since 7.2 hours ≤ 10 hours, a truck completes one trip cycle and makes one delivery per operational day. Each trip consumes 1 truck operational day unit.
+Type Y downtime = 1.5 days/week. Operational days per truck = 7 - 1.5 = 5.5 days.
+To make 5 trips, 5 truck operational day units are needed.
+One Type Y truck provides 5.5 operational days. Since 5 (needed) ≤ 5.5 (available from one truck), one Type Y truck is sufficient.
+The correct answer is (A) 1."
+"LRDI","","Q4","4","Set 1 of 5: Inter-City Cargo Fleet Operations","A logistics company manages cargo movement between five cities: A, B, C, D, and E. They have a fleet of three types of trucks: Type X (capacity 10 tons), Type Y (capacity 15 tons), and Type Z (capacity 20 tons). The company operates on a weekly schedule.
+Data and Conditions:
+1.	The total cargo (in tons) to be moved from a designated origin city to designated destination cities each week is fixed.
+2.	Each truck type has a specific operating cost per 100 km and a fixed weekly maintenance downtime.
+    *   Type X: Cost = ₹500 / 100 km; Downtime = 1 day/week.
+    *   Type Y: Cost = ₹700 / 100 km; Downtime = 1.5 days/week.
+    *   Type Z: Cost = ₹900 / 100 km; Downtime = 2 days/week.
+    (A week has 7 days. Operational days = 7 - Downtime).
+3.	A truck makes multiple trips if necessary. Loading/unloading time is included in trip time.
+4.	The distance matrix (in km, one way) is as follows. Assume routes are direct.
+
+    | From/To | A   | B   | C   | D   | E   |
+    |---------|-----|-----|-----|-----|-----|
+    | A       | -   | 150 | 200 | 300 | 250 |
+    | B       | 150 | -   | 100 | 180 | 350 |
+    | C       | 200 | 100 | -   | 120 | 220 |
+    | D       | 300 | 180 | 120 | -   | 100 |
+    | E       | 250 | 350 | 220 | 100 | -   |
+
+5.	Total cargo to be moved in Week 1:
+    *   From A to C: 60 tons
+    *   From B to D: 75 tons
+    *   From C to E: 40 tons
+    *   From D to A: 50 tons
+6.	Company Policy:
+    *   For any given origin-destination pair, only one type of truck is used for all trips related to that pair’s weekly cargo.
+    *   The company aims to minimize total weekly operating costs. All cargo must be served.
+    *   A truck is operational for 10 hours a day. Average speed including loading/unloading considerations is 50 km/hr.
+    *   A ""trip cycle"" involves going from origin to destination, unloading, and returning to origin. A truck can complete a full trip cycle and make one delivery of its capacity if the total round trip time is ≤ 10 hours. For routes where the round trip > 10 hours, a truck delivers its capacity at the destination on Day N and can only be considered available back at origin for another load on Day N+1 (effectively taking one full operational day for the delivery and one for the return positioning). For simplicity, assume that if a round trip is, for example, 12 hours, it takes 1 full operational day to make the delivery, and the truck is ready for a new cycle (from origin) the next operational day. Each distinct delivery of capacity consumes one ""truck operational day unit"" for calculation against available operational days.","What is the total minimum transport operating cost for moving all cargo in Week 1, assuming the company can use any number of any truck type and optimally assigns truck types to each O-D pair to minimize transport cost for that pair independently? Cost is calculated based on total round-trip kilometers for all trips made.","₹45,800","₹46,320","₹47,100","₹48,550","A","B","C","D","B","MCQ","Logical Reasoning","Optimization","Difficult","Multi-variable Cost Optimization","scheduling, cost optimization, multi-variable decision making, rate application, comparative analysis","False","MockSetFin_S1","Evaluation","Operating cost is calculated on total round-trip kilometers.
+Cost per trip = (Round Trip Distance / 100 km) * Cost per 100 km.
+Total cost for a route = Number of trips * Cost per trip.
+
+1.  **A to C: 60 tons.** Round trip = 200*2 = 400 km.
+    *   Type X (10t): 6 trips. Cost = 6 * (400/100) * 500 = 6 * 4 * 500 = ₹12,000.
+    *   Type Y (15t): 4 trips. Cost = 4 * (400/100) * 700 = 4 * 4 * 700 = ₹11,200.
+    *   Type Z (20t): 3 trips. Cost = 3 * (400/100) * 900 = 3 * 4 * 900 = ₹10,800. (Optimal for A-C)
+
+2.  **B to D: 75 tons.** Round trip = 180*2 = 360 km.
+    *   Type X (10t): ceil(75/10) = 8 trips. Cost = 8 * (360/100) * 500 = 8 * 3.6 * 500 = ₹14,400.
+    *   Type Y (15t): ceil(75/15) = 5 trips. Cost = 5 * (360/100) * 700 = 5 * 3.6 * 700 = ₹12,600. (Optimal for B-D)
+    *   Type Z (20t): ceil(75/20) = 4 trips. Cost = 4 * (360/100) * 900 = 4 * 3.6 * 900 = ₹12,960.
+
+3.  **C to E: 40 tons.** Round trip = 220*2 = 440 km.
+    *   Type X (10t): 4 trips. Cost = 4 * (440/100) * 500 = 4 * 4.4 * 500 = ₹8,800.
+    *   Type Y (15t): ceil(40/15) = 3 trips. Cost = 3 * (440/100) * 700 = 3 * 4.4 * 700 = ₹9,240.
+    *   Type Z (20t): 2 trips. Cost = 2 * (440/100) * 900 = 2 * 4.4 * 900 = ₹7,920. (Optimal for C-E)
+
+4.  **D to A: 50 tons.** Round trip = 300*2 = 600 km.
+    *   Type X (10t): 5 trips. Cost = 5 * (600/100) * 500 = 5 * 6 * 500 = ₹15,000. (Optimal for D-A)
+    *   Type Y (15t): ceil(50/15) = 4 trips. Cost = 4 * (600/100) * 700 = 4 * 6 * 700 = ₹16,800.
+    *   Type Z (20t): ceil(50/20) = 3 trips. Cost = 3 * (600/100) * 900 = 3 * 6 * 900 = ₹16,200.
+
+Total minimum operating cost = ₹10,800 (A-C, Z) + ₹12,600 (B-D, Y) + ₹7,920 (C-E, Z) + ₹15,000 (D-A, X) = ₹46,320.
+The correct answer is (B) ₹46,320."
+"LRDI","","Q5","5","Set 2 of 5: Multi-Algorithm Task Scheduler","A supercomputer uses three different processing algorithms (AlgoA, AlgoB, AlgoC) to complete tasks. There are five types of tasks (T1, T2, T3, T4, T5). Each task type has a 'Base Complexity Score' (BCS). The time (in minutes) taken by an algorithm to complete a single task of a given type is given by: Time = (BCS / Algorithm Efficiency Factor) + Algorithm Setup Time.
+Information:
+1.	Base Complexity Scores (BCS):
+    *   T1: 1000
+    *   T2: 1500
+    *   T3: 800
+    *   T4: 1200
+    *   T5: 2000
+2.	Algorithm Properties:
+
+    | Algorithm | Efficiency Factor | Setup Time (minutes) |
+    |-----------|-------------------|----------------------|
+    | AlgoA     | 50                | 5                    |
+    | AlgoB     | 60                | 3                    |
+    | AlgoC     | 40                | 8                    |
+
+3.	Scheduler Rules:
+    *   The scheduler receives a batch of tasks. For each task type in the batch, it assigns all tasks of that type to the algorithm that processes a single task of that type in the shortest time.
+    *   If two algorithms result in the same shortest time for a task type, AlgoA is preferred over AlgoB, and AlgoB over AlgoC.
+    *   The supercomputer can run all three algorithms simultaneously and independently. Tasks of different types assigned to the same algorithm are processed sequentially by that algorithm (e.g., if AlgoB gets T1 and T2, it finishes all T1s then all T2s, or vice versa). Tasks of the same type assigned to an algorithm are also processed sequentially.
+4.	A specific batch of tasks arrives:
+    *   T1: 3 tasks
+    *   T2: 2 tasks
+    *   T3: 5 tasks
+    *   T4: 2 tasks
+    *   T5: 1 task
+5.	Power Consumption per minute of operation: AlgoA = 10 units, AlgoB = 8 units, AlgoC = 12 units. Total power consumed by an algorithm is (Total time that algorithm is busy processing tasks * Power consumption per minute of that algorithm).","Which algorithm is assigned Task Type T4?","AlgoA","AlgoB","AlgoC","AlgoA and AlgoB are equally fast","A","B","C","D","B","MCQ","Logical Reasoning","Data Processing & Rule Application","Medium","Algorithmic Efficiency & Rule-Based Scheduling","formula application, comparative analysis, rule-based task assignment, shortest time optimization","False","MockSetFin_S2","Application","Calculate time for Task Type T4 for each algorithm: Time = (BCS / EF) + ST.
+BCS for T4 = 1200.
+*   AlgoA: (1200 / 50) + 5 = 24 + 5 = 29 minutes.
+*   AlgoB: (1200 / 60) + 3 = 20 + 3 = 23 minutes.
+*   AlgoC: (1200 / 40) + 8 = 30 + 8 = 38 minutes.
+AlgoB is the fastest for T4 (23 minutes).
+The correct answer is (B) AlgoB."
+"LRDI","","Q6","6","Set 2 of 5: Multi-Algorithm Task Scheduler","A supercomputer uses three different processing algorithms (AlgoA, AlgoB, AlgoC) to complete tasks. There are five types of tasks (T1, T2, T3, T4, T5). Each task type has a 'Base Complexity Score' (BCS). The time (in minutes) taken by an algorithm to complete a single task of a given type is given by: Time = (BCS / Algorithm Efficiency Factor) + Algorithm Setup Time.
+Information:
+1.	Base Complexity Scores (BCS):
+    *   T1: 1000
+    *   T2: 1500
+    *   T3: 800
+    *   T4: 1200
+    *   T5: 2000
+2.	Algorithm Properties:
+
+    | Algorithm | Efficiency Factor | Setup Time (minutes) |
+    |-----------|-------------------|----------------------|
+    | AlgoA     | 50                | 5                    |
+    | AlgoB     | 60                | 3                    |
+    | AlgoC     | 40                | 8                    |
+
+3.	Scheduler Rules:
+    *   The scheduler receives a batch of tasks. For each task type in the batch, it assigns all tasks of that type to the algorithm that processes a single task of that type in the shortest time.
+    *   If two algorithms result in the same shortest time for a task type, AlgoA is preferred over AlgoB, and AlgoB over AlgoC.
+    *   The supercomputer can run all three algorithms simultaneously and independently. Tasks of different types assigned to the same algorithm are processed sequentially by that algorithm (e.g., if AlgoB gets T1 and T2, it finishes all T1s then all T2s, or vice versa). Tasks of the same type assigned to an algorithm are also processed sequentially.
+4.	A specific batch of tasks arrives:
+    *   T1: 3 tasks
+    *   T2: 2 tasks
+    *   T3: 5 tasks
+    *   T4: 2 tasks
+    *   T5: 1 task
+5.	Power Consumption per minute of operation: AlgoA = 10 units, AlgoB = 8 units, AlgoC = 12 units. Total power consumed by an algorithm is (Total time that algorithm is busy processing tasks * Power consumption per minute of that algorithm).","What is the total time the supercomputer will be active processing this entire batch of tasks (i.e., time from when the first task starts on any algorithm to when the last task assigned to that algorithm finishes)?","81.67 minutes","118 minutes","279 minutes","59 minutes","A","B","C","D","C","MCQ","Logical Reasoning","Data Processing & Rule Application","Difficult","Sequential Processing and Workload Aggregation","sequential processing, total time calculation, multi-task aggregation, algorithm workload, simultaneous operations impact","False","MockSetFin_S2","Analysis","First, determine the fastest algorithm for each task type:
+*   T1 (BCS=1000):
+    *   A: (1000/50)+5 = 20+5 = 25 min
+    *   B: (1000/60)+3 = 16.666...+3 ≈ 19.67 min (Fastest)
+    *   C: (1000/40)+8 = 25+8 = 33 min
+*   T2 (BCS=1500):
+    *   A: (1500/50)+5 = 30+5 = 35 min
+    *   B: (1500/60)+3 = 25+3 = 28 min (Fastest)
+    *   C: (1500/40)+8 = 37.5+8 = 45.5 min
+*   T3 (BCS=800):
+    *   A: (800/50)+5 = 16+5 = 21 min
+    *   B: (800/60)+3 = 13.333...+3 ≈ 16.33 min (Fastest)
+    *   C: (800/40)+8 = 20+8 = 28 min
+*   T4 (BCS=1200):
+    *   A: (1200/50)+5 = 24+5 = 29 min
+    *   B: (1200/60)+3 = 20+3 = 23 min (Fastest - as calculated in Q5)
+    *   C: (1200/40)+8 = 30+8 = 38 min
+*   T5 (BCS=2000):
+    *   A: (2000/50)+5 = 40+5 = 45 min
+    *   B: (2000/60)+3 = 33.333...+3 ≈ 36.33 min (Fastest)
+    *   C: (2000/40)+8 = 50+8 = 58 min
+
+All task types (T1, T2, T3, T4, T5) are assigned to AlgoB.
+The supercomputer can run algorithms simultaneously, but since all tasks go to AlgoB, AlgoA and AlgoC are idle. The total time the supercomputer is active will be the total time AlgoB is busy.
+Tasks assigned to AlgoB are processed sequentially.
+*   Time for T1 (3 tasks): 3 * (1000/60 + 3) = 3 * (50/3 + 9/3) = 3 * (59/3) = 59 min.
+*   Time for T2 (2 tasks): 2 * (1500/60 + 3) = 2 * (25 + 3) = 2 * 28 = 56 min.
+*   Time for T3 (5 tasks): 5 * (800/60 + 3) = 5 * (40/3 + 9/3) = 5 * (49/3) = 245/3 min.
+*   Time for T4 (2 tasks): 2 * (1200/60 + 3) = 2 * (20 + 3) = 2 * 23 = 46 min.
+*   Time for T5 (1 task): 1 * (2000/60 + 3) = 1 * (100/3 + 9/3) = 109/3 min.
+Total time AlgoB is busy = 59 + 56 + 245/3 + 46 + 109/3
+= 59 + 56 + 46 + (245+109)/3
+= 161 + 354/3
+= 161 + 118 = 279 minutes.
+The supercomputer will be active for 279 minutes.
+The correct answer is (C) 279 minutes."
+"LRDI","","Q7","7","Set 2 of 5: Multi-Algorithm Task Scheduler","A supercomputer uses three different processing algorithms (AlgoA, AlgoB, AlgoC) to complete tasks. There are five types of tasks (T1, T2, T3, T4, T5). Each task type has a 'Base Complexity Score' (BCS). The time (in minutes) taken by an algorithm to complete a single task of a given type is given by: Time = (BCS / Algorithm Efficiency Factor) + Algorithm Setup Time.
+Information:
+1.	Base Complexity Scores (BCS):
+    *   T1: 1000
+    *   T2: 1500
+    *   T3: 800
+    *   T4: 1200
+    *   T5: 2000
+2.	Algorithm Properties:
+
+    | Algorithm | Efficiency Factor | Setup Time (minutes) |
+    |-----------|-------------------|----------------------|
+    | AlgoA     | 50                | 5                    |
+    | AlgoB     | 60                | 3                    |
+    | AlgoC     | 40                | 8                    |
+
+3.	Scheduler Rules:
+    *   The scheduler receives a batch of tasks. For each task type in the batch, it assigns all tasks of that type to the algorithm that processes a single task of that type in the shortest time.
+    *   If two algorithms result in the same shortest time for a task type, AlgoA is preferred over AlgoB, and AlgoB over AlgoC.
+    *   The supercomputer can run all three algorithms simultaneously and independently. Tasks of different types assigned to the same algorithm are processed sequentially by that algorithm (e.g., if AlgoB gets T1 and T2, it finishes all T1s then all T2s, or vice versa). Tasks of the same type assigned to an algorithm are also processed sequentially.
+4.	A specific batch of tasks arrives:
+    *   T1: 3 tasks
+    *   T2: 2 tasks
+    *   T3: 5 tasks
+    *   T4: 2 tasks
+    *   T5: 1 task
+5.	Power Consumption per minute of operation: AlgoA = 10 units, AlgoB = 8 units, AlgoC = 12 units. Total power consumed by an algorithm is (Total time that algorithm is busy processing tasks * Power consumption per minute of that algorithm).","What is the total power consumed by AlgoB while processing its assigned tasks from this batch?","1888 units","2232 units","653.36 units","944 units","A","B","C","D","B","MCQ","Data Interpretation","Calculation from Derived Values","Medium","Derived Quantity Calculation","derived quantity calculation (power), direct application of prior result, energy consumption","False","MockSetFin_S2","Application","From Q6, AlgoB is assigned all tasks and is busy for a total of 279 minutes.
+Power consumption of AlgoB = 8 units/minute.
+Total power consumed by AlgoB = 279 minutes * 8 units/minute = 2232 units.
+The correct answer is (B) 2232 units."
+"LRDI","","Q8","8","Set 2 of 5: Multi-Algorithm Task Scheduler","A supercomputer uses three different processing algorithms (AlgoA, AlgoB, AlgoC) to complete tasks. There are five types of tasks (T1, T2, T3, T4, T5). Each task type has a 'Base Complexity Score' (BCS). The time (in minutes) taken by an algorithm to complete a single task of a given type is given by: Time = (BCS / Algorithm Efficiency Factor) + Algorithm Setup Time.
+Information:
+1.	Base Complexity Scores (BCS):
+    *   T1: 1000
+    *   T2: 1500
+    *   T3: 800
+    *   T4: 1200
+    *   T5: 2000
+2.	Algorithm Properties:
+
+    | Algorithm | Efficiency Factor | Setup Time (minutes) |
+    |-----------|-------------------|----------------------|
+    | AlgoA     | 50                | 5                    |
+    | AlgoB     | 60                | 3                    |
+    | AlgoC     | 40                | 8                    |
+
+3.	Scheduler Rules:
+    *   The scheduler receives a batch of tasks. For each task type in the batch, it assigns all tasks of that type to the algorithm that processes a single task of that type in the shortest time.
+    *   If two algorithms result in the same shortest time for a task type, AlgoA is preferred over AlgoB, and AlgoB over AlgoC.
+    *   The supercomputer can run all three algorithms simultaneously and independently. Tasks of different types assigned to the same algorithm are processed sequentially by that algorithm (e.g., if AlgoB gets T1 and T2, it finishes all T1s then all T2s, or vice versa). Tasks of the same type assigned to an algorithm are also processed sequentially.
+4.	A specific batch of tasks arrives:
+    *   T1: 3 tasks
+    *   T2: 2 tasks
+    *   T3: 5 tasks
+    *   T4: 2 tasks
+    *   T5: 1 task
+5.	Power Consumption per minute of operation: AlgoA = 10 units, AlgoB = 8 units, AlgoC = 12 units. Total power consumed by an algorithm is (Total time that algorithm is busy processing tasks * Power consumption per minute of that algorithm).","If a new algorithm, AlgoD (Efficiency Factor = 55, Setup Time = 2 minutes, Power = 9 units/min), becomes available (assume preference AlgoB > AlgoD > AlgoC in case of ties with AlgoD), which task type(s) would be reassigned to AlgoD from their original algorithm?","T1 only","T3 only","T1 and T3","No task types would be reassigned","A","B","C","D","D","MCQ","Logical Reasoning","Data Processing & Rule Application","Difficult","Comparative Analysis with New Information","comparative analysis, new element introduction, decision rule application, algorithm reassignment check, tie-breaking rules","False","MockSetFin_S2","Analysis","AlgoD properties: EF = 55, ST = 2 minutes.
+Preference order for ties with AlgoD: AlgoB > AlgoD > AlgoC.
+Calculate times for AlgoD:
+*   T1 (BCS=1000): (1000/55)+2 ≈ 18.18+2 = 20.18 min. (AlgoB is ≈19.67 min - faster)
+*   T2 (BCS=1500): (1500/55)+2 ≈ 27.27+2 = 29.27 min. (AlgoB is 28 min - faster)
+*   T3 (BCS=800): (800/55)+2 ≈ 14.55+2 = 16.55 min. (AlgoB is ≈16.33 min - faster)
+*   T4 (BCS=1200): (1200/55)+2 ≈ 21.82+2 = 23.82 min. (AlgoB is 23 min - faster)
+*   T5 (BCS=2000): (2000/55)+2 ≈ 36.36+2 = 38.36 min. (AlgoB is ≈36.33 min - faster)
+In all cases, AlgoB remains the fastest for each task type. Therefore, no task types would be reassigned to AlgoD.
+The correct answer is (D) No task types would be reassigned."
+"LRDI","","Q9","9","Set 2 of 5: Multi-Algorithm Task Scheduler","A supercomputer uses three different processing algorithms (AlgoA, AlgoB, AlgoC) to complete tasks. There are five types of tasks (T1, T2, T3, T4, T5). Each task type has a 'Base Complexity Score' (BCS). The time (in minutes) taken by an algorithm to complete a single task of a given type is given by: Time = (BCS / Algorithm Efficiency Factor) + Algorithm Setup Time.
+Information:
+1.	Base Complexity Scores (BCS):
+    *   T1: 1000
+    *   T2: 1500
+    *   T3: 800
+    *   T4: 1200
+    *   T5: 2000
+2.	Algorithm Properties:
+
+    | Algorithm | Efficiency Factor | Setup Time (minutes) |
+    |-----------|-------------------|----------------------|
+    | AlgoA     | 50                | 5                    |
+    | AlgoB     | 60                | 3                    |
+    | AlgoC     | 40                | 8                    |
+
+3.	Scheduler Rules:
+    *   The scheduler receives a batch of tasks. For each task type in the batch, it assigns all tasks of that type to the algorithm that processes a single task of that type in the shortest time.
+    *   If two algorithms result in the same shortest time for a task type, AlgoA is preferred over AlgoB, and AlgoB over AlgoC.
+    *   The supercomputer can run all three algorithms simultaneously and independently. Tasks of different types assigned to the same algorithm are processed sequentially by that algorithm (e.g., if AlgoB gets T1 and T2, it finishes all T1s then all T2s, or vice versa). Tasks of the same type assigned to an algorithm are also processed sequentially.
+4.	A specific batch of tasks arrives:
+    *   T1: 3 tasks
+    *   T2: 2 tasks
+    *   T3: 5 tasks
+    *   T4: 2 tasks
+    *   T5: 1 task
+5.	Power Consumption per minute of operation: AlgoA = 10 units, AlgoB = 8 units, AlgoC = 12 units. Total power consumed by an algorithm is (Total time that algorithm is busy processing tasks * Power consumption per minute of that algorithm).","Suppose the Efficiency Factor of AlgoA increases by 20% (from 50 to 60). Which algorithm would now process Task Type T1?","AlgoA","AlgoB","AlgoC","AlgoA and AlgoB would be tied, AlgoA chosen","A","B","C","D","B","MCQ","Logical Reasoning","Data Processing & Rule Application","Medium","Sensitivity Analysis","sensitivity analysis, parameter change impact, re-evaluation of algorithm choice","False","MockSetFin_S2","Analysis","Original AlgoA EF = 50. New AlgoA EF = 50 * 1.20 = 60.
+ST for AlgoA remains 5 minutes.
+Recalculate time for T1 (BCS=1000) with new AlgoA:
+*   New AlgoA T1 time: (1000/60) + 5 = 16.666... + 5 ≈ 21.67 minutes.
+Compare with other algorithms for T1:
+*   AlgoB T1 time: ≈19.67 minutes (from Q6 calculation).
+*   AlgoC T1 time: 33 minutes (from Q6 calculation).
+AlgoB (≈19.67 min) is still faster than the new AlgoA (≈21.67 min) and AlgoC (33 min).
+So, Task Type T1 would still be processed by AlgoB.
+The correct answer is (B) AlgoB."
+"LRDI","","Q10","10","Set 3 of 5: Museum Artifact Placement","A museum curator is arranging 7 artifacts (A1 to A7) in a row of 7 display cases, numbered 1 to 7 from left to right. Each case holds exactly one artifact. The artifacts are from three different civilizations: Indus (I), Mesopotamian (M), and Egyptian (E).
+Artifacts: A1(I), A2(M), A3(E), A4(I), A5(M), A6(E), A7(I). (3 Indus, 2 Mesopotamian, 2 Egyptian).
+Placement Conditions:
+1.	No two artifacts from the same civilization can be in adjacent display cases.
+2.	A3 must be placed to the immediate left of A4. (So, [A3(E), A4(I)] is a block).
+3.	A1 cannot be in case 1 or case 7.
+4.	The artifact in case 3 must be Mesopotamian (M).
+5.	If A5 is in case 2, then A6 must be in case 5.
+6.	The number of Indus artifacts to the left of A2 must be equal to the number of Egyptian artifacts to the right of A2.
+7.	A7 is not in an odd-numbered case (i.e., A7 is in case 2, 4, or 6).","Which artifact is in case 4?","A1(I)","A2(M)","A4(I)","A7(I)","A","B","C","D","D","MCQ","Logical Reasoning","Arrangements: Linear","Difficult","Constraint-Based Linear Arrangement","constraint satisfaction, deductive reasoning, case analysis, artifact placement, multiple conditions","False","MockSetFin_S3","Analysis","Based on a consistent arrangement derived from all conditions: A6(E) - A1(I) - A5(M) - A7(I) - A2(M) - A3(E) - A4(I).
+The artifact in Case 4 is A7(I).
+The correct answer is (D) A7(I)."
+"LRDI","","Q11","11","Set 3 of 5: Museum Artifact Placement","A museum curator is arranging 7 artifacts (A1 to A7) in a row of 7 display cases, numbered 1 to 7 from left to right. Each case holds exactly one artifact. The artifacts are from three different civilizations: Indus (I), Mesopotamian (M), and Egyptian (E).
+Artifacts: A1(I), A2(M), A3(E), A4(I), A5(M), A6(E), A7(I). (3 Indus, 2 Mesopotamian, 2 Egyptian).
+Placement Conditions:
+1.	No two artifacts from the same civilization can be in adjacent display cases.
+2.	A3 must be placed to the immediate left of A4. (So, [A3(E), A4(I)] is a block).
+3.	A1 cannot be in case 1 or case 7.
+4.	The artifact in case 3 must be Mesopotamian (M).
+5.	If A5 is in case 2, then A6 must be in case 5.
+6.	The number of Indus artifacts to the left of A2 must be equal to the number of Egyptian artifacts to the right of A2.
+7.	A7 is not in an odd-numbered case (i.e., A7 is in case 2, 4, or 6).","If A6(E) is placed in case 7, which artifact must be in case 1?","A1(I)","A2(M)","A3(E)","A5(M)","A","B","C","D","B","MCQ","Logical Reasoning","Arrangements: Linear","Difficult","Conditional Constraint-Based Arrangement","conditional reasoning, impact of new information on arrangement, re-deduction","False","MockSetFin_S3","Analysis","If A6(E) is placed in case 7. We derive a consistent arrangement for this specific premise:
+A2(M) - A7(I) - A5(M) - A1(I) - A3(E) - A4(I) - A6(E).
+In this arrangement, when A6(E) is in Case 7, the artifact in Case 1 is A2(M).
+The correct answer is (B) A2(M)."
+"LRDI","","Q12","12","Set 3 of 5: Museum Artifact Placement","A museum curator is arranging 7 artifacts (A1 to A7) in a row of 7 display cases, numbered 1 to 7 from left to right. Each case holds exactly one artifact. The artifacts are from three different civilizations: Indus (I), Mesopotamian (M), and Egyptian (E).
+Artifacts: A1(I), A2(M), A3(E), A4(I), A5(M), A6(E), A7(I). (3 Indus, 2 Mesopotamian, 2 Egyptian).
+Placement Conditions:
+1.	No two artifacts from the same civilization can be in adjacent display cases.
+2.	A3 must be placed to the immediate left of A4. (So, [A3(E), A4(I)] is a block).
+3.	A1 cannot be in case 1 or case 7.
+4.	The artifact in case 3 must be Mesopotamian (M).
+5.	If A5 is in case 2, then A6 must be in case 5.
+6.	The number of Indus artifacts to the left of A2 must be equal to the number of Egyptian artifacts to the right of A2.
+7.	A7 is not in an odd-numbered case (i.e., A7 is in case 2, 4, or 6).","What is the maximum possible number of Mesopotamian (M) artifacts that can be placed in odd-numbered cases?","0","1","2","Cannot be determined","A","B","C","D","C","MCQ","Logical Reasoning","Arrangements: Linear","Medium","Property Analysis of a Derived Arrangement","counting from derived arrangement, property identification","False","MockSetFin_S3","Application","Based on the derived arrangement: A6(E) - A1(I) - A5(M) - A7(I) - A2(M) - A3(E) - A4(I).
+Mesopotamian artifacts are A5(M) and A2(M).
+A5(M) is in Case 3 (odd).
+A2(M) is in Case 5 (odd).
+There are 2 Mesopotamian artifacts in odd-numbered cases. Since there are only two Mesopotamian artifacts in total, this is the maximum possible.
+The correct answer is (C) 2."
+"LRDI","","Q13","13","Set 3 of 5: Museum Artifact Placement","A museum curator is arranging 7 artifacts (A1 to A7) in a row of 7 display cases, numbered 1 to 7 from left to right. Each case holds exactly one artifact. The artifacts are from three different civilizations: Indus (I), Mesopotamian (M), and Egyptian (E).
+Artifacts: A1(I), A2(M), A3(E), A4(I), A5(M), A6(E), A7(I). (3 Indus, 2 Mesopotamian, 2 Egyptian).
+Placement Conditions:
+1.	No two artifacts from the same civilization can be in adjacent display cases.
+2.	A3 must be placed to the immediate left of A4. (So, [A3(E), A4(I)] is a block).
+3.	A1 cannot be in case 1 or case 7.
+4.	The artifact in case 3 must be Mesopotamian (M).
+5.	If A5 is in case 2, then A6 must be in case 5.
+6.	The number of Indus artifacts to the left of A2 must be equal to the number of Egyptian artifacts to the right of A2.
+7.	A7 is not in an odd-numbered case (i.e., A7 is in case 2, 4, or 6).","Which of the following statements is DEFINITELY true?","An Egyptian artifact is in case 2.","A Mesopotamian artifact is in case 5.","An Indus artifact is in case 6.","Artifact A2 is in case 3.","A","B","C","D","B","MCQ","Logical Reasoning","Arrangements: Linear","Medium","Verifying Statements from a Derived Arrangement","statement verification from derived arrangement, definite truth","False","MockSetFin_S3","Analysis","Based on the derived arrangement: A6(E) - A1(I) - A5(M) - A7(I) - A2(M) - A3(E) - A4(I).
+(A) An Egyptian artifact is in case 2? Case 2 has A1(I). False.
+(B) A Mesopotamian artifact is in case 5? Case 5 has A2(M). True.
+(C) An Indus artifact is in case 6? Case 6 has A3(E). False.
+(D) Artifact A2 is in case 3? Case 3 has A5(M). False.
+The correct answer is (B) A Mesopotamian artifact is in case 5."
+"LRDI","","Q14","14","Set 4 of 5: Departmental Project Bidding","Four departments (D1, D2, D3, D4) are bidding for three projects (P1, P2, P3). Each department can bid for any number of projects. Each project is awarded to exactly one department.
+A department's 'Bid Score' for a project is based on its 'Expertise Level' (EL, an integer from 1 to 5) and its 'Proposed Cost' (PC, in thousands of $).
+Bid Score = (EL * 10) - (PC / K), where K is a constant factor. The project is awarded to the department with the highest Bid Score. Ties in Bid Score are broken in favor of the department with the lower numerical ID (D1 > D2 > D3 > D4).
+Information:
+1.	The constant factor K = 5.
+2.	Expertise Levels (EL):
+
+    | Dept | P1 | P2 | P3 |
+    |------|----|----|----|
+    | D1   | 4  | 3  | 5  |
+    | D2   | 5  | 4  | 3  |
+    | D3   | 3  | 5  | 4  |
+    | D4   | 4  | 2  | 2  |
+
+3.	Proposed Costs (PC, in thousands of $):
+
+    | Dept | P1 | P2 | P3 |
+    |------|----|----|----|
+    | D1   | 80 | 70 | 90 |
+    | D2   | 90 | 60 | 75 |
+    | D3   | 70 | 85 | 60 |
+    | D4   | 85 | 50 | 45 |
+
+4.	Budget Constraint: The total 'Awarded Cost' (sum of PCs for projects won by a department) for any single department cannot exceed $150,000. If awarding a project to the highest bidder (after tie-breaking) would cause that department's cumulative awarded cost (including the current project) to exceed $150,000, that department is disqualified from that specific project bid, and the project is awarded to the next highest valid bidder (who also meets the budget constraint). This budget check and award process is done sequentially for projects in the order P1, then P2, then P3.","Which department is awarded Project P1?","D1","D2","D3","D4","A","B","C","D","B","MCQ","Logical Reasoning","Caselets with Quantitative Reasoning","Medium","Sequential Bidding with Constraints","formula application (bid score), sequential decision making, budget constraints, tie-breaking rules","False","MockSetFin_S4","Application","Calculate Bid Score = (EL * 10) - (PC / K), where K = 5.
+Tie-breaker: D1 > D2 > D3 > D4. Budget: $150k. Process P1, then P2, then P3.
+
+**Project P1:**
+*   D1: EL=4, PC=80. Score = (4*10) - (80/5) = 40 - 16 = 24.
+*   D2: EL=5, PC=90. Score = (5*10) - (90/5) = 50 - 18 = 32.
+*   D3: EL=3, PC=70. Score = (3*10) - (70/5) = 30 - 14 = 16.
+*   D4: EL=4, PC=85. Score = (4*10) - (85/5) = 40 - 17 = 23.
+Highest score is 32 by D2. D2's current awarded cost = $0. PC for P1 = $90k. $0 + $90k <= $150k.
+D2 wins P1. Awarded to D2 (Cost $90k).
+The correct answer is (B) D2."
+"LRDI","","Q15","15","Set 4 of 5: Departmental Project Bidding","Four departments (D1, D2, D3, D4) are bidding for three projects (P1, P2, P3). Each department can bid for any number of projects. Each project is awarded to exactly one department.
+A department's 'Bid Score' for a project is based on its 'Expertise Level' (EL, an integer from 1 to 5) and its 'Proposed Cost' (PC, in thousands of $).
+Bid Score = (EL * 10) - (PC / K), where K is a constant factor. The project is awarded to the department with the highest Bid Score. Ties in Bid Score are broken in favor of the department with the lower numerical ID (D1 > D2 > D3 > D4).
+Information:
+1.	The constant factor K = 5.
+2.	Expertise Levels (EL):
+
+    | Dept | P1 | P2 | P3 |
+    |------|----|----|----|
+    | D1   | 4  | 3  | 5  |
+    | D2   | 5  | 4  | 3  |
+    | D3   | 3  | 5  | 4  |
+    | D4   | 4  | 2  | 2  |
+
+3.	Proposed Costs (PC, in thousands of $):
+
+    | Dept | P1 | P2 | P3 |
+    |------|----|----|----|
+    | D1   | 80 | 70 | 90 |
+    | D2   | 90 | 60 | 75 |
+    | D3   | 70 | 85 | 60 |
+    | D4   | 85 | 50 | 45 |
+
+4.	Budget Constraint: The total 'Awarded Cost' (sum of PCs for projects won by a department) for any single department cannot exceed $150,000. If awarding a project to the highest bidder (after tie-breaking) would cause that department's cumulative awarded cost (including the current project) to exceed $150,000, that department is disqualified from that specific project bid, and the project is awarded to the next highest valid bidder (who also meets the budget constraint). This budget check and award process is done sequentially for projects in the order P1, then P2, then P3.","What is the total 'Awarded Cost' for Department D3 across all projects it wins (in thousands of $)?","0","60","85","145","A","B","C","D","C","MCQ","Data Interpretation","Calculation from Multi-stage Process","Medium","Tracking and Aggregation in a Sequential Process","tracking awarded costs, aggregation based on process outcome","False","MockSetFin_S4","Application","Current status: D2 won P1 (Cost $90k). D2 current total = $90k.
+Dept Budgets: D1:$0, D2:$90k, D3:$0, D4:$0.
+
+**Project P2:**
+*   D1: EL=3, PC=70. Score = (3*10) - (70/5) = 30 - 14 = 16.
+*   D2: EL=4, PC=60. Score = (4*10) - (60/5) = 40 - 12 = 28.
+*   D3: EL=5, PC=85. Score = (5*10) - (85/5) = 50 - 17 = 33.
+*   D4: EL=2, PC=50. Score = (2*10) - (50/5) = 20 - 10 = 10.
+Highest score is 33 by D3. D3's current awarded cost = $0. PC for P2 = $85k. $0 + $85k <= $150k.
+D3 wins P2. Awarded to D3 (Cost $85k).
+Dept Budgets: D1:$0, D2:$90k, D3:$85k, D4:$0.
+
+**Project P3:**
+*   D1: EL=5, PC=90. Score = (5*10) - (90/5) = 50 - 18 = 32.
+*   D2: EL=3, PC=75. Score = (3*10) - (75/5) = 30 - 15 = 15.
+*   D3: EL=4, PC=60. Score = (4*10) - (60/5) = 40 - 12 = 28.
+*   D4: EL=2, PC=45. Score = (2*10) - (45/5) = 20 - 9 = 11.
+Highest score is 32 by D1. D1's current awarded cost = $0. PC for P3 = $90k. $0 + $90k <= $150k.
+D1 wins P3. Awarded to D1 (Cost $90k).
+Dept Budgets: D1:$90k, D2:$90k, D3:$85k, D4:$0.
+
+Total 'Awarded Cost' for Department D3: D3 won P2 with PC = $85k. It did not win other projects.
+Total for D3 = $85k.
+The correct answer is (C) 85."
+"LRDI","","Q16","16","Set 4 of 5: Departmental Project Bidding","Four departments (D1, D2, D3, D4) are bidding for three projects (P1, P2, P3). Each department can bid for any number of projects. Each project is awarded to exactly one department.
+A department's 'Bid Score' for a project is based on its 'Expertise Level' (EL, an integer from 1 to 5) and its 'Proposed Cost' (PC, in thousands of $).
+Bid Score = (EL * 10) - (PC / K), where K is a constant factor. The project is awarded to the department with the highest Bid Score. Ties in Bid Score are broken in favor of the department with the lower numerical ID (D1 > D2 > D3 > D4).
+Information:
+1.	The constant factor K = 5.
+2.	Expertise Levels (EL):
+
+    | Dept | P1 | P2 | P3 |
+    |------|----|----|----|
+    | D1   | 4  | 3  | 5  |
+    | D2   | 5  | 4  | 3  |
+    | D3   | 3  | 5  | 4  |
+    | D4   | 4  | 2  | 2  |
+
+3.	Proposed Costs (PC, in thousands of $):
+
+    | Dept | P1 | P2 | P3 |
+    |------|----|----|----|
+    | D1   | 80 | 70 | 90 |
+    | D2   | 90 | 60 | 75 |
+    | D3   | 70 | 85 | 60 |
+    | D4   | 85 | 50 | 45 |
+
+4.	Budget Constraint: The total 'Awarded Cost' (sum of PCs for projects won by a department) for any single department cannot exceed $150,000. If awarding a project to the highest bidder (after tie-breaking) would cause that department's cumulative awarded cost (including the current project) to exceed $150,000, that department is disqualified from that specific project bid, and the project is awarded to the next highest valid bidder (who also meets the budget constraint). This budget check and award process is done sequentially for projects in the order P1, then P2, then P3.","If Department D2 decides not to bid for Project P3 (all other bids remain), which department then wins Project P3?","D1","D3","D4","No department wins P3","A","B","C","D","A","MCQ","Logical Reasoning","Caselets with Quantitative Reasoning","Medium","Impact of a Conditional Change in a Process","conditional change impact, re-evaluation of part of the process","False","MockSetFin_S4","Analysis","D2 does not bid for P3. Initial awards: P1 to D2 ($90k), P2 to D3 ($85k).
+Budgets before P3: D1:$0, D2:$90k, D3:$85k, D4:$0.
+
+**Project P3 (D2 does not bid):**
+*   D1: EL=5, PC=90. Score = 32.
+*   D3: EL=4, PC=60. Score = 28.
+*   D4: EL=2, PC=45. Score = 11.
+Highest score is 32 by D1. D1 current budget $0. PC P3 = $90k. $0 + $90k <= $150k.
+D1 wins P3.
+The correct answer is (A) D1."
+"LRDI","","Q17","17","Set 4 of 5: Departmental Project Bidding","Four departments (D1, D2, D3, D4) are bidding for three projects (P1, P2, P3). Each department can bid for any number of projects. Each project is awarded to exactly one department.
+A department's 'Bid Score' for a project is based on its 'Expertise Level' (EL, an integer from 1 to 5) and its 'Proposed Cost' (PC, in thousands of $).
+Bid Score = (EL * 10) - (PC / K), where K is a constant factor. The project is awarded to the department with the highest Bid Score. Ties in Bid Score are broken in favor of the department with the lower numerical ID (D1 > D2 > D3 > D4).
+Information:
+1.	The constant factor K = 5.
+2.	Expertise Levels (EL):
+
+    | Dept | P1 | P2 | P3 |
+    |------|----|----|----|
+    | D1   | 4  | 3  | 5  |
+    | D2   | 5  | 4  | 3  |
+    | D3   | 3  | 5  | 4  |
+    | D4   | 4  | 2  | 2  |
+
+3.	Proposed Costs (PC, in thousands of $):
+
+    | Dept | P1 | P2 | P3 |
+    |------|----|----|----|
+    | D1   | 80 | 70 | 90 |
+    | D2   | 90 | 60 | 75 |
+    | D3   | 70 | 85 | 60 |
+    | D4   | 85 | 50 | 45 |
+
+4.	Budget Constraint: The total 'Awarded Cost' (sum of PCs for projects won by a department) for any single department cannot exceed $150,000. If awarding a project to the highest bidder (after tie-breaking) would cause that department's cumulative awarded cost (including the current project) to exceed $150,000, that department is disqualified from that specific project bid, and the project is awarded to the next highest valid bidder (who also meets the budget constraint). This budget check and award process is done sequentially for projects in the order P1, then P2, then P3.","Suppose the constant factor K is changed from 5 to 4. Which department(s) would win a different set of projects compared to the original scenario (K=5)?","Only D1's set of won projects changes.","Only D2's set of won projects changes.","Only D3's set of won projects changes.","The set of projects won by each department remains the same.","A","B","C","D","D","MCQ","Logical Reasoning","Caselets with Quantitative Reasoning","Difficult","Sensitivity Analysis of Process Outcome","sensitivity analysis, parameter change impact, full process re-evaluation, comparative outcome","False","MockSetFin_S4","Analysis","Constant factor K changes from 5 to 4. Recalculate scores and awards.
+Bid Score = (EL * 10) - (PC / 4).
+Initial Dept Budgets: D1:0, D2:0, D3:0, D4:0.
+
+**Project P1 (K=4):**
+*   D1: EL=4, PC=80. Score = (4*10) - (80/4) = 40 - 20 = 20.
+*   D2: EL=5, PC=90. Score = (5*10) - (90/4) = 50 - 22.5 = 27.5.
+*   D3: EL=3, PC=70. Score = (3*10) - (70/4) = 30 - 17.5 = 12.5.
+*   D4: EL=4, PC=85. Score = (4*10) - (85/4) = 40 - 21.25 = 18.75.
+D2 wins P1 (Score 27.5). Cost $90k. D2 budget = $90k.
+
+**Project P2 (K=4):**
+*   D1: EL=3, PC=70. Score = (3*10) - (70/4) = 30 - 17.5 = 12.5.
+*   D2: EL=4, PC=60. Score = (4*10) - (60/4) = 40 - 15 = 25.
+*   D3: EL=5, PC=85. Score = (5*10) - (85/4) = 50 - 21.25 = 28.75.
+*   D4: EL=2, PC=50. Score = (2*10) - (50/4) = 20 - 12.5 = 7.5.
+D3 wins P2 (Score 28.75). Cost $85k. D3 budget = $85k.
+
+**Project P3 (K=4):**
+*   D1: EL=5, PC=90. Score = (5*10) - (90/4) = 50 - 22.5 = 27.5.
+*   D2: EL=3, PC=75. Score = (3*10) - (75/4) = 30 - 18.75 = 11.25.
+*   D3: EL=4, PC=60. Score = (4*10) - (60/4) = 40 - 15 = 25.
+*   D4: EL=2, PC=45. Score = (2*10) - (45/4) = 20 - 11.25 = 8.75.
+D1 wins P3 (Score 27.5). Cost $90k. D1 budget = $90k.
+
+Original scenario (K=5): P1->D2, P2->D3, P3->D1.
+New scenario (K=4): P1->D2, P2->D3, P3->D1.
+The set of projects won by each department remains the same.
+The correct answer is (D) The set of projects won by each department remains the same."
+"LRDI","","Q18","18","Set 4 of 5: Departmental Project Bidding","Four departments (D1, D2, D3, D4) are bidding for three projects (P1, P2, P3). Each department can bid for any number of projects. Each project is awarded to exactly one department.
+A department's 'Bid Score' for a project is based on its 'Expertise Level' (EL, an integer from 1 to 5) and its 'Proposed Cost' (PC, in thousands of $).
+Bid Score = (EL * 10) - (PC / K), where K is a constant factor. The project is awarded to the department with the highest Bid Score. Ties in Bid Score are broken in favor of the department with the lower numerical ID (D1 > D2 > D3 > D4).
+Information:
+1.	The constant factor K = 5.
+2.	Expertise Levels (EL):
+
+    | Dept | P1 | P2 | P3 |
+    |------|----|----|----|
+    | D1   | 4  | 3  | 5  |
+    | D2   | 5  | 4  | 3  |
+    | D3   | 3  | 5  | 4  |
+    | D4   | 4  | 2  | 2  |
+
+3.	Proposed Costs (PC, in thousands of $):
+
+    | Dept | P1 | P2 | P3 |
+    |------|----|----|----|
+    | D1   | 80 | 70 | 90 |
+    | D2   | 90 | 60 | 75 |
+    | D3   | 70 | 85 | 60 |
+    | D4   | 85 | 50 | 45 |
+
+4.	Budget Constraint: The total 'Awarded Cost' (sum of PCs for projects won by a department) for any single department cannot exceed $150,000. If awarding a project to the highest bidder (after tie-breaking) would cause that department's cumulative awarded cost (including the current project) to exceed $150,000, that department is disqualified from that specific project bid, and the project is awarded to the next highest valid bidder (who also meets the budget constraint). This budget check and award process is done sequentially for projects in the order P1, then P2, then P3.","If D1’s Expertise Level for P1 was 5 instead of 4 (all else remaining the same), which department would win Project P2?","D1","D2","D3","D4","A","B","C","D","C","MCQ","Logical Reasoning","Caselets with Quantitative Reasoning","Difficult","Impact of Data Change on Sequential Decisions","sensitivity analysis, specific data point change, partial process re-evaluation, impact on subsequent decisions","False","MockSetFin_S4","Analysis","D1’s EL for P1 becomes 5 (was 4). K=5.
+Initial Dept Budgets: D1:0, D2:0, D3:0, D4:0.
+
+**Project P1 (D1 EL for P1 = 5):**
+*   D1: EL=5, PC=80. Score = (5*10) - (80/5) = 50 - 16 = 34.
+*   D2: EL=5, PC=90. Score = (5*10) - (90/5) = 50 - 18 = 32.
+*   D3: EL=3, PC=70. Score = (3*10) - (70/5) = 30 - 14 = 16.
+*   D4: EL=4, PC=85. Score = (4*10) - (85/5) = 40 - 17 = 23.
+D1 wins P1 (Score 34). Cost $80k. D1 budget = $80k.
+
+**Project P2 (D1 won P1, budget $80k):**
+*   D1: EL=3, PC=70. Score = (3*10) - (70/5) = 30 - 14 = 16.
+*   D2: EL=4, PC=60. Score = (4*10) - (60/5) = 40 - 12 = 28.
+*   D3: EL=5, PC=85. Score = (5*10) - (85/5) = 50 - 17 = 33.
+*   D4: EL=2, PC=50. Score = (2*10) - (50/5) = 20 - 10 = 10.
+Highest score is 33 by D3. D3 current budget $0. PC for P2 = $85k. $0 + $85k <= $150k.
+D3 wins P2.
+The department winning P2 is D3.
+The correct answer is (C) D3."
+"LRDI","","Q19","19","Set 5 of 5: Startup Investment Portfolio","An investment firm manages a portfolio of investments in five startups: AlphaTech (A), BetaHealth (B), GammaFin (G), DeltaEdu (D), and EpsilonRetail (E). The firm tracks the 'Valuation Growth Multiple' (VGM) and 'Risk Score' (RS, from 1 to 10, higher is riskier) for each startup quarterly.
+Portfolio Value (PV) for a quarter = Sum of (Initial Investment_i * VGM_i for that quarter) for each startup i.
+Weighted Risk (WR) for a quarter = Sum of ( (Current Value_i / PV for that quarter) * RS_i for that quarter ), where Current Value_i = Initial Investment_i * VGM_i for that quarter.
+Q1 2024 Data:
+
+| Startup       | Initial Investment (Million $) | Q1 VGM | Q1 RS |
+|---------------|--------------------------------|--------|-------|
+| AlphaTech     | 2.0                            | 3.0    | 7     |
+| BetaHealth    | 1.5                            | 2.5    | 5     |
+| GammaFin      | 3.0                            | 1.8    | 8     |
+| DeltaEdu      | 1.0                            | 4.0    | 4     |
+| EpsilonRetail | 2.5                            | 2.0    | 6     |
+
+Conditions for Q2 2024 Projection:
+1.	If a startup's Q1 RS was > 6, its VGM in Q2 is projected to be 80% of its Q1 VGM.
+2.	If a startup's Q1 RS was <= 6 AND its Q1 VGM was < 2.5, its VGM in Q2 is projected to increase by 0.5 from its Q1 VGM.
+3.	For all other startups, their Q2 VGM is projected to be 110% of their Q1 VGM.
+4.	Risk Scores (RS) for Q2 are projected as follows:
+    *   If Q1 VGM > 2.8 AND Q1 RS > 1, Q2 RS decreases by 1 from Q1 RS.
+    *   If Q1 VGM <= 2.2 AND Q1 RS < 10, Q2 RS increases by 1 from Q1 RS.
+    *   Otherwise, Q2 RS remains the same as Q1 RS. (Min RS is 1, Max RS is 10).
+5.	No new investments are made or withdrawn; Initial Investment amounts remain constant.","What is the projected Portfolio Value (PV) for Q2 2024 (in Million $), rounded to three decimal places?","22.850","23.895","24.125","25.050","A","B","C","D","B","MCQ","Data Interpretation","Multi-variable Calculation & Projection","Difficult","Financial Portfolio Projection & Analysis","formula application (VGM, CV, PV), conditional logic for projections, multi-step calculation","False","MockSetFin_S5","Analysis","First, calculate Q1 Current Values (CV_Q1) and total PV_Q1.
+CV = Initial Investment * VGM.
+*   AlphaTech (A): 2.0 * 3.0 = 6.0 M$
+*   BetaHealth (B): 1.5 * 2.5 = 3.75 M$
+*   GammaFin (G): 3.0 * 1.8 = 5.4 M$
+*   DeltaEdu (D): 1.0 * 4.0 = 4.0 M$
+*   EpsilonRetail (E): 2.5 * 2.0 = 5.0 M$
+PV_Q1 = 6.0 + 3.75 + 5.4 + 4.0 + 5.0 = 24.15 M$.
+
+Project Q2 VGMs:
+1.  RS_Q1 > 6 => Q2 VGM = 0.8 * Q1 VGM
+    *   AlphaTech (RS=7): Q2 VGM_A = 0.8 * 3.0 = 2.4
+    *   GammaFin (RS=8): Q2 VGM_G = 0.8 * 1.8 = 1.44
+2.  RS_Q1 <= 6 AND Q1 VGM < 2.5 => Q2 VGM = Q1 VGM + 0.5
+    *   EpsilonRetail (RS=6, VGM=2.0): Q2 VGM_E = 2.0 + 0.5 = 2.5
+3.  All other startups => Q2 VGM = 1.1 * Q1 VGM
+    *   BetaHealth (RS=5, VGM=2.5; not <2.5): Q2 VGM_B = 1.1 * 2.5 = 2.75
+    *   DeltaEdu (RS=4, VGM=4.0; not <2.5): Q2 VGM_D = 1.1 * 4.0 = 4.4
+
+Q2 VGMs: A=2.4, B=2.75, G=1.44, D=4.4, E=2.5.
+
+Calculate Q2 Current Values (CV_Q2):
+*   AlphaTech: 2.0 * 2.4 = 4.8 M$
+*   BetaHealth: 1.5 * 2.75 = 4.125 M$
+*   GammaFin: 3.0 * 1.44 = 4.32 M$
+*   DeltaEdu: 1.0 * 4.4 = 4.4 M$
+*   EpsilonRetail: 2.5 * 2.5 = 6.25 M$
+
+Projected Portfolio Value (PV) for Q2 2024:
+PV_Q2 = 4.8 + 4.125 + 4.32 + 4.4 + 6.25 = 23.895 M$.
+The correct answer is (B) 23.895."
+"LRDI","","Q20","20","Set 5 of 5: Startup Investment Portfolio","An investment firm manages a portfolio of investments in five startups: AlphaTech (A), BetaHealth (B), GammaFin (G), DeltaEdu (D), and EpsilonRetail (E). The firm tracks the 'Valuation Growth Multiple' (VGM) and 'Risk Score' (RS, from 1 to 10, higher is riskier) for each startup quarterly.
+Portfolio Value (PV) for a quarter = Sum of (Initial Investment_i * VGM_i for that quarter) for each startup i.
+Weighted Risk (WR) for a quarter = Sum of ( (Current Value_i / PV for that quarter) * RS_i for that quarter ), where Current Value_i = Initial Investment_i * VGM_i for that quarter.
+Q1 2024 Data:
+
+| Startup       | Initial Investment (Million $) | Q1 VGM | Q1 RS |
+|---------------|--------------------------------|--------|-------|
+| AlphaTech     | 2.0                            | 3.0    | 7     |
+| BetaHealth    | 1.5                            | 2.5    | 5     |
+| GammaFin      | 3.0                            | 1.8    | 8     |
+| DeltaEdu      | 1.0                            | 4.0    | 4     |
+| EpsilonRetail | 2.5                            | 2.0    | 6     |
+
+Conditions for Q2 2024 Projection:
+1.	If a startup's Q1 RS was > 6, its VGM in Q2 is projected to be 80% of its Q1 VGM.
+2.	If a startup's Q1 RS was <= 6 AND its Q1 VGM was < 2.5, its VGM in Q2 is projected to increase by 0.5 from its Q1 VGM.
+3.	For all other startups, their Q2 VGM is projected to be 110% of their Q1 VGM.
+4.	Risk Scores (RS) for Q2 are projected as follows:
+    *   If Q1 VGM > 2.8 AND Q1 RS > 1, Q2 RS decreases by 1 from Q1 RS.
+    *   If Q1 VGM <= 2.2 AND Q1 RS < 10, Q2 RS increases by 1 from Q1 RS.
+    *   Otherwise, Q2 RS remains the same as Q1 RS. (Min RS is 1, Max RS is 10).
+5.	No new investments are made or withdrawn; Initial Investment amounts remain constant.","Which startup is projected to have the highest percentage increase in its individual current value (Initial Inv. * VGM) from Q1 2024 to Q2 2024?","AlphaTech","BetaHealth","DeltaEdu","EpsilonRetail","A","B","C","D","D","MCQ","Data Interpretation","Percentage Change Calculation","Medium","Comparative Percentage Change","percentage increase/decrease, comparative analysis of derived values","False","MockSetFin_S5","Application","Calculate percentage increase in individual current value: ((CV_Q2 - CV_Q1) / CV_Q1) * 100%.
+This is equivalent to ((Q2_VGM - Q1_VGM) / Q1_VGM) * 100% since Initial Investment is constant.
+*   AlphaTech: Q1VGM=3.0, Q2VGM=2.4. Change = ((2.4-3.0)/3.0)*100 = (-0.6/3.0)*100 = -20%.
+*   BetaHealth: Q1VGM=2.5, Q2VGM=2.75. Change = ((2.75-2.5)/2.5)*100 = (0.25/2.5)*100 = 10%.
+*   GammaFin: Q1VGM=1.8, Q2VGM=1.44. Change = ((1.44-1.8)/1.8)*100 = (-0.36/1.8)*100 = -20%.
+*   DeltaEdu: Q1VGM=4.0, Q2VGM=4.4. Change = ((4.4-4.0)/4.0)*100 = (0.4/4.0)*100 = 10%.
+*   EpsilonRetail: Q1VGM=2.0, Q2VGM=2.5. Change = ((2.5-2.0)/2.0)*100 = (0.5/2.0)*100 = 25%.
+EpsilonRetail has the highest percentage increase (25%).
+The correct answer is (D) EpsilonRetail."
+"LRDI","","Q21","21","Set 5 of 5: Startup Investment Portfolio","An investment firm manages a portfolio of investments in five startups: AlphaTech (A), BetaHealth (B), GammaFin (G), DeltaEdu (D), and EpsilonRetail (E). The firm tracks the 'Valuation Growth Multiple' (VGM) and 'Risk Score' (RS, from 1 to 10, higher is riskier) for each startup quarterly.
+Portfolio Value (PV) for a quarter = Sum of (Initial Investment_i * VGM_i for that quarter) for each startup i.
+Weighted Risk (WR) for a quarter = Sum of ( (Current Value_i / PV for that quarter) * RS_i for that quarter ), where Current Value_i = Initial Investment_i * VGM_i for that quarter.
+Q1 2024 Data:
+
+| Startup       | Initial Investment (Million $) | Q1 VGM | Q1 RS |
+|---------------|--------------------------------|--------|-------|
+| AlphaTech     | 2.0                            | 3.0    | 7     |
+| BetaHealth    | 1.5                            | 2.5    | 5     |
+| GammaFin      | 3.0                            | 1.8    | 8     |
+| DeltaEdu      | 1.0                            | 4.0    | 4     |
+| EpsilonRetail | 2.5                            | 2.0    | 6     |
+
+Conditions for Q2 2024 Projection:
+1.	If a startup's Q1 RS was > 6, its VGM in Q2 is projected to be 80% of its Q1 VGM.
+2.	If a startup's Q1 RS was <= 6 AND its Q1 VGM was < 2.5, its VGM in Q2 is projected to increase by 0.5 from its Q1 VGM.
+3.	For all other startups, their Q2 VGM is projected to be 110% of their Q1 VGM.
+4.	Risk Scores (RS) for Q2 are projected as follows:
+    *   If Q1 VGM > 2.8 AND Q1 RS > 1, Q2 RS decreases by 1 from Q1 RS.
+    *   If Q1 VGM <= 2.2 AND Q1 RS < 10, Q2 RS increases by 1 from Q1 RS.
+    *   Otherwise, Q2 RS remains the same as Q1 RS. (Min RS is 1, Max RS is 10).
+5.	No new investments are made or withdrawn; Initial Investment amounts remain constant.","What is the projected Weighted Risk (WR) for the portfolio in Q2 2024, rounded to two decimal places?","5.98","6.08","6.21","6.45","A","B","C","D","B","MCQ","Data Interpretation","Weighted Average Calculation","Difficult","Weighted Average Calculation with Projections","formula application (Weighted Risk), conditional logic for risk scores, multi-component calculation","False","MockSetFin_S5","Analysis","Project Q2 Risk Scores (RS_Q2): Min RS is 1, Max RS is 10.
+*   AlphaTech: Q1VGM=3.0, Q1RS=7. (Q1VGM > 2.8 AND Q1RS > 1) => Q2RS_A = 7 - 1 = 6.
+*   BetaHealth: Q1VGM=2.5, Q1RS=5. (Neither specific rule applies) => Q2RS_B = 5.
+*   GammaFin: Q1VGM=1.8, Q1RS=8. (Q1VGM <= 2.2 AND Q1RS < 10) => Q2RS_G = 8 + 1 = 9.
+*   DeltaEdu: Q1VGM=4.0, Q1RS=4. (Q1VGM > 2.8 AND Q1RS > 1) => Q2RS_D = 4 - 1 = 3.
+*   EpsilonRetail: Q1VGM=2.0, Q1RS=6. (Q1VGM <= 2.2 AND Q1RS < 10) => Q2RS_E = 6 + 1 = 7.
+
+Q2 RS: A=6, B=5, G=9, D=3, E=7.
+CV_Q2 values from Q19: A=4.8, B=4.125, G=4.32, D=4.4, E=6.25.
+PV_Q2 = 23.895 M$.
+
+Weighted Risk (WR_Q2) = Sum of ((CV_Q2i / PV_Q2) * RS_Q2i).
+The sum of numerators (CV_Q2i * RS_Q2i):
+*   AlphaTech: 4.8 * 6 = 28.8
+*   BetaHealth: 4.125 * 5 = 20.625
+*   GammaFin: 4.32 * 9 = 38.88
+*   DeltaEdu: 4.4 * 3 = 13.2
+*   EpsilonRetail: 6.25 * 7 = 43.75
+Sum of (CV_Q2i * RS_Q2i) = 28.8 + 20.625 + 38.88 + 13.2 + 43.75 = 145.255.
+WR_Q2 = 145.255 / 23.895 = 6.07911701...
+Rounded to two decimal places: 6.08.
+The correct answer is (B) 6.08."
+"LRDI","","Q22","22","Set 5 of 5: Startup Investment Portfolio","An investment firm manages a portfolio of investments in five startups: AlphaTech (A), BetaHealth (B), GammaFin (G), DeltaEdu (D), and EpsilonRetail (E). The firm tracks the 'Valuation Growth Multiple' (VGM) and 'Risk Score' (RS, from 1 to 10, higher is riskier) for each startup quarterly.
+Portfolio Value (PV) for a quarter = Sum of (Initial Investment_i * VGM_i for that quarter) for each startup i.
+Weighted Risk (WR) for a quarter = Sum of ( (Current Value_i / PV for that quarter) * RS_i for that quarter ), where Current Value_i = Initial Investment_i * VGM_i for that quarter.
+Q1 2024 Data:
+
+| Startup       | Initial Investment (Million $) | Q1 VGM | Q1 RS |
+|---------------|--------------------------------|--------|-------|
+| AlphaTech     | 2.0                            | 3.0    | 7     |
+| BetaHealth    | 1.5                            | 2.5    | 5     |
+| GammaFin      | 3.0                            | 1.8    | 8     |
+| DeltaEdu      | 1.0                            | 4.0    | 4     |
+| EpsilonRetail | 2.5                            | 2.0    | 6     |
+
+Conditions for Q2 2024 Projection:
+1.	If a startup's Q1 RS was > 6, its VGM in Q2 is projected to be 80% of its Q1 VGM.
+2.	If a startup's Q1 RS was <= 6 AND its Q1 VGM was < 2.5, its VGM in Q2 is projected to increase by 0.5 from its Q1 VGM.
+3.	For all other startups, their Q2 VGM is projected to be 110% of their Q1 VGM.
+4.	Risk Scores (RS) for Q2 are projected as follows:
+    *   If Q1 VGM > 2.8 AND Q1 RS > 1, Q2 RS decreases by 1 from Q1 RS.
+    *   If Q1 VGM <= 2.2 AND Q1 RS < 10, Q2 RS increases by 1 from Q1 RS.
+    *   Otherwise, Q2 RS remains the same as Q1 RS. (Min RS is 1, Max RS is 10).
+5.	No new investments are made or withdrawn; Initial Investment amounts remain constant.","If, contrary to projections, AlphaTech's Q2 VGM turned out to be 2.0 (instead of its projected Q2 VGM), while all other Q2 VGM and all Q2 RS projections hold true, what would be the new Q2 Weighted Risk (WR), rounded to two decimal places?","5.97","6.08","6.09","6.15","A","B","C","D","B","MCQ","Data Interpretation","Sensitivity Analysis in Projections","Difficult","Impact Analysis on a Weighted Metric","impact of data change on derived metrics, recalculation of weighted average, precision and rounding","False","MockSetFin_S5","Evaluation","AlphaTech's Q2 VGM is now 2.0 (instead of its projected Q2 VGM of 2.4). All other Q2 VGM and all Q2 RS projections hold true.
+New CV_Q2 for AlphaTech (CV'_A) = 2.0 (Initial Inv.) * 2.0 (New Q2 VGM) = 4.0 M$.
+Other CV_Q2 values remain the same as in Q21:
+CV_B = 4.125 M$, CV_G = 4.32 M$, CV_D = 4.4 M$, CV_E = 6.25 M$.
+New Total Portfolio Value (PV'_Q2) = CV'_A + CV_B + CV_G + CV_D + CV_E
+PV'_Q2 = 4.0 + 4.125 + 4.32 + 4.4 + 6.25 = 23.095 M$.
+
+Q2 RS values remain the same as in Q21:
+RS_A = 6, RS_B = 5, RS_G = 9, RS_D = 3, RS_E = 7.
+
+Calculate the new sum of numerators (CV'_Q2i * RS_Q2i):
+*   AlphaTech: 4.0 * 6 = 24.0
+*   BetaHealth: 4.125 * 5 = 20.625
+*   GammaFin: 4.32 * 9 = 38.88
+*   DeltaEdu: 4.4 * 3 = 13.2
+*   EpsilonRetail: 6.25 * 7 = 43.75
+New Sum of (CV'_Q2i * RS_Q2i) = 24.0 + 20.625 + 38.88 + 13.2 + 43.75 = 140.455.
+
+New Q2 Weighted Risk (WR'_Q2) = New Sum of (CV'_Q2i * RS_Q2i) / PV'_Q2
+WR'_Q2 = 140.455 / 23.095 = 6.081619398...
+Rounded to two decimal places: 6.08.
+The correct answer is (B) 6.08."

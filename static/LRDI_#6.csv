@@ -1,0 +1,609 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+LRDI,,MOCKCAT24S2_V1_Q1,1,MOCKCAT24S2_V1_Set1_GridNumberPlacement,"A 4x4 grid has sixteen slots. Exactly twelve distinct integers from 1 to 12 (inclusive) must be placed in twelve of these slots. The remaining four slots remain empty (denoted by E). The following rules apply:
+1.	In any row, if there are multiple numbers, the numbers placed strictly increase from left to right.
+2.	In any column, if there are multiple numbers, the numbers placed strictly increase from top to bottom.
+3.	The number 1 is in (Row 1, Column 1). The number 12 is in (Row 4, Column 4).
+4.	Row 1 is completely filled with numbers. The sum of numbers in Row 1 is 10.
+5.	The number 5 is in (Row 2, Column 1). Slot (R2, C4) is empty. The sum of numbers in Column 1 is 14.
+6.	The number 10 is in Column 2 and Row 4. Column 2 is completely filled.
+7.	The slot (Row 3, Column 3) is empty. The number 11 is in Row 3.
+8.	The sum of numbers in Row 2 is 18.
+9.  The sum of numbers in Row 3 is 28.","What is the number in the slot (Row 3, Column 2)?",6,8,9,7,6,8,9,7,9,MCQ,Logical Reasoning,Grid Puzzle,Moderate,,"constraint satisfaction, numerical grid, row-column rules",False,MOCKCAT24S2_V1_Set1_GridNumberPlacement,,"1.  From Clue 3, (R1,C1) = 1.
+2.  From Clue 4, Row 1 is completely filled and its sum is 10. Since numbers increase L-R (Clue 1) and are distinct integers, Row 1 must be {1, 2, 3, 4}. So, R1C1=1, R1C2=2, R1C3=3, R1C4=4.
+3.  From Clue 5, (R2,C1) = 5 and slot (R2,C4) is empty (E).
+4.  From Clue 3, (R4,C4) = 12.
+5.  From Clue 5, the sum of numbers in Column 1 is 14. We have R1C1=1 and R2C1=5. So, 1 + 5 + R3C1 + R4C1 = 14 (considering only filled cells). This means if both R3C1 and R4C1 are filled, their sum is 8. By Clue 2 (numbers in a column increase T-B), R3C1 > R2C1=5. If R3C1 and R4C1 were both filled, then 5 < R3C1 < R4C1, and R3C1+R4C1=8. No two distinct integers satisfy this. So, one of R3C1 or R4C1 must be empty, and the other must be 8.
+6.  From Clue 6, (R4,C2) = 10 and Column 2 is completely filled.
+7.  From Clue 7, slot (R3,C3) is empty (E), and the number 11 is in Row 3.
+8.  From Clue 8, the sum of numbers in Row 2 is 18. Row 2 is {R2C1, R2C2, R2C3, R2C4}. We have {5, R2C2, R2C3, E}. So, 5 + R2C2 + R2C3 = 18, which means R2C2 + R2C3 = 13. Since numbers increase L-R (Clue 1) and R2C2 > R2C1=5, the only distinct integers for (R2C2, R2C3) are (6,7). So, R2C2=6 and R2C3=7. Row 2 is {5, 6, 7, E}.
+9.  From Clue 9, the sum of numbers in Row 3 is 28. Row 3 is {R3C1, R3C2, R3C3, R3C4}. We have {R3C1, R3C2, E, R3C4}. So, R3C1 + R3C2 + R3C4 = 28. We also know 11 is in Row 3.
+10. Let's revisit Column 1 (Step 5).
+    *   Case A: R3C1=8, R4C1=E.
+        Row 3 is {8, R3C2, E, R3C4}. Sum: 8 + R3C2 + R3C4 = 28, so R3C2 + R3C4 = 20.
+        Column 2 is {R1C2, R2C2, R3C2, R4C2} = {2, 6, R3C2, 10} and is filled. Numbers increase T-B. So, 6 < R3C2 < 10. Possible values for R3C2 are 7, 8, 9.
+        Since R3C1=8, R3C2 must be > 8 (Clue 1: L-R increase in Row 3) and R3C2 cannot be 8 (distinct numbers). So R3C2 must be 9.
+        If R3C2=9, then R3C4 = 20 - 9 = 11. This places 11 in Row 3, satisfying Clue 7.
+        Row 3 becomes {8, 9, E, 11}. This is valid (8<9<11).
+        Column 2 becomes {2, 6, 9, 10}. This is valid (2<6<9<10). This case is consistent.
+    *   Case B: R3C1=E, R4C1=8.
+        Row 3 is {E, R3C2, E, R3C4}. Sum: R3C2 + R3C4 = 28.
+        Column 2 is {2, 6, R3C2, 10}. So, 6 < R3C2 < 10. Possible values for R3C2 are 7, 8, 9.
+        Number 8 is used in R4C1, so R3C2 can be 7 or 9.
+        If R3C2=7: R3C4 = 28 - 7 = 21 (Impossible, max number is 12).
+        If R3C2=9: R3C4 = 28 - 9 = 19 (Impossible, max number is 12).
+        Case B is not possible.
+11. Therefore, Case A is the only valid configuration: R3C1=8, R4C1=E, R3C2=9, R3C4=11.
+The number in (Row 3, Column 2) is 9."
+LRDI,,MOCKCAT24S2_V1_Q2,2,MOCKCAT24S2_V1_Set1_GridNumberPlacement,"A 4x4 grid has sixteen slots. Exactly twelve distinct integers from 1 to 12 (inclusive) must be placed in twelve of these slots. The remaining four slots remain empty (denoted by E). The following rules apply:
+1.	In any row, if there are multiple numbers, the numbers placed strictly increase from left to right.
+2.	In any column, if there are multiple numbers, the numbers placed strictly increase from top to bottom.
+3.	The number 1 is in (Row 1, Column 1). The number 12 is in (Row 4, Column 4).
+4.	Row 1 is completely filled with numbers. The sum of numbers in Row 1 is 10.
+5.	The number 5 is in (Row 2, Column 1). Slot (R2, C4) is empty. The sum of numbers in Column 1 is 14.
+6.	The number 10 is in Column 2 and Row 4. Column 2 is completely filled.
+7.	The slot (Row 3, Column 3) is empty. The number 11 is in Row 3.
+8.	The sum of numbers in Row 2 is 18.
+9.  The sum of numbers in Row 3 is 28.",Which of the following slots is empty?,"(Row 2, Column 2)","(Row 3, Column 4)","(Row 4, Column 1)","(Row 1, Column 4)","(Row 2, Column 2)","(Row 3, Column 4)","(Row 4, Column 1)","(Row 1, Column 4)","(Row 4, Column 1)",MCQ,Logical Reasoning,Grid Puzzle,Moderate,,"constraint satisfaction, slot identification, deduction",False,MOCKCAT24S2_V1_Set1_GridNumberPlacement,,"1.  Following the deductions in the solution for Q1:
+    *   (R1,C1) = 1 (Clue 3).
+    *   (R2,C1) = 5 (Clue 5).
+    *   Sum of numbers in Column 1 is 14 (Clue 5). So, R1C1 + R2C1 + R3C1 + R4C1 = 14 (summing only filled cells).
+    *   1 + 5 + R3C1 + R4C1 = 14 => R3C1 + R4C1 = 8 (if both filled).
+    *   Clue 2 (numbers in a column increase T-B) means R2C1 < R3C1 (if R3C1 is filled). So 5 < R3C1.
+    *   If R3C1 and R4C1 are both filled, then 5 < R3C1 < R4C1 and R3C1 + R4C1 = 8. No two distinct integers satisfy this. Thus, one of R3C1 or R4C1 must be empty, and the other must be 8.
+2.  From Step 10 and 11 of Q1 solution, using Clue 9 (Sum of Row 3 = 28), it was uniquely determined that R3C1=8 and (Row 4, Column 1) is Empty (E).
+3.  To check other options based on the fully derived grid:
+    Grid:
+    1  2  3  4
+    5  6  7  E
+    8  9  E 11
+    E 10 E 12
+    (R2,C2) = 6. Not empty.
+    (R3,C4) = 11. Not empty.
+    (R1,C4) = 4. Not empty.
+Thus, (Row 4, Column 1) is the empty slot among the options."
+LRDI,,MOCKCAT24S2_V1_Q3,3,MOCKCAT24S2_V1_Set1_GridNumberPlacement,"A 4x4 grid has sixteen slots. Exactly twelve distinct integers from 1 to 12 (inclusive) must be placed in twelve of these slots. The remaining four slots remain empty (denoted by E). The following rules apply:
+1.	In any row, if there are multiple numbers, the numbers placed strictly increase from left to right.
+2.	In any column, if there are multiple numbers, the numbers placed strictly increase from top to bottom.
+3.	The number 1 is in (Row 1, Column 1). The number 12 is in (Row 4, Column 4).
+4.	Row 1 is completely filled with numbers. The sum of numbers in Row 1 is 10.
+5.	The number 5 is in (Row 2, Column 1). Slot (R2, C4) is empty. The sum of numbers in Column 1 is 14.
+6.	The number 10 is in Column 2 and Row 4. Column 2 is completely filled.
+7.	The slot (Row 3, Column 3) is empty. The number 11 is in Row 3.
+8.	The sum of numbers in Row 2 is 18.
+9.  The sum of numbers in Row 3 is 28.",What is the sum of numbers in Column 3?,10,13,20,Cannot be determined,10,13,20,Cannot be determined,10,MCQ,Logical Reasoning,Grid Puzzle,Moderate,,"summation, grid completion, numerical reasoning",False,MOCKCAT24S2_V1_Set1_GridNumberPlacement,,"1.  From Q1 solution (Step 2), (R1,C3) = 3.
+2.  From Q1 solution (Step 8), (R2,C3) = 7.
+3.  From Clue 7, (R3,C3) = E.
+4.  The grid has 12 numbers and 4 empty slots. The empty slots determined so far are:
+    *   (R2,C4) (Clue 5)
+    *   (R4,C1) (Q1 solution, Step 11)
+    *   (R3,C3) (Clue 7)
+5.  This accounts for 3 empty slots. The fourth empty slot must be (R4,C3), as all other slots are filled by the numbers 1-12.
+    The numbers used are {1,2,3,4,5,6,7,8,9,10,11,12}.
+    Grid state from Q1 solution:
+    Row 1: {1, 2, 3, 4}
+    Row 2: {5, 6, 7, E}
+    Row 3: {8, 9, E, 11}
+    Row 4: {E, 10, R4C3, 12}
+    The only remaining slot to be E or filled is R4C3. If it were filled, it would have to be a number not yet used (none left) or violate rules (e.g. >R3C3 if R3C3 was filled, >R4C2). Since R3C3 is E, R4C3 can be filled if a number is available. However, all 12 distinct numbers 1-12 are already placed. This means R4C3 must be the 4th empty slot.
+6.  Therefore, Column 3 contains numbers (R1,C3)=3 and (R2,C3)=7. Slots (R3,C3) and (R4,C3) are empty.
+    Sum of numbers in Column 3 = 3 + 7 = 10."
+LRDI,,MOCKCAT24S2_V1_Q4,4,MOCKCAT24S2_V1_Set1_GridNumberPlacement,"A 4x4 grid has sixteen slots. Exactly twelve distinct integers from 1 to 12 (inclusive) must be placed in twelve of these slots. The remaining four slots remain empty (denoted by E). The following rules apply:
+1.	In any row, if there are multiple numbers, the numbers placed strictly increase from left to right.
+2.	In any column, if there are multiple numbers, the numbers placed strictly increase from top to bottom.
+3.	The number 1 is in (Row 1, Column 1). The number 12 is in (Row 4, Column 4).
+4.	Row 1 is completely filled with numbers. The sum of numbers in Row 1 is 10.
+5.	The number 5 is in (Row 2, Column 1). Slot (R2, C4) is empty. The sum of numbers in Column 1 is 14.
+6.	The number 10 is in Column 2 and Row 4. Column 2 is completely filled.
+7.	The slot (Row 3, Column 3) is empty. The number 11 is in Row 3.
+8.	The sum of numbers in Row 2 is 18.
+9.  The sum of numbers in Row 3 is 28.",How many numbers in the grid are greater than 7?,4,5,6,3,4,5,6,3,5,MCQ,Logical Reasoning,Grid Puzzle,Moderate,,"counting, numerical comparison, grid analysis",False,MOCKCAT24S2_V1_Set1_GridNumberPlacement,,"The grid, as derived from applying all clues sequentially (demonstrated through solutions of Q1-Q3):
+Row 1: {1, 2, 3, 4}
+Row 2: {5, 6, 7, E}
+Row 3: {8, 9, E, 11}
+Row 4: {E, 10, E, 12}
+The numbers placed are {1,2,3,4,5,6,7,8,9,10,11,12}.
+Numbers greater than 7 are: 8, 9, 10, 11, 12. There are 5 such numbers."
+LRDI,,MOCKCAT24S2_V1_Q5,5,MOCKCAT24S2_V1_Set1_GridNumberPlacement,"A 4x4 grid has sixteen slots. Exactly twelve distinct integers from 1 to 12 (inclusive) must be placed in twelve of these slots. The remaining four slots remain empty (denoted by E). The following rules apply:
+1.	In any row, if there are multiple numbers, the numbers placed strictly increase from left to right.
+2.	In any column, if there are multiple numbers, the numbers placed strictly increase from top to bottom.
+3.	The number 1 is in (Row 1, Column 1). The number 12 is in (Row 4, Column 4).
+4.	Row 1 is completely filled with numbers. The sum of numbers in Row 1 is 10.
+5.	The number 5 is in (Row 2, Column 1). Slot (R2, C4) is empty. The sum of numbers in Column 1 is 14.
+6.	The number 10 is in Column 2 and Row 4. Column 2 is completely filled.
+7.	The slot (Row 3, Column 3) is empty. The number 11 is in Row 3.
+8.	The sum of numbers in Row 2 is 18.
+9.  The sum of numbers in Row 3 is 28.","Suppose, in the solved grid, the number in (Row 3, Column 4) which was 11 is now changed to 10. To maintain the rule of distinct numbers, the number 10 originally in (Row 4, Column 2) is removed, making (Row 4, Column 2) empty. The number 11 (which was displaced from (Row 3, Column 4)) must now be placed in one of the available empty slots, ensuring all grid rules (L-R increase in rows, T-B increase in columns, 4 empty slots in total) are maintained. Under these new conditions, what is the number in the slot (Row 2, Column 3)?",7,8,9,Cannot be uniquely determined,7,8,9,Cannot be uniquely determined,7,MCQ,Logical Reasoning,Grid Puzzle,Difficult,,"hypothetical reasoning, rule re-application, consistency check",False,MOCKCAT24S2_V1_Set1_GridNumberPlacement,,"The original solved grid (derived using Clues 1-9) is:
+Row 1: {1,2,3,4}
+Row 2: {5,6,7,E}  --- (R2,C3) is 7.
+Row 3: {8,9,E,11}
+Row 4: {E,10,E,12}
+The empty slots are (R2,C4), (R3,C3), (R4,C1), (R4,C3).
+
+The question posits a hypothetical scenario:
+1.  The number in (R3,C4) changes from 11 to 10.
+2.  The number 10 originally in (R4,C2) is removed, making (R4,C2) empty.
+3.  The displaced number 11 (from R3,C4) must be placed in an available empty slot, maintaining all grid rules (L-R increase in rows, T-B increase in columns, 4 empty slots total).
+
+Let's analyze the grid state after changes 1 and 2, before placing 11:
+Row 1: {1,2,3,4} (Unchanged)
+Row 2: {5,6,7,E} (Unchanged, (R2,C3) is still 7)
+Row 3: {8,9,E,10} (R3C4 is now 10. Row still L-R increasing: 8<9<10)
+Row 4: {E, E, E,12} (R4C2 is now E. R4C1 and R4C3 were already E)
+
+The numbers currently on the grid are: 1,2,3,4,5,6,7,8,9,10,12. The number 11 is not on the grid.
+The empty slots are:
+-   Originally empty: (R2,C4), (R3,C3), (R4,C1), (R4,C3)
+-   Newly empty: (R4,C2)
+Total 5 empty slots. The number 11 must be placed in one of these, resulting in 4 empty slots.
+
+We need to check where 11 can be placed, satisfying row/column increasing rules:
+*   Can 11 go into (R2,C4)? Row 2 would be {5,6,7,11}. This is valid (7<11). Column 4 would be {4,11,10,12}. This is INVALID (11 is not < 10 in C4).
+*   Can 11 go into (R3,C3)? Row 3 would be {8,9,11,10}. This is INVALID (11 is not < 10 in R3).
+*   Can 11 go into (R4,C1)? Column 1 would be {1,5,8,11}. This is valid (8<11). Row 4 would be {11,E,E,12}. This is valid. If 11 is placed here, (R2,C3) is still 7.
+*   Can 11 go into (R4,C3)? Row 4 would be {E,E,11,12}. This is valid (11<12). Column 3 would be {3,7,E,11}. This is valid (7<11). If 11 is placed here, (R2,C3) is still 7.
+*   Can 11 go into (R4,C2)? Row 4 would be {E,11,E,12}. This is valid. Column 2 would be {2,6,9,11}. This is valid (9<11). If 11 is placed here, (R2,C3) is still 7.
+
+In all valid possibilities for placing the number 11 ((R4,C1), (R4,C3), or (R4,C2)), the slot (R2,C3) is unaffected by the placement of 11, as it was not empty to begin with and not part of the direct modifications.
+Therefore, the number in (Row 2, Column 3) remains 7."
+LRDI,,MOCKCAT24S2_V1_Q6,6,MOCKCAT24S2_V1_Set2_InterCityRelayRace,"Four teams (T1, T2, T3, T4) participate in an inter-city relay race starting and finishing at City A, passing through intermediate cities B, C, D, E, F, G, H in sequence unless specified otherwise. The standard leg distances (in km) and standard travel times (in minutes, assuming a standard team speed of 10 km/hr) are as follows:
+A-B: 10km (60 min); B-C: 8km (48 min); C-D: 12km (72 min); D-E: 6km (36 min); E-F: 15km (90 min); F-G: 9km (54 min); G-H: 7km (42 min); H-A: 13km (78 min).
+The total standard course time is 480 minutes.
+Additional Information:
+1.	Team T2 followed the standard A-B-C-D-E-F-G-H-A route at standard speed. T2 had mandatory rests of 10 minutes at City C and 10 minutes at City F.
+2.	Team T1 was 10% faster than standard speed on legs B-C and E-F (whether traversed B to C, C to B, E to F, or F to E), but standard speed on all other legs it traversed. T1 had a mandatory rest of 15 minutes at City D. T1 completed its race in exactly 481.2 minutes.
+3.	Team T4 traveled at standard speed on all legs it traversed. T4 had mandatory rests of 5 minutes each at City B, City D, and City G. If T4 passed through City E, its very next stop had to be City A, reached via the shortest possible path from E to A (which could be E-D-C-B-A or E-F-G-H-A). T4 also completed its race in exactly 513 minutes.
+4.	Team T3 was 20% slower than standard speed on leg A-B and 10% faster than standard speed on leg D-E. On all other legs it traversed, it maintained standard speed. T3 had a mandatory rest of 20 minutes at City E. T3 is known to have passed through City C exactly twice, but not on consecutive legs of its journey. T3 completed its race taking 26 minutes more than T2.
+(Note: ""Shortest possible path"" implies summing leg times. If a team returns, e.g., F to E, it traverses leg E-F in reverse, taking the time for that leg based on its specific speed conditions for that leg type.)",What was the total time taken by Team T3 for the race?,500 minutes,514 minutes,526 minutes,513 minutes,500 minutes,514 minutes,526 minutes,513 minutes,526 minutes,MCQ,Logical Reasoning,"Games & Tournaments, Pathing",Moderate,,"data interpretation, direct calculation from clues",False,MOCKCAT24S2_V1_Set2_InterCityRelayRace,,"1.	From Info 1, Team T2's total time: Standard route time (480 mins) + Rests at C (10 mins) + Rest at F (10 mins) = 480 + 10 + 10 = 500 minutes.
+2.	From Info 4, Team T3's total time = Time for T2 + 26 minutes = 500 + 26 = 526 minutes."
+LRDI,,MOCKCAT24S2_V1_Q7,7,MOCKCAT24S2_V1_Set2_InterCityRelayRace,"Four teams (T1, T2, T3, T4) participate in an inter-city relay race starting and finishing at City A, passing through intermediate cities B, C, D, E, F, G, H in sequence unless specified otherwise. The standard leg distances (in km) and standard travel times (in minutes, assuming a standard team speed of 10 km/hr) are as follows:
+A-B: 10km (60 min); B-C: 8km (48 min); C-D: 12km (72 min); D-E: 6km (36 min); E-F: 15km (90 min); F-G: 9km (54 min); G-H: 7km (42 min); H-A: 13km (78 min).
+The total standard course time is 480 minutes.
+Additional Information:
+1.	Team T2 followed the standard A-B-C-D-E-F-G-H-A route at standard speed. T2 had mandatory rests of 10 minutes at City C and 10 minutes at City F.
+2.	Team T1 was 10% faster than standard speed on legs B-C and E-F (whether traversed B to C, C to B, E to F, or F to E), but standard speed on all other legs it traversed. T1 had a mandatory rest of 15 minutes at City D. T1 completed its race in exactly 481.2 minutes.
+3.	Team T4 traveled at standard speed on all legs it traversed. T4 had mandatory rests of 5 minutes each at City B, City D, and City G. If T4 passed through City E, its very next stop had to be City A, reached via the shortest possible path from E to A (which could be E-D-C-B-A or E-F-G-H-A). T4 also completed its race in exactly 513 minutes.
+4.	Team T3 was 20% slower than standard speed on leg A-B and 10% faster than standard speed on leg D-E. On all other legs it traversed, it maintained standard speed. T3 had a mandatory rest of 20 minutes at City E. T3 is known to have passed through City C exactly twice, but not on consecutive legs of its journey. T3 completed its race taking 26 minutes more than T2.
+(Note: ""Shortest possible path"" implies summing leg times. If a team returns, e.g., F to E, it traverses leg E-F in reverse, taking the time for that leg based on its specific speed conditions for that leg type.)",What was the total travel time (excluding rests) for Team T2?,460 minutes,480 minutes,500 minutes,470 minutes,460 minutes,480 minutes,500 minutes,470 minutes,480 minutes,MCQ,Logical Reasoning,"Games & Tournaments, Pathing",Easy,,"data extraction, definition understanding",False,MOCKCAT24S2_V1_Set2_InterCityRelayRace,,"1.	From Info 1, Team T2 followed the standard A-B-C-D-E-F-G-H-A route at standard speed.
+2.	The problem states the total standard course time is 480 minutes. This represents the travel time.
+Therefore, the total travel time for T2 (excluding rests) was 480 minutes."
+LRDI,,MOCKCAT24S2_V1_Q8,8,MOCKCAT24S2_V1_Set2_InterCityRelayRace,"Four teams (T1, T2, T3, T4) participate in an inter-city relay race starting and finishing at City A, passing through intermediate cities B, C, D, E, F, G, H in sequence unless specified otherwise. The standard leg distances (in km) and standard travel times (in minutes, assuming a standard team speed of 10 km/hr) are as follows:
+A-B: 10km (60 min); B-C: 8km (48 min); C-D: 12km (72 min); D-E: 6km (36 min); E-F: 15km (90 min); F-G: 9km (54 min); G-H: 7km (42 min); H-A: 13km (78 min).
+The total standard course time is 480 minutes.
+Additional Information:
+1.	Team T2 followed the standard A-B-C-D-E-F-G-H-A route at standard speed. T2 had mandatory rests of 10 minutes at City C and 10 minutes at City F.
+2.	Team T1 was 10% faster than standard speed on legs B-C and E-F (whether traversed B to C, C to B, E to F, or F to E), but standard speed on all other legs it traversed. T1 had a mandatory rest of 15 minutes at City D. T1 completed its race in exactly 481.2 minutes.
+3.	Team T4 traveled at standard speed on all legs it traversed. T4 had mandatory rests of 5 minutes each at City B, City D, and City G. If T4 passed through City E, its very next stop had to be City A, reached via the shortest possible path from E to A (which could be E-D-C-B-A or E-F-G-H-A). T4 also completed its race in exactly 513 minutes.
+4.	Team T3 was 20% slower than standard speed on leg A-B and 10% faster than standard speed on leg D-E. On all other legs it traversed, it maintained standard speed. T3 had a mandatory rest of 20 minutes at City E. T3 is known to have passed through City C exactly twice, but not on consecutive legs of its journey. T3 completed its race taking 26 minutes more than T2.
+(Note: ""Shortest possible path"" implies summing leg times. If a team returns, e.g., F to E, it traverses leg E-F in reverse, taking the time for that leg based on its specific speed conditions for that leg type.)","If Team T1 traversed exactly the same physical route as Team T2 (A-B-C-D-E-F-G-H-A), what would be its total travel time (excluding rests)?",466.2 minutes,480 minutes,450 minutes,471.8 minutes,466.2 minutes,480 minutes,450 minutes,471.8 minutes,466.2 minutes,MCQ,Logical Reasoning,"Games & Tournaments, Pathing",Moderate,,"hypothetical calculation, speed modification, path interpretation",False,MOCKCAT24S2_V1_Set2_InterCityRelayRace,,"The question asks for T1's total travel time if it traversed the same physical route as Team T2 (A-B-C-D-E-F-G-H-A), using T1's speed modifications.
+T1's speed modifications (Info 2): 10% faster on legs B-C and E-F. Standard speed on all other legs.
+Standard leg times: A-B(60), B-C(48), C-D(72), D-E(36), E-F(90), F-G(54), G-H(42), H-A(78).
+T1's time for each leg on the route A-B-C-D-E-F-G-H-A:
+•	A-B: 60 min (std)
+•	B-C: 48 min * 0.9 = 43.2 min
+•	C-D: 72 min (std)
+•	D-E: 36 min (std)
+•	E-F: 90 min * 0.9 = 81 min
+•	F-G: 54 min (std)
+•	G-H: 42 min (std)
+•	H-A: 78 min (std)
+Total travel time for T1 = 60 + 43.2 + 72 + 36 + 81 + 54 + 42 + 78 = 466.2 minutes."
+LRDI,,MOCKCAT24S2_V1_Q9,9,MOCKCAT24S2_V1_Set2_InterCityRelayRace,"Four teams (T1, T2, T3, T4) participate in an inter-city relay race starting and finishing at City A, passing through intermediate cities B, C, D, E, F, G, H in sequence unless specified otherwise. The standard leg distances (in km) and standard travel times (in minutes, assuming a standard team speed of 10 km/hr) are as follows:
+A-B: 10km (60 min); B-C: 8km (48 min); C-D: 12km (72 min); D-E: 6km (36 min); E-F: 15km (90 min); F-G: 9km (54 min); G-H: 7km (42 min); H-A: 13km (78 min).
+The total standard course time is 480 minutes.
+Additional Information:
+1.	Team T2 followed the standard A-B-C-D-E-F-G-H-A route at standard speed. T2 had mandatory rests of 10 minutes at City C and 10 minutes at City F.
+2.	Team T1 was 10% faster than standard speed on legs B-C and E-F (whether traversed B to C, C to B, E to F, or F to E), but standard speed on all other legs it traversed. T1 had a mandatory rest of 15 minutes at City D. T1 completed its race in exactly 481.2 minutes.
+3.	Team T4 traveled at standard speed on all legs it traversed. T4 had mandatory rests of 5 minutes each at City B, City D, and City G. If T4 passed through City E, its very next stop had to be City A, reached via the shortest possible path from E to A (which could be E-D-C-B-A or E-F-G-H-A). T4 also completed its race in exactly 513 minutes.
+4.	Team T3 was 20% slower than standard speed on leg A-B and 10% faster than standard speed on leg D-E. On all other legs it traversed, it maintained standard speed. T3 had a mandatory rest of 20 minutes at City E. T3 is known to have passed through City C exactly twice, but not on consecutive legs of its journey. T3 completed its race taking 26 minutes more than T2.
+(Note: ""Shortest possible path"" implies summing leg times. If a team returns, e.g., F to E, it traverses leg E-F in reverse, taking the time for that leg based on its specific speed conditions for that leg type.)",Team T4’s route involved traversing how many km in total (sum of distances of legs traversed)?,80 km (standard route),More than 80 km,Less than 80 km,Cannot be determined,80 km (standard route),More than 80 km,Less than 80 km,Cannot be determined,More than 80 km,MCQ,Logical Reasoning,"Games & Tournaments, Pathing",Moderate,,"time-distance conversion, comparison with standard, logical deduction",False,MOCKCAT24S2_V1_Set2_InterCityRelayRace,,"1.	From Info 3, Team T4's total race time was 513 minutes.
+2.	T4 had mandatory rests of 5 minutes each at City B, City D, and City G, totaling 5 * 3 = 15 minutes of rest.
+3.	T4's total travel time = Total race time - Total rest time = 513 - 15 = 498 minutes.
+4.	T4 traveled at standard speed (Info 3). The standard speed is 10 km/hr (1 km per 6 minutes).
+5.	The standard route (A-B-C-D-E-F-G-H-A) distance is 10+8+12+6+15+9+7+13 = 80 km. The standard travel time for this route is 480 minutes.
+6.	Since T4's travel time (498 minutes) is greater than the standard route's travel time (480 minutes), and T4 travels at standard speed, T4 must have covered a distance greater than 80 km.
+(Actual distance for T4 = 498 minutes / 6 min/km = 83 km)."
+LRDI,,MOCKCAT24S2_V1_Q10,10,MOCKCAT24S2_V1_Set3_EventRegistrations,"A 3-day conference (Day 1, Day 2, Day 3) offers 7 types of passes. The price for each pass type is fixed. The number of passes of each type sold are distinct positive integers.
+Pass Types and Prices:
+•	Day 1 Only (P1): ₹1000
+•	Day 2 Only (P2): ₹1200
+•	Day 3 Only (P3): ₹1100
+•	Day 1 & Day 2 (P12): ₹2000
+•	Day 2 & Day 3 (P23): ₹2100
+•	Day 1 & Day 3 (P13): ₹1900
+•	All 3 Days (P_All): ₹2800
+Additional Information:
+1.	The number of attendees on Day 1 was equal to the number of attendees on Day 2. The number of attendees on Day 3 was 140.
+2.	The total revenue generated from P_All passes was ₹224,000. The number of P_All passes sold was the highest among all pass types.
+3.	The number of P12 passes sold was twice the number of P3 passes sold. The number of P1 passes sold was 50.
+4.	Total revenue from all passes combined was ₹536,000.
+5.	The number of P13 passes sold was the smallest among all pass types, and was exactly 10.
+6.	The number of P2 passes sold was 10 more than the number of P3 passes sold.
+(Note: An attendee is counted for a specific day if their pass type grants access on that day.)",How many P23 (Day 2 & Day 3) passes were sold?,10,20,30,40,10,20,30,40,20,MCQ,Data Interpretation,"Multi-variable Data Set, Caselets",Moderate,,"equation solving, system of equations, revenue calculation, attendee calculation",False,MOCKCAT24S2_V1_Set3_EventRegistrations,,"1.	From Info 2, P_All revenue = ₹224,000. P_All price = ₹2800. So, number of P_All passes = 224000 / 2800 = 80.
+2.	From Info 3, number of P1 passes = 50.
+3.	From Info 5, number of P13 passes = 10.
+4.	Let the number of P3 passes be 'x'.
+From Info 3, number of P12 passes = 2x.
+From Info 6, number of P2 passes = x + 10.
+Let the number of P23 passes be 'y'.
+5.	Passes sold: P1=50, P2=x+10, P3=x, P12=2x, P23=y, P13=10, P_All=80.
+6.	From Info 4, Total Revenue = ₹536,000.
+Equation: (50*1000) + ((x+10)*1200) + (x*1100) + (2x*2000) + (y*2100) + (10*1900) + (80*2800) = 536000
+50000 + 1200x + 12000 + 1100x + 4000x + 2100y + 19000 + 224000 = 536000
+305000 + 6300x + 2100y = 536000
+6300x + 2100y = 231000
+Dividing by 2100: 3x + y = 110 (Equation 1)
+7.	From Info 1, number of attendees on Day 3 = 140.
+Attendees on Day 3 = P3 + P13 + P23 + P_All = x + 10 + y + 80 = 140
+x + y + 90 = 140
+x + y = 50 (Equation 2)
+8.	From Equation 2, y = 50 - x. Substitute into Equation 1:
+3x + (50 - x) = 110
+2x + 50 = 110
+2x = 60 => x = 30.
+So, P3 = 30.
+Then y (P23) = 50 - 30 = 20.
+P23 passes sold = 20."
+LRDI,,MOCKCAT24S2_V1_Q11,11,MOCKCAT24S2_V1_Set3_EventRegistrations,"A 3-day conference (Day 1, Day 2, Day 3) offers 7 types of passes. The price for each pass type is fixed. The number of passes of each type sold are distinct positive integers.
+Pass Types and Prices:
+•	Day 1 Only (P1): ₹1000
+•	Day 2 Only (P2): ₹1200
+•	Day 3 Only (P3): ₹1100
+•	Day 1 & Day 2 (P12): ₹2000
+•	Day 2 & Day 3 (P23): ₹2100
+•	Day 1 & Day 3 (P13): ₹1900
+•	All 3 Days (P_All): ₹2800
+Additional Information:
+1.	The number of attendees on Day 1 was equal to the number of attendees on Day 2. The number of attendees on Day 3 was 140.
+2.	The total revenue generated from P_All passes was ₹224,000. The number of P_All passes sold was the highest among all pass types.
+3.	The number of P12 passes sold was twice the number of P3 passes sold. The number of P1 passes sold was 50.
+4.	Total revenue from all passes combined was ₹536,000.
+5.	The number of P13 passes sold was the smallest among all pass types, and was exactly 10.
+6.	The number of P2 passes sold was 10 more than the number of P3 passes sold.
+(Note: An attendee is counted for a specific day if their pass type grants access on that day.)",What was the total number of unique registrants for the conference?,200,140,290,536,200,140,290,536,290,MCQ,Data Interpretation,"Multi-variable Data Set, Caselets",Easy,,"summation, data aggregation",False,MOCKCAT24S2_V1_Set3_EventRegistrations,,"Using the number of passes sold for each type as derived in the solution for Q10:
+P1 = 50; P2 = 30 + 10 = 40; P3 = 30; P12 = 2 * 30 = 60; P23 = 20; P13 = 10; P_All = 80.
+Total unique registrants = Sum of all passes sold
+= 50 + 40 + 30 + 60 + 20 + 10 + 80 = 290."
+LRDI,,MOCKCAT24S2_V1_Q12,12,MOCKCAT24S2_V1_Set3_EventRegistrations,"A 3-day conference (Day 1, Day 2, Day 3) offers 7 types of passes. The price for each pass type is fixed. The number of passes of each type sold are distinct positive integers.
+Pass Types and Prices:
+•	Day 1 Only (P1): ₹1000
+•	Day 2 Only (P2): ₹1200
+•	Day 3 Only (P3): ₹1100
+•	Day 1 & Day 2 (P12): ₹2000
+•	Day 2 & Day 3 (P23): ₹2100
+•	Day 1 & Day 3 (P13): ₹1900
+•	All 3 Days (P_All): ₹2800
+Additional Information:
+1.	The number of attendees on Day 1 was equal to the number of attendees on Day 2. The number of attendees on Day 3 was 140.
+2.	The total revenue generated from P_All passes was ₹224,000. The number of P_All passes sold was the highest among all pass types.
+3.	The number of P12 passes sold was twice the number of P3 passes sold. The number of P1 passes sold was 50.
+4.	Total revenue from all passes combined was ₹536,000.
+5.	The number of P13 passes sold was the smallest among all pass types, and was exactly 10.
+6.	The number of P2 passes sold was 10 more than the number of P3 passes sold.
+(Note: An attendee is counted for a specific day if their pass type grants access on that day.)",The number of attendees on Day 1 was:,140,200,290,220,140,200,290,220,200,MCQ,Data Interpretation,"Multi-variable Data Set, Caselets",Easy,,"data aggregation, consistency check",False,MOCKCAT24S2_V1_Set3_EventRegistrations,,"Using the number of passes sold for each type from Q11 solution:
+Attendees on Day 1 = P1 + P12 + P13 + P_All
+= 50 + 60 + 10 + 80 = 200.
+Attendees on Day 2 = P2 + P12 + P23 + P_All = 40 + 60 + 20 + 80 = 200.
+(Consistent with Info 1: Attendees Day 1 = Day 2)."
+LRDI,,MOCKCAT24S2_V1_Q13,13,MOCKCAT24S2_V1_Set3_EventRegistrations,"A 3-day conference (Day 1, Day 2, Day 3) offers 7 types of passes. The price for each pass type is fixed. The number of passes of each type sold are distinct positive integers.
+Pass Types and Prices:
+•	Day 1 Only (P1): ₹1000
+•	Day 2 Only (P2): ₹1200
+•	Day 3 Only (P3): ₹1100
+•	Day 1 & Day 2 (P12): ₹2000
+•	Day 2 & Day 3 (P23): ₹2100
+•	Day 1 & Day 3 (P13): ₹1900
+•	All 3 Days (P_All): ₹2800
+Additional Information:
+1.	The number of attendees on Day 1 was equal to the number of attendees on Day 2. The number of attendees on Day 3 was 140.
+2.	The total revenue generated from P_All passes was ₹224,000. The number of P_All passes sold was the highest among all pass types.
+3.	The number of P12 passes sold was twice the number of P3 passes sold. The number of P1 passes sold was 50.
+4.	Total revenue from all passes combined was ₹536,000.
+5.	The number of P13 passes sold was the smallest among all pass types, and was exactly 10.
+6.	The number of P2 passes sold was 10 more than the number of P3 passes sold.
+(Note: An attendee is counted for a specific day if their pass type grants access on that day.)",What was the total revenue generated from Day 2 Only (P2) passes?,"₹36,000","₹48,000","₹60,000","₹24,000","₹36,000","₹48,000","₹60,000","₹24,000","₹48,000",MCQ,Data Interpretation,"Multi-variable Data Set, Caselets",Moderate,,"specific revenue calculation, value lookup",False,MOCKCAT24S2_V1_Set3_EventRegistrations,,"From Q11 solution, the number of P2 (Day 2 Only) passes sold = 40.
+The price of a P2 pass = ₹1200.
+Total revenue generated from P2 passes = 40 * ₹1200 = ₹48,000."
+LRDI,,MOCKCAT24S2_V1_Q14,14,MOCKCAT24S2_V1_Set4_StartupValuations,"The following table provides partial data on investment rounds for five startups (AlphaTech, BetaSolutions, GammaCorp, DeltaInc, EpsilonGroup) over three years: 2021, 2022, and 2023. All investment and valuation amounts are in ₹ Crores.
+For any investment round:
+•	Post-Money Valuation = Pre-Money Valuation + Investment Amount
+•	Stake Diluted (%) = (Investment Amount / Post-Money Valuation) * 100
+Startup	Year	Investment Amount (₹ Cr)	Pre-Money Valuation (₹ Cr)	Post-Money Valuation (₹ Cr)	Stake Diluted (%)
+AlphaTech	2021	5	20	25	20.00%
+AlphaTech	2022	10	40		20.00%
+AlphaTech	2023	15	45	60	25.00%
+BetaSolutions	2021	2	8	10	
+BetaSolutions	2022	4	16	20	20.00%
+BetaSolutions	2023	X1	Y1	Z1	W1
+GammaCorp	2021	8		40	20.00%
+GammaCorp	2022	12	X2	Y2	Z2
+GammaCorp	2023	20	70	90	22.22%
+DeltaInc	2021	3	12	15	20.00%
+DeltaInc	2022		24	30	20.00%
+DeltaInc	2023	9	21	30	30.00%
+EpsilonGroup	2021	10	X3	Y3	Z3
+EpsilonGroup	2022	15		37.5	40.00%
+EpsilonGroup	2023	25	37.5	62.5	
+Additional Information:
+1.	For BetaSolutions in 2023 (row with X1, Y1, Z1, W1): The Stake Diluted (W1) was 20%. The Post-Money Valuation (Z1) was ₹24 Crores.
+2.	For GammaCorp in 2022 (row with X2, Y2, Z2): The Stake Diluted (Z2) was 20%. The Investment Amount was one-fourth of its Pre-Money Valuation (X2).
+3.	For EpsilonGroup in 2021 (row with X3, Y3, Z3): The Stake Diluted (Z3) was 40%. Its Pre-Money Valuation (X3) was ₹15 Crores.
+4.	All Pre-Money Valuations, Investment Amounts, and Post-Money Valuations are positive. Stake Diluted % is always calculated. For table values with repeating decimals like 22.22%, use the exact fraction (e.g., 2/9 for 22.22%) or sufficient precision for intermediate calculations to ensure final answers are accurate when compared to options; assume options are derived from such precise calculations.",What was the Investment Amount (X1) for BetaSolutions in 2023?,₹6 Crores,₹4.8 Crores,₹10 Crores,₹12 Crores,₹6 Crores,₹4.8 Crores,₹10 Crores,₹12 Crores,₹4.8 Crores,MCQ,Data Interpretation,"Table Analysis, Financial Metrics",Moderate,,"formula application, data extraction from table, percentage calculation",False,MOCKCAT24S2_V1_Set4_StartupValuations,,"For BetaSolutions in 2023, Clue 1 states: Stake Diluted (W1) = 20%, Post-Money Valuation (Z1) = ₹24 Crores.
+Using the formula: Stake Diluted (%) = (Investment Amount / Post-Money Valuation) * 100.
+Let X1 be the Investment Amount.
+20 = (X1 / 24) * 100
+X1 = (20 * 24) / 100 = 480 / 100 = ₹4.8 Crores."
+LRDI,,MOCKCAT24S2_V1_Q15,15,MOCKCAT24S2_V1_Set4_StartupValuations,"The following table provides partial data on investment rounds for five startups (AlphaTech, BetaSolutions, GammaCorp, DeltaInc, EpsilonGroup) over three years: 2021, 2022, and 2023. All investment and valuation amounts are in ₹ Crores.
+For any investment round:
+•	Post-Money Valuation = Pre-Money Valuation + Investment Amount
+•	Stake Diluted (%) = (Investment Amount / Post-Money Valuation) * 100
+Startup	Year	Investment Amount (₹ Cr)	Pre-Money Valuation (₹ Cr)	Post-Money Valuation (₹ Cr)	Stake Diluted (%)
+AlphaTech	2021	5	20	25	20.00%
+AlphaTech	2022	10	40		20.00%
+AlphaTech	2023	15	45	60	25.00%
+BetaSolutions	2021	2	8	10	
+BetaSolutions	2022	4	16	20	20.00%
+BetaSolutions	2023	X1	Y1	Z1	W1
+GammaCorp	2021	8		40	20.00%
+GammaCorp	2022	12	X2	Y2	Z2
+GammaCorp	2023	20	70	90	22.22%
+DeltaInc	2021	3	12	15	20.00%
+DeltaInc	2022		24	30	20.00%
+DeltaInc	2023	9	21	30	30.00%
+EpsilonGroup	2021	10	X3	Y3	Z3
+EpsilonGroup	2022	15		37.5	40.00%
+EpsilonGroup	2023	25	37.5	62.5	
+Additional Information:
+1.	For BetaSolutions in 2023 (row with X1, Y1, Z1, W1): The Stake Diluted (W1) was 20%. The Post-Money Valuation (Z1) was ₹24 Crores.
+2.	For GammaCorp in 2022 (row with X2, Y2, Z2): The Stake Diluted (Z2) was 20%. The Investment Amount was one-fourth of its Pre-Money Valuation (X2).
+3.	For EpsilonGroup in 2021 (row with X3, Y3, Z3): The Stake Diluted (Z3) was 40%. Its Pre-Money Valuation (X3) was ₹15 Crores.
+4.	All Pre-Money Valuations, Investment Amounts, and Post-Money Valuations are positive. Stake Diluted % is always calculated. For table values with repeating decimals like 22.22%, use the exact fraction (e.g., 2/9 for 22.22%) or sufficient precision for intermediate calculations to ensure final answers are accurate when compared to options; assume options are derived from such precise calculations.",What was the Pre-Money Valuation (X2) for GammaCorp in 2022?,₹40 Crores,₹48 Crores,₹50 Crores,₹60 Crores,₹40 Crores,₹48 Crores,₹50 Crores,₹60 Crores,₹48 Crores,MCQ,Data Interpretation,"Table Analysis, Financial Metrics",Moderate,,"formula application, algebraic manipulation from clues",False,MOCKCAT24S2_V1_Set4_StartupValuations,,"For GammaCorp in 2022, Clue 2 states: Stake Diluted (Z2) = 20%. The Investment Amount was one-fourth of its Pre-Money Valuation (X2).
+From the table, for GammaCorp in 2022, the Investment Amount is given as 12 Crores.
+So, 12 = X2 / 4.
+X2 (Pre-Money Valuation) = 12 * 4 = ₹48 Crores."
+LRDI,,MOCKCAT24S2_V1_Q16,16,MOCKCAT24S2_V1_Set4_StartupValuations,"The following table provides partial data on investment rounds for five startups (AlphaTech, BetaSolutions, GammaCorp, DeltaInc, EpsilonGroup) over three years: 2021, 2022, and 2023. All investment and valuation amounts are in ₹ Crores.
+For any investment round:
+•	Post-Money Valuation = Pre-Money Valuation + Investment Amount
+•	Stake Diluted (%) = (Investment Amount / Post-Money Valuation) * 100
+Startup	Year	Investment Amount (₹ Cr)	Pre-Money Valuation (₹ Cr)	Post-Money Valuation (₹ Cr)	Stake Diluted (%)
+AlphaTech	2021	5	20	25	20.00%
+AlphaTech	2022	10	40		20.00%
+AlphaTech	2023	15	45	60	25.00%
+BetaSolutions	2021	2	8	10	
+BetaSolutions	2022	4	16	20	20.00%
+BetaSolutions	2023	X1	Y1	Z1	W1
+GammaCorp	2021	8		40	20.00%
+GammaCorp	2022	12	X2	Y2	Z2
+GammaCorp	2023	20	70	90	22.22%
+DeltaInc	2021	3	12	15	20.00%
+DeltaInc	2022		24	30	20.00%
+DeltaInc	2023	9	21	30	30.00%
+EpsilonGroup	2021	10	X3	Y3	Z3
+EpsilonGroup	2022	15		37.5	40.00%
+EpsilonGroup	2023	25	37.5	62.5	
+Additional Information:
+1.	For BetaSolutions in 2023 (row with X1, Y1, Z1, W1): The Stake Diluted (W1) was 20%. The Post-Money Valuation (Z1) was ₹24 Crores.
+2.	For GammaCorp in 2022 (row with X2, Y2, Z2): The Stake Diluted (Z2) was 20%. The Investment Amount was one-fourth of its Pre-Money Valuation (X2).
+3.	For EpsilonGroup in 2021 (row with X3, Y3, Z3): The Stake Diluted (Z3) was 40%. Its Pre-Money Valuation (X3) was ₹15 Crores.
+4.	All Pre-Money Valuations, Investment Amounts, and Post-Money Valuations are positive. Stake Diluted % is always calculated. For table values with repeating decimals like 22.22%, use the exact fraction (e.g., 2/9 for 22.22%) or sufficient precision for intermediate calculations to ensure final answers are accurate when compared to options; assume options are derived from such precise calculations.",What was the Post-Money Valuation (Y3) for EpsilonGroup in 2021?,₹20 Crores,₹22.5 Crores,₹25 Crores,₹27.5 Crores,₹20 Crores,₹22.5 Crores,₹25 Crores,₹27.5 Crores,₹25 Crores,MCQ,Data Interpretation,"Table Analysis, Financial Metrics",Moderate,,"formula application, consistency check",False,MOCKCAT24S2_V1_Set4_StartupValuations,,"For EpsilonGroup in 2021, Clue 3 states: Stake Diluted (Z3) = 40%. Its Pre-Money Valuation (X3) = ₹15 Crores.
+From the table, for EpsilonGroup in 2021, the Investment Amount is given as 10 Crores.
+Using the formula: Post-Money Valuation = Pre-Money Valuation + Investment Amount.
+Y3 (Post-Money Valuation) = X3 + Investment Amount = 15 + 10 = ₹25 Crores."
+LRDI,,MOCKCAT24S2_V1_Q17,17,MOCKCAT24S2_V1_Set4_StartupValuations,"The following table provides partial data on investment rounds for five startups (AlphaTech, BetaSolutions, GammaCorp, DeltaInc, EpsilonGroup) over three years: 2021, 2022, and 2023. All investment and valuation amounts are in ₹ Crores.
+For any investment round:
+•	Post-Money Valuation = Pre-Money Valuation + Investment Amount
+•	Stake Diluted (%) = (Investment Amount / Post-Money Valuation) * 100
+Startup	Year	Investment Amount (₹ Cr)	Pre-Money Valuation (₹ Cr)	Post-Money Valuation (₹ Cr)	Stake Diluted (%)
+AlphaTech	2021	5	20	25	20.00%
+AlphaTech	2022	10	40		20.00%
+AlphaTech	2023	15	45	60	25.00%
+BetaSolutions	2021	2	8	10	
+BetaSolutions	2022	4	16	20	20.00%
+BetaSolutions	2023	X1	Y1	Z1	W1
+GammaCorp	2021	8		40	20.00%
+GammaCorp	2022	12	X2	Y2	Z2
+GammaCorp	2023	20	70	90	22.22%
+DeltaInc	2021	3	12	15	20.00%
+DeltaInc	2022		24	30	20.00%
+DeltaInc	2023	9	21	30	30.00%
+EpsilonGroup	2021	10	X3	Y3	Z3
+EpsilonGroup	2022	15		37.5	40.00%
+EpsilonGroup	2023	25	37.5	62.5	
+Additional Information:
+1.	For BetaSolutions in 2023 (row with X1, Y1, Z1, W1): The Stake Diluted (W1) was 20%. The Post-Money Valuation (Z1) was ₹24 Crores.
+2.	For GammaCorp in 2022 (row with X2, Y2, Z2): The Stake Diluted (Z2) was 20%. The Investment Amount was one-fourth of its Pre-Money Valuation (X2).
+3.	For EpsilonGroup in 2021 (row with X3, Y3, Z3): The Stake Diluted (Z3) was 40%. Its Pre-Money Valuation (X3) was ₹15 Crores.
+4.	All Pre-Money Valuations, Investment Amounts, and Post-Money Valuations are positive. Stake Diluted % is always calculated. For table values with repeating decimals like 22.22%, use the exact fraction (e.g., 2/9 for 22.22%) or sufficient precision for intermediate calculations to ensure final answers are accurate when compared to options; assume options are derived from such precise calculations.",Which startup had the highest percentage increase in its Post-Money Valuation from the end of 2021 to the end of 2023?,AlphaTech,BetaSolutions,GammaCorp,EpsilonGroup,AlphaTech,BetaSolutions,GammaCorp,EpsilonGroup,EpsilonGroup,MCQ,Data Interpretation,"Table Analysis, Financial Metrics",Difficult,,"percentage increase calculation, multi-step data derivation, comparative analysis",False,MOCKCAT24S2_V1_Set4_StartupValuations,,"We need to fill in some missing Post-Money Valuations first by applying the formulas: Post-Money = Pre-Money + Investment, and Stake = (Inv/Post)*100.
+*   AlphaTech 2022: Pre=40, Inv=10 => Post = 40+10 = 50.
+*   BetaSolutions 2021: Post=10, Inv=2. (Stake=(2/10)*100 = 20%).
+*   GammaCorp 2021: Post=40, Inv=8 => Pre = 40-8 = 32.
+*   GammaCorp 2022: Inv=12, Pre=48 (from Q15) => Post = 12+48 = 60. (Stake=(12/60)*100 = 20%).
+*   DeltaInc 2022: Post=30, Pre=24 => Inv = 30-24 = 6.
+*   EpsilonGroup 2022: Post=37.5, Inv=15 => Pre = 37.5-15 = 22.5.
+*   EpsilonGroup 2023: Post=62.5, Inv=25. (Stake=(25/62.5)*100 = 40%).
+
+Now calculate the percentage increase in Post-Money Valuation from the end of 2021 to the end of 2023.
+1.	AlphaTech: Post-Money 2021 = 25 (Table). Post-Money 2023 = 60 (Table).
+Increase = 60 - 25 = 35. % Increase = (35/25) * 100 = 140%.
+2.	BetaSolutions: Post-Money 2021 = 10 (Table). Post-Money 2023 (Z1) = 24 (Clue 1).
+Increase = 24 - 10 = 14. % Increase = (14/10) * 100 = 140%.
+3.	GammaCorp: Post-Money 2021 = 40 (Table). Post-Money 2023 = 90 (Table).
+Increase = 90 - 40 = 50. % Increase = (50/40) * 100 = 125%.
+4.	DeltaInc: Post-Money 2021 = 15 (Table). Post-Money 2023 = 30 (Table).
+Increase = 30 - 15 = 15. % Increase = (15/15) * 100 = 100%.
+5.	EpsilonGroup: Post-Money 2021 (Y3) = 25 (Calculated in Q16). Post-Money 2023 = 62.5 (Table).
+Increase = 62.5 - 25 = 37.5. % Increase = (37.5/25) * 100 = 150%.
+Comparing the percentage increases: AlphaTech (140%), BetaSolutions (140%), GammaCorp (125%), DeltaInc (100%), EpsilonGroup (150%).
+EpsilonGroup had the highest percentage increase (150%)."
+LRDI,,MOCKCAT24S2_V1_Q18,18,MOCKCAT24S2_V1_Set5_ProjectAllocation,"Eight projects (P1 to P8) are to be allocated among three departments: Marketing (M), Operations (O), and Finance (F). Each project has a Complexity Score (from 1 to 5, 5 being most complex) and Standard Man-Hours. Each department has an Efficiency Multiplier for projects based on their complexity, where Actual Man-Hours = Standard Man-Hours × Efficiency Multiplier. Each project is assigned to exactly one department.
+Project Data:
+| Project | Complexity Score | Standard Man-Hours |
+|---|---|---|
+| P1 | 3 | 100 |
+| P2 | 5 | 200 |
+| P3 | 2 | 80 |
+| P4 | 4 | 150 |
+| P5 | 1 | 60 |
+| P6 | 3 | 120 |
+| P7 | 5 | 180 |
+| P8 | 2 | 90 |
+Department Efficiency Multipliers:
+•	Marketing (M): 1.1 for Complexity 1-2; 1.0 for Complexity 3; 0.9 for Complexity 4. For Complexity 5 projects assigned to Marketing, the multiplier is 1.0.
+•	Operations (O): 1.2 for Complexity 1; 1.0 for Complexity 2; 0.9 for Complexity 3-4; 0.8 for Complexity 5.
+•	Finance (F): 1.1 for Complexity 1-2; 1.0 for Complexity 3-4; 0.9 for Complexity 5.
+Additional Information:
+1.	Exactly three projects were assigned to Marketing. Project P7 was assigned to Marketing.
+2.	Exactly three projects were assigned to Operations. The total Actual Man-Hours for projects assigned to Operations was 322.
+3.	The remaining projects were assigned to Finance. Project P6 was assigned to Finance.
+4.	Project P1 was assigned to Marketing. Project P4 was assigned to Marketing.
+5.	Project P2 was assigned to Operations.
+6.	The sum of Complexity Scores of projects assigned to Finance was 5.","Which project was assigned to Finance, apart from P6?",P3,P5,P8,P1,P3,P5,P8,P1,P3,MCQ,Logical Reasoning,"Allocation Puzzle, Constraint Satisfaction",Moderate,,"deductive reasoning, multi-constraint problem, process of elimination",False,MOCKCAT24S2_V1_Set5_ProjectAllocation,,"1.	Total projects = 8.
+2.	Info 1 & 4: Marketing (M) gets 3 projects: P1 (C3, 100SH), P4 (C4, 150SH), P7 (C5, 180SH).
+3.	Info 2 & 5: Operations (O) gets 3 projects; P2 (C5, 200SH) is one of them. Total Actual Man-Hours for O = 322.
+4.	Info 3: Finance (F) gets the remaining 8 - 3 - 3 = 2 projects. P6 (C3, 120SH) is one of them.
+5.	The unassigned projects for O (2 slots) and F (1 slot) are P3 (C2, 80SH), P5 (C1, 60SH), P8 (C2, 90SH).
+6.	Info 6: Sum of Complexity Scores for projects in F = 5.
+    P6 has C3. So, the other project in F must have Complexity = 5 - 3 = 2.
+    Candidates for F (with C2) from the unassigned list: P3 (C2) or P8 (C2).
+7.	Let's calculate Actual Man-Hours for P2 in Operations:
+    P2 (C5, 200SH). O_Eff_C5 = 0.8. Actual_P2@O = 200 * 0.8 = 160 hours.
+8.	Remaining Actual Man-Hours for O's other two projects = 322 - 160 = 162 hours.
+    These two projects must come from {P3, P5, P8}, excluding the one taken by F.
+    Calculate potential Actual Hours for P3, P5, P8 if in Operations:
+    *   P3 (C2, 80SH): O_Eff_C2 = 1.0. Actual_P3@O = 80 * 1.0 = 80.
+    *   P5 (C1, 60SH): O_Eff_C1 = 1.2. Actual_P5@O = 60 * 1.2 = 72.
+    *   P8 (C2, 90SH): O_Eff_C2 = 1.0. Actual_P8@O = 90 * 1.0 = 90.
+9.	Test the two possibilities for F:
+    *   Case 1: F takes P3 (C2).
+        Then O must take P5 (C1) and P8 (C2).
+        Actual_O = Actual_P2@O + Actual_P5@O + Actual_P8@O = 160 + 72 + 90 = 322. This matches Info 2.
+        So, F = {P6, P3}. O = {P2, P5, P8}. M = {P1, P4, P7}. This is a valid assignment.
+    *   Case 2: F takes P8 (C2).
+        Then O must take P3 (C1) and P5 (C2).
+        Actual_O = Actual_P2@O + Actual_P3@O + Actual_P5@O = 160 + 80 + 72 = 312. This does not match Info 2 (322).
+10. Therefore, Case 1 is correct. The project assigned to Finance, apart from P6, is P3."
+LRDI,,MOCKCAT24S2_V1_Q19,19,MOCKCAT24S2_V1_Set5_ProjectAllocation,"Eight projects (P1 to P8) are to be allocated among three departments: Marketing (M), Operations (O), and Finance (F). Each project has a Complexity Score (from 1 to 5, 5 being most complex) and Standard Man-Hours. Each department has an Efficiency Multiplier for projects based on their complexity, where Actual Man-Hours = Standard Man-Hours × Efficiency Multiplier. Each project is assigned to exactly one department.
+Project Data:
+| Project | Complexity Score | Standard Man-Hours |
+|---|---|---|
+| P1 | 3 | 100 |
+| P2 | 5 | 200 |
+| P3 | 2 | 80 |
+| P4 | 4 | 150 |
+| P5 | 1 | 60 |
+| P6 | 3 | 120 |
+| P7 | 5 | 180 |
+| P8 | 2 | 90 |
+Department Efficiency Multipliers:
+•	Marketing (M): 1.1 for Complexity 1-2; 1.0 for Complexity 3; 0.9 for Complexity 4. For Complexity 5 projects assigned to Marketing, the multiplier is 1.0.
+•	Operations (O): 1.2 for Complexity 1; 1.0 for Complexity 2; 0.9 for Complexity 3-4; 0.8 for Complexity 5.
+•	Finance (F): 1.1 for Complexity 1-2; 1.0 for Complexity 3-4; 0.9 for Complexity 5.
+Additional Information:
+1.	Exactly three projects were assigned to Marketing. Project P7 was assigned to Marketing.
+2.	Exactly three projects were assigned to Operations. The total Actual Man-Hours for projects assigned to Operations was 322.
+3.	The remaining projects were assigned to Finance. Project P6 was assigned to Finance.
+4.	Project P1 was assigned to Marketing. Project P4 was assigned to Marketing.
+5.	Project P2 was assigned to Operations.
+6.	The sum of Complexity Scores of projects assigned to Finance was 5.",What were the total Actual Man-Hours for projects assigned to Marketing?,397,405,415,425,397,405,415,425,415,MCQ,Data Interpretation,"Allocation Puzzle, Efficiency Calculation",Moderate,,"calculation based on derived allocation, application of multipliers",False,MOCKCAT24S2_V1_Set5_ProjectAllocation,,"Projects assigned to Marketing (M) are P1, P4, P7.
+Efficiency Multipliers for M: C1-2=1.1; C3=1.0; C4=0.9; C5 projects assigned to M use 1.0.
+•	P1 (Complexity 3, 100 StdHrs): Actual Hours = 100 * 1.0 (M_Eff_C3) = 100.
+•	P4 (Complexity 4, 150 StdHrs): Actual Hours = 150 * 0.9 (M_Eff_C4) = 135.
+•	P7 (Complexity 5, 180 StdHrs): Actual Hours = 180 * 1.0 (M_Eff_C5) = 180.
+Total Actual Man-Hours for Marketing = 100 + 135 + 180 = 415."
+LRDI,,MOCKCAT24S2_V1_Q20,20,MOCKCAT24S2_V1_Set5_ProjectAllocation,"Eight projects (P1 to P8) are to be allocated among three departments: Marketing (M), Operations (O), and Finance (F). Each project has a Complexity Score (from 1 to 5, 5 being most complex) and Standard Man-Hours. Each department has an Efficiency Multiplier for projects based on their complexity, where Actual Man-Hours = Standard Man-Hours × Efficiency Multiplier. Each project is assigned to exactly one department.
+Project Data:
+| Project | Complexity Score | Standard Man-Hours |
+|---|---|---|
+| P1 | 3 | 100 |
+| P2 | 5 | 200 |
+| P3 | 2 | 80 |
+| P4 | 4 | 150 |
+| P5 | 1 | 60 |
+| P6 | 3 | 120 |
+| P7 | 5 | 180 |
+| P8 | 2 | 90 |
+Department Efficiency Multipliers:
+•	Marketing (M): 1.1 for Complexity 1-2; 1.0 for Complexity 3; 0.9 for Complexity 4. For Complexity 5 projects assigned to Marketing, the multiplier is 1.0.
+•	Operations (O): 1.2 for Complexity 1; 1.0 for Complexity 2; 0.9 for Complexity 3-4; 0.8 for Complexity 5.
+•	Finance (F): 1.1 for Complexity 1-2; 1.0 for Complexity 3-4; 0.9 for Complexity 5.
+Additional Information:
+1.	Exactly three projects were assigned to Marketing. Project P7 was assigned to Marketing.
+2.	Exactly three projects were assigned to Operations. The total Actual Man-Hours for projects assigned to Operations was 322.
+3.	The remaining projects were assigned to Finance. Project P6 was assigned to Finance.
+4.	Project P1 was assigned to Marketing. Project P4 was assigned to Marketing.
+5.	Project P2 was assigned to Operations.
+6.	The sum of Complexity Scores of projects assigned to Finance was 5.",Which department had the highest total Standard Man-Hours allocated to it?,Marketing,Operations,Finance,Marketing and Operations had the same highest total.,Marketing,Operations,Finance,Marketing and Operations had the same highest total.,Marketing,MCQ,Data Interpretation,"Allocation Puzzle, Comparative Analysis",Moderate,,"data aggregation, comparison of totals",False,MOCKCAT24S2_V1_Set5_ProjectAllocation,,"Standard Man-Hours for projects assigned to each department based on Q18 solution:
+•	Marketing (M) = {P1, P4, P7}: StdHrs = 100 (P1) + 150 (P4) + 180 (P7) = 430.
+•	Operations (O) = {P2, P5, P8}: StdHrs = 200 (P2) + 60 (P5) + 90 (P8) = 350.
+•	Finance (F) = {P3, P6}: StdHrs = 80 (P3) + 120 (P6) = 200.
+Marketing has the highest total Standard Man-Hours (430)."
+LRDI,,MOCKCAT24S2_V1_Q21,21,MOCKCAT24S2_V1_Set5_ProjectAllocation,"Eight projects (P1 to P8) are to be allocated among three departments: Marketing (M), Operations (O), and Finance (F). Each project has a Complexity Score (from 1 to 5, 5 being most complex) and Standard Man-Hours. Each department has an Efficiency Multiplier for projects based on their complexity, where Actual Man-Hours = Standard Man-Hours × Efficiency Multiplier. Each project is assigned to exactly one department.
+Project Data:
+| Project | Complexity Score | Standard Man-Hours |
+|---|---|---|
+| P1 | 3 | 100 |
+| P2 | 5 | 200 |
+| P3 | 2 | 80 |
+| P4 | 4 | 150 |
+| P5 | 1 | 60 |
+| P6 | 3 | 120 |
+| P7 | 5 | 180 |
+| P8 | 2 | 90 |
+Department Efficiency Multipliers:
+•	Marketing (M): 1.1 for Complexity 1-2; 1.0 for Complexity 3; 0.9 for Complexity 4. For Complexity 5 projects assigned to Marketing, the multiplier is 1.0.
+•	Operations (O): 1.2 for Complexity 1; 1.0 for Complexity 2; 0.9 for Complexity 3-4; 0.8 for Complexity 5.
+•	Finance (F): 1.1 for Complexity 1-2; 1.0 for Complexity 3-4; 0.9 for Complexity 5.
+Additional Information:
+1.	Exactly three projects were assigned to Marketing. Project P7 was assigned to Marketing.
+2.	Exactly three projects were assigned to Operations. The total Actual Man-Hours for projects assigned to Operations was 322.
+3.	The remaining projects were assigned to Finance. Project P6 was assigned to Finance.
+4.	Project P1 was assigned to Marketing. Project P4 was assigned to Marketing.
+5.	Project P2 was assigned to Operations.
+6.	The sum of Complexity Scores of projects assigned to Finance was 5.",What is the difference between the total Standard Man-Hours and total Actual Man-Hours for all eight projects combined?,30,35,40,45,30,35,40,45,35,MCQ,Data Interpretation,"Allocation Puzzle, Aggregate Calculation",Moderate,,"summation, difference calculation, multi-step derivation",False,MOCKCAT24S2_V1_Set5_ProjectAllocation,,"Total Standard Man-Hours for all projects = 100+200+80+150+60+120+180+90 = 980.
+Total Actual Man-Hours for all projects:
+•	Marketing Actual = 415 (from Q19).
+•	Operations Actual = 322 (Info 2).
+•	Finance Actual: Projects are P3 (C2, 80 Std) and P6 (C3, 120 Std).
+    Efficiency Multipliers for F: C1-2=1.1; C3-4=1.0; C5=0.9.
+    o	P3 (C2, 80SH) @F: Actual = 80 * 1.1 (F_Eff_C1-2) = 88.
+    o	P6 (C3, 120SH) @F: Actual = 120 * 1.0 (F_Eff_C3-4) = 120.
+    o	Finance Total Actual = 88 + 120 = 208.
+Total Actual for all projects = 415 (M) + 322 (O) + 208 (F) = 945.
+Difference = Total Standard Man-Hours - Total Actual Man-Hours = 980 - 945 = 35."
+LRDI,,MOCKCAT24S2_V1_Q22,22,MOCKCAT24S2_V1_Set5_ProjectAllocation,"Eight projects (P1 to P8) are to be allocated among three departments: Marketing (M), Operations (O), and Finance (F). Each project has a Complexity Score (from 1 to 5, 5 being most complex) and Standard Man-Hours. Each department has an Efficiency Multiplier for projects based on their complexity, where Actual Man-Hours = Standard Man-Hours × Efficiency Multiplier. Each project is assigned to exactly one department.
+Project Data:
+| Project | Complexity Score | Standard Man-Hours |
+|---|---|---|
+| P1 | 3 | 100 |
+| P2 | 5 | 200 |
+| P3 | 2 | 80 |
+| P4 | 4 | 150 |
+| P5 | 1 | 60 |
+| P6 | 3 | 120 |
+| P7 | 5 | 180 |
+| P8 | 2 | 90 |
+Department Efficiency Multipliers:
+•	Marketing (M): 1.1 for Complexity 1-2; 1.0 for Complexity 3; 0.9 for Complexity 4. For Complexity 5 projects assigned to Marketing, the multiplier is 1.0.
+•	Operations (O): 1.2 for Complexity 1; 1.0 for Complexity 2; 0.9 for Complexity 3-4; 0.8 for Complexity 5.
+•	Finance (F): 1.1 for Complexity 1-2; 1.0 for Complexity 3-4; 0.9 for Complexity 5.
+Additional Information:
+1.	Exactly three projects were assigned to Marketing. Project P7 was assigned to Marketing.
+2.	Exactly three projects were assigned to Operations. The total Actual Man-Hours for projects assigned to Operations was 322.
+3.	The remaining projects were assigned to Finance. Project P6 was assigned to Finance.
+4.	Project P1 was assigned to Marketing. Project P4 was assigned to Marketing.
+5.	Project P2 was assigned to Operations.
+6.	The sum of Complexity Scores of projects assigned to Finance was 5.","If Project P5 had been assigned to Marketing instead of Operations, and P5 replaced P1 in Marketing's roster (Marketing still managing exactly three projects), what would be the new total Actual Man-Hours for Marketing?",381,346,301,415,381,346,301,415,381,MCQ,Logical Reasoning,"Allocation Puzzle, Hypothetical Reasoning",Difficult,,"conditional change, re-calculation, interpretation of constraints under change, option-based deduction",False,MOCKCAT24S2_V1_Set5_ProjectAllocation,,"The question states: P5 is assigned to Marketing instead of Operations, P5 replaced P1 in Marketing's roster, and Marketing still manages exactly three projects.
+Original Marketing projects: P1, P4, P7.
+Standard Man-Hours for P1 = 100 (C3). Actual_P1@M = 100 * 1.0 = 100.
+New Marketing projects: P4, P7, P5.
+P5 has Standard Man-Hours = 60, Complexity = 1.
+Actual Man-Hours for P5 if assigned to Marketing:
+M_Eff for C1-2 is 1.1.
+Actual_P5@M = 60 * 1.1 = 66 hours.
+The original total Actual Man-Hours for Marketing was 415 (from Q19). This included Actual_P1@M.
+New Total Actual Man-Hours for Marketing = (Original M_Total_Actual - Actual_P1_in_M) + Actual_P5_in_M
+= 415 - 100 + 66 = 315 + 66 = 381 hours.
+Alternatively, calculate directly for P4, P7, P5 in Marketing:
+Actual_P4@M = 135 (from Q19).
+Actual_P7@M = 180 (from Q19).
+Actual_P5@M = 66 (calculated above).
+New Total Actual_M = 135 + 180 + 66 = 381."

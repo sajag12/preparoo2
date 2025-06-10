@@ -1,0 +1,456 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+Quantitative Aptitude,40,M1QA24001,1,,,"A bus has a scheduled travel time for a fixed route. On Monday, it travels the entire route at a constant speed, which is 20% less than its scheduled speed, and arrives 2 hours late. On Tuesday, it covers the first 40% of the route in 50% of the scheduled time. For the remaining 60% of the route, it travels at a constant speed of 45 km/hr and arrives exactly on time. What is the length of the route in km?",300 km,360 km,450 km,540 km,300 km,360 km,450 km,540 km,300 km,MCQ,Arithmetic,"Time, Speed & Distance (General)",Hard,"Piecewise Speed, Scheduled Time, Late Arrival, Algebraic Modeling","Piecewise Speed, Scheduled Time, Late Arrival, Algebraic Modeling",False,MockSet1_QA,Analysis,"Let D be the length of the route in km and T_sch be the scheduled travel time in hours. The scheduled speed is S_sch = D/T_sch.
+On Tuesday:
+The bus covers the first 40% of the route (0.4D) in 50% of the scheduled time (0.5T_sch).
+The remaining 60% of the route (0.6D) is covered at a speed of 45 km/hr.
+Since the bus arrives exactly on time on Tuesday, the total time taken is T_sch.
+Time taken for the first 40% is 0.5T_sch.
+So, time taken for the remaining 60% must be T_sch - 0.5T_sch = 0.5T_sch.
+For this remaining part: Distance = 0.6D, Speed = 45 km/hr, Time = 0.5T_sch.
+So, 0.6D = 45 × (0.5T_sch) => 0.6D = 22.5T_sch.
+This gives D/T_sch = 22.5 / 0.6 = 225 / 6 = 75/2 = 37.5.
+Thus, the scheduled speed S_sch = 37.5 km/hr.
+On Monday:
+The bus travels at a constant speed S_M, which is 20% less than its scheduled speed.
+S_M = S_sch * (1 - 0.20) = 0.80 * S_sch = 0.80 * 37.5 = 30 km/hr.
+The bus arrives 2 hours late, so the time taken is T_sch + 2.
+Distance D = S_M * (T_sch + 2).
+So, D = 30 * (T_sch + 2).
+We also know D = S_sch * T_sch = 37.5T_sch.
+Equating the two expressions for D:
+37.5T_sch = 30 * (T_sch + 2).
+37.5T_sch = 30T_sch + 60.
+7.5T_sch = 60.
+T_sch = 60 / 7.5 = 600 / 75 = 8 hours.
+Now, calculate the length of the route D:
+D = 37.5 * T_sch = 37.5 * 8 = 300 km."
+Quantitative Aptitude,40,M1QA24002,2,,,"An n-digit number X is formed using only the digits 1, 2, and 3, where n > 1, and repetition of digits is allowed. The sum of all such distinct n-digit numbers that can be formed is denoted by S_n. What is the value of S_n when n=3, calculated using the digits 1, 2, and 3 where each position in the number can be any of these three digits? (Note: Any other contextual information about sums for different n or different digit sets should be disregarded for this specific calculation.)",,,,,,,,,5994,TITA,Algebra,Number Systems,Medium,"Sum of N-digit numbers, Repetition of digits, Place Value Summation","Sum of N-digit numbers, Repetition of digits, Place Value Summation",True,MockSet1_QA,Application,"Let S_n be the sum of all distinct n-digit numbers formed using only the digits 1, 2, and 3, with repetition allowed.
+The set of allowed digits is {1, 2, 3}.
+The number of choices for each digit position is k=3.
+The sum of these allowed digits is D_sum = 1+2+3 = 6.
+For an n-digit number, there are k^n = 3^n such numbers possible.
+The sum of all such n-digit numbers is S_n = (D_sum * k^(n-1)) * ( (10^n - 1) / 9 ).
+The term (D_sum * k^(n-1)) is the sum of all digits in any specific position (e.g., units place sum across all numbers).
+The term ( (10^n - 1) / 9 ) is the sum of place values (1 + 10 + ... + 10^(n-1)).
+Substituting k=3 and D_sum=6:
+S_n = (6 * 3^(n-1)) * ( (10^n - 1) / 9 ).
+The problem asks for the value of S_n when n=3, using the digits 1, 2, and 3.
+S_3 = (6 * 3^(3-1)) * ( (10^3 - 1) / 9 )
+S_3 = (6 * 3^2) * ( (1000 - 1) / 9 )
+S_3 = (6 * 9) * (999 / 9)
+S_3 = 54 * 111
+S_3 = 5994.
+The sum is 5994."
+Quantitative Aptitude,40,M1QA24003,3,,,"Three circles C1, C2, and C3, each of radius 10 cm, touch each other externally. Their centers form an equilateral triangle. Two other circles, C4 and C5, are drawn such that each is tangent to C1, C2, and C3. C4 lies in the central region bounded by C1, C2, C3, and C5 encloses C1, C2, C3. If the radius of C4 is smaller than the radius of C5, what is the value of (radius of C5) / (radius of C4)?",7 + 4√3,7 + 2√3,5 + 2√3,5 + 4√3,7 + 4√3,7 + 2√3,5 + 2√3,5 + 4√3,7 + 4√3,MCQ,Geometry,"Circles (Properties, Chords, Tangents, Secants)",Hard,"Mutually Tangent Circles, Centroid of Equilateral Triangle, Radius Ratio calculation","Mutually Tangent Circles, Centroid of Equilateral Triangle, Radius Ratio calculation",False,MockSet1_QA,Analysis,"Let R be the radius of the three equal circles C1, C2, C3; R = 10 cm.
+The centers O1, O2, O3 of these circles form an equilateral triangle with side length 2R = 20 cm.
+Let G be the centroid of this triangle. G is the center for both C4 and C5.
+The distance from G to any vertex (say O1) is d = (Side Length)/√3 = (2R)/√3 = 20/√3 cm.
+For C4 (smaller circle, radius r4) in the central void, tangent to C1, C2, C3:
+The distance between the center of C1 (O1) and the center of C4 (G) is O1G = d.
+Since C1 and C4 are externally tangent, O1G = R + r4.
+So, (2R)/√3 = R + r4 => r4 = R(2/√3 - 1).
+With R=10 cm, r4 = 10(2/√3 - 1) = 10( (2-√3)/√3 ).
+For C5 (larger circle, radius r5) enclosing C1, C2, C3 and tangent to them:
+The tangency is internal. The distance between the center of C1 (O1) and the center of C5 (G) is O1G = d.
+Since C5 encloses C1 and is tangent to it, O1G = r5 - R.
+So, (2R)/√3 = r5 - R => r5 = R(2/√3 + 1).
+With R=10 cm, r5 = 10(2/√3 + 1) = 10( (2+√3)/√3 ).
+The ratio required is r5 / r4:
+r5/r4 = [10 * ( (2+√3)/√3 )] / [10 * ( (2-√3)/√3 )]
+= ( (2+√3)/√3 ) / ( (2-√3)/√3 )
+= (2+√3) / (2-√3).
+To rationalize, multiply numerator and denominator by (2+√3):
+r5/r4 = ( (2+√3)(2+√3) ) / ( (2-√3)(2+√3) )
+= (2+√3)² / (2² - (√3)²)
+= (4 + 3 + 4√3) / (4-3)
+= (7 + 4√3) / 1 = 7 + 4√3."
+Quantitative Aptitude,40,M1QA24004,4,,,Find the sum of the infinite series: (3/(1²⋅2²)) + (5/(2²⋅3²)) + (7/(3²⋅4²)) + ...,1,3/4,2,3/2,1,3/4,2,3/2,1,MCQ,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Medium,"Infinite Series, Telescoping Sum, Method of Differences","Infinite Series, Telescoping Sum, Method of Differences",False,MockSet1_QA,Application,"The general term of the series is T_n = (2n+1) / (n²(n+1)²).
+The numerator can be expressed as (n+1)² - n² = (n² + 2n + 1) - n² = 2n+1.
+So, T_n = ( (n+1)² - n² ) / ( n²(n+1)² ).
+Splitting the fraction:
+T_n = (n+1)² / (n²(n+1)²) - n² / (n²(n+1)²)
+T_n = 1/n² - 1/(n+1)².
+This is a telescoping series.
+Let S_N be the sum of the first N terms:
+S_N = (1/1² - 1/2²) + (1/2² - 1/3²) + (1/3² - 1/4²) + ... + (1/N² - 1/(N+1)²).
+The intermediate terms cancel out.
+S_N = 1/1² - 1/(N+1)² = 1 - 1/(N+1)².
+For an infinite series, we find the limit of S_N as N → ∞.
+Sum = lim (N→∞) [1 - 1/(N+1)²].
+As N → ∞, (N+1)² → ∞, so 1/(N+1)² → 0.
+Thus, the sum of the infinite series is 1 - 0 = 1."
+Quantitative Aptitude,40,M1QA24005,5,,,"A company has 30 employees. This group of 30 employees is the union of Group A (consisting of 15 employees) and Group B (consisting of 20 employees). The average bonus of employees in Group A is Rs. 12,000. The average bonus of employees in Group B is Rs. 18,000. The 5 employees common to Group A and Group B have an average bonus of Rs. 18,000. What is the overall average bonus (in Rs.) of the 30 employees in the company?",,,,,,,,,15000,TITA,Arithmetic,Averages & Weighted Averages,Medium,"Overlapping Sets, Weighted Average, Principle of Inclusion-Exclusion for Sums","Overlapping Sets, Weighted Average, Principle of Inclusion-Exclusion for Sums",True,MockSet1_QA,Analysis,"Total employees in the company N(Total) = 30. This group is the union of Group A and Group B.
+For Group A: N(A) = 15, Average bonus (Avg_A) = Rs. 12,000.
+Sum of bonuses for Group A (Sum_A) = 15 * 12,000 = Rs. 180,000.
+For Group B: N(B) = 20, Average bonus (Avg_B) = Rs. 18,000.
+Sum of bonuses for Group B (Sum_B) = 20 * 18,000 = Rs. 360,000.
+Employees common to Group A and B: N(A ∩ B) = 5.
+Average bonus for common employees (Avg_A∩B) = Rs. 18,000.
+Sum of bonuses for common employees (Sum_A∩B) = 5 * 18,000 = Rs. 90,000.
+The total sum of bonuses for all employees (Sum(A U B)) is:
+Sum(A U B) = Sum_A + Sum_B - Sum_A∩B
+Sum(A U B) = 180,000 + 360,000 - 90,000 = 540,000 - 90,000 = Rs. 450,000.
+Number of unique employees N(A U B) = N(A) + N(B) - N(A∩B) = 15 + 20 - 5 = 30.
+This matches the total number of employees.
+The overall average bonus = Sum(A U B) / N(A U B) = 450,000 / 30 = Rs. 15,000.
+The overall average bonus is 15000."
+Quantitative Aptitude,40,M1QA24006,6,,,"Person A invested Rs. P in a scheme offering compound interest at 10% per annum, compounded half-yearly, for 1 year. Person B invested Rs. (P – 7000) in the same scheme for 6 months. After 6 months, Person B withdrew the entire amount and reinvested it in another scheme offering simple interest at 12% per annum for 6 months. If the final amount received by Person B from the simple interest scheme (i.e. principal + SI from this second scheme) is equal to the amount Person A received after 1 year, find the value of P.","Rs. 60,000","Rs. 70,000","Rs. 74,200","Rs. 80,000","Rs. 60,000","Rs. 70,000","Rs. 74,200","Rs. 80,000","Rs. 74,200",MCQ,Arithmetic,Compound Interest,Hard,"Compound Interest, Simple Interest, Half-yearly Compounding, Reinvestment, Equating Amounts","Compound Interest, Simple Interest, Half-yearly Compounding, Reinvestment, Equating Amounts",False,MockSet1_QA,Analysis,"Let r_half_yearly be the half-yearly interest rate for the scheme, so r_half_yearly = 10%/2 = 5% = 0.05.
+Person A's investment:
+Principal P_A = P.
+Time t_A = 1 year = 2 half-year periods.
+Amount A_A = P * (1 + r_half_yearly)² = P * (1.05)² = P * 1.1025.
+Person B's investment:
+Initial Principal P_B_initial = P – 7000.
+Phase 1 (compounded interest):
+Time t_B1 = 6 months = 1 half-year period.
+Amount after Phase 1, M_B1 = (P – 7000) * (1 + 0.05)¹ = (P – 7000) * 1.05.
+Phase 2 (simple interest):
+Principal for Phase 2, P_B2 = M_B1.
+Simple interest rate r_SI = 12% per annum = 0.12.
+Time t_SI = 6 months = 0.5 years.
+Simple Interest SI_B2 = P_B2 * r_SI * t_SI = M_B1 * 0.12 * 0.5 = M_B1 * 0.06.
+Final amount for Person B, A_B = M_B1 + SI_B2 = M_B1 * (1 + 0.06) = M_B1 * 1.06.
+Substituting M_B1:
+A_B = (P – 7000) * 1.05 * 1.06 = (P – 7000) * 1.113.
+Given that A_A = A_B:
+P * 1.1025 = (P – 7000) * 1.113.
+1.1025P = 1.113P – 7000 * 1.113.
+1.1025P = 1.113P – 7791.
+7791 = 1.113P – 1.1025P.
+7791 = (1.1130 – 1.1025)P.
+7791 = 0.0105P.
+P = 7791 / 0.0105.
+P = 7791000 / 105.
+P = 74200.
+So, P = Rs. 74,200."
+Quantitative Aptitude,40,M1QA24007,7,,,"If x and y are real numbers such that x² + y² = 2xy + 1 and x + y = √(8xy), what is the value of x³ + y³?",5√2 / 4,3√2 / 2,√2,7√2 / 4,5√2 / 4,3√2 / 2,√2,7√2 / 4,5√2 / 4,MCQ,Algebra,Basics of Algebra & Identities,Hard,"System of Non-linear Equations, Algebraic Manipulation, Surds, Sum of Cubes Identity","System of Non-linear Equations, Algebraic Manipulation, Surds, Sum of Cubes Identity",False,MockSet1_QA,Analysis,"1.	x² + y² = 2xy + 1 => x² - 2xy + y² = 1 => (x-y)² = 1. So, x-y = ±1.
+2.	x + y = √(8xy). For RHS to be real, xy ≥ 0.
+If x,y < 0, then x+y < 0 but √(8xy) > 0, so not possible. Thus x,y ≥ 0.
+Squaring (2): (x+y)² = 8xy => x² + 2xy + y² = 8xy => x² - 6xy + y² = 0.
+If y=0, then x=0. This makes (x-y)²=0 ≠ 1. So x,y ≠ 0.
+Divide by y²: (x/y)² - 6(x/y) + 1 = 0. Let t=x/y. t²-6t+1=0 => t = (6±√32)/2 = 3±2√2.
+If x-y=1 (so x>y, x/y > 1), then x/y = 3+2√2.
+x=(3+2√2)y. Substitute into x-y=1: (2+2√2)y=1 => y=1/(2(1+√2)) = (√2-1)/2.
+Then x = y+1 = (√2+1)/2.
+If x-y=-1 (so x<y, x/y < 1), then x/y = 3-2√2. This leads to x=(√2-1)/2, y=(√2+1)/2.
+The set {x,y} is { (√2+1)/2, (√2-1)/2 }.
+x+y = √2. xy = ( (√2)²-1² )/4 = 1/4.
+x³+y³ = (x+y)((x+y)²-3xy) = (√2)( (√2)² - 3(1/4) ) = √2 * (2 - 3/4) = √2 * (5/4) = 5√2/4."
+Quantitative Aptitude,40,M1QA24008,8,,,"The inequality √(x² - 7x + 12) > x - 4 is satisfied for certain real values of x. What is the sum of all non-negative integers up to 3 (i.e., x ∈ {0, 1, 2, 3}) that satisfy this inequality?",3,5,6,7,3,5,6,7,6,MCQ,Algebra,Inequalities (Linear & Quadratic),Medium,"Radical Inequality, Squaring Both Sides, Domain of Square Root, Casework for Inequalities","Radical Inequality, Squaring Both Sides, Domain of Square Root, Casework for Inequalities",False,MockSet1_QA,Analysis,"The inequality is √(x² - 7x + 12) > x - 4.
+First, ensure the expression under the square root is non-negative (for the LHS to be real):
+x² - 7x + 12 ≥ 0
+(x-3)(x-4) ≥ 0.
+This holds when x ≤ 3 or x ≥ 4. This is the domain of allowed x values.
+Case 1: The RHS (x - 4) is negative.
+x - 4 < 0 => x < 4.
+Considering the domain, this case applies for x ≤ 3.
+If x ≤ 3, then x-4 is negative. The LHS, √(x² - 7x + 12), is always non-negative (if real).
+A non-negative number is always greater than a negative number.
+So, for all x ≤ 3, the inequality holds.
+Case 2: The RHS (x - 4) is non-negative.
+x - 4 ≥ 0 => x ≥ 4.
+Considering the domain, this case applies for x ≥ 4.
+When both sides are non-negative, we can square both sides of the inequality:
+x² - 7x + 12 > (x - 4)²
+x² - 7x + 12 > x² - 8x + 16
+-7x + 12 > -8x + 16
+8x - 7x > 16 - 12
+x > 4.
+So, for this case, we need x ≥ 4 AND x > 4, which means x > 4.
+The problem asks for 'The sum of all non-negative integers up to 3 that satisfy this inequality'.
+From Case 1, all x ≤ 3 satisfy the inequality.
+The non-negative integers up to 3 are 0, 1, 2, 3. All these values satisfy x ≤ 3.
+So, these integers are 0, 1, 2, 3.
+Their sum is 0 + 1 + 2 + 3 = 6."
+Quantitative Aptitude,40,M1QA24009,9,,,"The roots of the quadratic equation x² - px + q = 0 are α and β, where α and β are distinct. If α, β, αβ form a geometric progression, and p, q are positive integers, find the smallest possible value of p + q.",3,9,12,14,3,9,12,14,14,MCQ,Algebra,Quadratic Equations,Hard,"Roots of Quadratic Equations, Vieta's Formulas, Geometric Progression condition on roots, Integer Properties","Roots of Quadratic Equations, Vieta's Formulas, Geometric Progression condition on roots, Integer Properties",False,MockSet1_QA,Analysis,"Let the roots of x² - px + q = 0 be α and β.
+From Vieta's formulas: α+β = p and αβ = q.
+Given that p and q are positive integers. This implies α and β are both positive.
+The roots α and β are distinct, so α ≠ β.
+The terms α, β, αβ form a geometric progression (GP). This implies the ratio of consecutive terms is constant.
+So, β/α = (αβ)/β.
+Since β > 0 (as it's a positive root), we can cancel β from (αβ)/β = α.
+So, β/α = α, which gives β = α².
+Since α ≠ β, we have α² ≠ α. Since α > 0, this means α ≠ 1.
+Substitute β = α² into Vieta's formulas:
+1.	α + α² = p
+2.	α * α² = α³ = q
+Since p, q are positive integers, α³ = q must be an integer, and α + α² = p must be an integer.
+If α is an integer: Since α > 0 and α ≠ 1, the smallest possible integer value for α is 2.
+If α = 2:
+β = α² = 2² = 4. (Roots are 2 and 4, which are distinct, satisfying α ≠ β).
+p = α + α² = 2 + 4 = 6.
+q = α³ = 2³ = 8.
+(p=6 and q=8 are positive integers).
+The GP formed by α, β, αβ is 2, 4, 8 (common ratio 2). This is valid.
+For this case, p+q = 6+8 = 14.
+If α is a rational number but not an integer, let α = a/b where gcd(a,b)=1 and b>1.
+For α³ = (a/b)³ = q to be an integer, b³ must divide a³. Since gcd(a,b)=1, this implies b=1, which contradicts b>1. So α cannot be a non-integer rational number.
+Thus, α must be an integer.
+The smallest integer value for α (given α > 0, α ≠ 1) is α=2. This yields p+q = 14.
+The next integer value for α is 3.
+If α = 3: β = 3² = 9. p = 3+9=12, q = 3³=27. p+q = 12+27=39.
+Values of p+q are increasing for α > 2.
+Thus, the smallest possible value of p+q is 14."
+Quantitative Aptitude,40,M1QA24010,10,,,"If log(base y)(x) = 3 and log(base 4z)(y) = 2, where x, y, z are positive real numbers, each different from 1. If it is given that z=2, and x can be expressed as z^k for some constant k, what is the value of k?",6,8,12,18,6,8,12,18,18,MCQ,Algebra,Logarithms,Medium,"Logarithm Properties, Definition of Logarithm, Solving for Exponent","Logarithm Properties, Definition of Logarithm, Solving for Exponent",False,MockSet1_QA,Application,"Given equations:
+1.	log(base y)(x) = 3 => x = y³
+2.	log(base 4z)(y) = 2 => y = (4z)²
+Substitute y from (2) into (1):
+y = (4z)² = 16z²
+x = (16z²)³ = 16³ * (z²)³ = (2⁴)³ * z⁶ = 2¹² z⁶.
+Given z=2:
+x = 2¹² * 2⁶ = 2¹⁸.
+We are also given x = z^k. Substitute x=2¹⁸ and z=2:
+2¹⁸ = 2^k.
+Therefore, k = 18."
+Quantitative Aptitude,40,M1QA24011,11,,,"The vertices of a triangle ABC are A(0,0), B(8,0), and C(0,6). Find the radius of the incircle of triangle ABC.",,,,,,,,,2,TITA,Geometry,"Triangles (Properties, Congruence, Similarity)",Easy,"Coordinate Geometry, Incircle Radius, Area of Triangle (using coordinates), Semi-perimeter, Right-angled triangle properties","Coordinate Geometry, Incircle Radius, Area of Triangle (using coordinates), Semi-perimeter, Right-angled triangle properties",True,MockSet1_QA,Application,"The vertices of triangle ABC are A(0,0), B(8,0), and C(0,6).
+Let a, b, c be the lengths of sides opposite to vertices A, B, C respectively.
+c (side AB) = √((8-0)² + (0-0)²) = √8² = 8.
+b (side AC) = √((0-0)² + (6-0)²) = √6² = 6.
+a (side BC) = √((8-0)² + (0-6)²) = √(8² + (-6)²) = √(64+36) = √100 = 10.
+This is a right-angled triangle because 6² + 8² = 36 + 64 = 100 = 10². The right angle is at vertex A(0,0).
+The area of the triangle can be calculated as (1/2) * base * height.
+Using AB as base and AC as height:
+Area = (1/2) * AB * AC = (1/2) * 8 * 6 = 24 square units.
+The semi-perimeter s = (a+b+c)/2 = (10+6+8)/2 = 24/2 = 12.
+The radius of the incircle (r) is given by the formula r = Area / s.
+r = 24 / 12 = 2.
+Alternatively, for a right-angled triangle, the inradius r = (sum of perpendicular sides - hypotenuse)/2.
+r = (6+8-10)/2 = 4/2 = 2.
+The radius of the incircle is 2."
+Quantitative Aptitude,40,M1QA24012,12,,,"A, B, and C can individually complete a task in 10, 15, and 30 days respectively. They start working together. A leaves after x days from the start. B leaves x days before the scheduled completion of the work. C works throughout until the task is completed. If the task is scheduled to be completed in 8 days and is indeed completed exactly on schedule, what is the value of x?",2,4,5,6,2,4,5,6,6,MCQ,Arithmetic,Time & Work,Hard,"Efficiency Calculation, Concurrent Work, Phased Work Completion, Algebraic Modeling of Work","Efficiency Calculation, Concurrent Work, Phased Work Completion, Algebraic Modeling of Work",False,MockSet1_QA,Analysis,"Let eA, eB, eC be the daily work rates of A, B, C.
+eA = 1/10 task/day, eB = 1/15 task/day, eC = 1/30 task/day.
+Combined rates:
+eA+eB+eC = 1/10 + 1/15 + 1/30 = (3+2+1)/30 = 6/30 = 1/5 task/day.
+eB+eC = 1/15 + 1/30 = (2+1)/30 = 3/30 = 1/10 task/day.
+eA+eC = 1/10 + 1/30 = (3+1)/30 = 4/30 = 2/15 task/day.
+Total scheduled time for the task is T_d = 8 days.
+A leaves after x days from the start.
+B leaves x days before the work is scheduled to be completed, which means B leaves at time T_d - x = (8-x) days from the start.
+C works till the end (for all 8 days).
+Scenario 1: A leaves before or at the same time as B. This means x ≤ 8-x, so 2x ≤ 8, which implies x ≤ 4.
+•	Days 0 to x (duration x days): A, B, C work together. Work done = x * (eA+eB+eC) = x * (1/5) = x/5.
+•	Days x to (8-x) (duration (8-x) - x = 8-2x days): B, C work together (A has left). Work done = (8-2x) * (eB+eC) = (8-2x) * (1/10) = (8-2x)/10.
+•	Days (8-x) to 8 (duration 8 - (8-x) = x days): C works alone (A and B have left). Work done = x * eC = x/30.
+The sum of work done must be 1 (completion of the task):
+x/5 + (8-2x)/10 + x/30 = 1.
+Multiply by 30 (LCM of 5, 10, 30):
+6x + 3(8-2x) + x = 30.
+6x + 24 - 6x + x = 30.
+x + 24 = 30.
+x = 6.
+This result (x=6) contradicts the condition for Scenario 1 (x ≤ 4). So, this scenario is not valid.
+Scenario 2: B leaves before A. This means 8-x < x, so 2x > 8, which implies x > 4.
+•	Days 0 to (8-x) (duration 8-x days): A, B, C work together. Work done = (8-x) * (eA+eB+eC) = (8-x) * (1/5) = (8-x)/5.
+•	Days (8-x) to x (duration x - (8-x) = 2x-8 days): A, C work together (B has left). Work done = (2x-8) * (eA+eC) = (2x-8) * (2/15).
+•	Days x to 8 (duration 8-x days): C works alone (A and B have left). Work done = (8-x) * eC = (8-x)/30.
+The sum of work done must be 1:
+(8-x)/5 + (2x-8)(2/15) + (8-x)/30 = 1.
+Multiply by 30:
+6(8-x) + 22(2x-8) + (8-x) = 30.
+48 - 6x + 4(2x-8) + 8 - x = 30.
+48 - 6x + 8x - 32 + 8 - x = 30.
+(-6x + 8x - x) + (48 - 32 + 8) = 30.
+x + 24 = 30.
+x = 6.
+This result (x=6) satisfies the condition for Scenario 2 (x > 4, since 6 > 4).
+So, x=6 is the correct value."
+Quantitative Aptitude,40,M1QA24013,13,,,A committee of 5 members is to be formed from 6 men and 4 women. In how many ways can this be done if the committee must include at least 2 men and at least 2 women?,120,150,180,200,120,150,180,200,180,MCQ,Modern Maths,Permutations & Combinations,Easy,"Committee Formation, Combinations, ""At Least"" Condition","Committee Formation, Combinations, ""At Least"" Condition",False,MockSet1_QA,Application,"The committee is to have 5 members.
+It must be formed from 6 men (M) and 4 women (W).
+Conditions: At least 2 men (M ≥ 2) AND At least 2 women (W ≥ 2).
+Possible compositions for a 5-member committee (Men, Women):
+1.	2 Men and 3 Women:
+Number of ways to choose 2 men from 6 = C(6,2) = (6*5)/(2*1) = 15.
+Number of ways to choose 3 women from 4 = C(4,3) = C(4,1) = 4.
+Ways for this composition = 15 * 4 = 60.
+2.	3 Men and 2 Women:
+Number of ways to choose 3 men from 6 = C(6,3) = (6*5*4)/(3*2*1) = 20.
+Number of ways to choose 2 women from 4 = C(4,2) = (4*3)/(2*1) = 6.
+Ways for this composition = 20 * 6 = 120.
+Other possible numbers of men and women for a 5-member committee:
+•	If 1 Man, then 4 Women are needed. This violates M ≥ 2.
+•	If 4 Men, then 1 Woman is needed. This violates W ≥ 2.
+So, only the two compositions above are valid.
+Total number of ways = Ways(2M, 3W) + Ways(3M, 2W) = 60 + 120 = 180."
+Quantitative Aptitude,40,M1QA24014,14,,,"Let f(x) be a function such that f(x) + f(x-2) = 2x² - 4x + 4 for all real x. If f(1) = 3 and f(2) = 0, what is the value of f(5) + f(6)?",59,65,70,75,59,65,70,75,59,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Medium,"Functional Equations, Recurrence Relation, Iterative Calculation of Function Values","Functional Equations, Recurrence Relation, Iterative Calculation of Function Values",False,MockSet1_QA,Application,"Given functional equation: f(x) + f(x-2) = 2x² - 4x + 4.
+Given initial values: f(1) = 3, f(2) = 0.
+We need to find f(5) + f(6).
+Calculate f(3): Let x=3 in the equation.
+f(3) + f(3-2) = 2(3)² - 4(3) + 4
+f(3) + f(1) = 2*9 - 12 + 4 = 18 - 12 + 4 = 10.
+f(3) + 3 = 10 => f(3) = 7.
+Calculate f(4): Let x=4 in the equation.
+f(4) + f(4-2) = 2(4)² - 4(4) + 4
+f(4) + f(2) = 2*16 - 16 + 4 = 32 - 16 + 4 = 20.
+f(4) + 0 = 20 => f(4) = 20.
+Calculate f(5): Let x=5 in the equation.
+f(5) + f(5-2) = 2(5)² - 4(5) + 4
+f(5) + f(3) = 2*25 - 20 + 4 = 50 - 20 + 4 = 34.
+f(5) + 7 = 34 => f(5) = 27.
+Calculate f(6): Let x=6 in the equation.
+f(6) + f(6-2) = 2(6)² - 4(6) + 4
+f(6) + f(4) = 2*36 - 24 + 4 = 72 - 24 + 4 = 52.
+f(6) + 20 = 52 => f(6) = 32.
+Finally, f(5) + f(6) = 27 + 32 = 59."
+Quantitative Aptitude,40,M1QA24015,15,,,"A 60-litre vessel contains a mixture of syrup and water with 40% syrup.
+Step 1: 12 litres of this mixture is removed and replaced with pure syrup.
+Step 2: 10 litres of the new mixture from Step 1 is removed and replaced with pure water.
+Step 3: 10 litres of the current mixture from Step 2 is removed and replaced with a mixture containing syrup and water in the ratio 1:1.
+The final quantity of syrup in the vessel is S litres. What is the value of 3S?",,,,,,,,,80,TITA,Arithmetic,Mixtures & Alligations,Hard,"Multi-step Replacement, Concentration Calculation, Fractional Quantities","Multi-step Replacement, Concentration Calculation, Fractional Quantities",True,MockSet1_QA,Analysis,"Initial state: Total mixture = 60 litres. Syrup = 40% of 60 = 0.4 * 60 = 24 litres. Water = 60 - 24 = 36 litres.
+Step 1: 12 litres of mixture removed, replaced with pure syrup.
+Syrup removed = 0.4 * 12 = 4.8 litres. Water removed = 0.6 * 12 = 7.2 litres.
+After removal: Syrup = 24 - 4.8 = 19.2 litres. Water = 36 - 7.2 = 28.8 litres. Volume = 48 litres.
+12 litres of pure syrup added:
+New Syrup = 19.2 + 12 = 31.2 litres. New Water = 28.8 litres. Total volume = 60 litres.
+Syrup concentration after Step 1 = 31.2/60 = 0.52 (or 52%).
+Step 2: 10 litres of this new mixture removed, replaced with pure water.
+Syrup removed = 0.52 * 10 = 5.2 litres. Water removed = (1-0.52) * 10 = 0.48 * 10 = 4.8 litres.
+After removal: Syrup = 31.2 - 5.2 = 26 litres. Water = 28.8 - 4.8 = 24 litres. Volume = 50 litres.
+10 litres of pure water added:
+New Syrup = 26 litres. New Water = 24 + 10 = 34 litres. Total volume = 60 litres.
+Syrup concentration after Step 2 = 26/60.
+Step 3: 10 litres of current mixture removed, replaced with a 1:1 syrup:water mixture.
+Syrup removed = (26/60) * 10 = 26/6 = 13/3 litres.
+Water removed = (34/60) * 10 = 34/6 = 17/3 litres. (Not strictly needed for syrup calculation).
+After removal: Syrup = 26 - 13/3 = (78-13)/3 = 65/3 litres. Volume = 50 litres.
+10 litres of 1:1 mixture (5 litres syrup, 5 litres water) is added:
+Final Syrup quantity (S) = 65/3 + 5 = (65+15)/3 = 80/3 litres.
+The question asks for the value of 3S.
+3S = 3 * (80/3) = 80.
+The value is 80."
+Quantitative Aptitude,40,M1QA24016,16,,,"A trader marks his goods X% above the cost price. He sells 25% of his stock at the marked price, 40% of the stock at a 20% discount on the marked price, and the remaining 35% of the stock at a 50% discount on the marked price. If his overall gain percentage on the total cost price is 11.75%, what is the value of X?",,,,,,,,,50,TITA,Arithmetic,"Profit, Loss & Discount",Medium,"Markup, Discount Strategy, Overall Profit Calculation, Percentage Application","Markup, Discount Strategy, Overall Profit Calculation, Percentage Application",True,MockSet1_QA,Application,"Let the total cost price be C_total.
+The trader marks goods X% above the cost price. So, Marked Price (MP_total) = C_total * (1 + X/100).
+The sales are broken down by discount on MP:
+1.	25% of stock sold at MP. Revenue share = 0.25 * MP_total.
+2.	40% of stock sold at 20% discount on MP. Selling Price = MP_total * (1-0.20) = 0.8 * MP_total. Revenue share = 0.40 * (0.8 * MP_total) = 0.32 * MP_total.
+3.	35% of stock sold at 50% discount on MP. Selling Price = MP_total * (1-0.50) = 0.5 * MP_total. Revenue share = 0.35 * (0.5 * MP_total) = 0.175 * MP_total.
+Total Revenue (before tax) = (0.25 + 0.32 + 0.175) * MP_total = 0.745 * MP_total.
+Substitute MP_total = C_total * (1 + X/100):
+Total Revenue = 0.745 * C_total * (1 + X/100).
+The overall gain percentage on the total cost price is 11.75%.
+Gain = Total Revenue - C_total.
+Gain % = ( (Total Revenue - C_total) / C_total ) * 100.
+So, (Total Revenue / C_total) - 1 = 11.75 / 100 = 0.1175.
+Total Revenue / C_total = 1.1175.
+Substituting the expression for Total Revenue:
+( 0.745 * C_total * (1 + X/100) ) / C_total = 1.1175.
+0.745 * (1 + X/100) = 1.1175.
+1 + X/100 = 1.1175 / 0.745.
+1.1175 / 0.745 = 1.5.
+1 + X/100 = 1.5.
+X/100 = 0.5.
+X = 50.
+The markup percentage X is 50."
+Quantitative Aptitude,40,M1QA24017,17,,,"A number when successively divided by 5, 4, and 3 leaves remainders 2, 1, and 2 respectively. What is the remainder when the same number is divided by 30?",,,,,,,,,17,TITA,Number System,Remainders (incl. Remainder Theorem),Easy,"Successive Division, Remainders, Number reconstruction from remainders","Successive Division, Remainders, Number reconstruction from remainders",True,MockSet1_QA,Application,"Let N be the number.
+According to the division process:
+N = 5q1 + 2
+q1 = 4q2 + 1
+q2 = 3q3 + 2
+To find the smallest positive integer N that satisfies these conditions, we can assume the last quotient q3 is 0 (or any integer, but 0 gives smallest positive N if q2, q1 become positive).
+q2 = 3(0) + 2 = 2.
+q1 = 4(2) + 1 = 8 + 1 = 9.
+N = 5(9) + 2 = 45 + 2 = 47.
+So, the smallest such positive integer is 47.
+In general, any number N satisfying these conditions can be expressed in the form N = k * (5*4*3) + 47 = 60k + 47, where k is a non-negative integer.
+We need to find the remainder when N is divided by 30.
+N = 60k + 47.
+When N is divided by 30:
+(60k + 47) mod 30.
+Since 60k is a multiple of 30, 60k mod 30 = 0.
+So, N mod 30 = 47 mod 30.
+47 = 1 * 30 + 17.
+The remainder when N is divided by 30 is 17."
+Quantitative Aptitude,40,M1QA24018,18,,,"The sum of an infinite geometric progression is 24. The sum of the squares of its terms is 288. If the first term is an integer, what is the common ratio of the progression?",1/4,1/3,1/2,2/3,1/4,1/3,1/2,2/3,1/3,MCQ,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Medium,"Infinite Geometric Progression, Sum of GP, Sum of Squares of GP terms, System of Equations for a and r","Infinite Geometric Progression, Sum of GP, Sum of Squares of GP terms, System of Equations for a and r",False,MockSet1_QA,Application,"Let the first term of the infinite geometric progression be 'a' and the common ratio be 'r'.
+For the sum to be finite and defined, we must have |r| < 1.
+The sum of an infinite GP is S_inf = a / (1-r).
+Given S_inf = 24, so a / (1-r) = 24. (Equation 1)
+The terms of the GP are a, ar, ar², ar³, ...
+The squares of these terms are a², (ar)², (ar²)², (ar³)², ... which are a², a²r², a²r⁴, a²r⁶, ...
+This is also a geometric progression with first term A = a² and common ratio R_sq = r².
+Since |r| < 1, r² < 1, so |R_sq| < 1.
+The sum of the squares of the terms is S_sq_inf = A / (1-R_sq) = a² / (1-r²).
+Given S_sq_inf = 288, so a² / (1-r²) = 288. (Equation 2)
+From Equation 1, a = 24(1-r). Substitute this into Equation 2:
+(24(1-r))² / (1-r²) = 288.
+(24² * (1-r)²) / ((1-r)(1+r)) = 288.
+Since |r|<1, 1-r ≠ 0. We can cancel one (1-r) factor:
+(576 * (1-r)) / (1+r) = 288.
+Since 576/288 = 2:
+2 * (1-r) / (1+r) = 1.
+2(1-r) = 1(1+r).
+2 - 2r = 1 + r.
+2 - 1 = r + 2r.
+1 = 3r.
+r = 1/3.
+This satisfies |r| < 1.
+Now find 'a' using Equation 1:
+a = 24(1-r) = 24(1 - 1/3) = 24(2/3) = 16.
+The problem states that the first term 'a' is an integer. Our value a=16 is an integer.
+So, the common ratio is 1/3."
+Quantitative Aptitude,40,M1QA24019,19,,,"A solid metallic sphere is melted and recast into a right circular cone. During this process, 10% of the metal is lost. The volume of the metal available for forming the cone is 100π cm³. The cone thus formed has a base radius of 5 cm and a height of 12 cm. If the curved surface area of this cone is kπ cm², what is the value of k?",,,,,,,,,65,TITA,Geometry,"Mensuration - 3D (Volume & Surface Area: Cones, Spheres)",Easy,"Volume of Cone, Curved Surface Area of Cone, Pythagorean Triples (for slant height)","Volume of Cone, Curved Surface Area of Cone, Pythagorean Triples (for slant height)",True,MockSet1_QA,Application,"The volume of metal available for forming the cone is V_available = 100π cm³.
+The cone formed has a base radius R_c = 5 cm and a height H_c = 12 cm.
+The volume of this cone is V_cone = (1/3)π R_c² H_c.
+V_cone = (1/3)π (5)² (12) = (1/3)π * 25 * 12 = π * 25 * 4 = 100π cm³.
+This means the given available volume is exactly the volume of the cone described. The information about sphere and metal loss is for context or consistency, not needed for the calculation of k.
+The slant height L_c of the cone is found using the Pythagorean theorem: L_c = √(R_c² + H_c²).
+L_c = √(5² + 12²) = √(25 + 144) = √169 = 13 cm.
+The curved surface area (CSA) of the cone is given by the formula CSA_cone = π R_c L_c.
+CSA_cone = π * 5 * 13 = 65π cm².
+The problem states that the curved surface area of the cone is kπ cm².
+So, kπ = 65π.
+Therefore, k = 65."
+Quantitative Aptitude,40,M1QA24020,20,,,"Two friends, Ajay and Vijay, start simultaneously from points P and Q towards each other. Ajay's speed is 40 km/hr and Vijay's speed is 50 km/hr. They meet at a point R. After meeting, Ajay takes 2.5 hours more to reach Q than Vijay takes to reach P. What is the distance between P and Q in km?",,,,,,,,,500,TITA,Arithmetic,"Time, Speed & Distance (Relative Speed)",Hard,"Relative Speed (towards each other), Meeting Point, Time after meeting, Algebraic Equations","Relative Speed (towards each other), Meeting Point, Time after meeting, Algebraic Equations",True,MockSet1_QA,Analysis,"Let the distance between P and Q be D km.
+Speed of Ajay, v_A = 40 km/hr.
+Speed of Vijay, v_V = 50 km/hr.
+They start simultaneously and move towards each other.
+Let t_meet be the time until they meet at point R.
+Distance covered by Ajay before meeting (PR) = d_A = v_A * t_meet = 40 * t_meet.
+Distance covered by Vijay before meeting (QR) = d_V = v_V * t_meet = 50 * t_meet.
+Also, d_A + d_V = D, so (40+50)t_meet = D => 90 t_meet = D => t_meet = D/90 hours.
+So, d_A = 40D/90 = 4D/9 km, and d_V = 50D/90 = 5D/9 km.
+After meeting at R:
+Ajay travels distance QR (which is d_V) to reach Q. Time taken by Ajay after meeting, t_A_after = d_V / v_A = (5D/9) / 40 = 5D / 360 = D/72 hours.
+Vijay travels distance PR (which is d_A) to reach P. Time taken by Vijay after meeting, t_V_after = d_A / v_V = (4D/9) / 50 = 4D / 450 = 2D/225 hours.
+Given: Ajay takes 2.5 hours more than Vijay for their respective remaining journeys.
+t_A_after = t_V_after + 2.5.
+(2.5 hours = 5/2 hours).
+D/72 = 2D/225 + 5/2.
+To solve for D:
+D/72 - 2D/225 = 5/2.
+LCM of 72 and 225: 72 = 2³ * 3², 225 = 3² * 5². LCM(72, 225) = 2³ * 3² * 5² = 8 * 9 * 25 = 1800.
+Multiply the equation by 1800:
+(1800/72)D - (1800/225)(2D) = (1800/2)(5).
+25D - 8(2D) = 900 * 5.
+25D - 16D = 4500.
+9D = 4500.
+D = 4500 / 9 = 500 km.
+The distance between P and Q is 500 km."
+Quantitative Aptitude,40,M1QA24021,21,,,"A cylinder of radius 5 cm and height 12 cm is completely filled with water. A solid cone, with base radius 3 cm and height 8 cm, is gently lowered into the cylinder, vertex down, such that its base is parallel to the cylinder's base and eventually rests on the bottom of the cylinder. What volume of water (in cm³) will spill out of the cylinder? (Use π = 22/7)",75.43,66,72,78.54,75.43,66,72,78.54,75.43,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cylinders, Cones)",Easy,"Volume of Cone, Water Displacement Principle","Volume of Cone, Water Displacement Principle",False,MockSet1_QA,Application,"Cylinder: Radius R_cyl = 5 cm, Height H_cyl = 12 cm.
+Cone: Base radius R_cone = 3 cm, Height H_cone = 8 cm.
+The cylinder is completely filled with water.
+The cone is lowered into the cylinder, vertex down, until its base rests on the bottom of the cylinder.
+Since the cylinder was full, the volume of water that spills out is equal to the volume of the part of the cone submerged in the cylinder. As the cone's base rests on the bottom of the cylinder, and its dimensions (R_cone=3cm < R_cyl=5cm, H_cone=8cm < H_cyl=12cm) allow it to be fully contained, the volume spilled is the entire volume of the cone.
+Volume of cone V_cone = (1/3)π R_cone² H_cone.
+V_cone = (1/3)π (3)² (8) = (1/3)π * 9 * 8 = 3π * 8 = 24π cm³.
+Using π = 22/7:
+V_cone = 24 * (22/7) = 528/7 cm³.
+528/7 ≈ 75.42857 cm³.
+Rounding to two decimal places, this is 75.43 cm³."
+Quantitative Aptitude,40,M1QA24022,22,,,"If |2x - 5| + |x + 3| ≤ k, and the solution set for x consists of exactly a single point, what is the value of k?",5.5,8,11,0,5.5,8,11,0,5.5,MCQ,Algebra,Modulus (Absolute Values),Medium,"Sum of Absolute Value Functions, Minimum Value of Function, Condition for Single Point Solution","Sum of Absolute Value Functions, Minimum Value of Function, Condition for Single Point Solution",False,MockSet1_QA,Analysis,"Let f(x) = |2x - 5| + |x + 3|. We are given the inequality f(x) ≤ k.
+If the solution set for x consists of exactly a single point, this means that k must be the minimum value of the function f(x).
+The function f(x) is a sum of absolute value functions. The minimum value of such a function occurs at one of its critical points (where the argument of an absolute value becomes zero).
+The critical points are:
+1.	2x - 5 = 0 => x = 5/2 = 2.5
+2.	x + 3 = 0 => x = -3
+We evaluate f(x) by considering intervals defined by these critical points:
+Case 1: x < -3
+f(x) = -(2x - 5) - (x + 3) = -2x + 5 - x - 3 = -3x + 2.
+Case 2: -3 ≤ x < 2.5
+f(x) = -(2x - 5) + (x + 3) = -2x + 5 + x + 3 = -x + 8.
+Case 3: x ≥ 2.5
+f(x) = (2x - 5) + (x + 3) = 2x - 5 + x + 3 = 3x - 2.
+The slopes are -3, -1, 3. The function decreases then increases, so the minimum is at the vertex where slope changes from negative to positive, i.e. x = 2.5.
+Minimum value of f(x) = f(2.5) = |2(2.5) - 5| + |2.5 + 3|
+= |5 - 5| + |5.5| = |0| + 5.5 = 0 + 5.5 = 5.5.
+For the solution set of f(x) ≤ k to be a single point, k must be this minimum value.
+So, k = 5.5.
+If k = 5.5, then |2x - 5| + |x + 3| ≤ 5.5 is only satisfied at x = 2.5."

@@ -1,0 +1,258 @@
+CognitiveSkillLevel,ConceptTested,CorrectAnswerValue,DetailedTags,DifficultyLevelPredicted,IsTITA,OptionAText,OptionAValue,OptionBText,OptionBValue,OptionCText,OptionCValue,OptionDText,OptionDValue,PassageOrSetContent,PassageOrSetID,QuestionNumberInSection,QuestionPrompt,QuestionType,QuestionUniqueID,SectionName,SectionTimeLimitMinutes,SetID,SolutionExplanation,SubTopic,Topic
+Analyzing,"Profit, Loss & Discount",2,"Weighted Average Profit/Loss, Alligation Application, Investment",Medium,False,"Rs. 40,000",1.0,"Rs. 45,000",2.0,"Rs. 50,000",3.0,"Rs. 55,000",4.0,,,1,"A person invested a total sum of Rs. 80,000 in two types of shares, P and Q. At the end of one year, shares of type P yielded a profit of 15% and shares of type Q yielded a loss of 5%. If the person's overall net gain was Rs. 5,000, what was the amount invested in shares of type P?",MCQ,Q67,QA,40,MockSet1_QA,"Let the amount invested in shares of type P be Rs. x.
+Then the amount invested in shares of type Q is Rs. (80000 – x).
+Profit from shares P = 15% of x = 0.15x.
+Loss from shares Q = 5% of (80000 – x) = 0.05(80000 – x).
+Overall net gain = Profit from P – Loss from Q.
+5000 = 0.15x – 0.05(80000 – x)
+5000 = 0.15x – 4000 + 0.05x
+9000 = 0.20x
+x = 9000 / 0.20 = 45000.
+Amount invested in shares of type P = Rs. 45,000.
+The correct option is (2).","Profit, Loss & Discount",Arithmetic
+Applying,"Triangles (Properties, Congruence, Similarity)",2,"Angle Bisector, Incenter, Properties of Incenter",Easy,False,105°,1.0,115°,2.0,125°,3.0,130°,4.0,,,2,"In ΔABC, the internal bisector of ∠B meets AC at D and the internal bisector of ∠C meets AB at E. These bisectors intersect at I. If ∠A = 50°, find ∠BIC.",MCQ,Q68,QA,40,MockSet1_QA,"The internal bisector of ∠B and the internal bisector of ∠C intersect at I. The intersection point of the internal angle bisectors of a triangle is the incenter.
+The angle subtended by any side at the incenter is given by the formula:
+∠BIC = 90° + (∠A / 2)
+Given ∠A = 50°.
+∠BIC = 90° + (50° / 2)
+∠BIC = 90° + 25°
+∠BIC = 115°.
+The correct option is (2).","Triangles (Properties, Congruence, Similarity)",Geometry
+Analyzing,"Sequences & Series (AP, GP, HP, Special Series)",2,"Geometric Progression, Sum of GP terms, Ratio of Sums",Medium,False,2,1.0,3,2.0,4,3.0,9,4.0,,,3,"In a geometric progression of positive terms, the sum of the first three terms is 26. The sum of the next three terms (i.e., the 4th, 5th, and 6th terms) is 702. What is the common ratio of the progression?",MCQ,Q69,QA,40,MockSet1_QA,"Let the first term be 'a' and the common ratio be 'r'.
+Sum of first three terms: S₃ = a + ar + ar² = a(1 + r + r²) = 26. (Equation 1)
+The next three terms are ar³, ar⁴, and ar⁵.
+Sum of next three terms = ar³ + ar⁴ + ar⁵ = ar³(1 + r + r²) = 702. (Equation 2)
+Divide Equation 2 by Equation 1:
+[ar³(1 + r + r²)] / [a(1 + r + r²)] = 702 / 26
+r³ = 27
+r = 3.
+The correct option is (2).","Sequences & Series (AP, GP, HP, Special Series)",Algebra
+Evaluating,"Time, Speed & Distance (General)",2,"Train Accident Problem, Variable Speed, System of Equations",Hard,False,40,1.0,50,2.0,60,3.0,75,4.0,,,4,"A train starts its journey from station A to station B. After travelling for 2 hours, it develops an engine snag and its speed reduces to 4/5 of its usual speed, causing it to reach station B 45 minutes late. If the snag had occurred 30 km further, it would have reached station B only 36 minutes late. What is the usual speed of the train in km/hr?",MCQ,Q70,QA,40,MockSet1_QA,"Let the usual speed of the train be S km/hr.
+In the first scenario, a delay of 45 minutes occurs. In the second, the snag is 30 km further, and the delay is 36 minutes.
+The reduction in delay (45 - 36 = 9 minutes) is because the 30 km segment was covered at the usual speed S instead of the reduced speed (4/5)S.
+Time saved = 9 minutes = 9/60 hours = 3/20 hours.
+Time to cover 30 km at speed S = 30/S hours.
+Time to cover 30 km at speed (4/5)S = 30 / ((4/5)S) = 37.5/S hours.
+The difference in these times is the time saved:
+(37.5/S) - (30/S) = 3/20
+7.5/S = 3/20
+S = (7.5 * 20) / 3 = 150 / 3 = 50 km/hr.
+The correct option is (2).","Time, Speed & Distance (General)",Arithmetic
+Evaluating,Time & Work,14,"Cyclic Work, Multiple Workers, Variable Work Rate per Cycle",Hard,True,,,,,,,,,,,5,"Anil can complete a job in 20 days, Bimal in 30 days, and Charan in 60 days. They decide to work on a schedule: Anil works alone on day 1. Anil and Bimal work together on day 2. Anil, Bimal, and Charan work together on day 3. This 3-day cycle repeats. The work is completed on the Nth day. Find N.",TITA,Q71,QA,40,MockSet1_QA,"Let total work be LCM(20, 30, 60) = 60 units.
+Anil's rate = 60/20 = 3 units/day.
+Bimal's rate = 60/30 = 2 units/day.
+Charan's rate = 60/60 = 1 unit/day.
+Day 1 (Anil): 3 units done.
+Day 2 (Anil + Bimal): 3 + 2 = 5 units done.
+Day 3 (Anil + Bimal + Charan): 3 + 2 + 1 = 6 units done.
+Work done in 1 cycle (3 days) = 3 + 5 + 6 = 14 units.
+Number of full cycles to get close to 60 units = Floor(60/14) = 4 cycles.
+Work done in 4 cycles = 4 * 14 = 56 units.
+Days taken for 4 cycles = 4 * 3 = 12 days.
+Remaining work = 60 - 56 = 4 units.
+On Day 13, Anil works alone and does 3 units.
+Remaining work = 4 - 3 = 1 unit.
+On Day 14, Anil and Bimal work together. They can do 5 units in a full day. Since only 1 unit of work is left, it will be completed on the 14th day.
+So, N = 14.
+Answer: 14",Time & Work,Arithmetic
+Evaluating,Averages & Weighted Averages,3,"Arithmetic Mean, Number Properties, Patterned Numbers (AABB), Even Numbers",Hard,False,5500,1.0,5522,2.0,5544,3.0,5566,4.0,,,6,"Consider all 4-digit numbers of the form 'AABB' where A and B are digits, A > 0, and the number AABB is even. What is the arithmetic mean of all such numbers?",MCQ,Q72,QA,40,MockSet1_QA,"A number of the form AABB can be written as 1100A + 11B.
+The arithmetic mean of such numbers is Mean(1100A + 11B).
+Using the property of averages, Mean(ax + by) = a*Mean(x) + b*Mean(y).
+Mean = 1100 * Mean(A) + 11 * Mean(B).
+Possible values for A (since A > 0) are {1, 2, 3, 4, 5, 6, 7, 8, 9}.
+The mean of A is (1 + 9) / 2 = 5.
+The number AABB is even, so B must be an even digit. The possible values for B are {0, 2, 4, 6, 8}.
+The mean of B is (0 + 8) / 2 = 4.
+Arithmetic Mean = 1100(5) + 11(4) = 5500 + 44 = 5544.
+The correct option is (3).",Averages & Weighted Averages,Arithmetic
+Analyzing,Mixtures & Alligations,9,"Mixture Replacement, Ratio Change, Maintaining Total Volume",Medium,True,,,,,,,,,,,7,A 90-liter mixture contains milk and water in the ratio 8:1. How many liters of the mixture must be removed and replaced with an equal amount of pure water so that the ratio of milk to water in the new mixture becomes 4:1?,TITA,Q73,QA,40,MockSet1_QA,"Initial mixture: 90 liters. Milk : Water = 8:1.
+Initial Milk = (8/9) * 90 = 80 liters.
+Initial Water = (1/9) * 90 = 10 liters.
+Let x liters of mixture be removed and replaced with x liters of pure water.
+Milk removed = (8/9)x. Water removed = (1/9)x.
+New Milk quantity = 80 - (8/9)x.
+New Water quantity = (10 - (1/9)x) + x = 10 + (8/9)x.
+The new ratio of milk to water is 4:1.
+(80 - (8/9)x) / (10 + (8/9)x) = 4/1
+80 - (8/9)x = 40 + (32/9)x
+40 = (40/9)x
+x = 9.
+So, 9 liters must be removed and replaced.
+Answer: 9",Mixtures & Alligations,Arithmetic
+Evaluating,Partnership,51700,"Partnership with Changing Capital, Time-Weighted Investment, Profit Sharing Ratio",Hard,True,,,,,,,,,,,8,"Anil and Sunil start a business. Anil invests Rs. 40,000 for the entire year. Sunil invests Rs. 60,000 initially, but withdraws Rs. 20,000 after 4 months, and then invests an additional Rs. 10,000 after another 4 months (i.e., 8 months from start). If the total profit at the end of the year is Rs. 93,060, what is Sunil's share of the profit (in Rs.)?",TITA,Q74,QA,40,MockSet1_QA,"Anil's equivalent investment for 1 month = 40,000 * 12 = 480,000.
+Sunil's investment stages:
+1. First 4 months: 60,000 * 4 = 240,000.
+2. Next 4 months (capital becomes 60k-20k=40k): 40,000 * 4 = 160,000.
+3. Last 4 months (capital becomes 40k+10k=50k): 50,000 * 4 = 200,000.
+Sunil's total equivalent investment = 240,000 + 160,000 + 200,000 = 600,000.
+Ratio of profits (Anil : Sunil) = 480,000 : 600,000 = 48:60 = 4:5.
+Total profit = Rs. 93,060.
+Sunil's share = (5 / (4+5)) * 93,060 = (5/9) * 93,060 = 5 * 10,340 = Rs. 51,700.
+Answer: 51700",Partnership,Arithmetic
+Analyzing,"Time, Speed & Distance (Races - Linear & Circular)",2,"Circular Motion, Distinct Meeting Points, Relative Speed, Same Direction",Medium,True,,,,,,,,,,,9,"Two runners A and B run on a circular track of length 720m with speeds 18 m/s and 6 m/s respectively, starting from the same point P at the same time and in the same direction. How many distinct points on the track will they meet at?",TITA,Q75,QA,40,MockSet1_QA,"Track length L = 720m.
+Speed of A (S_A) = 18 m/s. Speed of B (S_B) = 6 m/s.
+They run in the same direction.
+The number of distinct meeting points depends on the ratio of the speeds.
+Ratio of speeds = S_A : S_B = 18 : 6 = 3 : 1.
+This simplified ratio means that in the time Runner A completes 3 laps, Runner B completes 1 lap. In this period, A gains (3-1) = 2 laps on B. These 2 overtakes occur at two distinct, equally spaced points on the track.
+The number of distinct meeting points is the absolute difference of the terms in the simplified speed ratio.
+Distinct meeting points = |3 - 1| = 2.
+Answer: 2","Time, Speed & Distance (Races - Linear & Circular)",Arithmetic
+Analyzing,Number of Factors & Sum of Factors,2,"Number of Divisors, Prime Factorization, Smallest Number with Properties",Medium,False,40,1.0,48,2.0,80,3.0,120,4.0,,,10,N is the smallest positive integer which has exactly 10 factors and is a multiple of 8. Find N.,MCQ,Q76,QA,40,MockSet1_QA,"N has exactly 10 factors. For a number N = p₁ᵃ¹ p₂ᵃ²..., the number of factors τ(N) = (a₁+1)(a₂+1)...
+10 can be factored as 10 or 5 × 2.
+This implies N must be of the form p⁹ or p⁴q¹.
+N is a multiple of 8 (2³).
+Case 1: N = p⁹.
+If p=2, N = 2⁹ = 512. This is a multiple of 2³.
+If p is any other prime, N is odd and not a multiple of 8.
+Candidate from this case: 512.
+Case 2: N = p⁴q¹.
+Since N is a multiple of 2³, one of the primes must be 2.
+Subcase 2.1: p = 2. N = 2⁴q¹ = 16q. This is always a multiple of 8. To make N the smallest, we choose the smallest prime q ≠ 2, so q=3. N = 16 * 3 = 48.
+Subcase 2.2: q = 2. N = p⁴ * 2¹. For N to be a multiple of 8, p⁴ must be a multiple of 4. As p is a prime ≠ 2, p is odd, so p⁴ is odd and cannot be a multiple of 4. No solution here.
+Comparing the candidates 512 and 48, the smallest is 48.
+The correct option is (2).",Number of Factors & Sum of Factors,Number System
+Evaluating,Remainders (incl. Remainder Theorem),16,"Euler's Totient Theorem, Modular Exponentiation, Composite Modulus",Hard,True,,,,,,,,,,,11,Find the remainder when 7^(100) is divided by 45.,TITA,Q77,QA,40,MockSet1_QA,"We need to find the remainder of 7¹⁰⁰ when divided by 45.
+Using Euler's totient theorem: φ(45) = φ(3² * 5) = φ(3²) * φ(5) = (3² - 3¹) * (5¹ - 5⁰) = 6 * 4 = 24.
+Since gcd(7, 45) = 1, by Euler's theorem, 7²⁴ ≡ 1 (mod 45).
+We can write 100 in terms of 24: 100 = 4 × 24 + 4.
+Therefore, 7¹⁰⁰ = 7^(4×24 + 4) = (7²⁴)⁴ × 7⁴.
+In modulo 45, this becomes:
+7¹⁰⁰ ≡ (1)⁴ × 7⁴ (mod 45)
+7¹⁰⁰ ≡ 7⁴ (mod 45).
+Now we calculate 7⁴: 7⁴ = (7²)² = 49².
+Since 49 ≡ 4 (mod 45),
+7⁴ ≡ 49² ≡ 4² ≡ 16 (mod 45).
+The remainder is 16.
+Answer: 16",Remainders (incl. Remainder Theorem),Number System
+Evaluating,Logarithms,2,"Logarithmic Equations, Change of Base, Properties of Logarithms, Nested Logarithms",Hard,False,2,1.0,√2,2.0,4,3.0,1/2,4.0,,,12,"If log₄(log₂(x)) = log₁₆(log₄(x)), find the value of x.",MCQ,Q78,QA,40,MockSet1_QA,"Given: log₄(log₂(x)) = log₁₆(log₄(x)).
+Domain constraints require x > 1.
+Use the change of base formula on the right side: log₁₆(A) = log₄(A) / log₄(16) = log₄(A) / 2.
+The equation becomes:
+log₄(log₂(x)) = (1/2) * log₄(log₄(x))
+Using the log property n*log(a) = log(aⁿ):
+log₄(log₂(x)) = log₄((log₄(x))^(1/2))
+Equating the arguments:
+log₂(x) = (log₄(x))^(1/2)
+Square both sides:
+(log₂(x))² = log₄(x)
+Apply change of base again: log₄(x) = log₂(x)/log₂(4) = log₂(x)/2.
+So, (log₂(x))² = log₂(x)/2.
+Let y = log₂(x). The equation is y² = y/2.
+2y² - y = 0 => y(2y - 1) = 0.
+This gives y = 0 or y = 1/2.
+If y = 0, log₂(x) = 0 => x = 1, which violates the domain constraint.
+If y = 1/2, log₂(x) = 1/2 => x = 2^(1/2) = √2. This is the valid solution.
+The correct option is (2).",Logarithms,Algebra
+Analyzing,Quadratic Equations,3,"Common Root of Quadratic Equations, Condition for Common Root",Medium,False,0,1.0,1,2.0,-1,3.0,2,4.0,,,13,"If the quadratic equations x² + ax + b = 0 and x² + bx + a = 0, where a ≠ b, have a common root, then what is the value of a + b?",MCQ,Q79,QA,40,MockSet1_QA,"Let the common root be α.
+Then α² + aα + b = 0 (1) and α² + bα + a = 0 (2).
+Subtract (2) from (1):
+(α² + aα + b) - (α² + bα + a) = 0
+aα - bα + b - a = 0
+α(a - b) - (a - b) = 0
+(α - 1)(a - b) = 0.
+Since a ≠ b, we must have α - 1 = 0, which means α = 1.
+Substitute the common root α = 1 into equation (1):
+1² + a(1) + b = 0
+1 + a + b = 0
+a + b = -1.
+The correct option is (3).",Quadratic Equations,Algebra
+Analyzing,"Sequences & Series (AP, GP, HP, Special Series)",6,"Arithmetico-Geometric Progression, Sum to Infinity of AGP",Medium,True,,,,,,,,,,,14,Find the sum to infinity of the series 3 + 5(1/3) + 7(1/3)² + 9(1/3)³ + ...,TITA,Q80,QA,40,MockSet1_QA,"The series is S = 3 + 5(1/3) + 7(1/3)² + 9(1/3)³ + ...
+This is an Arithmetico-Geometric Progression with common ratio r = 1/3.
+Multiply the series by r:
+(1/3)S = 3(1/3) + 5(1/3)² + 7(1/3)³ + ...
+Subtract the second equation from the first, aligning the terms:
+S - (1/3)S = 3 + [ (5/3 - 3/3) + (7/9 - 5/9) + (9/27 - 7/27) + ... ]
+(2/3)S = 3 + [ 2/3 + 2/9 + 2/27 + ... ]
+The expression in the brackets is an infinite geometric progression with first term a = 2/3 and common ratio r = 1/3.
+The sum of this GP = a / (1-r) = (2/3) / (1 - 1/3) = (2/3) / (2/3) = 1.
+Substitute this back into the equation:
+(2/3)S = 3 + 1
+(2/3)S = 4
+S = 4 * (3/2) = 6.
+Answer: 6","Sequences & Series (AP, GP, HP, Special Series)",Algebra
+Applying,"Functions (Domain, Range, Types, Graphs, Inverse)",1,"Composition of Functions, Iterative Functions, Finding f(f(f(x)))",Easy,False,x,1.0,(x+1)/(x-3),2.0,(3-x)/(x+1),3.0,1/x,4.0,,,15,"If f(x) = (x-3)/(x+1), find f(f(f(x))).",MCQ,Q81,QA,40,MockSet1_QA,"Given f(x) = (x-3)/(x+1).
+First, find f(f(x)):
+f(f(x)) = [((x-3)/(x+1)) - 3] / [((x-3)/(x+1)) + 1]
+= [(x-3) - 3(x+1)] / [(x-3) + (x+1)]
+= (-2x - 6) / (2x - 2) = -2(x+3) / 2(x-1) = (x+3)/(1-x).
+Now, find f(f(f(x))) = f((x+3)/(1-x)):
+f(f(f(x))) = [((x+3)/(1-x)) - 3] / [((x+3)/(1-x)) + 1]
+= [(x+3) - 3(1-x)] / [(x+3) + (1-x)]
+= (4x) / 4 = x.
+The correct option is (1).","Functions (Domain, Range, Types, Graphs, Inverse)",Algebra
+Analyzing,Modulus (Absolute Values),22,"Absolute Value Inequalities, Sum of Absolute Values, Casework by Critical Points",Medium,True,,,,,,,,,,,16,Find the sum of all integer values of x for which |x – 6| + |x + 2| ≤ 10.,TITA,Q82,QA,40,MockSet1_QA,"We need to find the sum of all integer values of x for which |x – 6| + |x + 2| ≤ 10.
+Critical points are x = 6 and x = -2.
+Case 1: x < -2
+-(x-6) - (x+2) ≤ 10 => -2x + 4 ≤ 10 => -2x ≤ 6 => x ≥ -3.
+Integers in this range: -3.
+Case 2: -2 ≤ x < 6
+-(x-6) + (x+2) ≤ 10 => 8 ≤ 10.
+This is always true. Integers in this range: -2, -1, 0, 1, 2, 3, 4, 5.
+Case 3: x ≥ 6
+(x-6) + (x+2) ≤ 10 => 2x - 4 ≤ 10 => 2x ≤ 14 => x ≤ 7.
+Integers in this range: 6, 7.
+The set of integer solutions is {-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7}.
+Sum = (-3-2-1) + (1+2+3) + 0 + 4+5+6+7 = 0 + 22 = 22.
+Answer: 22",Modulus (Absolute Values),Algebra
+Applying,"Coordinate Geometry (Distance, Section, Slope, Line Equations, Area)",1,"Equation of a Line, Slope of Perpendicular Lines, Point-Slope Form",Easy,False,4x+3y=10,1.0,4x-3y=-2,2.0,3x+4y=11,3.0,3x-4y=-5,4.0,,,17,"Find the equation of the line that is perpendicular to the line 3x – 4y = 12 and passes through the point (1, 2).",MCQ,Q83,QA,40,MockSet1_QA,"The given line is 3x – 4y = 12, or y = (3/4)x - 3.
+The slope of this line (m₁) is 3/4.
+A line perpendicular to it will have a slope m₂ = -1/m₁ = -4/3.
+The required line passes through (1, 2) and has a slope of -4/3.
+Using point-slope form y - y₁ = m(x - x₁):
+y - 2 = (-4/3)(x - 1)
+3(y - 2) = -4(x - 1)
+3y - 6 = -4x + 4
+4x + 3y = 10.
+The correct option is (1).","Coordinate Geometry (Distance, Section, Slope, Line Equations, Area)",Geometry
+Analyzing,"Circles (Properties, Chords, Tangents, Secants)",3,"Intersecting Chords, Angle Formed by Intersecting Chords, Arc Measure Relationship",Medium,False,100°,1.0,120°,2.0,140°,3.0,150°,4.0,,,18,"In a circle with center O, chords AB and CD intersect at point P inside the circle. If ∠APC = 110° and arc AC (minor) subtends an angle of 80° at the center, find the measure of arc BD (minor) in degrees.",MCQ,Q84,QA,40,MockSet1_QA,"Using the Intersecting Chords Theorem, the angle formed by two intersecting chords inside a circle is half the sum of the measures of the intercepted arcs.
+Given ∠APC = 110°. This angle and its vertically opposite angle intercept arc AC and arc BD.
+Arc AC subtends 80° at the center, so its measure is 80°.
+∠APC = (1/2) * (measure of arc AC + measure of arc BD)
+110° = (1/2) * (80° + measure of arc BD)
+220° = 80° + measure of arc BD
+Measure of arc BD = 220° - 80° = 140°.
+The correct option is (3).","Circles (Properties, Chords, Tangents, Secants)",Geometry
+Analyzing,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",594,"Hollow Cylinder, Volume of Material, Cylindrical Pipe",Medium,True,,,,,,,,,,,19,A hollow cylindrical pipe is 21 cm long. Its external diameter is 10 cm and the thickness of its wall is 1 cm. Find the volume of metal used in making the pipe (in cm³). (Use π = 22/7).,TITA,Q85,QA,40,MockSet1_QA,"Length of the pipe (h) = 21 cm.
+External diameter = 10 cm, so external radius (R) = 5 cm.
+Thickness = 1 cm, so internal radius (r) = R - thickness = 5 - 1 = 4 cm.
+Volume of metal used = Volume of hollow cylinder = π(R² - r²)h
+V = (22/7) * (5² - 4²) * 21
+V = (22/7) * (25 - 16) * 21
+V = (22/7) * 9 * 21
+V = 22 * 9 * 3 = 594 cm³.
+Answer: 594","Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Geometry
+Applying,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",2,"Cone, Frustum of a Cone, Ratio of Volumes of Similar Solids",Easy,False,1:8,1.0,1:26,2.0,1:27,3.0,8:19,4.0,,,20,A cone with height H and radius R is cut by a plane parallel to its base at a height of H/3 from the vertex. What is the ratio of the volume of the smaller cone formed to the volume of the frustum?,MCQ,Q86,QA,40,MockSet1_QA,"The small cone formed by the cut and the original cone are similar solids. The ratio of the volumes of two similar solids is the cube of the ratio of their corresponding linear dimensions (e.g., heights).
+Height of the smaller cone (h_s) = H/3.
+Height of the original cone (h_o) = H.
+Ratio of heights = h_s / h_o = (H/3) / H = 1/3.
+Ratio of volumes = (Volume of smaller cone) / (Volume of original cone) = (1/3)³.
+V_s / V_o = 1/27.
+Let the volume of the smaller cone be V. Then the volume of the original cone is 27V.
+The volume of the frustum (V_f) is the difference: V_f = V_o - V_s = 27V - V = 26V.
+The required ratio is V_s : V_f = V : 26V = 1:26.
+The correct option is (2).","Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Geometry
+Evaluating,Permutations & Combinations,135,"Committee Formation, At Least Constraints, Exclusion Principle, Casework",Hard,True,,,,,,,,,,,21,"From a group of 6 boys and 4 girls, a committee of 5 is to be formed. In how many ways can this be done if the committee must have at least 2 boys and at least 2 girls, and a particular boy B1 refuses to be on the committee if a particular girl G1 is also a member?",TITA,Q87,QA,40,MockSet1_QA,"Total: 6 Boys, 4 Girls. Committee of 5.
+Conditions: At least 2 boys, at least 2 girls.
+Possible compositions (Boys, Girls): (3B, 2G) or (2B, 3G).
+Condition: Boy B1 and Girl G1 cannot be together. We calculate total cases for each composition and subtract the cases where B1 and G1 are together.
+Case 1: 3 Boys, 2 Girls
+Total ways = C(6,3) * C(4,2) = 20 * 6 = 120.
+Ways with B1 and G1 together: Select B1 and G1. Need 2 more boys from remaining 5 (C(5,2)=10) and 1 more girl from remaining 3 (C(3,1)=3). Ways = 10 * 3 = 30.
+Valid ways for (3B, 2G) = 120 - 30 = 90.
+Case 2: 2 Boys, 3 Girls
+Total ways = C(6,2) * C(4,3) = 15 * 4 = 60.
+Ways with B1 and G1 together: Select B1 and G1. Need 1 more boy from remaining 5 (C(5,1)=5) and 2 more girls from remaining 3 (C(3,2)=3). Ways = 5 * 3 = 15.
+Valid ways for (2B, 3G) = 60 - 15 = 45.
+Total valid ways = 90 + 45 = 135.
+Answer: 135",Permutations & Combinations,Modern Maths
+Analyzing,Probability,1,"Sequential Probability, Drawing without Replacement, Dependent Events, Alternating Outcomes",Medium,False,35/132,1.0,14/143,2.0,70/429,3.0,35/264,4.0,,,22,"A bag contains 5 red and 7 blue balls. Three balls are drawn one by one without replacement. What is the probability that the balls drawn are alternately of different colors (e.g., RBR or BRB)?",MCQ,Q88,QA,40,MockSet1_QA,"Total balls = 5 Red (R) + 7 Blue (B) = 12 balls.
+Three balls are drawn one by one without replacement.
+The required sequences are RBR or BRB.
+Probability of RBR = P(1st R) * P(2nd B) * P(3rd R)
+= (5/12) * (7/11) * (4/10) = 140 / 1320.
+Probability of BRB = P(1st B) * P(2nd R) * P(3rd B)
+= (7/12) * (5/11) * (6/10) = 210 / 1320.
+Total probability = P(RBR) + P(BRB) = (140 + 210) / 1320 = 350 / 1320.
+Simplify the fraction: 350 / 1320 = 35 / 132.
+The correct option is (1).",Probability,Modern Maths

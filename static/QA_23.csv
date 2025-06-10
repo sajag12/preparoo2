@@ -1,0 +1,252 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+QA,40,556677881,1,,,"The incomes of A and B are in the ratio 5:7 and their expenditures are in the ratio 3:5. If A saves Rs. 4000 and B saves Rs. 5000, what is the income of B?",Rs. 14000,Rs. 8750,Rs. 21000,Rs. 24500,1.0,2.0,3.0,4.0,2,MCQ,Arithmetic,"Ratio, Proportion & Variation",Easy,"Ratio, Proportion & Variation","Income, Expenditure, Savings, System of Linear Equations",False,MockSet1_QA_New,Understanding,"Let the incomes of A and B be 5x and 7x. Let the expenditures of A and B be 3y and 5y.
+Savings = Income - Expenditure.
+For A: 5x - 3y = 4000 (1)
+For B: 7x - 5y = 5000 (2)
+Multiply (1) by 5: 25x - 15y = 20000
+Multiply (2) by 3: 21x - 15y = 15000
+Subtracting the second new equation from the first:
+(25x - 15y) - (21x - 15y) = 20000 - 15000
+4x = 5000
+x = 1250.
+The income of B is 7x = 7 × 1250 = Rs. 8750."
+QA,40,667788992,2,,,"A hollow cylindrical pipe has an external radius of 10 cm and an internal radius of 7 cm. If the height of the pipe is 30 cm, what is the volume of the material used to make the pipe, in cubic cm? (Use π = 22/7. Enter your answer rounded to the nearest integer)",,,,,,,,,4809,TITA,Geometry,Mensuration - 3D (Volume & Surface Area),Medium,Mensuration - 3D (Volume & Surface Area),"Hollow Cylinder, Volume Calculation, Rounding",True,MockSet1_QA_New,Application,"External radius R = 10 cm. Internal radius r = 7 cm. Height h = 30 cm.
+Volume of material = Volume of external cylinder - Volume of internal cylinder
+V = πR²h - πr²h = πh(R² - r²)
+V = (22/7) × 30 × (10² - 7²)
+V = (22/7) × 30 × (100 - 49)
+V = (22/7) × 30 × 51
+V = 33660 / 7 ≈ 4808.57 cm³.
+Rounding to the nearest integer, the answer is 4809."
+QA,40,778899003,3,,,What is the highest power of 12 that can divide 50! (50 factorial)?,22,23,24,47,1.0,2.0,3.0,4.0,1,MCQ,Number System,Factorials,Medium,Factorials,"Highest Power of a Number in a Factorial, Legendre's Formula, Prime Factorization",False,MockSet1_QA_New,Application,"The prime factorization of 12 is 2² × 3.
+We need to find the highest power of 2 and 3 in 50!.
+Highest power of 2 in 50! (using Legendre's formula):
+[50/2] + [50/4] + [50/8] + [50/16] + [50/32] = 25 + 12 + 6 + 3 + 1 = 47.
+Highest power of 3 in 50!:
+[50/3] + [50/9] + [50/27] = 16 + 5 + 1 = 22.
+So, 50! contains 2⁴⁷ and 3²².
+To form a factor of 12 (2² × 3), we need two 2s and one 3.
+From the power of 2 (47), we can form [47/2] = 23 pairs of 2s, i.e., 23 factors of 2².
+From the power of 3 (22), we have 22 factors of 3.
+The number of factors of 12 is limited by the smaller of these two counts.
+We have 23 available factors of 2² and 22 available factors of 3.
+The limiting factor is 3. The highest power of 12 is 22."
+QA,40,889900114,4,,,"For the equation x² - (k-2)x + (k+1) = 0, the roots are real and distinct. If k is an integer such that -5 < k < 12, find the sum of all possible values of k.",20,22,27,28,1.0,2.0,3.0,4.0,1,MCQ,Algebra,Quadratic Equations,Medium,Quadratic Equations,"Real and Distinct Roots, Discriminant, Inequalities, Sum of Integers in a Range",False,MockSet1_QA_New,Application,"For a quadratic equation to have real and distinct roots, the discriminant (D) must be greater than 0.
+D = b² - 4ac > 0.
+For x² - (k-2)x + (k+1) = 0:
+D = (-(k-2))² - 4(1)(k+1) > 0
+(k² - 4k + 4) - (4k + 4) > 0
+k² - 8k > 0
+k(k - 8) > 0.
+This inequality holds when k < 0 or k > 8.
+Given that k is an integer such that -5 < k < 12, the possible values for k are:
+From k < 0: -4, -3, -2, -1.
+From k > 8: 9, 10, 11.
+The sum of these values is (-4 - 3 - 2 - 1) + (9 + 10 + 11) = -10 + 30 = 20."
+QA,40,990011225,5,,,"A sum of Rs. 12,000 amounts to Rs. 15,972 in 2 years when compounded annually. What is the approximate rate of compound interest per annum?",14%,15%,15.5%,16%,1.0,2.0,3.0,4.0,3,MCQ,Arithmetic,Compound Interest,Medium,Compound Interest,"Amount Calculation, Finding Rate of Interest, Approximation",False,MockSet1_QA_New,Application,"Amount A = P(1 + R/100)ⁿ.
+Given P = 12000, A = 15972, n = 2.
+15972 = 12000(1 + R/100)².
+(1 + R/100)² = 15972 / 12000 = 1.331.
+To find R, we can test the options.
+If R = 15%, (1 + 15/100)² = (1.15)² = 1.3225.
+If R = 15.5%, (1 + 15.5/100)² = (1.155)² ≈ 1.334.
+The actual value 1.331 is between 1.3225 (for 15%) and 1.334 (for 15.5%).
+The difference 1.331 - 1.3225 = 0.0085.
+The difference 1.334 - 1.331 = 0.003.
+Since 1.331 is closer to 1.334, the rate is approximately 15.5%."
+QA,40,112233446,6,,,"A can do a piece of work in 15 days, B in 20 days. They work together for 4 days, after which A leaves. B continues for some more days and then C joins B, and they together complete the remaining work in 4 days. If C alone can do the entire work in 30 days, for how many days did B work alone after A left and before C joined? (Enter your answer as a numerical value)",,,,,,,,,4,TITA,Arithmetic,Time & Work,Medium,Time & Work,"Multiple Workers, LCM Method, Work Stages",True,MockSet1_QA_New,Application,"Total work = LCM(15, 20, 30) = 60 units.
+Rate of A = 60/15 = 4 units/day.
+Rate of B = 60/20 = 3 units/day.
+Rate of C = 60/30 = 2 units/day.
+A and B work together for 4 days.
+Work done = (Rate of A + Rate of B) × 4 = (4 + 3) × 4 = 28 units.
+Remaining work = 60 - 28 = 32 units.
+Let B work alone for 'x' days. Work done by B alone = 3x units.
+After B works alone, B and C work together for 4 days.
+Work done by B and C = (Rate of B + Rate of C) × 4 = (3 + 2) × 4 = 20 units.
+The work done by B alone and then B with C equals the remaining work:
+3x + 20 = 32
+3x = 12
+x = 4.
+B worked alone for 4 days."
+QA,40,223344557,7,,,"The average weight of students in Section A of a class is 55 kg and that in Section B is 65 kg. The number of students in Section A is 20% more than the number of students in Section B. What is the average weight of all students in the class, approximately?",59.09 kg,59.55 kg,60.00 kg,60.45 kg,1.0,2.0,3.0,4.0,2,MCQ,Arithmetic,Averages & Weighted Averages,Easy,Averages & Weighted Averages,"Weighted Average, Percentage Increase",False,MockSet1_QA_New,Understanding,"Let the number of students in Section B be 100.
+The number of students in Section A is 20% more, so N_A = 120.
+Average weight of Section A = 55 kg. Total weight of Section A = 120 × 55 = 6600 kg.
+Average weight of Section B = 65 kg. Total weight of Section B = 100 × 65 = 6500 kg.
+Total number of students = 120 + 100 = 220.
+Total weight of all students = 6600 + 6500 = 13100 kg.
+Overall average weight = Total Weight / Total Students = 13100 / 220 = 1310 / 22 = 655 / 11.
+655 / 11 ≈ 59.545... kg.
+This is approximately 59.55 kg."
+QA,40,334455668,8,,,"A train travels at an average speed of 75 km/hr without any stoppages. With stoppages, its average speed reduces to 65 km/hr. For how many minutes per hour does the train stop?",6 minutes,8 minutes,10 minutes,12 minutes,1.0,2.0,3.0,4.0,2,MCQ,Arithmetic,"Time, Speed & Distance (General)",Easy,"Time, Speed & Distance (General)","Stoppages, Average Speed Calculation",False,MockSet1_QA_New,Understanding,"Let speed without stoppages be S₁ = 75 km/hr.
+Let speed with stoppages be S₂ = 65 km/hr.
+The reduction in speed per hour is due to the time the train is stopped.
+Distance lost per hour = S₁ - S₂ = 75 - 65 = 10 km.
+The time taken to cover this lost distance at the original speed is the stoppage time.
+Stoppage time per hour = (Distance lost) / (Original Speed) = 10 km / 75 km/hr = 10/75 hours.
+Convert to minutes: (10/75) × 60 = (2/15) × 60 = 2 × 4 = 8 minutes."
+QA,40,445566779,9,,,"In a triangle PQR, the angle bisector of ∠P meets QR at S. If PQ = 12 cm, PR = 18 cm, and QR = 20 cm, find the length of SR in cm. (Enter your answer as a numerical value)",,,,,,,,,12,TITA,Geometry,Triangles (Properties & Theorems),Easy,Triangles (Properties & Theorems),"Angle Bisector Theorem, Ratio of Sides",True,MockSet1_QA_New,Understanding,"According to the Angle Bisector Theorem, the angle bisector divides the opposite side in the ratio of the other two sides.
+PS bisects ∠P, so QS/SR = PQ/PR.
+QS/SR = 12/18 = 2/3.
+Let QS = 2k and SR = 3k.
+The total length QR = QS + SR = 2k + 3k = 5k.
+Given QR = 20 cm.
+5k = 20, so k = 4.
+The length of SR = 3k = 3 × 4 = 12 cm."
+QA,40,556677890,10,,,"If f(x) = 2x + 3 and g(x) = (x-1)/2, find the value of x for which f(g(x)) = 2 * g(f(x-1)).",1,2,3,4,1.0,2.0,3.0,4.0,2,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Medium,"Functions (Domain, Range, Types, Graphs, Inverse)","Composition of Functions, Solving Functional Equations",False,MockSet1_QA_New,Application,"f(x) = 2x + 3 and g(x) = (x-1)/2.
+We need to solve f(g(x)) = 2 * g(f(x-1)).
+LHS: f(g(x)) = f((x-1)/2) = 2((x-1)/2) + 3 = (x-1) + 3 = x+2.
+RHS part 1: f(x-1) = 2(x-1) + 3 = 2x - 2 + 3 = 2x + 1.
+RHS part 2: g(f(x-1)) = g(2x+1) = ((2x+1)-1)/2 = 2x/2 = x.
+The equation becomes:
+x + 2 = 2 * (x)
+x + 2 = 2x
+x = 2."
+QA,40,667789001,11,,,A committee of 5 members is to be formed from 6 men and 4 women. In how many ways can this be done if the committee must include at least 2 women and exactly 1 specific man M1?,45,51,65,81,1.0,2.0,3.0,4.0,4,MCQ,Modern Maths,Permutations & Combinations,Hard,Permutations & Combinations,"Committee Selection, ""At Least"" Condition, ""Exactly"" Condition, Fixed Member",False,MockSet1_QA_New,Analysis,"A committee of 5 members is to be formed from 6 men and 4 women.
+One specific man (M1) must be included. This means we need to select 4 more members from the remaining 5 men and 4 women.
+The committee must have at least 2 women. This condition applies to the final 5-member committee. Since M1 is a man, the 4 members we select must include at least 2 women.
+Possible cases for selecting the remaining 4 members from 5 men and 4 women:
+Case 1: 2 Women and 2 Men.
+Ways = C(4, 2) × C(5, 2) = 6 × 10 = 60.
+Case 2: 3 Women and 1 Man.
+Ways = C(4, 3) × C(5, 1) = 4 × 5 = 20.
+Case 3: 4 Women and 0 Men.
+Ways = C(4, 4) × C(5, 0) = 1 × 1 = 1.
+Total number of ways = 60 + 20 + 1 = 81."
+QA,40,778900112,12,,,"The lengths of the face diagonals of a cuboid are √89 cm, √106 cm, and √145 cm. What is the volume of the cuboid in cubic cm? (Enter your answer as a numerical value)",,,,,,,,,360,TITA,Geometry,Mensuration - 3D (Volume & Surface Area),Medium,Mensuration - 3D (Volume & Surface Area),"Cuboid, Face Diagonals, Volume Calculation, System of Equations",True,MockSet1_QA_New,Application,"Let the dimensions of the cuboid be l, b, and h.
+The squares of the face diagonals are:
+l² + b² = (√89)² = 89
+b² + h² = (√106)² = 106
+h² + l² = (√145)² = 145
+Adding these three equations:
+2(l² + b² + h²) = 89 + 106 + 145 = 340.
+l² + b² + h² = 170.
+Now find l², b², and h² individually:
+h² = (l² + b² + h²) - (l² + b²) = 170 - 89 = 81 => h = 9.
+l² = (l² + b² + h²) - (b² + h²) = 170 - 106 = 64 => l = 8.
+b² = (l² + b² + h²) - (h² + l²) = 170 - 145 = 25 => b = 5.
+Volume of the cuboid = l × b × h = 8 × 5 × 9 = 360 cubic cm."
+QA,40,890011223,13,,,What is the remainder when (1! + 2 × 2! + 3 × 3! + ... + 10 × 10!) is divided by 13?,0,1,5,12,1.0,2.0,3.0,4.0,1,MCQ,Number System,Remainders (incl. Remainder Theorem),Hard,Remainders (incl. Remainder Theorem),"Telescoping Series, Factorials, Wilson's Theorem, Modular Arithmetic",False,MockSet1_QA_New,Analysis,"The general term in the sum is n × n!.
+We can write n × n! as (n+1 - 1) × n! = (n+1)n! - n! = (n+1)! - n!.
+The sum becomes a telescoping series:
+S = (2! - 1!) + (3! - 2!) + (4! - 3!) + ... + (11! - 10!).
+All intermediate terms cancel out, leaving:
+S = 11! - 1! = 11! - 1.
+We need to find the remainder when (11! - 1) is divided by 13.
+By Wilson's Theorem, for a prime p, (p-1)! ≡ -1 (mod p).
+For p = 13, we have 12! ≡ -1 (mod 13).
+12 × 11! ≡ -1 (mod 13).
+Since 12 ≡ -1 (mod 13), we have:
+(-1) × 11! ≡ -1 (mod 13).
+Multiplying by -1, we get 11! ≡ 1 (mod 13).
+Therefore, (11! - 1) ≡ (1 - 1) (mod 13) ≡ 0 (mod 13).
+The remainder is 0."
+QA,40,901122334,14,,,"A solution contains milk and water in the ratio 5:3. If 16 litres of this solution is removed and replaced by 16 litres of water, the ratio of milk to water becomes 3:5. What was the original volume of the solution in litres?",32,40,48,56,1.0,2.0,3.0,4.0,2,MCQ,Arithmetic,Mixtures & Alligations,Medium,Mixtures & Alligations,"Solution Replacement, Ratio Change, Volume Calculation",False,MockSet1_QA_New,Application,"Let the initial volume be V. Initial ratio Milk:Water = 5:3.
+Initial Milk = (5/8)V, Initial Water = (3/8)V.
+When 16 litres of solution are removed:
+Milk removed = (5/8) × 16 = 10 litres.
+Water removed = (3/8) × 16 = 6 litres.
+Milk remaining = (5/8)V - 10.
+Water remaining = (3/8)V - 6.
+Next, 16 litres of water are added.
+New Milk = (5/8)V - 10.
+New Water = ((3/8)V - 6) + 16 = (3/8)V + 10.
+The new ratio of milk to water is 3:5.
+((5/8)V - 10) / ((3/8)V + 10) = 3/5
+5((5/8)V - 10) = 3((3/8)V + 10)
+(25/8)V - 50 = (9/8)V + 30
+(25/8)V - (9/8)V = 80
+(16/8)V = 80
+2V = 80
+V = 40 litres."
+QA,40,122334455,15,,,For what value of 'a' do the equations x² + ax + 8 = 0 and x² + x + a = 0 have a common root?,-6,-4,4,6,1.0,2.0,3.0,4.0,1,MCQ,Algebra,Quadratic Equations,Medium,Quadratic Equations,"Common Root, System of Equations, Solving Cubic Equation by Substitution",False,MockSet1_QA_New,Application,"Let α be the common root. It must satisfy both equations:
+α² + aα + 8 = 0 (1)
+α² + α + a = 0 (2)
+Subtracting (2) from (1):
+(aα - α) + (8 - a) = 0
+α(a - 1) = a - 8
+α = (a - 8) / (a - 1) (since a=1 gives a contradiction 0=-7).
+Substitute α into equation (2):
+((a-8)/(a-1))² + ((a-8)/(a-1)) + a = 0
+Multiply by (a-1)²:
+(a-8)² + (a-8)(a-1) + a(a-1)² = 0
+(a² - 16a + 64) + (a² - 9a + 8) + a(a² - 2a + 1) = 0
+2a² - 25a + 72 + a³ - 2a² + a = 0
+a³ - 24a + 72 = 0.
+Test the integer options. For a = -6:
+(-6)³ - 24(-6) + 72 = -216 + 144 + 72 = -216 + 216 = 0.
+Thus, a = -6 is the solution."
+QA,40,233445566,16,,,"In a circle with center O, AB is a chord and CD is a diameter perpendicular to AB, intersecting AB at E. If AE = 8 cm and ED = 4 cm, what is the length of the diameter of the circle? (Enter your answer as a numerical value in cm)",,,,,,,,,20,TITA,Geometry,Circles,Medium,Circles,"Chord Properties, Diameter, Perpendicular Bisector, Pythagoras Theorem",True,MockSet1_QA_New,Application,"CD is a diameter perpendicular to chord AB at E. This means E is the midpoint of AB.
+Let r be the radius of the circle. Then OD = OC = r.
+The point O lies on the diameter CD.
+OE = |r - ED| = |r - 4|.
+In the right-angled triangle OEA, OA² = OE² + AE².
+OA is the radius r.
+r² = (r - 4)² + 8²
+r² = r² - 8r + 16 + 64
+0 = -8r + 80
+8r = 80
+r = 10 cm.
+The diameter of the circle is 2r = 2 × 10 = 20 cm."
+QA,40,344556677,17,,,The price of an article is increased by 15%. By what approximate percentage should the new price be decreased to bring it back to the original price?,13.04%,13.25%,15%,17.65%,1.0,2.0,3.0,4.0,1,MCQ,Arithmetic,Percentages,Easy,Percentages,"Successive Percentage Change, Restoring Original Value",False,MockSet1_QA_New,Understanding,"Let the original price be P = 100.
+After a 15% increase, the new price is P' = 100 × 1.15 = 115.
+To return to the original price of 100, the price must be decreased by 115 - 100 = 15.
+The percentage decrease is relative to the new price (115).
+Percentage decrease = (Decrease / New Price) × 100 = (15 / 115) × 100.
+(15 / 115) = 3 / 23.
+(3 / 23) × 100 = 300 / 23 ≈ 13.04%."
+QA,40,455667788,18,,,Solve for x: |2x - 7| = 3x - 8.,x = 3,x = 1,x = 3 or x = 1,No solution,1.0,2.0,3.0,4.0,1,MCQ,Algebra,Inequalities (Linear & Quadratic),Medium,Inequalities (Linear & Quadratic),"Absolute Value Equations, Modulus, Extraneous Roots",False,MockSet1_QA_New,Application,"For |2x - 7| = 3x - 8, the RHS must be non-negative.
+3x - 8 ≥ 0 => 3x ≥ 8 => x ≥ 8/3.
+Case 1: 2x - 7 ≥ 0 (i.e., x ≥ 3.5).
+The equation is 2x - 7 = 3x - 8.
+-7 + 8 = 3x - 2x => x = 1.
+This value x=1 does not satisfy the condition x ≥ 3.5, so it is an extraneous root.
+Case 2: 2x - 7 < 0 (i.e., x < 3.5).
+The equation is -(2x - 7) = 3x - 8.
+-2x + 7 = 3x - 8.
+15 = 5x => x = 3.
+This value x=3 satisfies the condition x < 3.5. It also satisfies the overall condition x ≥ 8/3 (since 3 > 2.67).
+Thus, x = 3 is the only solution."
+QA,40,566778899,19,,,A sphere of radius 9 cm is melted and recast into a right circular cone of height 9 cm. What is the radius of the base of the cone in cm?,9 cm,12 cm,15 cm,18 cm,1.0,2.0,3.0,4.0,4,MCQ,Geometry,Mensuration - 3D (Volume & Surface Area),Medium,Mensuration - 3D (Volume & Surface Area),"Melting and Recasting, Volume Conservation, Sphere Volume, Cone Volume",False,MockSet1_QA_New,Application,"The volume of the material remains constant during recasting.
+Volume of a sphere = (4/3)πR³.
+Volume of a cone = (1/3)πr²h.
+Given sphere radius R = 9 cm and cone height h = 9 cm.
+(4/3)π(9)³ = (1/3)πr²(9)
+4π(9)³ = πr²(9)
+4 × 9² = r²
+r² = 4 × 81 = 324
+r = √324 = 18 cm.
+The radius of the base of the cone is 18 cm."
+QA,40,677890011,20,,,The sum of the 5th and 9th terms of an arithmetic progression is 40. The sum of the 8th and 14th terms is 64. Find the sum of the first 20 terms of this AP. (Enter your answer as a numerical value),,,,,,,,,610,TITA,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Medium,"Sequences & Series (AP, GP, HP, Special Series)","Arithmetic Progression, nth Term, Sum of n Terms, System of Linear Equations",True,MockSet1_QA_New,Application,"Let the first term be 'a' and the common difference be 'd'.
+The nth term is Tₙ = a + (n-1)d.
+Given T₅ + T₉ = 40:
+(a + 4d) + (a + 8d) = 40 => 2a + 12d = 40 => a + 6d = 20 (1)
+Given T₈ + T₁₄ = 64:
+(a + 7d) + (a + 13d) = 64 => 2a + 20d = 64 => a + 10d = 32 (2)
+Subtracting (1) from (2):
+(a + 10d) - (a + 6d) = 32 - 20 => 4d = 12 => d = 3.
+Substitute d=3 into (1):
+a + 6(3) = 20 => a + 18 = 20 => a = 2.
+Sum of the first n terms Sₙ = n/2 [2a + (n-1)d].
+S₂₀ = 20/2 [2(2) + (20-1)(3)]
+S₂₀ = 10 [4 + 19 × 3] = 10 [4 + 57] = 10 [61] = 610."
+QA,40,789001122,21,,,"A bag contains 4 red, 5 blue, and 3 green balls. If three balls are drawn at random without replacement, what is the probability that exactly two of them are blue?",7/22,14/55,21/55,7/44,1.0,2.0,3.0,4.0,1,MCQ,Modern Maths,Probability,Medium,Probability,"Combinatorial Probability, Drawing without Replacement, ""Exactly"" Condition",False,MockSet1_QA_New,Application,"Total balls = 4 Red + 5 Blue + 3 Green = 12.
+We need to find the probability of drawing exactly 2 blue balls and 1 non-blue ball in 3 draws.
+Total ways to choose 3 balls from 12 = C(12, 3) = (12 × 11 × 10) / (3 × 2 × 1) = 220.
+Number of ways to choose 2 blue balls from 5 = C(5, 2) = (5 × 4) / 2 = 10.
+Number of ways to choose 1 non-blue ball from the remaining 7 (4R + 3G) = C(7, 1) = 7.
+Number of favorable outcomes = C(5, 2) × C(7, 1) = 10 × 7 = 70.
+Probability = Favorable Outcomes / Total Outcomes = 70 / 220 = 7/22."
+QA,40,890112233,22,,,"If log₁₀(x² - 11x + 30) - log₁₀(x - 5) = 1 + log₁₀(2), find x.",16,20,26,30,1.0,2.0,3.0,4.0,3,MCQ,Algebra,Logarithms,Medium,Logarithms,"Logarithmic Equations, Properties of Logarithms, Domain of Logarithm",False,MockSet1_QA_New,Application,"log₁₀(x² - 11x + 30) - log₁₀(x - 5) = 1 + log₁₀(2).
+First, check the domain for the logarithms to be defined:
+x² - 11x + 30 > 0 => (x-5)(x-6) > 0 => x < 5 or x > 6.
+x - 5 > 0 => x > 5.
+The combined domain is x > 6.
+Using the property log(a) - log(b) = log(a/b):
+log₁₀((x² - 11x + 30)/(x - 5)) = log₁₀(10) + log₁₀(2)
+log₁₀(((x-5)(x-6))/(x-5)) = log₁₀(20)
+Since x > 6, (x-5) is non-zero and can be cancelled.
+log₁₀(x-6) = log₁₀(20)
+x - 6 = 20
+x = 26.
+This value satisfies the domain condition x > 6."

@@ -1,0 +1,3657 @@
+/* =================================== */
+/* ===== GENERAL RESETS & DEFAULTS ===== */
+/* =================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* background-color: #FDFEFF; /* Example: A very light off-white */
+  /* OR keep it #FFFFFF and let sections define their backgrounds explicitly */
+  background-color: #FFFFFF; 
+  color: #374151;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #7C3AED; /* Default link color (purple from navbar) */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1100px; /* Slightly adjusted for new design if needed */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* =================================== */
+/* ===== NAVBAR (From original, slightly adjusted for new logo text) ===== */
+/* =================================== */
+
+.navbar {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: relative; 
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 20px; /* Adjusted to mocks.ai */
+  color: #1F2937;
+  display: flex;
+  align-items: center;
+}
+.navbar .logo span { /* For the "CAT" part if used, but PDF shows "mocks.ai" */
+  color: #7C3AED;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #4B5563; /* Tailwind gray-600 */
+  font-weight: 500;
+  font-size: 14px; /* Slightly smaller as per PDF */
+  transition: color 0.2s ease;
+}
+
+.navbar nav a:hover {
+  color: #7C3AED;
+  text-decoration: none;
+}
+
+.login-btn {
+  background: #7C3AED; /* Purple */
+  color: white;
+  border: none;
+  padding: 8px 18px; /* Adjusted */
+  border-radius: 6px;
+  font-weight: 500; /* Adjusted */
+  font-size: 14px; /* Adjusted */
+  transition: background-color 0.2s ease;
+  margin-left: 15px; 
+}
+
+.login-btn:hover {
+  background: #6D28D9;
+}
+
+/* =================================== */
+/* ===== NEW LANDING PAGE STYLES ===== */
+/* =================================== */
+
+.landing-page-content-new {
+  /* Optional wrapper for new content if needed */
+}
+
+/* --- New Hero Section --- */
+.hero-section-new {
+  background: linear-gradient(135deg, #A87FFB, #DAB6FC); /* Lavender/Purple gradient */
+  color: white;
+  text-align: center;
+  padding: 80px 20px 70px;
+}
+
+.hero-section-new h1 {
+  font-family: 'Montserrat', sans-serif; /* As per PDF title style */
+  font-size: 44px; 
+  font-weight: 800; 
+  margin-bottom: 20px;
+  line-height: 1.3;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: lowercase; /* As per PDF */
+}
+
+.hero-section-new .alumni-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #7C3AED;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.hero-buttons-new {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-buttons-new .btn {
+  padding: 12px 30px;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.hero-buttons-new .btn-primary-hero-new {
+  background-color: #7C3AED; /* Purple */
+  color: white;
+}
+.hero-buttons-new .btn-primary-hero-new:hover {
+  background-color: #6D28D9;
+}
+
+.hero-buttons-new .btn-secondary-hero-new {
+  background-color: rgba(255, 255, 255, 0.2); /* More transparent white */
+  color: white;
+  border: 2px solid white; /* White border */
+}
+.hero-buttons-new .btn-secondary-hero-new:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Meet Your Mentors Section --- */
+.mentors-section {
+  padding: 70px 0;
+  /* Was: background-color: #F9FAFB; */
+  background-color: #FFFFFF; /* Change to white for alternation */
+}
+
+
+.mentors-section h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 40px;
+}
+
+.mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 800px; /* Control max width of the grid */
+  margin: 0 auto;
+}
+
+.mentor-card-new {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB; /* Or #EFF1F3 for consistency if you prefer */
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03); /* Existing shadow */
+  /* Update transition */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.mentor-card-new:hover {
+  transform: translateY(-5px) scale(1.03); /* Lift and grow */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07); /* Enhanced shadow */
+}
+.mentor-card-new .mentor-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #EDE9FE; /* Light purple */
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #7C3AED;
+  /* Add transition for the icon */
+  transition: transform 0.3s ease-in-out;
+}
+.mentor-card-new:hover .mentor-icon {
+  transform: scale(1.08); /* Icon scales up when card is hovered */
+}
+
+.mentor-card-new .mentor-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #EDE9FE; /* Light purple */
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #7C3AED;
+}
+
+.mentor-card-new h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.mentor-card-new p {
+  font-size: 14px;
+  color: #4B5563;
+  margin-bottom: 5px;
+}
+
+/* --- Pricing Section --- */
+.pricing-section-new {
+  padding: 70px 0;
+  /* Was: background-color: #FFFFFF; */
+  background-color: #F9FAFB; /* Light grey (Tailwind gray-50) for contrast */
+}
+
+.pricing-section-new h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+.pricing-section-new .section-subtitle-new {
+  text-align: center;
+  font-size: 15px;
+  color: #6B7280;
+  margin-bottom: 50px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.pricing-plan-card {
+  background: #F9FAFB; /* Or #FFFFFF for the popular card */
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  /* Update transition */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.pricing-plan-card:hover {
+  transform: translateY(-5px) scale(1.02); /* Lift slightly less for these, grow a bit */
+  box-shadow: 0 7px 22px rgba(0,0,0,0.08);
+}
+
+/* Specific hover for the popular card to maintain its visual hierarchy */
+.pricing-plan-card.popular {
+  border-top: 4px solid #7C3AED;
+  position: relative;
+  background-color: #FFFFFF;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.1); /* Existing popular shadow */
+  /* Transition for popular card */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* No border-color transition needed if already defined */
+}
+
+.pricing-plan-card.popular:hover {
+  transform: translateY(-6px) scale(1.03); /* Slightly more lift and grow for popular */
+  box-shadow: 0 12px 35px rgba(124, 58, 237, 0.18); /* More pronounced shadow */
+}
+
+/* Non-popular card specific border highlight on hover (optional, if you like this effect) */
+.pricing-plan-card:not(.popular):hover {
+  /* transform: translateY(-5px) scale(1.02); /* Already defined above, just keeping for context */
+  /* box-shadow: 0 7px 22px rgba(0,0,0,0.08); /* Already defined above */
+  border-color: #C4B5FD; /* Light purple border for non-popular cards */
+}
+
+/* If you also want the buttons inside to react, though it might be too much: */
+.pricing-plan-card .btn-plan {
+    /* ... existing styles ... */
+    transition: background-color 0.3s ease, transform 0.2s ease-out; /* Add transform transition */
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px; /* Adjust to sit nicely on the border */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #7C3AED;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+.pricing-plan-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.pricing-plan-card .price {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+}
+.pricing-plan-card .price .slashed-price-plan {
+  font-size: 18px;
+  color: #9CA3AF;
+  text-decoration: line-through;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.pricing-plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  flex-grow: 1; /* Make ul take available space */
+}
+
+.pricing-plan-card ul li {
+  font-size: 14px;
+  color: #4B5563;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+.pricing-plan-card ul li .tick {
+  color: #7C3AED; /* Purple tick */
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.btn-plan {
+  display: block;
+  background-color: #7C3AED;
+  color: white;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Push to bottom */
+}
+.btn-plan:hover {
+  background-color: #6D28D9;
+  text-decoration: none;
+}
+.pricing-plan-card:not(.popular) .btn-plan { /* Non-popular plan button style */
+    background-color: #EDE9FE;
+    color: #7C3AED;
+    border: 1px solid #C4B5FD;
+}
+.pricing-plan-card:not(.popular) .btn-plan:hover {
+    background-color: #DDD6FE;
+}
+
+
+/* --- Considering All Access Section --- */
+.considering-access-section {
+  padding: 60px 0;
+  background-color: #F0F2F5; /* Slightly different shade of light grey for variety, or keep #F9FAFB */
+  /* The .considering-access-box inside is #FFFFFF, creating good contrast */
+}
+
+.considering-access-box {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 35px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.considering-access-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+.considering-access-box .subtitle {
+  font-size: 14px;
+  color: #6B7280;
+  margin-bottom: 25px;
+}
+
+.considering-access-box ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.considering-access-box ul li {
+  font-size: 15px;
+  color: #374151;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+.considering-access-box ul li .tick {
+  color: #7C3AED;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+
+/* --- Focused Approach Section --- */
+.focused-approach-section {
+  padding: 70px 0;
+  background-color: #FFFFFF; /* Back to white */
+  text-align: center;
+}
+.focused-approach-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 15px;
+}
+.focused-approach-section p {
+  font-size: 16px;
+  color: #4B5563;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.7;
+}
+.approach-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.approach-icon-placeholder {
+  width: 50px;
+  height: 50px;
+  background-color: #EDE9FE;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #7C3AED;
+}
+
+/* --- Features Grid Section --- */
+.features-grid-section-new {
+  padding: 60px 0 70px; /* Adjusted padding slightly */
+  background-color: #F9FAFB; /* Light grey background for the section (Tailwind gray-50) */
+}
+
+
+.features-grid-container {
+  display: grid;
+  /* Set 2 columns for the grid. The items will naturally flow into a 2x2 layout. */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 25px; /* Gap between cards */
+  max-width: 800px; /* Optional: constrain the max width of the 2-column grid if desired */
+  margin-left: auto;  /* To center the grid if max-width is set */
+  margin-right: auto; /* To center the grid if max-width is set */
+}
+
+
+.feature-card-new {
+  background: #FFFFFF;
+  border: 1px solid #EFF1F3;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+
+  /* Add transition for smooth animation */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.feature-card-new:hover {
+  transform: translateY(-5px) scale(1.03); /* Lifts up slightly and grows a bit */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Enhanced shadow on hover */
+}
+
+.feature-card-new .feature-icon {
+  width: 44px;
+  height: 44px;
+  background-color: #F5F3FF;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  
+  /* Add transition for the icon as well */
+  transition: transform 0.3s ease-in-out;
+}
+.feature-card-new:hover .feature-icon {
+  transform: scale(1.1); /* Icon scales up a bit when the card is hovered */
+}
+
+
+.feature-card-new h3 {
+  font-size: 18px; /* Slightly larger heading */
+  font-weight: 600;
+  color: #1F2937; /* Dark grey text for heading */
+  margin-bottom: 10px; /* Space below heading */
+}
+
+.feature-card-new p {
+  font-size: 14px;
+  color: #4B5563; /* Lighter grey text for paragraph */
+  line-height: 1.6;
+  flex-grow: 1; /* Allows paragraph to take up remaining space if cards vary in height slightly */
+}
+
+@media (max-width: 768px) { /* Adjust this breakpoint as needed for when you want them to stack */
+  .features-grid-container {
+    grid-template-columns: 1fr; /* Stack to 1 column on smaller screens */
+    max-width: 400px; /* Optional: adjust max-width for single column layout */
+  }
+}
+/* --- CAT Mastery System Section --- */
+.cat-mastery-system-section {
+  padding: 70px 0;
+  background-color: #FFFFFF;
+}
+
+.cat-mastery-system-section h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 50px;
+}
+
+.mastery-step {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 30px;
+  margin-bottom: 50px;
+  align-items: flex-start; /* Top align items for better content balance */
+  justify-content: space-between; /* Better distribution of space */
+}
+.mastery-step:last-child {
+  margin-bottom: 0;
+}
+
+.mastery-step-info {
+  flex: 1 1 48%; /* Take up roughly half, allowing for gap */
+  min-width: 300px;
+}
+.mastery-step-info.full-width {
+  flex: 1 1 100%; /* For step 4 */
+  max-width: 700px; /* Control width for centered text */
+  margin: 0 auto;
+  text-align: left; /* Override if needed */
+}
+
+/* Special styling for step 4 which has no visual */
+.mastery-step:has(.mastery-step-info.full-width) {
+  justify-content: center; /* Center the full-width content */
+}
+
+
+.step-badge-system {
+  display: inline-block;
+  background-color: #EDE9FE;
+  color: #7C3AED;
+  padding: 6px 15px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.mastery-step-info h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.mastery-step-info p {
+  font-size: 15px;
+  color: #4B5563;
+  line-height: 1.7;
+}
+.mastery-step-info.left {
+    text-align: left;
+}
+
+.mastery-step-visual {
+  flex: 1 1 48%;
+  min-width: 300px;
+  display: flex;
+  justify-content: flex-start; /* Align card to start for better layout */
+  align-items: flex-start; /* Top align the visual card */
+}
+
+.mastery-step-visual .visual-card {
+  background-color: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 25px;
+  width: 100%;
+  max-width: 400px; /* Max width for visual cards */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.visual-card-header {
+  background-color: #7C3AED;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.visual-card-subtitle {
+  font-size: 14px;
+  color: #1F2937;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.tag-item {
+  background-color: #E5E7EB;
+  color: #374151;
+  padding: 6px 12px;
+  border-radius: 16px; /* Pill shape */
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tag-item-highlight {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #DBEAFE; /* Light blue */
+  color: #2563EB; /* Blue */
+  padding: 5px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.mocks-breakdown {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 10px;
+}
+.mocks-breakdown div {
+  font-size: 14px;
+  color: #1F2937;
+  font-weight: 500;
+}
+.mocks-breakdown div span {
+  display: block;
+  font-size: 13px;
+  color: #6B7280;
+  font-weight: 400;
+}
+
+.analytics-points {
+  margin-top: 20px;
+  background-color: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 20px;
+}
+.analytics-points span {
+  display: block; /* Make each item take full width */
+  font-size: 15px;
+  color: #374151;
+  margin-bottom: 10px;
+  font-weight: 500;
+  display: flex; /* For aligning text and tick */
+  justify-content: space-between; /* Push tick to the right */
+  align-items: center;
+}
+.analytics-points span:last-child {
+  margin-bottom: 0;
+}
+.analytics-points .tick-blue {
+  color: #2563EB; /* Blue tick */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+/* --- Common Questions Section --- */
+.common-questions-section {
+  padding: 70px 0;
+  background-color: #F9FAFB; /* Light grey */
+}
+
+.common-questions-section h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1F2937;
+  margin-bottom: 40px;
+}
+
+.faq-accordion {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: #FFFFFF;
+  margin-bottom: 10px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  overflow: hidden; /* To contain answer slide */
+}
+
+.faq-question {
+  width: 100%;
+  background-color: #FFFFFF;
+  border: none;
+  padding: 18px 20px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-question:hover {
+  background-color: #FDFEFF; /* Very slight hover */
+}
+
+.faq-arrow {
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid #7C3AED;
+  border-bottom: 2px solid #7C3AED;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+.faq-item.open .faq-arrow {
+  transform: rotate(135deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #FFFFFF; /* Ensure it has a background */
+}
+.faq-answer p {
+  padding: 0px 20px 20px 20px;
+  font-size: 15px;
+  color: #4B5563;
+  line-height: 1.7;
+}
+
+/* --- Ready to Focus CTA Section --- */
+.ready-cta-section {
+  background: linear-gradient(135deg, #A87FFB, #DAB6FC); /* Same as hero */
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.ready-cta-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+.ready-cta-section p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary-cta {
+  background-color: #FFFFFF; /* White button */
+  color: #7C3AED; /* Purple text */
+}
+.btn-primary-cta:hover {
+  background-color: rgba(255,255,255,0.9);
+  text-decoration: none;
+}
+
+.btn-secondary-cta {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+.btn-secondary-cta:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+
+/* =================================== */
+/* ===== SITE FOOTER (From original, check for consistency) ===== */
+/* =================================== */
+
+.site-footer {
+  margin-top: 0; /* CTA section is now the last visual element before footer */
+  background: #F3F4F6; /* Lighter grey for footer */
+  padding: 60px 20px;
+  color: #4B5563; /* Softer text color */
+  font-size: 14px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted minmax slightly */
+  gap: 30px; 
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-footer h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px; 
+  color: #1F2937; 
+}
+
+.site-footer p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+}
+.site-footer ul li {
+  margin-bottom: 10px;
+}
+.site-footer ul li a {
+  color: #4B5563;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.site-footer ul li a:hover {
+  color: #7C3AED; 
+  text-decoration: underline;
+}
+
+/* Ensure to remove styles for old sections not present in the PDF */
+/* For example, .hero-section-index, .offer-cards-section, .all-access-section, etc. */
+/* Or, if they are truly distinct, you can keep them, but the new PDF design implies a replacement. */
+/* For now, I'm focusing on adding the new styles. */
+
+/* Responsive Adjustments (Basic Example) */
+@media (max-width: 768px) {
+  .hero-section-new h1 {
+    font-size: 36px;
+  }
+  .mentors-grid, .pricing-grid, .features-grid-container {
+    grid-template-columns: 1fr; /* Stack cards */
+  }
+  .mastery-step {
+    flex-direction: column;
+    align-items: center; /* Center align the step items */
+    gap: 20px; /* Reduce gap on mobile */
+  }
+  .mastery-step-info, .mastery-step-visual {
+    flex-basis: 100%; /* Full width when stacked */
+    text-align: center; /* Center text in info when stacked */
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .mastery-step-info.left, .mastery-step-info.full-width {
+    text-align: center; /* Ensure centering when stacked */
+    width: 100%;
+  }
+  .mastery-step-info.full-width {
+    max-width: 90%; /* Constrain width for better mobile readability */
+  }
+  .mastery-step-info.full-width .analytics-points {
+    text-align: left; /* Keep analytics points left-aligned within their box */
+    max-width: 400px; /* Constrain width for better readability */
+    margin: 20px auto 0; /* Center the analytics box */
+  }
+  .mastery-step-visual .visual-card {
+    max-width: 90%; /* Constrain visual card width on mobile */
+    margin: 0 auto;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-buttons .btn {
+    width: 80%;
+    max-width: 300px;
+  }
+  .navbar nav a { /* Example for hiding nav links on mobile */
+    display: none; 
+  }
+  .navbar {
+    padding: 15px 20px;
+  }
+  /* You'd add a burger menu icon and JS to toggle nav visibility here */
+}
+
+
+  /* =================================== */
+  /* ===== MOCK TESTS LIST PAGE (`mock_tests.html`) STYLES ===== */
+  /* =================================== */
+  /* (Styles from previous correct version of mock_tests.html styling) */
+
+  .mock-page { /* Scoping for mock_tests.html specifically */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #F8F9FA; /* Ensure this page has its specific light grey background */
+  }
+
+  .mock-page .mock-tests h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+  }
+
+  .mock-page .mock-tests > p {
+    text-align: center;
+    font-size: 16px;
+    color: #6B7280;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mock-page .filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .mock-page .filter-tabs .tab {
+    background: #F3F4F6;
+    color: #374151;
+    border: 1px solid #E5E7EB;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+
+  .mock-page .filter-tabs .tab:hover {
+    background-color: #E5E7EB;
+    border-color: #D1D5DB;
+  }
+
+  .mock-page .filter-tabs .tab.active {
+    background: #7C3AED;
+    color: #fff;
+    border-color: #7C3AED;
+  }
+
+  .mock-page .test-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+  }
+
+  .mock-page .test-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mock-page .test-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .mock-page .test-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 19px;
+    font-weight: 600;
+    color: #1F2937;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mock-page .test-card h3 > span:first-child {
+    margin-right: 10px;
+  }
+
+  .mock-page .test-card .tag {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  .mock-page .test-card .tag.featured {
+    background-color: #FEF3C7;
+    color: #B45309;
+  }
+
+  .mock-page .test-card .tag.free {
+    background-color: #D1FAE5;
+    color: #059669;
+  }
+
+  .mock-page .test-card > p {
+    font-size: 14px;
+    color: #6B7280;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    flex-grow: 1;
+  }
+
+  .mock-page .test-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 16px;
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+
+  .mock-page .detail-item span {
+    display: block;
+    font-size: 12px;
+    color: #6B7280;
+    margin-bottom: 2px;
+  }
+
+  .mock-page .detail-item strong {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1F2937;
+  }
+
+  .mock-page .start-btn { /* Applied to <a> tag */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #7C3AED;
+    color: white !important;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    width: 100%;
+    text-align: left;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+    margin-top: auto;
+    text-decoration: none !important;
+  }
+
+  .mock-page .start-btn:hover {
+    background: #6D28D9;
+    text-decoration: none !important;
+  }
+
+  .mock-page .start-btn .arrow {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .mock-page .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #F3F4F6;
+  }
+
+  .mock-page .card-footer .attempts,
+  .mock-page .card-footer .test-type-label {
+    font-size: 13px;
+    color: #6B7280;
+  }
+
+  .mock-page .card-footer .test-type-label {
+    font-weight: 500;
+    color: #4B5563;
+  }
+
+
+  /* =================================== */
+  /* ===== TEST INTERFACE PAGE (`take_test.html`) STYLES ===== */
+  /* =================================== */
+  /* (Styles from previous correct version of take_test.html styling) */
+
+  body.test-mode {
+    background-color: #F0F2F5 !important; /* Force this background for test mode */
+  }
+
+  .test-interface-container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #F0F2F5;
+  }
+
+  .test-header {
+    background-color: #FFFFFF;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+
+  .test-info .test-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-right: 15px;
+  }
+
+  .test-info .section-name-badge {
+    background-color: #F3F4F6;
+    color: #4B5563;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .test-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .timer-chip {
+    background-color: #FEF3C7;
+    color: #92400E;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  .timer-chip .icon {
+    margin-right: 5px;
+    font-size: 14px;
+  }
+  .timer-chip .time {
+    font-weight: 600;
+  }
+
+  .instructions-btn {
+    background-color: #F3F4F6;
+    color: #374151;
+    border: 1px solid #D1D5DB;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  .instructions-btn .icon {
+    margin-right: 5px;
+  }
+  .instructions-btn:hover {
+    background-color: #E5E7EB;
+  }
+
+  .test-body {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .question-panel {
+    flex: 3;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .question-panel-header {
+    border-bottom: 1px solid #F3F4F6;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .question-panel-header .question-progress {
+    display: inline-block;
+    background-color: #E0E7FF;
+    color: #3730A3;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .question-panel-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+
+  .question-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    background-color: #F9FAFB;
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .question-actions .q-num-btn,
+  .question-actions .mark-review-btn {
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #D1D5DB;
+  }
+  .question-actions .q-num-btn {
+    background-color: #E5E7EB;
+    color: #374151;
+  }
+  .question-actions .q-num-btn.active {
+    background-color: #6366F1;
+    color: white;
+    border-color: #6366F1;
+  }
+  .question-actions .mark-review-btn {
+    background-color: #FEFCE8;
+    color: #713F12;
+    border-color: #FDE68A;
+  }
+  .question-actions .mark-review-btn .icon {
+    margin-right: 5px;
+  }
+  .question-actions .mark-review-btn:hover {
+    background-color: #FEF9C3;
+  }
+
+  .question-actions .time-left {
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #F59E0B;
+  }
+
+  .question-content-area {
+    flex-grow: 1;
+  }
+
+  .passage-instruction {
+    font-size: 15px;
+    color: #4B5563;
+    margin-bottom: 8px;
+  }
+
+  .passage {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #374151;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #F9FAFB;
+    border-radius: 6px;
+    border: 1px solid #F3F4F6;
+  }
+
+  .question-prompt {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 20px;
+  }
+
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .option-item {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    padding: 15px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+  .option-item:hover {
+    border-color: #A5B4FC;
+    background-color: #F5F3FF;
+  }
+  .option-item input[type="radio"] {
+    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    accent-color: #6366F1;
+  }
+  .option-item .option-text {
+    font-size: 15px;
+    color: #374151;
+  }
+  .option-item input[type="radio"]:checked + .option-text {
+    font-weight: 600;
+    color: #4F46E5;
+  }
+  .option-item:has(input[type="radio"]:checked) {
+      border-color: #6366F1;
+      background-color: #EEF2FF;
+  }
+
+  .question-navigation-buttons {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #F3F4F6;
+      display: flex;
+      gap: 10px;
+  }
+
+  .question-navigation-buttons button {
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid #D1D5DB;
+  }
+
+  .question-navigation-buttons .prev-btn,
+  .question-navigation-buttons .next-btn {
+      background-color: #F9FAFB;
+      color: #374151;
+  }
+  .question-navigation-buttons .prev-btn:hover,
+  .question-navigation-buttons .next-btn:hover {
+      background-color: #F3F4F6;
+  }
+  .question-navigation-buttons .prev-btn[disabled] {
+      opacity: 0.6;
+      cursor: not-allowed;
+  }
+
+  .question-navigation-buttons .submit-section-btn {
+      background-color: #10B981;
+      color: white;
+      border-color: #059669;
+      margin-left: auto;
+  }
+  .question-navigation-buttons .submit-section-btn:hover {
+      background-color: #059669;
+  }
+
+  .sidebar-panel {
+    flex: 1;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    height: fit-content;
+    min-width: 280px;
+  }
+
+  .sidebar-header {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #F3F4F6;
+  }
+
+  .sidebar-header h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 8px 0;
+  }
+
+  .sidebar-header .sidebar-timer {
+    font-size: 14px;
+    font-weight: 500;
+    color: #F59E0B;
+  }
+
+  .question-palette {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+
+  .palette-q-btn {
+    background-color: #F3F4F6;
+    color: #374151;
+    border: 1px solid #E5E7EB;
+    padding: 10px 0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .palette-q-btn:hover {
+    background-color: #E5E7EB;
+    border-color: #D1D5DB;
+  }
+  .palette-q-btn.current {
+    background-color: #EEF2FF;
+    color: #4F46E5;
+    border: 2px solid #6366F1;
+    font-weight: 600;
+  }
+  .palette-q-btn.visited {
+    background-color: #FCE7F3;
+    border-color: #F472B6;
+    color: #DB2777;
+  }
+  .palette-q-btn.answered {
+    background-color: #D1FAE5;
+    border-color: #6EE7B7;
+    color: #059669;
+  }
+  .palette-q-btn.marked {
+    background-color: #E0E7FF;
+    border-color: #A78BFA;
+    color: #7C3AED;
+  }
+  .palette-q-btn.answered-marked {
+      background-color: #A7F3D0;
+      border: 2px solid #7C3AED;
+      color: #047857;
+  }
+
+  .status-legend h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 12px;
+  }
+
+  .status-legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .status-legend li {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #4B5563;
+  }
+
+  .status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+  .status-dot.not-visited { background-color: #E5E7EB; border-color: #D1D5DB;}
+  .status-dot.visited-not-answered { background-color: #FBCFE8; border-color: #F9A8D4;}
+  .status-dot.answered { background-color: #A7F3D0; border-color: #6EE7B7;}
+  .status-dot.marked-review { background-color: #DDD6FE; border-color: #C4B5FD;}
+  .status-dot.answered-marked {
+      background-color: #A7F3D0;
+      border: 2px solid #7C3AED;
+  }
+
+  .status-legend .count {
+    margin-left: auto;
+    background-color: #F3F4F6;
+    color: #374151;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .submit-test-btn {
+      display: block;
+      width: 100%;
+      background-color: #EF4444;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 25px;
+      transition: background-color 0.2s ease;
+  }
+  .submit-test-btn:hover {
+      background-color: #DC2626;
+  }
+
+  .test-interface-container button,
+  .test-interface-container input,
+  .test-interface-container label {
+      font-family: 'Inter', sans-serif; /* Ensure font consistency */
+  }
+
+  /* =================================== */
+  /* ===== SITE FOOTER (Shared) ===== */
+  /* =================================== */
+
+  .site-footer {
+    margin-top: 80px;
+    background: #F3F4F6; /* Lighter grey for footer */
+    padding: 60px 20px;
+    color: #4B5563; /* Softer text color */
+    font-size: 14px;
+  }
+
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px; /* Increased gap */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .site-footer h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 18px; /* More space under heading */
+    color: #1F2937; /* Darker heading */
+  }
+
+  .site-footer p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+  }
+
+  .site-footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  .site-footer ul li {
+    margin-bottom: 10px;
+  }
+  .site-footer ul li a { /* Specific styling for footer links */
+    color: #4B5563;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .site-footer ul li a:hover {
+    color: #7C3AED; /* Purple on hover */
+    text-decoration: underline;
+  }
+  /* In your style.css, under TEST INTERFACE STYLES */
+
+  /* ... existing styles ... */
+
+  .passage-scroll-container {
+    max-height: 300px; /* Adjust as needed - this controls the visible height */
+    overflow-y: auto;  /* Enables vertical scrollbar if content exceeds max-height */
+    border: 1px solid #e5e7eb; /* Optional: a light border around the scroll area */
+    padding: 15px;      /* Padding inside the scroll area, before the passage text itself */
+    margin-bottom: 20px;/* Space below the passage container */
+    background-color: #f9fafb; /* Light background for the passage area */
+    border-radius: 6px;
+  }
+
+  .passage-scroll-container .passage { /* Style for the actual passage div inside the scroller */
+    font-size: 15px;       /* Or your desired passage font size */
+    line-height: 1.7;      /* Or your desired line height */
+    color: #374151;       /* Or your desired passage text color */
+    /* Remove padding/border from .passage if it's now on .passage-scroll-container */
+    padding: 0;
+    border: none;
+    background-color: transparent; /* It inherits from scroll-container */
+  }
+
+  /* Ensure question-prompt is styled appropriately if it was relying on passage margins */
+  .question-prompt {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 20px; /* Keep or adjust this */
+    margin-top: 10px; /* May need some top margin if passage is short or hidden */
+  }
+
+  /* ... other existing styles ... */
+  /* =================================== */
+  /* ===== GENERAL RESETS & DEFAULTS ===== */
+  /* =================================== */
+  /* ... (your existing general resets) ... */
+
+  /* =================================== */
+  /* ===== TEST INTERFACE STYLES (`take_test.html`) ===== */
+  /* =================================== */
+
+  /* ... (all your existing .test-interface-container, .test-header, .test-body, .question-panel, etc. styles) ... */
+
+  .passage-scroll-container {
+    max-height: 300px; /* Or your preferred height */
+    overflow-y: auto;
+    border: 1px solid #e5e7eb; 
+    padding: 15px;      
+    margin-bottom: 20px;
+    background-color: #f9fafb; 
+    border-radius: 6px;
+  }
+
+  .passage-scroll-container .passage { /* The actual div holding passage text */
+    font-size: 15px; 
+    line-height: 1.7;      
+    color: #374151;       
+    padding: 0; /* Padding is on the scroll container now */
+    border: none; /* Border is on the scroll container now */
+    background-color: transparent; 
+  }
+
+  .question-prompt {
+    /* ... your existing styles for question prompt ... */
+    margin-top: 10px; /* Add or adjust if needed after passage container */
+  }
+
+  .options-container .numerical-answer-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+
+  .options-container .numerical-answer-input:focus {
+    outline: none;
+    border-color: #6366F1; 
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2); 
+  }
+
+  /* Palette Button States (ensure these are correct, especially .marked and .answered-marked) */
+  .palette-q-btn.current {
+    background-color: #EEF2FF; 
+    color: #4F46E5; 
+    border: 2px solid #6366F1; 
+    font-weight: 600;
+  }
+  .palette-q-btn.visited { /* Visited but Not Answered */
+    background-color: #FCE7F3; 
+    border-color: #F472B6; 
+    color: #DB2777; /* Pinkish */
+  }
+  .palette-q-btn.answered { /* Answered */
+    background-color: #D1FAE5; 
+    border-color: #6EE7B7; 
+    color: #059669; /* Greenish */
+  }
+  .palette-q-btn.marked { /* Marked for Review */
+    background-color: #E0E7FF; 
+    border-color: #A78BFA; 
+    color: #7C3AED; /* Purplish */
+  }
+  .palette-q-btn.answered-marked { /* Answered AND Marked */
+      background-color: #D1FAE5; 
+      border: 2px solid #7C3AED;    
+      color: #059669;             
+  }
+
+  /* Status Legend Dots (ensure these match palette states) */
+  .status-dot.visited-not-answered { background-color: #FCE7F3; border-color: #FBCFE8;}
+  .status-dot.answered { background-color: #A7F3D0; border-color: #6EE7B7;}
+  .status-dot.marked-review { background-color: #DDD6FE; border-color: #C4B5FD;}
+  .status-dot.answered-marked { 
+      background-color: #A7F3D0; 
+      border: 2px solid #7C3AED; 
+  }
+
+  /* Active Mark for Review Button */
+  .question-actions .mark-review-btn.active-mark {
+    background-color: #A78BFA; /* Purple background */
+    color: white;
+    border-color: #7C3AED;
+  }
+  /* background-color: #fee2e2; color: #dc2626; border-color: #fecaca; */
+  /* Calculator Modal Styles */
+.calculator-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.calculator-modal-content {
+  background-color: #ffffff;
+  margin: 10% auto;
+  padding: 0;
+  border-radius: 12px;
+  width: 320px;
+  max-width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-header {
+  background-color: #6366F1;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.calculator-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.calculator-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.calculator-body {
+  padding: 20px;
+}
+
+.calculator-display {
+  margin-bottom: 15px;
+}
+
+.calculator-display input {
+  width: 100%;
+  padding: 15px;
+  font-size: 24px;
+  text-align: right;
+  border: 2px solid #E5E7EB;
+  border-radius: 8px;
+  background-color: #F9FAFB;
+  font-family: 'Inter', monospace;
+  font-weight: 600;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calc-btn {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.calc-btn-number {
+  background-color: #F3F4F6;
+  color: #374151;
+}
+
+.calc-btn-number:hover {
+  background-color: #E5E7EB;
+}
+
+.calc-btn-operator {
+  background-color: #6366F1;
+  color: white;
+}
+
+.calc-btn-operator:hover {
+  background-color: #5B5BD6;
+}
+
+.calc-btn-clear {
+  background-color: #EF4444;
+  color: white;
+}
+
+.calc-btn-clear:hover {
+  background-color: #DC2626;
+}
+
+.calc-btn-equals {
+  background-color: #10B981;
+  color: white;
+  grid-column: span 2;
+}
+
+.calc-btn-equals:hover {
+  background-color: #059669;
+}
+
+.calc-btn-zero {
+  grid-column: span 2;
+}
+
+.calculator-btn {
+      background-color: #e0e7ff; color: #3730a3; border: 1px solid #c7d2fe; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; display: flex; align-items: center;
+  }
+  .clear-response-btn {
+      margin-left: auto; background-color: #fee2e2; color: #dc2626; border-color: #fecaca;
+  }
+  .save-next-btn {
+      background-color: #dcfce7; color: #166534; border-color: #bbf7d0;
+  }
+
+
+  /* ... (rest of your comprehensive style.css) ... */
+
+  /* In your style.css, under TEST INTERFACE STYLES */
+
+  /* ... existing styles ... */
+
+  .options-container .numerical-answer-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db; /* Or your theme's border color */
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box; /* Important */
+    margin-top: 10px; /* Space from prompt */
+  }
+
+  .options-container .numerical-answer-input:focus {
+    outline: none;
+    border-color: #6366F1; /* Or your theme's focus color */
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2); /* Optional focus ring */
+  }
+  /* ============================ */
+  /* ===== NUMBER PAD STYLES ==== */
+  /* ============================ */
+
+  #numberpad-container {
+    display: none;                   /* hidden by default */
+    margin-top: 12px;
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    /* we'll switch this to grid when activated: */
+  }
+
+  #numberpad-container.show {
+    display: grid;                   /* use grid layout once you add the "show" class */
+  }
+
+  #numberpad-container button {
+    font-size: 1.2rem;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    transition: background-color .1s;
+  }
+
+  #numberpad-container button:active {
+    background: #e0e0e0;
+  }
+
+  /* optional: make the "0" button span two columns */
+  #numberpad-container button.zero {
+    grid-column: span 2;
+  }
+/* =================================== */
+/* ===== RESULTS PAGE STYLES  ======== */
+/* =================================== */
+
+body.results-page {
+  background-color: #F8F9FA; /* Light background for the page */
+  max-width: 1000px;         /* Max width for content area */
+  margin: 40px auto;         /* Centering and top/bottom margin */
+  padding: 0 20px;           /* Side padding */
+  font-family: 'Inter', sans-serif;
+  color: #1F2937;
+}
+
+.results-page > h1 { /* Scoped to results page h1 */
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2.5rem; /* Increased bottom margin */
+  text-align: center;
+}
+
+/* SUMMARY BANNER */
+.results-summary {
+  display: flex;
+  gap: 24px; /* Increased gap */
+  margin-bottom: 3rem; /* Increased bottom margin */
+}
+
+.summary-item {
+  background: #fff;
+  border-radius: 12px; /* Softer corners */
+  padding: 24px 30px; /* Increased padding */
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Softer, slightly larger shadow */
+  text-align: center;
+}
+
+.summary-item .label {
+  display: block;
+  font-size: 13px; /* Slightly larger */
+  color: #6B7280;
+  text-transform: uppercase;
+  margin-bottom: 8px; /* Increased space */
+}
+
+.summary-item .score {
+  font-size: 28px; /* Larger score */
+  font-weight: 700;
+  color: #4F46E5; /* Theme color for score */
+}
+
+/* SECTION PERFORMANCE & HEATMAP TITLES */
+.section-performance h2,
+.heatmap-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.section-performance {
+  margin-bottom: 3rem;
+}
+
+.section-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: stretch; /* CRITICAL: Ensures all cards in a single flex line stretch to the height of the tallest. */
+                        /* This should make their top and bottom borders align. */
+}
+
+.section-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  flex: 1 1 300px; /* Allows cards to grow and shrink from a basis of 300px */
+  padding: 24px;
+  display: flex;       /* Important for managing internal content flow */
+  flex-direction: column; /* Stack children (h3, score, metrics-grid) vertically */
+  gap: 16px;
+}
+
+.section-card h3 { /* Section Name */
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  text-transform: capitalize;
+  min-height: 48px;   /* Adjusted: Reserve space for approx. 2 lines of 18px text.
+                         (e.g., 18px font * ~1.4 line-height * 2 lines ≈ 50.4px).
+                         Adjust this value if your h3 text consistently takes more/less for two lines.
+                      */
+  display: flex;      /* Allows vertical alignment of the h3 text itself */
+  align-items: flex-start; /* Aligns the text to the top of the min-height box,
+                               which is standard for multi-line titles.
+                            */
+}
+
+.section-card .section-score {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4F46E5;
+  margin-bottom: 10px;
+}
+
+/* METRICS GRID (within each section-card) - no changes from previous solution */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.metric {
+  background: #F9FAFB;
+  border-radius: 8px;
+  padding: 16px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 110px;
+}
+
+.metric .icon {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.metric .label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6B7280;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.metric .value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+.metric.skipped {
+  grid-column: 1 / -1;
+  background-color: #F3F4F6;
+}
+
+/* QUESTION HEATMAP */
+/* QUESTION HEATMAP */
+.heatmap-section {
+  margin-bottom: 3rem;
+}
+
+/* Ensure the main h2 for "Question Heatmap" is styled, it might have been combined before */
+.results-page .heatmap-section > h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #E5E7EB; /* Subtle separator */
+}
+
+.heatmap-section h3 { /* Section name under heatmap (e.g., "Verbal Ability...") */
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 2rem;    /* Space above section title */
+  margin-bottom: 1rem; /* Space below section title, before the grid */
+}
+
+/* Update the heatmap grid and cell styles */
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns */
+  gap: 15px; /* Increased gap between cells */
+  padding: 25px;
+  width: 100%;
+  max-width: 1400px; /* Increased max-width to accommodate larger cells */
+  margin: 0 auto;
+}
+
+.heatmap-cell {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 16px; /* Slightly larger border radius */
+  background-color: #E5E7EB;
+  min-width: 120px; /* Minimum width for each cell */
+  min-height: 120px; /* Minimum height for each cell */
+}
+
+/* Content wrapper inside the cell */
+.heatmap-cell .cell-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.heatmap-cell .q-number {
+  font-size: 1.5rem; /* Larger font size for question number */
+  font-weight: 600; /* Slightly bolder */
+  margin-bottom: 6px; /* More space between number and time */
+}
+
+.heatmap-cell .time {
+  font-size: 1rem; /* Larger font size for time */
+  opacity: 0.9; /* Slightly more opaque for better visibility */
+}
+
+.corner-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Status colors */
+.heatmap-cell.status-optimal-correct,
+.heatmap-cell.status-longer-correct {
+  background-color: #22C55E; /* Bright green */
+}
+
+.heatmap-cell.status-quick-incorrect,
+.heatmap-cell.status-long-incorrect {
+  background-color: #EF4444; /* Bright red */
+}
+
+.heatmap-cell.status-skipped {
+  background-color: #E5E7EB; /* Gray */
+  color: #6B7280;
+}
+
+/* In style.css */
+/* =================================== */
+/* == ADVANCED HEATMAP RESULTS PAGE == */
+/* =================================== */
+
+.advanced-heatmap-section {
+  background-color: #FFFFFF; /* White background for the heatmap section */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-top: 3rem; /* Space above this section */
+  margin-bottom: 3rem;
+}
+
+.advanced-heatmap-section .heatmap-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.advanced-heatmap-section .header-icon {
+  font-size: 24px;
+}
+
+.advanced-heatmap-section .heatmap-header h2 {
+  font-size: 22px; /* Adjusted from previous h2 to fit context */
+  font-weight: 600;
+  color: #1F2937;
+  margin: 0; /* Reset margin if it was set globally for h2 */
+  border-bottom: none; /* Remove border if it was set globally */
+  padding-bottom: 0;
+}
+
+.advanced-heatmap-section .heatmap-subtitle {
+  font-size: 14px;
+  color: #6B7280;
+  margin-bottom: 25px;
+  max-width: 600px;
+}
+
+/* Section Tabs for Heatmap */
+.section-tabs-container {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #E5E7EB;
+  overflow-x: auto; /* For many sections */
+  padding-bottom: 5px;
+}
+
+.section-tab-button {
+  padding: 10px 18px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #4B5563;
+  font-weight: 500;
+  font-size: 15px;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.section-tab-button:hover {
+  color: #4F46E5;
+}
+
+.section-tab-button.active {
+  color: #4F46E5;
+  border-bottom-color: #4F46E5;
+  font-weight: 600;
+}
+
+.heatmap-tab-content {
+  display: none; /* Hidden by default, JS will show active */
+  animation: fadeIn 0.5s; /* Optional: fade in effect */
+}
+.heatmap-tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* New Question Grid for Advanced Heatmap */
+.question-grid-adv {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* Adjust minmax for desired cell size */
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.question-cell-adv {
+  position: relative;
+  aspect-ratio: 1 / 1; /* Makes cells square */
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-out;
+}
+.question-cell-adv:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+.cell-corner-icon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 50%;
+  line-height: 1;
+  /* background-color: rgba(0,0,0,0.1); Slightly transparent background */
+}
+.cell-corner-icon.icon-correct { color: #E0FFE0; /* Lighter green for check on dark green bg */}
+.cell-corner-icon.icon-incorrect { color: #FFDADA; /* Lighter red for x on dark red bg */}
+.cell-corner-icon.icon-skipped { color: #555; }
+
+
+.cell-q-number {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.cell-q-time {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Color classes for advanced heatmap cells */
+.question-cell-adv.status-optimal-correct { background-color: #10B981; } /* Bright Green (e.g., Tailwind green-500) */
+.question-cell-adv.status-longer-correct { background-color: #6EE7B7; } /* Light Green (e.g., Tailwind green-300) */
+.question-cell-adv.status-quick-incorrect { background-color: #FCA5A5; } /* Light Red/Pink (e.g., Tailwind red-300) */
+.question-cell-adv.status-long-incorrect { background-color: #EF4444; } /* Bright Red (e.g., Tailwind red-500) */
+.question-cell-adv.status-skipped { background-color: #9CA3AF; color: #1F2937; } /* Grey (e.g., Tailwind gray-400), dark text */
+.question-cell-adv.status-error { background-color: #FBBF24; color: #422006; } /* Amber/Yellow for errors */
+
+
+/* Advanced Heatmap Legend */
+.heatmap-legend-adv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px; /* row-gap column-gap */
+  justify-content: center; /* Center legend items */
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #4B5563;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  margin-right: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+/* Match legend colors to cell colors */
+.legend-color.status-optimal-correct { background-color: #10B981; }
+.legend-color.status-longer-correct { background-color: #6EE7B7; }
+.legend-color.status-quick-incorrect { background-color: #FCA5A5; }
+.legend-color.status-long-incorrect { background-color: #EF4444; }
+.legend-color.status-skipped { background-color: #9CA3AF; }
+.legend-color.status-error { background-color: #FBBF24; }
+
+/* ===== SWOT Analysis ===== */
+.swot-analysis {
+  margin: 40px 0;
+}
+.swot-analysis h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #1F2937;
+}
+
+/* 2×2 responsive grid */
+.swot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .swot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card styling and hover lift */
+.swot-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-left-width: 4px;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.swot-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* Category border color */
+.swot-card.strengths    { border-left-color: #4ADE80; }
+.swot-card.weaknesses   { border-left-color: #EF4444; }
+.swot-card.opportunities{ border-left-color: #3B82F6; }
+.swot-card.threats      { border-left-color: #F59E0B; }
+
+/* Card header */
+.swot-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: #1F2937;
+}
+.swot-card h3 .icon {
+  font-size: 20px;
+}
+
+/* Individual SWOT item */
+.swot-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.swot-item strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+.swot-item p {
+  font-size: 14px;
+  color: #374151;
+  margin: 0;
+}
+
+/* Tags row */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+.tags .tag {
+  background: #F3F4F6;
+  color: #374151;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* Color the tags per category */
+.swot-card.strengths      .tag { background: #DCFCE7; color: #166534; }
+.swot-card.weaknesses     .tag { background: #FEE2E2; color: #991B1B; }
+.swot-card.opportunities  .tag { background: #DBEAFE; color: #1E40AF; }
+.swot-card.threats        .tag { background: #FEF3C7; color: #92400E; }
+/* ===== Insights Section ===== */
+.insights-section {
+  margin-top: 32px;
+}
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.insight-card {
+  background: #FFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 20px;
+}
+.insight-card h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1F2937;
+}
+.insight-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.insight-card li {
+  margin-bottom: 16px;
+}
+.insight-card li:last-child {
+  margin-bottom: 0;
+}
+.insight-card p {
+  font-size: 14px;
+  color: #374151;
+  margin: 0 0 6px;
+}
+
+/* Tags */
+.insight-card .tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.insight-card .tag {
+  background: #F3F4F6;
+  color: #374151;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Points for missed opportunities */
+.insight-card.missed-opps .points {
+  font-size: 14px;
+  font-weight: 600;
+  color: #059669;
+}
+
+/* Metrics for time wasters */
+.insight-card.time-wasters .metrics {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #4B5563;
+}
+.insight-card.time-wasters .metrics span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.insight-card.time-wasters .correct {
+  color: #059669;
+}
+.insight-card.time-wasters .wrong {
+  color: #EF4444;
+}
+
+/* ===== Heatmap Tabs ===== */
+.heatmap-tabs {
+  display: flex; gap: 16px; margin-bottom: 16px;
+}
+.heatmap-tab {
+  background: none; border: none; padding: 8px 12px;
+  font-size: 14px; color: #4B5563; cursor: pointer; position: relative;
+}
+.heatmap-tab.active { color: #6366F1; }
+.heatmap-tab.active::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0;
+  width: 100%; height: 3px; background: #6366F1; border-radius: 2px;
+}
+
+.heatmap-content.hidden { display: none; }
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns */
+  gap: 15px; /* Increased gap between cells */
+  padding: 25px;
+  width: 100%;
+  max-width: 1400px; /* Increased max-width to accommodate larger cells */
+  margin: 0 auto;
+}
+
+.heatmap-cell {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 16px; /* Slightly larger border radius */
+  background-color: #E5E7EB;
+  min-width: 120px; /* Minimum width for each cell */
+  min-height: 120px; /* Minimum height for each cell */
+}
+
+/* Content wrapper inside the cell */
+.heatmap-cell .cell-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.heatmap-cell .q-number {
+  font-size: 1.5rem; /* Larger font size for question number */
+  font-weight: 600; /* Slightly bolder */
+  margin-bottom: 6px; /* More space between number and time */
+}
+
+.heatmap-cell .time {
+  font-size: 1rem; /* Larger font size for time */
+  opacity: 0.9; /* Slightly more opaque for better visibility */
+}
+
+.corner-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 0.75rem; /* 12px icon character */
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Symbol color */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.corner-icon.correct-icon {
+  background-color: #8B5CF6; /* Purple background from target image */
+}
+
+.corner-icon.incorrect-icon {
+  background-color: #EF4444; /* Red background from target image (using cell's red) */
+  /* For a lighter red as in some interpretations of target: background-color: #F87171; */
+}
+
+/* Cell Status Colors (matching target image cells) */
+.heatmap-cell.status-optimal-correct,
+.heatmap-cell.status-longer-correct,
+.heatmap-cell.correct {
+  background-color: #22C55E; /* Bright Green */
+}
+
+.heatmap-cell.status-quick-incorrect,
+.heatmap-cell.status-long-incorrect,
+.heatmap-cell.incorrect {
+  background-color: #EF4444; /* Bright Red */
+}
+
+.heatmap-cell.status-skipped,
+.heatmap-cell.skipped {
+  background-color: #E5E7EB; /* Lighter Gray for skipped */
+  color: #4B5563; /* Darker text for skipped cells */
+}
+.heatmap-cell.status-skipped .corner-icon, /* Hide icon if cell is skipped */
+.heatmap-cell.skipped .corner-icon {
+    display: none;
+}
+
+
+/* Legend Styling (matching target image legend) */
+.heatmap-legend {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for multiple legend items */
+  gap: 8px 20px; /* Row gap, Column gap */
+  margin-top: 25px;
+  justify-content: center;
+  font-size: 0.8125rem; /* Approx 13px */
+  color: #4B5563;
+}
+
+.heatmap-legend span { /* Each legend item container */
+  display: flex;
+  align-items: center;
+}
+
+.heatmap-legend .legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Legend Dot Colors (matching target image legend carefully) */
+.legend-dot.status-optimal-correct { background-color: #22C55E; } /* Dark Green for dot */
+.legend-dot.status-longer-correct { background-color: #86EFAC; } /* Lighter Green for dot (as in target) */
+.legend-dot.status-quick-incorrect { background-color: #FCA5A5; } /* Pink/Light Red for dot (as in target) */
+.legend-dot.status-long-incorrect { background-color: #EF4444; } /* Dark Red for dot */
+.legend-dot.status-skipped { background-color: #D1D5DB; } /* Medium Gray for dot */
+
+/* =================================== */
+/* ===== SECTIONAL RESULTS PAGE STYLING ===== */
+/* =================================== */
+
+/* Sectional Results Page Styling */
+.results-page {
+  background: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.results-page h1 {
+  color: #1e40af;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Results Summary Banner */
+.results-summary {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.summary-item {
+  background: #ffffff;
+  padding: 25px 35px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.1);
+  border: 1px solid #e0e7ff;
+  min-width: 180px;
+}
+
+.summary-item .label {
+  display: block;
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-item .score {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+/* Performance Metrics */
+.performance-metrics {
+  margin-bottom: 40px;
+}
+
+.metrics-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.1);
+  border: 1px solid #e0e7ff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.metric {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+  border: 1px solid #c7d2fe;
+}
+
+.metric .icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.metric .label {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric .value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+/* Section Styling */
+section {
+  background: #ffffff;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(30, 64, 175, 0.1);
+  border: 1px solid #e0e7ff;
+}
+
+section h2 {
+  color: #1e40af;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #3b82f6;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Heatmap Section */
+.heatmap-subtitle {
+  color: #64748b;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Topic Analysis */
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.topic-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #c7d2fe;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(30, 64, 175, 0.15);
+}
+
+.topic-card h3 {
+  color: #1e40af;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 8px;
+}
+
+.topic-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.topic-stats .stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.topic-stats .label {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.topic-stats .value {
+  font-weight: 600;
+  color: #1e40af;
+  font-size: 1rem;
+}
+
+/* Improvement Section */
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.suggestion-card {
+  background: linear-gradient(135deg, #fef7cd 0%, #fde047 100%);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #facc15;
+  transition: transform 0.2s ease;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-2px);
+}
+
+.suggestion-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.suggestion-header .icon {
+  font-size: 1.5rem;
+}
+
+.suggestion-header h3 {
+  color: #92400e;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.suggestion-card p {
+  color: #92400e;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.action-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.action-items li {
+  color: #92400e;
+  padding: 5px 0;
+  padding-left: 20px;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.action-items li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #f59e0b;
+  font-weight: bold;
+}
+
+/* Time Analysis */
+.time-insights {
+  margin-top: 20px;
+}
+
+.time-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #93c5fd;
+}
+
+.time-card h3 {
+  color: #1e40af;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.time-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.time-card li {
+  color: #1e40af;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(147, 197, 253, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-card li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .results-page {
+    padding: 15px;
+  }
+  
+  .results-page h1 {
+    font-size: 2rem;
+  }
+  
+  .results-summary {
+    gap: 15px;
+  }
+  
+  .summary-item {
+    padding: 20px 25px;
+    min-width: 150px;
+  }
+  
+  .metrics-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  .topics-grid,
+  .suggestions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .summary-item {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .topic-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =================================== */
+/* ===== ANSWER REVIEW PAGE STYLES === */
+/* =================================== */
+
+body.review-page {
+  background-color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.review-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.review-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.review-header h1 {
+  color: #1e40af;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.test-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.test-name {
+  font-size: 1.1rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.section-badge {
+  background: #3b82f6;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.review-navigation {
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.filter-controls-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+  min-width: 80px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-buttons-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.primary-filters {
+  padding-bottom: 15px;
+  border-bottom: 2px solid #F3F4F6;
+}
+
+.navigation-actions {
+  display: flex;
+  align-items: center;
+}
+
+.section-filter-btn,
+.filter-btn {
+  padding: 10px 18px;
+  border: 2px solid #E5E7EB;
+  border-radius: 25px;
+  background: #F9FAFB;
+  color: #6B7280;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-filter-btn:hover,
+.filter-btn:hover {
+  border-color: #3B82F6;
+  color: #3B82F6;
+  background: #EBF4FF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+}
+
+.section-filter-btn.active,
+.filter-btn.active {
+  background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+  color: white;
+  border-color: #3B82F6;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
+}
+
+.back-to-results {
+  color: #3B82F6;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 2px solid #3B82F6;
+  border-radius: 25px;
+  background: white;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.back-to-results:hover {
+  background: #3B82F6;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+}
+
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-review h2 {
+  color: #1e40af;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.question-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+  overflow: hidden;
+  border-left: 5px solid #e5e7eb;
+  transition: all 0.2s;
+}
+
+.question-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.question-card.correct {
+  border-left-color: #22c55e;
+}
+
+.question-card.incorrect {
+  border-left-color: #ef4444;
+}
+
+.question-card.skipped {
+  border-left-color: #6b7280;
+}
+
+.question-header {
+  padding: 20px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.question-number {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.correct {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.incorrect {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.status-badge.skipped {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.time-taken {
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.question-content {
+  padding: 25px;
+}
+
+.passage-section {
+  margin-bottom: 25px;
+}
+
+.passage-section h4 {
+  color: #374151;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.passage-text {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  line-height: 1.7;
+  color: #374151;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.question-prompt {
+  margin-bottom: 25px;
+}
+
+.question-prompt h4 {
+  color: #374151;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.question-prompt p {
+  color: #1f2937;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.options-section {
+  margin-bottom: 25px;
+}
+
+.options-section h4 {
+  color: #374151;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-item {
+  padding: 15px 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.option-item:hover {
+  border-color: #d1d5db;
+  background: #f9fafb;
+}
+
+.option-item.correct-option {
+  background: #dcfce7;
+  border-color: #22c55e;
+  color: #166534;
+}
+
+.option-item.user-selected:not(.correct-option) {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #dc2626;
+}
+
+.option-item.user-selected.correct-option {
+  background: #dcfce7;
+  border-color: #22c55e;
+  color: #166534;
+}
+
+.option-label {
+  font-weight: 600;
+  min-width: 30px;
+  font-size: 1rem;
+}
+
+.option-text {
+  flex: 1;
+  line-height: 1.5;
+}
+
+.correct-indicator,
+.incorrect-indicator {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.correct-indicator {
+  background: #22c55e;
+  color: white;
+}
+
+.incorrect-indicator {
+  background: #ef4444;
+  color: white;
+}
+
+.solution-section {
+  margin-bottom: 25px;
+}
+
+.solution-section h4 {
+  color: #374151;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.solution-text {
+  background: #f0f9ff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #bae6fd;
+  line-height: 1.7;
+  color: #0c4a6e;
+}
+
+.answer-summary {
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.answer-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.correct-answer,
+.user-answer {
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.correct-answer {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.user-answer {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.user-answer.skipped {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.review-actions {
+  margin-top: 40px;
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.review-answers-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.review-answers-btn:hover {
+  background: #2563eb;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body.review-page {
+    padding: 15px;
+  }
+
+  .review-header {
+    padding: 20px;
+  }
+
+  .review-header h1 {
+    font-size: 2rem;
+  }
+
+  .review-navigation {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .filter-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .filter-label {
+    min-width: auto;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .filter-buttons-group {
+    justify-content: center;
+  }
+
+  .navigation-actions {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .question-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .answer-details {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .options-grid .option-item {
+    padding: 12px 15px;
+  }
+
+  .correct-indicator,
+  .incorrect-indicator {
+    position: static;
+    transform: none;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .test-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filter-options {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .question-content {
+    padding: 20px;
+  }
+}
+
+

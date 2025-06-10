@@ -1,0 +1,292 @@
+CognitiveSkillLevel,ConceptTested,CorrectAnswerValue,DetailedTags,DifficultyLevelPredicted,IsTITA,OptionAText,OptionAValue,OptionBText,OptionBValue,OptionCText,OptionCValue,OptionDText,OptionDValue,PassageOrSetContent,PassageOrSetID,QuestionNumberInSection,QuestionPrompt,QuestionType,QuestionUniqueID,SectionName,SectionTimeLimitMinutes,SetID,SolutionExplanation,SubTopic,Topic
+Applying,"Profit calculation in a multi-stage transaction involving successive percentage changes (profit, markup, discount).",C,"Percentages, Chain Transaction, Cost Price, Selling Price",Medium,False,25%,A,30%,B,35%,C,40%,D,,,1,"A shopkeeper, Rohan, sold an article to Bimal at a profit of 20%. Bimal then marked up the price of the article by 25% over what he paid for it. Bimal finally sold the article to Charan after giving a discount of 10% on the marked-up price. Charan paid ₹2700 for the article. If Rohan had sold the article directly to Charan at the price Charan paid, Rohan's profit percentage would have been k%. What is the value of k?",MCQ,MockSet1_QA_Final_Q1,QA,40,MockSet1_QA_Final,"Let Rohan's Cost Price (CP_R) be C.
+Rohan sells to Bimal at a 20% profit. So, Bimal's Cost Price (CP_B) = C * (1 + 20/100) = 1.2C.
+Bimal marks up the price by 25%. Marked Price (MP_B) = CP_B * (1 + 25/100) = 1.2C * 1.25 = 1.5C.
+Bimal sells to Charan at a 10% discount. Charan's Cost Price (CP_C) = MP_B * (1 - 10/100) = 1.5C * 0.9 = 1.35C.
+Given that Charan paid ₹2700, so CP_C = 1.35C = 2700.
+This implies C = 2700 / 1.35 = ₹2000. So, Rohan's original cost price was ₹2000.
+If Rohan had sold the article directly to Charan at ₹2700, Rohan's profit would be:
+Profit = Selling Price to Charan - Rohan's CP_R = ₹2700 - ₹2000 = ₹700.
+Rohan's profit percentage k% = (Profit / CP_R) * 100 = (700 / 2000) * 100 = (7/20) * 100 = 35%.
+So, k = 35%.","Profit, Loss & Discount",Arithmetic
+Applying,"Divisibility rule of 1001 (LCM of 7, 11, 13) for a six-digit number.",5,"Divisibility Rules, LCM, Properties of 1001",Medium,True,,,,,,,,,,,2,"A six-digit number 4X7Y8Z is divisible by 7, 11, and 13. What is the value of X + Y - Z?",TITA,MockSet1_QA_Final_Q2,QA,40,MockSet1_QA_Final,"A number is divisible by 7, 11, and 13 if and only if it is divisible by their LCM.
+LCM(7, 11, 13) = 7 * 11 * 13 = 1001.
+For a six-digit number of the form ABCDEF to be divisible by 1001, the number formed by the first three digits (ABC) must be equal to the number formed by the last three digits (DEF).
+The given number is 4X7Y8Z.
+So, 4X7 must be equal to Y8Z.
+Comparing digit by digit:
+The first digit: 4 = Y.
+The second digit: X = 8.
+The third digit: 7 = Z.
+Thus, X = 8, Y = 4, Z = 7.
+We need to find X + Y - Z.
+X + Y - Z = 8 + 4 - 7 = 12 - 7 = 5.",Number System,Algebra
+Understanding,Calculating the volume of a cone using its curved surface area and diameter.,15400,"Cone, Curved Surface Area, Slant Height, Volume of Cone",Easy,True,,,,,,,,,,,3,The curved surface area of a right circular cone is 4070 cm² and its diameter is 70 cm. What is its volume in cm³? (Use π = 22/7),TITA,MockSet1_QA_Final_Q3,QA,40,MockSet1_QA_Final,"Let r be the radius of the cone and l be its slant height.
+Diameter = 70 cm, so radius r = 35 cm.
+Curved Surface Area (CSA) = πrl = 4070 cm².
+Using π = 22/7:
+(22/7) * 35 * l = 4070
+22 * 5 * l = 4070
+110 * l = 4070
+l = 4070 / 110 = 37 cm.
+Let h be the height of the cone. We know that l² = r² + h².
+h² = 37² - 35² = (37 - 35)(37 + 35) = 2 * 72 = 144.
+h = √144 = 12 cm.
+Volume of the cone V = (1/3)πr²h.
+V = (1/3) * (22/7) * (35)² * 12
+V = (1/3) * (22/7) * 35 * 35 * 12
+V = (1/3) * 22 * 5 * 35 * 12
+V = 22 * 5 * 35 * 4
+V = 110 * 140 = 15400 cm³.",Mensuration - 3D,Geometry
+Applying,Relationship between speeds and time taken to reach destinations after meeting.,B,"Relative Speed, Meeting Point Problems, Ratio of Speeds",Medium,False,25,A,36,B,40,C,45,D,,,4,"Two persons, Ajay and Vijay, start simultaneously from points P and Q respectively, moving towards each other. They meet at a point R. After meeting, Ajay takes 25 minutes to reach Q and Vijay takes 36 minutes to reach P. If Vijay’s speed is 30 km/hr, what is Ajay’s speed in km/hr?",MCQ,MockSet1_QA_Final_Q4,QA,40,MockSet1_QA_Final,"Let Ajay's speed be S_A and Vijay's speed be S_V.
+Let T_A be the time Ajay takes after meeting to reach Q, and T_V be the time Vijay takes after meeting to reach P.
+The formula relating their speeds and these times is: S_A / S_V = √(T_V / T_A).
+Given: T_A = 25 minutes.
+T_V = 36 minutes.
+S_V = 30 km/hr.
+S_A / S_V = √(36 / 25) = √36 / √25 = 6/5.
+So, S_A / 30 = 6/5.
+S_A = (6/5) * 30 km/hr = 6 * 6 km/hr = 36 km/hr.","Time, Speed & Distance (General)",Arithmetic
+Applying,Sum of an infinite geometric progression by splitting a series into two separate GPs.,B,"Infinite Geometric Progression, Sum of Series",Medium,False,7/8,A,5/8,B,3/4,C,1/2,D,,,5,Find the sum of the infinite series: (1/3) + (2/3²) + (1/3³) + (2/3⁴) + (1/3⁵) + (2/3⁶) + ...,MCQ,MockSet1_QA_Final_Q5,QA,40,MockSet1_QA_Final,"The series is S = (1/3) + (2/3²) + (1/3³) + (2/3⁴) + (1/3⁵) + (2/3⁶) + ...
+This can be split into two geometric series:
+S1 = (1/3) + (1/3³) + (1/3⁵) + ...
+This is a GP with first term a1 = 1/3 and common ratio r1 = (1/3²) = 1/9.
+The sum of an infinite GP is a / (1 - r), for |r| < 1.
+Sum of S1 = (1/3) / (1 - 1/9) = (1/3) / (8/9) = (1/3) * (9/8) = 3/8.
+S2 = (2/3²) + (2/3⁴) + (2/3⁶) + ...
+This is a GP with first term a2 = 2/3² = 2/9 and common ratio r2 = (1/3²) = 1/9.
+Sum of S2 = (2/9) / (1 - 1/9) = (2/9) / (8/9) = (2/9) * (9/8) = 2/8 = 1/4.
+The total sum S = S1 + S2 = 3/8 + 1/4 = 3/8 + 2/8 = 5/8.",Sequences & Series,Algebra
+Applying,Solving a system of two linear equations to find fixed and variable costs.,2220,"Linear Equations, Fixed and Variable Charges, Word Problem",Easy,True,,,,,,,,,,,6,"The total monthly electricity bill for a household consists of a fixed charge and a variable charge per unit consumed. In April, the household consumed 200 units and the bill was ₹1500. In May, they consumed 250 units and the bill was ₹1800. In June, they consumed 320 units. What was the bill for June in ₹?",TITA,MockSet1_QA_Final_Q6,QA,40,MockSet1_QA_Final,"Let F be the fixed monthly charge and V be the variable charge per unit.
+According to the problem statement:
+For April: F + 200V = 1500 (Equation 1)
+For May: F + 250V = 1800 (Equation 2)
+Subtract Equation 1 from Equation 2:
+(F + 250V) - (F + 200V) = 1800 - 1500
+50V = 300
+V = 300 / 50 = 6.
+So, the variable charge is ₹6 per unit.
+Substitute V = 6 into Equation 1:
+F + 200(6) = 1500
+F + 1200 = 1500
+F = 1500 - 1200 = 300.
+So, the fixed monthly charge is ₹300.
+For June, the household consumed 320 units.
+The bill for June = F + 320V = 300 + 320(6) = 300 + 1920 = 2220.
+The bill for June was ₹2220.",Averages & Weighted Averages,Arithmetic
+Applying,Formula for the length of a direct common tangent between two circles.,C,"Direct Common Tangent, Pythagorean Theorem, Properties of Circles",Medium,False,12 cm,A,13 cm,B,15 cm,C,16 cm,D,,,7,Two circles have radii of 14 cm and 6 cm. The distance between their centers is 17 cm. What is the length of the direct common tangent to these two circles?,MCQ,MockSet1_QA_Final_Q7,QA,40,MockSet1_QA_Final,"Let the radii of the two circles be r₁ and r₂, and the distance between their centers be d.
+Given: r₁ = 14 cm, r₂ = 6 cm, and d = 17 cm.
+The formula for the length (L) of the direct common tangent is:
+L = √(d² - (r₁ - r₂)²)
+Substitute the given values into the formula:
+L = √(17² - (14 - 6)²)
+L = √(17² - 8²)
+L = √(289 - 64)
+L = √(225)
+L = 15 cm.
+The length of the direct common tangent is 15 cm.",Circles,Geometry
+Analyzing,Solving an inequality with absolute values by testing integer values around critical points.,C,"Modulus, Absolute Value Equations, Quadratic Expressions, Integer Solutions",Hard,False,1,A,2,B,3,C,4,D,,,8,How many integer values of x satisfy the inequality |x² - 5x + 3| + |x - 2| ≤ 3?,MCQ,MockSet1_QA_Final_Q8,QA,40,MockSet1_QA_Final,"We need to find integer solutions for |x² - 5x + 3| + |x - 2| ≤ 3.
+The critical points are x=2 and the roots of x²-5x+3=0, which are x = (5 ± √13)/2 (approx. 0.7 and 4.3).
+We can analyze the inequality in intervals or test integer values around the critical points. Testing integers is often faster.
+Test x = 1: |1² - 5(1) + 3| + |1 - 2| = |-1| + |-1| = 1 + 1 = 2. Since 2 ≤ 3, x=1 is a solution.
+Test x = 2: |2² - 5(2) + 3| + |2 - 2| = |4 - 10 + 3| + |0| = |-3| + 0 = 3. Since 3 ≤ 3, x=2 is a solution.
+Test x = 3: |3² - 5(3) + 3| + |3 - 2| = |9 - 15 + 3| + |1| = |-3| + 1 = 4. Since 4 > 3, x=3 is not a solution.
+Test x = 4: |4² - 5(4) + 3| + |4 - 2| = |16 - 20 + 3| + |2| = |-1| + 2 = 3. Since 3 ≤ 3, x=4 is a solution.
+Test x = 5: |5² - 5(5) + 3| + |5 - 2| = |25 - 25 + 3| + |3| = 3 + 3 = 6. Since 6 > 3, x=5 is not a solution.
+Test x = 0: |0² - 5(0) + 3| + |0 - 2| = |3| + |-2| = 3 + 2 = 5. Since 5 > 3, x=0 is not a solution.
+The integer solutions found are 1, 2, and 4. There are 3 integer solutions.",Inequalities,Algebra
+Applying,Calculating work done in cycles based on individual efficiencies.,3,"Efficiency, Work Cycle, Rate of Work",Medium,True,,,,,,,,,,,9,"A can do a piece of work in 20 days. B is 25% more efficient than A. C is 20% less efficient than B. They work in a cycle: A works for 2 days, B for 2 days, C for 2 days. How many full cycles are completed before the work is finished?",TITA,MockSet1_QA_Final_Q9,QA,40,MockSet1_QA_Final,"Let A's work per day be W_A. A can do the work in 20 days, so W_A = 1/20 of the job per day.
+B is 25% more efficient than A. So, B's work per day W_B = W_A * (1 + 25/100) = (1/20) * 1.25 = (1/20) * (5/4) = 1/16 of the job per day.
+C is 20% less efficient than B. So, C's work per day W_C = W_B * (1 - 20/100) = (1/16) * 0.80 = (1/16) * (4/5) = 1/20 of the job per day.
+In one cycle (A for 2 days, B for 2 days, C for 2 days):
+Work done by A = 2 * (1/20) = 1/10.
+Work done by B = 2 * (1/16) = 1/8.
+Work done by C = 2 * (1/20) = 1/10.
+Total work done in one full cycle (which lasts 2+2+2 = 6 days) = 1/10 + 1/8 + 1/10 = 2/10 + 1/8 = 1/5 + 1/8 = (8+5)/40 = 13/40 of the job.
+Let N be the number of full cycles. We need to find the largest N such that N * (work per cycle) ≤ Total Work (which is 1 job).
+N * (13/40) ≤ 1 => 13N ≤ 40 => N ≤ 40/13 ≈ 3.07.
+The number of full cycles completed is the greatest integer less than or equal to 3.07, which is 3.",Time & Work,Arithmetic
+Applying,Solving a system of logarithmic equations using the change of base formula.,A,"Logarithm Properties, System of Logarithmic Equations, Change of Base Formula",Medium,False,8,A,16,B,32,C,4√2,D,,,10,"If log₂(x) + log₄(y) = 4 and log₄(x) + log₂(y) = 5, where x and y are positive real numbers, then the value of √xy is:",MCQ,MockSet1_QA_Final_Q10,QA,40,MockSet1_QA_Final,"Given equations:
+1. log₂(x) + log₄(y) = 4
+2. log₄(x) + log₂(y) = 5
+Convert all logarithms to base 2. Recall that log_b(a) = log_c(a) / log_c(b).
+So, log₄(N) = log₂(N) / log₂(4) = log₂(N) / 2.
+Equation 1 becomes: log₂(x) + (1/2)log₂(y) = 4.
+Let A = log₂(x) and B = log₂(y).
+So, A + B/2 = 4 => 2A + B = 8. (Equation 1')
+Equation 2 becomes: (1/2)log₂(x) + log₂(y) = 5.
+So, A/2 + B = 5 => A + 2B = 10. (Equation 2')
+We now have a system of linear equations for A and B:
+1') 2A + B = 8
+2') A + 2B = 10
+Multiply Equation 1' by 2: 4A + 2B = 16.
+Subtract Equation 2' from this new equation: (4A + 2B) - (A + 2B) = 16 - 10 => 3A = 6 => A = 2.
+Substitute A = 2 into Equation 1': 2(2) + B = 8 => 4 + B = 8 => B = 4.
+From A = log₂(x) = 2, we get x = 2² = 4.
+From B = log₂(y) = 4, we get y = 2⁴ = 16.
+We need to find √xy.
+xy = 4 * 16 = 64.
+√xy = √64 = 8.",Logarithms,Algebra
+Understanding,Solving age-related word problems using ratios and linear equations.,C,"Age Problems, Ratios, Linear Equations",Easy,False,70,A,75,B,80,C,85,D,,,11,"Five years ago, the ratio of the ages of Amit and Binit was 3:4. Five years hence, the ratio of their ages will be 4:5. What is the sum of their current ages in years?",MCQ,MockSet1_QA_Final_Q11,QA,40,MockSet1_QA_Final,"Let the current ages of Amit and Binit be A and B respectively.
+Five years ago, their ages were A-5 and B-5. The ratio was (A-5)/(B-5) = 3/4.
+This implies 4(A-5) = 3(B-5) => 4A - 20 = 3B - 15 => 4A - 3B = 5. (Equation 1)
+Five years hence, their ages will be A+5 and B+5. The ratio will be (A+5)/(B+5) = 4/5.
+This implies 5(A+5) = 4(B+5) => 5A + 25 = 4B + 20 => 5A - 4B = -5. (Equation 2)
+A common way to solve this is to let A-5 = 3k and B-5 = 4k for some constant k.
+Then A = 3k+5 and B = 4k+5.
+Substitute these into the second condition (ages five years hence):
+Amit's age: (3k+5)+5 = 3k+10.
+Binit's age: (4k+5)+5 = 4k+10.
+So, (3k+10)/(4k+10) = 4/5.
+5(3k+10) = 4(4k+10)
+15k + 50 = 16k + 40
+k = 50 - 40 = 10.
+Current age of Amit A = 3k+5 = 3(10)+5 = 35 years.
+Current age of Binit B = 4k+5 = 4(10)+5 = 45 years.
+The sum of their current ages = A + B = 35 + 45 = 80 years.","Ratio, Proportion & Variation",Arithmetic
+Applying,Ratio of volumes of similar cones and calculating the volume of a frustum.,A,"Cone, Frustum of a Cone, Similar Solids, Volume Ratios",Medium,False,7/27,A,8/27,B,1/3,C,19/27,D,,,12,"A right circular cone of height H is cut by two planes parallel to its base. The first plane is at a height of H/3 from the apex, and the second plane is at a height of 2H/3 from the apex. What is the ratio of the volume of the frustum formed between these two planes to the volume of the original cone?",MCQ,MockSet1_QA_Final_Q12,QA,40,MockSet1_QA_Final,"Let the original cone have height H and base radius R. Its volume V_original = (1/3)πR²H.
+When a cone is cut by a plane parallel to its base, the smaller cone formed at the top is similar to the original cone. The ratio of corresponding linear dimensions (like radius or height) is constant.
+Let V(h) be the volume of a cone of height h, similar to the original cone, with its apex at the same point. The volume of such a cone is V(h) = V_original * (h/H)³.
+Cone C1 (formed by the first plane): Height h1 = H/3 from the apex.
+Volume V1 = V_original * ( (H/3)/H )³ = V_original * (1/3)³ = V_original / 27.
+Cone C2 (formed by the second plane): Height h2 = 2H/3 from the apex.
+Volume V2 = V_original * ( (2H/3)/H )³ = V_original * (2/3)³ = 8 * V_original / 27.
+The frustum formed between these two planes is the volume of cone C2 minus the volume of cone C1.
+V_frustum = V2 - V1 = (8 * V_original / 27) - (V_original / 27) = (7 * V_original / 27).
+The ratio of the volume of this frustum to the volume of the original cone is:
+Ratio = V_frustum / V_original = (7 * V_original / 27) / V_original = 7/27.",Mensuration - 3D,Geometry
+Applying,Remainder calculation using modular arithmetic and properties of factorials (n! is divisible by 6 for n>=3).,B,"Factorials, Remainders, Modular Arithmetic, Divisibility",Medium,False,0,A,9,B,27,C,81,D,,,13,What is the remainder when (1!)^3 + (2!)^3 + (3!)^3 + ... + (100!)^3 is divided by 216?,MCQ,MockSet1_QA_Final_Q13,QA,40,MockSet1_QA_Final,"We need to find the remainder when S = (1!)^3 + (2!)^3 + (3!)^3 + ... + (100!)^3 is divided by 216.
+Note that 216 = 6³.
+Let's evaluate the terms:
+1! = 1, so (1!)^3 = 1³ = 1.
+2! = 2, so (2!)^3 = 2³ = 8.
+3! = 6, so (3!)^3 = 6³ = 216.
+For any integer n ≥ 3, n! contains the factors 2 and 3, and thus contains 3! = 6 as a factor. Therefore, n! is a multiple of 6. Let n! = 6k for some integer k. Then (n!)^3 = (6k)³ = 216k³, which is divisible by 216.
+Therefore, (n!)^3 ≡ 0 (mod 216) for all n ≥ 3.
+The sum S modulo 216 is:
+S ≡ (1!)^3 + (2!)^3 + (3!)^3 + ... + (100!)^3 (mod 216)
+S ≡ 1³ + 2³ + 0 + 0 + ... + 0 (mod 216)
+S ≡ 1 + 8 (mod 216)
+S ≡ 9 (mod 216).
+The remainder is 9.",Number System,Algebra
+Applying,Comparing final amounts from different investment schemes involving compound and simple interest.,B,"Compound Interest, Simple Interest, Half-yearly Compounding, Reinvestment",Medium,False,50000,A,55000,B,60000,C,60500,D,,,14,"Mr. Sharma invested a sum of ₹50,000 in a scheme offering compound interest at 20% per annum, compounded half-yearly for 2 years. Mr. Verma invested a sum P2 in another scheme offering compound interest at 10% per annum, compounded annually for 2 years. Mr. Verma then reinvested the entire amount he received in a simple interest scheme at 10% per annum for 1 year. If the final amounts received by Mr. Sharma and Mr. Verma are equal, what is the value of P2 (in ₹)?",MCQ,MockSet1_QA_Final_Q14,QA,40,MockSet1_QA_Final,"For Mr. Sharma: P1 = ₹50,000. Rate r1 = 20% p.a., compounded half-yearly. Time t1 = 2 years.
+The rate per period is 20%/2 = 10% or 0.1. The number of periods is 2 years * 2 = 4.
+Amount for Sharma A_S = P1 * (1 + 0.1)⁴ = 50000 * (1.1)⁴ = 50000 * 1.4641 = ₹73,205.
+For Mr. Verma: Principal = P2. Rate r2 = 10% p.a., compounded annually. Time t2 = 2 years.
+Amount after 2 years A_V1 = P2 * (1 + 0.1)² = P2 * (1.1)² = 1.21 * P2.
+This amount is reinvested at simple interest of 10% for 1 year.
+Final amount for Verma A_V_final = A_V1 * (1 + 0.10 * 1) = (1.21 * P2) * 1.1 = 1.331 * P2.
+Given that the final amounts are equal: A_S = A_V_final.
+73,205 = 1.331 * P2.
+P2 = 73,205 / 1.331.
+Since 1.331 = 1.1³, we have P2 = (50000 * 1.1⁴) / 1.1³ = 50000 * 1.1 = ₹55,000.",Compound Interest,Arithmetic
+Applying,Evaluating a recursive function through iterative calculation.,19,"Recursive Functions, Sequence Evaluation, Iteration",Medium,True,,,,,,,,,,,15,"A function f(n) is defined for positive integers n such that f(1) = 3, f(2) = 7, and for n > 2, f(n) = f(n-1) - f(n-2) + 2n - 1. Find the value of f(8).",TITA,MockSet1_QA_Final_Q15,QA,40,MockSet1_QA_Final,"Given: f(1) = 3, f(2) = 7.
+Recurrence relation: f(n) = f(n-1) - f(n-2) + 2n - 1 for n > 2.
+f(3) = f(3-1) - f(3-2) + 2(3) - 1 = f(2) - f(1) + 6 - 1 = 7 - 3 + 5 = 4 + 5 = 9.
+f(4) = f(3) - f(2) + 2(4) - 1 = 9 - 7 + 8 - 1 = 2 + 7 = 9.
+f(5) = f(4) - f(3) + 2(5) - 1 = 9 - 9 + 10 - 1 = 0 + 9 = 9.
+f(6) = f(5) - f(4) + 2(6) - 1 = 9 - 9 + 12 - 1 = 0 + 11 = 11.
+f(7) = f(6) - f(5) + 2(7) - 1 = 11 - 9 + 14 - 1 = 2 + 13 = 15.
+f(8) = f(7) - f(6) + 2(8) - 1 = 15 - 11 + 16 - 1 = 4 + 15 = 19.",Functions,Algebra
+Applying,"Properties of a trapezium, specifically the length of the median and the area of a trapezium.",28,"Trapezium, Midpoint Theorem for Trapezium, Area of Trapezium",Medium,True,,,,,,,,,,,16,"In a trapezium PQRS, PQ is parallel to RS. The length of PQ is 6 cm and the length of RS is 10 cm. A line segment MN is drawn parallel to PQ (and RS) such that M is on PS and N is on QR. If M and N are midpoints of PS and QR respectively, and the perpendicular distance between PQ and RS is 8 cm, what is the area (in cm²) of the trapezium PQNM?",TITA,MockSet1_QA_Final_Q16,QA,40,MockSet1_QA_Final,"In a trapezium PQRS where PQ || RS, and M and N are midpoints of the non-parallel sides PS and QR respectively, the line segment MN is parallel to PQ and RS. The length of MN is the average of the lengths of the parallel sides PQ and RS.
+Given PQ = 6 cm and RS = 10 cm.
+Length of MN = (PQ + RS) / 2 = (6 + 10) / 2 = 16 / 2 = 8 cm.
+The perpendicular distance (height) between PQ and RS is 8 cm. This is the height of the main trapezium PQRS.
+Since MN is parallel to PQ and RS and connects the midpoints of the non-parallel sides, it divides the height of the trapezium PQRS into two equal parts.
+So, the height of trapezium PQNM (the part between PQ and MN) is (Total height of PQRS) / 2 = 8 cm / 2 = 4 cm.
+The area of a trapezium is given by (1/2) * (sum of parallel sides) * height.
+Area of trapezium PQNM = (1/2) * (PQ + MN) * (height of PQNM)
+Area(PQNM) = (1/2) * (6 + 8) * 4 = (1/2) * 14 * 4 = 7 * 4 = 28 cm².",Quadrilaterals & Polygons,Geometry
+Applying,Solving a multi-step word problem by working backward from the final state.,114,"Fractional Sales, Working Backwards, Linear Equations, Word Problem",Medium,True,,,,,,,,,,,17,"A fruit vendor had a certain number of apples. He sold 1/3 of his apples plus 4 apples to the first customer. Then he sold 1/2 of the remaining apples plus 6 apples to the second customer. Finally, he sold 1/3 of the apples now remaining plus 8 apples to the third customer. If he was left with 12 apples, how many apples did he have initially?",TITA,MockSet1_QA_Final_Q17,QA,40,MockSet1_QA_Final,"Let A_initial be the initial number of apples.
+We work backwards from the number of apples left.
+Apples left at the end = 12.
+Before the 3rd customer sale, let the number of apples be A3.
+The 3rd customer bought (1/3)A3 + 8 apples.
+So, A3 - [(1/3)A3 + 8] = 12
+(2/3)A3 - 8 = 12
+(2/3)A3 = 20
+A3 = 20 * (3/2) = 30 apples.
+Before the 2nd customer sale, let the number of apples be A2. (So A2 was the remainder after 1st customer).
+The 2nd customer bought (1/2)A2 + 6 apples. The remainder was A3 = 30.
+So, A2 - [(1/2)A2 + 6] = 30
+(1/2)A2 - 6 = 30
+(1/2)A2 = 36
+A2 = 72 apples.
+Before the 1st customer sale, let the number of apples be A1 (which is A_initial).
+The 1st customer bought (1/3)A1 + 4 apples. The remainder was A2 = 72.
+So, A1 - [(1/3)A1 + 4] = 72
+(2/3)A1 - 4 = 72
+(2/3)A1 = 76
+A1 = 76 * (3/2) = 38 * 3 = 114 apples.
+The initial number of apples was 114.",Percentages,Arithmetic
+Applying,"Counting grid paths using combinations with a constraint (avoiding a point), using the principle of inclusion-exclusion.",C,"Grid Path Counting, Combinatorics with Constraints, Lattice Paths",Easy,False,28,A,18,B,17,C,15,D,,,18,"A person wants to travel from point A(0,0) to point B(4,3) on a grid. The person can only move right (R) or up (U). However, the path cannot pass through point X(2,1). How many distinct paths are possible from A to B under this condition?",MCQ,MockSet1_QA_Final_Q18,QA,40,MockSet1_QA_Final,"The person needs to travel from A(0,0) to B(4,3). This requires making 4 Right (R) moves and 3 Up (U) moves. The total number of moves is 4 + 3 = 7.
+The total number of distinct paths from A to B without any restrictions is given by the combination formula C(Total moves, Number of R moves) or C(Total moves, Number of U moves).
+Total paths = C(7, 4) = C(7, 3) = (7 * 6 * 5) / (3 * 2 * 1) = 35.
+The path cannot pass through point X(2,1). To find the number of such paths, we first find the number of paths that do pass through X and subtract this from the total number of paths.
+A path passing through X consists of a path from A(0,0) to X(2,1) followed by a path from X(2,1) to B(4,3).
+1. Number of paths from A(0,0) to X(2,1): This requires 2 R moves and 1 U move. Total moves = 2 + 1 = 3.
+Paths_AX = C(3, 2) = C(3, 1) = 3.
+2. Number of paths from X(2,1) to B(4,3): This requires (4-2) = 2 R moves and (3-1) = 2 U moves. Total moves = 2 + 2 = 4.
+Paths_XB = C(4, 2) = (4 * 3) / (2 * 1) = 6.
+The number of paths from A to B that pass through X is Paths_AX * Paths_XB = 3 * 6 = 18.
+The number of distinct paths from A to B that do not pass through X is:
+Total paths - Paths through X = 35 - 18 = 17.",Permutations & Combinations,Modern Maths
+Applying,Using Vieta's formulas for a cubic equation whose roots are in arithmetic progression.,71,"Cubic Equations, Roots in Arithmetic Progression, Vieta's Formulas",Medium,True,,,,,,,,,,,19,The roots of the cubic equation x³ - 15x² + kx - 105 = 0 are in arithmetic progression. What is the value of k?,TITA,MockSet1_QA_Final_Q19,QA,40,MockSet1_QA_Final,"Let the roots of the cubic equation x³ - 15x² + kx - 105 = 0 be α-δ, α, α+δ, since they are in arithmetic progression.
+From Vieta's formulas, the sum of the roots is:
+(α-δ) + α + (α+δ) = -(-15)/1
+3α = 15
+α = 5.
+Since α = 5 is a root of the equation, it must satisfy the equation. Substitute x = 5 into the polynomial:
+(5)³ - 15(5)² + k(5) - 105 = 0
+125 - 15(25) + 5k - 105 = 0
+125 - 375 + 5k - 105 = 0
+Calculating the constants: 125 - 375 = -250.
+So, -250 + 5k - 105 = 0
+5k - 355 = 0
+5k = 355
+k = 355 / 5 = 71.",Polynomials,Algebra
+Analyzing,Solving a complex TSD problem by setting up and solving algebraic equations based on two different scenarios of delay and early arrival.,D,"Variable Speed, Delays, Scheduled Time, Algebraic Modelling, Multi-condition Problem",Hard,False,40,A,45,B,50,C,60,D,,,20,"A bus operates on a fixed route of 300 km. On Monday, it started its journey 30 minutes late. It travelled at its scheduled speed for the first half of the distance, and then increased its speed by 25% for the remaining half, reaching its destination on schedule (i.e., covering the 30-minute delay). On Tuesday, it started on time, travelled the first 60 km at its scheduled speed, then had a breakdown for 15 minutes. For the rest of the journey, it increased its speed by 20% over the scheduled speed and reached 25 minutes early. What is the scheduled speed of the bus in km/hr?",MCQ,MockSet1_QA_Final_Q20,QA,40,MockSet1_QA_Final,"Let the scheduled speed of the bus be S km/hr and the route length be D = 300 km.
+The scheduled time of journey T = D/S = 300/S hours.
+Monday's journey:
+The bus started 30 minutes (0.5 hours) late.
+It reached its destination on schedule, which means the actual travel time was T - 0.5 hours.
+Actual travel time = (300/S) - 0.5 hours.
+The first half of the distance (150 km) was covered at speed S. Time taken T1 = 150/S hours.
+The remaining half of the distance (150 km) was covered at speed 1.25S (25% increase). Time taken T2 = 150 / (1.25S) = 150 / (5S/4) = (150 * 4) / (5S) = 120/S hours.
+Total actual travel time = T1 + T2 = 150/S + 120/S = 270/S hours.
+Equating the actual travel time: 270/S = 300/S - 0.5
+0.5 = 300/S - 270/S
+0.5 = 30/S
+S = 30 / 0.5 = 60 km/hr.
+The scheduled speed is 60 km/hr.","Time, Speed & Distance (General)",Arithmetic
+Understanding,"Application of fundamental algebraic identities like (a+b)², (a-b)², and a³+b³.",C,"Algebraic Identities, System of Equations, Integer Properties",Easy,False,61/7,A,289/7,B,169/7,C,31/7,D,,,21,"If a and b are positive integers such that a² + b² = 289 and ab = 120, what is the value of (a³ + b³) / ((a+b)(a-b)), assuming a > b?",MCQ,MockSet1_QA_Final_Q21,QA,40,MockSet1_QA_Final,"Given: a² + b² = 289 and ab = 120. a, b are positive integers and a > b.
+We use the algebraic identities:
+(a+b)² = a² + b² + 2ab
+(a+b)² = 289 + 2(120) = 289 + 240 = 529.
+Since a and b are positive, a+b must be positive. So, a+b = √529 = 23.
+(a-b)² = a² + b² - 2ab
+(a-b)² = 289 - 2(120) = 289 - 240 = 49.
+Since a > b, a-b must be positive. So, a-b = √49 = 7.
+We need to evaluate the expression (a³ + b³) / ((a+b)(a-b)).
+Numerator: a³ + b³ = (a+b)(a² - ab + b²)
+We can rewrite a² - ab + b² as (a² + b²) - ab.
+So, a³ + b³ = (a+b)((a² + b²) - ab) = 23 * (289 - 120) = 23 * 169.
+Denominator: (a+b)(a-b) = 23 * 7.
+The expression is (23 * 169) / (23 * 7).
+Canceling out 23 from numerator and denominator: 169 / 7.",Basics of Algebra & Identities,Algebra
+Applying,Solving a time and work problem involving changing groups of workers by calculating work done in stages.,C,"Individual Rates, Combined Work, Sequential Work, Work Sharing",Medium,False,2,A,2.5,B,3,C,3.5,D,,,22,"A, B and C can individually do a work in 10, 12 and 15 days respectively. They start working together. After working for 2 days, A leaves. B and C continue to work together for 2 more days. Then B leaves. In how many more days will C complete the remaining work?",MCQ,MockSet1_QA_Final_Q22,QA,40,MockSet1_QA_Final,"Let the total amount of work be the LCM of 10, 12, and 15, which is 60 units.
+Rate of A = Total work / Days taken by A = 60 / 10 = 6 units/day.
+Rate of B = Total work / Days taken by B = 60 / 12 = 5 units/day.
+Rate of C = Total work / Days taken by C = 60 / 15 = 4 units/day.
+Step 1: A, B, and C work together for 2 days.
+Combined rate of A+B+C = 6 + 5 + 4 = 15 units/day.
+Work completed in these 2 days = 2 days * 15 units/day = 30 units.
+Remaining work = Total work - Work completed = 60 - 30 = 30 units.
+Step 2: A leaves. B and C continue to work together for 2 more days.
+Combined rate of B+C = 5 + 4 = 9 units/day.
+Work completed by B+C in these 2 days = 2 days * 9 units/day = 18 units.
+Remaining work = 30 - 18 = 12 units.
+Step 3: B leaves. C completes the remaining work.
+Rate of C = 4 units/day.
+Time taken by C to complete the remaining 12 units = Remaining work / C's rate = 12 units / 4 units/day = 3 days.
+So, C will complete the remaining work in 3 more days.",Time & Work,Arithmetic

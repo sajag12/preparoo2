@@ -1,0 +1,689 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel
+VARC,60,VARC_Mock1_01,1,RC_Passage_01,"The concept of ""cultural heritage"" is a relatively recent invention, a product of 19th-century 
+European nationalism and burgeoning museology. Prior to this period, while societies 
+certainly valued historical artifacts and traditions, the idea of a distinct, bounded ""heritage"" 
+to be preserved, cataloged, and displayed was not as formalized. The rise of the nation-
+state in Europe necessitated the creation of shared narratives and symbols to foster a 
+sense of collective identity. Museums, in this context, became crucial institutions, not 
+merely as repositories of objects, but as theatres of national identity, where a curated past 
+was presented to legitimize the present and project a unified future. 
+
+This process, however, was far from neutral. The selection of what constituted ""heritage"" 
+often reflected the power dynamics and ideological leanings of the ruling elites. Objects 
+and traditions associated with dominant social groups, or those that aligned with the 
+desired national narrative, were prioritized, while subaltern histories and less palatable 
+aspects of the past were frequently marginalized or altogether ignored. Furthermore, the 
+very act of removing artifacts from their original contexts—be it religious, communal, or 
+everyday life—and placing them within the sterile, decontextualized environment of a 
+museum, fundamentally altered their meaning and significance. An object once imbued 
+with ritual power or utilitarian function became, primarily, an aesthetic object or a 
+historical document, its interpretation now mediated by curators and academicians. 
+
+The colonial encounter added another layer of complexity. European powers, in their 
+expansionist endeavors, often appropriated cultural artifacts from colonized lands, a 
+practice justified by a self-proclaimed mission of ""civilizing"" and ""preserving"" these 
+cultures, which were often deemed incapable of safeguarding their own legacy. This 
+resulted in a vast and often contentious accumulation of non-Western artifacts in 
+European and North American museums. Post-colonial nations have since engaged in 
+protracted efforts to reclaim these plundered treasures, arguing that such artifacts are 
+integral to their national identity and historical memory, and that their continued presence 
+in foreign museums perpetuates colonial injustices. The debate over restitution remains a 
+significant ethical and political challenge in the museum world, highlighting the enduring 
+power of objects to embody history, identity, and relations of power. 
+
+The digital age has introduced new paradigms and paradoxes. While digitization offers 
+unprecedented access to cultural heritage, allowing virtual repatriation and global sharing, 
+it also raises complex questions about ownership, authenticity, and the very nature of a 
+cultural object when detached from its material form. The museum's role is thus 
+continually evolving, grappling with its own complex history while striving to remain 
+relevant in a rapidly changing global landscape.",Which one of the following statements best expresses the main idea of the passage?,"The concept of cultural heritage, though seemingly objective, is a historical construct shaped by nationalism, power dynamics, and colonialism, and continues to evolve with technological advancements.",Museums have historically played a detrimental role in misrepresenting cultural heritage by decontextualizing artifacts and prioritizing dominant narratives.,"The appropriation of cultural artifacts by colonial powers is the most significant challenge facing the museum world today, overshadowing issues of selection and interpretation.","Digitalization is the key to resolving long-standing debates about cultural heritage, offering new avenues for access and repatriation that bypass traditional museum structures.",A,B,C,D,A,Reading Comprehension,Humanities,Main Idea/Primary Purpose,Medium,Identifying central theme and scope of the passage,"PassageTheme_SocialScience, PassageTheme_History, QuestionFocus_OverallPurpose, TrapType_TooNarrow, TrapType_Overstatement",FALSE,RC_Passage_01,Synthesis
+VARC,60,VARC_Mock1_02,2,RC_Passage_01,"The concept of ""cultural heritage"" is a relatively recent invention, a product of 19th-century 
+European nationalism and burgeoning museology. Prior to this period, while societies 
+certainly valued historical artifacts and traditions, the idea of a distinct, bounded ""heritage"" 
+to be preserved, cataloged, and displayed was not as formalized. The rise of the nation-
+state in Europe necessitated the creation of shared narratives and symbols to foster a 
+sense of collective identity. Museums, in this context, became crucial institutions, not 
+merely as repositories of objects, but as theatres of national identity, where a curated past 
+was presented to legitimize the present and project a unified future. 
+
+This process, however, was far from neutral. The selection of what constituted ""heritage"" 
+often reflected the power dynamics and ideological leanings of the ruling elites. Objects 
+and traditions associated with dominant social groups, or those that aligned with the 
+desired national narrative, were prioritized, while subaltern histories and less palatable 
+aspects of the past were frequently marginalized or altogether ignored. Furthermore, the 
+very act of removing artifacts from their original contexts—be it religious, communal, or 
+everyday life—and placing them within the sterile, decontextualized environment of a 
+museum, fundamentally altered their meaning and significance. An object once imbued 
+with ritual power or utilitarian function became, primarily, an aesthetic object or a 
+historical document, its interpretation now mediated by curators and academicians. 
+
+The colonial encounter added another layer of complexity. European powers, in their 
+expansionist endeavors, often appropriated cultural artifacts from colonized lands, a 
+practice justified by a self-proclaimed mission of ""civilizing"" and ""preserving"" these 
+cultures, which were often deemed incapable of safeguarding their own legacy. This 
+resulted in a vast and often contentious accumulation of non-Western artifacts in 
+European and North American museums. Post-colonial nations have since engaged in 
+protracted efforts to reclaim these plundered treasures, arguing that such artifacts are 
+integral to their national identity and historical memory, and that their continued presence 
+in foreign museums perpetuates colonial injustices. The debate over restitution remains a 
+significant ethical and political challenge in the museum world, highlighting the enduring 
+power of objects to embody history, identity, and relations of power. 
+
+The digital age has introduced new paradigms and paradoxes. While digitization offers 
+unprecedented access to cultural heritage, allowing virtual repatriation and global sharing, 
+it also raises complex questions about ownership, authenticity, and the very nature of a 
+cultural object when detached from its material form. The museum's role is thus 
+continually evolving, grappling with its own complex history while striving to remain 
+relevant in a rapidly changing global landscape.","The author would likely agree with all of the following statements about the ""selection of what constituted 'heritage'"" (Paragraph 2) EXCEPT:",It was often a politically motivated process.,It sometimes led to the exclusion of minority histories.,It was primarily driven by aesthetic considerations.,It could be influenced by the ideological positions of those in power.,A,B,C,D,C,Reading Comprehension,Humanities,Inference-based,Medium,Inferring author's likely agreement based on passage details (EXCEPT question),"PassageTheme_SocialScience, PassageTheme_History, QuestionFocus_ImpliedMeaning, QuestionFocus_AuthorViewpoint, TrapType_Misinterpretation",FALSE,RC_Passage_01,Analysis
+VARC,60,VARC_Mock1_03,3,RC_Passage_01,"The concept of ""cultural heritage"" is a relatively recent invention, a product of 19th-century 
+European nationalism and burgeoning museology. Prior to this period, while societies 
+certainly valued historical artifacts and traditions, the idea of a distinct, bounded ""heritage"" 
+to be preserved, cataloged, and displayed was not as formalized. The rise of the nation-
+state in Europe necessitated the creation of shared narratives and symbols to foster a 
+sense of collective identity. Museums, in this context, became crucial institutions, not 
+merely as repositories of objects, but as theatres of national identity, where a curated past 
+was presented to legitimize the present and project a unified future. 
+
+This process, however, was far from neutral. The selection of what constituted ""heritage"" 
+often reflected the power dynamics and ideological leanings of the ruling elites. Objects 
+and traditions associated with dominant social groups, or those that aligned with the 
+desired national narrative, were prioritized, while subaltern histories and less palatable 
+aspects of the past were frequently marginalized or altogether ignored. Furthermore, the 
+very act of removing artifacts from their original contexts—be it religious, communal, or 
+everyday life—and placing them within the sterile, decontextualized environment of a 
+museum, fundamentally altered their meaning and significance. An object once imbued 
+with ritual power or utilitarian function became, primarily, an aesthetic object or a 
+historical document, its interpretation now mediated by curators and academicians. 
+
+The colonial encounter added another layer of complexity. European powers, in their 
+expansionist endeavors, often appropriated cultural artifacts from colonized lands, a 
+practice justified by a self-proclaimed mission of ""civilizing"" and ""preserving"" these 
+cultures, which were often deemed incapable of safeguarding their own legacy. This 
+resulted in a vast and often contentious accumulation of non-Western artifacts in 
+European and North American museums. Post-colonial nations have since engaged in 
+protracted efforts to reclaim these plundered treasures, arguing that such artifacts are 
+integral to their national identity and historical memory, and that their continued presence 
+in foreign museums perpetuates colonial injustices. The debate over restitution remains a 
+significant ethical and political challenge in the museum world, highlighting the enduring 
+power of objects to embody history, identity, and relations of power. 
+
+The digital age has introduced new paradigms and paradoxes. While digitization offers 
+unprecedented access to cultural heritage, allowing virtual repatriation and global sharing, 
+it also raises complex questions about ownership, authenticity, and the very nature of a 
+cultural object when detached from its material form. The museum's role is thus 
+continually evolving, grappling with its own complex history while striving to remain 
+relevant in a rapidly changing global landscape.","The passage suggests that the ""sterile, decontextualized environment of a museum"" (Paragraph 2) primarily causes artifacts to:","Lose their original function and gain new, predominantly scholarly or aesthetic, meanings.",Become more valuable due to their curated presentation and preservation.,Be better understood by a wider public due to expert interpretation.,Suffer physical degradation due to improper handling and display techniques.,A,B,C,D,A,Reading Comprehension,Humanities,Specific Detail Purpose/Inference,Medium,Understanding the implication of a specific phrase or detail in context,"PassageTheme_SocialScience, PassageTheme_History, QuestionFocus_SpecificDetailImplication, TrapType_PartialAnswer",FALSE,RC_Passage_01,Analysis
+VARC,60,VARC_Mock1_04,4,RC_Passage_01,"The concept of ""cultural heritage"" is a relatively recent invention, a product of 19th-century 
+European nationalism and burgeoning museology. Prior to this period, while societies 
+certainly valued historical artifacts and traditions, the idea of a distinct, bounded ""heritage"" 
+to be preserved, cataloged, and displayed was not as formalized. The rise of the nation-
+state in Europe necessitated the creation of shared narratives and symbols to foster a 
+sense of collective identity. Museums, in this context, became crucial institutions, not 
+merely as repositories of objects, but as theatres of national identity, where a curated past 
+was presented to legitimize the present and project a unified future. 
+
+This process, however, was far from neutral. The selection of what constituted ""heritage"" 
+often reflected the power dynamics and ideological leanings of the ruling elites. Objects 
+and traditions associated with dominant social groups, or those that aligned with the 
+desired national narrative, were prioritized, while subaltern histories and less palatable 
+aspects of the past were frequently marginalized or altogether ignored. Furthermore, the 
+very act of removing artifacts from their original contexts—be it religious, communal, or 
+everyday life—and placing them within the sterile, decontextualized environment of a 
+museum, fundamentally altered their meaning and significance. An object once imbued 
+with ritual power or utilitarian function became, primarily, an aesthetic object or a 
+historical document, its interpretation now mediated by curators and academicians. 
+
+The colonial encounter added another layer of complexity. European powers, in their 
+expansionist endeavors, often appropriated cultural artifacts from colonized lands, a 
+practice justified by a self-proclaimed mission of ""civilizing"" and ""preserving"" these 
+cultures, which were often deemed incapable of safeguarding their own legacy. This 
+resulted in a vast and often contentious accumulation of non-Western artifacts in 
+European and North American museums. Post-colonial nations have since engaged in 
+protracted efforts to reclaim these plundered treasures, arguing that such artifacts are 
+integral to their national identity and historical memory, and that their continued presence 
+in foreign museums perpetuates colonial injustices. The debate over restitution remains a 
+significant ethical and political challenge in the museum world, highlighting the enduring 
+power of objects to embody history, identity, and relations of power. 
+
+The digital age has introduced new paradigms and paradoxes. While digitization offers 
+unprecedented access to cultural heritage, allowing virtual repatriation and global sharing, 
+it also raises complex questions about ownership, authenticity, and the very nature of a 
+cultural object when detached from its material form. The museum's role is thus 
+continually evolving, grappling with its own complex history while striving to remain 
+relevant in a rapidly changing global landscape.","The author’s discussion of the ""colonial encounter"" (Paragraph 3) primarily serves to:",Illustrate how European nations were superior in preserving cultural legacies.,Highlight the ethical complexities and power imbalances inherent in the formation of many museum collections.,Argue that post-colonial nations are solely responsible for the current disputes over artifact restitution.,"Suggest that the ""civilizing mission"" was a genuine, albeit flawed, attempt to safeguard global heritage.",A,B,C,D,B,Reading Comprehension,Humanities,Purpose of a Detail/Section,Medium,Identifying the rhetorical function of a specific part of the passage,"PassageTheme_SocialScience, PassageTheme_History, QuestionFocus_ParagraphPurpose, TrapType_MisrepresentingAuthorsIntent",FALSE,RC_Passage_01,Analysis
+VARC,60,VARC_Mock1_05,5,RC_Passage_02,"The contemporary discourse on ""grit""—defined as perseverance and passion for long-term 
+goals—has gained considerable traction in educational and psychological circles. 
+Proponents, notably Angela Duckworth, argue that grit is a key determinant of success, 
+often outweighing talent or IQ. This narrative is appealing: it democratizes achievement by 
+suggesting that hard work and tenacity, rather than innate ability, are the primary drivers. 
+However, a critical examination reveals that the uncritical celebration of grit may obscure 
+deeper systemic issues and place an undue burden on individuals, particularly those from 
+disadvantaged backgrounds.
+
+The emphasis on grit as an individual trait can inadvertently downplay the profound impact 
+of socio-economic factors and structural inequalities. While perseverance is undoubtedly 
+valuable, attributing success solely to an individual's grittiness ignores the reality that not 
+all individuals start from the same baseline or face the same obstacles. A child from a low-
+income household, attending an under-resourced school and facing daily stressors related 
+to poverty, may need to expend an extraordinary amount of ""grit"" simply to achieve a 
+baseline level of academic performance, let alone excel. To then suggest that their lack of 
+superlative achievement is due to a deficit in grit, rather than systemic barriers, is a form of 
+victim-blaming.
+
+Moreover, the current conceptualization of grit often aligns uncomfortably with neoliberal 
+ideologies that champion individual responsibility while minimizing the role of the state or 
+collective action in fostering equitable conditions. The ""grit narrative"" can be co-opted to 
+justify a lack of investment in social support systems, educational resources, and policies 
+aimed at reducing inequality. If success is merely a matter of individual perseverance, then 
+systemic failures can be conveniently overlooked.
+
+Another concern is the potential for the cultivation of grit to become another pressure point 
+in an already over-burdened educational system. While fostering resilience is important, an 
+overemphasis on ""sticking with it"" at all costs might discourage valuable exploration, 
+creative risk-taking, or the wisdom of knowing when to change course. Sometimes, the 
+""gritty"" path is not the most adaptive or fulfilling one. The ability to critically assess a 
+situation and pivot, rather than blindly persevere, can also be a hallmark of intelligence and 
+a precursor to long-term well-being.
+
+This is not to say that perseverance and passion are unimportant. They are. However, a 
+more nuanced understanding would situate individual effort within its broader social, 
+economic, and institutional context. Fostering an environment where grit can genuinely 
+flourish for all individuals requires not just individual exhortation but also a commitment to 
+dismantling systemic barriers and creating genuinely equitable opportunities. True grit, 
+perhaps, is as much about navigating and challenging an unjust system as it is about 
+individual tenacity in the face of personal adversity.",The primary purpose of the passage is to:,Argue that the concept of grit is entirely without merit and should be discarded.,"Provide a balanced critique of the contemporary emphasis on grit, highlighting its limitations and potential negative implications.",Celebrate the democratizing potential of grit as a key to individual success regardless of background.,Analyze the psychological underpinnings of grit and its correlation with innate talent.,A,B,C,D,B,Reading Comprehension,Social Science/Philosophy,Main Idea/Primary Purpose,Medium,Identifying the main argument or purpose of an argumentative passage,"PassageTheme_SocialScience, PassageTheme_Argumentative, PassageTheme_Psychology, QuestionFocus_OverallPurpose, TrapType_ExtremeWording, TrapType_MisrepresentsAuthorsStance",FALSE,RC_Passage_02,Synthesis
+VARC,60,VARC_Mock1_06,6,RC_Passage_02,"The contemporary discourse on ""grit""—defined as perseverance and passion for long-term 
+goals—has gained considerable traction in educational and psychological circles. 
+Proponents, notably Angela Duckworth, argue that grit is a key determinant of success, 
+often outweighing talent or IQ. This narrative is appealing: it democratizes achievement by 
+suggesting that hard work and tenacity, rather than innate ability, are the primary drivers. 
+However, a critical examination reveals that the uncritical celebration of grit may obscure 
+deeper systemic issues and place an undue burden on individuals, particularly those from 
+disadvantaged backgrounds.
+
+The emphasis on grit as an individual trait can inadvertently downplay the profound impact 
+of socio-economic factors and structural inequalities. While perseverance is undoubtedly 
+valuable, attributing success solely to an individual's grittiness ignores the reality that not 
+all individuals start from the same baseline or face the same obstacles. A child from a low-
+income household, attending an under-resourced school and facing daily stressors related 
+to poverty, may need to expend an extraordinary amount of ""grit"" simply to achieve a 
+baseline level of academic performance, let alone excel. To then suggest that their lack of 
+superlative achievement is due to a deficit in grit, rather than systemic barriers, is a form of 
+victim-blaming.
+
+Moreover, the current conceptualization of grit often aligns uncomfortably with neoliberal 
+ideologies that champion individual responsibility while minimizing the role of the state or 
+collective action in fostering equitable conditions. The ""grit narrative"" can be co-opted to 
+justify a lack of investment in social support systems, educational resources, and policies 
+aimed at reducing inequality. If success is merely a matter of individual perseverance, then 
+systemic failures can be conveniently overlooked.
+
+Another concern is the potential for the cultivation of grit to become another pressure point 
+in an already over-burdened educational system. While fostering resilience is important, an 
+overemphasis on ""sticking with it"" at all costs might discourage valuable exploration, 
+creative risk-taking, or the wisdom of knowing when to change course. Sometimes, the 
+""gritty"" path is not the most adaptive or fulfilling one. The ability to critically assess a 
+situation and pivot, rather than blindly persevere, can also be a hallmark of intelligence and 
+a precursor to long-term well-being.
+
+This is not to say that perseverance and passion are unimportant. They are. However, a 
+more nuanced understanding would situate individual effort within its broader social, 
+economic, and institutional context. Fostering an environment where grit can genuinely 
+flourish for all individuals requires not just individual exhortation but also a commitment to 
+dismantling systemic barriers and creating genuinely equitable opportunities. True grit, 
+perhaps, is as much about navigating and challenging an unjust system as it is about 
+individual tenacity in the face of personal adversity.",The author would likely argue that an overemphasis on grit in education might lead to all of the following EXCEPT:,A decreased focus on addressing systemic inequalities within the educational system.,Students being discouraged from pursuing unconventional or exploratory learning paths.,An increase in students' ability to adapt and change strategies when faced with insurmountable obstacles.,The misattribution of students' academic struggles to individual character flaws rather than external factors.,A,B,C,D,C,Reading Comprehension,Social Science/Philosophy,Inference-based,Medium-Hard,Deducing likely consequences or author's agreement based on arguments (EXCEPT question),"PassageTheme_SocialScience, PassageTheme_Argumentative, PassageTheme_Psychology, QuestionFocus_ImpliedConsequence, TrapType_Contradiction",FALSE,RC_Passage_02,Analysis
+VARC,60,VARC_Mock1_07,7,RC_Passage_02,"The contemporary discourse on ""grit""—defined as perseverance and passion for long-term 
+goals—has gained considerable traction in educational and psychological circles. 
+Proponents, notably Angela Duckworth, argue that grit is a key determinant of success, 
+often outweighing talent or IQ. This narrative is appealing: it democratizes achievement by 
+suggesting that hard work and tenacity, rather than innate ability, are the primary drivers. 
+However, a critical examination reveals that the uncritical celebration of grit may obscure 
+deeper systemic issues and place an undue burden on individuals, particularly those from 
+disadvantaged backgrounds.
+
+The emphasis on grit as an individual trait can inadvertently downplay the profound impact 
+of socio-economic factors and structural inequalities. While perseverance is undoubtedly 
+valuable, attributing success solely to an individual's grittiness ignores the reality that not 
+all individuals start from the same baseline or face the same obstacles. A child from a low-
+income household, attending an under-resourced school and facing daily stressors related 
+to poverty, may need to expend an extraordinary amount of ""grit"" simply to achieve a 
+baseline level of academic performance, let alone excel. To then suggest that their lack of 
+superlative achievement is due to a deficit in grit, rather than systemic barriers, is a form of 
+victim-blaming.
+
+Moreover, the current conceptualization of grit often aligns uncomfortably with neoliberal 
+ideologies that champion individual responsibility while minimizing the role of the state or 
+collective action in fostering equitable conditions. The ""grit narrative"" can be co-opted to 
+justify a lack of investment in social support systems, educational resources, and policies 
+aimed at reducing inequality. If success is merely a matter of individual perseverance, then 
+systemic failures can be conveniently overlooked.
+
+Another concern is the potential for the cultivation of grit to become another pressure point 
+in an already over-burdened educational system. While fostering resilience is important, an 
+overemphasis on ""sticking with it"" at all costs might discourage valuable exploration, 
+creative risk-taking, or the wisdom of knowing when to change course. Sometimes, the 
+""gritty"" path is not the most adaptive or fulfilling one. The ability to critically assess a 
+situation and pivot, rather than blindly persevere, can also be a hallmark of intelligence and 
+a precursor to long-term well-being.
+
+This is not to say that perseverance and passion are unimportant. They are. However, a 
+more nuanced understanding would situate individual effort within its broader social, 
+economic, and institutional context. Fostering an environment where grit can genuinely 
+flourish for all individuals requires not just individual exhortation but also a commitment to 
+dismantling systemic barriers and creating genuinely equitable opportunities. True grit, 
+perhaps, is as much about navigating and challenging an unjust system as it is about 
+individual tenacity in the face of personal adversity.","Which of the following scenarios best illustrates the author's concern about the ""grit narrative"" aligning with ""neoliberal ideologies"" (Paragraph 3)?",A school district invests heavily in programs designed to cultivate perseverance in students from all socio-economic backgrounds.,"A policymaker argues against increased funding for under-resourced schools, suggesting that students' success depends more on their individual determination.",A psychologist develops a new intervention to help individuals from privileged backgrounds develop more passion for their long-term goals.,A corporation implements a wellness program that encourages employees to show more tenacity in completing challenging projects.,A,B,C,D,B,Reading Comprehension,Social Science/Philosophy,Application-based/Illustrative Example,Medium-Hard,Identifying a scenario that best exemplifies a concept discussed by the author,"PassageTheme_SocialScience, PassageTheme_Argumentative, PassageTheme_Psychology, QuestionFocus_ApplicationOfConcept, TrapType_ScopeIssue, TrapType_OppositeImplication",FALSE,RC_Passage_02,Application
+VARC,60,VARC_Mock1_08,8,RC_Passage_02,"The contemporary discourse on ""grit""—defined as perseverance and passion for long-term 
+goals—has gained considerable traction in educational and psychological circles. 
+Proponents, notably Angela Duckworth, argue that grit is a key determinant of success, 
+often outweighing talent or IQ. This narrative is appealing: it democratizes achievement by 
+suggesting that hard work and tenacity, rather than innate ability, are the primary drivers. 
+However, a critical examination reveals that the uncritical celebration of grit may obscure 
+deeper systemic issues and place an undue burden on individuals, particularly those from 
+disadvantaged backgrounds.
+
+The emphasis on grit as an individual trait can inadvertently downplay the profound impact 
+of socio-economic factors and structural inequalities. While perseverance is undoubtedly 
+valuable, attributing success solely to an individual's grittiness ignores the reality that not 
+all individuals start from the same baseline or face the same obstacles. A child from a low-
+income household, attending an under-resourced school and facing daily stressors related 
+to poverty, may need to expend an extraordinary amount of ""grit"" simply to achieve a 
+baseline level of academic performance, let alone excel. To then suggest that their lack of 
+superlative achievement is due to a deficit in grit, rather than systemic barriers, is a form of 
+victim-blaming.
+
+Moreover, the current conceptualization of grit often aligns uncomfortably with neoliberal 
+ideologies that champion individual responsibility while minimizing the role of the state or 
+collective action in fostering equitable conditions. The ""grit narrative"" can be co-opted to 
+justify a lack of investment in social support systems, educational resources, and policies 
+aimed at reducing inequality. If success is merely a matter of individual perseverance, then 
+systemic failures can be conveniently overlooked.
+
+Another concern is the potential for the cultivation of grit to become another pressure point 
+in an already over-burdened educational system. While fostering resilience is important, an 
+overemphasis on ""sticking with it"" at all costs might discourage valuable exploration, 
+creative risk-taking, or the wisdom of knowing when to change course. Sometimes, the 
+""gritty"" path is not the most adaptive or fulfilling one. The ability to critically assess a 
+situation and pivot, rather than blindly persevere, can also be a hallmark of intelligence and 
+a precursor to long-term well-being.
+
+This is not to say that perseverance and passion are unimportant. They are. However, a 
+more nuanced understanding would situate individual effort within its broader social, 
+economic, and institutional context. Fostering an environment where grit can genuinely 
+flourish for all individuals requires not just individual exhortation but also a commitment to 
+dismantling systemic barriers and creating genuinely equitable opportunities. True grit, 
+perhaps, is as much about navigating and challenging an unjust system as it is about 
+individual tenacity in the face of personal adversity.",The author's stance on the relationship between grit and systemic factors can be best described as:,"Believing that individual grit is the primary factor for success, with systemic factors playing a minor, secondary role.","Arguing that systemic factors are the sole determinants of success, rendering individual grit largely irrelevant.","Suggesting that while individual grit is important, its efficacy is significantly mediated by, and should be understood within the context of, systemic factors and inequalities.",Contending that the concept of grit is a useful tool for individuals to overcome systemic barriers through sheer perseverance.,A,B,C,D,C,Reading Comprehension,Social Science/Philosophy,Author's Stance/Viewpoint,Medium,Accurately describing the author's nuanced position on a key issue,"PassageTheme_SocialScience, PassageTheme_Argumentative, PassageTheme_Psychology, QuestionFocus_AuthorViewpoint, TrapType_Distortion, TrapType_Contradiction",FALSE,RC_Passage_02,Analysis
+VARC,60,VARC_Mock1_09,9,RC_Passage_03,"The burgeoning field of neuroaesthetics, at the intersection of neuroscience, psychology, 
+and the arts, seeks to understand the biological underpinnings of aesthetic experience. By 
+employing tools such as fMRI (functional Magnetic Resonance Imaging) and EEG 
+(electroencephalography), researchers aim to map the neural correlates of our encounters 
+with art, music, and beauty. The promise is tantalizing: to move beyond subjective 
+interpretation and uncover the universal, hardwired mechanisms that govern our aesthetic 
+responses. However, this endeavor is not without its critics, who caution against a 
+reductive approach that may oversimplify the rich, multifaceted nature of human aesthetic 
+engagement.
+
+One of the central tenets of neuroaesthetics is the idea that our brains are wired to 
+appreciate certain patterns, symmetries, and compositions. For instance, studies have 
+shown that exposure to artworks an individual finds beautiful often activates brain regions 
+associated with reward and pleasure, such as the orbitofrontal cortex. Similarly, specific 
+musical intervals or harmonic progressions might elicit predictable neural responses. This 
+line of inquiry suggests that aesthetic preferences are not merely learned or culturally 
+conditioned but have a deep evolutionary basis, perhaps linked to survival mechanisms—
+an appreciation for symmetrical faces indicating genetic health, or a preference for certain 
+landscapes reflecting resource-rich environments.
+
+However, critics argue that focusing solely on neural activations risks reducing the 
+aesthetic experience to a mere set of biological reflexes. The meaning and value we derive 
+from art are profoundly shaped by context, culture, personal history, and learned 
+associations. A piece of music that evokes a powerful emotional response in one individual 
+might leave another indifferent, not because their neural pathways are fundamentally 
+different, but because their life experiences and cultural frameworks diverge. To isolate the 
+brain's response in a laboratory setting, detached from these rich contextual layers, may 
+capture only a partial, and potentially misleading, picture.
+
+Furthermore, the very definition of ""art"" and ""beauty"" varies enormously across cultures 
+and historical periods. What one society deems a masterpiece, another might dismiss. 
+Neuroaesthetics, with its current focus on identifying universal neural signatures, may 
+struggle to account for this vast cultural diversity. Can a single neural model truly 
+encapsulate the aesthetic appreciation of a Renaissance painting, a piece of Japanese 
+calligraphy, and a contemporary installation, all of which engage different cognitive and 
+emotional faculties informed by distinct cultural codes?
+
+The challenge for neuroaesthetics, therefore, is to integrate its valuable insights into the 
+biological bases of perception and emotion with a more holistic understanding of the 
+cultural, historical, and individual factors that shape our aesthetic lives. Rather than 
+seeking a purely neurobiological explanation for art, a more fruitful approach might explore 
+how brain, body, and culture interact to create the complex tapestry of human aesthetic 
+experience. This would involve not only mapping neural activity but also understanding how 
+this activity is modulated by, and gives rise to, meaning within specific socio-cultural 
+contexts.",The primary purpose of this passage is to:,advocate for the universal applicability of neuroaesthetics in understanding all art forms.,"present a critical overview of the field of neuroaesthetics, outlining its goals, methods, and potential limitations.",detail the evolutionary advantages of human aesthetic preferences as revealed by neuroscientific research.,argue that cultural conditioning is more significant than neurobiology in shaping aesthetic responses.,A,B,C,D,B,Reading Comprehension,Science/Technology,Main Idea/Primary Purpose,Medium,Identifying the overall aim and scope of an expository passage,"PassageTheme_Science, PassageTheme_Expository, PassageTheme_Neuroscience, QuestionFocus_OverallPurpose, TrapType_TooNarrow, TrapType_MisrepresentsAuthorsStance",FALSE,RC_Passage_03,Synthesis
+VARC,60,VARC_Mock1_10,10,RC_Passage_03,"The burgeoning field of neuroaesthetics, at the intersection of neuroscience, psychology, 
+and the arts, seeks to understand the biological underpinnings of aesthetic experience. By 
+employing tools such as fMRI (functional Magnetic Resonance Imaging) and EEG 
+(electroencephalography), researchers aim to map the neural correlates of our encounters 
+with art, music, and beauty. The promise is tantalizing: to move beyond subjective 
+interpretation and uncover the universal, hardwired mechanisms that govern our aesthetic 
+responses. However, this endeavor is not without its critics, who caution against a 
+reductive approach that may oversimplify the rich, multifaceted nature of human aesthetic 
+engagement.
+
+One of the central tenets of neuroaesthetics is the idea that our brains are wired to 
+appreciate certain patterns, symmetries, and compositions. For instance, studies have 
+shown that exposure to artworks an individual finds beautiful often activates brain regions 
+associated with reward and pleasure, such as the orbitofrontal cortex. Similarly, specific 
+musical intervals or harmonic progressions might elicit predictable neural responses. This 
+line of inquiry suggests that aesthetic preferences are not merely learned or culturally 
+conditioned but have a deep evolutionary basis, perhaps linked to survival mechanisms—
+an appreciation for symmetrical faces indicating genetic health, or a preference for certain 
+landscapes reflecting resource-rich environments.
+
+However, critics argue that focusing solely on neural activations risks reducing the 
+aesthetic experience to a mere set of biological reflexes. The meaning and value we derive 
+from art are profoundly shaped by context, culture, personal history, and learned 
+associations. A piece of music that evokes a powerful emotional response in one individual 
+might leave another indifferent, not because their neural pathways are fundamentally 
+different, but because their life experiences and cultural frameworks diverge. To isolate the 
+brain's response in a laboratory setting, detached from these rich contextual layers, may 
+capture only a partial, and potentially misleading, picture.
+
+Furthermore, the very definition of ""art"" and ""beauty"" varies enormously across cultures 
+and historical periods. What one society deems a masterpiece, another might dismiss. 
+Neuroaesthetics, with its current focus on identifying universal neural signatures, may 
+struggle to account for this vast cultural diversity. Can a single neural model truly 
+encapsulate the aesthetic appreciation of a Renaissance painting, a piece of Japanese 
+calligraphy, and a contemporary installation, all of which engage different cognitive and 
+emotional faculties informed by distinct cultural codes?
+
+The challenge for neuroaesthetics, therefore, is to integrate its valuable insights into the 
+biological bases of perception and emotion with a more holistic understanding of the 
+cultural, historical, and individual factors that shape our aesthetic lives. Rather than 
+seeking a purely neurobiological explanation for art, a more fruitful approach might explore 
+how brain, body, and culture interact to create the complex tapestry of human aesthetic 
+experience. This would involve not only mapping neural activity but also understanding how 
+this activity is modulated by, and gives rise to, meaning within specific socio-cultural 
+contexts.","The author mentions ""symmetrical faces"" and ""resource-rich environments"" (Paragraph 2) primarily to:",provide examples of how evolutionary pressures might have shaped some fundamental aesthetic preferences.,demonstrate the limitations of fMRI in capturing the complexity of aesthetic judgment.,argue that all aesthetic responses can ultimately be traced back to basic survival instincts.,contrast the neuroaesthetics approach with traditional art historical interpretations.,A,B,C,D,A,Reading Comprehension,Science/Technology,Purpose of a Detail/Example,Medium,Understanding why the author includes specific examples,"PassageTheme_Science, PassageTheme_Expository, PassageTheme_Neuroscience, QuestionFocus_SpecificDetailPurpose, TrapType_IncorrectFocus",FALSE,RC_Passage_03,Analysis
+VARC,60,VARC_Mock1_11,11,RC_Passage_03,"The burgeoning field of neuroaesthetics, at the intersection of neuroscience, psychology, 
+and the arts, seeks to understand the biological underpinnings of aesthetic experience. By 
+employing tools such as fMRI (functional Magnetic Resonance Imaging) and EEG 
+(electroencephalography), researchers aim to map the neural correlates of our encounters 
+with art, music, and beauty. The promise is tantalizing: to move beyond subjective 
+interpretation and uncover the universal, hardwired mechanisms that govern our aesthetic 
+responses. However, this endeavor is not without its critics, who caution against a 
+reductive approach that may oversimplify the rich, multifaceted nature of human aesthetic 
+engagement.
+
+One of the central tenets of neuroaesthetics is the idea that our brains are wired to 
+appreciate certain patterns, symmetries, and compositions. For instance, studies have 
+shown that exposure to artworks an individual finds beautiful often activates brain regions 
+associated with reward and pleasure, such as the orbitofrontal cortex. Similarly, specific 
+musical intervals or harmonic progressions might elicit predictable neural responses. This 
+line of inquiry suggests that aesthetic preferences are not merely learned or culturally 
+conditioned but have a deep evolutionary basis, perhaps linked to survival mechanisms—
+an appreciation for symmetrical faces indicating genetic health, or a preference for certain 
+landscapes reflecting resource-rich environments.
+
+However, critics argue that focusing solely on neural activations risks reducing the 
+aesthetic experience to a mere set of biological reflexes. The meaning and value we derive 
+from art are profoundly shaped by context, culture, personal history, and learned 
+associations. A piece of music that evokes a powerful emotional response in one individual 
+might leave another indifferent, not because their neural pathways are fundamentally 
+different, but because their life experiences and cultural frameworks diverge. To isolate the 
+brain's response in a laboratory setting, detached from these rich contextual layers, may 
+capture only a partial, and potentially misleading, picture.
+
+Furthermore, the very definition of ""art"" and ""beauty"" varies enormously across cultures 
+and historical periods. What one society deems a masterpiece, another might dismiss. 
+Neuroaesthetics, with its current focus on identifying universal neural signatures, may 
+struggle to account for this vast cultural diversity. Can a single neural model truly 
+encapsulate the aesthetic appreciation of a Renaissance painting, a piece of Japanese 
+calligraphy, and a contemporary installation, all of which engage different cognitive and 
+emotional faculties informed by distinct cultural codes?
+
+The challenge for neuroaesthetics, therefore, is to integrate its valuable insights into the 
+biological bases of perception and emotion with a more holistic understanding of the 
+cultural, historical, and individual factors that shape our aesthetic lives. Rather than 
+seeking a purely neurobiological explanation for art, a more fruitful approach might explore 
+how brain, body, and culture interact to create the complex tapestry of human aesthetic 
+experience. This would involve not only mapping neural activity but also understanding how 
+this activity is modulated by, and gives rise to, meaning within specific socio-cultural 
+contexts.","Which of the following statements, if true, would most directly CHALLENGE the ""critics' argument"" (Paragraph 3) regarding neuroaesthetics?","Cross-cultural studies using fMRI reveal remarkably consistent neural activation patterns in response to diverse artworks deemed ""beautiful"" within their respective cultures.",Art historians have demonstrated that the interpretation of Renaissance paintings is heavily dependent on understanding the specific theological and philosophical contexts of the era.,"Neuroscientists have identified specific genes that predispose individuals to appreciate certain musical harmonies, irrespective of their cultural upbringing.",Psychological experiments show that an individual's stated preference for an artwork can be significantly altered by providing them with positive or negative critical reviews.,A,B,C,D,C,Reading Comprehension,Science/Technology,Weakening an Argument,Hard,Identifying evidence that would challenge a specific viewpoint presented in the passage,"PassageTheme_Science, PassageTheme_Expository, PassageTheme_Neuroscience, QuestionFocus_ArgumentChallenge, TrapType_SupportsArgument, TrapType_Irrelevant",FALSE,RC_Passage_03,Evaluation
+VARC,60,VARC_Mock1_12,12,RC_Passage_03,"The burgeoning field of neuroaesthetics, at the intersection of neuroscience, psychology, 
+and the arts, seeks to understand the biological underpinnings of aesthetic experience. By 
+employing tools such as fMRI (functional Magnetic Resonance Imaging) and EEG 
+(electroencephalography), researchers aim to map the neural correlates of our encounters 
+with art, music, and beauty. The promise is tantalizing: to move beyond subjective 
+interpretation and uncover the universal, hardwired mechanisms that govern our aesthetic 
+responses. However, this endeavor is not without its critics, who caution against a 
+reductive approach that may oversimplify the rich, multifaceted nature of human aesthetic 
+engagement.
+
+One of the central tenets of neuroaesthetics is the idea that our brains are wired to 
+appreciate certain patterns, symmetries, and compositions. For instance, studies have 
+shown that exposure to artworks an individual finds beautiful often activates brain regions 
+associated with reward and pleasure, such as the orbitofrontal cortex. Similarly, specific 
+musical intervals or harmonic progressions might elicit predictable neural responses. This 
+line of inquiry suggests that aesthetic preferences are not merely learned or culturally 
+conditioned but have a deep evolutionary basis, perhaps linked to survival mechanisms—
+an appreciation for symmetrical faces indicating genetic health, or a preference for certain 
+landscapes reflecting resource-rich environments.
+
+However, critics argue that focusing solely on neural activations risks reducing the 
+aesthetic experience to a mere set of biological reflexes. The meaning and value we derive 
+from art are profoundly shaped by context, culture, personal history, and learned 
+associations. A piece of music that evokes a powerful emotional response in one individual 
+might leave another indifferent, not because their neural pathways are fundamentally 
+different, but because their life experiences and cultural frameworks diverge. To isolate the 
+brain's response in a laboratory setting, detached from these rich contextual layers, may 
+capture only a partial, and potentially misleading, picture.
+
+Furthermore, the very definition of ""art"" and ""beauty"" varies enormously across cultures 
+and historical periods. What one society deems a masterpiece, another might dismiss. 
+Neuroaesthetics, with its current focus on identifying universal neural signatures, may 
+struggle to account for this vast cultural diversity. Can a single neural model truly 
+encapsulate the aesthetic appreciation of a Renaissance painting, a piece of Japanese 
+calligraphy, and a contemporary installation, all of which engage different cognitive and 
+emotional faculties informed by distinct cultural codes?
+
+The challenge for neuroaesthetics, therefore, is to integrate its valuable insights into the 
+biological bases of perception and emotion with a more holistic understanding of the 
+cultural, historical, and individual factors that shape our aesthetic lives. Rather than 
+seeking a purely neurobiological explanation for art, a more fruitful approach might explore 
+how brain, body, and culture interact to create the complex tapestry of human aesthetic 
+experience. This would involve not only mapping neural activity but also understanding how 
+this activity is modulated by, and gives rise to, meaning within specific socio-cultural 
+contexts.",The author’s concluding remarks in the final paragraph suggest that the future of neuroaesthetics should involve:,prioritizing the study of cultural variations over the search for universal neural correlates of beauty.,abandoning neuroscientific methods in favor of more traditional art historical and psychological approaches.,developing more sophisticated brain imaging techniques to capture the subjective nuances of aesthetic experience.,integrating neurobiological findings with an understanding of the socio-cultural and individual contexts that inform aesthetic engagement.,A,B,C,D,D,Reading Comprehension,Science/Technology,Inference-based/Author Recommendation,Medium,Deducing the author's suggested future direction for a field,"PassageTheme_Science, PassageTheme_Expository, PassageTheme_Neuroscience, QuestionFocus_AuthorRecommendation, TrapType_MisrepresentsEmphasis, TrapType_Contradiction",FALSE,RC_Passage_03,Analysis
+VARC,60,VARC_Mock1_13,13,RC_Passage_04,"The notion of ""objectivity"" in journalism is a complex and often contentious ideal. For much 
+of the 20th century, it served as a cornerstone of journalistic ethics, a guiding principle that 
+aimed to separate fact from opinion, news from propaganda. This model, often associated 
+with the ""inverted pyramid"" style of reporting, emphasized neutrality, a detached 
+observational stance, and a commitment to presenting multiple sides of an issue without 
+favour. The journalist was envisioned as a dispassionate chronicler, a mirror reflecting 
+reality as accurately as possible. Yet, this traditional conception of objectivity has 
+increasingly come under scrutiny, with critics arguing that true neutrality is an 
+epistemological impossibility and that the pursuit of a ""view from nowhere"" can, 
+paradoxically, obscure truth and perpetuate existing power imbalances.
+
+One line of critique posits that the very act of selecting what to report, which sources to 
+quote, and how to frame a story inherently involves subjective judgment. No news report 
+can ever be a perfect, unmediated reflection of an event; it is always a construction, 
+shaped by the reporter's background, the editorial policies of the news organization, and 
+the broader cultural and political context. To claim absolute objectivity, in this view, is not 
+only naive but also disingenuous, as it masks the inevitable biases that inform news 
+production.
+
+Furthermore, the traditional adherence to ""balance""—presenting ""both sides"" of a story as 
+equally valid—can lead to a form of false equivalence, particularly in cases where the 
+factual basis or moral weight of competing claims is vastly different. For example, in 
+reporting on issues like climate change, where an overwhelming scientific consensus 
+exists, giving equal airtime to established science and a fringe denialist viewpoint under 
+the guise of ""balance"" can mislead the public and distort the actual state of knowledge. In 
+such instances, a rigid adherence to a superficial notion of objectivity can actively 
+undermine the journalistic goal of informing the public accurately.
+
+The rise of digital media and the 24/7 news cycle have further complicated the pursuit of 
+objectivity. The proliferation of information sources, some of dubious credibility, and the 
+speed at which news now travels, place immense pressure on journalists. In this 
+environment, the careful, time-consuming process of verification and fact-checking can be 
+compromised. Moreover, the economic model of many digital news outlets, reliant on 
+clicks and engagement, can incentivize sensationalism or partisan slanting over 
+dispassionate reporting.
+
+However, to abandon the ideal of objectivity altogether, as some postmodern critiques 
+might suggest, also carries risks. While perfect neutrality may be unattainable, a 
+commitment to methodological rigor, transparency about one's own potential biases, a 
+willingness to correct errors, and a primary allegiance to factual accuracy can still serve as 
+vital ethical guideposts. Perhaps a more nuanced and achievable ideal is not a ""view from 
+nowhere,"" but what philosopher Thomas Nagel termed a ""view from somewhere""—an 
+acknowledgement of one's own perspective, coupled with a rigorous effort to understand 
+and represent other perspectives fairly and to ground one's reporting in verifiable evidence. 
+This approach, while acknowledging the limits of human subjectivity, still upholds the core 
+journalistic responsibility of striving for truthfulness and serving the public interest.",The primary purpose of the passage is to:,Defend the traditional model of journalistic objectivity against recent criticisms.,Argue that true objectivity in journalism is impossible and should be abandoned.,Analyze the historical development of journalistic ethics in the digital age.,"Discuss the complexities and critiques of journalistic objectivity, and suggest a more nuanced approach.",A,B,C,D,D,Reading Comprehension,Abstract/Conceptual Argumentative,Main Idea/Primary Purpose,Medium-Hard,Identifying the central argument of a passage discussing a complex concept,"PassageTheme_Abstract, PassageTheme_Argumentative, PassageTheme_MediaEthics, QuestionFocus_OverallPurpose, TrapType_TooNarrow, TrapType_TooExtreme",FALSE,RC_Passage_04,Synthesis
+VARC,60,VARC_Mock1_14,14,RC_Passage_04,"The notion of ""objectivity"" in journalism is a complex and often contentious ideal. For much 
+of the 20th century, it served as a cornerstone of journalistic ethics, a guiding principle that 
+aimed to separate fact from opinion, news from propaganda. This model, often associated 
+with the ""inverted pyramid"" style of reporting, emphasized neutrality, a detached 
+observational stance, and a commitment to presenting multiple sides of an issue without 
+favour. The journalist was envisioned as a dispassionate chronicler, a mirror reflecting 
+reality as accurately as possible. Yet, this traditional conception of objectivity has 
+increasingly come under scrutiny, with critics arguing that true neutrality is an 
+epistemological impossibility and that the pursuit of a ""view from nowhere"" can, 
+paradoxically, obscure truth and perpetuate existing power imbalances.
+
+One line of critique posits that the very act of selecting what to report, which sources to 
+quote, and how to frame a story inherently involves subjective judgment. No news report 
+can ever be a perfect, unmediated reflection of an event; it is always a construction, 
+shaped by the reporter's background, the editorial policies of the news organization, and 
+the broader cultural and political context. To claim absolute objectivity, in this view, is not 
+only naive but also disingenuous, as it masks the inevitable biases that inform news 
+production.
+
+Furthermore, the traditional adherence to ""balance""—presenting ""both sides"" of a story as 
+equally valid—can lead to a form of false equivalence, particularly in cases where the 
+factual basis or moral weight of competing claims is vastly different. For example, in 
+reporting on issues like climate change, where an overwhelming scientific consensus 
+exists, giving equal airtime to established science and a fringe denialist viewpoint under 
+the guise of ""balance"" can mislead the public and distort the actual state of knowledge. In 
+such instances, a rigid adherence to a superficial notion of objectivity can actively 
+undermine the journalistic goal of informing the public accurately.
+
+The rise of digital media and the 24/7 news cycle have further complicated the pursuit of 
+objectivity. The proliferation of information sources, some of dubious credibility, and the 
+speed at which news now travels, place immense pressure on journalists. In this 
+environment, the careful, time-consuming process of verification and fact-checking can be 
+compromised. Moreover, the economic model of many digital news outlets, reliant on 
+clicks and engagement, can incentivize sensationalism or partisan slanting over 
+dispassionate reporting.
+
+However, to abandon the ideal of objectivity altogether, as some postmodern critiques 
+might suggest, also carries risks. While perfect neutrality may be unattainable, a 
+commitment to methodological rigor, transparency about one's own potential biases, a 
+willingness to correct errors, and a primary allegiance to factual accuracy can still serve as 
+vital ethical guideposts. Perhaps a more nuanced and achievable ideal is not a ""view from 
+nowhere,"" but what philosopher Thomas Nagel termed a ""view from somewhere""—an 
+acknowledgement of one's own perspective, coupled with a rigorous effort to understand 
+and represent other perspectives fairly and to ground one's reporting in verifiable evidence. 
+This approach, while acknowledging the limits of human subjectivity, still upholds the core 
+journalistic responsibility of striving for truthfulness and serving the public interest.","According to the passage, the traditional model of journalistic objectivity (Paragraph 1) emphasized all of the following EXCEPT:",A clear distinction between factual reporting and opinion.,The journalist's role as a neutral and detached observer.,Presenting multiple viewpoints on an issue without bias.,An acknowledgement of the inherent subjectivity in news selection.,A,B,C,D,D,Reading Comprehension,Abstract/Conceptual Argumentative,Specific Detail/Concept Definition (EXCEPT question),Medium,Understanding the components of a concept as defined in the passage,"PassageTheme_Abstract, PassageTheme_Argumentative, PassageTheme_MediaEthics, QuestionFocus_ConceptDefinition, TrapType_Misinterpretation",FALSE,RC_Passage_04,Comprehension
+VARC,60,VARC_Mock1_15,15,RC_Passage_04,"The notion of ""objectivity"" in journalism is a complex and often contentious ideal. For much 
+of the 20th century, it served as a cornerstone of journalistic ethics, a guiding principle that 
+aimed to separate fact from opinion, news from propaganda. This model, often associated 
+with the ""inverted pyramid"" style of reporting, emphasized neutrality, a detached 
+observational stance, and a commitment to presenting multiple sides of an issue without 
+favour. The journalist was envisioned as a dispassionate chronicler, a mirror reflecting 
+reality as accurately as possible. Yet, this traditional conception of objectivity has 
+increasingly come under scrutiny, with critics arguing that true neutrality is an 
+epistemological impossibility and that the pursuit of a ""view from nowhere"" can, 
+paradoxically, obscure truth and perpetuate existing power imbalances.
+
+One line of critique posits that the very act of selecting what to report, which sources to 
+quote, and how to frame a story inherently involves subjective judgment. No news report 
+can ever be a perfect, unmediated reflection of an event; it is always a construction, 
+shaped by the reporter's background, the editorial policies of the news organization, and 
+the broader cultural and political context. To claim absolute objectivity, in this view, is not 
+only naive but also disingenuous, as it masks the inevitable biases that inform news 
+production.
+
+Furthermore, the traditional adherence to ""balance""—presenting ""both sides"" of a story as 
+equally valid—can lead to a form of false equivalence, particularly in cases where the 
+factual basis or moral weight of competing claims is vastly different. For example, in 
+reporting on issues like climate change, where an overwhelming scientific consensus 
+exists, giving equal airtime to established science and a fringe denialist viewpoint under 
+the guise of ""balance"" can mislead the public and distort the actual state of knowledge. In 
+such instances, a rigid adherence to a superficial notion of objectivity can actively 
+undermine the journalistic goal of informing the public accurately.
+
+The rise of digital media and the 24/7 news cycle have further complicated the pursuit of 
+objectivity. The proliferation of information sources, some of dubious credibility, and the 
+speed at which news now travels, place immense pressure on journalists. In this 
+environment, the careful, time-consuming process of verification and fact-checking can be 
+compromised. Moreover, the economic model of many digital news outlets, reliant on 
+clicks and engagement, can incentivize sensationalism or partisan slanting over 
+dispassionate reporting.
+
+However, to abandon the ideal of objectivity altogether, as some postmodern critiques 
+might suggest, also carries risks. While perfect neutrality may be unattainable, a 
+commitment to methodological rigor, transparency about one's own potential biases, a 
+willingness to correct errors, and a primary allegiance to factual accuracy can still serve as 
+vital ethical guideposts. Perhaps a more nuanced and achievable ideal is not a ""view from 
+nowhere,"" but what philosopher Thomas Nagel termed a ""view from somewhere""—an 
+acknowledgement of one's own perspective, coupled with a rigorous effort to understand 
+and represent other perspectives fairly and to ground one's reporting in verifiable evidence. 
+This approach, while acknowledging the limits of human subjectivity, still upholds the core 
+journalistic responsibility of striving for truthfulness and serving the public interest.",The author uses the example of reporting on climate change (Paragraph 3) to illustrate that:,Scientific consensus is often difficult to achieve and report accurately.,"A simplistic application of ""balance"" can lead to public misinformation.",Fringe viewpoints deserve equal representation in journalistic accounts.,Journalists should avoid reporting on complex scientific issues altogether.,A,B,C,D,B,Reading Comprehension,Abstract/Conceptual Argumentative,Purpose of an Example,Medium,Understanding how a specific example functions to support an argument,"PassageTheme_Abstract, PassageTheme_Argumentative, PassageTheme_MediaEthics, QuestionFocus_ExamplePurpose, TrapType_OppositeOfAuthorsPoint",FALSE,RC_Passage_04,Analysis
+VARC,60,VARC_Mock1_16,16,RC_Passage_04,"The notion of ""objectivity"" in journalism is a complex and often contentious ideal. For much 
+of the 20th century, it served as a cornerstone of journalistic ethics, a guiding principle that 
+aimed to separate fact from opinion, news from propaganda. This model, often associated 
+with the ""inverted pyramid"" style of reporting, emphasized neutrality, a detached 
+observational stance, and a commitment to presenting multiple sides of an issue without 
+favour. The journalist was envisioned as a dispassionate chronicler, a mirror reflecting 
+reality as accurately as possible. Yet, this traditional conception of objectivity has 
+increasingly come under scrutiny, with critics arguing that true neutrality is an 
+epistemological impossibility and that the pursuit of a ""view from nowhere"" can, 
+paradoxically, obscure truth and perpetuate existing power imbalances.
+
+One line of critique posits that the very act of selecting what to report, which sources to 
+quote, and how to frame a story inherently involves subjective judgment. No news report 
+can ever be a perfect, unmediated reflection of an event; it is always a construction, 
+shaped by the reporter's background, the editorial policies of the news organization, and 
+the broader cultural and political context. To claim absolute objectivity, in this view, is not 
+only naive but also disingenuous, as it masks the inevitable biases that inform news 
+production.
+
+Furthermore, the traditional adherence to ""balance""—presenting ""both sides"" of a story as 
+equally valid—can lead to a form of false equivalence, particularly in cases where the 
+factual basis or moral weight of competing claims is vastly different. For example, in 
+reporting on issues like climate change, where an overwhelming scientific consensus 
+exists, giving equal airtime to established science and a fringe denialist viewpoint under 
+the guise of ""balance"" can mislead the public and distort the actual state of knowledge. In 
+such instances, a rigid adherence to a superficial notion of objectivity can actively 
+undermine the journalistic goal of informing the public accurately.
+
+The rise of digital media and the 24/7 news cycle have further complicated the pursuit of 
+objectivity. The proliferation of information sources, some of dubious credibility, and the 
+speed at which news now travels, place immense pressure on journalists. In this 
+environment, the careful, time-consuming process of verification and fact-checking can be 
+compromised. Moreover, the economic model of many digital news outlets, reliant on 
+clicks and engagement, can incentivize sensationalism or partisan slanting over 
+dispassionate reporting.
+
+However, to abandon the ideal of objectivity altogether, as some postmodern critiques 
+might suggest, also carries risks. While perfect neutrality may be unattainable, a 
+commitment to methodological rigor, transparency about one's own potential biases, a 
+willingness to correct errors, and a primary allegiance to factual accuracy can still serve as 
+vital ethical guideposts. Perhaps a more nuanced and achievable ideal is not a ""view from 
+nowhere,"" but what philosopher Thomas Nagel termed a ""view from somewhere""—an 
+acknowledgement of one's own perspective, coupled with a rigorous effort to understand 
+and represent other perspectives fairly and to ground one's reporting in verifiable evidence. 
+This approach, while acknowledging the limits of human subjectivity, still upholds the core 
+journalistic responsibility of striving for truthfulness and serving the public interest.","The author’s suggestion of a ""view from somewhere"" (Paragraph 5) as a more achievable journalistic ideal implies:",Journalists should exclusively report from their own subjective viewpoint without considering others.,Journalists should acknowledge their perspectives while striving for factual accuracy and fair representation of other views.,The primary goal of journalism should be to advocate for specific social and political agendas.,Verifiable evidence is less important than the journalist's personal convictions in shaping a news report.,A,B,C,D,B,Reading Comprehension,Abstract/Conceptual Argumentative,Inference-based/Implication of a Concept,Hard,Deducing the implications of a nuanced concept proposed by the author,"PassageTheme_Abstract, PassageTheme_Argumentative, PassageTheme_MediaEthics, QuestionFocus_ImpliedMeaning, TrapType_Distortion, TrapType_Contradiction",FALSE,RC_Passage_04,Analysis
+VARC,60,VARC_Mock1_17,17,,,"Reorder the following labeled sentences to form a coherent paragraph: A. This shift was not merely semantic; it reflected a deeper change in how society viewed and managed risk. B. In pre-industrial societies, misfortune was often attributed to fate or divine will, and a communal approach to coping was common. C. The rise of actuarial science and the modern insurance industry in the 18th and 19th centuries marked a pivotal moment. D. Individuals and institutions increasingly sought to quantify, predict, and mitigate potential losses through formal mechanisms.",,,,,,,,,CBAD,Para Jumble,Verbal Ability,Logical Coherence/Sentence Sequencing,Medium,Arranging sentences to form a logically coherent paragraph,"Skill_SequencingLogic, SentenceRelation_Chronological, SentenceRelation_CauseEffect, SentenceRelation_PronounReferent",TRUE,N/A,Analysis
+VARC,60,VARC_Mock1_18,18,,,"Reorder the following labeled sentences to form a coherent paragraph: A. Its central thesis is that the imaginative capacities we often associate with artistic genius are, in fact, fundamental to everyday cognition and problem-solving. B. He draws on a wide range of examples, from scientific discovery to mundane household repairs, to illustrate this point. C. Mark Turner's book, ""The Literary Mind,"" offers a provocative challenge to traditional views of human thought. D. Thus, metaphor, narrative, and conceptual blending are not mere literary devices but essential tools with which we construct our understanding of the world.",,,,,,,,,CABD,Para Jumble,Verbal Ability,Logical Coherence/Sentence Sequencing,Hard,Arranging sentences with subtle logical links to form a coherent paragraph,"Skill_SequencingLogic, SentenceRelation_ThesisExampleConclusion, SentenceRelation_PronounReferent, SentenceRelation_ConnectorWords",TRUE,N/A,Synthesis
+VARC,60,VARC_Mock1_19,19,,,"Which statement best summarises the paragraph about the ""yuck factor"" associated with GM foods?",Scientific evidence is insufficient to convince the public about GM food safety because people are primarily concerned about unnatural alterations to food.,"The ""yuck factor"" associated with GM foods is a primary emotional barrier to their acceptance, which cannot be overcome by scientific arguments alone and requires addressing value-based concerns.","Public resistance to GM foods is largely irrational, as it ignores the substantial benefits these technologies offer in terms of crop yield and nutrition.","Genetically modified foods are scientifically proven to be safe, but widespread public distrust, rooted in a misunderstanding of nature, hinders their adoption.",A,B,C,D,B,Para Summary,Verbal Ability,Main Idea Identification/Distillation,Medium,Identifying the most accurate and comprehensive summary of a given paragraph,"Skill_MainIdeaDistillation, TrapType_TooNarrow, TrapType_Distortion, TrapType_PartialAnswer, TrapType_Misinterpretation",FALSE,N/A,Evaluation
+VARC,60,VARC_Mock1_20,20,,,"Which statement best summarises the paragraph discussing ""choice architecture"" in behavioral economics?","Choice architecture leverages defaults and inertia to influence decisions, a practice common in policy and marketing that raises ethical concerns despite not altering fundamental preferences.","Opt-out systems for organ donation are more effective than opt-in systems because they make donation the default, thereby increasing participation without changing people's actual willingness.","Behavioral economics demonstrates that people's choices are easily manipulated by how options are framed, highlighting the need for greater ethical oversight in policy and marketing.","The presentation of choices can significantly alter behavior by ""nudging"" individuals, a technique used in areas like organ donation and marketing, which questions the extent of individual autonomy.",A,B,C,D,A,Para Summary,Verbal Ability,Main Idea Identification/Distillation,Medium-Hard,Summarizing a paragraph with multiple interlinked ideas and identifying ethical implications,"Skill_MainIdeaDistillation, TrapType_TooBroad, TrapType_FocusOnExample, TrapType_IncompleteSummary",FALSE,N/A,Evaluation
+VARC,60,VARC_Mock1_21,21,,,Identify the odd one out among the five sentences about serendipity in scientific discovery.,,,,,,,,,4,Odd One Out,Verbal Ability,Thematic Cohesion/Identifying Outlier,Medium,Identifying the sentence that does not fit into a thematically coherent paragraph,"Skill_IdentifyingOutlier, ThematicCohesion_ScientificDiscovery, TrapType_RelatedButDistinctTopic",TRUE,N/A,Analysis
+VARC,60,VARC_Mock1_22,22,,,Identify the odd one out among the five sentences related to affective forecasting.,,,,,,,,,4,Odd One Out,Verbal Ability,Thematic Cohesion/Identifying Outlier,Hard,Identifying a sentence that subtly breaks the thematic unity of a paragraph on a specific psychological concept,"Skill_IdentifyingOutlier, ThematicCohesion_CognitivePsychology, TrapType_SuperficiallyRelated",TRUE,N/A,Analysis
+VARC,60,VARC_Mock1_23,23,,,Complete the paragraph on moral luck by choosing the option that best fills the blank.,"The legal system, however, rightly focuses only on the intent and action of the driver, not the chance outcome.","Both drivers, from a purely control-based perspective, might be equally culpable, yet our reactive attitudes often differ.",This discrepancy highlights the importance of focusing on character rather than isolated actions when making moral judgments.,"Therefore, a truly just moral system would entirely disregard outcomes and focus solely on an agent's intentions.",A,B,C,D,B,Sentence Placement/Para-completion,Verbal Ability,Logical Flow/Contextual Appropriateness,Medium,Choosing the sentence that best completes the logic and coherence of a paragraph,"Skill_ContextualIntegration, LogicalFlow_ExampleToConclusion, TrapType_ScopeShift, TrapType_PrescriptiveVsDescriptive",FALSE,N/A,Analysis
+VARC,60,VARC_Mock1_24,24,,,Complete the paragraph on functional fixedness by choosing the option that best fills the blank.,Overcoming functional fixedness often requires a deliberate effort to re-examine the properties of available tools and consider unconventional applications.,"Functional fixedness is therefore a crucial survival mechanism, allowing us to quickly access the most common use of an object.","This is why children, with fewer preconceived notions about objects, often display greater creativity in problem-solving.",The most effective way to combat functional fixedness is through brainstorming sessions that encourage out-of-the-box thinking.,A,B,C,D,A,Sentence Placement/Para-completion,Verbal Ability,Logical Flow/Contextual Appropriateness,Medium-Hard,Selecting the sentence that logically follows a definition and example to conclude a paragraph,"Skill_ContextualIntegration, LogicalFlow_DefinitionToImplication, TrapType_Contradiction, TrapType_TooSpecific, TrapType_DivergentFocus",FALSE,N/A,Analysis

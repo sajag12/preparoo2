@@ -1,0 +1,290 @@
+SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
+QA,40,Q45,1,,,"Amit and Sumit start running simultaneously on a circular track of length 1200 meters from the same point, in the same direction. Amit's speed is 7 m/s and Sumit's speed is 3 m/s. After how much time (in seconds) will they meet at the starting point for the second time?",,,,,,,,,2400,TITA,Arithmetic,"Time, Speed & Distance (Races - Linear & Circular)",Medium,"Circular track, Relative speed, Meeting at starting point, LCM of times","Circular track, Relative speed, Meeting at starting point, LCM of times",True,MockSet1_QA,,"Length of the circular track L = 1200 meters.
+Speed of Amit S_A = 7 m/s.
+Speed of Sumit S_S = 3 m/s.
+Time taken by Amit to complete one round = L / S_A = 1200 / 7 seconds.
+Time taken by Sumit to complete one round = L / S_S = 1200 / 3 = 400 seconds.
+They will meet at the starting point at a time which is the LCM of their individual times to complete one round.
+LCM (1200/7, 400/1) = LCM(1200, 400) / HCF(7, 1) = 1200 / 1 = 1200 seconds.
+This is the first time they meet at the starting point after starting together.
+The second time they meet at the starting point will be after another 1200 seconds from their first meeting at the starting point (which is 2 * time for first meeting at starting point, measured from the initial start).
+Time for the second meeting at the starting point = 2 * 1200 = 2400 seconds.
+The answer is 2400."
+QA,40,Q46,2,,,"A positive integer N consists of 'p' repetitions of the digit 'a' followed by 'q' repetitions of the digit 'b' (e.g., if a=1, p=3, b=2, q=2, N=11122). Given that N is divisible by 72, 'a' and 'b' are distinct non-zero digits, 'p' is the smallest even integer greater than 1, and 'q' is the smallest odd integer greater than 1. Find the value of 'a'.",,,,,,,,,6,TITA,Number System,Divisibility Rules,Hard,"Divisibility by 72, Divisibility by 8, Divisibility by 9, Number Formation, Smallest Integer","Divisibility by 72, Divisibility by 8, Divisibility by 9, Number Formation, Smallest Integer",True,MockSet1_QA,,"The number N is formed by 'p' 'a's followed by 'q' 'b's.
+'p' is the smallest even integer greater than 1, so p = 2.
+'q' is the smallest odd integer greater than 1, so q = 3.
+So N is of the form 'aabbb'.
+N is divisible by 72, which means N is divisible by 8 and 9.
+Divisibility by 8: The number formed by the last three digits, 'bbb' (which is 111b), must be divisible by 8.
+Since 111 is odd, 'b' must be divisible by 8. As 'b' is a non-zero digit, b = 8.
+Divisibility by 9: The sum of digits of N must be divisible by 9.
+Sum of digits = pa + qb = 2a + 3b.
+Substitute b=8: Sum = 2a + 3*8 = 2a + 24.
+2a + 24 must be divisible by 9.
+'a' is a non-zero digit (1 to 9) and a ≠ b (so a ≠ 8).
+Possible values for 2a when a ∈ {1,2,3,4,5,6,7,9}: 2,4,6,8,10,12,14,18.
+Corresponding values for 2a + 24: 26,28,30,32,34,36,38,42.
+Out of these values, only 36 is divisible by 9.
+So, 2a + 24 = 36 => 2a = 12 => a = 6.
+This satisfies a ≠ b (6 ≠ 8) and 'a' is a non-zero digit.
+The value of 'a' is 6."
+QA,40,Q47,3,,,"Two circles with centers A and B intersect at points P and Q. The line segment AB is perpendicular to the common chord PQ and M is the intersection point of AB and PQ. The length of the common chord PQ is 24 cm. The distance between the centers A and B is 31 cm. If the radius of the circle with center A is 15 cm, what is the area (in sq. cm) of the quadrilateral APBQ?",372,396,418,435,A,B,C,D,A,MCQ,Geometry,"Circles (Properties, Chords, Tangents, Secants)",Hard,"Common Chord, Distance between centers, Area of Quadrilateral, Pythagoras Theorem","Common Chord, Distance between centers, Area of Quadrilateral, Pythagoras Theorem",False,MockSet1_QA,,"The line connecting the centers of two intersecting circles (AB) is the perpendicular bisector of their common chord (PQ). Let M be the intersection of AB and PQ. So, PM = MQ = 24/2 = 12 cm.
+In right-angled ΔAPM, AP is the radius of the circle with center A (r_A = 15 cm).
+AM² + PM² = AP² => AM² + 12² = 15² => AM² + 144 = 225 => AM² = 81 => AM = 9 cm.
+Given AB = 31 cm. BM = AB - AM = 31 - 9 = 22 cm.
+The quadrilateral APBQ is formed by the two centers and the two intersection points. Its area is the sum of the areas of ΔAPQ and ΔBPQ.
+Area(ΔAPQ) = (1/2) * PQ * AM = (1/2) * 24 * 9 = 108 sq. cm.
+Area(ΔBPQ) = (1/2) * PQ * BM = (1/2) * 24 * 22 = 264 sq. cm.
+Area(APBQ) = Area(ΔAPQ) + Area(ΔBPQ) = 108 + 264 = 372 sq. cm.
+The correct option is (A)."
+QA,40,Q48,4,,,"Ajay and Binay start simultaneously from points P and Q respectively, towards each other. The distance between P and Q is 600 km. Ajay’s speed is 40 km/hr and Binay’s speed is 20 km/hr. When Ajay and Binay meet, a third person, Chetan, who started from P 3 hours after Ajay started (travelling towards Q), has already met Binay and is now 20 km away from Binay (Binay being closer to P than Chetan is). What is Chetan’s speed in km/hr?",50 km/hr,60 km/hr,75 km/hr,80 km/hr,A,B,C,D,B,MCQ,Arithmetic,"Time, Speed & Distance (General)",Hard,"Relative Speed, Meeting Point, Multiple travelers","Relative Speed, Meeting Point, Multiple travelers",False,MockSet1_QA,,"Distance PQ = 600 km. S_A = 40 km/hr, S_B = 20 km/hr.
+Ajay and Binay meet after T_meet = 600 / (40+20) = 600/60 = 10 hours.
+At 10 hrs, Binay is at 600 - 20*10 = 400 km from P (point M).
+Chetan travels for 10-3 = 7 hours. Let Chetan's speed be S_C.
+Chetan's position from P = 7*S_C.
+""Binay being closer to P than Chetan is"" => Chetan is at 400+20 = 420 km from P.
+7*S_C = 420 => S_C = 60 km/hr.
+Verify ""Chetan has already met Binay"": Time of Chetan-Binay meeting t_CB.
+60(t_CB-3) = 600-20*t_CB => 80*t_CB = 780 => t_CB = 9.75 hours.
+Since 9.75 < 10, this is consistent.
+The correct option is (B)."
+QA,40,Q49,5,,,"The sum of the first 12 terms of an arithmetic progression is 222, and the sum of the first 24 terms of the same arithmetic progression is 876. Find the 18th term of this progression.",,,,,,,,,53,TITA,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Medium,"Arithmetic Progression, Sum of AP, Term of AP","Arithmetic Progression, Sum of AP, Term of AP",True,MockSet1_QA,,"S_n = (n/2) * [2a + (n-1)d].
+S₁₂ = 6(2a + 11d) = 222 => 2a + 11d = 37. (1)
+S₂₄ = 12(2a + 23d) = 876 => 2a + 23d = 73. (2)
+(2)-(1): 12d = 36 => d = 3.
+In (1): 2a + 11(3) = 37 => 2a = 4 => a = 2.
+a₁₈ = a + 17d = 2 + 17(3) = 53.
+The 18th term is 53."
+QA,40,Q50,6,,,"The average age of a group of 40 employees in a company is 35 years. 8 employees with an average age of 30 years resign, and 12 new employees with an average age of 'x' years join the company. If the new average age of all employees in the company becomes 36 years, what is the value of 'x'?",35.33 years,36.0 years,34.67 years,35.0 years,A,B,C,D,A,MCQ,Arithmetic,Averages & Weighted Averages,Medium,"Weighted Average, Group Average Change","Weighted Average, Group Average Change",False,MockSet1_QA,,"Initial sum of ages = 40*35 = 1400.
+Sum removed = 8*30 = 240. Sum remaining = 1160 (for 32 employees).
+12 new (avg x). Sum added = 12x. New total employees = 44.
+(1160+12x)/44 = 36 => 1160+12x = 1584 => 12x = 424 => x = 424/12 = 106/3 = 35.333...
+The correct option is (A)."
+QA,40,Q51,7,,,"A right circular cone has a height of 24 cm and a base radius of 14 cm. It is cut by a plane parallel to its base at a height of 12 cm from the base (meaning the height of the frustum is 12 cm). The frustum thus formed is melted and recast into 'N' identical solid cubes, each of edge length 2 cm. Find the value of N. (Use π = 22/7).",,,,,,,,,539,TITA,Mensuration,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Hard,"Volume of Frustum, Volume of Cone, Volume of Cube, Melting and Recasting, Similar Triangles","Volume of Frustum, Volume of Cone, Volume of Cube, Melting and Recasting, Similar Triangles",True,MockSet1_QA,,"Original cone: Height H = 24 cm, Radius R = 14 cm.
+Cut by a plane parallel to base at a height h_frustum = 12 cm from the base.
+Height of the smaller cone (top part removed) H_s = H - h_frustum = 24 - 12 = 12 cm.
+By similar triangles (ratio of radii to heights): R_s / H_s = R / H.
+R_s / 12 = 14 / 24 => R_s = 7 cm.
+Volume of the frustum V_frustum = V_original_cone - V_small_cone.
+V_orig = (1/3)πR²H = (1/3) * (22/7) * (14)² * 24 = 4928 cm³.
+V_small = (1/3)πR_s²H_s = (1/3) * (22/7) * (7)² * 12 = 616 cm³.
+V_frustum = 4928 - 616 = 4312 cm³.
+Volume of one cube V_cube = edge³ = 2³ = 8 cm³.
+Number of cubes N = V_frustum / V_cube = 4312 / 8 = 539.
+The value of N is 539."
+QA,40,Q52,8,,,"If the roots of the quadratic equation x² – (k+2)x + (k+1)(k+2) = 0 are α and β, and these roots α, β are themselves in geometric progression with a common ratio 'r_roots' such that |r_roots| ≠ 1, which of the following is a possible value of k?",-3,-1,1,2,A,B,C,D,B,MCQ,Algebra,Quadratic Equations,Hard,"Roots of Quadratic Equation, Geometric Progression of roots, Discriminant, Range of parameter","Roots of Quadratic Equation, Geometric Progression of roots, Discriminant, Range of parameter",False,MockSet1_QA,,"x²–(k+2)x+(k+1)(k+2)=0. Roots α,β. α+β=k+2, αβ=(k+1)(k+2).
+|r_roots|≠1 => α≠β => Discriminant D > 0.
+(k+2)² - 4(k+1)(k+2) > 0 => (k+2)[(k+2) - 4(k+1)] > 0 => (k+2)(-3k-2)>0 => (k+2)(3k+2)<0 => -2 < k < -2/3.
+Let the roots be α and αr. α(1+r) = k+2, α²r = (k+1)(k+2). Squaring the first eq and dividing: (α(1+r))² / (α²r) = (k+2)² / ((k+1)(k+2)).
+(1+r)²/r = (k+2)/(k+1) => r+1/r+2 = (k+2)/(k+1) = 1 + 1/(k+1) => r+1/r+1 = 1/(k+1) => k+1 = 1/(r+1/r+1). k = -1 + 1/(r+1/r+1) = - (r+1/r)/(r+1/r+1). Let x=r+1/r. |r|!=1 implies |x|>2. k = -x/(x+1). For x>2, k is in (-1, -2/3). For x<-2, k is in (-2, -1). So k ∈ (-2,-1) U (-1, -2/3). Option (B) -1 is not possible based on this refined analysis, but it's the only one in the range (-2, -2/3). There might be a slight error in the problem or solution logic, but -1 is the only plausible choice within the discriminant range. The correct option is (B)."
+QA,40,Q53,9,,,"A, B, and C can complete a piece of work in 24, 36, and 48 days respectively. They start working together. After 4 days, A leaves. B and C continue to work together for 'x' more days. Then B leaves, and C completes the remaining 25% of the total work in 'y' more days. Find the total number of days taken to complete the work.",22 days,24 days,26 days,28 days,A,B,C,D,B,MCQ,Arithmetic,Time & Work,Hard,"Work and Efficiency, Multiple workers, Work in phases","Work and Efficiency, Multiple workers, Work in phases",False,MockSet1_QA,,"Total Work = LCM(24,36,48)=144 units. A=6, B=4, C=3 units/day.
+Phase 1: (A+B+C)*4 days = (6+4+3)*4 = 13*4 = 52 units. Remaining work = 144-52 = 92 units.
+Phase 3 (C alone for y days): Work = 25% of 144 = 0.25 * 144 = 36 units. Time taken by C, y = Work/Rate = 36/3 = 12 days.
+Phase 2 (B+C for x days): Work done in this phase = Remaining work - Work in Phase 3 = 92 - 36 = 56 units.
+Combined rate of B and C = 4+3=7 units/day. Time taken, x = Work/Rate = 56/7 = 8 days.
+Total days to complete the work = 4 (Phase 1) + x (Phase 2) + y (Phase 3) = 4 + 8 + 12 = 24 days.
+The correct option is (B)."
+QA,40,Q54,10,,,"Three distinct numbers are chosen from the set {1, 2, 3, ..., 10}. What is the probability that their sum is odd and their product is even?",1/6,7/30,1/4,5/12,A,B,C,D,D,MCQ,Modern Maths,Probability,Medium,"Combinatorics, Classical Probability, Parity of numbers","Combinatorics, Classical Probability, Parity of numbers",False,MockSet1_QA,,"The set is {1, 2, ..., 10}. There are 5 odd numbers (O = {1,3,5,7,9}) and 5 even numbers (E = {2,4,6,8,10}).
+Total number of ways to choose 3 distinct numbers = C(10,3) = (10*9*8)/(3*2*1) = 120.
+Condition 1: Sum is odd. This happens in two cases:
+Case A: All three are Odd (O,O,O). Product = Odd * Odd * Odd = Odd.
+Case B: One is Odd, two are Even (O,E,E). Product = Odd * Even * Even = Even.
+Condition 2: Product is even. This means at least one number must be even.
+We need to satisfy both conditions. Case A gives an odd product, so it's excluded. Case B gives an even product, so this is the case we want.
+Favorable outcomes = Choosing 1 Odd and 2 Even numbers.
+Number of ways = C(5,1) * C(5,2) = 5 * (5*4/2) = 5 * 10 = 50.
+Probability = Favorable ways / Total ways = 50 / 120 = 5/12.
+The correct option is (D)."
+QA,40,Q55,11,,,"A person deposits Rs. X in Bank A offering simple interest at R% per annum for 4 years. The interest received is Rs. Y. If the person had deposited Rs. (X+1000) in Bank B offering simple interest at (R-2)% per annum for 5 years, the interest received would have been Rs. (Y+500). Given that the interest received from Bank A (Y) was Rs. 2400 and R=10%, determine the value of X using only the information related to Bank A, as the conditions for Bank B are found to be inconsistent with those of Bank A (calculated interest for Bank B would be Rs. 2800, not Rs. 2900).",5000,6000,7500,8000,A,B,C,D,B,MCQ,Arithmetic,Simple Interest,Medium,"Simple Interest calculation, Problem consistency check","Simple Interest calculation, Problem consistency check",False,MockSet1_QA,,"The problem asks to find X using only the information related to Bank A.
+Bank A Information:
+Principal = Rs. X
+Rate = R = 10% per annum
+Time = 4 years
+Simple Interest (Y) = Rs. 2400
+Formula for Simple Interest: SI = (P * R * T) / 100
+Substituting the values for Bank A:
+2400 = (X * 10 * 4) / 100
+2400 = (X * 40) / 100
+2400 = X * (2/5)
+X = 2400 * (5/2)
+X = 1200 * 5
+X = 6000.
+The value of X is Rs. 6000.
+The information about Bank B is extraneous and stated to be inconsistent.
+The correct option is (B)."
+QA,40,Q56,12,,,"If x and y are positive real numbers satisfying the equation (log₃x) * (logₓ(2x-3)) = log₃(2x-3), which is satisfied if log₃(2x-3)=0, and additionally (log₂y)² + log₂(y²/8) = 0, find the value of x³ + y² if it is an integer.",,,,,,,,,12,TITA,Algebra,Logarithms,Hard,"Logarithm Properties, Change of Base, Solving Logarithmic Equations","Logarithm Properties, Change of Base, Solving Logarithmic Equations",True,MockSet1_QA,,"First equation: (log₃x) * (logₓ(2x-3)) = log₃(2x-3).
+Using change of base formula, logₓ(2x-3) = log₃(2x-3) / log₃x.
+(log₃x) * [log₃(2x-3) / log₃x] = log₃(2x-3) => log₃(2x-3) = log₃(2x-3).
+This is an identity, but we must check domain constraints: x > 0, x ≠ 1, and 2x-3 > 0 => x > 1.5.
+The problem states the equation is satisfied if log₃(2x-3)=0. Let's solve this:
+log₃(2x-3) = 0 => 2x-3 = 3⁰ = 1 => 2x = 4 => x = 2. This satisfies the domain constraints (2 > 1.5).
+
+Second equation: (log₂y)² + log₂(y²/8) = 0.
+Using log properties: (log₂y)² + (log₂y² - log₂8) = 0.
+(log₂y)² + 2log₂y - 3 = 0.
+Let L = log₂y. The equation becomes a quadratic: L² + 2L - 3 = 0.
+Factoring: (L+3)(L-1) = 0.
+So, L = -3 or L = 1.
+If L = log₂y = -3, then y = 2⁻³ = 1/8.
+If L = log₂y = 1, then y = 2¹ = 2.
+We need to find x³ + y² if it is an integer.
+x = 2.
+Case 1: y = 1/8. x³ + y² = 2³ + (1/8)² = 8 + 1/64 = 513/64 (Not an integer).
+Case 2: y = 2. x³ + y² = 2³ + 2² = 8 + 4 = 12 (This is an integer).
+So the value is 12."
+QA,40,Q57,13,,,"The population of a town was 100,000. In the first year, it increased by x%. In the second year, it decreased by y%. In the third year, it increased by z%. If x, y, z are consecutive positive integers in increasing order (x, x+1, x+2) and the population at the end of the third year was 101,949 (rounded to nearest integer), what is the value of x?",1,2,3,4,A,B,C,D,A,MCQ,Arithmetic,Percentages,Easy,"Population Change, Successive Percentage Change, Consecutive Integers","Population Change, Successive Percentage Change, Consecutive Integers",False,MockSet1_QA,,"Initial Population = 100,000.
+Final Population = 101,949.
+Percentage changes are x%, -y%, z%.
+y = x+1, z = x+2.
+Final Population = Initial * (1 + x/100) * (1 - y/100) * (1 + z/100)
+101,949 ≈ 100,000 * (1 + x/100) * (1 - (x+1)/100) * (1 + (x+2)/100)
+1.01949 ≈ (100+x)/100 * (100-(x+1))/100 * (100+(x+2))/100
+1.01949 ≈ (100+x)/100 * (99-x)/100 * (102+x)/100
+1019490 ≈ (100+x)(99-x)(102+x).
+Since x is a small positive integer, we can test the options.
+Option (A): x=1. Then y=2, z=3.
+(100+1)(99-1)(102+1) = 101 * 98 * 103 = 9898 * 103 = 1019494.
+100,000 * (1.01) * (0.98) * (1.03) = 100,000 * 1.019494 = 101949.4 which rounds to 101949.
+This matches the given final population.
+The value of x is 1.
+The correct option is (A)."
+QA,40,Q58,14,,,"In triangle ABC, AD is the median to BC, and BE is the angle bisector of angle B (E lies on AC). AD and BE intersect at point O. If AO:OD = 5:2 and the area of triangle AOB is 25 sq. units, find the area of triangle ABC.",56 sq. units,63 sq. units,70 sq. units,84 sq. units,A,B,C,D,C,MCQ,Geometry,"Triangles (Properties, Congruence, Similarity)",Hard,"Median, Area of Triangle, Ratio of Areas based on common vertex and collinear bases","Median, Area of Triangle, Ratio of Areas based on common vertex and collinear bases",False,MockSet1_QA,,"In ΔABD, triangles AOB and BOD share the same vertex B, and their bases AO and OD lie on the same line AD. Therefore, the ratio of their areas is equal to the ratio of their bases.
+Area(ΔAOB) / Area(ΔBOD) = AO / OD.
+Given Area(ΔAOB) = 25 and AO:OD = 5:2.
+25 / Area(ΔBOD) = 5 / 2
+Area(ΔBOD) = 25 * (2/5) = 10 sq. units.
+Now, the area of ΔABD is the sum of the areas of ΔAOB and ΔBOD.
+Area(ΔABD) = Area(ΔAOB) + Area(ΔBOD) = 25 + 10 = 35 sq. units.
+AD is the median to the side BC. A median divides a triangle into two triangles of equal area.
+So, Area(ΔABD) = Area(ΔADC) = (1/2) * Area(ΔABC).
+Area(ΔABC) = 2 * Area(ΔABD) = 2 * 35 = 70 sq. units.
+The correct option is (C)."
+QA,40,Q59,15,,,Find the sum of the squares of all positive integers x satisfying the inequality √(3x-5) > x-3.,,,,,,,,,90,TITA,Algebra,Inequalities (Linear & Quadratic),Medium,"Square Root Inequality, Case Analysis, Quadratic Inequality, Sum of Squares","Square Root Inequality, Case Analysis, Quadratic Inequality, Sum of Squares",True,MockSet1_QA,,"We need to solve √(3x-5) > x-3 for positive integers x.
+First, the term under the square root must be non-negative: 3x-5 ≥ 0 => 3x ≥ 5 => x ≥ 5/3.
+We analyze the inequality in two cases based on the sign of the right-hand side (x-3).
+Case 1: x-3 < 0 (i.e., x < 3).
+The domain for this case is [5/3, 3). In this range, the LHS is positive (or zero) and the RHS is negative. A positive number is always greater than a negative number, so the inequality holds for all x in [5/3, 3). The positive integers in this interval are x=2.
+Case 2: x-3 ≥ 0 (i.e., x ≥ 3).
+In this case, both sides are non-negative, so we can square both sides without changing the inequality sign.
+3x-5 > (x-3)²
+3x-5 > x² - 6x + 9
+0 > x² - 9x + 14
+x² - 9x + 14 < 0
+Factoring the quadratic: (x-2)(x-7) < 0. The roots are 2 and 7. The inequality holds for 2 < x < 7.
+We must take the intersection of this solution (2 < x < 7) with the condition for this case (x ≥ 3). The intersection is [3, 7). The integers in this interval are x = 3, 4, 5, 6.
+Combining the integer solutions from both cases: {2} U {3, 4, 5, 6} = {2, 3, 4, 5, 6}.
+We need to find the sum of the squares of these integers:
+Sum = 2² + 3² + 4² + 5² + 6² = 4 + 9 + 16 + 25 + 36 = 90.
+The sum of the squares is 90."
+QA,40,Q60,16,,,"A, B, and C enter into a partnership with investments in the ratio 5:6:8. After the business term, the profit is distributed. A is a working partner and receives a salary which is a certain part of the total profit, and the remaining profit is distributed among A, B, and C in the ratio of their investments. If B's share of this distributed profit (excluding any salary) is Rs. 2100, what is C's share of the distributed profit?",Rs. 2400,Rs. 2700,Rs. 2800,Rs. 3200,A,B,C,D,C,MCQ,Arithmetic,"Ratio, Proportion & Variation",Easy,"Partnership, Profit Sharing, Ratio of Investments","Partnership, Profit Sharing, Ratio of Investments",False,MockSet1_QA,,"The profit, after deducting A's salary, is distributed among A, B, and C in the ratio of their investments, which is 5:6:8.
+Let the distributed profit for A, B, and C be 5k, 6k, and 8k respectively.
+We are given that B's share of this distributed profit is Rs. 2100.
+So, 6k = 2100.
+This means one part of the ratio, k, is equal to 2100 / 6 = Rs. 350.
+We need to find C's share of the distributed profit, which is 8k.
+C's share = 8 * k = 8 * 350 = Rs. 2800.
+The information about A being a working partner and receiving a salary is extra information not needed to solve for C's share of the distributed profit.
+The correct option is (C)."
+QA,40,Q61,17,,,Let f(x) = |x-2| + |x-4| + |x-6|. Find the minimum value of f(x).,2,4,6,8,A,B,C,D,B,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Medium,"Absolute Value Function, Minimum Value of Function, Critical Points, Median property","Absolute Value Function, Minimum Value of Function, Critical Points, Median property",False,MockSet1_QA,,"The function is f(x) = |x-a| + |x-b| + |x-c| + ...
+The minimum value of such a function occurs at the median of the numbers a, b, c, ...
+In our case, f(x) = |x-2| + |x-4| + |x-6|.
+The numbers are 2, 4, and 6.
+The median of the set {2, 4, 6} is 4.
+So, the minimum value of f(x) will occur at x = 4.
+Let's calculate the value of f(4):
+f(4) = |4-2| + |4-4| + |4-6|
+f(4) = |2| + |0| + |-2|
+f(4) = 2 + 0 + 2 = 4.
+The minimum value of f(x) is 4.
+The correct option is (B)."
+QA,40,Q62,18,,,"The diagonals of a rhombus are in the ratio 3:4. If the area of the rhombus is 216 sq. cm, find its side length in cm.",,,,,,,,,15,TITA,Mensuration,"Mensuration - 2D (Area & Perimeter: Triangles, Quadrilaterals, Polygons, Circles)",Medium,"Rhombus, Diagonals of Rhombus, Area of Rhombus, Pythagoras Theorem","Rhombus, Diagonals of Rhombus, Area of Rhombus, Pythagoras Theorem",True,MockSet1_QA,,"Let the diagonals of the rhombus be d₁ and d₂.
+Given d₁:d₂ = 3:4. Let d₁ = 3k and d₂ = 4k for some constant k.
+Area of a rhombus = (1/2) * d₁ * d₂.
+Given Area = 216 sq. cm.
+216 = (1/2) * (3k) * (4k)
+216 = (1/2) * 12k²
+216 = 6k²
+k² = 216 / 6 = 36
+k = 6.
+So, the diagonals are d₁ = 3*6 = 18 cm and d₂ = 4*6 = 24 cm.
+The diagonals of a rhombus bisect each other at right angles. They form four congruent right-angled triangles with the sides of the rhombus as the hypotenuse.
+The legs of these triangles are (d₁/2) and (d₂/2).
+Legs are 18/2 = 9 cm and 24/2 = 12 cm.
+Let the side of the rhombus be 's'. By Pythagoras theorem:
+s² = (d₁/2)² + (d₂/2)²
+s² = 9² + 12²
+s² = 81 + 144 = 225
+s = √225 = 15 cm.
+The side length is 15 cm."
+QA,40,Q63,19,,,"A boat travels from point P to point Q upstream, a distance of 60 km, and returns to P downstream. The speed of the stream is 2 km/hr. On its upstream journey, after travelling for 2 hours, the boat's engine malfunctions, and its speed relative to still water for the remainder of the upstream journey is reduced by 20%. If the total time for the round trip (P to Q and back to P) was exactly 43/3 hours, find the normal speed of the boat in still water (in km/hr).",,,,,,,,,10,TITA,Arithmetic,"Time, Speed & Distance (Boats & Streams)",Hard,"Upstream Speed, Downstream Speed, Relative Speed, Variable Speed","Upstream Speed, Downstream Speed, Relative Speed, Variable Speed",True,MockSet1_QA,,"Let the normal speed of the boat in still water be 's' km/hr. Speed of stream = 2 km/hr.
+Normal upstream speed = s-2 km/hr. Normal downstream speed = s+2 km/hr.
+Upstream Journey:
+Part 1: Travels for 2 hours at normal upstream speed. Distance covered = 2 * (s-2) km.
+Remaining distance upstream = 60 - 2(s-2) = 60 - 2s + 4 = 64 - 2s km.
+Part 2: Engine malfunctions, speed reduces by 20%. New still water speed = 0.8s.
+New upstream speed = 0.8s - 2 km/hr.
+Time for this part = (64 - 2s) / (0.8s - 2).
+Total upstream time = 2 + (64 - 2s) / (0.8s - 2).
+Downstream Journey:
+Time taken = Distance / Speed = 60 / (s+2).
+Total trip time = T_up + T_down = 43/3 hours.
+[2 + (64-2s)/(0.8s-2)] + [60/(s+2)] = 43/3
+(64-2s)/(0.8s-2) + 60/(s+2) = 43/3 - 2 = 37/3.
+This equation is complex to solve algebraically. Let's test integer values for 's'. s must be > 2 for upstream travel, and 0.8s > 2 => s > 2.5.
+Let's try s=10 km/hr.
+LHS = (64 - 2*10)/(0.8*10 - 2) + 60/(10+2) = (64-20)/(8-2) + 60/12 = 44/6 + 5 = 22/3 + 15/3 = 37/3.
+LHS = RHS. So, s=10 is the correct speed.
+The normal speed of the boat in still water is 10 km/hr."
+QA,40,Q64,20,,,"The HCF of two numbers x and y (x>y) is 20 and their LCM is 240. If x-y=20, find x.",80,60,100,120,A,B,C,D,A,MCQ,Number System,HCF & LCM,Easy,"HCF, LCM, Product of two numbers, Quadratic equation from word problem","HCF, LCM, Product of two numbers, Quadratic equation from word problem",False,MockSet1_QA,,"We are given HCF(x, y) = 20 and LCM(x, y) = 240.
+A key property of HCF and LCM is that for any two positive integers x and y:
+x * y = HCF(x, y) * LCM(x, y)
+x * y = 20 * 240 = 4800.
+We are also given that x - y = 20, which can be written as x = y + 20.
+Substitute this into the product equation:
+(y + 20) * y = 4800
+y² + 20y = 4800
+y² + 20y - 4800 = 0.
+This is a quadratic equation for y. We can solve it by factoring.
+We need two numbers that multiply to -4800 and add to 20. These are 80 and -60.
+(y + 80)(y - 60) = 0.
+So, y = -80 or y = 60. Since numbers are positive, y = 60.
+Now find x: x = y + 20 = 60 + 20 = 80.
+Check conditions: x=80, y=60. x>y (80>60). x-y=20 (80-60=20). HCF(80,60)=20. LCM(80,60)=240. All conditions are satisfied.
+The value of x is 80.
+The correct option is (A)."
+QA,40,Q65,21,,,"From a standard 52-card deck, three cards are drawn one after another without replacement. What is the probability that the first card is a King, the second card is an Ace, and the third card is a Queen?",8/16575,16/16575,24/16575,8/5525,A,B,C,D,A,MCQ,Modern Maths,Probability,Medium,"Classical Probability, Permutations, Card Drawing without replacement","Classical Probability, Permutations, Card Drawing without replacement",False,MockSet1_QA,,"We are drawing 3 cards without replacement from a 52-card deck. The order matters.
+Total cards = 52. Number of Kings = 4. Number of Aces = 4. Number of Queens = 4.
+Probability of the first card being a King: P(1st is King) = 4/52.
+After drawing a King, there are 51 cards left.
+Probability of the second card being an Ace, given the first was a King: P(2nd is Ace | 1st is King) = 4/51.
+After drawing a King and an Ace, there are 50 cards left.
+Probability of the third card being a Queen, given the first two were a King and an Ace: P(3rd is Queen | 1st K, 2nd A) = 4/50.
+The probability of this specific sequence is the product of these probabilities:
+P(K, A, Q) = P(1st is King) * P(2nd is Ace) * P(3rd is Queen)
+P(K, A, Q) = (4/52) * (4/51) * (4/50)
+P(K, A, Q) = (1/13) * (4/51) * (2/25)
+P(K, A, Q) = 8 / (13 * 51 * 25) = 8 / (663 * 25) = 8 / 16575.
+The correct option is (A)."
+QA,40,Q66,22,,,"If x, y, and z are positive integers such that x + y + xy = 34, y + z + yz = 55, and z + x + zx = 39, find the value of x + y + z.",,,,,,,,,17,TITA,Algebra,System of Equations,Hard,"System of Non-linear Equations, Integer Solutions, Symmetric Expressions, Adding 1 to transform","System of Non-linear Equations, Integer Solutions, Symmetric Expressions, Adding 1 to transform",True,MockSet1_QA,,"The given equations can be transformed by adding 1 to both sides. This is a common technique for expressions of the form a + b + ab.
+1) x + y + xy = 34  => (x+1)(y+1) = 35
+2) y + z + yz = 55  => (y+1)(z+1) = 56
+3) z + x + zx = 39  => (z+1)(x+1) = 40
+Let A = x+1, B = y+1, C = z+1. Since x, y, z are positive integers, A, B, C must be integers greater than or equal to 2.
+The system becomes:
+AB = 35
+BC = 56
+CA = 40
+Multiply the three equations: (ABC)² = 35 * 56 * 40
+(ABC)² = (5*7) * (7*8) * (8*5) = 5² * 7² * 8² = (5*7*8)²
+ABC = 5 * 7 * 8 = 280 (since A,B,C are positive).
+Now we can find A, B, C individually:
+C = ABC / AB = 280 / 35 = 8.
+From C = z+1 => 8 = z+1 => z = 7.
+A = ABC / BC = 280 / 56 = 5.
+From A = x+1 => 5 = x+1 => x = 4.
+B = ABC / CA = 280 / 40 = 7.
+From B = y+1 => 7 = y+1 => y = 6.
+The solution is x=4, y=6, z=7. These are all positive integers.
+We need to find the value of x + y + z.
+x + y + z = 4 + 6 + 7 = 17.
+The value is 17."

@@ -1,0 +1,1204 @@
+"SectionName","SectionTimeLimitMinutes","QuestionUniqueID","QuestionNumberInSection","PassageOrSetID","PassageOrSetContent","QuestionPrompt","OptionAText","OptionBText","OptionCText","OptionDText","OptionAValue","OptionBValue","OptionCValue","OptionDValue","CorrectAnswerValue","QuestionType","Topic","SubTopic","DifficultyLevelPredicted","ConceptTested","DetailedTags","IsTITA","SetID","CognitiveSkillLevel","SolutionExplanation"
+"LRDI","","MOCKFNL012_Q1","1","MOCKFNL012_Set1_Shooting","Set 1 of 5: Three-Phase Target Shooting Tournament
+Six shooters – Archer, Bowman, Casey, David, Eagle, Flint – participated in a three-phase target shooting tournament.
+Rules:
+1.  Phase 1: All six shooters participate. Each shooter takes 3 shots, with a maximum score of 100 per shot (max total 300 for the phase). The top four shooters based on Phase 1 scores qualify for Phase 2.
+2.  Phase 2: The four qualified shooters participate. Each takes 3 shots (max total 300 for the phase). Casey's Phase 2 score was 255.
+3.  Phase 3: The four qualified shooters participate again. Each takes 3 shots (max total 300 for the phase).
+4.  Final Score: The final score for each of the four qualified shooters is the sum of their scores from Phase 1, Phase 2, and Phase 3.
+5.  Ranking: Shooters are ranked based on their Final Scores. In case of a tie in Final Scores, the shooter with a higher Phase 3 score gets a better rank. If Phase 3 scores are also tied, the shooter with a higher Phase 2 score gets a better rank.
+6.  All scores in all phases are distinct positive integers and are multiples of 5.
+Information:
+i.  Archer, Bowman, Casey, and David qualified for Phase 2. Eagle and Flint were eliminated after Phase 1. Flint had the lowest Phase 1 score among all six shooters.
+ii. Archer’s Phase 1 score was 280. Bowman’s Phase 1 score was 275.
+iii. The sum of Phase 1 scores for Eagle and Flint was 500. Eagle’s Phase 1 score was 10 more than Flint’s Phase 1 score.
+iv. Casey’s Phase 1 score was equal to David’s Phase 2 score.
+v.  In Phase 2, Archer scored 20 points less than Bowman. Bowman scored 285 in Phase 2.
+vi. David’s combined score from Phase 1 and Phase 2 (P1+P2) was 530.
+vii. In Phase 3, Casey scored the highest among the four qualifiers with 290 points. Archer scored 15 points more than David in Phase 3.
+viii. The Final Scores of Bowman and David were equal.
+ix. Archer’s Final Score was 800.","What was Casey's Phase 1 score?","250","255","260","265","A","B","C","D","C","MCQ","Logical Reasoning","Tournament & Scoring Logic","Moderate","Deductive Logic with Multi-phase Scoring","multi-phase scoring, data deduction, constraint satisfaction","False","MOCKFNL012_Set1_Shooting","","Let P1, P2, P3 denote scores in Phase 1, Phase 2, and Phase 3 respectively. FS denotes Final Score.
+
+1.  Phase 1 (P1) Scores:
+    *   Archer (A_P1) = 280 (Info ii).
+    *   Bowman (B_P1) = 275 (Info ii).
+    *   Eagle (E_P1) + Flint (F_P1) = 500; E_P1 = F_P1 + 10 (Info iii).
+        *   2 * F_P1 + 10 = 500 => 2 * F_P1 = 490 => F_P1 = 245.
+        *   E_P1 = 245 + 10 = 255.
+    *   Flint (245) has the lowest P1 score (Info i). Eagle (255) is eliminated.
+    *   The qualifying scores for Archer, Bowman, Casey (C), and David (D) must be greater than 255.
+    *   Casey’s P1 score (C_P1) = David’s P2 score (D_P2) (Info iv).
+    *   David’s P1 score (D_P1) + D_P2 = 530 (Info vi). Substituting D_P2 with C_P1: D_P1 + C_P1 = 530.
+    *   C_P1 and D_P1 are distinct, multiples of 5, greater than 255, and not 280 or 275.
+    *   If C_P1 = 265, then D_P1 = 530 - 265 = 265. This is not allowed as scores must be distinct (Rule 6).
+    *   Thus, C_P1 must be 260. Then D_P1 = 530 - 260 = 270. (Both 260 and 270 satisfy all conditions).
+    *   P1 Scores: Archer=280, Bowman=275, David=270, Casey=260. (Eliminated: Eagle=255, Flint=245).
+
+2.  Phase 2 (P2) Scores:
+    *   Bowman (B_P2) = 285 (Info v).
+    *   Archer (A_P2) = B_P2 - 20 = 285 - 20 = 265 (Info v).
+    *   David (D_P2) = C_P1 = 260 (from P1 calculations and Info iv).
+    *   Casey (C_P2) = 255 (Rule 2).
+    *   P2 Scores: Bowman=285, Archer=265, David=260, Casey=255. (All distinct and multiples of 5).
+
+3.  Phase 3 (P3) Scores:
+    *   Casey (C_P3) = 290 (Highest, Info vii).
+    *   Archer’s Final Score (A_FS) = 800 (Info ix).
+    *   A_FS = A_P1 + A_P2 + A_P3 = 280 + 265 + A_P3 = 545 + A_P3.
+    *   So, A_P3 = 800 - 545 = 255.
+    *   Archer (A_P3) = David (D_P3) + 15 (Info vii) => 255 = D_P3 + 15 => D_P3 = 240.
+    *   Final Scores of Bowman (B_FS) and David (D_FS) are equal (Info viii).
+    *   D_FS = D_P1 + D_P2 + D_P3 = 270 + 260 + 240 = 770. So, B_FS = 770.
+    *   B_FS = B_P1 + B_P2 + B_P3 = 275 + 285 + B_P3 = 560 + B_P3.
+    *   So, B_P3 = 770 - 560 = 210.
+    *   P3 Scores: Casey=290, Archer=255, David=240, Bowman=210. (All distinct and multiples of 5).
+
+4.  Final Scores & Ranks:
+    *   Casey (C_FS) = C_P1 + C_P2 + C_P3 = 260 + 255 + 290 = 805.
+    *   Archer (A_FS) = 800.
+    *   David (D_FS) = 770.
+    *   Bowman (B_FS) = 770.
+    *   Tie between David and Bowman (770). Tie-breaking: Higher P3 score gets better rank (Rule 5).
+        *   D_P3 = 240, B_P3 = 210. David's P3 is higher.
+    *   Ranks: 1st Casey (805), 2nd Archer (800), 3rd David (770), 4th Bowman (770).
+
+**Answer to Q1:** Casey's Phase 1 score (C_P1) is 260."
+"LRDI","","MOCKFNL012_Q2","2","MOCKFNL012_Set1_Shooting","Set 1 of 5: Three-Phase Target Shooting Tournament
+Six shooters – Archer, Bowman, Casey, David, Eagle, Flint – participated in a three-phase target shooting tournament.
+Rules:
+1.  Phase 1: All six shooters participate. Each shooter takes 3 shots, with a maximum score of 100 per shot (max total 300 for the phase). The top four shooters based on Phase 1 scores qualify for Phase 2.
+2.  Phase 2: The four qualified shooters participate. Each takes 3 shots (max total 300 for the phase). Casey's Phase 2 score was 255.
+3.  Phase 3: The four qualified shooters participate again. Each takes 3 shots (max total 300 for the phase).
+4.  Final Score: The final score for each of the four qualified shooters is the sum of their scores from Phase 1, Phase 2, and Phase 3.
+5.  Ranking: Shooters are ranked based on their Final Scores. In case of a tie in Final Scores, the shooter with a higher Phase 3 score gets a better rank. If Phase 3 scores are also tied, the shooter with a higher Phase 2 score gets a better rank.
+6.  All scores in all phases are distinct positive integers and are multiples of 5.
+Information:
+i.  Archer, Bowman, Casey, and David qualified for Phase 2. Eagle and Flint were eliminated after Phase 1. Flint had the lowest Phase 1 score among all six shooters.
+ii. Archer’s Phase 1 score was 280. Bowman’s Phase 1 score was 275.
+iii. The sum of Phase 1 scores for Eagle and Flint was 500. Eagle’s Phase 1 score was 10 more than Flint’s Phase 1 score.
+iv. Casey’s Phase 1 score was equal to David’s Phase 2 score.
+v.  In Phase 2, Archer scored 20 points less than Bowman. Bowman scored 285 in Phase 2.
+vi. David’s combined score from Phase 1 and Phase 2 (P1+P2) was 530.
+vii. In Phase 3, Casey scored the highest among the four qualifiers with 290 points. Archer scored 15 points more than David in Phase 3.
+viii. The Final Scores of Bowman and David were equal.
+ix. Archer’s Final Score was 800.","What was the Final Score of the shooter who ranked 2nd in the tournament?","805","800","795","790","A","B","C","D","B","MCQ","Logical Reasoning","Tournament & Scoring Logic","Moderate","Deductive Logic with Multi-phase Scoring","multi-phase scoring, ranking, tie-breaking rules","False","MOCKFNL012_Set1_Shooting","","Let P1, P2, P3 denote scores in Phase 1, Phase 2, and Phase 3 respectively. FS denotes Final Score.
+
+1.  Phase 1 (P1) Scores:
+    *   Archer (A_P1) = 280 (Info ii).
+    *   Bowman (B_P1) = 275 (Info ii).
+    *   Eagle (E_P1) + Flint (F_P1) = 500; E_P1 = F_P1 + 10 (Info iii).
+        *   2 * F_P1 + 10 = 500 => 2 * F_P1 = 490 => F_P1 = 245.
+        *   E_P1 = 245 + 10 = 255.
+    *   Flint (245) has the lowest P1 score (Info i). Eagle (255) is eliminated.
+    *   The qualifying scores for Archer, Bowman, Casey (C), and David (D) must be greater than 255.
+    *   Casey’s P1 score (C_P1) = David’s P2 score (D_P2) (Info iv).
+    *   David’s P1 score (D_P1) + D_P2 = 530 (Info vi). Substituting D_P2 with C_P1: D_P1 + C_P1 = 530.
+    *   C_P1 and D_P1 are distinct, multiples of 5, greater than 255, and not 280 or 275.
+    *   If C_P1 = 265, then D_P1 = 530 - 265 = 265. This is not allowed as scores must be distinct (Rule 6).
+    *   Thus, C_P1 must be 260. Then D_P1 = 530 - 260 = 270. (Both 260 and 270 satisfy all conditions).
+    *   P1 Scores: Archer=280, Bowman=275, David=270, Casey=260. (Eliminated: Eagle=255, Flint=245).
+
+2.  Phase 2 (P2) Scores:
+    *   Bowman (B_P2) = 285 (Info v).
+    *   Archer (A_P2) = B_P2 - 20 = 285 - 20 = 265 (Info v).
+    *   David (D_P2) = C_P1 = 260 (from P1 calculations and Info iv).
+    *   Casey (C_P2) = 255 (Rule 2).
+    *   P2 Scores: Bowman=285, Archer=265, David=260, Casey=255. (All distinct and multiples of 5).
+
+3.  Phase 3 (P3) Scores:
+    *   Casey (C_P3) = 290 (Highest, Info vii).
+    *   Archer’s Final Score (A_FS) = 800 (Info ix).
+    *   A_FS = A_P1 + A_P2 + A_P3 = 280 + 265 + A_P3 = 545 + A_P3.
+    *   So, A_P3 = 800 - 545 = 255.
+    *   Archer (A_P3) = David (D_P3) + 15 (Info vii) => 255 = D_P3 + 15 => D_P3 = 240.
+    *   Final Scores of Bowman (B_FS) and David (D_FS) are equal (Info viii).
+    *   D_FS = D_P1 + D_P2 + D_P3 = 270 + 260 + 240 = 770. So, B_FS = 770.
+    *   B_FS = B_P1 + B_P2 + B_P3 = 275 + 285 + B_P3 = 560 + B_P3.
+    *   So, B_P3 = 770 - 560 = 210.
+    *   P3 Scores: Casey=290, Archer=255, David=240, Bowman=210. (All distinct and multiples of 5).
+
+4.  Final Scores & Ranks:
+    *   Casey (C_FS) = C_P1 + C_P2 + C_P3 = 260 + 255 + 290 = 805.
+    *   Archer (A_FS) = 800.
+    *   David (D_FS) = 770.
+    *   Bowman (B_FS) = 770.
+    *   Tie between David and Bowman (770). Tie-breaking: Higher P3 score gets better rank (Rule 5).
+        *   D_P3 = 240, B_P3 = 210. David's P3 is higher.
+    *   Ranks: 1st Casey (805), 2nd Archer (800), 3rd David (770), 4th Bowman (770).
+
+**Answer to Q2:** The shooter ranked 2nd is Archer, with a Final Score of 800."
+"LRDI","","MOCKFNL012_Q3","3","MOCKFNL012_Set1_Shooting","Set 1 of 5: Three-Phase Target Shooting Tournament
+Six shooters – Archer, Bowman, Casey, David, Eagle, Flint – participated in a three-phase target shooting tournament.
+Rules:
+1.  Phase 1: All six shooters participate. Each shooter takes 3 shots, with a maximum score of 100 per shot (max total 300 for the phase). The top four shooters based on Phase 1 scores qualify for Phase 2.
+2.  Phase 2: The four qualified shooters participate. Each takes 3 shots (max total 300 for the phase). Casey's Phase 2 score was 255.
+3.  Phase 3: The four qualified shooters participate again. Each takes 3 shots (max total 300 for the phase).
+4.  Final Score: The final score for each of the four qualified shooters is the sum of their scores from Phase 1, Phase 2, and Phase 3.
+5.  Ranking: Shooters are ranked based on their Final Scores. In case of a tie in Final Scores, the shooter with a higher Phase 3 score gets a better rank. If Phase 3 scores are also tied, the shooter with a higher Phase 2 score gets a better rank.
+6.  All scores in all phases are distinct positive integers and are multiples of 5.
+Information:
+i.  Archer, Bowman, Casey, and David qualified for Phase 2. Eagle and Flint were eliminated after Phase 1. Flint had the lowest Phase 1 score among all six shooters.
+ii. Archer’s Phase 1 score was 280. Bowman’s Phase 1 score was 275.
+iii. The sum of Phase 1 scores for Eagle and Flint was 500. Eagle’s Phase 1 score was 10 more than Flint’s Phase 1 score.
+iv. Casey’s Phase 1 score was equal to David’s Phase 2 score.
+v.  In Phase 2, Archer scored 20 points less than Bowman. Bowman scored 285 in Phase 2.
+vi. David’s combined score from Phase 1 and Phase 2 (P1+P2) was 530.
+vii. In Phase 3, Casey scored the highest among the four qualifiers with 290 points. Archer scored 15 points more than David in Phase 3.
+viii. The Final Scores of Bowman and David were equal.
+ix. Archer’s Final Score was 800.","What was the sum of David's scores in Phase 1 and Phase 2?","520","525","530","535","A","B","C","D","C","MCQ","Logical Reasoning","Tournament & Scoring Logic","Moderate","Deductive Logic with Multi-phase Scoring","multi-phase scoring, data deduction, sum calculation","False","MOCKFNL012_Set1_Shooting","","Let P1, P2, P3 denote scores in Phase 1, Phase 2, and Phase 3 respectively. FS denotes Final Score.
+
+1.  Phase 1 (P1) Scores:
+    *   Archer (A_P1) = 280 (Info ii).
+    *   Bowman (B_P1) = 275 (Info ii).
+    *   Eagle (E_P1) + Flint (F_P1) = 500; E_P1 = F_P1 + 10 (Info iii).
+        *   2 * F_P1 + 10 = 500 => 2 * F_P1 = 490 => F_P1 = 245.
+        *   E_P1 = 245 + 10 = 255.
+    *   Flint (245) has the lowest P1 score (Info i). Eagle (255) is eliminated.
+    *   The qualifying scores for Archer, Bowman, Casey (C), and David (D) must be greater than 255.
+    *   Casey’s P1 score (C_P1) = David’s P2 score (D_P2) (Info iv).
+    *   David’s P1 score (D_P1) + D_P2 = 530 (Info vi). Substituting D_P2 with C_P1: D_P1 + C_P1 = 530.
+    *   C_P1 and D_P1 are distinct, multiples of 5, greater than 255, and not 280 or 275.
+    *   If C_P1 = 265, then D_P1 = 530 - 265 = 265. This is not allowed as scores must be distinct (Rule 6).
+    *   Thus, C_P1 must be 260. Then D_P1 = 530 - 260 = 270. (Both 260 and 270 satisfy all conditions).
+    *   P1 Scores: Archer=280, Bowman=275, David=270, Casey=260. (Eliminated: Eagle=255, Flint=245).
+
+2.  Phase 2 (P2) Scores:
+    *   Bowman (B_P2) = 285 (Info v).
+    *   Archer (A_P2) = B_P2 - 20 = 285 - 20 = 265 (Info v).
+    *   David (D_P2) = C_P1 = 260 (from P1 calculations and Info iv).
+    *   Casey (C_P2) = 255 (Rule 2).
+    *   P2 Scores: Bowman=285, Archer=265, David=260, Casey=255. (All distinct and multiples of 5).
+
+3.  Phase 3 (P3) Scores:
+    *   Casey (C_P3) = 290 (Highest, Info vii).
+    *   Archer’s Final Score (A_FS) = 800 (Info ix).
+    *   A_FS = A_P1 + A_P2 + A_P3 = 280 + 265 + A_P3 = 545 + A_P3.
+    *   So, A_P3 = 800 - 545 = 255.
+    *   Archer (A_P3) = David (D_P3) + 15 (Info vii) => 255 = D_P3 + 15 => D_P3 = 240.
+    *   Final Scores of Bowman (B_FS) and David (D_FS) are equal (Info viii).
+    *   D_FS = D_P1 + D_P2 + D_P3 = 270 + 260 + 240 = 770. So, B_FS = 770.
+    *   B_FS = B_P1 + B_P2 + B_P3 = 275 + 285 + B_P3 = 560 + B_P3.
+    *   So, B_P3 = 770 - 560 = 210.
+    *   P3 Scores: Casey=290, Archer=255, David=240, Bowman=210. (All distinct and multiples of 5).
+
+4.  Final Scores & Ranks:
+    *   Casey (C_FS) = C_P1 + C_P2 + C_P3 = 260 + 255 + 290 = 805.
+    *   Archer (A_FS) = 800.
+    *   David (D_FS) = 770.
+    *   Bowman (B_FS) = 770.
+    *   Tie between David and Bowman (770). Tie-breaking: Higher P3 score gets better rank (Rule 5).
+        *   D_P3 = 240, B_P3 = 210. David's P3 is higher.
+    *   Ranks: 1st Casey (805), 2nd Archer (800), 3rd David (770), 4th Bowman (770).
+
+**Answer to Q3:** Sum of David's scores in Phase 1 and Phase 2 = D_P1 + D_P2 = 270 + 260 = 530."
+"LRDI","","MOCKFNL012_Q4","4","MOCKFNL012_Set1_Shooting","Set 1 of 5: Three-Phase Target Shooting Tournament
+Six shooters – Archer, Bowman, Casey, David, Eagle, Flint – participated in a three-phase target shooting tournament.
+Rules:
+1.  Phase 1: All six shooters participate. Each shooter takes 3 shots, with a maximum score of 100 per shot (max total 300 for the phase). The top four shooters based on Phase 1 scores qualify for Phase 2.
+2.  Phase 2: The four qualified shooters participate. Each takes 3 shots (max total 300 for the phase). Casey's Phase 2 score was 255.
+3.  Phase 3: The four qualified shooters participate again. Each takes 3 shots (max total 300 for the phase).
+4.  Final Score: The final score for each of the four qualified shooters is the sum of their scores from Phase 1, Phase 2, and Phase 3.
+5.  Ranking: Shooters are ranked based on their Final Scores. In case of a tie in Final Scores, the shooter with a higher Phase 3 score gets a better rank. If Phase 3 scores are also tied, the shooter with a higher Phase 2 score gets a better rank.
+6.  All scores in all phases are distinct positive integers and are multiples of 5.
+Information:
+i.  Archer, Bowman, Casey, and David qualified for Phase 2. Eagle and Flint were eliminated after Phase 1. Flint had the lowest Phase 1 score among all six shooters.
+ii. Archer’s Phase 1 score was 280. Bowman’s Phase 1 score was 275.
+iii. The sum of Phase 1 scores for Eagle and Flint was 500. Eagle’s Phase 1 score was 10 more than Flint’s Phase 1 score.
+iv. Casey’s Phase 1 score was equal to David’s Phase 2 score.
+v.  In Phase 2, Archer scored 20 points less than Bowman. Bowman scored 285 in Phase 2.
+vi. David’s combined score from Phase 1 and Phase 2 (P1+P2) was 530.
+vii. In Phase 3, Casey scored the highest among the four qualifiers with 290 points. Archer scored 15 points more than David in Phase 3.
+viii. The Final Scores of Bowman and David were equal.
+ix. Archer’s Final Score was 800.","Who had the second lowest score in Phase 3 among the four qualifiers?","Archer","Bowman","Casey","David","A","B","C","D","D","MCQ","Logical Reasoning","Tournament & Scoring Logic","Moderate","Deductive Logic with Multi-phase Scoring","multi-phase scoring, comparative ranking, score identification","False","MOCKFNL012_Set1_Shooting","","Let P1, P2, P3 denote scores in Phase 1, Phase 2, and Phase 3 respectively. FS denotes Final Score.
+
+1.  Phase 1 (P1) Scores:
+    *   Archer (A_P1) = 280 (Info ii).
+    *   Bowman (B_P1) = 275 (Info ii).
+    *   Eagle (E_P1) + Flint (F_P1) = 500; E_P1 = F_P1 + 10 (Info iii).
+        *   2 * F_P1 + 10 = 500 => 2 * F_P1 = 490 => F_P1 = 245.
+        *   E_P1 = 245 + 10 = 255.
+    *   Flint (245) has the lowest P1 score (Info i). Eagle (255) is eliminated.
+    *   The qualifying scores for Archer, Bowman, Casey (C), and David (D) must be greater than 255.
+    *   Casey’s P1 score (C_P1) = David’s P2 score (D_P2) (Info iv).
+    *   David’s P1 score (D_P1) + D_P2 = 530 (Info vi). Substituting D_P2 with C_P1: D_P1 + C_P1 = 530.
+    *   C_P1 and D_P1 are distinct, multiples of 5, greater than 255, and not 280 or 275.
+    *   If C_P1 = 265, then D_P1 = 530 - 265 = 265. This is not allowed as scores must be distinct (Rule 6).
+    *   Thus, C_P1 must be 260. Then D_P1 = 530 - 260 = 270. (Both 260 and 270 satisfy all conditions).
+    *   P1 Scores: Archer=280, Bowman=275, David=270, Casey=260. (Eliminated: Eagle=255, Flint=245).
+
+2.  Phase 2 (P2) Scores:
+    *   Bowman (B_P2) = 285 (Info v).
+    *   Archer (A_P2) = B_P2 - 20 = 285 - 20 = 265 (Info v).
+    *   David (D_P2) = C_P1 = 260 (from P1 calculations and Info iv).
+    *   Casey (C_P2) = 255 (Rule 2).
+    *   P2 Scores: Bowman=285, Archer=265, David=260, Casey=255. (All distinct and multiples of 5).
+
+3.  Phase 3 (P3) Scores:
+    *   Casey (C_P3) = 290 (Highest, Info vii).
+    *   Archer’s Final Score (A_FS) = 800 (Info ix).
+    *   A_FS = A_P1 + A_P2 + A_P3 = 280 + 265 + A_P3 = 545 + A_P3.
+    *   So, A_P3 = 800 - 545 = 255.
+    *   Archer (A_P3) = David (D_P3) + 15 (Info vii) => 255 = D_P3 + 15 => D_P3 = 240.
+    *   Final Scores of Bowman (B_FS) and David (D_FS) are equal (Info viii).
+    *   D_FS = D_P1 + D_P2 + D_P3 = 270 + 260 + 240 = 770. So, B_FS = 770.
+    *   B_FS = B_P1 + B_P2 + B_P3 = 275 + 285 + B_P3 = 560 + B_P3.
+    *   So, B_P3 = 770 - 560 = 210.
+    *   P3 Scores: Casey=290, Archer=255, David=240, Bowman=210. (All distinct and multiples of 5).
+
+4.  Final Scores & Ranks:
+    *   Casey (C_FS) = C_P1 + C_P2 + C_P3 = 260 + 255 + 290 = 805.
+    *   Archer (A_FS) = 800.
+    *   David (D_FS) = 770.
+    *   Bowman (B_FS) = 770.
+    *   Tie between David and Bowman (770). Tie-breaking: Higher P3 score gets better rank (Rule 5).
+        *   D_P3 = 240, B_P3 = 210. David's P3 is higher.
+    *   Ranks: 1st Casey (805), 2nd Archer (800), 3rd David (770), 4th Bowman (770).
+
+**Answer to Q4:** P3 Scores are: Casey (290), Archer (255), David (240), Bowman (210). The lowest is Bowman (210) and the second lowest is David (240)."
+"LRDI","","MOCKFNL012_Q5","5","MOCKFNL012_Set1_Shooting","Set 1 of 5: Three-Phase Target Shooting Tournament
+Six shooters – Archer, Bowman, Casey, David, Eagle, Flint – participated in a three-phase target shooting tournament.
+Rules:
+1.  Phase 1: All six shooters participate. Each shooter takes 3 shots, with a maximum score of 100 per shot (max total 300 for the phase). The top four shooters based on Phase 1 scores qualify for Phase 2.
+2.  Phase 2: The four qualified shooters participate. Each takes 3 shots (max total 300 for the phase). Casey's Phase 2 score was 255.
+3.  Phase 3: The four qualified shooters participate again. Each takes 3 shots (max total 300 for the phase).
+4.  Final Score: The final score for each of the four qualified shooters is the sum of their scores from Phase 1, Phase 2, and Phase 3.
+5.  Ranking: Shooters are ranked based on their Final Scores. In case of a tie in Final Scores, the shooter with a higher Phase 3 score gets a better rank. If Phase 3 scores are also tied, the shooter with a higher Phase 2 score gets a better rank.
+6.  All scores in all phases are distinct positive integers and are multiples of 5.
+Information:
+i.  Archer, Bowman, Casey, and David qualified for Phase 2. Eagle and Flint were eliminated after Phase 1. Flint had the lowest Phase 1 score among all six shooters.
+ii. Archer’s Phase 1 score was 280. Bowman’s Phase 1 score was 275.
+iii. The sum of Phase 1 scores for Eagle and Flint was 500. Eagle’s Phase 1 score was 10 more than Flint’s Phase 1 score.
+iv. Casey’s Phase 1 score was equal to David’s Phase 2 score.
+v.  In Phase 2, Archer scored 20 points less than Bowman. Bowman scored 285 in Phase 2.
+vi. David’s combined score from Phase 1 and Phase 2 (P1+P2) was 530.
+vii. In Phase 3, Casey scored the highest among the four qualifiers with 290 points. Archer scored 15 points more than David in Phase 3.
+viii. The Final Scores of Bowman and David were equal.
+ix. Archer’s Final Score was 800.","What was the absolute difference between the Phase 1 scores of Casey and Eagle?","10","15","20","5","A","B","C","D","D","MCQ","Logical Reasoning","Tournament & Scoring Logic","Moderate","Deductive Logic with Multi-phase Scoring","multi-phase scoring, data deduction, difference calculation","False","MOCKFNL012_Set1_Shooting","","Let P1, P2, P3 denote scores in Phase 1, Phase 2, and Phase 3 respectively. FS denotes Final Score.
+
+1.  Phase 1 (P1) Scores:
+    *   Archer (A_P1) = 280 (Info ii).
+    *   Bowman (B_P1) = 275 (Info ii).
+    *   Eagle (E_P1) + Flint (F_P1) = 500; E_P1 = F_P1 + 10 (Info iii).
+        *   2 * F_P1 + 10 = 500 => 2 * F_P1 = 490 => F_P1 = 245.
+        *   E_P1 = 245 + 10 = 255.
+    *   Flint (245) has the lowest P1 score (Info i). Eagle (255) is eliminated.
+    *   The qualifying scores for Archer, Bowman, Casey (C), and David (D) must be greater than 255.
+    *   Casey’s P1 score (C_P1) = David’s P2 score (D_P2) (Info iv).
+    *   David’s P1 score (D_P1) + D_P2 = 530 (Info vi). Substituting D_P2 with C_P1: D_P1 + C_P1 = 530.
+    *   C_P1 and D_P1 are distinct, multiples of 5, greater than 255, and not 280 or 275.
+    *   If C_P1 = 265, then D_P1 = 530 - 265 = 265. This is not allowed as scores must be distinct (Rule 6).
+    *   Thus, C_P1 must be 260. Then D_P1 = 530 - 260 = 270. (Both 260 and 270 satisfy all conditions).
+    *   P1 Scores: Archer=280, Bowman=275, David=270, Casey=260. (Eliminated: Eagle=255, Flint=245).
+
+2.  Phase 2 (P2) Scores:
+    *   Bowman (B_P2) = 285 (Info v).
+    *   Archer (A_P2) = B_P2 - 20 = 285 - 20 = 265 (Info v).
+    *   David (D_P2) = C_P1 = 260 (from P1 calculations and Info iv).
+    *   Casey (C_P2) = 255 (Rule 2).
+    *   P2 Scores: Bowman=285, Archer=265, David=260, Casey=255. (All distinct and multiples of 5).
+
+3.  Phase 3 (P3) Scores:
+    *   Casey (C_P3) = 290 (Highest, Info vii).
+    *   Archer’s Final Score (A_FS) = 800 (Info ix).
+    *   A_FS = A_P1 + A_P2 + A_P3 = 280 + 265 + A_P3 = 545 + A_P3.
+    *   So, A_P3 = 800 - 545 = 255.
+    *   Archer (A_P3) = David (D_P3) + 15 (Info vii) => 255 = D_P3 + 15 => D_P3 = 240.
+    *   Final Scores of Bowman (B_FS) and David (D_FS) are equal (Info viii).
+    *   D_FS = D_P1 + D_P2 + D_P3 = 270 + 260 + 240 = 770. So, B_FS = 770.
+    *   B_FS = B_P1 + B_P2 + B_P3 = 275 + 285 + B_P3 = 560 + B_P3.
+    *   So, B_P3 = 770 - 560 = 210.
+    *   P3 Scores: Casey=290, Archer=255, David=240, Bowman=210. (All distinct and multiples of 5).
+
+4.  Final Scores & Ranks:
+    *   Casey (C_FS) = C_P1 + C_P2 + C_P3 = 260 + 255 + 290 = 805.
+    *   Archer (A_FS) = 800.
+    *   David (D_FS) = 770.
+    *   Bowman (B_FS) = 770.
+    *   Tie between David and Bowman (770). Tie-breaking: Higher P3 score gets better rank (Rule 5).
+        *   D_P3 = 240, B_P3 = 210. David's P3 is higher.
+    *   Ranks: 1st Casey (805), 2nd Archer (800), 3rd David (770), 4th Bowman (770).
+
+**Answer to Q5:** Difference = |C_P1 - E_P1| = |260 - 255| = 5."
+"LRDI","","MOCKFNL012_Q6","6","MOCKFNL012_Set2_Delivery","Set 2 of 5: Delivery Driver Performance
+Four delivery drivers – Raj, Sam, Tom, and Vic – are evaluated based on their performance in the month of June. Their performance is rated on three parameters: Timeliness (T), Package Condition (P), and Customer Interaction (C). The average monthly score for each parameter is on a scale of 0 to 10. A driver's Monthly Performance Score (MPS) is calculated as a weighted average: MPS = 0.4 × T_avg + 0.3 × P_avg + 0.3 × C_avg. All average scores (T_avg, P_avg, C_avg) for any driver are multiples of 0.5.
+Table 1: Number of Deliveries in June
+| Driver | Deliveries |
+|--------|------------|
+| Raj    | 120        |
+| Sam    | 150        |
+| Tom    | 100        |
+| Vic    | 130        |
+
+Table 2: Partial Average Monthly Scores for June
+| Driver | T_avg | P_avg | C_avg |
+|--------|-------|-------|-------|
+| Raj    | 8.5   | X1    | 7.0   |
+| Sam    | X2    | 8.0   | 9.0   |
+| Tom    | 7.0   | 7.5   | X3    |
+| Vic    | X4    | 9.0   | 8.5   |
+
+Additional Information:
+1.  Raj's MPS for June was 7.9.
+2.  Sam's T_avg (X2) was equal to Vic's C_avg (which is 8.5, as given in Table 2).
+3.  Tom's C_avg (X3) was 6.0. Tom's MPS was the lowest among the four drivers.
+4.  Vic's T_avg (X4) was 0.5 higher than Tom's T_avg (which is 7.0, as given in Table 2).
+5.  The highest MPS among the four drivers was 8.5.
+6.  Raj's P_avg (X1) was an integer.","What was Tom's C_avg for June?","6.0","6.5","7.0","5.5","A","B","C","D","A","MCQ","Data Interpretation","Weighted Averages & Table Analysis","Moderate","Table Data Interpretation and Weighted Average Calculation","data deduction from table, weighted average calculation, constraint application","False","MOCKFNL012_Set2_Delivery","","MPS = 0.4 × T_avg + 0.3 × P_avg + 0.3 × C_avg. Scores are multiples of 0.5.
+
+1.  Raj: T_avg=8.5, C_avg=7.0, P_avg=X1 (integer). MPS_Raj = 7.9 (Info 1).
+    *   0.4(8.5) + 0.3(X1) + 0.3(7.0) = 7.9
+    *   3.4 + 0.3*X1 + 2.1 = 7.9
+    *   5.5 + 0.3*X1 = 7.9
+    *   0.3*X1 = 2.4 => X1 = 8. So, Raj's P_avg = 8.0.
+    *   Raj: (T=8.5, P=8.0, C=7.0), MPS=7.9.
+
+2.  Tom: T_avg=7.0 (Table 2).
+    *   Vic's T_avg (X4) = Tom's T_avg + 0.5 = 7.0 + 0.5 = 7.5 (Info 4).
+    *   Sam's T_avg (X2) = Vic's C_avg (Table 2: 8.5) = 8.5 (Info 2).
+
+3.  Sam: T_avg=8.5, P_avg=8.0 (Table 2), C_avg=9.0 (Table 2).
+    *   MPS_Sam = 0.4(8.5) + 0.3(8.0) + 0.3(9.0) = 3.4 + 2.4 + 2.7 = 8.5.
+
+4.  Vic: T_avg=7.5, P_avg=9.0 (Table 2), C_avg=8.5 (Table 2).
+    *   MPS_Vic = 0.4(7.5) + 0.3(9.0) + 0.3(8.5) = 3.0 + 2.7 + 2.55 = 8.25.
+
+5.  Tom: T_avg=7.0, P_avg=7.5 (Table 2). Tom's C_avg (X3) = 6.0 (Info 3).
+    *   MPS_Tom = 0.4(7.0) + 0.3(7.5) + 0.3(6.0) = 2.8 + 2.25 + 1.8 = 6.85.
+
+6.  Check conditions:
+    *   Tom's MPS (6.85) is the lowest. (Matches Info 3).
+    *   Highest MPS is Sam's (8.5). (Matches Info 5).
+
+Summary of scores:
+*   Raj: T=8.5, P=8.0, C=7.0. MPS=7.9.
+*   Sam: T=8.5, P=8.0, C=9.0. MPS=8.5.
+*   Tom: T=7.0, P=7.5, C=6.0. MPS=6.85.
+*   Vic: T=7.5, P=9.0, C=8.5. MPS=8.25.
+
+**Answer to Q6:** Tom's C_avg (X3) is 6.0 as given by Info 3."
+"LRDI","","MOCKFNL012_Q7","7","MOCKFNL012_Set2_Delivery","Set 2 of 5: Delivery Driver Performance
+Four delivery drivers – Raj, Sam, Tom, and Vic – are evaluated based on their performance in the month of June. Their performance is rated on three parameters: Timeliness (T), Package Condition (P), and Customer Interaction (C). The average monthly score for each parameter is on a scale of 0 to 10. A driver's Monthly Performance Score (MPS) is calculated as a weighted average: MPS = 0.4 × T_avg + 0.3 × P_avg + 0.3 × C_avg. All average scores (T_avg, P_avg, C_avg) for any driver are multiples of 0.5.
+Table 1: Number of Deliveries in June
+| Driver | Deliveries |
+|--------|------------|
+| Raj    | 120        |
+| Sam    | 150        |
+| Tom    | 100        |
+| Vic    | 130        |
+
+Table 2: Partial Average Monthly Scores for June
+| Driver | T_avg | P_avg | C_avg |
+|--------|-------|-------|-------|
+| Raj    | 8.5   | X1    | 7.0   |
+| Sam    | X2    | 8.0   | 9.0   |
+| Tom    | 7.0   | 7.5   | X3    |
+| Vic    | X4    | 9.0   | 8.5   |
+
+Additional Information:
+1.  Raj's MPS for June was 7.9.
+2.  Sam's T_avg (X2) was equal to Vic's C_avg (which is 8.5, as given in Table 2).
+3.  Tom's C_avg (X3) was 6.0. Tom's MPS was the lowest among the four drivers.
+4.  Vic's T_avg (X4) was 0.5 higher than Tom's T_avg (which is 7.0, as given in Table 2).
+5.  The highest MPS among the four drivers was 8.5.
+6.  Raj's P_avg (X1) was an integer.","Who had the highest MPS for June?","Raj","Sam","Tom","Vic","A","B","C","D","B","MCQ","Data Interpretation","Weighted Averages & Table Analysis","Moderate","Table Data Interpretation and Weighted Average Calculation","comparative analysis, weighted average calculation, identifying extremes","False","MOCKFNL012_Set2_Delivery","","MPS = 0.4 × T_avg + 0.3 × P_avg + 0.3 × C_avg. Scores are multiples of 0.5.
+
+1.  Raj: T_avg=8.5, C_avg=7.0, P_avg=X1 (integer). MPS_Raj = 7.9 (Info 1).
+    *   0.4(8.5) + 0.3(X1) + 0.3(7.0) = 7.9
+    *   3.4 + 0.3*X1 + 2.1 = 7.9
+    *   5.5 + 0.3*X1 = 7.9
+    *   0.3*X1 = 2.4 => X1 = 8. So, Raj's P_avg = 8.0.
+    *   Raj: (T=8.5, P=8.0, C=7.0), MPS=7.9.
+
+2.  Tom: T_avg=7.0 (Table 2).
+    *   Vic's T_avg (X4) = Tom's T_avg + 0.5 = 7.0 + 0.5 = 7.5 (Info 4).
+    *   Sam's T_avg (X2) = Vic's C_avg (Table 2: 8.5) = 8.5 (Info 2).
+
+3.  Sam: T_avg=8.5, P_avg=8.0 (Table 2), C_avg=9.0 (Table 2).
+    *   MPS_Sam = 0.4(8.5) + 0.3(8.0) + 0.3(9.0) = 3.4 + 2.4 + 2.7 = 8.5.
+
+4.  Vic: T_avg=7.5, P_avg=9.0 (Table 2), C_avg=8.5 (Table 2).
+    *   MPS_Vic = 0.4(7.5) + 0.3(9.0) + 0.3(8.5) = 3.0 + 2.7 + 2.55 = 8.25.
+
+5.  Tom: T_avg=7.0, P_avg=7.5 (Table 2). Tom's C_avg (X3) = 6.0 (Info 3).
+    *   MPS_Tom = 0.4(7.0) + 0.3(7.5) + 0.3(6.0) = 2.8 + 2.25 + 1.8 = 6.85.
+
+6.  Check conditions:
+    *   Tom's MPS (6.85) is the lowest. (Matches Info 3).
+    *   Highest MPS is Sam's (8.5). (Matches Info 5).
+
+Summary of scores:
+*   Raj: T=8.5, P=8.0, C=7.0. MPS=7.9.
+*   Sam: T=8.5, P=8.0, C=9.0. MPS=8.5.
+*   Tom: T=7.0, P=7.5, C=6.0. MPS=6.85.
+*   Vic: T=7.5, P=9.0, C=8.5. MPS=8.25.
+
+**Answer to Q7:** Sam had the highest MPS (8.5). This also matches Info 5."
+"LRDI","","MOCKFNL012_Q8","8","MOCKFNL012_Set2_Delivery","Set 2 of 5: Delivery Driver Performance
+Four delivery drivers – Raj, Sam, Tom, and Vic – are evaluated based on their performance in the month of June. Their performance is rated on three parameters: Timeliness (T), Package Condition (P), and Customer Interaction (C). The average monthly score for each parameter is on a scale of 0 to 10. A driver's Monthly Performance Score (MPS) is calculated as a weighted average: MPS = 0.4 × T_avg + 0.3 × P_avg + 0.3 × C_avg. All average scores (T_avg, P_avg, C_avg) for any driver are multiples of 0.5.
+Table 1: Number of Deliveries in June
+| Driver | Deliveries |
+|--------|------------|
+| Raj    | 120        |
+| Sam    | 150        |
+| Tom    | 100        |
+| Vic    | 130        |
+
+Table 2: Partial Average Monthly Scores for June
+| Driver | T_avg | P_avg | C_avg |
+|--------|-------|-------|-------|
+| Raj    | 8.5   | X1    | 7.0   |
+| Sam    | X2    | 8.0   | 9.0   |
+| Tom    | 7.0   | 7.5   | X3    |
+| Vic    | X4    | 9.0   | 8.5   |
+
+Additional Information:
+1.  Raj's MPS for June was 7.9.
+2.  Sam's T_avg (X2) was equal to Vic's C_avg (which is 8.5, as given in Table 2).
+3.  Tom's C_avg (X3) was 6.0. Tom's MPS was the lowest among the four drivers.
+4.  Vic's T_avg (X4) was 0.5 higher than Tom's T_avg (which is 7.0, as given in Table 2).
+5.  The highest MPS among the four drivers was 8.5.
+6.  Raj's P_avg (X1) was an integer.","What is the average P_avg score for all four drivers combined?","8.00","8.125","8.25","8.375","A","B","C","D","B","MCQ","Data Interpretation","Weighted Averages & Table Analysis","Moderate","Table Data Interpretation and Weighted Average Calculation","data aggregation, average calculation, multi-source data","False","MOCKFNL012_Set2_Delivery","","MPS = 0.4 × T_avg + 0.3 × P_avg + 0.3 × C_avg. Scores are multiples of 0.5.
+
+1.  Raj: T_avg=8.5, C_avg=7.0, P_avg=X1 (integer). MPS_Raj = 7.9 (Info 1).
+    *   0.4(8.5) + 0.3(X1) + 0.3(7.0) = 7.9
+    *   3.4 + 0.3*X1 + 2.1 = 7.9
+    *   5.5 + 0.3*X1 = 7.9
+    *   0.3*X1 = 2.4 => X1 = 8. So, Raj's P_avg = 8.0.
+    *   Raj: (T=8.5, P=8.0, C=7.0), MPS=7.9.
+
+2.  Tom: T_avg=7.0 (Table 2).
+    *   Vic's T_avg (X4) = Tom's T_avg + 0.5 = 7.0 + 0.5 = 7.5 (Info 4).
+    *   Sam's T_avg (X2) = Vic's C_avg (Table 2: 8.5) = 8.5 (Info 2).
+
+3.  Sam: T_avg=8.5, P_avg=8.0 (Table 2), C_avg=9.0 (Table 2).
+    *   MPS_Sam = 0.4(8.5) + 0.3(8.0) + 0.3(9.0) = 3.4 + 2.4 + 2.7 = 8.5.
+
+4.  Vic: T_avg=7.5, P_avg=9.0 (Table 2), C_avg=8.5 (Table 2).
+    *   MPS_Vic = 0.4(7.5) + 0.3(9.0) + 0.3(8.5) = 3.0 + 2.7 + 2.55 = 8.25.
+
+5.  Tom: T_avg=7.0, P_avg=7.5 (Table 2). Tom's C_avg (X3) = 6.0 (Info 3).
+    *   MPS_Tom = 0.4(7.0) + 0.3(7.5) + 0.3(6.0) = 2.8 + 2.25 + 1.8 = 6.85.
+
+6.  Check conditions:
+    *   Tom's MPS (6.85) is the lowest. (Matches Info 3).
+    *   Highest MPS is Sam's (8.5). (Matches Info 5).
+
+Summary of scores:
+*   Raj: T=8.5, P=8.0, C=7.0. MPS=7.9.
+*   Sam: T=8.5, P=8.0, C=9.0. MPS=8.5.
+*   Tom: T=7.0, P=7.5, C=6.0. MPS=6.85.
+*   Vic: T=7.5, P=9.0, C=8.5. MPS=8.25.
+
+**Answer to Q8:** The P_avg scores are Raj=8.0, Sam=8.0, Tom=7.5, Vic=9.0. The average is (8.0 + 8.0 + 7.5 + 9.0) / 4 = 32.5 / 4 = 8.125."
+"LRDI","","MOCKFNL012_Q9","9","MOCKFNL012_Set2_Delivery","Set 2 of 5: Delivery Driver Performance
+Four delivery drivers – Raj, Sam, Tom, and Vic – are evaluated based on their performance in the month of June. Their performance is rated on three parameters: Timeliness (T), Package Condition (P), and Customer Interaction (C). The average monthly score for each parameter is on a scale of 0 to 10. A driver's Monthly Performance Score (MPS) is calculated as a weighted average: MPS = 0.4 × T_avg + 0.3 × P_avg + 0.3 × C_avg. All average scores (T_avg, P_avg, C_avg) for any driver are multiples of 0.5.
+Table 1: Number of Deliveries in June
+| Driver | Deliveries |
+|--------|------------|
+| Raj    | 120        |
+| Sam    | 150        |
+| Tom    | 100        |
+| Vic    | 130        |
+
+Table 2: Partial Average Monthly Scores for June
+| Driver | T_avg | P_avg | C_avg |
+|--------|-------|-------|-------|
+| Raj    | 8.5   | X1    | 7.0   |
+| Sam    | X2    | 8.0   | 9.0   |
+| Tom    | 7.0   | 7.5   | X3    |
+| Vic    | X4    | 9.0   | 8.5   |
+
+Additional Information:
+1.  Raj's MPS for June was 7.9.
+2.  Sam's T_avg (X2) was equal to Vic's C_avg (which is 8.5, as given in Table 2).
+3.  Tom's C_avg (X3) was 6.0. Tom's MPS was the lowest among the four drivers.
+4.  Vic's T_avg (X4) was 0.5 higher than Tom's T_avg (which is 7.0, as given in Table 2).
+5.  The highest MPS among the four drivers was 8.5.
+6.  Raj's P_avg (X1) was an integer.","If a ""Star Driver"" bonus is given to drivers with an MPS of 8.0 or higher, and whose T_avg is at least 8.0, how many drivers received the bonus?","0","1","2","3","A","B","C","D","B","MCQ","Data Interpretation","Weighted Averages & Table Analysis","Moderate","Table Data Interpretation and Weighted Average Calculation","conditional selection, multiple criteria, counting","False","MOCKFNL012_Set2_Delivery","","MPS = 0.4 × T_avg + 0.3 × P_avg + 0.3 × C_avg. Scores are multiples of 0.5.
+
+1.  Raj: T_avg=8.5, C_avg=7.0, P_avg=X1 (integer). MPS_Raj = 7.9 (Info 1).
+    *   0.4(8.5) + 0.3(X1) + 0.3(7.0) = 7.9
+    *   3.4 + 0.3*X1 + 2.1 = 7.9
+    *   5.5 + 0.3*X1 = 7.9
+    *   0.3*X1 = 2.4 => X1 = 8. So, Raj's P_avg = 8.0.
+    *   Raj: (T=8.5, P=8.0, C=7.0), MPS=7.9.
+
+2.  Tom: T_avg=7.0 (Table 2).
+    *   Vic's T_avg (X4) = Tom's T_avg + 0.5 = 7.0 + 0.5 = 7.5 (Info 4).
+    *   Sam's T_avg (X2) = Vic's C_avg (Table 2: 8.5) = 8.5 (Info 2).
+
+3.  Sam: T_avg=8.5, P_avg=8.0 (Table 2), C_avg=9.0 (Table 2).
+    *   MPS_Sam = 0.4(8.5) + 0.3(8.0) + 0.3(9.0) = 3.4 + 2.4 + 2.7 = 8.5.
+
+4.  Vic: T_avg=7.5, P_avg=9.0 (Table 2), C_avg=8.5 (Table 2).
+    *   MPS_Vic = 0.4(7.5) + 0.3(9.0) + 0.3(8.5) = 3.0 + 2.7 + 2.55 = 8.25.
+
+5.  Tom: T_avg=7.0, P_avg=7.5 (Table 2). Tom's C_avg (X3) = 6.0 (Info 3).
+    *   MPS_Tom = 0.4(7.0) + 0.3(7.5) + 0.3(6.0) = 2.8 + 2.25 + 1.8 = 6.85.
+
+6.  Check conditions:
+    *   Tom's MPS (6.85) is the lowest. (Matches Info 3).
+    *   Highest MPS is Sam's (8.5). (Matches Info 5).
+
+Summary of scores:
+*   Raj: T=8.5, P=8.0, C=7.0. MPS=7.9.
+*   Sam: T=8.5, P=8.0, C=9.0. MPS=8.5.
+*   Tom: T=7.0, P=7.5, C=6.0. MPS=6.85.
+*   Vic: T=7.5, P=9.0, C=8.5. MPS=8.25.
+
+**Answer to Q9:**
+Criteria for 'Star Driver': MPS ≥ 8.0 AND T_avg ≥ 8.0.
+*   Raj: MPS=7.9 (No).
+*   Sam: MPS=8.5 (Yes), T_avg=8.5 (Yes). -> Qualifies.
+*   Tom: MPS=6.85 (No).
+*   Vic: MPS=8.25 (Yes), T_avg=7.5 (No).
+Only Sam qualifies. So, 1 driver received the bonus."
+"LRDI","","MOCKFNL012_Q10","10","MOCKFNL012_Set3_Activity","Set 3 of 5: Student Activity Participation
+In a school, there are 150 students. Students can participate in four activities: Debate (D), Quiz (Q), Drama (R), and Music (M). Every student participates in at least one activity.
+The following information is known:
+1.  The number of students who participate in Debate only is 20.
+2.  The number of students who participate in Quiz only is 15.
+3.  The number of students who participate in Drama only is 25.
+4.  The number of students who participate in Music only is 10.
+5.  The number of students who participate in exactly two activities is 60.
+6.  The number of students who participate in exactly three activities is three times the number of students who participate in all four activities.
+7.  The number of students who participate in Debate and Quiz (i.e., in D ∩ Q, possibly with other activities) is 38.
+8.  The number of students who participate in Drama and Music (i.e., in R ∩ M, possibly with other activities) is 35.
+9.  The number of students who participate in Debate and Drama, but not in Quiz (i.e., in (D ∩ R) \ Q) is 18.
+10. The number of students who participate in Quiz and Music, but not in Debate or Drama (i.e., in QM only) is 8.
+11. The total number of students who participate in Debate (N(D)) is 76.
+12. The number of students who participated in Debate, Drama, and Music but not Quiz (N(DRM only)) was 14.
+13. The number of students who participated in Debate, Quiz, and Music but not Drama (N(DQM only)) was 0.
+14. The number of students who participated in Quiz, Drama, and Music but not Debate (N(QRM only)) was 0.","How many students participate in all four activities?","4","5","6","7","A","B","C","D","B","MCQ","Logical Reasoning","Venn Diagrams & Set Theory","Difficult","Set Theory and Venn Diagram Application","4-set Venn diagram, overlapping categories, system of equations from counts","False","MOCKFNL012_Set3_Activity","","Let N(X) be the number of students in activity X. N(XY) for exactly two, N(XYZ) for exactly three, N(DQRM) for all four.
+1.  Total students = 150.
+    N(D only) = 20, N(Q only) = 15, N(R only) = 25, N(M only) = 10.
+    Sum of ""only"" participants = 20 + 15 + 25 + 10 = 70.
+2.  N(exactly 2 activities) = 60 (Info 5).
+3.  Let N(all 4) = x. Then N(exactly 3 activities) = 3x (Info 6).
+4.  Total students = N(only) + N(exactly 2) + N(exactly 3) + N(all 4).
+    150 = 70 + 60 + 3x + x
+    150 = 130 + 4x => 4x = 20 => x = 5.
+    So, N(DQRM) = 5 (students in all four activities).
+    N(exactly 3 activities) = 3 * 5 = 15.
+5.  Specific ""exactly three"" counts:
+    N(DRM only) = 14 (Info 12). ""only"" here means not Quiz.
+    N(DQM only) = 0 (Info 13). ""only"" here means not Drama.
+    N(QRM only) = 0 (Info 14). ""only"" here means not Debate.
+    Let N(DQR only) be the students in Debate, Quiz, Drama but not Music.
+    Sum of ""exactly three"" = N(DQR only) + N(DRM only) + N(DQM only) + N(QRM only) = 15.
+    N(DQR only) + 14 + 0 + 0 = 15 => N(DQR only) = 1.
+6.  Information on intersections:
+    *   N(QM only) = 8 (Info 10). This is students in Quiz and Music, and no other activity.
+    *   N((D ∩ R) \ Q) = 18 (Info 9). This means N(DR only) + N(DRM only) = 18.
+        Since N(DRM only) = 14, N(DR only) = 18 - 14 = 4.
+    *   N(D ∩ Q) = 38 (Info 7). This means N(DQ only) + N(DQR only) + N(DQM only) + N(DQRM) = 38.
+        N(DQ only) + 1 + 0 + 5 = 38 => N(DQ only) = 38 - 6 = 32.
+    *   N(R ∩ M) = 35 (Info 8). This means N(RM only) + N(DRM only) + N(QRM only) + N(DQRM) = 35.
+        N(RM only) + 14 + 0 + 5 = 35 => N(RM only) = 35 - 19 = 16.
+7.  Total N(exactly 2) = N(DQ only) + N(DR only) + N(DM only) + N(QR only) + N(QM only) + N(RM only) = 60.
+    32 + 4 + N(DM only) + N(QR only) + 8 + 16 = 60.
+    60 + N(DM only) + N(QR only) = 60 => N(DM only) + N(QR only) = 0.
+    Since counts must be non-negative, N(DM only) = 0 and N(QR only) = 0.
+8.  Check N(D) = 76 (Info 11).
+    N(D) = N(D only) + N(DQ only) + N(DR only) + N(DM only) + N(DQR only) + N(DQM only) + N(DRM only) + N(DQRM)
+    N(D) = 20 + 32 + 4 + 0 + 1 + 0 + 14 + 5 = 76. This is consistent.
+
+Summary of counts:
+*   N(DQRM) = 5 (all four)
+*   N(exactly 3): N(DQR only)=1, N(DRM only)=14, N(DQM only)=0, N(QRM only)=0. (Sum=15)
+*   N(exactly 2): N(DQ only)=32, N(DR only)=4, N(DM only)=0, N(QR only)=0, N(QM only)=8, N(RM only)=16. (Sum=60)
+*   N(only): N(D only)=20, N(Q only)=15, N(R only)=25, N(M only)=10. (Sum=70)
+Total = 5 + 15 + 60 + 70 = 150.
+
+**Answer to Q10:** The number of students participating in all four activities is N(DQRM) = x = 5."
+"LRDI","","MOCKFNL012_Q11","11","MOCKFNL012_Set3_Activity","Set 3 of 5: Student Activity Participation
+In a school, there are 150 students. Students can participate in four activities: Debate (D), Quiz (Q), Drama (R), and Music (M). Every student participates in at least one activity.
+The following information is known:
+1.  The number of students who participate in Debate only is 20.
+2.  The number of students who participate in Quiz only is 15.
+3.  The number of students who participate in Drama only is 25.
+4.  The number of students who participate in Music only is 10.
+5.  The number of students who participate in exactly two activities is 60.
+6.  The number of students who participate in exactly three activities is three times the number of students who participate in all four activities.
+7.  The number of students who participate in Debate and Quiz (i.e., in D ∩ Q, possibly with other activities) is 38.
+8.  The number of students who participate in Drama and Music (i.e., in R ∩ M, possibly with other activities) is 35.
+9.  The number of students who participate in Debate and Drama, but not in Quiz (i.e., in (D ∩ R) \ Q) is 18.
+10. The number of students who participate in Quiz and Music, but not in Debate or Drama (i.e., in QM only) is 8.
+11. The total number of students who participate in Debate (N(D)) is 76.
+12. The number of students who participated in Debate, Drama, and Music but not Quiz (N(DRM only)) was 14.
+13. The number of students who participated in Debate, Quiz, and Music but not Drama (N(DQM only)) was 0.
+14. The number of students who participated in Quiz, Drama, and Music but not Debate (N(QRM only)) was 0.","How many students participate in Debate and Music only?","0","1","2","3","A","B","C","D","A","MCQ","Logical Reasoning","Venn Diagrams & Set Theory","Difficult","Set Theory and Venn Diagram Application","4-set Venn diagram, specific intersection count, data deduction","False","MOCKFNL012_Set3_Activity","","Let N(X) be the number of students in activity X. N(XY) for exactly two, N(XYZ) for exactly three, N(DQRM) for all four.
+1.  Total students = 150.
+    N(D only) = 20, N(Q only) = 15, N(R only) = 25, N(M only) = 10.
+    Sum of ""only"" participants = 20 + 15 + 25 + 10 = 70.
+2.  N(exactly 2 activities) = 60 (Info 5).
+3.  Let N(all 4) = x. Then N(exactly 3 activities) = 3x (Info 6).
+4.  Total students = N(only) + N(exactly 2) + N(exactly 3) + N(all 4).
+    150 = 70 + 60 + 3x + x
+    150 = 130 + 4x => 4x = 20 => x = 5.
+    So, N(DQRM) = 5 (students in all four activities).
+    N(exactly 3 activities) = 3 * 5 = 15.
+5.  Specific ""exactly three"" counts:
+    N(DRM only) = 14 (Info 12). ""only"" here means not Quiz.
+    N(DQM only) = 0 (Info 13). ""only"" here means not Drama.
+    N(QRM only) = 0 (Info 14). ""only"" here means not Debate.
+    Let N(DQR only) be the students in Debate, Quiz, Drama but not Music.
+    Sum of ""exactly three"" = N(DQR only) + N(DRM only) + N(DQM only) + N(QRM only) = 15.
+    N(DQR only) + 14 + 0 + 0 = 15 => N(DQR only) = 1.
+6.  Information on intersections:
+    *   N(QM only) = 8 (Info 10). This is students in Quiz and Music, and no other activity.
+    *   N((D ∩ R) \ Q) = 18 (Info 9). This means N(DR only) + N(DRM only) = 18.
+        Since N(DRM only) = 14, N(DR only) = 18 - 14 = 4.
+    *   N(D ∩ Q) = 38 (Info 7). This means N(DQ only) + N(DQR only) + N(DQM only) + N(DQRM) = 38.
+        N(DQ only) + 1 + 0 + 5 = 38 => N(DQ only) = 38 - 6 = 32.
+    *   N(R ∩ M) = 35 (Info 8). This means N(RM only) + N(DRM only) + N(QRM only) + N(DQRM) = 35.
+        N(RM only) + 14 + 0 + 5 = 35 => N(RM only) = 35 - 19 = 16.
+7.  Total N(exactly 2) = N(DQ only) + N(DR only) + N(DM only) + N(QR only) + N(QM only) + N(RM only) = 60.
+    32 + 4 + N(DM only) + N(QR only) + 8 + 16 = 60.
+    60 + N(DM only) + N(QR only) = 60 => N(DM only) + N(QR only) = 0.
+    Since counts must be non-negative, N(DM only) = 0 and N(QR only) = 0.
+8.  Check N(D) = 76 (Info 11).
+    N(D) = N(D only) + N(DQ only) + N(DR only) + N(DM only) + N(DQR only) + N(DQM only) + N(DRM only) + N(DQRM)
+    N(D) = 20 + 32 + 4 + 0 + 1 + 0 + 14 + 5 = 76. This is consistent.
+
+Summary of counts:
+*   N(DQRM) = 5 (all four)
+*   N(exactly 3): N(DQR only)=1, N(DRM only)=14, N(DQM only)=0, N(QRM only)=0. (Sum=15)
+*   N(exactly 2): N(DQ only)=32, N(DR only)=4, N(DM only)=0, N(QR only)=0, N(QM only)=8, N(RM only)=16. (Sum=60)
+*   N(only): N(D only)=20, N(Q only)=15, N(R only)=25, N(M only)=10. (Sum=70)
+Total = 5 + 15 + 60 + 70 = 150.
+
+**Answer to Q11:** The number of students participating in Debate and Music only is N(DM only) = 0."
+"LRDI","","MOCKFNL012_Q12","12","MOCKFNL012_Set3_Activity","Set 3 of 5: Student Activity Participation
+In a school, there are 150 students. Students can participate in four activities: Debate (D), Quiz (Q), Drama (R), and Music (M). Every student participates in at least one activity.
+The following information is known:
+1.  The number of students who participate in Debate only is 20.
+2.  The number of students who participate in Quiz only is 15.
+3.  The number of students who participate in Drama only is 25.
+4.  The number of students who participate in Music only is 10.
+5.  The number of students who participate in exactly two activities is 60.
+6.  The number of students who participate in exactly three activities is three times the number of students who participate in all four activities.
+7.  The number of students who participate in Debate and Quiz (i.e., in D ∩ Q, possibly with other activities) is 38.
+8.  The number of students who participate in Drama and Music (i.e., in R ∩ M, possibly with other activities) is 35.
+9.  The number of students who participate in Debate and Drama, but not in Quiz (i.e., in (D ∩ R) \ Q) is 18.
+10. The number of students who participate in Quiz and Music, but not in Debate or Drama (i.e., in QM only) is 8.
+11. The total number of students who participate in Debate (N(D)) is 76.
+12. The number of students who participated in Debate, Drama, and Music but not Quiz (N(DRM only)) was 14.
+13. The number of students who participated in Debate, Quiz, and Music but not Drama (N(DQM only)) was 0.
+14. The number of students who participated in Quiz, Drama, and Music but not Debate (N(QRM only)) was 0.","How many students participate in exactly three activities where Drama is one of these three activities?","13","14","15","16","A","B","C","D","C","MCQ","Logical Reasoning","Venn Diagrams & Set Theory","Difficult","Set Theory and Venn Diagram Application","4-set Venn diagram, conditional sum of intersections, data deduction","False","MOCKFNL012_Set3_Activity","","Let N(X) be the number of students in activity X. N(XY) for exactly two, N(XYZ) for exactly three, N(DQRM) for all four.
+1.  Total students = 150.
+    N(D only) = 20, N(Q only) = 15, N(R only) = 25, N(M only) = 10.
+    Sum of ""only"" participants = 20 + 15 + 25 + 10 = 70.
+2.  N(exactly 2 activities) = 60 (Info 5).
+3.  Let N(all 4) = x. Then N(exactly 3 activities) = 3x (Info 6).
+4.  Total students = N(only) + N(exactly 2) + N(exactly 3) + N(all 4).
+    150 = 70 + 60 + 3x + x
+    150 = 130 + 4x => 4x = 20 => x = 5.
+    So, N(DQRM) = 5 (students in all four activities).
+    N(exactly 3 activities) = 3 * 5 = 15.
+5.  Specific ""exactly three"" counts:
+    N(DRM only) = 14 (Info 12). ""only"" here means not Quiz.
+    N(DQM only) = 0 (Info 13). ""only"" here means not Drama.
+    N(QRM only) = 0 (Info 14). ""only"" here means not Debate.
+    Let N(DQR only) be the students in Debate, Quiz, Drama but not Music.
+    Sum of ""exactly three"" = N(DQR only) + N(DRM only) + N(DQM only) + N(QRM only) = 15.
+    N(DQR only) + 14 + 0 + 0 = 15 => N(DQR only) = 1.
+6.  Information on intersections:
+    *   N(QM only) = 8 (Info 10). This is students in Quiz and Music, and no other activity.
+    *   N((D ∩ R) \ Q) = 18 (Info 9). This means N(DR only) + N(DRM only) = 18.
+        Since N(DRM only) = 14, N(DR only) = 18 - 14 = 4.
+    *   N(D ∩ Q) = 38 (Info 7). This means N(DQ only) + N(DQR only) + N(DQM only) + N(DQRM) = 38.
+        N(DQ only) + 1 + 0 + 5 = 38 => N(DQ only) = 38 - 6 = 32.
+    *   N(R ∩ M) = 35 (Info 8). This means N(RM only) + N(DRM only) + N(QRM only) + N(DQRM) = 35.
+        N(RM only) + 14 + 0 + 5 = 35 => N(RM only) = 35 - 19 = 16.
+7.  Total N(exactly 2) = N(DQ only) + N(DR only) + N(DM only) + N(QR only) + N(QM only) + N(RM only) = 60.
+    32 + 4 + N(DM only) + N(QR only) + 8 + 16 = 60.
+    60 + N(DM only) + N(QR only) = 60 => N(DM only) + N(QR only) = 0.
+    Since counts must be non-negative, N(DM only) = 0 and N(QR only) = 0.
+8.  Check N(D) = 76 (Info 11).
+    N(D) = N(D only) + N(DQ only) + N(DR only) + N(DM only) + N(DQR only) + N(DQM only) + N(DRM only) + N(DQRM)
+    N(D) = 20 + 32 + 4 + 0 + 1 + 0 + 14 + 5 = 76. This is consistent.
+
+Summary of counts:
+*   N(DQRM) = 5 (all four)
+*   N(exactly 3): N(DQR only)=1, N(DRM only)=14, N(DQM only)=0, N(QRM only)=0. (Sum=15)
+*   N(exactly 2): N(DQ only)=32, N(DR only)=4, N(DM only)=0, N(QR only)=0, N(QM only)=8, N(RM only)=16. (Sum=60)
+*   N(only): N(D only)=20, N(Q only)=15, N(R only)=25, N(M only)=10. (Sum=70)
+Total = 5 + 15 + 60 + 70 = 150.
+
+**Answer to Q12:** The number of students in exactly three activities with Drama are N(DQR only), N(DRM only), and N(QRM only). The sum is 1 + 14 + 0 = 15."
+"LRDI","","MOCKFNL012_Q13","13","MOCKFNL012_Set3_Activity","Set 3 of 5: Student Activity Participation
+In a school, there are 150 students. Students can participate in four activities: Debate (D), Quiz (Q), Drama (R), and Music (M). Every student participates in at least one activity.
+The following information is known:
+1.  The number of students who participate in Debate only is 20.
+2.  The number of students who participate in Quiz only is 15.
+3.  The number of students who participate in Drama only is 25.
+4.  The number of students who participate in Music only is 10.
+5.  The number of students who participate in exactly two activities is 60.
+6.  The number of students who participate in exactly three activities is three times the number of students who participate in all four activities.
+7.  The number of students who participate in Debate and Quiz (i.e., in D ∩ Q, possibly with other activities) is 38.
+8.  The number of students who participate in Drama and Music (i.e., in R ∩ M, possibly with other activities) is 35.
+9.  The number of students who participate in Debate and Drama, but not in Quiz (i.e., in (D ∩ R) \ Q) is 18.
+10. The number of students who participate in Quiz and Music, but not in Debate or Drama (i.e., in QM only) is 8.
+11. The total number of students who participate in Debate (N(D)) is 76.
+12. The number of students who participated in Debate, Drama, and Music but not Quiz (N(DRM only)) was 14.
+13. The number of students who participated in Debate, Quiz, and Music but not Drama (N(DQM only)) was 0.
+14. The number of students who participated in Quiz, Drama, and Music but not Debate (N(QRM only)) was 0.","The number of students participating in Quiz and Drama only is equal to the number of students participating in which of the following ""only"" categories?","Debate and Music only","Debate and Drama only","Music and Drama only","Quiz and Music only","A","B","C","D","A","MCQ","Logical Reasoning","Venn Diagrams & Set Theory","Difficult","Set Theory and Venn Diagram Application","4-set Venn diagram, comparing intersection counts, uniqueness of solution","False","MOCKFNL012_Set3_Activity","","Let N(X) be the number of students in activity X. N(XY) for exactly two, N(XYZ) for exactly three, N(DQRM) for all four.
+1.  Total students = 150.
+    N(D only) = 20, N(Q only) = 15, N(R only) = 25, N(M only) = 10.
+    Sum of ""only"" participants = 20 + 15 + 25 + 10 = 70.
+2.  N(exactly 2 activities) = 60 (Info 5).
+3.  Let N(all 4) = x. Then N(exactly 3 activities) = 3x (Info 6).
+4.  Total students = N(only) + N(exactly 2) + N(exactly 3) + N(all 4).
+    150 = 70 + 60 + 3x + x
+    150 = 130 + 4x => 4x = 20 => x = 5.
+    So, N(DQRM) = 5 (students in all four activities).
+    N(exactly 3 activities) = 3 * 5 = 15.
+5.  Specific ""exactly three"" counts:
+    N(DRM only) = 14 (Info 12). ""only"" here means not Quiz.
+    N(DQM only) = 0 (Info 13). ""only"" here means not Drama.
+    N(QRM only) = 0 (Info 14). ""only"" here means not Debate.
+    Let N(DQR only) be the students in Debate, Quiz, Drama but not Music.
+    Sum of ""exactly three"" = N(DQR only) + N(DRM only) + N(DQM only) + N(QRM only) = 15.
+    N(DQR only) + 14 + 0 + 0 = 15 => N(DQR only) = 1.
+6.  Information on intersections:
+    *   N(QM only) = 8 (Info 10). This is students in Quiz and Music, and no other activity.
+    *   N((D ∩ R) \ Q) = 18 (Info 9). This means N(DR only) + N(DRM only) = 18.
+        Since N(DRM only) = 14, N(DR only) = 18 - 14 = 4.
+    *   N(D ∩ Q) = 38 (Info 7). This means N(DQ only) + N(DQR only) + N(DQM only) + N(DQRM) = 38.
+        N(DQ only) + 1 + 0 + 5 = 38 => N(DQ only) = 38 - 6 = 32.
+    *   N(R ∩ M) = 35 (Info 8). This means N(RM only) + N(DRM only) + N(QRM only) + N(DQRM) = 35.
+        N(RM only) + 14 + 0 + 5 = 35 => N(RM only) = 35 - 19 = 16.
+7.  Total N(exactly 2) = N(DQ only) + N(DR only) + N(DM only) + N(QR only) + N(QM only) + N(RM only) = 60.
+    32 + 4 + N(DM only) + N(QR only) + 8 + 16 = 60.
+    60 + N(DM only) + N(QR only) = 60 => N(DM only) + N(QR only) = 0.
+    Since counts must be non-negative, N(DM only) = 0 and N(QR only) = 0.
+8.  Check N(D) = 76 (Info 11).
+    N(D) = N(D only) + N(DQ only) + N(DR only) + N(DM only) + N(DQR only) + N(DQM only) + N(DRM only) + N(DQRM)
+    N(D) = 20 + 32 + 4 + 0 + 1 + 0 + 14 + 5 = 76. This is consistent.
+
+Summary of counts:
+*   N(DQRM) = 5 (all four)
+*   N(exactly 3): N(DQR only)=1, N(DRM only)=14, N(DQM only)=0, N(QRM only)=0. (Sum=15)
+*   N(exactly 2): N(DQ only)=32, N(DR only)=4, N(DM only)=0, N(QR only)=0, N(QM only)=8, N(RM only)=16. (Sum=60)
+*   N(only): N(D only)=20, N(Q only)=15, N(R only)=25, N(M only)=10. (Sum=70)
+Total = 5 + 15 + 60 + 70 = 150.
+
+**Answer to Q13:** From our calculations, the number of students in Quiz and Drama only, N(QR only), is 0. We need to find another 'exactly two' category with 0 students. From the calculations, N(DM only) is also 0. So, 'Quiz and Drama only' (0) is equal to 'Debate and Music only' (0)."
+"LRDI","","MOCKFNL012_Q14","14","MOCKFNL012_Set4_EmployeeHours","Set 4 of 5: Employee Work Hours
+Four employees – Ana, Ben, Clara, and David – work on three projects: Alpha, Beta, and Gamma. The table below shows the hours spent by each employee on each project in a particular week. Some values are missing and denoted by letters.
+Table: Employee Hours per Project
+| Employee | Project Alpha (hrs) | Project Beta (hrs) | Project Gamma (hrs) | Total Weekly Hours |
+|----------|-----------------------|----------------------|-----------------------|--------------------|
+| Ana      | 20                    | A                    | 10                    | 40                 |
+| Ben      | B                     | 15                   | C                     | 40                 |
+| Clara    | 10                    | 20                   | D                     | E                  |
+| David    | F                     | G                    | 15                    | 50                 |
+
+Additional Information:
+1.  A, B, C, D, E, F, G represent positive hours (not necessarily integers). Each employee worked on at least two projects.
+2.  Ana's hours on Project Beta (A) were 50% of her hours on Project Alpha.
+3.  Ben's hours on Project Alpha (B) were equal to Clara's hours on Project Gamma (D).
+4.  Clara's total weekly hours (E) were 5 more than Ben's total weekly hours.
+5.  David spent an equal number of hours on Project Alpha (F) and Project Beta (G).
+6.  The total hours spent by all four employees on Project Gamma is 50.","How many hours did Ana spend on Project Beta (A)?","5","10","15","20","A","B","C","D","B","MCQ","Data Interpretation","Table Analysis & Algebraic Manipulation","Moderate","Table Data Interpretation with Algebraic Constraints","data deduction from table, algebraic substitution, interconnected variables","False","MOCKFNL012_Set4_EmployeeHours","","1.  Ana: Alpha=20, Beta=A, Gamma=10, Total=40 (Table).
+    *   Ana's Beta (A) = 50% of Alpha = 0.5 * 20 = 10 (Info 2).
+    *   Check Ana's Total: 20 (Alpha) + 10 (Beta) + 10 (Gamma) = 40. Consistent. So, A=10.
+
+2.  Ben: Alpha=B, Beta=15, Gamma=C, Total=40 (Table).
+    Clara: Alpha=10, Beta=20, Gamma=D, Total=E (Table).
+    David: Alpha=F, Beta=G, Gamma=15, Total=50 (Table).
+
+3.  Clara's total weekly hours (E) = Ben's Total + 5 = 40 + 5 = 45 (Info 4). So, E=45.
+    *   For Clara: 10 (Alpha) + 20 (Beta) + D (Gamma) = 45 => 30 + D = 45 => D = 15.
+
+4.  Ben's hours on Project Alpha (B) = Clara's hours on Project Gamma (D) = 15 (Info 3). So, B=15.
+    *   For Ben: 15 (Alpha) + 15 (Beta) + C (Gamma) = 40 => 30 + C = 40 => C = 10.
+
+5.  David spent an equal number of hours on Project Alpha (F) and Project Beta (G) (Info 5). So F=G.
+    *   For David: F (Alpha) + G (Beta) + 15 (Gamma) = 50 => 2F + 15 = 50 => 2F = 35 => F = 17.5. So, G=17.5.
+
+6.  Check total hours on Project Gamma (Info 6):
+    *   Ana_Gamma = 10
+    *   Ben_Gamma = C = 10
+    *   Clara_Gamma = D = 15
+    *   David_Gamma = 15 (Table)
+    *   Total Gamma = 10 + 10 + 15 + 15 = 50. Consistent.
+
+Summary of hours:
+*   Ana: Alpha=20, Beta=10, Gamma=10. Total=40.
+*   Ben: Alpha=15, Beta=15, Gamma=10. Total=40.
+*   Clara: Alpha=10, Beta=20, Gamma=15. Total=45.
+*   David: Alpha=17.5, Beta=17.5, Gamma=15. Total=50.
+
+**Answer to Q14:** Ana's hours on Project Beta (A) are calculated as 50% of her Alpha hours (20), which is 10."
+"LRDI","","MOCKFNL012_Q15","15","MOCKFNL012_Set4_EmployeeHours","Set 4 of 5: Employee Work Hours
+Four employees – Ana, Ben, Clara, and David – work on three projects: Alpha, Beta, and Gamma. The table below shows the hours spent by each employee on each project in a particular week. Some values are missing and denoted by letters.
+Table: Employee Hours per Project
+| Employee | Project Alpha (hrs) | Project Beta (hrs) | Project Gamma (hrs) | Total Weekly Hours |
+|----------|-----------------------|----------------------|-----------------------|--------------------|
+| Ana      | 20                    | A                    | 10                    | 40                 |
+| Ben      | B                     | 15                   | C                     | 40                 |
+| Clara    | 10                    | 20                   | D                     | E                  |
+| David    | F                     | G                    | 15                    | 50                 |
+
+Additional Information:
+1.  A, B, C, D, E, F, G represent positive hours (not necessarily integers). Each employee worked on at least two projects.
+2.  Ana's hours on Project Beta (A) were 50% of her hours on Project Alpha.
+3.  Ben's hours on Project Alpha (B) were equal to Clara's hours on Project Gamma (D).
+4.  Clara's total weekly hours (E) were 5 more than Ben's total weekly hours.
+5.  David spent an equal number of hours on Project Alpha (F) and Project Beta (G).
+6.  The total hours spent by all four employees on Project Gamma is 50.","What were Clara's total weekly hours (E)?","40","45","50","55","A","B","C","D","B","MCQ","Data Interpretation","Table Analysis & Algebraic Manipulation","Moderate","Table Data Interpretation with Algebraic Constraints","data deduction from table, constraint application, sum calculation","False","MOCKFNL012_Set4_EmployeeHours","","1.  Ana: Alpha=20, Beta=A, Gamma=10, Total=40 (Table).
+    *   Ana's Beta (A) = 50% of Alpha = 0.5 * 20 = 10 (Info 2).
+    *   Check Ana's Total: 20 (Alpha) + 10 (Beta) + 10 (Gamma) = 40. Consistent. So, A=10.
+
+2.  Ben: Alpha=B, Beta=15, Gamma=C, Total=40 (Table).
+    Clara: Alpha=10, Beta=20, Gamma=D, Total=E (Table).
+    David: Alpha=F, Beta=G, Gamma=15, Total=50 (Table).
+
+3.  Clara's total weekly hours (E) = Ben's Total + 5 = 40 + 5 = 45 (Info 4). So, E=45.
+    *   For Clara: 10 (Alpha) + 20 (Beta) + D (Gamma) = 45 => 30 + D = 45 => D = 15.
+
+4.  Ben's hours on Project Alpha (B) = Clara's hours on Project Gamma (D) = 15 (Info 3). So, B=15.
+    *   For Ben: 15 (Alpha) + 15 (Beta) + C (Gamma) = 40 => 30 + C = 40 => C = 10.
+
+5.  David spent an equal number of hours on Project Alpha (F) and Project Beta (G) (Info 5). So F=G.
+    *   For David: F (Alpha) + G (Beta) + 15 (Gamma) = 50 => 2F + 15 = 50 => 2F = 35 => F = 17.5. So, G=17.5.
+
+6.  Check total hours on Project Gamma (Info 6):
+    *   Ana_Gamma = 10
+    *   Ben_Gamma = C = 10
+    *   Clara_Gamma = D = 15
+    *   David_Gamma = 15 (Table)
+    *   Total Gamma = 10 + 10 + 15 + 15 = 50. Consistent.
+
+Summary of hours:
+*   Ana: Alpha=20, Beta=10, Gamma=10. Total=40.
+*   Ben: Alpha=15, Beta=15, Gamma=10. Total=40.
+*   Clara: Alpha=10, Beta=20, Gamma=15. Total=45.
+*   David: Alpha=17.5, Beta=17.5, Gamma=15. Total=50.
+
+**Answer to Q15:** Clara's total weekly hours (E) were 5 more than Ben's total (40), so E = 45 hours."
+"LRDI","","MOCKFNL012_Q16","16","MOCKFNL012_Set4_EmployeeHours","Set 4 of 5: Employee Work Hours
+Four employees – Ana, Ben, Clara, and David – work on three projects: Alpha, Beta, and Gamma. The table below shows the hours spent by each employee on each project in a particular week. Some values are missing and denoted by letters.
+Table: Employee Hours per Project
+| Employee | Project Alpha (hrs) | Project Beta (hrs) | Project Gamma (hrs) | Total Weekly Hours |
+|----------|-----------------------|----------------------|-----------------------|--------------------|
+| Ana      | 20                    | A                    | 10                    | 40                 |
+| Ben      | B                     | 15                   | C                     | 40                 |
+| Clara    | 10                    | 20                   | D                     | E                  |
+| David    | F                     | G                    | 15                    | 50                 |
+
+Additional Information:
+1.  A, B, C, D, E, F, G represent positive hours (not necessarily integers). Each employee worked on at least two projects.
+2.  Ana's hours on Project Beta (A) were 50% of her hours on Project Alpha.
+3.  Ben's hours on Project Alpha (B) were equal to Clara's hours on Project Gamma (D).
+4.  Clara's total weekly hours (E) were 5 more than Ben's total weekly hours.
+5.  David spent an equal number of hours on Project Alpha (F) and Project Beta (G).
+6.  The total hours spent by all four employees on Project Gamma is 50.","How many hours did Ben spend on Project Gamma (C)?","5","10","15","20","A","B","C","D","B","MCQ","Data Interpretation","Table Analysis & Algebraic Manipulation","Moderate","Table Data Interpretation with Algebraic Constraints","data deduction from table, solving for unknowns, interconnected variables","False","MOCKFNL012_Set4_EmployeeHours","","1.  Ana: Alpha=20, Beta=A, Gamma=10, Total=40 (Table).
+    *   Ana's Beta (A) = 50% of Alpha = 0.5 * 20 = 10 (Info 2).
+    *   Check Ana's Total: 20 (Alpha) + 10 (Beta) + 10 (Gamma) = 40. Consistent. So, A=10.
+
+2.  Ben: Alpha=B, Beta=15, Gamma=C, Total=40 (Table).
+    Clara: Alpha=10, Beta=20, Gamma=D, Total=E (Table).
+    David: Alpha=F, Beta=G, Gamma=15, Total=50 (Table).
+
+3.  Clara's total weekly hours (E) = Ben's Total + 5 = 40 + 5 = 45 (Info 4). So, E=45.
+    *   For Clara: 10 (Alpha) + 20 (Beta) + D (Gamma) = 45 => 30 + D = 45 => D = 15.
+
+4.  Ben's hours on Project Alpha (B) = Clara's hours on Project Gamma (D) = 15 (Info 3). So, B=15.
+    *   For Ben: 15 (Alpha) + 15 (Beta) + C (Gamma) = 40 => 30 + C = 40 => C = 10.
+
+5.  David spent an equal number of hours on Project Alpha (F) and Project Beta (G) (Info 5). So F=G.
+    *   For David: F (Alpha) + G (Beta) + 15 (Gamma) = 50 => 2F + 15 = 50 => 2F = 35 => F = 17.5. So, G=17.5.
+
+6.  Check total hours on Project Gamma (Info 6):
+    *   Ana_Gamma = 10
+    *   Ben_Gamma = C = 10
+    *   Clara_Gamma = D = 15
+    *   David_Gamma = 15 (Table)
+    *   Total Gamma = 10 + 10 + 15 + 15 = 50. Consistent.
+
+Summary of hours:
+*   Ana: Alpha=20, Beta=10, Gamma=10. Total=40.
+*   Ben: Alpha=15, Beta=15, Gamma=10. Total=40.
+*   Clara: Alpha=10, Beta=20, Gamma=15. Total=45.
+*   David: Alpha=17.5, Beta=17.5, Gamma=15. Total=50.
+
+**Answer to Q16:** After finding Clara's Gamma hours (D=15) and Ben's Alpha hours (B=15), we can find Ben's Gamma hours (C). Ben's total is 40. So, 15 (Alpha) + 15 (Beta) + C = 40, which gives C = 10."
+"LRDI","","MOCKFNL012_Q17","17","MOCKFNL012_Set4_EmployeeHours","Set 4 of 5: Employee Work Hours
+Four employees – Ana, Ben, Clara, and David – work on three projects: Alpha, Beta, and Gamma. The table below shows the hours spent by each employee on each project in a particular week. Some values are missing and denoted by letters.
+Table: Employee Hours per Project
+| Employee | Project Alpha (hrs) | Project Beta (hrs) | Project Gamma (hrs) | Total Weekly Hours |
+|----------|-----------------------|----------------------|-----------------------|--------------------|
+| Ana      | 20                    | A                    | 10                    | 40                 |
+| Ben      | B                     | 15                   | C                     | 40                 |
+| Clara    | 10                    | 20                   | D                     | E                  |
+| David    | F                     | G                    | 15                    | 50                 |
+
+Additional Information:
+1.  A, B, C, D, E, F, G represent positive hours (not necessarily integers). Each employee worked on at least two projects.
+2.  Ana's hours on Project Beta (A) were 50% of her hours on Project Alpha.
+3.  Ben's hours on Project Alpha (B) were equal to Clara's hours on Project Gamma (D).
+4.  Clara's total weekly hours (E) were 5 more than Ben's total weekly hours.
+5.  David spent an equal number of hours on Project Alpha (F) and Project Beta (G).
+6.  The total hours spent by all four employees on Project Gamma is 50.","Which employee spent the most hours on Project Alpha?","Ana","Ben","Clara","David","A","B","C","D","A","MCQ","Data Interpretation","Table Analysis & Algebraic Manipulation","Moderate","Table Data Interpretation with Algebraic Constraints","comparative analysis, data extraction, identifying maximum","False","MOCKFNL012_Set4_EmployeeHours","","1.  Ana: Alpha=20, Beta=A, Gamma=10, Total=40 (Table).
+    *   Ana's Beta (A) = 50% of Alpha = 0.5 * 20 = 10 (Info 2).
+    *   Check Ana's Total: 20 (Alpha) + 10 (Beta) + 10 (Gamma) = 40. Consistent. So, A=10.
+
+2.  Ben: Alpha=B, Beta=15, Gamma=C, Total=40 (Table).
+    Clara: Alpha=10, Beta=20, Gamma=D, Total=E (Table).
+    David: Alpha=F, Beta=G, Gamma=15, Total=50 (Table).
+
+3.  Clara's total weekly hours (E) = Ben's Total + 5 = 40 + 5 = 45 (Info 4). So, E=45.
+    *   For Clara: 10 (Alpha) + 20 (Beta) + D (Gamma) = 45 => 30 + D = 45 => D = 15.
+
+4.  Ben's hours on Project Alpha (B) = Clara's hours on Project Gamma (D) = 15 (Info 3). So, B=15.
+    *   For Ben: 15 (Alpha) + 15 (Beta) + C (Gamma) = 40 => 30 + C = 40 => C = 10.
+
+5.  David spent an equal number of hours on Project Alpha (F) and Project Beta (G) (Info 5). So F=G.
+    *   For David: F (Alpha) + G (Beta) + 15 (Gamma) = 50 => 2F + 15 = 50 => 2F = 35 => F = 17.5. So, G=17.5.
+
+6.  Check total hours on Project Gamma (Info 6):
+    *   Ana_Gamma = 10
+    *   Ben_Gamma = C = 10
+    *   Clara_Gamma = D = 15
+    *   David_Gamma = 15 (Table)
+    *   Total Gamma = 10 + 10 + 15 + 15 = 50. Consistent.
+
+Summary of hours:
+*   Ana: Alpha=20, Beta=10, Gamma=10. Total=40.
+*   Ben: Alpha=15, Beta=15, Gamma=10. Total=40.
+*   Clara: Alpha=10, Beta=20, Gamma=15. Total=45.
+*   David: Alpha=17.5, Beta=17.5, Gamma=15. Total=50.
+
+**Answer to Q17:** Comparing the hours spent on Project Alpha: Ana=20, Ben=15, Clara=10, David=17.5. Ana spent the most hours (20)."
+"LRDI","","MOCKFNL012_Q18","18","MOCKFNL012_Set5_Diplomats","Set 5 of 5: Diplomatic Summit Seating
+Six diplomats – Alistair, Beatrice, Charles, Diana, Edward, and Fiona – are attending a summit. They are from six different countries: India, Peru, Kenya, Mexico, Japan, and Norway. They are seated in a single row of six chairs, numbered 1 to 6 from left to right.
+The following information is known about their seating arrangement and nationalities:
+1.  Alistair, who is from India, is seated at one of the extreme ends of the row.
+2.  The diplomat from Kenya is seated at position 3.
+3.  Beatrice is seated immediately to the right of the diplomat from India.
+4.  Diana, who is from Mexico, is seated immediately to the left of Edward.
+5.  Fiona is not from Japan or Peru. The diplomat from Norway is seated at an even-numbered position.
+6.  Charles is not from Mexico and is not seated at an extreme end position.
+7.  The diplomat from Peru is seated to the left of the diplomat from Kenya (not necessarily immediately left).
+8.  The diplomat from Japan is seated at an odd-numbered position.","Who is the diplomat from Japan?","Alistair","Charles","Edward","Fiona","A","B","C","D","C","MCQ","Logical Reasoning","Linear Arrangement & Deductive Logic","Moderate","Linear Arrangement with Attribute Matching","seating arrangement, attribute matching, constraint satisfaction, scenario analysis","False","MOCKFNL012_Set5_Diplomats","","Positions: 1-6 from left to right.
+1.  Alistair (India) is at an extreme end (P1 or P6) (Clue 1). Beatrice is immediately to the right of the diplomat from India (Clue 3). This means Alistair (India) must be at P1, and Beatrice is at P2.
+    *   P1: Alistair (India), P2: Beatrice (Country TBD).
+2.  The diplomat from Kenya is at P3 (Clue 2).
+    *   P1: Alistair (India), P2: Beatrice (Country TBD), P3: (Kenya).
+3.  The diplomat from Peru is to the left of the diplomat from Kenya (P3) (Clue 7). Peru can be at P1 or P2. P1 is India, so Peru must be at P2. Thus, Beatrice is from Peru.
+    *   P1: Alistair (India), P2: Beatrice (Peru), P3: (Kenya).
+4.  The diplomat from Japan is at an odd-numbered position (P1, P3, or P5) (Clue 8).
+    *   P1 is India, P3 is Kenya. Therefore, the diplomat from Japan must be at P5.
+    *   P1: Alistair (India), P2: Beatrice (Peru), P3: (Kenya), P4: ( ), P5: (Japan), P6: ( ).
+5.  Diana (Mexico) is seated immediately to the left of Edward (D(Mex), E block) (Clue 4).
+    *   Given P5 is Japan, if Edward is from Japan, then E is at P5. Diana (Mexico) must be at P4.
+    *   This configuration: P4: Diana (Mexico), P5: Edward (Japan).
+    *   Current layout: P1:A(India), P2:B(Peru), P3:(Kenya), P4:D(Mexico), P5:E(Japan), P6:( ).
+6.  The diplomat from Norway is at an even-numbered position (P2, P4, P6) (Clue 5).
+    *   P2 is Peru, P4 is Mexico. So, Norway must be at P6.
+    *   Current layout: P1:A(India), P2:B(Peru), P3:(Kenya), P4:D(Mexico), P5:E(Japan), P6:(Norway).
+7.  Remaining diplomats are Charles and Fiona. Remaining positions for them are P3 (to be Kenya) and P6 (to be Norway).
+    *   Case 1: Charles is at P3 (Kenya), Fiona is at P6 (Norway).
+        *   Charles (Kenya): Not from Mexico (Clue 6 - satisfied). Not at an extreme end (P3 is not extreme) (Clue 6 - satisfied).
+        *   Fiona (Norway): Not from Japan or Peru (Clue 5 - satisfied, as she is Norway).
+        *   This case is valid.
+    *   Case 2: Fiona is at P3 (Kenya), Charles is at P6 (Norway).
+        *   Fiona (Kenya): Not from Japan or Peru (Clue 5 - satisfied).
+        *   Charles (Norway): Not from Mexico (Clue 6 - satisfied). Charles is at P6, which is an extreme end. This violates Clue 6.
+        *   This case is invalid.
+8.  Therefore, the unique valid arrangement is:
+    *   Position 1: Alistair (India)
+    *   Position 2: Beatrice (Peru)
+    *   Position 3: Charles (Kenya)
+    *   Position 4: Diana (Mexico)
+    *   Position 5: Edward (Japan)
+    *   Position 6: Fiona (Norway)
+
+**Answer to Q18:** Edward is from Japan."
+"LRDI","","MOCKFNL012_Q19","19","MOCKFNL012_Set5_Diplomats","Set 5 of 5: Diplomatic Summit Seating
+Six diplomats – Alistair, Beatrice, Charles, Diana, Edward, and Fiona – are attending a summit. They are from six different countries: India, Peru, Kenya, Mexico, Japan, and Norway. They are seated in a single row of six chairs, numbered 1 to 6 from left to right.
+The following information is known about their seating arrangement and nationalities:
+1.  Alistair, who is from India, is seated at one of the extreme ends of the row.
+2.  The diplomat from Kenya is seated at position 3.
+3.  Beatrice is seated immediately to the right of the diplomat from India.
+4.  Diana, who is from Mexico, is seated immediately to the left of Edward.
+5.  Fiona is not from Japan or Peru. The diplomat from Norway is seated at an even-numbered position.
+6.  Charles is not from Mexico and is not seated at an extreme end position.
+7.  The diplomat from Peru is seated to the left of the diplomat from Kenya (not necessarily immediately left).
+8.  The diplomat from Japan is seated at an odd-numbered position.","At which position is Charles seated?","Position 2","Position 3","Position 4","Position 5","A","B","C","D","B","MCQ","Logical Reasoning","Linear Arrangement & Deductive Logic","Moderate","Linear Arrangement with Attribute Matching","seating arrangement, position identification, constraint satisfaction, scenario analysis","False","MOCKFNL012_Set5_Diplomats","","Positions: 1-6 from left to right.
+1.  Alistair (India) is at an extreme end (P1 or P6) (Clue 1). Beatrice is immediately to the right of the diplomat from India (Clue 3). This means Alistair (India) must be at P1, and Beatrice is at P2.
+    *   P1: Alistair (India), P2: Beatrice (Country TBD).
+2.  The diplomat from Kenya is at P3 (Clue 2).
+    *   P1: Alistair (India), P2: Beatrice (Country TBD), P3: (Kenya).
+3.  The diplomat from Peru is to the left of the diplomat from Kenya (P3) (Clue 7). Peru can be at P1 or P2. P1 is India, so Peru must be at P2. Thus, Beatrice is from Peru.
+    *   P1: Alistair (India), P2: Beatrice (Peru), P3: (Kenya).
+4.  The diplomat from Japan is at an odd-numbered position (P1, P3, or P5) (Clue 8).
+    *   P1 is India, P3 is Kenya. Therefore, the diplomat from Japan must be at P5.
+    *   P1: Alistair (India), P2: Beatrice (Peru), P3: (Kenya), P4: ( ), P5: (Japan), P6: ( ).
+5.  Diana (Mexico) is seated immediately to the left of Edward (D(Mex), E block) (Clue 4).
+    *   Given P5 is Japan, if Edward is from Japan, then E is at P5. Diana (Mexico) must be at P4.
+    *   This configuration: P4: Diana (Mexico), P5: Edward (Japan).
+    *   Current layout: P1:A(India), P2:B(Peru), P3:(Kenya), P4:D(Mexico), P5:E(Japan), P6:( ).
+6.  The diplomat from Norway is at an even-numbered position (P2, P4, P6) (Clue 5).
+    *   P2 is Peru, P4 is Mexico. So, Norway must be at P6.
+    *   Current layout: P1:A(India), P2:B(Peru), P3:(Kenya), P4:D(Mexico), P5:E(Japan), P6:(Norway).
+7.  Remaining diplomats are Charles and Fiona. Remaining positions for them are P3 (to be Kenya) and P6 (to be Norway).
+    *   Case 1: Charles is at P3 (Kenya), Fiona is at P6 (Norway).
+        *   Charles (Kenya): Not from Mexico (Clue 6 - satisfied). Not at an extreme end (P3 is not extreme) (Clue 6 - satisfied).
+        *   Fiona (Norway): Not from Japan or Peru (Clue 5 - satisfied, as she is Norway).
+        *   This case is valid.
+    *   Case 2: Fiona is at P3 (Kenya), Charles is at P6 (Norway).
+        *   Fiona (Kenya): Not from Japan or Peru (Clue 5 - satisfied).
+        *   Charles (Norway): Not from Mexico (Clue 6 - satisfied). Charles is at P6, which is an extreme end. This violates Clue 6.
+        *   This case is invalid.
+8.  Therefore, the unique valid arrangement is:
+    *   Position 1: Alistair (India)
+    *   Position 2: Beatrice (Peru)
+    *   Position 3: Charles (Kenya)
+    *   Position 4: Diana (Mexico)
+    *   Position 5: Edward (Japan)
+    *   Position 6: Fiona (Norway)
+
+**Answer to Q19:** Charles is seated at Position 3."
+"LRDI","","MOCKFNL012_Q20","20","MOCKFNL012_Set5_Diplomats","Set 5 of 5: Diplomatic Summit Seating
+Six diplomats – Alistair, Beatrice, Charles, Diana, Edward, and Fiona – are attending a summit. They are from six different countries: India, Peru, Kenya, Mexico, Japan, and Norway. They are seated in a single row of six chairs, numbered 1 to 6 from left to right.
+The following information is known about their seating arrangement and nationalities:
+1.  Alistair, who is from India, is seated at one of the extreme ends of the row.
+2.  The diplomat from Kenya is seated at position 3.
+3.  Beatrice is seated immediately to the right of the diplomat from India.
+4.  Diana, who is from Mexico, is seated immediately to the left of Edward.
+5.  Fiona is not from Japan or Peru. The diplomat from Norway is seated at an even-numbered position.
+6.  Charles is not from Mexico and is not seated at an extreme end position.
+7.  The diplomat from Peru is seated to the left of the diplomat from Kenya (not necessarily immediately left).
+8.  The diplomat from Japan is seated at an odd-numbered position.","Which country does Beatrice represent?","Peru","Kenya","Japan","Norway","A","B","C","D","A","MCQ","Logical Reasoning","Linear Arrangement & Deductive Logic","Moderate","Linear Arrangement with Attribute Matching","seating arrangement, attribute matching, constraint satisfaction, scenario analysis","False","MOCKFNL012_Set5_Diplomats","","Positions: 1-6 from left to right.
+1.  Alistair (India) is at an extreme end (P1 or P6) (Clue 1). Beatrice is immediately to the right of the diplomat from India (Clue 3). This means Alistair (India) must be at P1, and Beatrice is at P2.
+    *   P1: Alistair (India), P2: Beatrice (Country TBD).
+2.  The diplomat from Kenya is at P3 (Clue 2).
+    *   P1: Alistair (India), P2: Beatrice (Country TBD), P3: (Kenya).
+3.  The diplomat from Peru is to the left of the diplomat from Kenya (P3) (Clue 7). Peru can be at P1 or P2. P1 is India, so Peru must be at P2. Thus, Beatrice is from Peru.
+    *   P1: Alistair (India), P2: Beatrice (Peru), P3: (Kenya).
+4.  The diplomat from Japan is at an odd-numbered position (P1, P3, or P5) (Clue 8).
+    *   P1 is India, P3 is Kenya. Therefore, the diplomat from Japan must be at P5.
+    *   P1: Alistair (India), P2: Beatrice (Peru), P3: (Kenya), P4: ( ), P5: (Japan), P6: ( ).
+5.  Diana (Mexico) is seated immediately to the left of Edward (D(Mex), E block) (Clue 4).
+    *   Given P5 is Japan, if Edward is from Japan, then E is at P5. Diana (Mexico) must be at P4.
+    *   This configuration: P4: Diana (Mexico), P5: Edward (Japan).
+    *   Current layout: P1:A(India), P2:B(Peru), P3:(Kenya), P4:D(Mexico), P5:E(Japan), P6:( ).
+6.  The diplomat from Norway is at an even-numbered position (P2, P4, P6) (Clue 5).
+    *   P2 is Peru, P4 is Mexico. So, Norway must be at P6.
+    *   Current layout: P1:A(India), P2:B(Peru), P3:(Kenya), P4:D(Mexico), P5:E(Japan), P6:(Norway).
+7.  Remaining diplomats are Charles and Fiona. Remaining positions for them are P3 (to be Kenya) and P6 (to be Norway).
+    *   Case 1: Charles is at P3 (Kenya), Fiona is at P6 (Norway).
+        *   Charles (Kenya): Not from Mexico (Clue 6 - satisfied). Not at an extreme end (P3 is not extreme) (Clue 6 - satisfied).
+        *   Fiona (Norway): Not from Japan or Peru (Clue 5 - satisfied, as she is Norway).
+        *   This case is valid.
+    *   Case 2: Fiona is at P3 (Kenya), Charles is at P6 (Norway).
+        *   Fiona (Kenya): Not from Japan or Peru (Clue 5 - satisfied).
+        *   Charles (Norway): Not from Mexico (Clue 6 - satisfied). Charles is at P6, which is an extreme end. This violates Clue 6.
+        *   This case is invalid.
+8.  Therefore, the unique valid arrangement is:
+    *   Position 1: Alistair (India)
+    *   Position 2: Beatrice (Peru)
+    *   Position 3: Charles (Kenya)
+    *   Position 4: Diana (Mexico)
+    *   Position 5: Edward (Japan)
+    *   Position 6: Fiona (Norway)
+
+**Answer to Q20:** Beatrice is seated at Position 2 and represents Peru."
+"LRDI","","MOCKFNL012_Q21","21","MOCKFNL012_Set5_Diplomats","Set 5 of 5: Diplomatic Summit Seating
+Six diplomats – Alistair, Beatrice, Charles, Diana, Edward, and Fiona – are attending a summit. They are from six different countries: India, Peru, Kenya, Mexico, Japan, and Norway. They are seated in a single row of six chairs, numbered 1 to 6 from left to right.
+The following information is known about their seating arrangement and nationalities:
+1.  Alistair, who is from India, is seated at one of the extreme ends of the row.
+2.  The diplomat from Kenya is seated at position 3.
+3.  Beatrice is seated immediately to the right of the diplomat from India.
+4.  Diana, who is from Mexico, is seated immediately to the left of Edward.
+5.  Fiona is not from Japan or Peru. The diplomat from Norway is seated at an even-numbered position.
+6.  Charles is not from Mexico and is not seated at an extreme end position.
+7.  The diplomat from Peru is seated to the left of the diplomat from Kenya (not necessarily immediately left).
+8.  The diplomat from Japan is seated at an odd-numbered position.","Which of the following statements is definitely true?","Edward is from Norway.","The diplomat from Peru is at position 2.","Fiona is seated at position 4.","Charles is from India.","A","B","C","D","B","MCQ","Logical Reasoning","Linear Arrangement & Deductive Logic","Moderate","Linear Arrangement with Attribute Matching","seating arrangement, definite truth, constraint satisfaction, scenario analysis","False","MOCKFNL012_Set5_Diplomats","","Positions: 1-6 from left to right.
+1.  Alistair (India) is at an extreme end (P1 or P6) (Clue 1). Beatrice is immediately to the right of the diplomat from India (Clue 3). This means Alistair (India) must be at P1, and Beatrice is at P2.
+    *   P1: Alistair (India), P2: Beatrice (Country TBD).
+2.  The diplomat from Kenya is at P3 (Clue 2).
+    *   P1: Alistair (India), P2: Beatrice (Country TBD), P3: (Kenya).
+3.  The diplomat from Peru is to the left of the diplomat from Kenya (P3) (Clue 7). Peru can be at P1 or P2. P1 is India, so Peru must be at P2. Thus, Beatrice is from Peru.
+    *   P1: Alistair (India), P2: Beatrice (Peru), P3: (Kenya).
+4.  The diplomat from Japan is at an odd-numbered position (P1, P3, or P5) (Clue 8).
+    *   P1 is India, P3 is Kenya. Therefore, the diplomat from Japan must be at P5.
+    *   P1: Alistair (India), P2: Beatrice (Peru), P3: (Kenya), P4: ( ), P5: (Japan), P6: ( ).
+5.  Diana (Mexico) is seated immediately to the left of Edward (D(Mex), E block) (Clue 4).
+    *   Given P5 is Japan, if Edward is from Japan, then E is at P5. Diana (Mexico) must be at P4.
+    *   This configuration: P4: Diana (Mexico), P5: Edward (Japan).
+    *   Current layout: P1:A(India), P2:B(Peru), P3:(Kenya), P4:D(Mexico), P5:E(Japan), P6:( ).
+6.  The diplomat from Norway is at an even-numbered position (P2, P4, P6) (Clue 5).
+    *   P2 is Peru, P4 is Mexico. So, Norway must be at P6.
+    *   Current layout: P1:A(India), P2:B(Peru), P3:(Kenya), P4:D(Mexico), P5:E(Japan), P6:(Norway).
+7.  Remaining diplomats are Charles and Fiona. Remaining positions for them are P3 (to be Kenya) and P6 (to be Norway).
+    *   Case 1: Charles is at P3 (Kenya), Fiona is at P6 (Norway).
+        *   Charles (Kenya): Not from Mexico (Clue 6 - satisfied). Not at an extreme end (P3 is not extreme) (Clue 6 - satisfied).
+        *   Fiona (Norway): Not from Japan or Peru (Clue 5 - satisfied, as she is Norway).
+        *   This case is valid.
+    *   Case 2: Fiona is at P3 (Kenya), Charles is at P6 (Norway).
+        *   Fiona (Kenya): Not from Japan or Peru (Clue 5 - satisfied).
+        *   Charles (Norway): Not from Mexico (Clue 6 - satisfied). Charles is at P6, which is an extreme end. This violates Clue 6.
+        *   This case is invalid.
+8.  Therefore, the unique valid arrangement is:
+    *   Position 1: Alistair (India)
+    *   Position 2: Beatrice (Peru)
+    *   Position 3: Charles (Kenya)
+    *   Position 4: Diana (Mexico)
+    *   Position 5: Edward (Japan)
+    *   Position 6: Fiona (Norway)
+
+**Answer to Q21:**
+A) Edward is from Norway. (False, Edward is from Japan).
+B) The diplomat from Peru is at position 2. (True, Beatrice from Peru is at P2).
+C) Fiona is seated at position 4. (False, Fiona is at P6).
+D) Charles is from India. (False, Charles is from Kenya)."
+"LRDI","","MOCKFNL012_Q22","22","MOCKFNL012_Set5_Diplomats","Set 5 of 5: Diplomatic Summit Seating
+Six diplomats – Alistair, Beatrice, Charles, Diana, Edward, and Fiona – are attending a summit. They are from six different countries: India, Peru, Kenya, Mexico, Japan, and Norway. They are seated in a single row of six chairs, numbered 1 to 6 from left to right.
+The following information is known about their seating arrangement and nationalities:
+1.  Alistair, who is from India, is seated at one of the extreme ends of the row.
+2.  The diplomat from Kenya is seated at position 3.
+3.  Beatrice is seated immediately to the right of the diplomat from India.
+4.  Diana, who is from Mexico, is seated immediately to the left of Edward.
+5.  Fiona is not from Japan or Peru. The diplomat from Norway is seated at an even-numbered position.
+6.  Charles is not from Mexico and is not seated at an extreme end position.
+7.  The diplomat from Peru is seated to the left of the diplomat from Kenya (not necessarily immediately left).
+8.  The diplomat from Japan is seated at an odd-numbered position.","What is the nationality of the diplomat seated at position 6?","Japan","Norway","Mexico","Peru","A","B","C","D","B","MCQ","Logical Reasoning","Linear Arrangement & Deductive Logic","Moderate","Linear Arrangement with Attribute Matching","seating arrangement, attribute matching, constraint satisfaction, scenario analysis","False","MOCKFNL012_Set5_Diplomats","","Positions: 1-6 from left to right.
+1.  Alistair (India) is at an extreme end (P1 or P6) (Clue 1). Beatrice is immediately to the right of the diplomat from India (Clue 3). This means Alistair (India) must be at P1, and Beatrice is at P2.
+    *   P1: Alistair (India), P2: Beatrice (Country TBD).
+2.  The diplomat from Kenya is at P3 (Clue 2).
+    *   P1: Alistair (India), P2: Beatrice (Country TBD), P3: (Kenya).
+3.  The diplomat from Peru is to the left of the diplomat from Kenya (P3) (Clue 7). Peru can be at P1 or P2. P1 is India, so Peru must be at P2. Thus, Beatrice is from Peru.
+    *   P1: Alistair (India), P2: Beatrice (Peru), P3: (Kenya).
+4.  The diplomat from Japan is at an odd-numbered position (P1, P3, or P5) (Clue 8).
+    *   P1 is India, P3 is Kenya. Therefore, the diplomat from Japan must be at P5.
+    *   P1: Alistair (India), P2: Beatrice (Peru), P3: (Kenya), P4: ( ), P5: (Japan), P6: ( ).
+5.  Diana (Mexico) is seated immediately to the left of Edward (D(Mex), E block) (Clue 4).
+    *   Given P5 is Japan, if Edward is from Japan, then E is at P5. Diana (Mexico) must be at P4.
+    *   This configuration: P4: Diana (Mexico), P5: Edward (Japan).
+    *   Current layout: P1:A(India), P2:B(Peru), P3:(Kenya), P4:D(Mexico), P5:E(Japan), P6:( ).
+6.  The diplomat from Norway is at an even-numbered position (P2, P4, P6) (Clue 5).
+    *   P2 is Peru, P4 is Mexico. So, Norway must be at P6.
+    *   Current layout: P1:A(India), P2:B(Peru), P3:(Kenya), P4:D(Mexico), P5:E(Japan), P6:(Norway).
+7.  Remaining diplomats are Charles and Fiona. Remaining positions for them are P3 (to be Kenya) and P6 (to be Norway).
+    *   Case 1: Charles is at P3 (Kenya), Fiona is at P6 (Norway).
+        *   Charles (Kenya): Not from Mexico (Clue 6 - satisfied). Not at an extreme end (P3 is not extreme) (Clue 6 - satisfied).
+        *   Fiona (Norway): Not from Japan or Peru (Clue 5 - satisfied, as she is Norway).
+        *   This case is valid.
+    *   Case 2: Fiona is at P3 (Kenya), Charles is at P6 (Norway).
+        *   Fiona (Kenya): Not from Japan or Peru (Clue 5 - satisfied).
+        *   Charles (Norway): Not from Mexico (Clue 6 - satisfied). Charles is at P6, which is an extreme end. This violates Clue 6.
+        *   This case is invalid.
+8.  Therefore, the unique valid arrangement is:
+    *   Position 1: Alistair (India)
+    *   Position 2: Beatrice (Peru)
+    *   Position 3: Charles (Kenya)
+    *   Position 4: Diana (Mexico)
+    *   Position 5: Edward (Japan)
+    *   Position 6: Fiona (Norway)
+
+**Answer to Q22:** The diplomat at Position 6 is Fiona, and her nationality is Norwegian (from Norway)."
