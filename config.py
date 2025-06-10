@@ -17,5 +17,5 @@ class Config:
     GOOGLE_OAUTH_CLIENT_SECRET = os.environ.get('GOOGLE_OAUTH_CLIENT_SECRET')
     
     # OAuth settings
-    OAUTHLIB_INSECURE_TRANSPORT = True  # Only for development
+    OAUTHLIB_INSECURE_TRANSPORT = os.environ.get('FLASK_ENV') != 'production'
     OAUTHLIB_RELAX_TOKEN_SCOPE = True 
