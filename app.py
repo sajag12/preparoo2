@@ -31,9 +31,21 @@ google_bp = make_google_blueprint(
     client_id=app.config.get('GOOGLE_OAUTH_CLIENT_ID'),
     client_secret=app.config.get('GOOGLE_OAUTH_CLIENT_SECRET'),
     scope=["openid", "email", "profile"],
-    redirect_url="/after-oauth"
+    redirect_url="/after-oauth",
+    redirect_to=None,
+    login_url=None,
+    authorized_url=None,
+    base_url="https://accounts.google.com",
+    authorization_url="https://accounts.google.com/oauth2/authorize",
+    token_url="https://oauth2.googleapis.com/token"
 )
 app.register_blueprint(google_bp, url_prefix="/login")
+
+# Force HTTPS for OAuth in production (Railway deployment)
+if not app.debug or os.environ.get('RAILWAY_ENVIRONMENT'):
+    google_bp.redirect_url = google_bp.redirect_url.replace('http://', 'https://')
+    if hasattr(google_bp, 'authorized_url') and google_bp.authorized_url:
+        google_bp.authorized_url = google_bp.authorized_url.replace('http://', 'https://')
 
 # OAuth token storage model (optional - not actively used)
 class OAuth(OAuthConsumerMixin, db.Model):
