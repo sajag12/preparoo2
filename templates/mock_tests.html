@@ -209,55 +209,48 @@
       gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
-      align-items: stretch; /* Make cards equal height in each row */
+      align-items: stretch;
     }
 
     .test-card {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 20px;
-      padding: 2rem;
-      backdrop-filter: blur(10px);
+      background: white;
+      border-radius: 16px;
+      padding: 0;
       transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(0, 0, 0, 0.1);
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      min-height: 400px; /* Set minimum height for consistency */
-    }
-
-    .test-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #8B5CF6, #EC4899);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     }
 
     .test-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-header {
+      padding: 1.5rem 1.5rem 1rem;
     }
 
     .test-card h3 {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      color: #1f2937;
-      min-height: 2.6rem;
+      color: #333;
+      line-height: 1.3;
     }
 
     .tag {
-      background: linear-gradient(135deg, #F59E0B, #FBBF24);
+      background: #FF6B9D;
       color: white;
       padding: 0.25rem 0.75rem;
-      border-radius: 15px;
-      font-size: 0.75rem;
+      border-radius: 12px;
+      font-size: 0.65rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -265,53 +258,49 @@
     }
 
     .tag.featured {
-      background: linear-gradient(135deg, #EC4899, #F472B6);
-    }
-
-    .tag.free {
-      background: linear-gradient(135deg, #10B981, #34D399);
+      background: #FF6B9D;
     }
 
     .test-card p {
-      color: #6B7280;
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-      flex-grow: 1; /* Allow description to grow and fill available space */
+      color: #666;
+      margin-bottom: 0;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    .card-body {
+      padding: 0 1.5rem 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .test-details {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      flex-shrink: 0; /* Don't let details shrink */
+      gap: 0.75rem 1.5rem;
+      margin: 1.5rem 0;
     }
 
     .detail-item {
-      text-align: center;
-      padding: 0.75rem;
-      background: rgba(139, 92, 246, 0.05);
-      border-radius: 10px;
-      border: 1px solid rgba(139, 92, 246, 0.1);
+      text-align: left;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      min-height: 4rem;
     }
 
     .detail-item span {
-      display: block;
-      font-size: 0.8rem;
-      color: #6B7280;
+      font-size: 0.7rem;
+      color: #999;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
     }
 
     .detail-item strong {
       font-size: 1rem;
       font-weight: 700;
-      color: #1f2937;
+      color: #333;
     }
 
     .start-btn {
@@ -320,55 +309,47 @@
       justify-content: center;
       gap: 0.5rem;
       width: 100%;
-      background: #1f2937;
+      background: #374151;
       color: white;
-      padding: 1rem;
-      border-radius: 12px;
+      padding: 0.875rem;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
-      margin-bottom: 1rem;
-      flex-shrink: 0; /* Prevent button from shrinking */
-      margin-top: 0; /* Remove margin-top auto since we're using flex-grow on description */
+      margin-top: auto;
+      font-size: 0.9rem;
     }
 
     .start-btn:hover {
-      background: #111827;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      background: #1f2937;
+      transform: translateY(-1px);
     }
 
     .arrow {
-      font-size: 1.2rem;
+      font-size: 1rem;
       transition: transform 0.3s ease;
     }
 
     .start-btn:hover .arrow {
-      transform: translateX(5px);
+      transform: translateX(3px);
     }
 
     .card-footer {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(139, 92, 246, 0.1);
-      font-size: 0.9rem;
-      flex-shrink: 0;
-    }
-
-    .attempts {
-      color: #6B7280;
+      padding: 1rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      background: rgba(0, 0, 0, 0.02);
     }
 
     .test-type-label {
-      background: rgba(139, 92, 246, 0.1);
+      background: none;
       color: #8B5CF6;
-      padding: 0.25rem 0.75rem;
-      border-radius: 12px;
+      padding: 0;
+      border-radius: 0;
       font-weight: 600;
-      font-size: 0.8rem;
-      white-space: nowrap;
+      font-size: 0.85rem;
     }
 
     /* Medium screens - tablets */
@@ -555,754 +536,829 @@
       <div class="test-grid">
         <!-- Full Mock Tests (15 total) -->
         <div class="test-card" data-test-type="full-mock">
-          <h3>
-            <span>CAT Mock Test 1</span>
-            <span class="tag featured">Featured</span>
-          </h3>
-          <p>Complete mock test with all three sections - QA, VARC, and LRDI.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>68%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 1</span>
+              <span class="tag featured">Featured</span>
+            </h3>
+            <p>Complete mock test with all three sections - QA, VARC, and LRDI.</p>
           </div>
-          <a href="{{ url_for('mock_test_1') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>68%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_1') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">1,243 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card" data-test-type="full-mock">
-          <h3>
-            <span>CAT Mock Test 2</span>
-          </h3>
-          <p>Comprehensive mock with increased difficulty level for experienced test takers.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>62%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 2</span>
+            </h3>
+            <p>Comprehensive mock with increased difficulty level for experienced test takers.</p>
           </div>
-          <a href="{{ url_for('mock_test_2') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>62%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_2') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">956 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 3</span>
-          </h3>
-          <p>Full length CAT mock test with all three sections and latest pattern.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium-Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>61%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 3</span>
+            </h3>
+            <p>Full length CAT mock test with all three sections and latest pattern.</p>
           </div>
-          <a href="{{ url_for('mock_test_3') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium-Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>61%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_3') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">782 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 4</span>
-          </h3>
-          <p>Advanced level mock test with challenging questions across all sections.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>59%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 4</span>
+            </h3>
+            <p>Advanced level mock test with challenging questions across all sections.</p>
           </div>
-          <a href="{{ url_for('mock_test_4') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>59%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_4') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">634 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 5</span>
-          </h3>
-          <p>Balanced mock test focusing on time management and accuracy.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>65%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 5</span>
+            </h3>
+            <p>Balanced mock test focusing on time management and accuracy.</p>
           </div>
-          <a href="{{ url_for('mock_test_5') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>65%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_5') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">847 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 6</span>
-          </h3>
-          <p>Comprehensive test with emphasis on recent CAT patterns and trends.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium-Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>63%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 6</span>
+            </h3>
+            <p>Comprehensive test with emphasis on recent CAT patterns and trends.</p>
           </div>
-          <a href="{{ url_for('mock_test_6') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium-Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>63%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_6') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">723 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 7</span>
-          </h3>
-          <p>High-difficulty mock for advanced preparation and skill assessment.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>57%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 7</span>
+            </h3>
+            <p>High-difficulty mock for advanced preparation and skill assessment.</p>
           </div>
-          <a href="{{ url_for('mock_test_7') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>57%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_7') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">512 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 8</span>
-          </h3>
-          <p>Strategic mock test designed to improve sectional balance.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>66%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 8</span>
+            </h3>
+            <p>Strategic mock test designed to improve sectional balance.</p>
           </div>
-          <a href="{{ url_for('mock_test_8') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>66%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_8') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">689 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 9</span>
-          </h3>
-          <p>Mock test with focus on complex problem-solving and analytical skills.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>58%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 9</span>
+            </h3>
+            <p>Mock test with focus on complex problem-solving and analytical skills.</p>
           </div>
-          <a href="{{ url_for('mock_test_9') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>58%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_9') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">445 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 10</span>
-          </h3>
-          <p>Comprehensive test for final preparation with mixed difficulty levels.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium-Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>64%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 10</span>
+            </h3>
+            <p>Comprehensive test for final preparation with mixed difficulty levels.</p>
           </div>
-          <a href="{{ url_for('mock_test_10') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium-Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>64%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_10') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">598 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 11</span>
-          </h3>
-          <p>Advanced mock test simulating actual CAT exam conditions.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>56%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 11</span>
+            </h3>
+            <p>Advanced mock test simulating actual CAT exam conditions.</p>
           </div>
-          <a href="{{ url_for('mock_test_11') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>56%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_11') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">423 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 12</span>
-          </h3>
-          <p>Balanced mock test for comprehensive skill evaluation.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>67%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 12</span>
+            </h3>
+            <p>Balanced mock test for comprehensive skill evaluation.</p>
           </div>
-          <a href="{{ url_for('mock_test_12') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>67%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_12') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">756 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 13</span>
-          </h3>
-          <p>High-level mock test with challenging questions and time constraints.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>55%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 13</span>
+            </h3>
+            <p>High-level mock test with challenging questions and time constraints.</p>
           </div>
-          <a href="{{ url_for('mock_test_13') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>55%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_13') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">387 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 14</span>
-          </h3>
-          <p>Comprehensive mock for final exam preparation and confidence building.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium-Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>62%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 14</span>
+            </h3>
+            <p>Comprehensive mock for final exam preparation and confidence building.</p>
           </div>
-          <a href="{{ url_for('mock_test_14') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium-Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>62%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_14') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">534 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>CAT Mock Test 15</span>
-          </h3>
-          <p>Ultimate practice test designed to maximize your CAT performance.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>120 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>66</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>54%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>CAT Mock Test 15</span>
+            </h3>
+            <p>Ultimate practice test designed to maximize your CAT performance.</p>
           </div>
-          <a href="{{ url_for('mock_test_15') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>120 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>66</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>54%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('mock_test_15') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">298 attempts</span>
             <span class="test-type-label">Full Mock</span>
           </div>
         </div>
 
         <!-- Sectional Tests (10 total) -->
         <div class="test-card">
-          <h3>
-            <span>QA Sectional 1</span>
-          </h3>
-          <p>Focus on Arithmetic, Algebra, and Modern Mathematics problems.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>40 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>22</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>65%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>QA Sectional 1</span>
+            </h3>
+            <p>Focus on Arithmetic, Algebra, and Modern Mathematics problems.</p>
           </div>
-          <a href="{{ url_for('qa_sectional_1') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>40 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>22</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>65%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('qa_sectional_1') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">2,156 attempts</span>
             <span class="test-type-label">QA Sectional</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>VARC Sectional 1</span>
-            <span class="tag free">Free</span>
-          </h3>
-          <p>Reading comprehension and verbal ability practice test.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium-Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>40 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>24</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>58%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>VARC Sectional 1</span>
+              <span class="tag free">Free</span>
+            </h3>
+            <p>Reading comprehension and verbal ability practice test.</p>
           </div>
-          <a href="{{ url_for('varc_sectional_1') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium-Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>40 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>24</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>58%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('varc_sectional_1') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">1,876 attempts</span>
             <span class="test-type-label">VARC Sectional</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>LRDI Sectional 1</span>
-          </h3>
-          <p>Logical reasoning puzzles and data interpretation sets.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>40 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>20</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>54%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>LRDI Sectional 1</span>
+            </h3>
+            <p>Logical reasoning puzzles and data interpretation sets.</p>
           </div>
-          <a href="{{ url_for('lrdi_sectional_1') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>40 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>20</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>54%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('lrdi_sectional_1') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">1,534 attempts</span>
             <span class="test-type-label">LRDI Sectional</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>QA Sectional 2</span>
-          </h3>
-          <p>Advanced quantitative problems with emphasis on geometry and number systems.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>40 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>22</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>61%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>QA Sectional 2</span>
+            </h3>
+            <p>Advanced quantitative problems with emphasis on geometry and number systems.</p>
           </div>
-          <a href="{{ url_for('qa_sectional_2') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>40 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>22</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>61%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('qa_sectional_2') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">1,823 attempts</span>
             <span class="test-type-label">QA Sectional</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>VARC Sectional 2</span>
-          </h3>
-          <p>Complex reading comprehension passages and critical reasoning.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>40 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>24</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>55%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>VARC Sectional 2</span>
+            </h3>
+            <p>Complex reading comprehension passages and critical reasoning.</p>
           </div>
-          <a href="{{ url_for('varc_sectional_2') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>40 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>24</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>55%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('varc_sectional_2') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">1,467 attempts</span>
             <span class="test-type-label">VARC Sectional</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>LRDI Sectional 2</span>
-          </h3>
-          <p>Advanced data interpretation and complex logical reasoning sets.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>40 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>20</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>52%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>LRDI Sectional 2</span>
+            </h3>
+            <p>Advanced data interpretation and complex logical reasoning sets.</p>
           </div>
-          <a href="{{ url_for('lrdi_sectional_2') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>40 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>20</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>52%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('lrdi_sectional_2') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">1,289 attempts</span>
             <span class="test-type-label">LRDI Sectional</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>QA Sectional 3</span>
-          </h3>
-          <p>Mixed quantitative problems covering all major topics and concepts.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>40 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>22</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>63%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>QA Sectional 3</span>
+            </h3>
+            <p>Mixed quantitative problems covering all major topics and concepts.</p>
           </div>
-          <a href="{{ url_for('qa_sectional_3') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>40 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>22</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>63%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('qa_sectional_3') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">1,945 attempts</span>
             <span class="test-type-label">QA Sectional</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>VARC Sectional 3</span>
-          </h3>
-          <p>Comprehensive verbal ability test with para-jumbles and sentence correction.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium-Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>40 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>24</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>59%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>VARC Sectional 3</span>
+            </h3>
+            <p>Comprehensive verbal ability test with para-jumbles and sentence correction.</p>
           </div>
-          <a href="{{ url_for('varc_sectional_3') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium-Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>40 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>24</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>59%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('varc_sectional_3') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">1,678 attempts</span>
             <span class="test-type-label">VARC Sectional</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>LRDI Sectional 3</span>
-          </h3>
-          <p>Mixed logical reasoning and data interpretation with varying difficulty levels.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Medium-Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>40 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>20</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>56%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>LRDI Sectional 3</span>
+            </h3>
+            <p>Mixed logical reasoning and data interpretation with varying difficulty levels.</p>
           </div>
-          <a href="{{ url_for('lrdi_sectional_3') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Medium-Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>40 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>20</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>56%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('lrdi_sectional_3') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">1,432 attempts</span>
             <span class="test-type-label">LRDI Sectional</span>
           </div>
         </div>
 
         <div class="test-card">
-          <h3>
-            <span>QA Sectional 4</span>
-          </h3>
-          <p>Challenge-level quantitative test for advanced preparation.</p>
-          <div class="test-details">
-            <div class="detail-item">
-              <span>Difficulty</span>
-              <strong>Hard</strong>
-            </div>
-            <div class="detail-item">
-              <span>Duration</span>
-              <strong>40 minutes</strong>
-            </div>
-            <div class="detail-item">
-              <span>Questions</span>
-              <strong>22</strong>
-            </div>
-            <div class="detail-item">
-              <span>Avg. Score</span>
-              <strong>58%</strong>
-            </div>
+          <div class="card-header">
+            <h3>
+              <span>QA Sectional 4</span>
+            </h3>
+            <p>Challenge-level quantitative test for advanced preparation.</p>
           </div>
-          <a href="{{ url_for('qa_sectional_4') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          <div class="card-body">
+            <div class="test-details">
+              <div class="detail-item">
+                <span>Difficulty</span>
+                <strong>Hard</strong>
+              </div>
+              <div class="detail-item">
+                <span>Duration</span>
+                <strong>40 minutes</strong>
+              </div>
+              <div class="detail-item">
+                <span>Questions</span>
+                <strong>22</strong>
+              </div>
+              <div class="detail-item">
+                <span>Good Score</span>
+                <strong>58%</strong>
+              </div>
+            </div>
+            <a href="{{ url_for('qa_sectional_4') }}" class="start-btn">Start Test <span class="arrow">></span></a>
+          </div>
           <div class="card-footer">
-            <span class="attempts">1,567 attempts</span>
             <span class="test-type-label">QA Sectional</span>
           </div>
         </div>
