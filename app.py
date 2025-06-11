@@ -1458,6 +1458,186 @@ def lrdi_sectional_3():
         return redirect_response
     return render_template('take_test.html', test_id=test_id)
 
+@app.route('/sectional/lrdi/4')
+@login_required
+def lrdi_sectional_4():
+    test_id = 'lrdi4'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/lrdi/5')
+@login_required
+def lrdi_sectional_5():
+    test_id = 'lrdi5'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/lrdi/6')
+@login_required
+def lrdi_sectional_6():
+    test_id = 'lrdi6'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/lrdi/7')
+@login_required
+def lrdi_sectional_7():
+    test_id = 'lrdi7'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/lrdi/8')
+@login_required
+def lrdi_sectional_8():
+    test_id = 'lrdi8'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/lrdi/9')
+@login_required
+def lrdi_sectional_9():
+    test_id = 'lrdi9'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/lrdi/10')
+@login_required
+def lrdi_sectional_10():
+    test_id = 'lrdi10'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/qa/5')
+@login_required
+def qa_sectional_5():
+    test_id = 'qa5'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/qa/6')
+@login_required
+def qa_sectional_6():
+    test_id = 'qa6'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/qa/7')
+@login_required
+def qa_sectional_7():
+    test_id = 'qa7'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/qa/8')
+@login_required
+def qa_sectional_8():
+    test_id = 'qa8'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/qa/9')
+@login_required
+def qa_sectional_9():
+    test_id = 'qa9'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/qa/10')
+@login_required
+def qa_sectional_10():
+    test_id = 'qa10'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/varc/4')
+@login_required
+def varc_sectional_4():
+    test_id = 'varc4'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/varc/5')
+@login_required
+def varc_sectional_5():
+    test_id = 'varc5'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/varc/6')
+@login_required
+def varc_sectional_6():
+    test_id = 'varc6'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/varc/7')
+@login_required
+def varc_sectional_7():
+    test_id = 'varc7'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/varc/8')
+@login_required
+def varc_sectional_8():
+    test_id = 'varc8'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/varc/9')
+@login_required
+def varc_sectional_9():
+    test_id = 'varc9'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
+@app.route('/sectional/varc/10')
+@login_required
+def varc_sectional_10():
+    test_id = 'varc10'
+    redirect_response = check_sectional_test_state(test_id)
+    if redirect_response:
+        return redirect_response
+    return render_template('take_test.html', test_id=test_id)
+
 @app.route('/submit-test', methods=['POST'])
 @login_required
 def submit_test():
@@ -1472,7 +1652,9 @@ def submit_test():
     print(f"Full data keys: {list(data.keys())}")
     print("=" * 60)
     
-    if test_id in ['qa1', 'qa2', 'qa3', 'qa4', 'varc1', 'varc2', 'varc3', 'lrdi1', 'lrdi2', 'lrdi3']:  # Sectional tests
+    if test_id in ['qa1', 'qa2', 'qa3', 'qa4', 'qa5', 'qa6', 'qa7', 'qa8', 'qa9', 'qa10', 
+                   'varc1', 'varc2', 'varc3', 'varc4', 'varc5', 'varc6', 'varc7', 'varc8', 'varc9', 'varc10',
+                   'lrdi1', 'lrdi2', 'lrdi3', 'lrdi4', 'lrdi5', 'lrdi6', 'lrdi7', 'lrdi8', 'lrdi9', 'lrdi10']:  # Sectional tests
         print("DEBUG: Taking SECTIONAL path")
         # CLEAR session completely before processing sectional test
         session.clear()
