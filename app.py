@@ -55,21 +55,34 @@ def load_user(user_id):
 # Create database tables
 def init_db():
     """Initialize the database tables"""
-    with app.app_context():
-        try:
+    try:
+        with app.app_context():
+            # Test database connection first
+            db.session.execute('SELECT 1')
+            print("Database connection successful")
+            
+            # Create tables
             db.create_all()
             print("Database tables created successfully")
-        except Exception as e:
-            print(f"Database initialization error: {e}")
-
-# Initialize database when app starts (not when module is imported)
-# init_db()  # Removed - will be called in main block instead
+            
+            db.session.commit()
+            return True
+    except Exception as e:
+        print(f"Database initialization error: {e}")
+        # Try to rollback in case of error
+        try:
+            db.session.rollback()
+        except:
+            pass
+        return False
 
 # Initialize database for both Gunicorn and direct execution
 def initialize_app():
     """Initialize the app for production deployment"""
     try:
-        init_db()
+        success = init_db()
+        if not success:
+            print("WARNING: Database initialization failed, but continuing startup")
     except Exception as e:
         print(f"App initialization error: {e}")
 
@@ -85,35 +98,49 @@ from flask_dance.consumer import oauth_authorized
 
 @oauth_authorized.connect_via(google_bp)
 def google_logged_in(blueprint, token):
-    if not token:
-        flash('Failed to log in with Google.', 'error')
-        return False
+    try:
+        if not token:
+            flash('Failed to log in with Google - no token received.', 'error')
+            return redirect(url_for('login'))
 
-    resp = blueprint.session.get("/oauth2/v2/userinfo")
-    if not resp.ok:
-        flash('Failed to fetch user info from Google.', 'error')
-        return False
+        resp = blueprint.session.get("/oauth2/v2/userinfo")
+        if not resp.ok:
+            flash('Failed to fetch user info from Google.', 'error')
+            return redirect(url_for('login'))
 
-    google_info = resp.json()
-    google_id = google_info['id']
-    email = google_info['email']
-    name = google_info['name']
-    avatar_url = google_info.get('picture')
+        google_info = resp.json()
+        google_id = google_info.get('id')
+        email = google_info.get('email')
+        name = google_info.get('name')
+        avatar_url = google_info.get('picture')
 
-    # Find or create user
-    user = User.find_or_create(
-        google_id=google_id,
-        email=email,
-        name=name,
-        avatar_url=avatar_url
-    )
+        if not google_id or not email:
+            flash('Failed to get required user information from Google.', 'error')
+            return redirect(url_for('login'))
 
-    print(f"DEBUG: OAuth event - logging in user: {user}")
-    login_user(user, remember=True)
-    flash(f'Welcome, {user.name}!', 'success')
-    
-    # Redirect to mock tests page after successful login
-    return redirect(url_for('mock_tests_page'))
+        # Find or create user
+        user = User.find_or_create(
+            google_id=google_id,
+            email=email,
+            name=name,
+            avatar_url=avatar_url
+        )
+
+        if user:
+            print(f"DEBUG: OAuth event - logging in user: {user}")
+            login_user(user, remember=True)
+            flash(f'Welcome, {user.name}!', 'success')
+            
+            # Redirect to mock tests page after successful login
+            return redirect(url_for('mock_tests_page'))
+        else:
+            flash('Failed to create or find user account.', 'error')
+            return redirect(url_for('login'))
+            
+    except Exception as e:
+        print(f"ERROR in OAuth callback: {e}")
+        flash('Authentication failed. Please try again.', 'error')
+        return redirect(url_for('login'))
 
 # Authentication routes
 @app.route('/login')
@@ -133,6 +160,17 @@ def logout():
 @app.route('/auth/google')
 def initiate_google_auth():
     return redirect(url_for('google.login'))
+
+# Health check route for debugging
+@app.route('/health')
+def health_check():
+    try:
+        # Test database connection
+        db.session.execute('SELECT 1')
+        db.session.commit()
+        return {'status': 'healthy', 'database': 'connected'}, 200
+    except Exception as e:
+        return {'status': 'unhealthy', 'error': str(e)}, 500
 
 # Custom redirect after successful OAuth login
 @app.route('/after-oauth')
