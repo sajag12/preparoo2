@@ -18,6 +18,15 @@ app.config.from_object(Config)
 if os.environ.get('PORT') or os.environ.get('RAILWAY_ENVIRONMENT'):
     from werkzeug.middleware.proxy_fix import ProxyFix
     app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
+    
+    # Set OAuth environment variables directly for production
+    os.environ['OAUTHLIB_IGNORE_SCOPE_CHANGE'] = '1'
+    os.environ['OAUTHLIB_RELAX_TOKEN_SCOPE'] = '1'
+else:
+    # Set OAuth environment variables for local development
+    os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+    os.environ['OAUTHLIB_IGNORE_SCOPE_CHANGE'] = '1'
+    os.environ['OAUTHLIB_RELAX_TOKEN_SCOPE'] = '1'
 
 # Initialize extensions
 db.init_app(app)
@@ -37,7 +46,9 @@ app.jinja_env.filters['startswith'] = startswith_filter
 google_bp = make_google_blueprint(
     client_id=app.config.get('GOOGLE_OAUTH_CLIENT_ID'),
     client_secret=app.config.get('GOOGLE_OAUTH_CLIENT_SECRET'),
-    scope=["openid", "email", "profile"]
+    scope=["https://www.googleapis.com/auth/userinfo.profile", 
+           "https://www.googleapis.com/auth/userinfo.email", 
+           "openid"]
 )
 app.register_blueprint(google_bp, url_prefix="/login")
 
