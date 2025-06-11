@@ -30,14 +30,7 @@ app.jinja_env.filters['startswith'] = startswith_filter
 google_bp = make_google_blueprint(
     client_id=app.config.get('GOOGLE_OAUTH_CLIENT_ID'),
     client_secret=app.config.get('GOOGLE_OAUTH_CLIENT_SECRET'),
-    scope=["openid", "email", "profile"],
-    redirect_url="/after-oauth",
-    redirect_to=None,
-    login_url=None,
-    authorized_url=None,
-    base_url="https://accounts.google.com",
-    authorization_url="https://accounts.google.com/oauth2/authorize",
-    token_url="https://oauth2.googleapis.com/token"
+    scope=["openid", "email", "profile"]
 )
 app.register_blueprint(google_bp, url_prefix="/login")
 
@@ -119,12 +112,8 @@ def google_logged_in(blueprint, token):
     login_user(user, remember=True)
     flash(f'Welcome, {user.name}!', 'success')
     
-    # Store where user should be redirected after login
-    if 'next' in request.args:
-        session['next_page'] = request.args.get('next')
-    
-    # Don't create a token since we're not storing OAuth tokens
-    return False
+    # Redirect to mock tests page after successful login
+    return redirect(url_for('mock_tests_page'))
 
 # Authentication routes
 @app.route('/login')
