@@ -4,7 +4,6 @@ from flask_dance.contrib.google import make_google_blueprint, google
 from flask_dance.consumer.storage.sqla import OAuthConsumerMixin
 import csv
 import os
-import logging
 
 # Import configuration and models
 from config import Config
@@ -44,10 +43,6 @@ app.register_blueprint(google_bp, url_prefix="/login")
 
 # Force HTTPS for OAuth in production (Railway deployment)
 if os.environ.get('RAILWAY_ENVIRONMENT') or not app.debug:
-    # Set OAuth to use HTTPS in production
-    logging.basicConfig(level=logging.INFO)
-    logging.info("Production environment detected - forcing HTTPS for OAuth")
-    
     # Ensure Flask-Dance uses HTTPS
     app.config['PREFERRED_URL_SCHEME'] = 'https'
 
@@ -68,10 +63,26 @@ def load_user(user_id):
 def init_db():
     """Initialize the database tables"""
     with app.app_context():
-        db.create_all()
+        try:
+            db.create_all()
+            print("Database tables created successfully")
+        except Exception as e:
+            print(f"Database initialization error: {e}")
 
-# Initialize database when module is imported
-init_db()
+# Initialize database when app starts (not when module is imported)
+# init_db()  # Removed - will be called in main block instead
+
+# Initialize database for both Gunicorn and direct execution
+def initialize_app():
+    """Initialize the app for production deployment"""
+    try:
+        init_db()
+    except Exception as e:
+        print(f"App initialization error: {e}")
+
+# Call initialization for production deployment (Gunicorn)
+if os.environ.get('RAILWAY_ENVIRONMENT') or os.environ.get('PORT'):
+    initialize_app()
 
 # Skip OAuth storage setup - we handle user management manually
 # google_bp.storage = SQLAlchemyStorage(OAuth, db.session, user=current_user, user_required=False)
@@ -2231,6 +2242,9 @@ def generate_time_wasters(stats, is_sectional=False):
     return time_wasters[:3]
 
 if __name__ == '__main__':
+    # Initialize database tables
+    init_db()
+    
     import os
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=False)
