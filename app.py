@@ -4,6 +4,8 @@ from flask_dance.contrib.google import make_google_blueprint, google
 from flask_dance.consumer.storage.sqla import OAuthConsumerMixin
 import csv
 import os
+import warnings
+import traceback
 
 # Import configuration and models
 from config import Config
@@ -58,7 +60,8 @@ def init_db():
     try:
         with app.app_context():
             # Test database connection first
-            db.session.execute('SELECT 1')
+            from sqlalchemy import text
+            db.session.execute(text('SELECT 1'))
             print("Database connection successful")
             
             # Create tables
@@ -103,7 +106,11 @@ def google_logged_in(blueprint, token):
             flash('Failed to log in with Google - no token received.', 'error')
             return redirect(url_for('login'))
 
-        resp = blueprint.session.get("/oauth2/v2/userinfo")
+        # Handle scope warnings as non-fatal
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            resp = blueprint.session.get("/oauth2/v2/userinfo")
+            
         if not resp.ok:
             flash('Failed to fetch user info from Google.', 'error')
             return redirect(url_for('login'))
@@ -139,6 +146,8 @@ def google_logged_in(blueprint, token):
             
     except Exception as e:
         print(f"ERROR in OAuth callback: {e}")
+        # Log the full traceback for debugging
+        traceback.print_exc()
         flash('Authentication failed. Please try again.', 'error')
         return redirect(url_for('login'))
 
@@ -166,7 +175,8 @@ def initiate_google_auth():
 def health_check():
     try:
         # Test database connection
-        db.session.execute('SELECT 1')
+        from sqlalchemy import text
+        db.session.execute(text('SELECT 1'))
         db.session.commit()
         return {'status': 'healthy', 'database': 'connected'}, 200
     except Exception as e:

@@ -25,7 +25,9 @@ class Config:
         PREFERRED_URL_SCHEME = 'https'
         OAUTHLIB_INSECURE_TRANSPORT = False
         OAUTHLIB_RELAX_TOKEN_SCOPE = True
+        OAUTHLIB_IGNORE_SCOPE_CHANGE = True
     else:
         # Local development
         OAUTHLIB_INSECURE_TRANSPORT = True
-        OAUTHLIB_RELAX_TOKEN_SCOPE = True 
+        OAUTHLIB_RELAX_TOKEN_SCOPE = True
+        OAUTHLIB_IGNORE_SCOPE_CHANGE = True 
