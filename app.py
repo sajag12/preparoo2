@@ -12,6 +12,11 @@ from models import db, User, TestResult
 app = Flask(__name__)
 app.config.from_object(Config)
 
+# Configure for Railway proxy (HTTPS termination)
+if os.environ.get('PORT') or os.environ.get('RAILWAY_ENVIRONMENT'):
+    from werkzeug.middleware.proxy_fix import ProxyFix
+    app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
+
 # Initialize extensions
 db.init_app(app)
 login_manager = LoginManager()
@@ -33,11 +38,6 @@ google_bp = make_google_blueprint(
     scope=["openid", "email", "profile"]
 )
 app.register_blueprint(google_bp, url_prefix="/login")
-
-# Force HTTPS for OAuth in production (Railway deployment)
-if os.environ.get('RAILWAY_ENVIRONMENT') or not app.debug:
-    # Ensure Flask-Dance uses HTTPS
-    app.config['PREFERRED_URL_SCHEME'] = 'https'
 
 # OAuth token storage model (optional - not actively used)
 class OAuth(OAuthConsumerMixin, db.Model):
