@@ -652,6 +652,468 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Question Performance Heatmap Styles */
+    .question-performance-heatmap {
+      margin: 3rem 0;
+    }
+
+    .question-performance-heatmap h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: #1f2937;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .heatmap-container {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .performance-legend {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 12px;
+      flex-wrap: wrap;
+    }
+
+    .legend-group h4 {
+      font-size: 0.9rem;
+      color: #374151;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .legend-items {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    .legend-box {
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      border: 1px solid;
+    }
+
+    .legend-box.correct-optimal {
+      background: #dcfce7;
+      border-color: #16a34a;
+    }
+
+    .legend-box.correct-excessive {
+      background: #bbf7d0;
+      border-color: #047857;
+    }
+
+    .legend-box.incorrect-optimal {
+      background: #fecaca;
+      border-color: #dc2626;
+    }
+
+    .legend-box.incorrect-excessive {
+      background: #fee2e2;
+      border-color: #b91c1c;
+    }
+
+    .legend-box.skipped {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .question-performance-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .section-questions {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border: 1px solid #f1f5f9;
+    }
+
+    .section-header {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .questions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+    }
+
+    .question-cell {
+      height: 75px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 8px;
+      padding: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .question-cell:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 10;
+    }
+
+    /* Combined Performance + Time Efficiency backgrounds */
+    .question-cell.correct.optimal {
+      background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+      border-color: #16a34a;
+      color: #14532d;
+    }
+
+    .question-cell.correct.moderate {
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+      border-color: #059669;
+      color: #064e3b;
+    }
+
+    .question-cell.correct.excessive {
+      background: linear-gradient(135deg, #bbf7d0 0%, #86efac 100%);
+      border-color: #047857;
+      color: #022c22;
+    }
+
+    .question-cell.incorrect.optimal {
+      background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+      border-color: #dc2626;
+      color: #7f1d1d;
+    }
+
+    .question-cell.incorrect.moderate {
+      background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+      border-color: #ef4444;
+      color: #991b1b;
+    }
+
+    .question-cell.incorrect.excessive {
+      background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+      border-color: #b91c1c;
+      color: #7f1d1d;
+    }
+
+    .question-cell.skipped {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-color: #cbd5e1;
+      color: #64748b;
+    }
+
+    .question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .question-number {
+      font-size: 0.9rem;
+    }
+
+    .status-icon {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .question-time {
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-align: center;
+      margin: 2px 0;
+    }
+
+    .time-bar {
+      height: 4px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .time-fill {
+      height: 100%;
+      background: currentColor;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+      opacity: 0.7;
+    }
+
+    /* Responsive Design for Heatmap */
+    @media (max-width: 768px) {
+      .performance-legend {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+      }
+      
+      .legend-items {
+        justify-content: center;
+      }
+      
+      .questions-grid {
+        grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+        gap: 8px;
+      }
+      
+      .question-cell {
+        height: 65px;
+        padding: 5px;
+      }
+      
+      .question-number, .question-time {
+        font-size: 0.75rem;
+      }
+    }
+
+    /* Topic Wise Analysis Matrix */
+    .topic-wise-analysis {
+      display: none; /* Hidden for sectional results */
+      margin: 3rem 0;
+    }
+
+    .topic-wise-analysis h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: #1f2937;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .topic-matrix-container {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      background: #f1f5f9;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .section-tab {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      border: none;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .section-tab.active {
+      background: #8b5cf6;
+      color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-tab:hover:not(.active) {
+      background: #e2e8f0;
+      color: #475569;
+    }
+
+    .topic-matrix {
+      width: 100%;
+      border-collapse: collapse;
+      display: table;
+    }
+
+    .matrix-header {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+      gap: 1px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .topic-header,
+    .difficulty-header,
+    .total-header {
+      padding: 1rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #374151;
+      text-align: center;
+      background: #f8fafc;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+    }
+
+    .topic-header {
+      text-align: left;
+      border-right: 1px solid #e2e8f0;
+    }
+
+    .difficulty-header {
+      border-right: 1px solid #e2e8f0;
+    }
+
+    .section-group {
+      border: 1px solid #e2e8f0;
+      border-top: none;
+    }
+
+    .section-group[data-section="varc"],
+    .section-group[data-section="qa"],
+    .section-group[data-section="lrdi"] {
+      display: block;
+    }
+
+    .section-title {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      padding: 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #1f2937;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-icon {
+      font-size: 1.2rem;
+    }
+
+    .topic-row {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+      gap: 1px;
+      border-bottom: 1px solid #f1f5f9;
+      transition: all 0.2s ease;
+    }
+
+    .topic-row:hover {
+      background: #f8fafc;
+    }
+
+    .topic-row:last-child {
+      border-bottom: none;
+    }
+
+    .topic-name {
+      padding: 1rem;
+      font-weight: 500;
+      color: #374151;
+      border-right: 1px solid #f1f5f9;
+      background: white;
+      font-size: 0.9rem;
+    }
+
+    .difficulty-cell,
+    .total-cell {
+      padding: 1rem 0.5rem;
+      text-align: center;
+      border-right: 1px solid #f1f5f9;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 60px;
+    }
+
+    .total-cell {
+      border-right: none;
+      background: #fafafa;
+      font-weight: 600;
+    }
+
+    .correct-count,
+    .total-correct {
+      background: #dcfce7;
+      color: #166534;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      min-width: 24px;
+      border: 1px solid #bbf7d0;
+    }
+
+    .wrong-count,
+    .total-wrong {
+      background: #fef2f2;
+      color: #dc2626;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      min-width: 24px;
+      border: 1px solid #fecaca;
+    }
+
+    .skipped-count,
+    .total-skipped {
+      background: #fefce8;
+      color: #ca8a04;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      min-width: 24px;
+      border: 1px solid #fde047;
+    }
+
+    /* Hide sections initially - will be controlled by JavaScript */
+    .section-group[data-section="varc"] {
+      display: block;
+    }
+    
+    .section-group[data-section="qa"], 
+    .section-group[data-section="lrdi"] {
+      display: none;
+    }
+
+    .section-group.hidden {
+      display: none;
+    }
+
   </style>
 </head>
 <body>
@@ -682,7 +1144,15 @@
   </header>
 
   <div class="main-content">
-    <h1 class="page-title">{{ stats.section_name }} Analysis</h1>
+    <div class="page-header">
+      <h1 class="page-title">{{ stats.section_name }} Analysis</h1>
+      <p class="page-subtitle">
+        {{ stats.test_name | default('Sectional Test') }}
+        {% if stats.completion_date %}
+          • Completed on {{ stats.completion_date }}
+        {% endif %}
+      </p>
+    </div>
 
     <!-- SUMMARY BANNER -->
     <div class="results-summary">
@@ -700,7 +1170,7 @@
       </div>
     </div>
 
-    <!-- NEXT STEPS BANNER -->
+        <!-- NEXT STEPS BANNER -->
     <section class="next-steps-section">
       <div class="next-steps-container">
         <h2 class="next-steps-title">Next Steps</h2>
@@ -767,114 +1237,79 @@
       </div>
     </section>
 
-    <!-- SWOT ANALYSIS -->
-    <section class="swot-analysis">
-      <h2>🎯 Question Selection Strategy Analysis</h2>
-      <div class="swot-grid">
-        <!-- Strengths -->
-        <div class="swot-card strengths">
-          <h3><span class="icon">⭐</span> Strengths</h3>
-          {% for strength in stats.swot_analysis.strengths %}
-          <div class="swot-item">
-            <strong>{{ strength.title }}</strong>
-            <p>{{ strength.description }}</p>
-            <div class="tags">
-              {% for tag in strength.tags %}
-              <span class="tag">{{ tag }}</span>
-              {% endfor %}
+    {%- macro format_time(seconds) -%}
+        {%- set m = (seconds // 60) | int -%}
+        {%- set s = seconds % 60 -%}
+        {%- if m > 0 -%}
+            {{ m }}:{{ '%02d' | format(s) }}
+        {%- else -%}
+            {{ s }}s
+        {%- endif -%}
+    {%- endmacro -%}
+
+    <!-- QUESTION PERFORMANCE HEATMAP -->
+    <section class="question-performance-heatmap">
+      <h2>📊 Question-wise Performance & Time Analysis</h2>
+      <div class="heatmap-container">
+        <!-- Legend -->
+        <div class="performance-legend">
+          <div class="legend-group">
+            <h4>Performance & Time Analysis</h4>
+            <div class="legend-items">
+              <div class="legend-item">
+                <div class="legend-box correct-optimal"></div>
+                <span>Correct + Fast (≤75s)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box correct-excessive"></div>
+                <span>Correct + Slow (>120s)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box incorrect-optimal"></div>
+                <span>Incorrect + Fast (≤75s)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box incorrect-excessive"></div>
+                <span>Incorrect + Slow (>120s)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box skipped"></div>
+                <span>Not Attempted</span>
+              </div>
             </div>
           </div>
-          {% endfor %}
         </div>
-        <!-- Weaknesses -->
-        <div class="swot-card weaknesses">
-          <h3><span class="icon">❗</span> Weaknesses</h3>
-          {% for weakness in stats.swot_analysis.weaknesses %}
-          <div class="swot-item">
-            <strong>{{ weakness.title }}</strong>
-            <p>{{ weakness.description }}</p>
-            <div class="tags">
-              {% for tag in weakness.tags %}
-              <span class="tag">{{ tag }}</span>
+
+        <!-- Question Grid -->
+        <div class="question-performance-grid">
+          <div class="section-questions" data-section="sectional">
+            <h3 class="section-header">{{ stats.section_name|default('Section') }}</h3>
+            <div class="questions-grid">
+              {% for question in stats.detailed_questions %}
+                {% set time_seconds = question.time_spent_seconds|default(0) %}
+                {% set time_class = 'optimal' if time_seconds <= 75 else ('moderate' if time_seconds <= 120 else 'excessive') %}
+                <div class="question-cell {{ question.status }} {{ time_class }}" 
+                     data-question="{{ question.number }}" 
+                     data-time="{{ question.time_spent_on_question_formatted|default('0s') }}"
+                     data-status="{{ question.status }}"
+                     title="Q{{ question.number }}: {{ question.status.title() }} in {{ question.time_spent_on_question_formatted|default('0s') }}">
+                  <div class="question-header">
+                    <span class="question-number">{{ question.number }}</span>
+                    <span class="status-icon">{{ '✓' if question.status == 'correct' else ('✗' if question.status == 'incorrect' else '–') }}</span>
+                  </div>
+                  <div class="question-time">{{ question.time_spent_on_question_formatted|default('0s') }}</div>
+                  <div class="time-bar">
+                    <div class="time-fill" data-time-seconds="{{ time_seconds }}"></div>
+                  </div>
+                </div>
               {% endfor %}
             </div>
           </div>
-          {% endfor %}
-        </div>
-        <!-- Opportunities -->
-        <div class="swot-card opportunities">
-          <h3><span class="icon">💡</span> Opportunities</h3>
-          {% for opportunity in stats.swot_analysis.opportunities %}
-          <div class="swot-item">
-            <strong>{{ opportunity.title }}</strong>
-            <p>{{ opportunity.description }}</p>
-            <div class="tags">
-              {% for tag in opportunity.tags %}
-              <span class="tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-        <!-- Threats -->
-        <div class="swot-card threats">
-          <h3><span class="icon">⚠️</span> Threats</h3>
-          {% for threat in stats.swot_analysis.threats %}
-          <div class="swot-item">
-            <strong>{{ threat.title }}</strong>
-            <p>{{ threat.description }}</p>
-            <div class="tags">
-              {% for tag in threat.tags %}
-              <span class="tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
-          </div>
-          {% endfor %}
         </div>
       </div>
     </section>
 
-    <!-- INSIGHTS: Missed Opportunities & Time Wasters -->
-    <section class="insights-section">
-      <div class="insights-grid">
-        <div class="insight-card missed-opps">
-          <h4>Missed Opportunities</h4>
-          <ul>
-            {% for opp in stats.missed_opportunities %}
-            <li>
-              <p>{{ opp.text }}</p>
-              <div class="tags">
-                {% for tag in opp.tags %}
-                  <span class="tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-              <div class="points">+{{ opp.points }} pts</div>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="insight-card time-wasters">
-          <h4>Time Wasters</h4>
-          <ul>
-            {% for tw in stats.time_wasters %}
-            <li>
-              <p>{{ tw.text }}</p>
-              <div class="tags">
-                {% for tag in tw.tags %}
-                  <span class="tag">{{ tag }}</span>
-                {% endfor %}
-              </div>
-              <div class="metrics">
-                <span class="time">⏱️ {{ tw.time_spent }}</span>
-                <span class="correct">✅ {{ tw.correct }}</span>
-                <span class="wrong">❌ {{ tw.wrong }}</span>
-              </div>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </section>
+
 
     <!-- NAVIGATION ACTIONS -->
     <div class="results-actions">
@@ -891,6 +1326,10 @@
   </div>
 
   <script>
+    // Clear any navigation protection that might be leftover from test
+    window.onbeforeunload = null;
+    window.onpopstate = null;
+
     // Add hover effects for action buttons
     document.querySelectorAll('.action-btn').forEach(btn => {
       btn.addEventListener('mouseenter', () => {
@@ -900,6 +1339,69 @@
       btn.addEventListener('mouseleave', () => {
         btn.style.transform = 'translateY(0)';
         btn.style.boxShadow = 'none';
+      });
+    });
+
+
+
+    // Set time bar widths dynamically
+    document.querySelectorAll('.time-fill').forEach(fill => {
+      const timeSeconds = parseInt(fill.dataset.timeSeconds) || 0;
+      const maxTime = 180; // 3 minutes
+      const widthPercent = Math.min((timeSeconds / maxTime) * 100, 100);
+      fill.style.width = widthPercent + '%';
+    });
+
+    // Add click handlers for question cells to show detailed info
+    document.querySelectorAll('.question-cell').forEach(cell => {
+      cell.addEventListener('click', () => {
+        const questionNum = cell.dataset.question;
+        const time = cell.dataset.time;
+        const status = cell.dataset.status;
+        
+        // Create a more detailed tooltip or modal
+        const tooltip = document.createElement('div');
+        tooltip.className = 'question-tooltip';
+        tooltip.innerHTML = `
+          <div class="tooltip-content">
+            <h4>Question ${questionNum}</h4>
+            <p><strong>Status:</strong> ${status.charAt(0).toUpperCase() + status.slice(1)}</p>
+            <p><strong>Time Spent:</strong> ${time}</p>
+            <p><em>Click "Review Answers" to see detailed solution</em></p>
+          </div>
+        `;
+        
+        // Position tooltip near the clicked cell
+        const rect = cell.getBoundingClientRect();
+        tooltip.style.position = 'fixed';
+        tooltip.style.top = (rect.top - 10) + 'px';
+        tooltip.style.left = (rect.left + rect.width + 10) + 'px';
+        tooltip.style.background = 'rgba(0,0,0,0.9)';
+        tooltip.style.color = 'white';
+        tooltip.style.padding = '12px';
+        tooltip.style.borderRadius = '8px';
+        tooltip.style.fontSize = '0.85rem';
+        tooltip.style.zIndex = '1000';
+        tooltip.style.maxWidth = '200px';
+        tooltip.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+        
+        document.body.appendChild(tooltip);
+        
+        // Remove tooltip after 3 seconds or on next click
+        setTimeout(() => {
+          if (tooltip.parentNode) {
+            tooltip.parentNode.removeChild(tooltip);
+          }
+        }, 3000);
+        
+        document.addEventListener('click', function removeTooltip(e) {
+          if (!tooltip.contains(e.target) && e.target !== cell) {
+            if (tooltip.parentNode) {
+              tooltip.parentNode.removeChild(tooltip);
+            }
+            document.removeEventListener('click', removeTooltip);
+          }
+        });
       });
     });
   </script>

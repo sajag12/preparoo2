@@ -1,5 +1,5 @@
 SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
-QA,,584930271,1,,,A sum of money amounts to Rs. 9680 in 2 years and to Rs. 10648 in 3 years when compounded annually. What is the rate of interest per annum?,8%,9%,10%,11%,A,B,C,D,C,MCQ,Arithmetic,Compound Interest,Medium,Finding interest rate from amounts of consecutive years in compound interest.,"amount calculation, rate of interest, successive amounts",False,MockSet3_QA_Clean,,"Let the principal be P and the rate of interest be R% per annum.
+QA,,584930271,1,,,A sum of money amounts to Rs. 9680 in 2 years and to Rs. 10648 in 3 years when compounded annually. What is the rate of interest per annum?,8%,9%,10%,11%,A,B,C,D,C,MCQ,Arithmetic,Compound Interest,Medium,Finding interest rate from amounts of consecutive years in compound interest.,"amount calculation, rate of interest, successive amounts",FALSE,MockSet3_QA_Clean,,"Let the principal be P and the rate of interest be R% per annum.
 Amount after 2 years = P(1 + R/100)^2 = 9680 (Equation 1)
 Amount after 3 years = P(1 + R/100)^3 = 10648 (Equation 2)
 Divide Equation 2 by Equation 1:
@@ -7,7 +7,7 @@ Divide Equation 2 by Equation 1:
 1 + R/100 = 10648 / 9680 = 1.1
 R/100 = 0.1
 R = 10%."
-QA,,695041382,2,,,"Three runners A, B, and C run on a circular track of length 1200 m. Their speeds are 10 m/s, 15 m/s, and 25 m/s respectively. If they start at the same time from the same point and run in the same direction, after how many seconds will all three of them meet at the starting point for the first time?",,,,,,,,,240,TITA,Arithmetic,"Time, Speed & Distance (Races - Linear & Circular)",Easy,Finding the time for objects moving in a circular path to meet at the starting point using LCM.,"circular track, meeting at starting point, LCM of times",True,MockSet3_QA_Clean,,"Length of the circular track L = 1200 m.
+QA,,695041382,2,,,"Three runners A, B, and C run on a circular track of length 1200 m. Their speeds are 10 m/s, 15 m/s, and 25 m/s respectively. If they start at the same time from the same point and run in the same direction, after how many seconds will all three of them meet at the starting point for the first time?",,,,,,,,,240,TITA,Arithmetic,"Time, Speed & Distance (Races - Linear & Circular)",Easy,Finding the time for objects moving in a circular path to meet at the starting point using LCM.,"circular track, meeting at starting point, LCM of times",TRUE,MockSet3_QA_Clean,,"Length of the circular track L = 1200 m.
 Speeds of A, B, C are S_A = 10 m/s, S_B = 15 m/s, S_C = 25 m/s.
 Time taken by A to complete one round = T_A = L/S_A = 1200/10 = 120 seconds.
 Time taken by B to complete one round = T_B = L/S_B = 1200/15 = 80 seconds.
@@ -19,7 +19,7 @@ Prime factorization:
 80 = 2^4 * 5
 48 = 2^4 * 3
 LCM = 2^4 * 3^1 * 5^1 = 16 * 3 * 5 = 240 seconds."
-QA,,706152493,3,,,"The polynomial P(x) = ax^3 - 11x^2 + bx + 4 has (x-2) as a factor. When P(x) is divided by (x+1), the remainder is -14. What is the value of a + b?",5,7,9,11,A,B,C,D,B,MCQ,Algebra,Polynomials (Higher degree equations),Medium,Applying Factor and Remainder theorems to solve for coefficients of a polynomial.,"factor theorem, remainder theorem, system of linear equations",False,MockSet3_QA_Clean,,"Given P(x) = ax^3 - 11x^2 + bx + 4.
+QA,,706152493,3,,,"The polynomial P(x) = ax^3 - 11x^2 + bx + 4 has (x-2) as a factor. When P(x) is divided by (x+1), the remainder is -14. What is the value of a + b?",5,7,9,11,A,B,C,D,B,MCQ,Algebra,Polynomials (Higher degree equations),Medium,Applying Factor and Remainder theorems to solve for coefficients of a polynomial.,"factor theorem, remainder theorem, system of linear equations",FALSE,MockSet3_QA_Clean,,"Given P(x) = ax^3 - 11x^2 + bx + 4.
 Since (x-2) is a factor, by the Factor Theorem, P(2) = 0.
 a(2)^3 - 11(2)^2 + b(2) + 4 = 0
 8a - 44 + 2b + 4 = 0
@@ -31,7 +31,7 @@ a(-1)^3 - 11(-1)^2 + b(-1) + 4 = -14
 -a - b = -7
 a + b = 7 (Equation 2).
 The question asks for the value of a + b, which is 7."
-QA,,817263504,4,,,"The average age of a group of N people is 35 years. If two people aged 25 years and 45 years leave the group, and three new people with ages in the ratio 2:3:4 join the group, the average age of the new group becomes 36 years. If the sum of the ages of the three new people is 108 years, find the initial number of people N.",,,,,,,,,2,TITA,Arithmetic,Averages & Weighted Averages,Hard,Calculating initial group size based on changes in average age.,"average change, addition and removal of elements, algebraic setup",True,MockSet3_QA_Clean,,"Let the initial number of people be N.
+QA,,817263504,4,,,"The average age of a group of N people is 35 years. If two people aged 25 years and 45 years leave the group, and three new people with ages in the ratio 2:3:4 join the group, the average age of the new group becomes 36 years. If the sum of the ages of the three new people is 108 years, find the initial number of people N.",,,,,,,,,2,TITA,Arithmetic,Averages & Weighted Averages,Hard,Calculating initial group size based on changes in average age.,"average change, addition and removal of elements, algebraic setup",TRUE,MockSet3_QA_Clean,,"Let the initial number of people be N.
 Initial sum of ages = 35N.
 Two people (aged 25 and 45) leave. Sum of ages removed = 25 + 45 = 70.
 Sum of ages of remaining (N-2) people = 35N - 70.
@@ -43,7 +43,7 @@ New average age = 36 years.
 35N + 38 = 36(N+1)
 35N + 38 = 36N + 36
 N = 2."
-QA,,928374615,5,,,"A shopkeeper sells two articles. He sells the first article at a 20% profit and the second article at a 10% loss. The selling price of both articles is the same. If his overall profit is Rs. 140, what is the cost price of the first article?",Rs. 1800,Rs. 2000,Rs. 2100,Rs. 2400,A,B,C,D,C,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,Solving profit and loss problems involving two articles with the same selling price.,"two articles, same selling price, overall profit, cost price calculation",False,MockSet3_QA_Clean,,"Let CP1 and CP2 be the cost prices of the first and second articles.
+QA,,928374615,5,,,"A shopkeeper sells two articles. He sells the first article at a 20% profit and the second article at a 10% loss. The selling price of both articles is the same. If his overall profit is Rs. 140, what is the cost price of the first article?",Rs. 1800,Rs. 2000,Rs. 2100,Rs. 2400,A,B,C,D,C,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,Solving profit and loss problems involving two articles with the same selling price.,"two articles, same selling price, overall profit, cost price calculation",FALSE,MockSet3_QA_Clean,,"Let CP1 and CP2 be the cost prices of the first and second articles.
 First article sold at 20% profit: SP1 = 1.2 * CP1.
 Second article sold at 10% loss: SP2 = 0.9 * CP2.
 Given SP1 = SP2, so 1.2 * CP1 = 0.9 * CP2.
@@ -57,7 +57,7 @@ The overall profit is given as Rs. 140.
 0.2k = 140
 k = 140 / 0.2 = 700.
 The cost price of the first article is CP1 = 3k = 3 * 700 = Rs. 2100."
-QA,,139485726,6,,,"In triangle ABC, D is a point on BC such that BD:DC = 3:4. E is a point on AD such that AE:ED = 2:1. What is the ratio of the area of triangle ABE to the area of triangle ABC?",1/7,2/7,3/14,6/35,A,B,C,D,B,MCQ,Geometry,"Triangles (Properties, Congruence, Similarity)",Medium,Using the property of area division by a cevian in a triangle.,"area ratio, cevian, ratio of bases, multi-step area division",False,MockSet3_QA_Clean,,"Let Area(ΔABC) denote the area of triangle ABC.
+QA,,139485726,6,,,"In triangle ABC, D is a point on BC such that BD:DC = 3:4. E is a point on AD such that AE:ED = 2:1. What is the ratio of the area of triangle ABE to the area of triangle ABC?","""1/7""","""2/7""","""3/14""","""6/35""",A,B,C,D,B,MCQ,Geometry,"Triangles (Properties, Congruence, Similarity)",Medium,Using the property of area division by a cevian in a triangle.,"area ratio, cevian, ratio of bases, multi-step area division",FALSE,MockSet3_QA_Clean,,"Let Area(ΔABC) denote the area of triangle ABC.
 D is a point on BC. In triangles with the same height from vertex A, the ratio of their areas is the ratio of their bases.
 Area(ΔABD) / Area(ΔABC) = BD/BC. Since BD:DC = 3:4, BC = BD+DC, so BD/BC = 3/7.
 Area(ΔABD) = (3/7) * Area(ΔABC).
@@ -67,7 +67,7 @@ Area(ΔABE) = (2/3) * Area(ΔABD).
 Substitute the expression for Area(ΔABD):
 Area(ΔABE) = (2/3) * [(3/7) * Area(ΔABC)] = (2/7) * Area(ΔABC).
 The ratio of Area(ΔABE) to Area(ΔABC) is 2/7."
-QA,,240596837,7,,,Find the number of trailing zeros in the product 5 * 10 * 15 * 20 * ... * 250.,,,,,,,,,47,TITA,Number System,Factorials,Hard,Calculating trailing zeros in a product by finding powers of 2 and 5 in its prime factorization.,"trailing zeros, product of series, power of primes in factorial",True,MockSet3_QA_Clean,,"The product is P = 5 * 10 * 15 * 20 * ... * 250.
+QA,,240596837,7,,,Find the number of trailing zeros in the product 5 * 10 * 15 * 20 * ... * 250.,,,,,,,,,47,TITA,Number System,Factorials,Hard,Calculating trailing zeros in a product by finding powers of 2 and 5 in its prime factorization.,"trailing zeros, product of series, power of primes in factorial",TRUE,MockSet3_QA_Clean,,"The product is P = 5 * 10 * 15 * 20 * ... * 250.
 Each term is a multiple of 5. We can factor out 5 from each of the 50 terms (since 250 = 5*50).
 P = (5*1) * (5*2) * (5*3) * ... * (5*50) = 5^50 * (1 * 2 * 3 * ... * 50) = 5^50 * 50!.
 The number of trailing zeros is the highest power of 10 in P, which is min(power of 5, power of 2).
@@ -77,7 +77,7 @@ Total power of 5 = 50 + 12 = 62.
 Power of 2 in P = Power of 2 in 50! (since 5^50 has no factors of 2).
 Power of 2 in 50! = floor(50/2) + floor(50/4) + floor(50/8) + floor(50/16) + floor(50/32) = 25 + 12 + 6 + 3 + 1 = 47.
 The number of trailing zeros is min(Total power of 5, Total power of 2) = min(62, 47) = 47."
-QA,,351607948,8,,,"If log_2(x) + log_4(x) + log_16(x) = 35/4, what is the value of x?",8,16,32,64,A,B,C,D,C,MCQ,Algebra,Logarithms,Easy,Solving logarithmic equations using the change of base formula.,"change of base formula, solving logarithmic equations",False,MockSet3_QA_Clean,,"Given log_2(x) + log_4(x) + log_16(x) = 35/4.
+QA,,351607948,8,,,"If log_2(x) + log_4(x) + log_16(x) = 35/4, what is the value of x?",8,16,32,64,A,B,C,D,C,MCQ,Algebra,Logarithms,Easy,Solving logarithmic equations using the change of base formula.,"change of base formula, solving logarithmic equations",FALSE,MockSet3_QA_Clean,,"Given log_2(x) + log_4(x) + log_16(x) = 35/4.
 Using the change of base formula, log_b(a) = log_c(a) / log_c(b), we convert all terms to base 2.
 log_4(x) = log_2(x) / log_2(4) = log_2(x) / 2.
 log_16(x) = log_2(x) / log_2(16) = log_2(x) / 4.
@@ -89,7 +89,7 @@ To clear the denominators, multiply the entire equation by 4:
 y = 5.
 Since y = log_2(x), we have log_2(x) = 5.
 x = 2^5 = 32."
-QA,,462718059,9,,,"A alone can finish a job in 20 days, B in 30 days and C in 12 days. A works alone for 5 days; then A and B work together for the next 5 days; thereafter A, B and C work together till completion. For how many days did C work?",,,,,,,,,2,TITA,Arithmetic,Time & Work,Medium,Solving a multi-stage work problem using the LCM method for work units.,"LCM method, multi-stage work, combined work, integer answer",True,MockSet3_QA_Clean,,"Let the total work be the LCM of (20, 30, 12), which is 60 units.
+QA,,462718059,9,,,"A alone can finish a job in 20 days, B in 30 days and C in 12 days. A works alone for 5 days; then A and B work together for the next 5 days; thereafter A, B and C work together till completion. For how many days did C work?",,,,,,,,,2,TITA,Arithmetic,Time & Work,Medium,Solving a multi-stage work problem using the LCM method for work units.,"LCM method, multi-stage work, combined work, integer answer",TRUE,MockSet3_QA_Clean,,"Let the total work be the LCM of (20, 30, 12), which is 60 units.
 Rate of A = 60/20 = 3 units/day.
 Rate of B = 60/30 = 2 units/day.
 Rate of C = 60/12 = 5 units/day.
@@ -101,7 +101,7 @@ Remaining work = 45 - 25 = 20 units.
 Phase 3: A, B, and C work together. Combined rate (A+B+C) = 3 + 2 + 5 = 10 units/day.
 Time to complete remaining work = 20 units / 10 units/day = 2 days.
 C worked only in Phase 3. Therefore, C worked for 2 days."
-QA,,573829160,10,,,"A train, after traveling for 1 hour, meets with an accident and its speed reduces to 3/5 of its usual speed. Due to this, it reaches its destination 2 hours and 40 minutes late. If the accident had occurred 100 km further on its path, it would have reached only 2 hours late. What is the usual speed of the train in km/h?",60 km/h,75 km/h,80 km/h,100 km/h,A,B,C,D,D,MCQ,Arithmetic,"Time, Speed & Distance (General)",Hard,"Solving a time, speed, distance problem involving an accident and reduced speed by comparing two scenarios.","accident scenario, speed reduction, two scenarios, simultaneous equations",False,MockSet3_QA_Clean,,"Let the usual speed be S km/h and total journey distance be D km.
+QA,,573829160,10,,,"A train, after traveling for 1 hour, meets with an accident and its speed reduces to 3/5 of its usual speed. Due to this, it reaches its destination 2 hours and 40 minutes late. If the accident had occurred 100 km further on its path, it would have reached only 2 hours late. What is the usual speed of the train in km/h?",60 km/h,75 km/h,80 km/h,100 km/h,A,B,C,D,D,MCQ,Arithmetic,"Time, Speed & Distance (General)",Hard,"Solving a time, speed, distance problem involving an accident and reduced speed by comparing two scenarios.","accident scenario, speed reduction, two scenarios, simultaneous equations",FALSE,MockSet3_QA_Clean,,"Let the usual speed be S km/h and total journey distance be D km.
 In the first case, the train travels for 1 hour at speed S, covering S km. The remaining distance is (D-S) km.
 The delay of 2h 40 min (8/3 hours) is caused on this remaining distance.
 Let the usual time for the remaining journey be T_rem = (D-S)/S.
@@ -116,12 +116,12 @@ The delay is (2/3) of this usual time:
 4 - 100/S = 3
 1 = 100/S
 S = 100 km/h."
-QA,,684930271,11,,,What is the minimum value of the expression |x-2| + |x-5| + |x-9|?,6,7,8,9,A,B,C,D,B,MCQ,Algebra,Modulus (Absolute Values),Easy,Finding the minimum value of a sum of absolute linear expressions using the median property.,"sum of absolute values, minimization, median property",False,MockSet3_QA_Clean,,"The expression f(x) = |x-a_1| + |x-a_2| + ... + |x-a_n| is minimized when x is the median of the set {a_1, a_2, ..., a_n}.
+QA,,684930271,11,,,What is the minimum value of the expression |x-2| + |x-5| + |x-9|?,6,7,8,9,A,B,C,D,B,MCQ,Algebra,Modulus (Absolute Values),Easy,Finding the minimum value of a sum of absolute linear expressions using the median property.,"sum of absolute values, minimization, median property",FALSE,MockSet3_QA_Clean,,"The expression f(x) = |x-a_1| + |x-a_2| + ... + |x-a_n| is minimized when x is the median of the set {a_1, a_2, ..., a_n}.
 Here, the expression is |x-2| + |x-5| + |x-9|. The set of numbers is {2, 5, 9}.
 The median of {2, 5, 9} is 5.
 The minimum value is obtained by substituting x = 5 into the expression:
 |5-2| + |5-5| + |5-9| = |3| + |0| + |-4| = 3 + 0 + 4 = 7."
-QA,,795041382,12,,,"The incomes of A and B are in the ratio 5:7 and their expenditures are in the ratio 3:4. If A saves Rs. 8000 and B saves Rs. 12000, what is the income of A in Rs.?",,,,,,,,,20000,TITA,Arithmetic,"Ratio, Proportion & Variation",Hard,"Solving a system of linear equations derived from income, expenditure, and savings ratios.","income, expenditure, savings, system of linear equations",True,MockSet3_QA_Clean,,"Let the incomes of A and B be 5x and 7x respectively.
+QA,,795041382,12,,,"The incomes of A and B are in the ratio 5:7 and their expenditures are in the ratio 3:4. If A saves Rs. 8000 and B saves Rs. 12000, what is the income of A in Rs.?",,,,,,,,,20000,TITA,Arithmetic,"Ratio, Proportion & Variation",Hard,"Solving a system of linear equations derived from income, expenditure, and savings ratios.","income, expenditure, savings, system of linear equations",TRUE,MockSet3_QA_Clean,,"Let the incomes of A and B be 5x and 7x respectively.
 Let the expenditures of A and B be 3y and 4y respectively.
 Savings = Income - Expenditure.
 For A: 5x - 3y = 8000 (Equation 1)
@@ -133,7 +133,7 @@ Subtract the new first equation from the new second equation:
 (21x - 12y) - (20x - 12y) = 36000 - 32000
 x = 4000.
 The income of A is 5x = 5 * 4000 = Rs. 20000."
-QA,,806152493,13,,,"In a batch of 120 students, 70% passed in subject X, 60% passed in subject Y, and 10% failed in both subjects. How many students passed in exactly one of the two subjects?",48,54,60,72,A,B,C,D,C,MCQ,Modern Maths,Set Theory & Venn Diagrams,Hard,Using set theory and Venn diagrams to find the number of elements in exactly one set.,"percentage based sets, passed/failed, exactly one subject, union intersection",False,MockSet3_QA_Clean,,"Total students = 120.
+QA,,806152493,13,,,"In a batch of 120 students, 70% passed in subject X, 60% passed in subject Y, and 10% failed in both subjects. How many students passed in exactly one of the two subjects?",48,54,60,72,A,B,C,D,C,MCQ,Modern Maths,Set Theory & Venn Diagrams,Hard,Using set theory and Venn diagrams to find the number of elements in exactly one set.,"percentage based sets, passed/failed, exactly one subject, union intersection",FALSE,MockSet3_QA_Clean,,"Total students = 120.
 Percentage of students who failed in both subjects = 10%.
 This means the percentage of students who passed in at least one subject (X or Y) is 100% - 10% = 90%. This is P(X U Y).
 Given: P(X) = 70%, P(Y) = 60%.
@@ -145,7 +145,7 @@ The percentage of students who passed in exactly one subject is P(Passed only X)
 This is also equal to P(X U Y) - P(X ∩ Y).
 Percentage = 90% - 40% = 50%.
 Number of students who passed in exactly one subject = 50% of 120 = 0.5 * 120 = 60."
-QA,,917263504,14,,,A cylinder of radius 7 cm and height 20 cm has a cone of the same radius and slant height 15 cm placed on top of it (base of cone coincides with top of cylinder). What is the total surface area of the combined solid in cm^2? (Use pi = 22/7),1364,1408,1452,1496,A,B,C,D,A,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Hard,Calculating the total surface area of a combined solid (cylinder and cone).,"combined solid, cylinder, cone, total surface area calculation",False,MockSet3_QA_Clean,,"The total surface area of the combined solid consists of three parts:
+QA,,917263504,14,,,A cylinder of radius 7 cm and height 20 cm has a cone of the same radius and slant height 15 cm placed on top of it (base of cone coincides with top of cylinder). What is the total surface area of the combined solid in cm^2? (Use pi = 22/7),1364,1408,1452,1496,A,B,C,D,A,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Hard,Calculating the total surface area of a combined solid (cylinder and cone).,"combined solid, cylinder, cone, total surface area calculation",FALSE,MockSet3_QA_Clean,,"The total surface area of the combined solid consists of three parts:
 1.  The area of the circular base of the cylinder.
 2.  The curved surface area (CSA) of the cylinder.
 3.  The curved surface area (CSA) of the cone on top.
@@ -154,7 +154,7 @@ Given: radius r = 7 cm, cylinder height h_cy = 20 cm, cone slant height l_co = 1
 2.  CSA of cylinder = 2 * π * r * h_cy = 2 * (22/7) * 7 * 20 = 44 * 20 = 880 cm^2.
 3.  CSA of cone = π * r * l_co = (22/7) * 7 * 15 = 22 * 15 = 330 cm^2.
 Total Surface Area = 154 + 880 + 330 = 1364 cm^2."
-QA,,128374615,15,,,Find the smallest natural number N such that N has exactly 15 factors and N^2 has exactly 45 factors.,,,,,,,,,144,TITA,Number System,Number of Factors & Sum of Factors,Hard,Using the number of factors formula to find the smallest number satisfying given conditions.,"number of factors formula, conditions on exponents, N and N^2 factors",True,MockSet3_QA_Clean,,"Let the prime factorization of N be p1^a1 * p2^a2 * ...
+QA,,128374615,15,,,Find the smallest natural number N such that N has exactly 15 factors and N^2 has exactly 45 factors.,,,,,,,,,144,TITA,Number System,Number of Factors & Sum of Factors,Hard,Using the number of factors formula to find the smallest number satisfying given conditions.,"number of factors formula, conditions on exponents, N and N^2 factors",TRUE,MockSet3_QA_Clean,,"Let the prime factorization of N be p1^a1 * p2^a2 * ...
 The number of factors of N is d(N) = (a1+1)(a2+1)...
 Given d(N) = 15. The ways to factor 15 are 15 or 5 * 3.
 Case 1: d(N) = 15. This implies N = p^(15-1) = p^14 for some prime p.
@@ -164,7 +164,7 @@ Then N^2 = (p1^4 * p2^2)^2 = p1^8 * p2^4. The number of factors of N^2 would be 
 So, N must be of the form p1^4 * p2^2.
 To find the smallest such natural number N, we should assign the smallest prime (2) to the larger exponent and the next smallest prime (3) to the smaller exponent.
 N = 2^4 * 3^2 = 16 * 9 = 144."
-QA,,239485726,16,,,A committee of 5 members is to be formed from 6 men and 4 women. What is the probability that the committee consists of at least 3 men?,13/21,31/42,5/7,17/21,A,B,C,D,B,MCQ,Modern Maths,Probability,Hard,Calculating probability using combinations for a committee formation problem with an 'at least' condition.,"committee formation, combinations, at least condition, probability calculation",False,MockSet3_QA_Clean,,"Total people = 6 men + 4 women = 10. A committee of 5 is to be formed.
+QA,,239485726,16,,,A committee of 5 members is to be formed from 6 men and 4 women. What is the probability that the committee consists of at least 3 men?,13/21,31/42,"""5/7""",17/21,A,B,C,D,B,MCQ,Modern Maths,Probability,Hard,Calculating probability using combinations for a committee formation problem with an 'at least' condition.,"committee formation, combinations, at least condition, probability calculation",FALSE,MockSet3_QA_Clean,,"Total people = 6 men + 4 women = 10. A committee of 5 is to be formed.
 Total number of ways to form the committee = C(10, 5) = (10*9*8*7*6) / (5*4*3*2*1) = 252.
 ""At least 3 men"" means the committee can have (3 men, 2 women), (4 men, 1 woman), or (5 men, 0 women).
 Case 1: 3 men and 2 women. Ways = C(6,3) * C(4,2) = 20 * 6 = 120.
@@ -176,7 +176,7 @@ Simplify the fraction by dividing numerator and denominator by their GCD (which 
 186 / 6 = 31.
 252 / 6 = 42.
 Probability = 31/42."
-QA,,340596837,17,,,"The sides of a triangle are x-1, 2x-3, and 3x-7. For how many distinct integer values of x, where 2.5 < x < 5, can a valid non-degenerate triangle be formed?",1,2,3,0,A,B,C,D,B,MCQ,Geometry,"Triangles (Properties, Congruence, Similarity)",Medium,Applying the triangle inequality theorem to find the number of possible integer values for a variable side.,"triangle inequality, integer solutions, constrained range",False,MockSet3_QA_Clean,,"For a triangle with sides a, b, c, the triangle inequality theorem states a+b > c, a+c > b, and b+c > a. All sides must also be positive.
+QA,,340596837,17,,,"The sides of a triangle are x-1, 2x-3, and 3x-7. For how many distinct integer values of x, where 2.5 < x < 5, can a valid non-degenerate triangle be formed?",1,2,3,0,A,B,C,D,B,MCQ,Geometry,"Triangles (Properties, Congruence, Similarity)",Medium,Applying the triangle inequality theorem to find the number of possible integer values for a variable side.,"triangle inequality, integer solutions, constrained range",FALSE,MockSet3_QA_Clean,,"For a triangle with sides a, b, c, the triangle inequality theorem states a+b > c, a+c > b, and b+c > a. All sides must also be positive.
 The sides are (x-1), (2x-3), and (3x-7).
 1. Positive side lengths: The most restrictive condition is 3x-7 > 0, which means x > 7/3 ≈ 2.33.
 2. Triangle inequalities:
@@ -188,7 +188,7 @@ The question provides the range 2.5 < x < 5. The integer values for x in this ra
 - For x=3: The sides are (3-1), (2*3-3), (3*3-7) => 2, 3, 2. This forms a valid triangle (2+2 > 3).
 - For x=4: The sides are (4-1), (2*4-3), (3*4-7) => 3, 5, 5. This forms a valid triangle (3+5 > 5).
 There are 2 distinct integer values of x."
-QA,,451607948,18,,,"If a, b, c are three positive integers such that a, b, c are in continued proportion (i.e., a/b = b/c), a + b + c = 39, and b = 10. If a < c, find the value of c.",,,,,,,,,25,TITA,Algebra,Quadratic Equations,Hard,Using the property of continued proportion (geometric mean) to solve for unknown integers.,"continued proportion, sum and product of roots application, system of equations with conditions",True,MockSet3_QA_Clean,,"Given that a, b, c are in continued proportion, we have a/b = b/c, which implies b^2 = ac.
+QA,,451607948,18,,,"If a, b, c are three positive integers such that a, b, c are in continued proportion (i.e., a/b = b/c), a + b + c = 39, and b = 10. If a < c, find the value of c.",,,,,,,,,25,TITA,Algebra,Quadratic Equations,Hard,Using the property of continued proportion (geometric mean) to solve for unknown integers.,"continued proportion, sum and product of roots application, system of equations with conditions",TRUE,MockSet3_QA_Clean,,"Given that a, b, c are in continued proportion, we have a/b = b/c, which implies b^2 = ac.
 Given b = 10, so 10^2 = 100 = ac.
 Also given a + b + c = 39. Substituting b=10:
 a + 10 + c = 39 => a + c = 29.
@@ -197,7 +197,7 @@ Factoring the quadratic: (t-4)(t-25) = 0.
 The two numbers are 4 and 25. So {a, c} = {4, 25}.
 The condition a < c is given, so a = 4 and c = 25.
 The value of c is 25."
-QA,,562718059,19,,,"A trader buys 'a' articles for Rs. 80 and sells 'b' articles for Rs. 90. If he makes a profit of 25% and a > b by 1, find the value of 'a'.",8,10,12,14,A,B,C,D,B,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,"Setting up and solving equations based on cost, selling price, and profit percentage for articles.","cost per article, selling price per article, profit percentage, algebraic setup",False,MockSet3_QA_Clean,,"Cost price (CP) of one article = Rs. 80 / a.
+QA,,562718059,19,,,"A trader buys 'a' articles for Rs. 80 and sells 'b' articles for Rs. 90. If he makes a profit of 25% and a > b by 1, find the value of 'a'.",8,10,12,14,A,B,C,D,B,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,"Setting up and solving equations based on cost, selling price, and profit percentage for articles.","cost per article, selling price per article, profit percentage, algebraic setup",FALSE,MockSet3_QA_Clean,,"Cost price (CP) of one article = Rs. 80 / a.
 Selling price (SP) of one article = Rs. 90 / b.
 Profit is 25%, so SP = 1.25 * CP = (5/4) * CP.
 90/b = (5/4) * (80/a)
@@ -211,7 +211,7 @@ Substitute this into the equation:
 9b + 9 = 10b
 b = 9.
 Then a = b + 1 = 9 + 1 = 10."
-QA,,673829160,20,,,The 4th term of a Geometric Progression is 24 and the 7th term is 192. What is the first term of the GP?,3,4,6,8,A,B,C,D,A,MCQ,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Easy,Finding the first term of a Geometric Progression given two other terms.,"geometric progression, finding first term from two given terms",False,MockSet3_QA_Clean,,"Let the first term of the GP be 'a' and the common ratio be 'r'.
+QA,,673829160,20,,,The 4th term of a Geometric Progression is 24 and the 7th term is 192. What is the first term of the GP?,3,4,6,8,A,B,C,D,A,MCQ,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Easy,Finding the first term of a Geometric Progression given two other terms.,"geometric progression, finding first term from two given terms",FALSE,MockSet3_QA_Clean,,"Let the first term of the GP be 'a' and the common ratio be 'r'.
 The nth term is given by T_n = ar^(n-1).
 Given T4 = ar^3 = 24. (Equation 1)
 Given T7 = ar^6 = 192. (Equation 2)
@@ -225,7 +225,7 @@ a * (2^3) = 24
 a * 8 = 24
 a = 3.
 The first term of the GP is 3."
-QA,,784930271,21,,,A five-digit number 7x3y4 is divisible by 72. Find the smallest possible value of (2x + y).,,,,,,,,,4,TITA,Number System,Divisibility Rules,Hard,Applying combined divisibility rules (of 8 and 9 for 72) to find missing digits in a number.,"combined divisibility (8 and 9), missing digits, finding smallest value of expression",True,MockSet3_QA_Clean,,"A number is divisible by 72 if it is divisible by both 8 and 9.
+QA,,784930271,21,,,A five-digit number 7x3y4 is divisible by 72. Find the smallest possible value of (2x + y).,,,,,,,,,4,TITA,Number System,Divisibility Rules,Hard,Applying combined divisibility rules (of 8 and 9 for 72) to find missing digits in a number.,"combined divisibility (8 and 9), missing digits, finding smallest value of expression",TRUE,MockSet3_QA_Clean,,"A number is divisible by 72 if it is divisible by both 8 and 9.
 **Divisibility by 8:** The last three digits, 3y4, must be divisible by 8.
 Testing values for y: 304/8=38 (y=0 works), 344/8=43 (y=4 works), 384/8=48 (y=8 works).
 So, possible values for y are 0, 4, 8.
@@ -242,7 +242,7 @@ We test each possible value of y:
   The sum is 14+x+8 = 22+x. For this to be divisible by 9, 22+x = 27, so x = 5.
   The value of (2x + y) is 2(5) + 8 = 18.
 The possible values for (2x + y) are 8, 4, 22, and 18. The smallest value is 4."
-QA,,895041382,22,,,"A function f(x) is defined such that f(x+2) = f(x) + f(x+1) for all x >= 1. If f(1) = 1 and f(2) = 3, what is the value of f(5)?",11,13,17,21,A,B,C,D,A,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Medium,Calculating terms of a sequence defined by a linear recurrence relation (Fibonacci-like).,"recursive function, iterative calculation, Fibonacci-like sequence",False,MockSet3_QA_Clean,,"The function is defined by the recurrence relation f(x+2) = f(x) + f(x+1).
+QA,,895041382,22,,,"A function f(x) is defined such that f(x+2) = f(x) + f(x+1) for all x >= 1. If f(1) = 1 and f(2) = 3, what is the value of f(5)?",11,13,17,21,A,B,C,D,A,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Medium,Calculating terms of a sequence defined by a linear recurrence relation (Fibonacci-like).,"recursive function, iterative calculation, Fibonacci-like sequence",FALSE,MockSet3_QA_Clean,,"The function is defined by the recurrence relation f(x+2) = f(x) + f(x+1).
 Given f(1) = 1 and f(2) = 3.
 We can calculate the next terms step-by-step:
 For x=1: f(3) = f(1) + f(2) = 1 + 3 = 4.

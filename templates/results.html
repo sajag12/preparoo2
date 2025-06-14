@@ -15,7 +15,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: white;
+      background: #f8fafc;
       color: #333;
       line-height: 1.6;
     }
@@ -133,13 +133,23 @@
       padding: 2rem 20px;
     }
 
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
     .page-title {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.5rem;
       font-weight: 700;
       color: #1f2937;
-      text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-subtitle {
+      font-size: 1rem;
+      color: #6b7280;
+      font-weight: 500;
     }
 
     /* Results Summary - Preparoo Colors */
@@ -187,17 +197,16 @@
 
     /* Next Steps Section - Preparoo Style */
     .next-steps-section {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      background: linear-gradient(135deg, #f5f7ff 0%, #e6e9ff 100%);
       border-radius: 16px;
       padding: 3rem 2rem;
       margin: 3rem 0;
       text-align: center;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e0e7ff;
     }
 
     .next-steps-title {
-      color: #8b5cf6;
+      color: #6366f1;
       font-size: 2rem;
       font-weight: 700;
       margin: 0 0 2rem 0;
@@ -217,7 +226,7 @@
       align-items: center;
       gap: 0.75rem;
       padding: 1rem 2rem;
-      border-radius: 8px;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
@@ -225,17 +234,18 @@
       border: 1px solid transparent;
       min-width: 220px;
       justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .next-step-btn.primary {
-      background: #8b5cf6;
+      background: #6366f1;
       color: white;
     }
 
     .next-step-btn.primary:hover {
-      background: #7c3aed;
+      background: #4f46e5;
       transform: translateY(-2px);
-      box-shadow: 0 7px 20px rgba(139, 92, 246, 0.25);
+      box-shadow: 0 7px 20px rgba(99, 102, 241, 0.25);
     }
 
     .next-step-btn.secondary {
@@ -247,7 +257,7 @@
     .next-step-btn.secondary:hover {
       background: #f9fafb;
       transform: translateY(-2px);
-      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
     }
 
     .next-step-btn.retake {
@@ -839,6 +849,482 @@
       box-shadow: 0 7px 20px rgba(0, 0, 0, 0.05);
     }
 
+    /* Topic Wise Analysis Matrix */
+    .topic-wise-analysis {
+      margin: 3rem 0;
+    }
+
+    .topic-wise-analysis h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: #1f2937;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .topic-matrix-container {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      background: #f1f5f9;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .section-tab {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      border: none;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .section-tab.active {
+      background: #8b5cf6;
+      color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-tab:hover:not(.active) {
+      background: #e2e8f0;
+      color: #475569;
+    }
+
+    .topic-matrix {
+      width: 100%;
+      border-collapse: collapse;
+      display: table;
+    }
+
+    .matrix-header {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+      gap: 1px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .topic-header,
+    .difficulty-header,
+    .total-header {
+      padding: 1rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #374151;
+      text-align: center;
+      background: #f8fafc;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+    }
+
+    .topic-header {
+      text-align: left;
+      border-right: 1px solid #e2e8f0;
+    }
+
+    .difficulty-header {
+      border-right: 1px solid #e2e8f0;
+    }
+
+    .section-group {
+      border: 1px solid #e2e8f0;
+      border-top: none;
+    }
+
+    .section-group[data-section="varc"],
+    .section-group[data-section="qa"],
+    .section-group[data-section="lrdi"] {
+      display: block;
+    }
+
+    .section-title {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      padding: 1rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #1f2937;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-icon {
+      font-size: 1.2rem;
+    }
+
+    .topic-row {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+      gap: 1px;
+      border-bottom: 1px solid #f1f5f9;
+      transition: all 0.2s ease;
+    }
+
+    .topic-row:hover {
+      background: #f8fafc;
+    }
+
+    .topic-row:last-child {
+      border-bottom: none;
+    }
+
+    .topic-name {
+      padding: 1rem;
+      font-weight: 500;
+      color: #374151;
+      border-right: 1px solid #f1f5f9;
+      background: white;
+      font-size: 0.9rem;
+    }
+
+    .difficulty-cell,
+    .total-cell {
+      padding: 1rem 0.5rem;
+      text-align: center;
+      border-right: 1px solid #f1f5f9;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 60px;
+    }
+
+    .total-cell {
+      border-right: none;
+      background: #fafafa;
+      font-weight: 600;
+    }
+
+    .correct-count,
+    .total-correct {
+      background: #dcfce7;
+      color: #166534;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      min-width: 24px;
+      border: 1px solid #bbf7d0;
+    }
+
+    .wrong-count,
+    .total-wrong {
+      background: #fef2f2;
+      color: #dc2626;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      min-width: 24px;
+      border: 1px solid #fecaca;
+    }
+
+    .skipped-count,
+    .total-skipped {
+      background: #fefce8;
+      color: #ca8a04;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      min-width: 24px;
+      border: 1px solid #fde047;
+    }
+
+    /* Hide sections initially - will be controlled by JavaScript */
+    .section-group[data-section="varc"] {
+      display: block;
+    }
+    
+    .section-group[data-section="qa"], 
+    .section-group[data-section="lrdi"] {
+      display: none;
+    }
+
+    .section-group.hidden {
+      display: none;
+    }
+
+    /* Legend */
+    .topic-legend {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .legend-box {
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      border: 1px solid;
+    }
+
+    .legend-box.correct {
+      background: #dcfce7;
+      border-color: #bbf7d0;
+    }
+
+    .legend-box.wrong {
+      background: #fef2f2;
+      border-color: #fecaca;
+    }
+
+    /* Heatmap Section Styles */
+    .heatmap-section {
+      margin: 3rem 0;
+    }
+
+    .heatmap-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: #1f2937;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .heatmap-container {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .heatmap-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0;
+      gap: 4px;
+    }
+
+    .heatmap-tab {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      border: none;
+      border-bottom: 3px solid transparent;
+      border-radius: 0;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      margin-bottom: -1px;
+    }
+
+    .heatmap-tab.active {
+      background: transparent;
+      color: #6366f1;
+      box-shadow: none;
+      border-bottom: 3px solid #6366f1;
+    }
+
+    .heatmap-tab:hover:not(.active) {
+      background: #f1f5f9;
+      color: #475569;
+      border-bottom-color: #e2e8f0;
+    }
+
+    .heatmap-legend {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    .heatmap-legend .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .heatmap-legend .legend-box {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border: 1px solid;
+    }
+
+    .heatmap-legend .legend-box.correct {
+      background: #ecfdf5;
+      border-color: #34d399;
+    }
+
+    .heatmap-legend .legend-box.incorrect {
+      background: #fff1f2;
+      border-color: #fb7185;
+    }
+
+    .heatmap-legend .legend-box.skipped {
+      background: #fffbeb;
+      border-color: #fbbd23;
+    }
+
+    .heatmap-content {
+      display: none;
+    }
+
+    .heatmap-content.active {
+      display: block;
+    }
+
+    .heatmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      gap: 12px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .heatmap-cell {
+      height: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #374151;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+      position: relative;
+      padding: 8px;
+    }
+
+    .heatmap-cell:hover {
+      transform: translateY(-3px);
+      z-index: 10;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .heatmap-cell.correct {
+      background: #ecfdf5;
+      border-color: #a7f3d0;
+      color: #065f46;
+    }
+
+    .heatmap-cell.incorrect {
+      background: #fff1f2;
+      border-color: #fecdd3;
+      color: #9f1239;
+    }
+
+    .heatmap-cell.skipped {
+      background: #fffbeb;
+      border-color: #fde68a;
+      color: #92400e;
+    }
+
+    .question-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      line-height: 1;
+    }
+
+    .question-number {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .status-icon {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .status-icon.correct { color: #10b981; }
+    .status-icon.incorrect { color: #f43f5e; }
+
+    .question-time {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #52525b;
+    }
+
+    /* Responsive Design for Heatmap */
+    @media (max-width: 768px) {
+      .heatmap-tabs {
+        flex-wrap: wrap;
+        gap: 2px;
+        padding: 2px;
+      }
+
+      .heatmap-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+      }
+
+      .heatmap-legend {
+        gap: 1rem;
+        font-size: 0.8rem;
+      }
+
+      .heatmap-legend .legend-box {
+        width: 16px;
+        height: 16px;
+      }
+
+      .heatmap-grid {
+        grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+        gap: 8px;
+      }
+
+      .heatmap-cell {
+        height: 65px;
+        font-size: 0.9rem;
+        padding: 6px;
+      }
+
+      .question-number {
+        font-size: 1rem;
+      }
+      .status-icon {
+        font-size: 1rem;
+      }
+      .question-time {
+        font-size: 0.8rem;
+      }
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .navbar {
@@ -912,6 +1398,415 @@
         width: 100%;
         max-width: 300px;
       }
+
+      /* Topic Matrix Mobile Responsive */
+      .section-tabs {
+        flex-wrap: wrap;
+        gap: 2px;
+        padding: 2px;
+      }
+
+      .section-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+      }
+
+      .topic-matrix-container {
+        padding: 1rem;
+        overflow-x: auto;
+      }
+
+      .matrix-header {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        min-width: 500px;
+      }
+
+      .topic-row {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        min-width: 500px;
+      }
+
+      .topic-header,
+      .difficulty-header,
+      .total-header {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.8rem;
+      }
+
+      .topic-name {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.8rem;
+      }
+
+      .difficulty-cell,
+      .total-cell {
+        padding: 0.75rem 0.25rem;
+        min-height: 50px;
+        gap: 0.25rem;
+      }
+
+      .correct-count,
+      .total-correct,
+      .wrong-count,
+      .total-wrong {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.75rem;
+        min-width: 20px;
+      }
+
+      .topic-legend {
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Question Performance Heatmap Styles */
+    .question-performance-heatmap {
+      margin: 3rem 0;
+    }
+
+    .question-performance-heatmap h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: #1f2937;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .heatmap-tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      border-radius: 16px;
+      background: #f1f5f9;
+      padding: 6px;
+      gap: 6px;
+    }
+
+    .heatmap-tab {
+      padding: 0.5rem 1rem;
+      background: transparent;
+      border: none;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .heatmap-tab.active {
+      background: #8b5cf6;
+      color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .heatmap-tab:hover:not(.active) {
+      background: #e2e8f0;
+      color: #475569;
+    }
+
+    .performance-legend {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 12px;
+      flex-wrap: wrap;
+    }
+
+    .legend-group h4 {
+      font-size: 0.9rem;
+      color: #374151;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .legend-items {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    .legend-box {
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      border: 1px solid;
+    }
+
+    .legend-box.correct {
+      background: #dcfce7;
+      border-color: #22c55e;
+    }
+
+    .legend-box.incorrect {
+      background: #fef2f2;
+      border-color: #ef4444;
+    }
+
+    .legend-box.skipped {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    /* Combined Performance + Time Efficiency Legend Boxes */
+    .legend-box.correct-optimal {
+      background: #dcfce7;
+      border-color: #16a34a;
+    }
+
+    .legend-box.correct-moderate {
+      background: #d1fae5;
+      border-color: #059669;
+    }
+
+    .legend-box.correct-excessive {
+      background: #bbf7d0;
+      border-color: #047857;
+    }
+
+    .legend-box.incorrect-optimal {
+      background: #fecaca;
+      border-color: #dc2626;
+    }
+
+
+
+    .legend-box.incorrect-excessive {
+      background: #fee2e2;
+      border-color: #b91c1c;
+    }
+
+    .question-performance-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .section-questions {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border: 1px solid #f1f5f9;
+    }
+
+    .section-questions.hidden {
+      display: none;
+    }
+
+    .section-header {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .questions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+    }
+
+    .question-cell {
+      height: 75px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 8px;
+      padding: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .question-cell:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 10;
+    }
+
+    /* Combined Performance + Time Efficiency backgrounds */
+    .question-cell.correct.optimal {
+      background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+      border-color: #16a34a;
+      color: #14532d;
+    }
+
+    .question-cell.correct.moderate {
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+      border-color: #059669;
+      color: #064e3b;
+    }
+
+    .question-cell.correct.excessive {
+      background: linear-gradient(135deg, #bbf7d0 0%, #86efac 100%);
+      border-color: #047857;
+      color: #022c22;
+    }
+
+    .question-cell.incorrect.optimal {
+      background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+      border-color: #dc2626;
+      color: #7f1d1d;
+    }
+
+    .question-cell.incorrect.moderate {
+      background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+      border-color: #ef4444;
+      color: #991b1b;
+    }
+
+    .question-cell.incorrect.excessive {
+      background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+      border-color: #b91c1c;
+      color: #7f1d1d;
+    }
+
+    .question-cell.skipped {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-color: #cbd5e1;
+      color: #64748b;
+    }
+
+    .question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .question-number {
+      font-size: 0.9rem;
+    }
+
+    .status-icon {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .question-time {
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-align: center;
+      margin: 2px 0;
+    }
+
+    .time-bar {
+      height: 4px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .time-fill {
+      height: 100%;
+      background: currentColor;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+      opacity: 0.7;
+    }
+
+
+
+    /* Responsive Design for Heatmap */
+    @media (max-width: 768px) {
+      .performance-legend {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+      }
+      
+      .legend-items {
+        justify-content: center;
+      }
+      
+      .questions-grid {
+        grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+        gap: 8px;
+      }
+      
+      .question-cell {
+        height: 65px;
+        padding: 5px;
+      }
+      
+      .question-number, .question-time {
+        font-size: 0.75rem;
+      }
+
+      .heatmap-tabs {
+        flex-wrap: wrap;
+        gap: 2px;
+        padding: 2px;
+      }
+
+      .heatmap-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Responsive Design for Section Cards */
+    @media (max-width: 1200px) {
+      .section-cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .section-card {
+        min-height: auto; /* Remove fixed height on mobile */
+        padding: 1.5rem;
+      }
+      
+      .section-card h3 {
+        font-size: 1.2rem;
+        min-height: auto; /* Remove fixed height on mobile */
+        margin-bottom: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section-cards {
+        gap: 1rem;
+      }
+      
+      .section-card {
+        padding: 1rem;
+      }
+      
+      .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
     }
   </style>
 </head>
@@ -943,7 +1838,10 @@
   </header>
 
   <div class="main-content">
-    <h1 class="page-title">Test Analysis</h1>
+    <div class="page-header">
+      <h1 class="page-title">Test Analysis</h1>
+      <p class="page-subtitle">{{ stats.test_name | default('CAT Mock Test 2') }} • Completed on {{ stats.completion_date | default('May 12, 2025') }}</p>
+    </div>
 
     <!-- SUMMARY BANNER -->
     <div class="results-summary">
@@ -1049,153 +1947,628 @@
       </div>
     </section>
 
-    <!-- SWOT ANALYSIS -->
-    <section class="swot-analysis">
-      <h2>🎯 Question Selection Strategy Analysis</h2>
-      <div class="swot-grid">
-        <!-- Strengths -->
-        <div class="swot-card strengths">
-          <h3><span class="icon">⭐</span> Strengths</h3>
-          {% for strength in stats.swot_analysis.strengths %}
-          <div class="swot-item">
-            <strong>{{ strength.title }}</strong>
-            <p>{{ strength.description }}</p>
-            <div class="tags">
-              {% for tag in strength.tags %}
-              <span class="tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
-          </div>
-          {% endfor %}
+    <!-- TOPIC WISE ANALYSIS -->
+    <section class="topic-wise-analysis">
+      <h2>📊 Topic Wise Analysis</h2>
+      <div class="topic-matrix-container">
+        <!-- Section Tabs -->
+        <div class="section-tabs">
+          <button class="section-tab active" data-section="varc">VARC</button>
+          <button class="section-tab" data-section="qa">QA</button>
+          <button class="section-tab" data-section="lrdi">LRDI</button>
         </div>
-        <!-- Weaknesses -->
-        <div class="swot-card weaknesses">
-          <h3><span class="icon">❗</span> Weaknesses</h3>
-          {% for weakness in stats.swot_analysis.weaknesses %}
-          <div class="swot-item">
-            <strong>{{ weakness.title }}</strong>
-            <p>{{ weakness.description }}</p>
-            <div class="tags">
-              {% for tag in weakness.tags %}
-              <span class="tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
+        
+        <!-- Legend -->
+        <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; font-size: 0.9rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span class="correct-count">0</span>
+            <span>Correct Answers</span>
           </div>
-          {% endfor %}
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span class="wrong-count">0</span>
+            <span>Wrong Answers</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span class="skipped-count">0</span>
+            <span>Skipped Questions</span>
+          </div>
         </div>
-        <!-- Opportunities -->
-        <div class="swot-card opportunities">
-          <h3><span class="icon">💡</span> Opportunities</h3>
-          {% for opportunity in stats.swot_analysis.opportunities %}
-          <div class="swot-item">
-            <strong>{{ opportunity.title }}</strong>
-            <p>{{ opportunity.description }}</p>
-            <div class="tags">
-              {% for tag in opportunity.tags %}
-              <span class="tag">{{ tag }}</span>
-              {% endfor %}
+
+        <!-- Topic Matrix -->
+        <div class="topic-matrix">
+          <div class="matrix-header">
+            <div class="topic-header">Topic/Subtopic</div>
+            <div class="difficulty-header">Easy</div>
+            <div class="difficulty-header">Medium</div>
+            <div class="difficulty-header">Hard</div>
+            <div class="total-header">Total</div>
+          </div>
+          
+          <!-- Verbal Ability Topics -->
+          <div class="section-group" data-section="varc">
+            <div class="section-title">
+              <span class="section-icon">📚</span>
+              <span class="section-name">Verbal Ability</span>
+            </div>
+            
+            <!-- Reading Comprehension -->
+            <div class="topic-row">
+              <div class="topic-name">Reading Comprehension</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.reading_comprehension.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.reading_comprehension.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.reading_comprehension.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.reading_comprehension.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.reading_comprehension.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.reading_comprehension.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.reading_comprehension.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.reading_comprehension.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.reading_comprehension.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set rc_total_correct = (stats.topic_analysis.varc.reading_comprehension.easy.correct|default(0)) + (stats.topic_analysis.varc.reading_comprehension.medium.correct|default(0)) + (stats.topic_analysis.varc.reading_comprehension.hard.correct|default(0)) %}
+                {% set rc_total_wrong = (stats.topic_analysis.varc.reading_comprehension.easy.wrong|default(0)) + (stats.topic_analysis.varc.reading_comprehension.medium.wrong|default(0)) + (stats.topic_analysis.varc.reading_comprehension.hard.wrong|default(0)) %}
+                {% set rc_total_skipped = (stats.topic_analysis.varc.reading_comprehension.easy.skipped|default(0)) + (stats.topic_analysis.varc.reading_comprehension.medium.skipped|default(0)) + (stats.topic_analysis.varc.reading_comprehension.hard.skipped|default(0)) %}
+                <span class="total-correct">{{ rc_total_correct }}</span>
+                <span class="total-wrong">{{ rc_total_wrong }}</span>
+                <span class="total-skipped">{{ rc_total_skipped }}</span>
+              </div>
+            </div>
+            
+            <!-- Sentence Completion -->
+            <div class="topic-row">
+              <div class="topic-name">Sentence Completion</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.sentence_completion.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.sentence_completion.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.sentence_completion.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.sentence_completion.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.sentence_completion.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.sentence_completion.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.sentence_completion.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.sentence_completion.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.sentence_completion.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set sc_total_correct = (stats.topic_analysis.varc.sentence_completion.easy.correct|default(0)) + (stats.topic_analysis.varc.sentence_completion.medium.correct|default(0)) + (stats.topic_analysis.varc.sentence_completion.hard.correct|default(0)) %}
+                {% set sc_total_wrong = (stats.topic_analysis.varc.sentence_completion.easy.wrong|default(0)) + (stats.topic_analysis.varc.sentence_completion.medium.wrong|default(0)) + (stats.topic_analysis.varc.sentence_completion.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ sc_total_correct }}</span>
+                <span class="total-wrong">{{ sc_total_wrong }}</span>
+                {% set sc_total_skipped = (stats.topic_analysis.varc.sentence_completion.easy.skipped|default(0)) + (stats.topic_analysis.varc.sentence_completion.medium.skipped|default(0)) + (stats.topic_analysis.varc.sentence_completion.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ sc_total_skipped }}</span>
+              </div>
+            </div>
+            
+            <!-- Sentence Correction -->
+            <div class="topic-row">
+              <div class="topic-name">Sentence Correction</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.sentence_correction.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.sentence_correction.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.sentence_correction.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.sentence_correction.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.sentence_correction.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.sentence_correction.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.sentence_correction.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.sentence_correction.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.sentence_correction.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set scr_total_correct = (stats.topic_analysis.varc.sentence_correction.easy.correct|default(0)) + (stats.topic_analysis.varc.sentence_correction.medium.correct|default(0)) + (stats.topic_analysis.varc.sentence_correction.hard.correct|default(0)) %}
+                {% set scr_total_wrong = (stats.topic_analysis.varc.sentence_correction.easy.wrong|default(0)) + (stats.topic_analysis.varc.sentence_correction.medium.wrong|default(0)) + (stats.topic_analysis.varc.sentence_correction.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ scr_total_correct }}</span>
+                <span class="total-wrong">{{ scr_total_wrong }}</span>
+                {% set scr_total_skipped = (stats.topic_analysis.varc.sentence_correction.easy.skipped|default(0)) + (stats.topic_analysis.varc.sentence_correction.medium.skipped|default(0)) + (stats.topic_analysis.varc.sentence_correction.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ scr_total_skipped }}</span>
+              </div>
+            </div>
+            
+
+            <!-- Para Jumbles -->
+            <div class="topic-row">
+              <div class="topic-name">Para Jumbles</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.para_jumbles.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.para_jumbles.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.para_jumbles.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.para_jumbles.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.para_jumbles.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.para_jumbles.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.para_jumbles.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.para_jumbles.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.para_jumbles.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set pj_total_correct = (stats.topic_analysis.varc.para_jumbles.easy.correct|default(0)) + (stats.topic_analysis.varc.para_jumbles.medium.correct|default(0)) + (stats.topic_analysis.varc.para_jumbles.hard.correct|default(0)) %}
+                {% set pj_total_wrong = (stats.topic_analysis.varc.para_jumbles.easy.wrong|default(0)) + (stats.topic_analysis.varc.para_jumbles.medium.wrong|default(0)) + (stats.topic_analysis.varc.para_jumbles.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ pj_total_correct }}</span>
+                <span class="total-wrong">{{ pj_total_wrong }}</span>
+                {% set pj_total_skipped = (stats.topic_analysis.varc.para_jumbles.easy.skipped|default(0)) + (stats.topic_analysis.varc.para_jumbles.medium.skipped|default(0)) + (stats.topic_analysis.varc.para_jumbles.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ pj_total_skipped }}</span>
+              </div>
+            </div>
+            
+            <!-- Para Completion -->
+            <div class="topic-row">
+              <div class="topic-name">Para Completion</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.para_completion.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.para_completion.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.para_completion.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.para_completion.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.para_completion.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.para_completion.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.varc.para_completion.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.varc.para_completion.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.varc.para_completion.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set pc_total_correct = (stats.topic_analysis.varc.para_completion.easy.correct|default(0)) + (stats.topic_analysis.varc.para_completion.medium.correct|default(0)) + (stats.topic_analysis.varc.para_completion.hard.correct|default(0)) %}
+                {% set pc_total_wrong = (stats.topic_analysis.varc.para_completion.easy.wrong|default(0)) + (stats.topic_analysis.varc.para_completion.medium.wrong|default(0)) + (stats.topic_analysis.varc.para_completion.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ pc_total_correct }}</span>
+                <span class="total-wrong">{{ pc_total_wrong }}</span>
+                {% set pc_total_skipped = (stats.topic_analysis.varc.para_completion.easy.skipped|default(0)) + (stats.topic_analysis.varc.para_completion.medium.skipped|default(0)) + (stats.topic_analysis.varc.para_completion.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ pc_total_skipped }}</span>
+              </div>
             </div>
           </div>
-          {% endfor %}
+          
+          <!-- Quantitative Ability Topics -->
+          <div class="section-group" data-section="qa">
+            <div class="section-title">
+              <span class="section-icon">🔢</span>
+              <span class="section-name">Quantitative Ability</span>
+            </div>
+            
+            <!-- Algebra -->
+            <div class="topic-row">
+              <div class="topic-name">Algebra</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.algebra.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.algebra.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.algebra.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.algebra.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.algebra.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.algebra.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.algebra.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.algebra.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.algebra.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set alg_total_correct = (stats.topic_analysis.qa.algebra.easy.correct|default(0)) + (stats.topic_analysis.qa.algebra.medium.correct|default(0)) + (stats.topic_analysis.qa.algebra.hard.correct|default(0)) %}
+                {% set alg_total_wrong = (stats.topic_analysis.qa.algebra.easy.wrong|default(0)) + (stats.topic_analysis.qa.algebra.medium.wrong|default(0)) + (stats.topic_analysis.qa.algebra.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ alg_total_correct }}</span>
+                <span class="total-wrong">{{ alg_total_wrong }}</span>
+                {% set alg_total_skipped = (stats.topic_analysis.qa.algebra.easy.skipped|default(0)) + (stats.topic_analysis.qa.algebra.medium.skipped|default(0)) + (stats.topic_analysis.qa.algebra.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ alg_total_skipped }}</span>
+              </div>
+            </div>
+            
+            <!-- Arithmetic -->
+            <div class="topic-row">
+              <div class="topic-name">Arithmetic</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.arithmetic.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.arithmetic.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.arithmetic.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.arithmetic.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.arithmetic.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.arithmetic.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.arithmetic.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.arithmetic.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.arithmetic.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set arith_total_correct = (stats.topic_analysis.qa.arithmetic.easy.correct|default(0)) + (stats.topic_analysis.qa.arithmetic.medium.correct|default(0)) + (stats.topic_analysis.qa.arithmetic.hard.correct|default(0)) %}
+                {% set arith_total_wrong = (stats.topic_analysis.qa.arithmetic.easy.wrong|default(0)) + (stats.topic_analysis.qa.arithmetic.medium.wrong|default(0)) + (stats.topic_analysis.qa.arithmetic.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ arith_total_correct }}</span>
+                <span class="total-wrong">{{ arith_total_wrong }}</span>
+                {% set arith_total_skipped = (stats.topic_analysis.qa.arithmetic.easy.skipped|default(0)) + (stats.topic_analysis.qa.arithmetic.medium.skipped|default(0)) + (stats.topic_analysis.qa.arithmetic.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ arith_total_skipped }}</span>
+              </div>
+            </div>
+            
+            <!-- Geometry -->
+            <div class="topic-row">
+              <div class="topic-name">Geometry</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.geometry.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.geometry.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.geometry.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.geometry.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.geometry.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.geometry.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.geometry.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.geometry.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.geometry.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set geom_total_correct = (stats.topic_analysis.qa.geometry.easy.correct|default(0)) + (stats.topic_analysis.qa.geometry.medium.correct|default(0)) + (stats.topic_analysis.qa.geometry.hard.correct|default(0)) %}
+                {% set geom_total_wrong = (stats.topic_analysis.qa.geometry.easy.wrong|default(0)) + (stats.topic_analysis.qa.geometry.medium.wrong|default(0)) + (stats.topic_analysis.qa.geometry.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ geom_total_correct }}</span>
+                <span class="total-wrong">{{ geom_total_wrong }}</span>
+                {% set geom_total_skipped = (stats.topic_analysis.qa.geometry.easy.skipped|default(0)) + (stats.topic_analysis.qa.geometry.medium.skipped|default(0)) + (stats.topic_analysis.qa.geometry.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ geom_total_skipped }}</span>
+              </div>
+            </div>
+            
+            <!-- Number System -->
+            <div class="topic-row">
+              <div class="topic-name">Number System</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.number_system.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.number_system.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.number_system.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.number_system.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.number_system.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.number_system.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.number_system.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.number_system.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.number_system.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set ns_total_correct = (stats.topic_analysis.qa.number_system.easy.correct|default(0)) + (stats.topic_analysis.qa.number_system.medium.correct|default(0)) + (stats.topic_analysis.qa.number_system.hard.correct|default(0)) %}
+                {% set ns_total_wrong = (stats.topic_analysis.qa.number_system.easy.wrong|default(0)) + (stats.topic_analysis.qa.number_system.medium.wrong|default(0)) + (stats.topic_analysis.qa.number_system.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ ns_total_correct }}</span>
+                <span class="total-wrong">{{ ns_total_wrong }}</span>
+                {% set ns_total_skipped = (stats.topic_analysis.qa.number_system.easy.skipped|default(0)) + (stats.topic_analysis.qa.number_system.medium.skipped|default(0)) + (stats.topic_analysis.qa.number_system.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ ns_total_skipped }}</span>
+              </div>
+            </div>
+            
+            <!-- Probability -->
+            <div class="topic-row">
+              <div class="topic-name">Probability</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.probability.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.probability.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.probability.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.probability.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.probability.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.probability.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.probability.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.probability.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.probability.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set prob_total_correct = (stats.topic_analysis.qa.probability.easy.correct|default(0)) + (stats.topic_analysis.qa.probability.medium.correct|default(0)) + (stats.topic_analysis.qa.probability.hard.correct|default(0)) %}
+                {% set prob_total_wrong = (stats.topic_analysis.qa.probability.easy.wrong|default(0)) + (stats.topic_analysis.qa.probability.medium.wrong|default(0)) + (stats.topic_analysis.qa.probability.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ prob_total_correct }}</span>
+                <span class="total-wrong">{{ prob_total_wrong }}</span>
+                {% set prob_total_skipped = (stats.topic_analysis.qa.probability.easy.skipped|default(0)) + (stats.topic_analysis.qa.probability.medium.skipped|default(0)) + (stats.topic_analysis.qa.probability.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ prob_total_skipped }}</span>
+              </div>
+            </div>
+            
+            <!-- Permutation & Combination -->
+            <div class="topic-row">
+              <div class="topic-name">Permutation & Combination</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.permutation_combination.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.permutation_combination.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.permutation_combination.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.permutation_combination.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.permutation_combination.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.permutation_combination.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.qa.permutation_combination.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.qa.permutation_combination.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.qa.permutation_combination.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set pnc_total_correct = (stats.topic_analysis.qa.permutation_combination.easy.correct|default(0)) + (stats.topic_analysis.qa.permutation_combination.medium.correct|default(0)) + (stats.topic_analysis.qa.permutation_combination.hard.correct|default(0)) %}
+                {% set pnc_total_wrong = (stats.topic_analysis.qa.permutation_combination.easy.wrong|default(0)) + (stats.topic_analysis.qa.permutation_combination.medium.wrong|default(0)) + (stats.topic_analysis.qa.permutation_combination.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ pnc_total_correct }}</span>
+                <span class="total-wrong">{{ pnc_total_wrong }}</span>
+                {% set pnc_total_skipped = (stats.topic_analysis.qa.permutation_combination.easy.skipped|default(0)) + (stats.topic_analysis.qa.permutation_combination.medium.skipped|default(0)) + (stats.topic_analysis.qa.permutation_combination.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ pnc_total_skipped }}</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Logical Reasoning & Data Interpretation Topics -->
+          <div class="section-group" data-section="lrdi">
+            <div class="section-title">
+              <span class="section-icon">🧠</span>
+              <span class="section-name">Logical Reasoning & Data Interpretation</span>
+            </div>
+            
+            <!-- Logical Reasoning -->
+            <div class="topic-row">
+              <div class="topic-name">Logical Reasoning</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.logical_reasoning.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.logical_reasoning.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.logical_reasoning.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.logical_reasoning.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.logical_reasoning.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.logical_reasoning.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.logical_reasoning.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.logical_reasoning.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.logical_reasoning.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set lr_total_correct = (stats.topic_analysis.lrdi.logical_reasoning.easy.correct|default(0)) + (stats.topic_analysis.lrdi.logical_reasoning.medium.correct|default(0)) + (stats.topic_analysis.lrdi.logical_reasoning.hard.correct|default(0)) %}
+                {% set lr_total_wrong = (stats.topic_analysis.lrdi.logical_reasoning.easy.wrong|default(0)) + (stats.topic_analysis.lrdi.logical_reasoning.medium.wrong|default(0)) + (stats.topic_analysis.lrdi.logical_reasoning.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ lr_total_correct }}</span>
+                <span class="total-wrong">{{ lr_total_wrong }}</span>
+                {% set lr_total_skipped = (stats.topic_analysis.lrdi.logical_reasoning.easy.skipped|default(0)) + (stats.topic_analysis.lrdi.logical_reasoning.medium.skipped|default(0)) + (stats.topic_analysis.lrdi.logical_reasoning.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ lr_total_skipped }}</span>
+              </div>
+            </div>
+            
+            <!-- Data Interpretation -->
+            <div class="topic-row">
+              <div class="topic-name">Data Interpretation</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.data_interpretation.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.data_interpretation.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.data_interpretation.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.data_interpretation.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.data_interpretation.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.data_interpretation.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.data_interpretation.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.data_interpretation.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.data_interpretation.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set di_total_correct = (stats.topic_analysis.lrdi.data_interpretation.easy.correct|default(0)) + (stats.topic_analysis.lrdi.data_interpretation.medium.correct|default(0)) + (stats.topic_analysis.lrdi.data_interpretation.hard.correct|default(0)) %}
+                {% set di_total_wrong = (stats.topic_analysis.lrdi.data_interpretation.easy.wrong|default(0)) + (stats.topic_analysis.lrdi.data_interpretation.medium.wrong|default(0)) + (stats.topic_analysis.lrdi.data_interpretation.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ di_total_correct }}</span>
+                <span class="total-wrong">{{ di_total_wrong }}</span>
+                {% set di_total_skipped = (stats.topic_analysis.lrdi.data_interpretation.easy.skipped|default(0)) + (stats.topic_analysis.lrdi.data_interpretation.medium.skipped|default(0)) + (stats.topic_analysis.lrdi.data_interpretation.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ di_total_skipped }}</span>
+              </div>
+            </div>
+            
+            <!-- Data Sufficiency -->
+            <div class="topic-row">
+              <div class="topic-name">Data Sufficiency</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.data_sufficiency.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.data_sufficiency.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.data_sufficiency.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.data_sufficiency.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.data_sufficiency.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.data_sufficiency.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.data_sufficiency.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.data_sufficiency.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.data_sufficiency.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set ds_total_correct = (stats.topic_analysis.lrdi.data_sufficiency.easy.correct|default(0)) + (stats.topic_analysis.lrdi.data_sufficiency.medium.correct|default(0)) + (stats.topic_analysis.lrdi.data_sufficiency.hard.correct|default(0)) %}
+                {% set ds_total_wrong = (stats.topic_analysis.lrdi.data_sufficiency.easy.wrong|default(0)) + (stats.topic_analysis.lrdi.data_sufficiency.medium.wrong|default(0)) + (stats.topic_analysis.lrdi.data_sufficiency.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ ds_total_correct }}</span>
+                <span class="total-wrong">{{ ds_total_wrong }}</span>
+                {% set ds_total_skipped = (stats.topic_analysis.lrdi.data_sufficiency.easy.skipped|default(0)) + (stats.topic_analysis.lrdi.data_sufficiency.medium.skipped|default(0)) + (stats.topic_analysis.lrdi.data_sufficiency.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ ds_total_skipped }}</span>
+              </div>
+            </div>
+            
+            <!-- Puzzles & Games -->
+            <div class="topic-row">
+              <div class="topic-name">Puzzles & Games</div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.puzzles_games.easy.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.puzzles_games.easy.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.puzzles_games.easy.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.puzzles_games.medium.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.puzzles_games.medium.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.puzzles_games.medium.skipped|default(0) }}</span>
+              </div>
+              <div class="difficulty-cell">
+                <span class="correct-count">{{ stats.topic_analysis.lrdi.puzzles_games.hard.correct|default(0) }}</span>
+                <span class="wrong-count">{{ stats.topic_analysis.lrdi.puzzles_games.hard.wrong|default(0) }}</span>
+                <span class="skipped-count">{{ stats.topic_analysis.lrdi.puzzles_games.hard.skipped|default(0) }}</span>
+              </div>
+              <div class="total-cell">
+                {% set pg_total_correct = (stats.topic_analysis.lrdi.puzzles_games.easy.correct|default(0)) + (stats.topic_analysis.lrdi.puzzles_games.medium.correct|default(0)) + (stats.topic_analysis.lrdi.puzzles_games.hard.correct|default(0)) %}
+                {% set pg_total_wrong = (stats.topic_analysis.lrdi.puzzles_games.easy.wrong|default(0)) + (stats.topic_analysis.lrdi.puzzles_games.medium.wrong|default(0)) + (stats.topic_analysis.lrdi.puzzles_games.hard.wrong|default(0)) %}
+                <span class="total-correct">{{ pg_total_correct }}</span>
+                <span class="total-wrong">{{ pg_total_wrong }}</span>
+                {% set pg_total_skipped = (stats.topic_analysis.lrdi.puzzles_games.easy.skipped|default(0)) + (stats.topic_analysis.lrdi.puzzles_games.medium.skipped|default(0)) + (stats.topic_analysis.lrdi.puzzles_games.hard.skipped|default(0)) %}
+                <span class="total-skipped">{{ pg_total_skipped }}</span>
+              </div>
+                         </div>
+           </div>
+         </div>
+         
+         <!-- Legend -->
+         <div class="topic-legend">
+           <div class="legend-item">
+             <div class="legend-box correct"></div>
+             <span>Correct Answers</span>
+           </div>
+           <div class="legend-item">
+             <div class="legend-box wrong"></div>
+             <span>Wrong Answers</span>
+           </div>
+         </div>
+       </div>
+     </section>
+
+    {%- macro format_time(seconds) -%}
+        {%- set m = (seconds // 60) | int -%}
+        {%- set s = seconds % 60 -%}
+        {%- if m > 0 -%}
+            {{ m }}:{{ '%02d' | format(s) }}
+        {%- else -%}
+            {{ s }}s
+        {%- endif -%}
+    {%- endmacro -%}
+
+    <!-- QUESTION PERFORMANCE HEATMAP -->
+    <section class="question-performance-heatmap">
+      <h2>📊 Question-wise Performance & Time Analysis</h2>
+      <div class="heatmap-container">
+        <!-- Section Tabs -->
+        <div class="heatmap-tabs">
+          {% if stats.detailed_sections %}
+            <!-- Full Mock Test - Show all sections -->
+            <button class="heatmap-tab active" data-section="varc">Verbal Ability</button>
+            <button class="heatmap-tab" data-section="qa">Quantitative Ability</button>
+            <button class="heatmap-tab" data-section="lrdi">Logical Reasoning & DI</button>
+          {% elif stats.detailed_questions %}
+            <!-- Sectional Test - Show only relevant section -->
+            {% if stats.test_id and stats.test_id|string|startswith('qa') %}
+              <button class="heatmap-tab active" data-section="sectional">Quantitative Ability</button>
+            {% elif stats.test_id and stats.test_id|string|startswith('varc') %}
+              <button class="heatmap-tab active" data-section="sectional">Verbal Ability</button>
+            {% elif stats.test_id and stats.test_id|string|startswith('lrdi') %}
+              <button class="heatmap-tab active" data-section="sectional">Logical Reasoning & DI</button>
+            {% else %}
+              <button class="heatmap-tab active" data-section="sectional">Section Analysis</button>
+            {% endif %}
+          {% endif %}
         </div>
-        <!-- Threats -->
-        <div class="swot-card threats">
-          <h3><span class="icon">⚠️</span> Threats</h3>
-          {% for threat in stats.swot_analysis.threats %}
-          <div class="swot-item">
-            <strong>{{ threat.title }}</strong>
-            <p>{{ threat.description }}</p>
-            <div class="tags">
-              {% for tag in threat.tags %}
-              <span class="tag">{{ tag }}</span>
-              {% endfor %}
+        
+        <!-- Legend -->
+        <div class="performance-legend">
+          <div class="legend-group">
+            <h4>Performance & Time Analysis</h4>
+            <div class="legend-items">
+              <div class="legend-item">
+                <div class="legend-box correct-optimal"></div>
+                <span>Correct + Fast (≤75s)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box correct-excessive"></div>
+                <span>Correct + Slow (>120s)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box incorrect-optimal"></div>
+                <span>Incorrect + Fast (≤75s)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box incorrect-excessive"></div>
+                <span>Incorrect + Slow (>120s)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box skipped"></div>
+                <span>Not Attempted</span>
+              </div>
             </div>
           </div>
-          {% endfor %}
+        </div>
+
+        <!-- Question Grid -->
+        <div class="question-performance-grid">
+          {% if stats.detailed_sections %}
+            <!-- Full Mock Test -->
+            {% for section in stats.detailed_sections %}
+              {% set section_type = 'varc' if 'Verbal' in section.name else ('lrdi' if 'Data' in section.name or 'LRDI' in section.name or 'Logical' in section.name else 'qa') %}
+              <div class="section-questions{{ ' hidden' if section_type != 'varc' else '' }}" data-section="{{ section_type }}">
+                <h3 class="section-header">{{ section.name }}</h3>
+                <div class="questions-grid">
+                  {% for question in section.questions %}
+                    {% set time_seconds = question.time_spent_seconds|default(0) %}
+                    {% set time_class = 'optimal' if time_seconds <= 75 else ('moderate' if time_seconds <= 120 else 'excessive') %}
+                    <div class="question-cell {{ question.status }} {{ time_class }}" 
+                         data-question="{{ question.number }}" 
+                         data-time="{{ question.time_spent_on_question_formatted|default('0s') }}"
+                         data-status="{{ question.status }}"
+                         title="Q{{ question.number }}: {{ question.status.title() }} in {{ question.time_spent_on_question_formatted|default('0s') }}">
+                      <div class="question-header">
+                        <span class="question-number">{{ question.number }}</span>
+                        <span class="status-icon">{{ '✓' if question.status == 'correct' else ('✗' if question.status == 'incorrect' else '–') }}</span>
+                      </div>
+                      <div class="question-time">{{ question.time_spent_on_question_formatted|default('0s') }}</div>
+                      <div class="time-bar">
+                        <div class="time-fill" data-time-seconds="{{ time_seconds }}"></div>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+          {% else %}
+            <!-- Sectional Test -->
+            <div class="section-questions" data-section="sectional">
+              <h3 class="section-header">{{ stats.section_name|default('Section') }}</h3>
+              <div class="questions-grid">
+                {% for question in stats.detailed_questions %}
+                  {% set time_seconds = question.time_spent_seconds|default(0) %}
+                  {% set time_class = 'optimal' if time_seconds <= 75 else ('moderate' if time_seconds <= 120 else 'excessive') %}
+                  <div class="question-cell {{ question.status }} {{ time_class }}" 
+                       data-question="{{ question.number }}" 
+                       data-time="{{ question.time_spent_on_question_formatted|default('0s') }}"
+                       data-status="{{ question.status }}"
+                       title="Q{{ question.number }}: {{ question.status.title() }} in {{ question.time_spent_on_question_formatted|default('0s') }}">
+                    <div class="question-header">
+                      <span class="question-number">{{ question.number }}</span>
+                      <span class="status-icon">{{ '✓' if question.status == 'correct' else ('✗' if question.status == 'incorrect' else '–') }}</span>
+                    </div>
+                    <div class="question-time">{{ question.time_spent_on_question_formatted|default('0s') }}</div>
+                    <div class="time-bar">
+                      <div class="time-fill" data-time-seconds="{{ time_seconds }}"></div>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
         </div>
       </div>
     </section>
 
-    <!-- IMPROVEMENT OPPORTUNITIES -->
-    <section class="improvement-opportunities">
-      <h2>Improvement Opportunities</h2>
-      <div class="opportunities-grid">
-        <!-- MISSED OPPORTUNITIES -->
-        <div class="opportunity-section missed-opportunities">
-          <div class="section-header">
-            <div class="icon-container missed-icon">
-              <span class="icon">📈</span>
-            </div>
-            <div class="header-content">
-              <h3>Missed Opportunities</h3>
-              <p>Easy questions that could boost your score</p>
-            </div>
-          </div>
-          
-          <div class="topic-cards">
-            {% for opp in stats.missed_opportunities %}
-            <div class="topic-card" data-section="{{ opp.section|default('QA') }}">
-              <div class="topic-content">
-                <div class="section-indicator" style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem;">
-                  <strong>{{ opp.section|default('QA') }}</strong>
-                </div>
-                <h4 class="topic-name">{{ opp.topic|default('General Topic') }}</h4>
-                <p class="subtopic">{{ opp.subtopic|default('Multiple Subtopics') }}</p>
-                <div class="topic-meta">
-                  <span class="difficulty-badge {{ (opp.difficulty|default('Easy')).lower() }}">{{ opp.difficulty|default('Easy') }}</span>
-                  <div class="count-display">
-                    <span class="count-number">{{ opp.count|default(0) }}</span>
-                  </div>
-                </div>
-                <div class="efficiency-tag {{ (opp.efficiency|default('Low Efficiency')).lower().replace(' ', '-') }}">
-                  {{ opp.efficiency|default('Low Efficiency') }}
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-
-        <!-- TIME-INTENSIVE QUESTIONS -->
-        <div class="opportunity-section time-intensive">
-          <div class="section-header">
-            <div class="icon-container time-icon">
-              <span class="icon">⚠️</span>
-            </div>
-            <div class="header-content">
-              <h3>Time-intensive Questions</h3>
-              <p>Questions consuming too much time</p>
-            </div>
-          </div>
-          
-          <div class="topic-cards">
-            {% for tw in stats.time_wasters %}
-            <div class="topic-card" data-section="{{ tw.section|default('QA') }}">
-              <div class="topic-content">
-                <div class="section-indicator" style="font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem;">
-                  <strong>{{ tw.section|default('QA') }}</strong>
-                </div>
-                <h4 class="topic-name">{{ tw.topic|default('General Topic') }}</h4>
-                <p class="subtopic">{{ tw.subtopic|default('Multiple Subtopics') }}</p>
-                <div class="topic-meta">
-                  <span class="difficulty-badge {{ (tw.difficulty|default('Medium')).lower() }}">{{ tw.difficulty|default('Medium') }}</span>
-                  <div class="time-display">
-                    <span class="time-number">{{ tw.time_spent|default('0:00') }}</span>
-                    <span class="time-label">Avg time</span>
-                  </div>
-                </div>
-                <div class="efficiency-tag {{ (tw.efficiency|default('Low Efficiency')).lower().replace(' ', '-') }}">
-                  {{ tw.efficiency|default('Low Efficiency') }}
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- NAVIGATION ACTIONS -->
+     <!-- NAVIGATION ACTIONS -->
     <div class="results-actions">
       <h3>Ready to hop into your next challenge? 🦘</h3>
       <div>
@@ -1215,87 +2588,142 @@
     window.onbeforeunload = null;
     window.onpopstate = null;
     
-    document.querySelectorAll('.heatmap-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        // deactivate tabs + hide all
-        document.querySelectorAll('.heatmap-tab')
-                .forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.heatmap-content')
-                .forEach(c => c.classList.add('hidden'));
 
-        // activate this
-        tab.classList.add('active');
-        const idx = tab.dataset.idx;
-        document.querySelector(`.heatmap-content[data-idx="${idx}"]`)
-                .classList.remove('hidden');
+
+
+
+          // Add hover effects for action buttons
+      document.querySelectorAll('.action-btn').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+          btn.style.transform = 'translateY(-2px)';
+          btn.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = 'translateY(0)';
+          btn.style.boxShadow = 'none';
+        });
       });
-    });
 
-    // Section tab functionality for improvement opportunities
-    document.addEventListener('DOMContentLoaded', function() {
-      // Add global section filter
-      const improvementSection = document.querySelector('.improvement-opportunities');
-      if (improvementSection) {
-        const filterHTML = `
-          <div class="global-section-filter" style="text-align: center; margin-bottom: 1.5rem;">
-            <div class="filter-buttons" style="display: inline-flex; gap: 0.5rem; background: #f1f5f9; padding: 0.25rem; border-radius: 8px;">
-              <button class="filter-btn active" data-section="ALL">All Sections</button>
-              <button class="filter-btn" data-section="QA">QA</button>
-              <button class="filter-btn" data-section="VARC">VARC</button>
-              <button class="filter-btn" data-section="LRDI">LRDI</button>
-            </div>
-          </div>
-        `;
-        
-        const h2 = improvementSection.querySelector('h2');
-        h2.insertAdjacentHTML('afterend', filterHTML);
-
-        // Add filter functionality
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-          btn.addEventListener('click', function() {
-            const section = this.dataset.section;
-            console.log('Filtering by section:', section); // Debug log
-
-            // Update active filter button
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-
-            // Filter cards based on data attributes
-            const allCards = document.querySelectorAll('.topic-card');
-            console.log('Found cards:', allCards.length); // Debug log
-            
-            allCards.forEach(card => {
-              const cardSection = card.dataset.section;
-              console.log('Card section:', cardSection, 'Filter section:', section); // Debug log
-              
-              if (section === 'ALL' || cardSection === section) {
-                card.style.display = 'block';
-                card.style.opacity = '1';
-                card.style.transform = 'scale(1)';
-              } else {
-                card.style.display = 'none';
-                card.style.opacity = '0';
-                card.style.transform = 'scale(0.95)';
-              }
-            });
+      // Topic-wise analysis tab functionality
+      document.querySelectorAll('.section-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const targetSection = tab.dataset.section;
+          
+          // Update active tab
+          document.querySelectorAll('.section-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          
+          // Show/hide section groups
+          document.querySelectorAll('.section-group').forEach(group => {
+            if (group.dataset.section === targetSection) {
+              group.classList.remove('hidden');
+              group.style.display = 'block';
+            } else {
+              group.classList.add('hidden');
+              group.style.display = 'none';
+            }
           });
         });
-      }
-
-
-    });
-
-    // Add hover effects for action buttons
-    document.querySelectorAll('.action-btn').forEach(btn => {
-      btn.addEventListener('mouseenter', () => {
-        btn.style.transform = 'translateY(-2px)';
-        btn.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
       });
-      btn.addEventListener('mouseleave', () => {
-        btn.style.transform = 'translateY(0)';
-        btn.style.boxShadow = 'none';
+
+      // Heatmap tab functionality
+      document.querySelectorAll('.heatmap-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const targetSection = tab.dataset.section;
+          
+          // Update active tab
+          document.querySelectorAll('.heatmap-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          
+          // Show/hide section groups
+          document.querySelectorAll('.section-questions').forEach(section => {
+            if (section.dataset.section === targetSection || targetSection === 'sectional') {
+              section.classList.remove('hidden');
+            } else {
+              section.classList.add('hidden');
+            }
+          });
+        });
       });
-    });
+
+      // Set time bar widths dynamically
+      document.querySelectorAll('.time-fill').forEach(fill => {
+        const timeSeconds = parseInt(fill.dataset.timeSeconds) || 0;
+        const maxTime = 180; // 3 minutes
+        const widthPercent = Math.min((timeSeconds / maxTime) * 100, 100);
+        fill.style.width = widthPercent + '%';
+      });
+
+      // Initialize section filtering on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        // Find the active tab
+        const activeTab = document.querySelector('.heatmap-tab.active');
+        if (activeTab) {
+          const targetSection = activeTab.dataset.section;
+          
+          // Show/hide sections based on active tab
+          document.querySelectorAll('.section-questions').forEach(section => {
+            if (section.dataset.section === targetSection || targetSection === 'sectional') {
+              section.classList.remove('hidden');
+            } else {
+              section.classList.add('hidden');
+            }
+          });
+        }
+      });
+
+      // Add click handlers for question cells to show detailed info
+      document.querySelectorAll('.question-cell').forEach(cell => {
+        cell.addEventListener('click', () => {
+          const questionNum = cell.dataset.question;
+          const time = cell.dataset.time;
+          const status = cell.dataset.status;
+          
+          // Create a more detailed tooltip or modal
+          const tooltip = document.createElement('div');
+          tooltip.className = 'question-tooltip';
+          tooltip.innerHTML = `
+            <div class="tooltip-content">
+              <h4>Question ${questionNum}</h4>
+              <p><strong>Status:</strong> ${status.charAt(0).toUpperCase() + status.slice(1)}</p>
+              <p><strong>Time Spent:</strong> ${time}</p>
+              <p><em>Click "Review Answers" to see detailed solution</em></p>
+            </div>
+          `;
+          
+          // Position tooltip near the clicked cell
+          const rect = cell.getBoundingClientRect();
+          tooltip.style.position = 'fixed';
+          tooltip.style.top = (rect.top - 10) + 'px';
+          tooltip.style.left = (rect.left + rect.width + 10) + 'px';
+          tooltip.style.background = 'rgba(0,0,0,0.9)';
+          tooltip.style.color = 'white';
+          tooltip.style.padding = '12px';
+          tooltip.style.borderRadius = '8px';
+          tooltip.style.fontSize = '0.85rem';
+          tooltip.style.zIndex = '1000';
+          tooltip.style.maxWidth = '200px';
+          tooltip.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+          
+          document.body.appendChild(tooltip);
+          
+          // Remove tooltip after 3 seconds or on next click
+          setTimeout(() => {
+            if (tooltip.parentNode) {
+              tooltip.parentNode.removeChild(tooltip);
+            }
+          }, 3000);
+          
+          document.addEventListener('click', function removeTooltip(e) {
+            if (!tooltip.contains(e.target) && e.target !== cell) {
+              if (tooltip.parentNode) {
+                tooltip.parentNode.removeChild(tooltip);
+              }
+              document.removeEventListener('click', removeTooltip);
+            }
+          });
+        });
+      });
   </script>
 
 </body>

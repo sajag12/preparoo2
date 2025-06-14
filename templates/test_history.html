@@ -356,7 +356,11 @@
                 {% for result in full_mock_results %}
                 <div class="test-card">
                     <div class="test-card-header">
-                        <h3 class="test-name">Mock Test {{ result.test_id }}</h3>
+                        {% if result.test_id|string in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'] %}
+                            <h3 class="test-name">Full Mock Test {{ result.test_id }}</h3>
+                        {% else %}
+                            <h3 class="test-name">{{ result.test_name if result.test_name else 'Mock Test' }}</h3>
+                        {% endif %}
                         <p class="test-date">{{ result.created_at.strftime('%b %d, %Y at %I:%M %p') }}</p>
                     </div>
                     <div class="test-card-body">
@@ -391,10 +395,17 @@
                                 <i class="fas fa-eye"></i>
                                 View Analysis
                             </a>
-                            <a href="{{ url_for('mock_test_' + result.test_id) }}?retake=true" class="btn-secondary">
-                                <i class="fas fa-redo"></i>
-                                Retake
-                            </a>
+                            {% if result.test_id|string in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'] %}
+                                <a href="/mock-test/{{ result.test_id }}?retake=true" class="btn-secondary">
+                                    <i class="fas fa-redo"></i>
+                                    Retake
+                                </a>
+                            {% else %}
+                                <a href="{{ url_for('mock_tests_page') }}" class="btn-secondary">
+                                    <i class="fas fa-list"></i>
+                                    View Tests
+                                </a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -430,7 +441,17 @@
                 {% for result in sectional_results %}
                 <div class="test-card">
                     <div class="test-card-header">
-                        <h3 class="test-name">{{ result.test_name.replace('Sectional Mock - ', '') }}</h3>
+                        {% set section_type = result.test_id[:4] if result.test_id|length > 1 else 'Unknown' %}
+                        {% set section_number = result.test_id[4:] if result.test_id|length > 4 else result.test_id[-1:] if result.test_id|length > 1 else '?' %}
+                        {% if result.test_id|string|startswith('varc') %}
+                            <h3 class="test-name">VARC Sectional #{{ section_number }}</h3>
+                        {% elif result.test_id|string|startswith('qa') %}
+                            <h3 class="test-name">QA Sectional #{{ section_number }}</h3>
+                        {% elif result.test_id|string|startswith('lrdi') %}
+                            <h3 class="test-name">LRDI Sectional #{{ section_number }}</h3>
+                        {% else %}
+                            <h3 class="test-name">{{ result.test_name.replace('Sectional Mock - ', '') if result.test_name else 'Sectional Test' }}</h3>
+                        {% endif %}
                         <p class="test-date">{{ result.created_at.strftime('%b %d, %Y at %I:%M %p') }}</p>
                     </div>
                     <div class="test-card-body">
@@ -466,19 +487,24 @@
                                 View Analysis
                             </a>
                             {% if result.test_id|string|startswith('qa') %}
-                                <a href="{{ url_for('qa_sectional_' + result.test_id|string|last) }}?retake=true" class="btn-secondary">
+                                <a href="/sectional/qa/{{ result.test_id|string|last }}?retake=true" class="btn-secondary">
                                     <i class="fas fa-redo"></i>
                                     Retake
                                 </a>
                             {% elif result.test_id|string|startswith('varc') %}
-                                <a href="{{ url_for('varc_sectional_' + result.test_id|string|last) }}?retake=true" class="btn-secondary">
+                                <a href="/sectional/varc/{{ result.test_id|string|last }}?retake=true" class="btn-secondary">
                                     <i class="fas fa-redo"></i>
                                     Retake
                                 </a>
                             {% elif result.test_id|string|startswith('lrdi') %}
-                                <a href="{{ url_for('lrdi_sectional_' + result.test_id|string|last) }}?retake=true" class="btn-secondary">
+                                <a href="/sectional/lrdi/{{ result.test_id|string|last }}?retake=true" class="btn-secondary">
                                     <i class="fas fa-redo"></i>
                                     Retake
+                                </a>
+                            {% else %}
+                                <a href="{{ url_for('mock_tests_page') }}" class="btn-secondary">
+                                    <i class="fas fa-list"></i>
+                                    View Tests
                                 </a>
                             {% endif %}
                         </div>

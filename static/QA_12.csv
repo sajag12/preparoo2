@@ -1,5 +1,5 @@
 SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
-QA,40,112233445,1,,,"Ram's salary is 20% more than Shyam's salary. Shyam's salary is 25% less than Mohan's salary. If Mohan's salary is Rs. 4000 more than Ram's salary, what is Shyam's salary in Rs.?",20000,24000,25000,30000,A,B,C,D,D,MCQ,Arithmetic,Percentages,Hard,"chain percentages, salary comparison, algebraic setup","chain percentages, salary comparison, algebraic setup, Q-Type 22 (Percentages PDF)",False,MockSet5_QA,Analyzing,"Let Shyam's salary be 100x.
+QA,40,112233445,1,,,"Ram's salary is 20% more than Shyam's salary. Shyam's salary is 25% less than Mohan's salary. If Mohan's salary is Rs. 4000 more than Ram's salary, what is Shyam's salary in Rs.?",20000,24000,25000,30000,A,B,C,D,D,MCQ,Arithmetic,Percentages,Hard,"chain percentages, salary comparison, algebraic setup","chain percentages, salary comparison, algebraic setup, Q-Type 22 (Percentages PDF)",FALSE,MockSet5_QA,Analyzing,"Let Shyam's salary be 100x.
 Ram's salary (R) = 100x * (1 + 20/100) = 100x * 1.2 = 120x.
 Shyam's salary (S = 100x) is 25% less than Mohan's salary (M).
 So, 100x = M * (1 - 25/100) = M * 0.75.
@@ -10,7 +10,7 @@ Multiply by 3: 400x = 360x + 12000.
 40x = 12000.
 x = 300.
 Shyam's salary = 100x = 100 * 300 = Rs. 30000."
-QA,40,223344556,2,,,"Three bells toll at intervals of 12 seconds, 15 seconds, and 18 seconds respectively. If they start tolling together, after how many minutes will they next toll together for the 5th time (excluding the initial start)?",,,,,,,,,15,TITA,Number System,HCF & LCM,Medium,"bells tolling together, LCM, Nth occurrence","bells tolling together, LCM, Nth occurrence, Q-Type 42 (Number Systems PDF)",True,MockSet5_QA,Applying,"The intervals are 12, 15, and 18 seconds.
+QA,40,223344556,2,,,"Three bells toll at intervals of 12 seconds, 15 seconds, and 18 seconds respectively. If they start tolling together, after how many minutes will they next toll together for the 5th time (excluding the initial start)?",,,,,,,,,15,TITA,Number System,HCF & LCM,Medium,"bells tolling together, LCM, Nth occurrence","bells tolling together, LCM, Nth occurrence, Q-Type 42 (Number Systems PDF)",TRUE,MockSet5_QA,Applying,"The intervals are 12, 15, and 18 seconds.
 The bells will first toll together (after the start) at a time equal to LCM(12, 15, 18).
 12 = 2^2 * 3
 15 = 3 * 5
@@ -20,7 +20,7 @@ This is the time for the 1st tolling together after the start.
 They will toll together for the 5th time after the start at 5 * LCM.
 Time = 5 * 180 seconds = 900 seconds.
 Convert to minutes: 900 seconds / 60 seconds/minute = 15 minutes."
-QA,40,334455667,3,,,"From an external point P, two tangents PA and PB are drawn to a circle with center O. If the radius of the circle is 5 cm and the length of OP is 13 cm, what is the area of the quadrilateral PAOB in sq. cm?",50,55,60,65,A,B,C,D,C,MCQ,Geometry,"Circles (Properties, Chords, Tangents, Secants)",Medium,"tangents from external point, Pythagoras, area of quadrilateral","tangents from external point, Pythagoras, area of quadrilateral, Q-Type 49 (Circles PDF)",False,MockSet5_QA,Applying,"PA and PB are tangents from P to a circle with center O. OA and OB are radii.
+QA,40,334455667,3,,,"From an external point P, two tangents PA and PB are drawn to a circle with center O. If the radius of the circle is 5 cm and the length of OP is 13 cm, what is the area of the quadrilateral PAOB in sq. cm?",50,55,60,65,A,B,C,D,C,MCQ,Geometry,"Circles (Properties, Chords, Tangents, Secants)",Medium,"tangents from external point, Pythagoras, area of quadrilateral","tangents from external point, Pythagoras, area of quadrilateral, Q-Type 49 (Circles PDF)",FALSE,MockSet5_QA,Applying,"PA and PB are tangents from P to a circle with center O. OA and OB are radii.
 OA is perpendicular to PA, and OB is perpendicular to PB. So ∠OAP = ∠OBP = 90°.
 In right-angled triangle OAP, OA = 5 cm (radius), OP = 13 cm (hypotenuse).
 By Pythagoras theorem: PA^2 = OP^2 - OA^2 = 13^2 - 5^2 = 169 - 25 = 144.
@@ -28,7 +28,7 @@ PA = sqrt(144) = 12 cm.
 The quadrilateral PAOB consists of two congruent right-angled triangles, ΔOAP and ΔOBP.
 Area(ΔOAP) = (1/2) * base * height = (1/2) * OA * PA = (1/2) * 5 * 12 = 30 sq. cm.
 Area(PAOB) = 2 * Area(ΔOAP) = 2 * 30 = 60 sq. cm."
-QA,40,445566778,4,,,"If the roots of the quadratic equation x^2 - (k+2)x + (3k-2) = 0 are equal in magnitude but opposite in sign, what is the value of k?",,,,,,,,,-2,TITA,Algebra,Quadratic Equations,Easy,"roots equal magnitude opposite sign, sum of roots, Vieta's formulas","roots equal magnitude opposite sign, sum of roots, Vieta's formulas, Q-Type 18 (Algebra PDF)",True,MockSet5_QA,Applying,"The quadratic equation is x^2 - (k+2)x + (3k-2) = 0.
+QA,40,445566778,4,,,"If the roots of the quadratic equation x^2 - (k+2)x + (3k-2) = 0 are equal in magnitude but opposite in sign, what is the value of k?",,,,,,,,,-2,TITA,Algebra,Quadratic Equations,Easy,"roots equal magnitude opposite sign, sum of roots, Vieta's formulas","roots equal magnitude opposite sign, sum of roots, Vieta's formulas, Q-Type 18 (Algebra PDF)",TRUE,MockSet5_QA,Applying,"The quadratic equation is x^2 - (k+2)x + (3k-2) = 0.
 If the roots are equal in magnitude but opposite in sign, let the roots be α and -α.
 Sum of roots = α + (-α) = 0.
 From Vieta's formulas, sum of roots = -(-(k+2))/1 = k+2.
@@ -37,7 +37,7 @@ Check the product of roots: α(-α) = -α². The product must be negative for re
 Product of roots = (3k-2)/1 = 3(-2) - 2 = -8.
 Since -8 < 0, the condition is satisfied.
 Thus, k = -2."
-QA,40,556677889,5,,,"A can do a piece of work in 24 days. B is 20% more efficient than A. C is 25% less efficient than B. If A, B, and C work together, in approximately how many days will they complete the work? (Round to the nearest integer if necessary)",7 days,8 days,9 days,10 days,A,B,C,D,B,MCQ,Arithmetic,Time & Work,Hard,"efficiency comparison, combined work rate","efficiency comparison, combined work rate, Q-Type 80 (Time & Work PDF)",False,MockSet5_QA,Analyzing,"A takes 24 days. Work rate of A, R_A = 1/24 of work per day.
+QA,40,556677889,5,,,"A can do a piece of work in 24 days. B is 20% more efficient than A. C is 25% less efficient than B. If A, B, and C work together, in approximately how many days will they complete the work? (Round to the nearest integer if necessary)",7 days,8 days,9 days,10 days,A,B,C,D,B,MCQ,Arithmetic,Time & Work,Hard,"efficiency comparison, combined work rate","efficiency comparison, combined work rate, Q-Type 80 (Time & Work PDF)",FALSE,MockSet5_QA,Analyzing,"A takes 24 days. Work rate of A, R_A = 1/24 of work per day.
 B is 20% more efficient than A: R_B = R_A * 1.2 = (1/24) * (6/5) = 1/20.
 C is 25% less efficient than B: R_C = R_B * 0.75 = (1/20) * (3/4) = 3/80.
 Combined work rate R_A + R_B + R_C = 1/24 + 1/20 + 3/80.
@@ -46,14 +46,14 @@ Combined rate = (10/240) + (12/240) + (9/240) = 31/240 of work per day.
 Time taken together = 1 / (31/240) = 240/31 days.
 240/31 ≈ 7.74 days.
 Rounding to the nearest integer, the time taken is 8 days."
-QA,40,667788990,6,,,"In how many ways can 5 distinct Physics books, 4 distinct Chemistry books, and 3 distinct Mathematics books be arranged on a shelf such that all books of the same subject are always together, and the Mathematics books are never placed next to the Physics books?",17280,20736,25920,34560,A,B,C,D,D,MCQ,Modern Maths,Permutations & Combinations,Hard,"arrangement, subjects together, specific blocks not adjacent, factorial","arrangement, subjects together, specific blocks not adjacent, factorial, Q-Type 3 & Q-Type 4 (P&C PDF)",False,MockSet5_QA,Analyzing,"First, treat the books of each subject as a single block: {P}, {C}, {M}.
+QA,40,667788990,6,,,"In how many ways can 5 distinct Physics books, 4 distinct Chemistry books, and 3 distinct Mathematics books be arranged on a shelf such that all books of the same subject are always together, and the Mathematics books are never placed next to the Physics books?",17280,20736,25920,34560,A,B,C,D,D,MCQ,Modern Maths,Permutations & Combinations,Hard,"arrangement, subjects together, specific blocks not adjacent, factorial","arrangement, subjects together, specific blocks not adjacent, factorial, Q-Type 3 & Q-Type 4 (P&C PDF)",FALSE,MockSet5_QA,Analyzing,"First, treat the books of each subject as a single block: {P}, {C}, {M}.
 The number of internal arrangements within these blocks is 5! for Physics, 4! for Chemistry, and 3! for Mathematics.
 Total internal arrangements = 5! * 4! * 3! = 120 * 24 * 6 = 17280.
 Next, arrange the three blocks {P, C, M} such that P and M are not adjacent. The total arrangements of the blocks is 3! = 6.
 The arrangements where M and P are together can be found by treating {MP} as a single super-block. The arrangements of {MP} and C are 2! = 2 ways. Since the super-block can be MP or PM, there are 2 * 2 = 4 arrangements with M and P together.
 The number of arrangements where M and P are not together is 3! - 4 = 2.
 The total number of ways is (Internal arrangements) * (Block arrangements) = 17280 * 2 = 34560."
-QA,40,778899001,7,,,"The average weight of students in Section A, consisting of 40 students, is 55 kg. The average weight of students in Section B, consisting of 60 students, is 60 kg. 10 students from Section A (with an average weight of 50 kg) are shifted to Section B. Simultaneously, 10 students from Section B (with an average weight of X kg) are shifted to Section A. If the new average weight of Section A is 56 kg, find X.",,,,,,,,,54,TITA,Arithmetic,Averages & Weighted Averages,Hard,"average change, group shifts, solving for unknown average","average change, group shifts, solving for unknown average, Q-Type 67 (Averages PDF)",True,MockSet5_QA,Analyzing,"Initial Section A: 40 students, avg 55 kg. Total_A_initial = 40 * 55 = 2200 kg.
+QA,40,778899001,7,,,"The average weight of students in Section A, consisting of 40 students, is 55 kg. The average weight of students in Section B, consisting of 60 students, is 60 kg. 10 students from Section A (with an average weight of 50 kg) are shifted to Section B. Simultaneously, 10 students from Section B (with an average weight of X kg) are shifted to Section A. If the new average weight of Section A is 56 kg, find X.",,,,,,,,,54,TITA,Arithmetic,Averages & Weighted Averages,Hard,"average change, group shifts, solving for unknown average","average change, group shifts, solving for unknown average, Q-Type 67 (Averages PDF)",TRUE,MockSet5_QA,Analyzing,"Initial Section A: 40 students, avg 55 kg. Total_A_initial = 40 * 55 = 2200 kg.
 Initial Section B: 60 students, avg 60 kg. Total_B_initial = 60 * 60 = 3600 kg.
 10 students from A (avg 50 kg) are shifted to B.
 Weight removed from A = 10 * 50 = 500 kg.
@@ -66,14 +66,14 @@ The new average of Section A is 56 kg.
 1700 + 10X = 56 * 40 = 2240.
 10X = 2240 - 1700 = 540.
 X = 54."
-QA,40,889900112,8,,,"If (log_a b) * (log_b c) * (log_c d) * (log_d 32) = 5, what is the value of a?",sqrt(2),2,2*sqrt(2),4,A,B,C,D,B,MCQ,Algebra,Logarithms,Easy,"chain rule of logarithms, solving for base","chain rule of logarithms, solving for base",False,MockSet5_QA,Applying,"The expression (log_a b) * (log_b c) * (log_c d) * (log_d 32) simplifies by the change-of-base property.
+QA,40,889900112,8,,,"If (log_a b) * (log_b c) * (log_c d) * (log_d 32) = 5, what is the value of a?",sqrt(2),2,2*sqrt(2),4,A,B,C,D,B,MCQ,Algebra,Logarithms,Easy,"chain rule of logarithms, solving for base","chain rule of logarithms, solving for base",FALSE,MockSet5_QA,Applying,"The expression (log_a b) * (log_b c) * (log_c d) * (log_d 32) simplifies by the change-of-base property.
 (log_a c) * (log_c d) * (log_d 32) = 5
 (log_a d) * (log_d 32) = 5
 log_a 32 = 5.
 From the definition of a logarithm, a^5 = 32.
 Since 32 = 2^5, we have a^5 = 2^5.
 Therefore, a = 2."
-QA,40,990011223,9,,,"The total cost of an event is partly fixed and partly varies directly with the number of guests. When there are 20 guests, the total cost is Rs. 3400. When there are 35 guests, the total cost is Rs. 4600. What is the fixed cost (in Rs.) for the event?",,,,,,,,,1800,TITA,Arithmetic,"Ratio, Proportion & Variation",Medium,"fixed cost, variable cost, linear relation, system of equations","fixed cost, variable cost, linear relation, system of equations, Q-Type 17 (Ratio PDF)",True,MockSet5_QA,Applying,"Let FC be the fixed cost and VC be the variable cost per guest. Let N be the number of guests.
+QA,40,990011223,9,,,"The total cost of an event is partly fixed and partly varies directly with the number of guests. When there are 20 guests, the total cost is Rs. 3400. When there are 35 guests, the total cost is Rs. 4600. What is the fixed cost (in Rs.) for the event?",,,,,,,,,1800,TITA,Arithmetic,"Ratio, Proportion & Variation",Medium,"fixed cost, variable cost, linear relation, system of equations","fixed cost, variable cost, linear relation, system of equations, Q-Type 17 (Ratio PDF)",TRUE,MockSet5_QA,Applying,"Let FC be the fixed cost and VC be the variable cost per guest. Let N be the number of guests.
 Total Cost (TC) = FC + VC * N.
 Given:
 1. FC + 20*VC = 3400
@@ -86,7 +86,7 @@ FC + 20*80 = 3400
 FC + 1600 = 3400
 FC = 1800.
 The fixed cost is Rs. 1800."
-QA,40,101122334,10,,,"Two trains, A and B, start simultaneously from stations P and Q towards each other, respectively. After meeting at a point M, train A takes 3 hours 12 minutes to reach Q, and train B takes 1 hour 48 minutes to reach P. If the speed of train A is 54 km/h, what is the speed of train B in km/h?",60 km/h,72 km/h,75 km/h,80 km/h,A,B,C,D,B,MCQ,Arithmetic,"Time, Speed & Distance (Problems on Trains)",Hard,"meeting point, time after meeting, ratio of speeds, S1/S2 = sqrt(t2/t1)","meeting point, time after meeting, ratio of speeds, S1/S2 = sqrt(t2/t1), Q-Type 3 (TSD PDF concept)",False,MockSet5_QA,Analyzing,"Let speeds be S_A and S_B. After meeting, train A takes t_A = 3h 12min = 3 + 12/60 = 16/5 hours.
+QA,40,101122334,10,,,"Two trains, A and B, start simultaneously from stations P and Q towards each other, respectively. After meeting at a point M, train A takes 3 hours 12 minutes to reach Q, and train B takes 1 hour 48 minutes to reach P. If the speed of train A is 54 km/h, what is the speed of train B in km/h?",60 km/h,72 km/h,75 km/h,80 km/h,A,B,C,D,B,MCQ,Arithmetic,"Time, Speed & Distance (Problems on Trains)",Hard,"meeting point, time after meeting, ratio of speeds, S1/S2 = sqrt(t2/t1)","meeting point, time after meeting, ratio of speeds, S1/S2 = sqrt(t2/t1), Q-Type 3 (TSD PDF concept)",FALSE,MockSet5_QA,Analyzing,"Let speeds be S_A and S_B. After meeting, train A takes t_A = 3h 12min = 3 + 12/60 = 16/5 hours.
 Train B takes t_B = 1h 48min = 1 + 48/60 = 9/5 hours.
 Given S_A = 54 km/h.
 The formula for speeds and time taken after meeting is S_A / S_B = sqrt(t_B / t_A).
@@ -94,12 +94,12 @@ The formula for speeds and time taken after meeting is S_A / S_B = sqrt(t_B / t_
 54 / S_B = sqrt(9/16) = 3/4.
 3 * S_B = 54 * 4
 S_B = (54 * 4) / 3 = 18 * 4 = 72 km/h."
-QA,40,212233445,11,,,"In triangle ABC, the coordinates of vertices are A(1,5), B(-3,1), and C(5,1). AD is a median to side BC. What is the length of the median AD?",4,sqrt(17),2*sqrt(5),5,A,B,C,D,A,MCQ,Geometry,"Coordinate Geometry (Distance, Section, Slope, Line Equations, Area)",Easy,"median length, midpoint formula, distance formula","median length, midpoint formula, distance formula",False,MockSet5_QA,Applying,"Vertices: A(1,5), B(-3,1), C(5,1).
+QA,40,212233445,11,,,"In triangle ABC, the coordinates of vertices are A(1,5), B(-3,1), and C(5,1). AD is a median to side BC. What is the length of the median AD?",4,sqrt(17),2*sqrt(5),5,A,B,C,D,A,MCQ,Geometry,"Coordinate Geometry (Distance, Section, Slope, Line Equations, Area)",Easy,"median length, midpoint formula, distance formula","median length, midpoint formula, distance formula",FALSE,MockSet5_QA,Applying,"Vertices: A(1,5), B(-3,1), C(5,1).
 AD is a median to BC, so D is the midpoint of BC.
 Coordinates of D = ((-3 + 5)/2 , (1 + 1)/2) = (1, 1).
 Length of median AD is the distance between A(1,5) and D(1,1).
 AD = sqrt((1-1)^2 + (5-1)^2) = sqrt(0^2 + 4^2) = sqrt(16) = 4."
-QA,40,323344556,12,,,Find the last two digits of 79^84.,,,,,,,,,81,TITA,Number System,"Cyclicity (Unit Digit, Last two digits)",Hard,"last two digits, powers, modulo 100","last two digits, powers, modulo 100, Q-Type 17 (Number Systems PDF)",True,MockSet5_QA,Analyzing,"To find the last two digits of 79^84, we need to calculate 79^84 (mod 100).
+QA,40,323344556,12,,,Find the last two digits of 79^84.,,,,,,,,,81,TITA,Number System,"Cyclicity (Unit Digit, Last two digits)",Hard,"last two digits, powers, modulo 100","last two digits, powers, modulo 100, Q-Type 17 (Number Systems PDF)",TRUE,MockSet5_QA,Analyzing,"To find the last two digits of 79^84, we need to calculate 79^84 (mod 100).
 79 ≡ -21 (mod 100).
 79^2 ≡ (-21)^2 = 441 ≡ 41 (mod 100).
 79^4 ≡ 41^2 = 1681 ≡ 81 (mod 100).
@@ -110,7 +110,7 @@ So, 79^84 = 79^(10*8 + 4) = (79^10)^8 * 79^4.
 Calculating modulo 100:
 (79^10)^8 * 79^4 ≡ (1)^8 * 81 (mod 100) ≡ 81 (mod 100).
 The last two digits are 81."
-QA,40,434455667,13,,,The sum of the first n terms of a series is given by S_n = 2n^2 + 5n + 3. Which of the following is true for this series?,It is an AP with common difference 4.,It is an AP with first term 10.,The terms T_n for n>1 form an AP.,"It is not an AP, nor do its terms (for n>1) form an AP.",A,B,C,D,C,MCQ,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Medium,"sum of n terms, identifying AP from S_n, condition for S_n of AP","sum of n terms, identifying AP from S_n, condition for S_n of AP",False,MockSet5_QA,Applying,"S_n = 2n^2 + 5n + 3.
+QA,40,434455667,13,,,The sum of the first n terms of a series is given by S_n = 2n^2 + 5n + 3. Which of the following is true for this series?,It is an AP with common difference 4.,It is an AP with first term 10.,The terms T_n for n>1 form an AP.,"It is not an AP, nor do its terms (for n>1) form an AP.",A,B,C,D,C,MCQ,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Medium,"sum of n terms, identifying AP from S_n, condition for S_n of AP","sum of n terms, identifying AP from S_n, condition for S_n of AP",FALSE,MockSet5_QA,Applying,"S_n = 2n^2 + 5n + 3.
 The sum S_n of an AP must be a quadratic expression of the form An² + Bn, with no constant term. The presence of the constant term (+3) means the series itself is not an AP from the very first term.
 T_1 = S_1 = 2(1)^2 + 5(1) + 3 = 10.
 For n > 1, the nth term T_n is given by S_n - S_(n-1).
@@ -124,7 +124,7 @@ T_2 = 4(2) + 3 = 11.
 T_3 = 4(3) + 3 = 15.
 T_4 = 4(4) + 3 = 19.
 The sequence starting from the second term (11, 15, 19, ...) is an AP with a common difference of 4. Therefore, the terms T_n for n>1 form an AP."
-QA,40,545566778,14,,,"A solid metallic sphere of radius 10.5 cm is melted and recast into a number of smaller identical cones, each of radius 3.5 cm and height 3 cm. Find the number of cones so formed. (Use pi = 22/7)",122,126,130,134,A,B,C,D,B,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Medium,"melting and recasting, sphere to cones, volume equality","melting and recasting, sphere to cones, volume equality, Q-Type 69 (Solids PDF)",False,MockSet5_QA,Applying,"Let N be the number of cones. The total volume remains constant.
+QA,40,545566778,14,,,"A solid metallic sphere of radius 10.5 cm is melted and recast into a number of smaller identical cones, each of radius 3.5 cm and height 3 cm. Find the number of cones so formed. (Use pi = 22/7)",122,126,130,134,A,B,C,D,B,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Medium,"melting and recasting, sphere to cones, volume equality","melting and recasting, sphere to cones, volume equality, Q-Type 69 (Solids PDF)",FALSE,MockSet5_QA,Applying,"Let N be the number of cones. The total volume remains constant.
 Volume of Sphere = N * Volume of one Cone.
 N = (Volume of Sphere) / (Volume of one Cone)
 N = [(4/3) * π * R³] / [(1/3) * π * r² * h]
@@ -135,7 +135,7 @@ N = [4 * (10.5)³] / [(3.5)² * 3]
 N = (4/3) * (10.5 / 3.5)² * 10.5
 N = (4/3) * (3)² * 10.5
 N = (4/3) * 9 * 10.5 = 4 * 3 * 10.5 = 12 * 10.5 = 126."
-QA,40,656677889,15,,,"A dishonest dealer professes to sell his goods at cost price but uses a weight of 950 grams for a 1 kg weight. Furthermore, he adulterates the goods by adding impurities such that for every 19 kg of pure good, he adds 1 kg of impurity (cost of impurity is negligible). Find his net profit percentage. (Answer to the nearest integer)",,,,,,,,,11,TITA,Arithmetic,"Profit, Loss & Discount",Hard,"dishonest dealer, faulty weight, adulteration, net profit percentage","dishonest dealer, faulty weight, adulteration, net profit percentage, Q-Type 49 (P&L PDF)",True,MockSet5_QA,Analyzing,"Let the cost price (CP) of 1000 gm of pure good be Rs. 1000.
+QA,40,656677889,15,,,"A dishonest dealer professes to sell his goods at cost price but uses a weight of 950 grams for a 1 kg weight. Furthermore, he adulterates the goods by adding impurities such that for every 19 kg of pure good, he adds 1 kg of impurity (cost of impurity is negligible). Find his net profit percentage. (Answer to the nearest integer)",,,,,,,,,11,TITA,Arithmetic,"Profit, Loss & Discount",Hard,"dishonest dealer, faulty weight, adulteration, net profit percentage","dishonest dealer, faulty weight, adulteration, net profit percentage, Q-Type 49 (P&L PDF)",TRUE,MockSet5_QA,Analyzing,"Let the cost price (CP) of 1000 gm of pure good be Rs. 1000.
 The dealer professes to sell at CP, so his nominal selling price (SP) is Rs. 1000 for 1 kg.
 1. Faulty Weight: He gives only 950 gm instead of 1000 gm.
 2. Adulteration: For every 19 kg of pure good, he adds 1 kg impurity. So, in a 20 kg mixture, 19 kg is pure. The ratio of pure good to total good is 19/20.
@@ -147,7 +147,7 @@ Profit = SP - CP = 1000 - 902.5 = 97.5.
 Profit Percentage = (Profit / Actual CP) * 100 = (97.5 / 902.5) * 100.
 = 9750 / 902.5 ≈ 10.803%.
 Rounding to the nearest integer gives 11%."
-QA,40,767788990,16,,,"Let f(x) = x / (x-1). Find f^4(x), where f^n(x) denotes applying the function f, n times.",x,x / (x-1),(x-1) / x,1 - x,A,B,C,D,A,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Medium,"iterative function, finding f^n(x), cyclic pattern","iterative function, finding f^n(x), cyclic pattern, Q-Type 56 (Functions PDF)",False,MockSet5_QA,Applying,"f(x) = x / (x-1).
+QA,40,767788990,16,,,"Let f(x) = x / (x-1). Find f^4(x), where f^n(x) denotes applying the function f, n times.",x,x / (x-1),(x-1) / x,1 - x,A,B,C,D,A,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Medium,"iterative function, finding f^n(x), cyclic pattern","iterative function, finding f^n(x), cyclic pattern, Q-Type 56 (Functions PDF)",FALSE,MockSet5_QA,Applying,"f(x) = x / (x-1).
 f^2(x) = f(f(x)) = f(x / (x-1))
 = [x / (x-1)] / [x / (x-1) - 1]
 = [x / (x-1)] / [(x - (x-1)) / (x-1)]
@@ -157,7 +157,7 @@ f^3(x) = f(f^2(x)) = f(x) = x / (x-1).
 f^4(x) = f(f^3(x)) = f(x / (x-1)) = f^2(x) = x.
 For any even power n, f^n(x) = x.
 Therefore, f^4(x) = x."
-QA,40,878899001,17,,,A certain sum of money doubles itself in 5 years at simple interest. In how many years will it become 7 times itself at the same rate of interest?,20 years,25 years,30 years,35 years,A,B,C,D,C,MCQ,Arithmetic,Simple Interest,Easy,"sum doubling, N-tupling time, rate calculation","sum doubling, N-tupling time, rate calculation, Q-Type 54 (SI/CI PDF)",False,MockSet5_QA,Applying,"Let Principal = P, Rate = R% per annum, Time = T years.
+QA,40,878899001,17,,,A certain sum of money doubles itself in 5 years at simple interest. In how many years will it become 7 times itself at the same rate of interest?,20 years,25 years,30 years,35 years,A,B,C,D,C,MCQ,Arithmetic,Simple Interest,Easy,"sum doubling, N-tupling time, rate calculation","sum doubling, N-tupling time, rate calculation, Q-Type 54 (SI/CI PDF)",FALSE,MockSet5_QA,Applying,"Let Principal = P, Rate = R% per annum, Time = T years.
 Case 1: Sum doubles (Amount = 2P) in T=5 years.
 Simple Interest (SI) = Amount - Principal = 2P - P = P.
 Using the formula SI = (P * R * T) / 100:
@@ -170,7 +170,7 @@ Using the formula again with R=20%:
 6P = (P * 20 * T') / 100
 6 = 20T' / 100 => 6 = T' / 5
 T' = 30 years."
-QA,40,989900112,18,,,Find the number of ways to write 10800 as a product of two co-prime natural numbers.,,,,,,,,,4,TITA,Number System,Number of Factors & Sum of Factors,Medium,"product of two co-prime factors, distinct prime factors count","product of two co-prime factors, distinct prime factors count, Q-Type 6 (Number Systems PDF)",True,MockSet5_QA,Applying,"First, find the prime factorization of 10800.
+QA,40,989900112,18,,,Find the number of ways to write 10800 as a product of two co-prime natural numbers.,,,,,,,,,4,TITA,Number System,Number of Factors & Sum of Factors,Medium,"product of two co-prime factors, distinct prime factors count","product of two co-prime factors, distinct prime factors count, Q-Type 6 (Number Systems PDF)",TRUE,MockSet5_QA,Applying,"First, find the prime factorization of 10800.
 10800 = 108 * 100 = (27 * 4) * 100 = (3³ * 2²) * (10²) = (3³ * 2²) * (2*5)² = 3³ * 2² * 2² * 5² = 2⁴ * 3³ * 5².
 The distinct prime factors are 2, 3, and 5. There are k=3 distinct prime factors.
 To write 10800 as a product of two co-prime numbers (say A and B), their prime factors must be disjoint. This means for each distinct prime block (2⁴, 3³, 5²), the entire block must belong to either A or B, but not be split between them.
@@ -182,7 +182,7 @@ The total number of ordered pairs (A, B) is 2 * 2 * 2 = 2³ = 8.
 Since the question asks for the number of ways to write the number as a product (e.g., A * B is the same as B * A), we are looking for unique pairs, not ordered pairs. We divide the total by 2.
 Number of ways = 2³ / 2 = 2^(3-1) = 2² = 4.
 The pairs are: (1, 10800), (16, 675), (27, 400), (25, 432)."
-QA,40,191011223,19,,,What is the solution set for the inequality |3x - 5| >= 2x + 1?,"(-infinity, 4/5] U [6, infinity)","[4/5, 6]","(-infinity, 4/5]","[6, infinity)",A,B,C,D,A,MCQ,Algebra,Inequalities & Modulus,Hard,"modulus inequality, absolute value, case analysis","modulus inequality, absolute value, case analysis, Q-Type 36 (Inequalities/Modulus PDF)",False,MockSet5_QA,Analyzing,"The inequality is |3x - 5| >= 2x + 1.
+QA,40,191011223,19,,,What is the solution set for the inequality |3x - 5| >= 2x + 1?,"(-infinity, 4/5] U [6, infinity)","[4/5, 6]","(-infinity, 4/5]","[6, infinity)",A,B,C,D,A,MCQ,Algebra,Inequalities & Modulus,Hard,"modulus inequality, absolute value, case analysis","modulus inequality, absolute value, case analysis, Q-Type 36 (Inequalities/Modulus PDF)",FALSE,MockSet5_QA,Analyzing,"The inequality is |3x - 5| >= 2x + 1.
 First, we consider the sign of the right-hand side.
 Case 1: 2x + 1 < 0 (i.e., x < -1/2).
 In this case, the LHS is an absolute value (always >= 0) and the RHS is negative. The inequality is always true. So, (-∞, -1/2) is part of the solution.
@@ -198,7 +198,7 @@ Intersection of (x <= 4/5 or x >= 6) with (x >= -1/2) is [-1/2, 4/5] U [6, ∞).
 Finally, we combine the results from Case 1 and Case 2:
 (-∞, -1/2) U [-1/2, 4/5] U [6, ∞).
 This simplifies to (-∞, 4/5] U [6, ∞)."
-QA,40,202122334,20,,,"In a rectangle ABCD, AB = 16 cm and BC = 12 cm. P is a point on side CD such that AP bisects angle DAB. What is the length of CP in cm?",2,3,4,5,A,B,C,D,C,MCQ,Geometry,"Quadrilaterals & Polygons (Properties, Diagonals)",Medium,"rectangle, angle bisector, isosceles triangle property","rectangle, angle bisector, isosceles triangle property",False,MockSet5_QA,Applying,"In rectangle ABCD, AB || CD and all angles are 90°. So, ∠DAB = 90°.
+QA,40,202122334,20,,,"In a rectangle ABCD, AB = 16 cm and BC = 12 cm. P is a point on side CD such that AP bisects angle DAB. What is the length of CP in cm?",2,3,4,5,A,B,C,D,C,MCQ,Geometry,"Quadrilaterals & Polygons (Properties, Diagonals)",Medium,"rectangle, angle bisector, isosceles triangle property","rectangle, angle bisector, isosceles triangle property",FALSE,MockSet5_QA,Applying,"In rectangle ABCD, AB || CD and all angles are 90°. So, ∠DAB = 90°.
 AP bisects ∠DAB, which means ∠DAP = ∠PAB = 90°/2 = 45°.
 Consider the triangle ΔADP. It is a right-angled triangle because ∠D = 90°.
 We know ∠DAP = 45°. The sum of angles in a triangle is 180°, so ∠APD = 180° - 90° - 45° = 45°.
@@ -209,7 +209,7 @@ This means DP = 12 cm.
 The length of side CD is equal to the length of side AB, so CD = 16 cm.
 We need to find the length of CP. CP = CD - DP.
 CP = 16 - 12 = 4 cm."
-QA,40,313233445,21,,,"Two vessels A and B contain mixtures of milk and water. Vessel A has milk and water in the ratio 5:3. Vessel B has milk and water in the ratio 4:1. Quantities are taken from A and B and mixed to form a new mixture in which milk and water are in the ratio 2:1. If the ratio of the quantity taken from A to the quantity taken from B is a:b (where a and b are coprime integers), find the value of a+b.",,,,,,,,,21,TITA,Arithmetic,Mixtures & Alligations,Hard,"alligation rule, ratio of quantities","alligation rule, ratio of quantities, Q-Type 72 (Averages/Mixtures PDF)",True,MockSet5_QA,Analyzing,"We can use the alligation rule on the fraction of milk (or water) in the mixtures.
+QA,40,313233445,21,,,"Two vessels A and B contain mixtures of milk and water. Vessel A has milk and water in the ratio 5:3. Vessel B has milk and water in the ratio 4:1. Quantities are taken from A and B and mixed to form a new mixture in which milk and water are in the ratio 2:1. If the ratio of the quantity taken from A to the quantity taken from B is a:b (where a and b are coprime integers), find the value of a+b.",,,,,,,,,21,TITA,Arithmetic,Mixtures & Alligations,Hard,"alligation rule, ratio of quantities","alligation rule, ratio of quantities, Q-Type 72 (Averages/Mixtures PDF)",TRUE,MockSet5_QA,Analyzing,"We can use the alligation rule on the fraction of milk (or water) in the mixtures.
 Fraction of milk in Vessel A (M_A) = 5 / (5+3) = 5/8.
 Fraction of milk in Vessel B (M_B) = 4 / (4+1) = 4/5.
 Fraction of milk in the final New Mixture (M_Mix) = 2 / (2+1) = 2/3.
@@ -223,7 +223,7 @@ Let Q_A and Q_B be the quantities taken from vessels A and B respectively. By th
 The ratio a:b is 16:5. The numbers 16 and 5 are coprime.
 We have a=16 and b=5.
 The value of a+b = 16 + 5 = 21."
-QA,40,424344556,22,,,"A number when successively divided by 5, 4, and 3 leaves remainders 2, 1, and 2 respectively. What is the smallest such positive integer?",47,77,87,97,A,B,C,D,A,MCQ,Number System,Remainders (incl. Remainder Theorem),Medium,"successive division, finding smallest number","successive division, finding smallest number, Q-Type 52 (Number Systems PDF)",False,MockSet5_QA,Applying,"Let the number be N. The process of successive division can be represented as follows:
+QA,40,424344556,22,,,"A number when successively divided by 5, 4, and 3 leaves remainders 2, 1, and 2 respectively. What is the smallest such positive integer?",47,77,87,97,A,B,C,D,A,MCQ,Number System,Remainders (incl. Remainder Theorem),Medium,"successive division, finding smallest number","successive division, finding smallest number, Q-Type 52 (Number Systems PDF)",FALSE,MockSet5_QA,Applying,"Let the number be N. The process of successive division can be represented as follows:
 N = 5 * q1 + 2
 q1 = 4 * q2 + 1
 q2 = 3 * q3 + 2

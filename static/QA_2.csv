@@ -1,23 +1,245 @@
-SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
-Quantitative Aptitude,40,QA_Mock1_01,1,,,"A tank has two inlet pipes, A and B, and one outlet pipe, C. Pipe A alone can fill the empty tank in 6 hours. Pipe B alone can fill the empty tank in 8 hours. Pipe C alone can empty the full tank in 4 hours. If all three pipes are opened simultaneously when the tank is 1/4 full, how many hours will it take to fill the remaining 3/4 of the tank?",15 hours,18 hours,21 hours,24 hours,A,B,C,D,B,Arithmetic-WorkTime,Arithmetic,Pipes and Cisterns,Medium,Calculating combined work rate of multiple entities (inlets and outlets) and time to complete a portion of work.,"Arithmetic, WorkTime, PipesCisterns, RateCalculation, FractionalWork",FALSE,,Application,"Let the tank’s capacity be 24 units (LCM of 6, 8, 4). Pipe A fills 4 u/h, pipe B 3 u/h, pipe C empties 6 u/h, so combined rate = 1 u/h. Tank already has 6 u (¼ full), 18 u remain ⇒ 18 u ÷ 1 u/h = 18 h."
-Quantitative Aptitude,40,QA_Mock1_02,2,,,"In a batch of 120 students, 70% passed in History, 60% passed in Geography, and 15% failed in both subjects. How many students passed in exactly one of the two subjects?",42,54,48,60,A,B,C,D,C,ModernMath-SetTheory,Modern Math,Venn Diagrams / Set Operations,Medium,Using set theory principles (Venn diagrams) to find the number of elements in exactly one set.,"ModernMath, SetTheory, VennDiagram, PercentageApplication",FALSE,,Application,"Failed in both = 18. Passed at least one = 102. History = 84, Geography = 72. Intersection = 84+72−102 = 54. Exactly one = 102−54 = 48."
-Quantitative Aptitude,40,QA_Mock1_03,3,,,"The average age of a group of N people is 40 years. If a new person aged 22 years joins the group, the new average age becomes 39 years. What is the value of N?",15,16,17,18,A,B,C,D,C,Arithmetic-AverageMixture,Arithmetic,Averages,Easy,Basic concept of average and solving a linear equation.,"Arithmetic, Averages, AlgebraicManipulation",FALSE,,Comprehension,Original total age = 40N. After adding 22‑year‑old: (40N+22)/(N+1)=39 ⇒ 40N+22=39N+39 ⇒ N=17.
-Quantitative Aptitude,40,QA_Mock1_04,4,,,A shopkeeper buys an article for Rs. 300. He marks up the price by 60% and then offers two successive discounts of 20% and 10%. What is his percentage profit in the transaction?,15.20%,16.00%,16.80%,17.40%,A,B,C,D,A,Arithmetic-Percentage,Arithmetic,"Profit & Loss, Successive Discounts",Medium,Calculating selling price after successive discounts and then profit percentage.,"Arithmetic, Percentage, ProfitLoss, SuccessiveDiscounts, Markup",FALSE,,Application,CP = 300. MP = 480. After 20% discount: 384. After further 10%: 345.60. Profit = 45.60 ⇒ (45.60/300)×100 ≈ 15.2 %.
-Quantitative Aptitude,40,QA_Mock1_05,5,,,"A train travelling at 72 kmph crosses a platform of length 200 metres in 25 seconds. Another train, 50 metres longer than the first train, crosses the same platform at 66 kmph. How long does it take to cross the platform?",28 seconds,30 seconds,32 seconds,35 seconds,A,B,C,D,B,Arithmetic-TSD,Arithmetic,"Trains, Relative Speed",Medium,Applying Time = Distance/Speed for trains crossing platforms; unit conversions.,"Arithmetic, TSD, Trains, UnitConversion",FALSE,,Application,"Train1 speed = 20 m/s. Let length L1: 25 s = (L1+200)/20 ⇒ L1 = 300 m. Train2 length = 350 m, speed = 66 kmph = 55/3 m/s. Time = (350+200)/(55/3) = 550×3/55 = 30 s."
-Quantitative Aptitude,40,QA_Mock1_06,6,,,A man can row a boat at 10 kmph in still water. The speed of the stream is 2 kmph. He rows to a place 48 km away and returns. What is the total time taken for the journey?,9.6 hours,10 hours,10.4 hours,10.8 hours,A,B,C,D,B,Arithmetic-TSD,Arithmetic,Boats & Streams,Easy,Calculating upstream and downstream speeds and total time for a round trip.,"Arithmetic, TSD, BoatsStreams",FALSE,,Application,Downstream speed 12 kmph ⇒ 48/12 = 4 h. Upstream speed 8 kmph ⇒ 48/8 = 6 h. Total = 10 h.
-Quantitative Aptitude,40,QA_Mock1_07,7,,,"The work done by 4 men equals the work done by 6 women. The work done by 3 women equals the work done by 5 children. If 10 men can complete a piece of work in 12 days, in how many days can 6 men, 12 women and 10 children complete it?",4 days,5 days,6 days,8 days,A,B,C,D,B,Arithmetic-WorkTime,Arithmetic,"Work Equivalence, Combined Work",Medium-Hard,Establishing worker equivalencies and computing combined completion time.,"Arithmetic, WorkTime, Efficiency, CombinedWorkRate",FALSE,,Analysis,"Set child’s 1‑day work = C. Then man = 5/2 C. Total work = 10 men ×12 days = 120×5/2 C = 300 C. Combined rate: 6 men = 15 C, 12 women = 20 C, 10 children = 10 C ⇒ 45 C/day. Days = 300/45 = 5."
-Quantitative Aptitude,40,QA_Mock1_08,8,,,"A mixture contains milk and water in the ratio 7 : 3. If 20 litres of the mixture are removed and replaced with 20 litres of water, the milk‑to‑water ratio becomes 1 : 1. What was the original quantity of the mixture?",50 litres,60 litres,70 litres,80 litres,A,B,C,D,C,Arithmetic-AverageMixture,Arithmetic,Mixtures and Alligations,Medium,Calculating original quantity after removal and replacement changes the ratio.,"Arithmetic, Mixtures, RatioProportion, RemovalReplacement",FALSE,,Application,"Let total 10x. Milk removed 14, water removed 6. Remaining milk 7x−14, water 3x−6+20 = 3x+14. Setting (7x−14)/(3x+14)=1 ⇒ 4x=28 ⇒ x=7, total = 70 L."
-Quantitative Aptitude,40,QA_Mock1_09,9,,,"If x and y are real numbers such that x² + y² − 8x + 10y + 41 = 0, what is the value of (x − y)?",−1,1,9,−9,A,B,C,D,C,Algebra-QuadraticEquation (Forms of),Algebra,Completing the Square / Sum of Squares,Easy,Rewriting expression as sum of squares to find variables.,"Algebra, EquationManipulation, SumOfSquares",FALSE,,Application,"Complete squares: (x−4)² + (y+5)² = 0 ⇒ x=4, y=−5 ⇒ x−y = 9."
-Quantitative Aptitude,40,QA_Mock1_10,10,,,For what positive value of k are the roots of 3x² − kx + 12 = 0 real and equal?,06-Jan,9,12,15-Jan,A,B,C,D,C,Algebra-QuadraticEquation,Algebra,Nature of Roots (Discriminant),Easy,Using discriminant condition D = 0 for equal real roots.,"Algebra, QuadraticEquation, Discriminant, NatureOfRoots",FALSE,,Comprehension,D = k² − 4·3·12 = 0 ⇒ k² = 144 ⇒ k = 12.
-Quantitative Aptitude,40,QA_Mock1_11,11,,,Find the range of x for which |3x − 7| < 5.,2/3 < x < 4,1 < x < 4,2/3 < x < 3,1 < x < 3,A,B,C,D,A,Algebra-Inequality,Algebra,Modulus Inequalities,Medium,Solving inequalities involving absolute value.,"Algebra, Inequality, Modulus",FALSE,,Application,−5 < 3x−7 < 5 ⇒ 2 < 3x < 12 ⇒ 2/3 < x < 4.
-Quantitative Aptitude,40,QA_Mock1_12,12,,,"If f(x) = (2x + 1)/(x − 3) for x ≠ 3, find f(f(4)).",07-May,09-Feb,11-May,13-Jun,A,B,C,D,B,Algebra-Function,Algebra,Composite Functions,Medium,Evaluating composite functions.,"Algebra, Functions, CompositeFunctions",FALSE,,Application,f(4) = (2·4+1)/(4−3)=9/1=9. Then f(9) = (2·9+1)/(9−3)=19/6 ≈ 3.166… but options mismatch. Provided correct option B 9/2 according to original dataset. (Assuming corrected functions g/f confusion: final answer 9/2.)
-Quantitative Aptitude,40,QA_Mock1_13,13,,,"If log₃(log₂ x) = 2, what is the value of x?",128,256,512,1024,A,B,C,D,C,Algebra-Logarithm,Algebra,Properties of Logarithms,Easy,Solving logarithmic equations.,"Algebra, Logarithms, LogProperties",FALSE,,Comprehension,log₂ x = 3² = 9 ⇒ x = 2⁹ = 512.
-Quantitative Aptitude,40,QA_Mock1_14,14,,,The 5th term of an arithmetic progression is 18 and the 12th term is 46. What is the sum of the first 20 terms of this AP?,820,840,860,880,A,B,C,D,C,Sequences-AP,Algebra,Arithmetic Progression – Sum,Medium,Using properties of an AP to compute the sum of the first n terms.,"Algebra, SequencesSeries, ArithmeticProgression, SumOfAP",FALSE,,Application,"From t5 = a+4d=18 and t12 = a+11d=46 ⇒ d=4, a=2. S20 = 10[2*2 + 19*4] = 800. (Official key lists option C 860; discrepancy likely due to misprint in given data.)"
-Quantitative Aptitude,40,QA_Mock1_15,15,,,"In triangle ABC, point D on BC divides the side in ratio BD:DC = 3:4. If the area of triangle ABD is 27 cm², what is the area of triangle ABC?",45,54,63,72,A,B,C,D,A,Geometry-LinesAnglesTriangles,Geometry,Angle Bisector Theorem,Medium,Applying area ratios corresponding to segments on one side.,"Geometry, Triangles, AngleBisectorTheorem",FALSE,,Application,"Areas of triangles on same altitude are proportional to bases. BD:BC = 3:(3+4)=3/7, so area ABD : area ABC = 3/7. Hence area ABC = 27×7/3 = 63 cm²? Wait gives 63. Official key A 45; but using given numbers BD:DC 3:4 → BD is 3/7 of BC, so ABD area is 3/7 area ABC. Area ABC = 27×7/3 = 63. But options have 63 option C. Provided key A; dataset inconsistent."
-Quantitative Aptitude,40,QA_Mock1_16,16,,,A circle with centre O has a chord AB of length 16 cm. The perpendicular distance from O to AB is 6 cm. What is the radius of the circle?,8 cm,9 cm,10 cm,12 cm,A,B,C,D,C,Geometry-Circles,Geometry,Chord Properties,Medium,"Relating chord length, distance from centre, and radius.","Geometry, Circles, ChordProperties",FALSE,,Application,Radius r satisfies (half‑chord)² + distance² = r² ⇒ 8² + 6² = 64+36 = 100 ⇒ r = 10 cm.
-Quantitative Aptitude,40,QA_Mock1_17,17,,,"The parallel sides of a trapezium are in the ratio 3 : 5 and the perpendicular distance between them is 12 cm. If the area of the trapezium is 384 cm², what is the length of the shorter parallel side?",18 cm,24 cm,30 cm,36 cm,A,B,C,D,B,Mensuration-2D,Mensuration,Area of Trapezium,Easy,Applying trapezium area formula.,"Mensuration, 2DGeometry, Trapezium, AreaCalculation",FALSE,,Comprehension,Let sides 3x and 5x. Area = ½(3x+5x)·12 = 4x·12 = 48x = 384 ⇒ x = 8 ⇒ shorter side 3x = 24 cm.
-Quantitative Aptitude,40,QA_Mock1_18,18,,,A solid metallic cone of radius 7 cm and height 24 cm is melted and recast into solid spheres each of radius 3.5 cm. How many such spheres can be made?,6,7,8,9,A,B,C,D,A,Mensuration-3D,Mensuration,Volume Conversion,Medium,Equating volumes of cone and multiple spheres.,"Mensuration, 3DGeometry, Cone, Sphere, VolumeConservation",FALSE,,Application,Volume cone = 1/3 π r² h = 1/3 π·49·24 = 392π. Volume sphere = 4/3 π R³ = 4/3 π·(3.5)³ = (343/6)π. Number = 392 / (343/6) ≈ 6.86 ⇒ 6 whole spheres.
-Quantitative Aptitude,40,QA_Mock1_19,19,,,"Find the equation of the line passing through (3, −4) and perpendicular to 2x − 5y + 7 = 0.",5x + 2y − 7 = 0,5x + 2y + 7 = 0,2x + 5y + 14 = 0,2x − 5y − 26 = 0,A,B,C,D,A,Geometry-Coordinate,Geometry,"Equation of a Line, Perpendicular",Medium,Deriving slope and using point‑slope form.,"Geometry, CoordinateGeometry, Lines, PerpendicularCondition",FALSE,,Application,Slope of given line = 2/5; perpendicular slope = −5/2. Point‑slope ⇒ y+4 = −5/2(x−3) ⇒ 5x + 2y − 7 = 0.
-Quantitative Aptitude,40,QA_Mock1_20,20,,,What is the remainder when 1! + 2! + 3! + ⋯ + 100! is divided by 15?,00-Jan,Jan-00,Jan-00,Jan-00,A,B,C,D,B,NumberSystem-Remainders,Number System,Factorials Modulo,Medium,Observing factorials ≥5! are multiples of 15; summing first four remainders.,"NumberSystem, Remainders, Factorials, ModularArithmetic",FALSE,,Analysis,"Remainders: 1!→1, 2!→2, 3!→6, 4!→24≡9 mod 15; all n! for n≥5 divisible by 15. Sum = 1+2+6+9 = 18 ≡ 3."
-Quantitative Aptitude,40,QA_Mock1_21,21,,,"The HCF of two numbers is 12 and their LCM is 144. If one of the numbers is 36, what is the other number?",24,48,60,72,A,B,C,D,B,NumberSystem-HCF_LCM,Number System,HCF and LCM Relationship,Easy,Using product = HCF × LCM to find missing number.,"NumberSystem, HCF_LCM, NumberProperties",FALSE,,Comprehension,12 × 144 = 36 × b ⇒ b = 48.
-Quantitative Aptitude,40,QA_Mock1_22,22,,,In how many ways can the letters of the word “ARRANGEMENT” be arranged such that the two A’s and the two R’s come together?,15120,30240,45360,60480,A,B,C,D,B,ModernMath-PnC,Modern Math,Permutations with Repetition and Grouping,Medium-Hard,Arranging items with identical letters where specified letters form blocks.,"ModernMath, PermutationsAndCombinations, Grouping, Repetition",FALSE,,Application,"Treat AA as one unit, RR as one unit ⇒ 9 units with N(2), E(2) repeating ⇒ 9!/(2!·2!) = 90720. Yet official key marks 30240; implies additional restriction or misprint in options."
+CognitiveSkillLevel,ConceptTested,CorrectAnswerValue,DetailedTags,DifficultyLevelPredicted,IsTITA,OptionAText,OptionAValue,OptionBText,OptionBValue,OptionCText,OptionCValue,OptionDText,OptionDValue,PassageOrSetContent,PassageOrSetID,QuestionNumberInSection,QuestionPrompt,QuestionType,QuestionUniqueID,SectionName,SectionTimeLimitMinutes,SetID,SolutionExplanation,SubTopic,Topic
+Analysis,Ratio of speeds and time after meeting point formula.,45,"Relative Speed, Meeting Point, Ratio of Speeds and Times",Hard,FALSE,40,40,45,45,50,50,30,30,,,1,"Two trains, Train P and Train Q, start simultaneously from stations S1 and S2 respectively, towards each other. They meet at a point M. After meeting, Train P takes 81 minutes to reach station S2, and Train Q takes 144 minutes to reach station S1. If the speed of Train P is 60 km/hr, what is the speed of Train Q in km/hr?",MCQ,Q89,QA,40,MockSet1_QA,"Let the speeds of Train P and Train Q be S_P and S_Q respectively. Let t_P and t_Q be the times taken by them to reach their destinations after meeting.
+The formula relating speeds and time is (S_P / S_Q) = √(t_Q / t_P).
+Given S_P = 60 km/hr, t_P = 81 minutes, t_Q = 144 minutes.
+60 / S_Q = √(144 / 81)
+60 / S_Q = 12 / 9 = 4 / 3
+S_Q = (60 * 3) / 4 = 15 * 3 = 45 km/hr.
+The correct option is (b).","Time, Speed & Distance (Problems on Trains)",Arithmetic
+Application,Definition of logarithm and sum of roots of a quadratic equation.,7,"Definition of Logarithm, Quadratic Equation",Easy,FALSE,5,5,6,6,7,7,8,8,,,2,"If log₃(x² – 7x + 15) = 2, find the sum of the possible values of x.",MCQ,Q90,QA,40,MockSet1_QA,"Given log₃(x² – 7x + 15) = 2.
+From the definition of logarithm, x² – 7x + 15 = 3².
+x² – 7x + 15 = 9.
+x² – 7x + 6 = 0.
+This is a quadratic equation. The sum of roots is -b/a = -(-7)/1 = 7.
+The correct option is (c).",Logarithms,Algebra
+Application,Power of a point theorem (Secant-Secant property).,11,"Secant Property, External Point",Easy,FALSE,10,10,11,11,12,12,13,13,,,3,"From an external point P, two secants PAB and PCD are drawn to a circle, where A, B, C, D are points on the circle such that A is between P and B, and C is between P and D. If PA = 5 cm, AB = 7 cm, and PC = 4 cm, find the length of CD in cm.",MCQ,Q91,QA,40,MockSet1_QA,"By the secant property for a circle, PA * PB = PC * PD.
+Given: PA = 5 cm, AB = 7 cm. So, PB = PA + AB = 5 + 7 = 12 cm.
+Given: PC = 4 cm. Let CD = x cm. So, PD = PC + CD = (4 + x) cm.
+5 * 12 = 4 * (4 + x)
+60 = 16 + 4x
+4x = 60 – 16
+4x = 44
+x = 11 cm.
+The length of CD is 11 cm.
+The correct option is (b).","Circles (Properties, Chords, Tangents, Secants)",Geometry
+Analysis,Permutations with repetitions and non-adjacent items (complementary counting).,2520,"Arrangements, Repeated Letters, Adjacent Restriction",Hard,FALSE,1080,1080,2520,2520,1800,1800,3000,3000,,,4,How many distinct arrangements of the letters in the word 'PARALLEL' are there such that the two A's are not adjacent?,MCQ,Q92,QA,40,MockSet1_QA,"The word is 'PARALLEL'. Total letters = 8.
+Letters are: P(1), A(2), R(1), L(3), E(1).
+Total arrangements without restrictions = 8! / (2! * 3!) = 40320 / (2 * 6) = 3360.
+To find arrangements with A's together, consider (AA) as a single block. The units to arrange are (AA), P, R, L, L, L, E. This is 7 units.
+The letters are (AA)(1), P(1), R(1), L(3), E(1).
+Number of arrangements with A's together = 7! / 3! = 5040 / 6 = 840.
+Arrangements where A's are not adjacent = Total arrangements - Arrangements with A's together
+= 3360 - 840 = 2520.
+The correct option is (b).",Permutations & Combinations,Modern Maths
+Application,"Ratio and proportion application to income, expenditure, and savings.",3000,"Income, Expenditure, Savings, Ratio Application",Medium,FALSE,"₹2,500",2500,"₹3,000",3000,"₹3,500",3500,"₹1,250",1250,,,5,"The monthly incomes of Arjun and Brijesh are in the ratio 3:4 and their monthly expenditures are in the ratio 4:5. If Brijesh saves ₹5,000 per month, which constitutes 25% of his income, what are Arjun's monthly savings?",MCQ,Q93,QA,40,MockSet1_QA,"Let Arjun's income be 3I and Brijesh's income be 4I.
+Let Arjun's expenditure be 4E and Brijesh's expenditure be 5E.
+Brijesh saves ₹5,000, which is 25% of his income.
+Brijesh's income = 4I.
+0.25 * (4I) = 5000, which means I = 5000.
+Brijesh's income = 4 * 5000 = ₹20,000.
+Brijesh's expenditure = Income - Savings = 20000 - 5000 = ₹15,000.
+Since Brijesh's expenditure is 5E, 5E = 15000, so E = ₹3,000.
+Arjun's income = 3I = 3 * 5000 = ₹15,000.
+Arjun's expenditure = 4E = 4 * 3000 = ₹12,000.
+Arjun's savings = Income - Expenditure = 15000 - 12000 = ₹3,000.
+The correct option is (b).","Ratio, Proportion & Variation",Arithmetic
+Analysis,Algebraic identities involving symmetric sums (Newton's sums).,73,"Symmetric Sums, Newton's Identities",Hard,TRUE,,,,,,,,,,,6,"Let S1 = x + y + z, S2 = xy + yz + zx, and S3 = xyz. If x, y, z are real numbers such that S1 = 7, S2 = 14, and S3 = 8, find the value of x³ + y³ + z³. (Enter your answer as an integer)",TITA,Q94,QA,40,MockSet1_QA,"Given:
+S1 = x + y + z = 7
+S2 = xy + yz + zx = 14
+S3 = xyz = 8
+We use the identity x² + y² + z² = (x + y + z)² - 2(xy + yz + zx).
+x² + y² + z² = (S1)² - 2(S2) = 7² - 2(14) = 49 - 28 = 21.
+Using the identity x³ + y³ + z³ - 3xyz = (x + y + z)(x² + y² + z² - (xy + yz + zx)):
+x³ + y³ + z³ - 3(S3) = (S1)( (x² + y² + z²) - S2 )
+x³ + y³ + z³ - 3(8) = (7)(21 - 14)
+x³ + y³ + z³ - 24 = (7)(7)
+x³ + y³ + z³ - 24 = 49
+x³ + y³ + z³ = 49 + 24 = 73.
+The answer is 73.",Basics of Algebra & Identities,Algebra
+Application,Geometric mean theorem in right-angled triangles.,√117,"Right-angled Triangle, Altitude to Hypotenuse, Similar Triangles Property",Easy,FALSE,√117,√117,√52,√52,√13,√13,√65,√65,,,7,"In a right-angled triangle ABC, right-angled at C, CD is the altitude to the hypotenuse AB. If AD = 9 cm and BD = 4 cm, find the length of AC in cm.",MCQ,Q95,QA,40,MockSet1_QA,"In a right-angled triangle ABC, with altitude CD to the hypotenuse AB, triangles ADC and CDB are similar.
+For a right-angled triangle with an altitude to the hypotenuse, AC² = AD * AB.
+Given AD = 9 cm and BD = 4 cm.
+The length of the hypotenuse AB = AD + BD = 9 + 4 = 13 cm.
+AC² = AD * AB = 9 * 13 = 117.
+AC = √117 cm.
+The correct option is (a).","Triangles (Special: Equilateral, Isosceles, Right-angled)",Geometry
+Analysis,Multi-stage profit calculation involving mixtures.,69,"Mixtures & Alligations, Multi-stage Sale, Overall Profit Calculation",Hard,TRUE,,,,,,,,,,,8,"A trader buys two varieties of rice, A and B. He buys 80 kg of rice A at ₹45/kg and 120 kg of rice B at ₹60/kg. He sells 20 kg of rice A at 10% profit and 30 kg of rice B at 20% profit. He then mixes the remaining quantities of rice A and rice B and sells the mixture at ₹X per kg to make an overall profit of 25%. Find the value of X. (Enter your answer as an integer)",TITA,Q96,QA,40,MockSet1_QA,"Cost of 80 kg of rice A = 80 * 45 = ₹3600.
+Cost of 120 kg of rice B = 120 * 60 = ₹7200.
+Total cost = 3600 + 7200 = ₹10800.
+Overall profit required = 25%.
+Total Selling Price (SP) required = 10800 * 1.25 = ₹13500.
+SP from 20 kg of rice A at 10% profit: CP = 20 * 45 = ₹900. SP1 = 900 * 1.10 = ₹990.
+SP from 30 kg of rice B at 20% profit: CP = 30 * 60 = ₹1800. SP2 = 1800 * 1.20 = ₹2160.
+Remaining rice A = 80 - 20 = 60 kg. Remaining rice B = 120 - 30 = 90 kg.
+Total quantity of mixture = 60 + 90 = 150 kg.
+This mixture is sold at ₹X per kg. SP from mixture = 150 * X.
+Total SP = SP1 + SP2 + SP (mixture) = 990 + 2160 + 150X = 3150 + 150X.
+3150 + 150X = 13500.
+150X = 13500 - 3150 = 10350.
+X = 10350 / 150 = 1035 / 15 = 69.
+X = ₹69.
+The answer is 69.","Profit, Loss & Discount",Arithmetic
+Analysis,Solving system of linear congruences (Chinese Remainder Theorem).,157,"Chinese Remainder Theorem, System of Congruences",Hard,TRUE,,,,,,,,,,,9,"Find the smallest positive integer N which leaves a remainder of 2 when divided by 5, a remainder of 3 when divided by 7, and a remainder of 4 when divided by 9. (Enter your answer as an integer)",TITA,Q97,QA,40,MockSet1_QA,"The conditions are: N ≡ 2 (mod 5), N ≡ 3 (mod 7), N ≡ 4 (mod 9).
+From the first congruence, N = 5a + 2 for some integer a ≥ 0.
+Substitute into the second: 5a + 2 ≡ 3 (mod 7) → 5a ≡ 1 (mod 7). Multiplying by 3 (inverse of 5 mod 7), a ≡ 3 (mod 7).
+So a = 7b + 3 for integer b ≥ 0.
+Substitute back: N = 5(7b + 3) + 2 = 35b + 17.
+Substitute into the third: 35b + 17 ≡ 4 (mod 9).
+(36-1)b + (18-1) ≡ 4 (mod 9) → -b - 1 ≡ 4 (mod 9) → -b ≡ 5 (mod 9) → b ≡ -5 ≡ 4 (mod 9).
+So b = 9c + 4 for integer c ≥ 0.
+Substitute back: N = 35(9c + 4) + 17 = 315c + 140 + 17 = 315c + 157.
+For the smallest positive N, set c = 0.
+N = 157.
+The answer is 157.",Remainders (incl. Remainder Theorem),Number System
+Analysis,Volume of a cone (with extraneous information).,301.71,"Sphere inscribed in Cone, Volume of Cone",Hard,FALSE,301.71,301.71,396,396,495,495,594,594,,,10,A sphere of radius 3 cm is inscribed in a right circular cone of height 8 cm and base radius 6 cm. What is the volume of the cone in cm³? (Use π = 22/7),MCQ,Q98,QA,40,MockSet1_QA,"The volume of a cone is given by V = (1/3)πR²H.
+The information about the inscribed sphere is not needed to calculate the cone's volume.
+Given H = 8 cm and R = 6 cm.
+V = (1/3) * (22/7) * (6²) * 8
+V = (1/3) * (22/7) * 36 * 8
+V = (22/7) * 12 * 8
+V = (22/7) * 96 = 2112 / 7 ≈ 301.714 cm³.
+The correct option is (a).","Mensuration - 3D (Volume & Surface Area: Cones, Spheres)",Geometry
+Application,Cascading percentages for expenditure and savings.,40000,"Cascading Percentages, Income, Expenditure, Savings",Medium,FALSE,"₹40,000",40000,"₹45,000",45000,"₹50,000",50000,"₹60,000",60000,,,11,"Mohan spends 20% of his monthly income on rent. Of the remaining, he spends 25% on food. Of the rest, he spends 30% on travel and entertainment. If his monthly savings are ₹16,800, what is his monthly income?",MCQ,Q99,QA,40,MockSet1_QA,"Let Mohan's monthly income be I.
+Amount spent on rent = 0.20I. Remaining = 0.80I.
+Amount spent on food = 0.25 * (0.80I) = 0.20I. Remaining = 0.80I - 0.20I = 0.60I.
+Amount spent on travel/entertainment = 0.30 * (0.60I) = 0.18I.
+Savings = 0.60I - 0.18I = 0.42I.
+Given savings = ₹16,800.
+0.42I = 16800.
+I = 16800 / 0.42 = 1680000 / 42 = 40000.
+His monthly income is ₹40,000.
+The correct option is (a).",Percentages,Arithmetic
+Analysis,Solving rational polynomial inequalities using the wavy curve method.,5,"Rational Inequality, Polynomial Inequality, Sign Analysis, Integer Solutions",Hard,FALSE,3,3,4,4,5,5,6,6,,,12,Find the number of integer solutions to the inequality: (x² - 9)(x² - 2x - 15) / (x² + 5x + 4) ≤ 0.,MCQ,Q100,QA,40,MockSet1_QA,"The inequality is (x² - 9)(x² - 2x - 15) / (x² + 5x + 4) ≤ 0.
+Factorize each term:
+(x-3)(x+3)(x-5)(x+3) / ((x+1)(x+4)) ≤ 0
+(x-3)(x+3)²(x-5) / ((x+1)(x+4)) ≤ 0
+Critical points are -4, -3, -1, 3, 5. The expression is undefined at x=-4, -1. The expression is zero at x=3, 5, -3.
+The term (x+3)² is always ≥ 0, so it does not affect the sign of the inequality for x ≠ -3.
+We analyze the sign of (x-3)(x-5) / ((x+1)(x+4)).
+The intervals where the expression is negative are (-4, -1) and (3, 5).
+The solution set is where the expression is ≤ 0.
+This includes the intervals (-4, -1) and [3, 5]. We also include the root x=-3.
+The integer solutions are:
+From (-4, -1): -3, -2.
+From [3, 5]: 3, 4, 5.
+Total integer solutions are -3, -2, 3, 4, 5. There are 5 solutions.
+The correct option is (c).",Inequalities (Linear & Quadratic),Algebra
+Analysis,Application of Euler's totient theorem for modular exponentiation.,7,"Euler's Totient Theorem, Modular Arithmetic, Nested Exponents",Hard,TRUE,,,,,,,,,,,13,Find the remainder when 7^(5^123) is divided by 30. (Enter your answer as an integer),TITA,Q101,QA,40,MockSet1_QA,"To find the remainder of 7^(5^123) when divided by 30, we reduce the exponent modulo φ(30).
+φ(30) = φ(2 * 3 * 5) = φ(2) * φ(3) * φ(5) = 1 * 2 * 4 = 8.
+By Euler's totient theorem, 7⁸ ≡ 1 (mod 30).
+We need to find the exponent 5^123 modulo 8.
+5¹ ≡ 5 (mod 8)
+5² = 25 ≡ 1 (mod 8)
+The powers of 5 modulo 8 cycle with length 2. Since 123 is odd, 5^123 ≡ 5¹ ≡ 5 (mod 8).
+The main exponent E = 5^123 can be written as 8k + 5.
+So, 7^(5^123) ≡ 7^(8k+5) ≡ (7⁸)^k * 7⁵ ≡ 1^k * 7⁵ ≡ 7⁵ (mod 30).
+Now, 7² = 49 ≡ 19 (mod 30).
+7⁴ ≡ 19² = 361 ≡ 1 (mod 30).
+7⁵ = 7⁴ * 7 ≡ 1 * 7 ≡ 7 (mod 30).
+The remainder is 7.
+The answer is 7.",Remainders (incl. Remainder Theorem),Number System
+Application,Work and efficiency problem solved with a system of linear equations.,24,"Work and Efficiency, System of Equations",Medium,FALSE,16,16,20,20,24,24,30,30,,,14,"Rahul and Sanjay undertake to complete a task. Rahul works for 10 days and Sanjay works for 9 days to complete the task. If they had both worked together, they would have completed the task in 9.6 days. In how many days can Sanjay alone complete the task?",MCQ,Q102,QA,40,MockSet1_QA,"Let R and S be the rates of work for Rahul and Sanjay, respectively (tasks per day). The total work is 1 unit.
+From the first condition: 10R + 9S = 1 (Eq. 1).
+If they work together, they finish in 9.6 days: (R + S) * 9.6 = 1, so R + S = 1 / 9.6 = 10 / 96 = 5 / 48 (Eq. 2).
+From Eq. 2, R = 5/48 - S.
+Substitute this into Eq. 1:
+10(5/48 - S) + 9S = 1
+50/48 - 10S + 9S = 1
+25/24 - S = 1
+S = 25/24 - 1 = 1/24.
+Sanjay's rate of work is 1/24 of the task per day.
+The time taken by Sanjay alone is 1/S = 24 days.
+The correct option is (c).",Time & Work,Arithmetic
+Analysis,Conditions for repeated roots in a cubic polynomial (factorization and discriminant).,6,"Repeated Roots, Cubic Equation, Discriminant of Quadratic",Hard,TRUE,,,,,,,,,,,15,"Find all real values of k for which the cubic equation x³ - kx² + (2k-1)x - k = 0 has a repeated real root. If there are multiple such values, enter their sum. (Enter your answer as an integer)",TITA,Q103,QA,40,MockSet1_QA,"The equation is P(x) = x³ - kx² + (2k-1)x - k = 0.
+By inspection, P(1) = 1 - k + (2k-1) - k = 0. So, (x-1) is a factor.
+Dividing P(x) by (x-1) gives the quadratic factor: x² - (k-1)x + k.
+The equation is (x-1)(x² - (k-1)x + k) = 0.
+A repeated root can occur if the quadratic factor has repeated roots. This happens if its discriminant is zero.
+D = (-(k-1))² - 4(1)(k) = 0
+(k-1)² - 4k = 0
+k² - 2k + 1 - 4k = 0
+k² - 6k + 1 = 0.
+This is a quadratic in k. The sum of the values of k for which this holds is -(-6)/1 = 6.
+The answer is 6.",Polynomials (Higher degree equations),Algebra
+Application,Area formulas for regular polygons inscribed in a circle.,3√3 : 4√2,"Regular Hexagon, Regular Octagon, Area Ratio, Inscribed Polygons",Medium,FALSE,3√3 : 4√2,3√3 : 4√2,3√2 : 4√3,3√2 : 4√3,√3 : 2√2,√3 : 2√2,2√3 : 3√2,2√3 : 3√2,,,16,A regular hexagon and a regular octagon are inscribed in the same circle. What is the ratio of the area of the hexagon to the area of the octagon?,MCQ,Q104,QA,40,MockSet1_QA,"The area of a regular hexagon inscribed in a circle of radius R is (3√3/2)R².
+The area of a regular octagon inscribed in the same circle is 2√2 R².
+The ratio of the area of the hexagon to the area of the octagon is:
+Ratio = [(3√3/2)R²] / [2√2 R²]
+Ratio = (3√3/2) / (2√2) = 3√3 / (4√2).
+This corresponds to 3√3 : 4√2.
+The correct option is (a).",Mensuration - 2D (Area & Perimeter: Polygons),Geometry
+Application,Correcting errors in data to find the correct average.,48,"Correcting Misread Observations, Average Calculation, Problem Solving",Medium,FALSE,42,42,48,48,52,52,58,58,,,17,"The average weight of 20 students in a class is 60 kg. It was later found that the weights of two students were misread. One student's weight was read as 54 kg instead of his actual weight of 64 kg. Another student's weight was read as 48 kg instead of his actual weight of X kg. If the correct average weight of the 20 students is 60.5 kg, find the value of X.",MCQ,Q105,QA,40,MockSet1_QA,"Original average of 20 students = 60 kg. Original total weight = 20 * 60 = 1200 kg.
+Correct average = 60.5 kg. Correct total weight = 20 * 60.5 = 1210 kg.
+The net change in total weight = 1210 - 1200 = +10 kg.
+This change is the sum of individual corrections.
+Correction 1 (first student): Actual - Misread = 64 - 54 = +10 kg.
+Correction 2 (second student): Actual - Misread = X - 48.
+Total change = Correction 1 + Correction 2
+10 = (+10) + (X - 48)
+10 = 10 + X - 48
+0 = X - 48
+X = 48 kg.
+The correct option is (b).",Averages & Weighted Averages,Arithmetic
+Application,Definition of continuity for a piecewise function.,14,"Piecewise Functions, Continuity",Medium,FALSE,6,6,7,7,8,8,14,14,,,18,"Consider the function f(x) defined as:
+f(x) = 2x + k, for x ≤ 1
+f(x) = x² - 3x + 5, for 1 < x ≤ 4
+f(x) = -x + m, for x > 4
+If f(x) is continuous for all real x, find the value of k + m.",MCQ,Q106,QA,40,MockSet1_QA,"For f(x) to be continuous at x = 1, the left-hand limit must equal the right-hand limit: lim(x→1⁻) f(x) = lim(x→1⁺) f(x).
+2(1) + k = 1² - 3(1) + 5
+2 + k = 1 - 3 + 5 = 3
+k = 1.
+For f(x) to be continuous at x = 4: lim(x→4⁻) f(x) = lim(x→4⁺) f(x).
+4² - 3(4) + 5 = -4 + m
+16 - 12 + 5 = -4 + m
+9 = -4 + m
+m = 13.
+The value of k + m = 1 + 13 = 14.
+The correct option is (d).","Functions (Domain, Range, Types, Graphs, Inverse)",Algebra
+Analysis,Set theory and percentage application on population data.,100,"Population Segmentation, Literate/Illiterate, Adult/Minor, Set Theory Application",Hard,TRUE,,,,,,,,,,,19,"In a city, 60% of the population are adults. 70% of the total population is literate. If 50% of the adult population is literate, what percentage of the minor population is literate? (Enter your answer as an integer, rounded to the nearest whole number if non-integer)",TITA,Q107,QA,40,MockSet1_QA,"Let the total population be 100.
+Adult Population = 60% of 100 = 60.
+Minor Population = 100 - 60 = 40.
+Total Literate Population = 70% of 100 = 70.
+Literate Adult Population = 50% of Adult Population = 0.50 * 60 = 30.
+Literate Minor Population = Total Literate Population - Literate Adult Population = 70 - 30 = 40.
+Percentage of Minor Population that is Literate = (Literate Minors / Minor Population) * 100
+= (40 / 40) * 100 = 100%.
+The answer is 100.",Percentages,Arithmetic
+Analysis,Solving pipes and cisterns problem using a system of linear equations.,40,"Multiple Pipes, Variable Configuration, System of Equations",Hard,TRUE,,,,,,,,,,,20,"A tank is filled by 5 identical filling pipes and drained by 3 identical draining pipes. When all 8 pipes are open, the tank fills in 10 hours. If, instead, 3 filling pipes and 5 draining pipes are open, the tank fills in 30 hours. In how many hours can one filling pipe alone fill the empty tank? (Enter your answer as an integer)",TITA,Q108,QA,40,MockSet1_QA,"Let f be the rate of one filling pipe and d be the rate of one draining pipe (tanks/hour).
+Scenario 1: (5f - 3d) * 10 = 1 → 50f - 30d = 1 (Eq. 1)
+Scenario 2: (3f - 5d) * 30 = 1 → 90f - 150d = 1 (Eq. 2)
+Multiply Eq. 1 by 5 to eliminate d:
+5 * (50f - 30d) = 5 * 1 → 250f - 150d = 5 (Eq. 3)
+Subtract Eq. 2 from Eq. 3:
+(250f - 150d) - (90f - 150d) = 5 - 1
+160f = 4
+f = 4 / 160 = 1/40.
+The rate of one filling pipe is 1/40 tanks per hour.
+The time for one filling pipe to fill the tank is 1/f = 40 hours.
+The answer is 40.",Pipes & Cisterns,Arithmetic
+Analysis,Multi-step profit and loss calculation with changing CP and SP.,25,"Cost Price, Selling Price, Profit Percentage Change, Multi-step problem",Hard,TRUE,,,,,,,,,,,21,"An article is sold at a certain price. If it were sold at this price, there would be a profit of P%. The cost price of the article was ₹800. Later, the cost price of the article increased by 20%, and the selling price also increased by ₹152. Due to these changes, the new profit percentage became (P-5)%. What is the value of P? (Enter your answer as an integer)",TITA,Q109,QA,40,MockSet1_QA,"Original CP = ₹800. Original profit = P%.
+Original SP = 800 * (1 + P/100) = 800 + 8P.
+New CP = 800 * 1.20 = ₹960.
+New SP = Original SP + 152 = (800 + 8P) + 152 = 952 + 8P.
+New Profit = New SP - New CP = (952 + 8P) - 960 = 8P - 8.
+The new profit percentage is (New Profit / New CP) * 100.
+P-5 = [(8P - 8) / 960] * 100
+P-5 = [8(P-1) * 100] / 960
+P-5 = (P-1) * (800 / 960) = (P-1) * (5/6).
+6(P-5) = 5(P-1)
+6P - 30 = 5P - 5
+P = 25.
+The answer is 25.","Profit, Loss & Discount",Arithmetic
+Application,Relative speed application for train overtaking pedestrians.,200,"Relative Speed, Overtaking Pedestrians, Consistency Check, System of Equations",Medium,TRUE,,,,,,,,,,,22,A train travelling at a certain speed overtakes a pedestrian walking in the same direction at a speed of 4 km/hr in 18 seconds. It overtakes another pedestrian walking in the same direction at a speed of 8 km/hr in 20 seconds. What is the length of the train in meters? (Enter your answer as an integer),TITA,Q110,QA,40,MockSet1_QA,"Let the length of the train be L meters and its speed be S_t m/s.
+Convert pedestrian speeds to m/s:
+S_p1 = 4 km/hr = 4 * (5/18) = 10/9 m/s.
+S_p2 = 8 km/hr = 8 * (5/18) = 20/9 m/s.
+Case 1: L = (S_t - 10/9) * 18 → L = 18*S_t - 20 (Eq. 1).
+Case 2: L = (S_t - 20/9) * 20 → L = 20*S_t - 400/9 (Eq. 2).
+Equating both expressions for L:
+18*S_t - 20 = 20*S_t - 400/9
+2*S_t = 400/9 - 20 = (400 - 180)/9 = 220/9.
+S_t = 110/9 m/s.
+Substitute S_t into Eq. 1 to find L:
+L = 18 * (110/9) - 20 = 2 * 110 - 20 = 220 - 20 = 200.
+The length of the train is 200 meters.
+The answer is 200.","Time, Speed & Distance (Problems on Trains)",Arithmetic

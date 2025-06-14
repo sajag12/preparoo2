@@ -1,5 +1,5 @@
 CognitiveSkillLevel,ConceptTested,CorrectAnswerValue,DetailedTags,DifficultyLevelPredicted,IsTITA,OptionAText,OptionAValue,OptionBText,OptionBValue,OptionCText,OptionCValue,OptionDText,OptionDValue,PassageOrSetContent,PassageOrSetID,QuestionNumberInSection,QuestionPrompt,QuestionType,QuestionUniqueID,SectionName,SectionTimeLimitMinutes,SetID,SolutionExplanation,SubTopic,Topic
-Analysis,"Chain Transaction, Percentage Profit",A,"Chain Transaction, Percentage Profit",Hard,False,20%,A,25%,B,50%,C,44%,D,,,1,"Alisha sold an item to Bhanu at a loss of 20%. Bhanu then marked up the price of the item by 50% of what he paid and sold it to Charan for Rs. 3600. If Alisha had sold the item directly to Charan at the price Charan paid, Alisha's profit percentage would have been K%. What is the value of K?",MCQ,Q45,Quantitative Aptitude,40,MockSet1_QA,"Let Alisha's cost price (CP_A) be C.
+Analysis,"Chain Transaction, Percentage Profit",A,"Chain Transaction, Percentage Profit",Hard,FALSE,20%,A,25%,B,50%,C,44%,D,,,1,"Alisha sold an item to Bhanu at a loss of 20%. Bhanu then marked up the price of the item by 50% of what he paid and sold it to Charan for Rs. 3600. If Alisha had sold the item directly to Charan at the price Charan paid, Alisha's profit percentage would have been K%. What is the value of K?",MCQ,Q45,Quantitative Aptitude,40,MockSet1_QA,"Let Alisha's cost price (CP_A) be C.
 Alisha sold to Bhanu at a 20% loss. So, Bhanu's cost price (CP_B) = C * (1 - 0.20) = 0.8C.
 Bhanu marked up by 50% of what he paid. Selling price for Bhanu = CP_B * (1 + 0.50) = 0.8C * 1.5 = 1.2C.
 This is the price Charan paid. So, Charan's cost price (CP_C) = 1.2C.
@@ -10,7 +10,7 @@ If Alisha had sold the item directly to Charan at Rs. 3600:
 Alisha's profit = Selling Price - CP_A = 3600 - 3000 = Rs. 600.
 Alisha's profit percentage K = (Profit / CP_A) * 100 = (600 / 3000) * 100 = (1/5) * 100 = 20%.
 The correct option is (A).","Profit, Loss & Discount",Arithmetic
-Application,"Divisibility by 225, Divisibility by 9, Divisibility by 25",14,"Divisibility by 225, Divisibility by 9, Divisibility by 25",Medium,True,,,,,,,,,,,2,"If the 7-digit number 876p37q is divisible by 225, and p is a non-zero digit, what is the value of p + q? (p and q are single digits)",TITA,Q46,Quantitative Aptitude,40,MockSet1_QA,"The number 876p37q must be divisible by 225.
+Application,"Divisibility by 225, Divisibility by 9, Divisibility by 25",14,"Divisibility by 225, Divisibility by 9, Divisibility by 25",Medium,TRUE,,,,,,,,,,,2,"If the 7-digit number 876p37q is divisible by 225, and p is a non-zero digit, what is the value of p + q? (p and q are single digits)",TITA,Q46,Quantitative Aptitude,40,MockSet1_QA,"The number 876p37q must be divisible by 225.
 Prime factorization of 225 is `3^2 × 5^2 = 9 × 25`.
 For divisibility by 25, the number formed by the last two digits (7q) must be divisible by 25. The only multiple of 25 starting with 7 is 75. So, q = 5.
 The number becomes 876p375.
@@ -21,7 +21,7 @@ Given that p is a single digit and p is non-zero, p must be 9.
 So, p = 9 and q = 5.
 The value of p + q = 9 + 5 = 14.
 The final answer is 14.",Divisibility Rules,Number System
-Analysis,"Cyclic Trapezium, Similar Triangles, Area Ratio",B,"Cyclic Trapezium, Similar Triangles, Area Ratio",Hard,False,56 cm²,A,78.4 cm²,B,64 cm²,C,80 cm²,D,,,3,"In a cyclic trapezium PQRS with PQ || SR, PQ = 10 cm and RS = 14 cm. The diagonals PR and QS intersect at point O. If the area of triangle POQ is 40 cm², find the area of triangle ROS.",MCQ,Q47,Quantitative Aptitude,40,MockSet1_QA,"In a trapezium PQRS with PQ || SR, the diagonals PR and QS intersect at O.
+Analysis,"Cyclic Trapezium, Similar Triangles, Area Ratio",B,"Cyclic Trapezium, Similar Triangles, Area Ratio",Hard,FALSE,56 cm²,A,78.4 cm²,B,64 cm²,C,80 cm²,D,,,3,"In a cyclic trapezium PQRS with PQ || SR, PQ = 10 cm and RS = 14 cm. The diagonals PR and QS intersect at point O. If the area of triangle POQ is 40 cm², find the area of triangle ROS.",MCQ,Q47,Quantitative Aptitude,40,MockSet1_QA,"In a trapezium PQRS with PQ || SR, the diagonals PR and QS intersect at O.
 In △POQ and △ROS:
 - ∠POQ = ∠ROS (Vertically opposite angles)
 - ∠OPQ = ∠ORS (Alternate interior angles, since PQ || SR)
@@ -33,7 +33,7 @@ Given: PQ = 10 cm, RS = 14 cm, Area(△POQ) = 40 cm².
 Area(△ROS) / 40 = (14 / 10)² = (7 / 5)² = 49 / 25
 Area(△ROS) = 40 × (49 / 25) = (8 × 5 × 49) / (5 × 5) = (8 × 49) / 5 = 392 / 5 = 78.4 cm².
 The correct option is (B).",Quadrilaterals & Polygons,Geometry
-Analysis,"Late Start, Speed Change, Proportionality",D,"Late Start, Speed Change, Proportionality",Hard,False,180 km,A,200 km,B,240 km,C,300 km,D,,,4,"A train normally travels from station A to station B in a scheduled time at a constant speed. One day, the train starts 30 minutes late. To reach station B on schedule, it increases its speed by 25% over its normal speed for the entire journey. Another day, the train starts on time but after travelling 60 km, it encounters a slowdown and travels at 3/4th of its normal speed for the rest of the journey, arriving 40 minutes late. Find the distance between station A and station B in km.",MCQ,Q48,Quantitative Aptitude,40,MockSet1_QA,"Let D be the distance between station A and B, S be the normal speed, and T be the scheduled time. Thus, D = ST.
+Analysis,"Late Start, Speed Change, Proportionality",D,"Late Start, Speed Change, Proportionality",Hard,FALSE,180 km,A,200 km,B,240 km,C,300 km,D,,,4,"A train normally travels from station A to station B in a scheduled time at a constant speed. One day, the train starts 30 minutes late. To reach station B on schedule, it increases its speed by 25% over its normal speed for the entire journey. Another day, the train starts on time but after travelling 60 km, it encounters a slowdown and travels at 3/4th of its normal speed for the rest of the journey, arriving 40 minutes late. Find the distance between station A and station B in km.",MCQ,Q48,Quantitative Aptitude,40,MockSet1_QA,"Let D be the distance between station A and B, S be the normal speed, and T be the scheduled time. Thus, D = ST.
 Case 1: The train starts 30 minutes (0.5 hours) late. To reach on schedule, it must complete the journey in T - 0.5 hours. The speed is increased by 25%, so new speed S' = S + 0.25S = 1.25S.
 D = (1.25S)(T - 0.5).
 Since D = ST, we have ST = 1.25S(T - 0.5). Dividing by S (S ≠ 0):
@@ -50,7 +50,7 @@ Substitute T=2.5 into D=ST => D = 2.5S, so S = D/2.5 = 0.4D.
 Now substitute S into D-60 = 2S:
 D - 60 = 2(0.4D) => D - 60 = 0.8D => 0.2D = 60 => D = 300 km.
 The correct option is (D).","Time, Speed & Distance (General)",Arithmetic
-Analysis,"System of Logarithmic Equations, Change of Base, Properties of Logarithms",512,"System of Logarithmic Equations, Change of Base, Properties of Logarithms",Hard,True,,,,,,,,,,,5,"If x and y are positive real numbers such that `log_8(x) + log_4(y^2) = 5` and `log_8(y) + log_4(x^2) = 7`, find the value of xy.",TITA,Q49,Quantitative Aptitude,40,MockSet1_QA,"The given equations are:
+Analysis,"System of Logarithmic Equations, Change of Base, Properties of Logarithms",512,"System of Logarithmic Equations, Change of Base, Properties of Logarithms",Hard,TRUE,,,,,,,,,,,5,"If x and y are positive real numbers such that `log_8(x) + log_4(y^2) = 5` and `log_8(y) + log_4(x^2) = 7`, find the value of xy.",TITA,Q49,Quantitative Aptitude,40,MockSet1_QA,"The given equations are:
 1) `log_8(x) + log_4(y^2) = 5`
 2) `log_8(y) + log_4(x^2) = 7`
 Convert all terms to base 2 using the property `log_b(a) = log_c(a) / log_c(b)`.
@@ -73,7 +73,7 @@ Using the property `log(a) + log(b) = log(ab)`:
 By definition of logarithm:
 `xy = 2^9 = 512`.
 The final answer is 512.",Logarithms,Algebra
-Application,"Work Rate, Varying Work Hours, Combined Work",9,"Work Rate, Varying Work Hours, Combined Work",Medium,True,,,,,,,,,,,6,"Ramesh can complete a task in 30 days working 6 hours a day. Suresh can complete the same task in 20 days working 9 hours a day. They decide to work together. Ramesh will work 5 hours a day, and Suresh will work for twice the number of hours Ramesh works per day. However, Ramesh will work for twice the number of days Suresh works. If they complete the task under this new arrangement, for how many days did Suresh work?",TITA,Q50,Quantitative Aptitude,40,MockSet1_QA,"Total hours for Ramesh to complete the task = 30 days × 6 hrs/day = 180 hours.
+Application,"Work Rate, Varying Work Hours, Combined Work",9,"Work Rate, Varying Work Hours, Combined Work",Medium,TRUE,,,,,,,,,,,6,"Ramesh can complete a task in 30 days working 6 hours a day. Suresh can complete the same task in 20 days working 9 hours a day. They decide to work together. Ramesh will work 5 hours a day, and Suresh will work for twice the number of hours Ramesh works per day. However, Ramesh will work for twice the number of days Suresh works. If they complete the task under this new arrangement, for how many days did Suresh work?",TITA,Q50,Quantitative Aptitude,40,MockSet1_QA,"Total hours for Ramesh to complete the task = 30 days × 6 hrs/day = 180 hours.
 Ramesh's rate of work = R_R = 1/180 of task per hour.
 Total hours for Suresh to complete the task = 20 days × 9 hrs/day = 180 hours.
 Suresh's rate of work = R_S = 1/180 of task per hour.
@@ -86,7 +86,7 @@ The sum of work done is 1 (task completed).
 D_S/18 + D_S/18 = 1 => 2D_S/18 = 1 => D_S/9 = 1 => D_S = 9.
 Suresh worked for 9 days.
 The final answer is 9.",Time & Work,Arithmetic
-Application,"Roots Properties, Sum of Squares of Roots, Discriminant Condition",B,"Roots Properties, Sum of Squares of Roots, Discriminant Condition",Medium,False,1,A,2,B,8,C,15,D,,,7,"If α and β are the roots of the quadratic equation `x^2 - (k-2)x - (k+5) = 0`, such that `α^2 + β^2 = 18`, what is the sum of all possible real values of k?",MCQ,Q51,Quantitative Aptitude,40,MockSet1_QA,"For `x^2 - (k-2)x - (k+5) = 0`:
+Application,"Roots Properties, Sum of Squares of Roots, Discriminant Condition",B,"Roots Properties, Sum of Squares of Roots, Discriminant Condition",Medium,FALSE,1,A,2,B,8,C,15,D,,,7,"If α and β are the roots of the quadratic equation `x^2 - (k-2)x - (k+5) = 0`, such that `α^2 + β^2 = 18`, what is the sum of all possible real values of k?",MCQ,Q51,Quantitative Aptitude,40,MockSet1_QA,"For `x^2 - (k-2)x - (k+5) = 0`:
 Sum of roots: `α + β = k-2`.
 Product of roots: `αβ = -(k+5)`.
 Given `α^2 + β^2 = 18`.
@@ -101,7 +101,7 @@ Since `k^2 ≥ 0`, `k^2 + 24` is always positive. So, roots are real for all rea
 The possible values of k are the roots of `k^2 - 2k - 4 = 0`.
 The sum of all possible real values of k is the sum of the roots of this quadratic, which is -(-2)/1 = 2.
 The correct option is (B).",Quadratic Equations,Algebra
-Analysis,"Concentration Change, Acid-Water Mixture, Multiple Additions",A,"Concentration Change, Acid-Water Mixture, Multiple Additions",Hard,False,40,A,50,B,60,C,75,D,,,8,"A vessel contains a solution of acid and water. The initial concentration of acid is 60%. Some water is added to the vessel, and the acid concentration becomes 40%. Then, 25 liters of acid are added to the vessel, and the acid concentration becomes 17/35. What was the initial quantity of water in the vessel, in liters, if the initial total volume of the solution was 100 litres?",MCQ,Q52,Quantitative Aptitude,40,MockSet1_QA,"Initial total volume V₀ = 100 liters.
+Analysis,"Concentration Change, Acid-Water Mixture, Multiple Additions",A,"Concentration Change, Acid-Water Mixture, Multiple Additions",Hard,FALSE,40,A,50,B,60,C,75,D,,,8,"A vessel contains a solution of acid and water. The initial concentration of acid is 60%. Some water is added to the vessel, and the acid concentration becomes 40%. Then, 25 liters of acid are added to the vessel, and the acid concentration becomes 17/35. What was the initial quantity of water in the vessel, in liters, if the initial total volume of the solution was 100 litres?",MCQ,Q52,Quantitative Aptitude,40,MockSet1_QA,"Initial total volume V₀ = 100 liters.
 Initial acid concentration = 60%.
 Initial amount of acid A₀ = 0.60 × 100 = 60 L.
 Initial amount of water W₀ = 100 - 60 = 40 L.
@@ -116,7 +116,7 @@ New total volume = 150 + 25 = 175 L.
 New acid concentration = 85/175 = (5 × 17)/(5 × 35) = 17/35.
 This matches the given information. The question asks for the initial quantity of water, which is W₀ = 40 liters.
 The correct option is (A).",Mixtures & Alligations,Arithmetic
-Analysis,"Box in Sphere, Sum of Edges, Surface Area, Diagonal of Cuboid, Diameter of Sphere",10,"Box in Sphere, Sum of Edges, Surface Area, Diagonal of Cuboid, Diameter of Sphere",Hard,True,,,,,,,,,,,9,"A rectangular box is inscribed in a sphere of radius R cm. The sum of the lengths of all 12 edges of the box is 112 cm, and its total surface area is 384 cm². Find the value of R.",TITA,Q53,Quantitative Aptitude,40,MockSet1_QA,"Let the dimensions of the rectangular box be l, w, h.
+Analysis,"Box in Sphere, Sum of Edges, Surface Area, Diagonal of Cuboid, Diameter of Sphere",10,"Box in Sphere, Sum of Edges, Surface Area, Diagonal of Cuboid, Diameter of Sphere",Hard,TRUE,,,,,,,,,,,9,"A rectangular box is inscribed in a sphere of radius R cm. The sum of the lengths of all 12 edges of the box is 112 cm, and its total surface area is 384 cm². Find the value of R.",TITA,Q53,Quantitative Aptitude,40,MockSet1_QA,"Let the dimensions of the rectangular box be l, w, h.
 Sum of lengths of all 12 edges: `4(l+w+h) = 112 => l+w+h = 28` cm.
 Total surface area: `2(lw+wh+hl) = 384` cm².
 The diagonal of the box, `D_box = √(l^2+w^2+h^2)`, is equal to the diameter of the circumscribing sphere, 2R.
@@ -128,7 +128,7 @@ Using the identity `(l+w+h)^2 = l^2+w^2+h^2 + 2(lw+wh+hl)`:
 `2R = √400 = 20` cm.
 The radius of the sphere R = 20/2 = 10 cm.
 The final answer is 10.",Mensuration - 3D,Geometry
-Application,"Infinite Geometric Series, Sum of Series, Alternating Terms Pattern",A,"Infinite Geometric Series, Sum of Series, Alternating Terms Pattern",Medium,False,1/8,A,1/12,B,5/24,C,7/32,D,,,10,Consider the infinite series `S = 1/3 - 2/3^2 + 1/3^3 - 2/3^4 + 1/3^5 - 2/3^6 + …`. What is the value of S?,MCQ,Q54,Quantitative Aptitude,40,MockSet1_QA,"The series `S = 1/3 - 2/3^2 + 1/3^3 - 2/3^4 + …` can be split into two geometric series:
+Application,"Infinite Geometric Series, Sum of Series, Alternating Terms Pattern",A,"Infinite Geometric Series, Sum of Series, Alternating Terms Pattern",Medium,FALSE,"""1/8""",A,"""2/12""",B,"""5/12""",C,"""7/32""",D,,,10,Consider the infinite series `S = 1/3 - 2/3^2 + 1/3^3 - 2/3^4 + 1/3^5 - 2/3^6 + …`. What is the value of S?,MCQ,Q54,Quantitative Aptitude,40,MockSet1_QA,"The series `S = 1/3 - 2/3^2 + 1/3^3 - 2/3^4 + …` can be split into two geometric series:
 S₁ = `1/3 + 1/3^3 + 1/3^5 + …`
 This is a GP with first term a₁ = 1/3 and common ratio r₁ = 1/9.
 Sum S₁ = a₁/(1-r₁) = (1/3)/(1 - 1/9) = (1/3)/(8/9) = 3/8.
@@ -138,7 +138,7 @@ Sum of this series is a₂/(1-r₂) = (2/9)/(1 - 1/9) = (2/9)/(8/9) = 2/8 = 1/4.
 So, S₂ = -1/4.
 The total sum S = S₁ + S₂ = 3/8 - 1/4 = 3/8 - 2/8 = 1/8.
 The correct option is (A).",Sequences & Series,Algebra
-Application,"Price Change, Consumption Change, Constant Expenditure",20,"Price Change, Consumption Change, Constant Expenditure",Easy,True,,,,,,,,,,,11,"If the price of petrol increases by 25%, by what percentage must a car owner reduce his consumption so that his expenditure on petrol remains unchanged? (Enter your answer as an integer)",TITA,Q55,Quantitative Aptitude,40,MockSet1_QA,"Let the original price be P and consumption be C. Original expenditure E = P × C.
+Application,"Price Change, Consumption Change, Constant Expenditure",20,"Price Change, Consumption Change, Constant Expenditure",Easy,TRUE,,,,,,,,,,,11,"If the price of petrol increases by 25%, by what percentage must a car owner reduce his consumption so that his expenditure on petrol remains unchanged? (Enter your answer as an integer)",TITA,Q55,Quantitative Aptitude,40,MockSet1_QA,"Let the original price be P and consumption be C. Original expenditure E = P × C.
 New price P' = P × (1 + 25/100) = 1.25P.
 Let new consumption be C'. New expenditure E' = P' × C' = (1.25P) × C'.
 Expenditure remains unchanged, so E' = E.
@@ -146,7 +146,7 @@ Expenditure remains unchanged, so E' = E.
 Reduction in consumption = C - C' = C - 0.8C = 0.2C.
 Percentage reduction = (0.2C / C) × 100% = 20%.
 The final answer is 20.",Percentages,Arithmetic
-Analysis,"Rational Inequality, Wavy Curve Method, Critical Points, Integer Solutions",C,"Rational Inequality, Wavy Curve Method, Critical Points, Integer Solutions",Hard,False,4,A,5,B,6,C,7,D,,,12,Find the number of integer solutions for the inequality `(x^2 - 5x + 6) / (x^2 - x - 12) ≤ 0`.,MCQ,Q56,Quantitative Aptitude,40,MockSet1_QA,"We need to solve `(x^2 - 5x + 6) / (x^2 - x - 12) ≤ 0`.
+Analysis,"Rational Inequality, Wavy Curve Method, Critical Points, Integer Solutions",C,"Rational Inequality, Wavy Curve Method, Critical Points, Integer Solutions",Hard,FALSE,4,A,5,B,6,C,7,D,,,12,Find the number of integer solutions for the inequality `(x^2 - 5x + 6) / (x^2 - x - 12) ≤ 0`.,MCQ,Q56,Quantitative Aptitude,40,MockSet1_QA,"We need to solve `(x^2 - 5x + 6) / (x^2 - x - 12) ≤ 0`.
 Factorize numerator: `x^2 - 5x + 6 = (x-2)(x-3)`.
 Factorize denominator: `x^2 - x - 12 = (x-4)(x+3)`.
 The expression is `f(x) = (x-2)(x-3) / ((x+3)(x-4))`.
@@ -161,7 +161,7 @@ The solution set is `x ∈ (-3, 2] U [3, 4)`.
 Integer solutions are {-2, -1, 0, 1, 2} and {3}.
 Total number of integer solutions = 5 + 1 = 6.
 The correct option is (C).",Inequalities (Linear & Quadratic),Algebra
-Analysis,"Surjective Functions, Onto Functions, Principle of Inclusion-Exclusion",C,"Surjective Functions, Onto Functions, Principle of Inclusion-Exclusion",Hard,False,120,A,140,B,150,C,160,D,,,13,"Find the number of surjective (onto) functions from a set A = {a, b, c, d, e} to a set B = {1, 2, 3}.",MCQ,Q57,Quantitative Aptitude,40,MockSet1_QA,"The number of surjective (onto) functions from a set A with n elements to a set B with m elements is given by `N = Σ (-1)^k * (m C k) * (m-k)^n` for k=0 to m.
+Analysis,"Surjective Functions, Onto Functions, Principle of Inclusion-Exclusion",C,"Surjective Functions, Onto Functions, Principle of Inclusion-Exclusion",Hard,FALSE,120,A,140,B,150,C,160,D,,,13,"Find the number of surjective (onto) functions from a set A = {a, b, c, d, e} to a set B = {1, 2, 3}.",MCQ,Q57,Quantitative Aptitude,40,MockSet1_QA,"The number of surjective (onto) functions from a set A with n elements to a set B with m elements is given by `N = Σ (-1)^k * (m C k) * (m-k)^n` for k=0 to m.
 Here, |A|=n=5 and |B|=m=3.
 N = `(3C0)(3-0)^5 - (3C1)(3-1)^5 + (3C2)(3-2)^5 - (3C3)(3-3)^5`
 N = `1 × 3^5 - 3 × 2^5 + 3 × 1^5 - 1 × 0^5`
@@ -169,7 +169,7 @@ N = `1 × 243 - 3 × 32 + 3 × 1 - 0`
 N = `243 - 96 + 3`
 N = `147 + 3 = 150`.
 The correct option is (C).",Permutations & Combinations,Modern Maths
-Analysis,"Half-yearly Compounding, Reinvestment, Simple Interest, Equating Maturity Values",A,"Half-yearly Compounding, Reinvestment, Simple Interest, Equating Maturity Values",Hard,False,"Rs. 49,164",A,"Rs. 50,000",B,"Rs. 50,860",C,"Rs. 51,240",D,,,14,"Mr. Sharma invested Rs. 50,000 for 3 years in a scheme that compounds interest half-yearly at a rate of 8% per annum. Mr. Verma invested an amount X for 2 years in the same scheme, then reinvested the entire maturity amount for one additional year at a simple interest rate of 10% per annum. If both Mr. Sharma and Mr. Verma end up with the same maturity value after their respective 3-year periods, what is the approximate value of X?",MCQ,Q58,Quantitative Aptitude,40,MockSet1_QA,"For Mr. Sharma: Principal P_S = 50000. Rate r = 8% p.a. compounded half-yearly.
+Analysis,"Half-yearly Compounding, Reinvestment, Simple Interest, Equating Maturity Values",A,"Half-yearly Compounding, Reinvestment, Simple Interest, Equating Maturity Values",Hard,FALSE,"Rs. 49,164",A,"Rs. 50,000",B,"Rs. 50,860",C,"Rs. 51,240",D,,,14,"Mr. Sharma invested Rs. 50,000 for 3 years in a scheme that compounds interest half-yearly at a rate of 8% per annum. Mr. Verma invested an amount X for 2 years in the same scheme, then reinvested the entire maturity amount for one additional year at a simple interest rate of 10% per annum. If both Mr. Sharma and Mr. Verma end up with the same maturity value after their respective 3-year periods, what is the approximate value of X?",MCQ,Q58,Quantitative Aptitude,40,MockSet1_QA,"For Mr. Sharma: Principal P_S = 50000. Rate r = 8% p.a. compounded half-yearly.
 Rate per period i = 8%/2 = 4% = 0.04. Time t = 3 years, so number of periods n = 3×2 = 6.
 Maturity Amount A_S = P_S(1+i)ⁿ = 50000(1.04)⁶.
 For Mr. Verma: Principal P_V = X.
@@ -183,7 +183,7 @@ Given A_S = A_V:
 `X = 540800 / 11 ≈ 49163.63`
 Approximating, X ≈ 49164.
 The correct option is (A).",Compound Interest,Arithmetic
-Analysis,"Trapezium Properties, Area of Trapezium, Intersection of Diagonals",C,"Trapezium Properties, Area of Trapezium, Intersection of Diagonals",Hard,False,100 sq. units,A,121 sq. units,B,144 sq. units,C,169 sq. units,D,,,15,"In a trapezium ABCD, AB is parallel to CD. The diagonals AC and BD intersect at O. If the area of triangle AOB is 25 sq. units and the area of triangle COD is 49 sq. units, what is the area of the trapezium ABCD?",MCQ,Q59,Quantitative Aptitude,40,MockSet1_QA,"Let ABCD be a trapezium with AB || CD. Diagonals intersect at O.
+Analysis,"Trapezium Properties, Area of Trapezium, Intersection of Diagonals",C,"Trapezium Properties, Area of Trapezium, Intersection of Diagonals",Hard,FALSE,100 sq. units,A,121 sq. units,B,144 sq. units,C,169 sq. units,D,,,15,"In a trapezium ABCD, AB is parallel to CD. The diagonals AC and BD intersect at O. If the area of triangle AOB is 25 sq. units and the area of triangle COD is 49 sq. units, what is the area of the trapezium ABCD?",MCQ,Q59,Quantitative Aptitude,40,MockSet1_QA,"Let ABCD be a trapezium with AB || CD. Diagonals intersect at O.
 Area(△AOB) = 25, Area(△COD) = 49.
 A property of trapeziums is that Area(△AOD) = Area(△BOC). Let this area be x.
 Another property is Area(△AOB) × Area(△COD) = Area(△AOD) × Area(△BOC).
@@ -193,7 +193,7 @@ So Area(△AOD) = 35 and Area(△BOC) = 35.
 Area of trapezium ABCD = Area(△AOB) + Area(△COD) + Area(△AOD) + Area(△BOC).
 Area(ABCD) = 25 + 49 + 35 + 35 = 74 + 70 = 144 sq. units.
 The correct option is (C).",Quadrilaterals & Polygons,Geometry
-Application,"Simplification of Nested Radicals, Square Root of Surds",28,"Simplification of Nested Radicals, Square Root of Surds",Medium,True,,,,,,,,,,,16,"If `√(43 - 24√3)` can be expressed in the form `a + b√k`, where a and b are integers and k is a square-free positive integer. Find the value of `a^2 + b^2 + k`.",TITA,Q60,Quantitative Aptitude,40,MockSet1_QA,"We simplify `√(43 - 24√3)`.
+Application,"Simplification of Nested Radicals, Square Root of Surds",28,"Simplification of Nested Radicals, Square Root of Surds",Medium,TRUE,,,,,,,,,,,16,"If `√(43 - 24√3)` can be expressed in the form `a + b√k`, where a and b are integers and k is a square-free positive integer. Find the value of `a^2 + b^2 + k`.",TITA,Q60,Quantitative Aptitude,40,MockSet1_QA,"We simplify `√(43 - 24√3)`.
 We look for the form `√(c - d√k)² = c - d√k`. The expression under the root should be `c² + k*d² - 2cd√k`.
 Comparing `43 - 24√3` with `c² + 3d² - 2cd√3`:
 `2cd = 24 => cd = 12`.
@@ -208,7 +208,7 @@ This is in the form `a + b√k`, with `a = -4`, `b = 3`, and `k = 3`.
 k=3 is square-free. a and b are integers.
 The value is `a^2 + b^2 + k = (-4)^2 + 3^2 + 3 = 16 + 9 + 3 = 28`.
 The final answer is 28.",Indices & Surds,Number System
-Application,"Age Problems, Linear Equations from Word Problems, Future Age Ratio",D,"Age Problems, Linear Equations from Word Problems, Future Age Ratio",Medium,False,5,A,10,B,15,C,25,D,,,17,"The present age of Rohan is 5 years more than thrice the present age of Priya. 10 years ago, Rohan's age was 5 years more than five times Priya's age then. In how many years will Rohan be twice as old as Priya?",MCQ,Q61,Quantitative Aptitude,40,MockSet1_QA,"Let Rohan's present age be R and Priya's be P.
+Application,"Age Problems, Linear Equations from Word Problems, Future Age Ratio",D,"Age Problems, Linear Equations from Word Problems, Future Age Ratio",Medium,FALSE,5,A,10,B,15,C,25,D,,,17,"The present age of Rohan is 5 years more than thrice the present age of Priya. 10 years ago, Rohan's age was 5 years more than five times Priya's age then. In how many years will Rohan be twice as old as Priya?",MCQ,Q61,Quantitative Aptitude,40,MockSet1_QA,"Let Rohan's present age be R and Priya's be P.
 1. `R = 3P + 5`
 2. 10 years ago: `R-10 = 5(P-10) + 5 => R-10 = 5P - 45 => R = 5P - 35`.
 Equating expressions for R:
@@ -218,7 +218,7 @@ Let N be the years from now when Rohan is twice as old as Priya.
 `65 + N = 2(20 + N)`
 `65 + N = 40 + 2N => N = 25` years.
 The correct option is (D).","Ratio, Proportion & Variation",Arithmetic
-Application,"Recursive Function Definition, Linear Recurrence Relation, Pattern Recognition",B,"Recursive Function Definition, Linear Recurrence Relation, Pattern Recognition",Medium,False,80,A,82,B,121,C,242,D,,,18,A function `f(n)` is defined for natural numbers `n` such that `f(1) = 2` and `f(n+1) = 3f(n) - 2` for `n ≥ 1`. What is the value of `f(5)`?,MCQ,Q62,Quantitative Aptitude,40,MockSet1_QA,"Given `f(1)=2` and `f(n+1) = 3f(n) - 2`.
+Application,"Recursive Function Definition, Linear Recurrence Relation, Pattern Recognition",B,"Recursive Function Definition, Linear Recurrence Relation, Pattern Recognition",Medium,FALSE,80,A,82,B,121,C,242,D,,,18,A function `f(n)` is defined for natural numbers `n` such that `f(1) = 2` and `f(n+1) = 3f(n) - 2` for `n ≥ 1`. What is the value of `f(5)`?,MCQ,Q62,Quantitative Aptitude,40,MockSet1_QA,"Given `f(1)=2` and `f(n+1) = 3f(n) - 2`.
 This is a linear recurrence relation. We can find the closed-form.
 Let the fixed point be c: `c = 3c - 2 => 2c = 2 => c = 1`.
 Let `g(n) = f(n) - c = f(n) - 1`.
@@ -229,7 +229,7 @@ Let `g(n) = f(n) - c = f(n) - 1`.
 Since `f(n) = g(n) + 1`, we have `f(n) = 3^(n-1) + 1`.
 We need `f(5) = 3^(5-1) + 1 = 3^4 + 1 = 81 + 1 = 82`.
 The correct option is (B).","Functions (Domain, Range, Types, Graphs, Inverse)",Algebra
-Application,"Markup, Multiple Discounts, Overall Profit Calculation",D,"Markup, Multiple Discounts, Overall Profit Calculation",Easy,False,15%,A,19%,B,21%,C,23%,D,,,19,"A shopkeeper marks his goods at 50% above the cost price. He sells 40% of the goods at the marked price, 30% of the goods at a 20% discount on the marked price, and the remaining goods at a 40% discount on the marked price. What is his overall profit percentage?",MCQ,Q63,Quantitative Aptitude,40,MockSet1_QA,"Let the cost price (CP) be Rs. 100 per unit. Marked Price (MP) = 100 × 1.5 = Rs. 150.
+Application,"Markup, Multiple Discounts, Overall Profit Calculation",D,"Markup, Multiple Discounts, Overall Profit Calculation",Easy,FALSE,15%,A,19%,B,21%,C,23%,D,,,19,"A shopkeeper marks his goods at 50% above the cost price. He sells 40% of the goods at the marked price, 30% of the goods at a 20% discount on the marked price, and the remaining goods at a 40% discount on the marked price. What is his overall profit percentage?",MCQ,Q63,Quantitative Aptitude,40,MockSet1_QA,"Let the cost price (CP) be Rs. 100 per unit. Marked Price (MP) = 100 × 1.5 = Rs. 150.
 Assume 10 units of goods. Total CP = 10 × 100 = Rs. 1000.
 1. 40% (4 units) sold at MP (Rs. 150). Revenue = 4 × 150 = Rs. 600.
 2. 30% (3 units) sold at 20% discount. SP = 150 × 0.8 = Rs. 120. Revenue = 3 × 120 = Rs. 360.
@@ -239,7 +239,7 @@ Total CP = Rs. 1000.
 Total Profit = 1230 - 1000 = Rs. 230.
 Overall Profit % = (Total Profit / Total CP) × 100 = (230 / 1000) × 100 = 23%.
 The correct option is (D).","Profit, Loss & Discount",Arithmetic
-Application,"Fractions of Remaining Quantity, Iterative Process, Working Backwards",63,"Fractions of Remaining Quantity, Iterative Process, Working Backwards",Medium,True,,,,,,,,,,,20,"A fruit vendor had a certain number of apples. The first customer bought half of the apples plus half an apple. The second customer bought half of the remaining apples plus half an apple. The third customer also bought half of the remaining apples plus half an apple. After this, the vendor was left with 7 apples. How many apples did the vendor initially have?",TITA,Q64,Quantitative Aptitude,40,MockSet1_QA,"This is a ""work backwards"" problem. Let R₃ = 7 be the apples left.
+Application,"Fractions of Remaining Quantity, Iterative Process, Working Backwards",63,"Fractions of Remaining Quantity, Iterative Process, Working Backwards",Medium,TRUE,,,,,,,,,,,20,"A fruit vendor had a certain number of apples. The first customer bought half of the apples plus half an apple. The second customer bought half of the remaining apples plus half an apple. The third customer also bought half of the remaining apples plus half an apple. After this, the vendor was left with 7 apples. How many apples did the vendor initially have?",TITA,Q64,Quantitative Aptitude,40,MockSet1_QA,"This is a ""work backwards"" problem. Let R₃ = 7 be the apples left.
 Before the 3rd customer (R₂ apples): The customer bought R₂/2 + 1/2.
 Remaining: `R₂ - (R₂/2 + 1/2) = R₃ => R₂/2 - 1/2 = 7 => R₂/2 = 7.5 => R₂ = 15`.
 Before the 2nd customer (R₁ apples):
@@ -248,7 +248,7 @@ Before the 1st customer (N apples):
 `N/2 - 1/2 = R₁ => N/2 - 1/2 = 31 => N/2 = 31.5 => N = 63`.
 The vendor initially had 63 apples.
 The final answer is 63.",Arithmetic Logic,Arithmetic
-Application,"Unit Digit Calculation, Remainder Theorem Application",A,"Unit Digit Calculation, Remainder Theorem Application",Easy,False,1,A,3,B,7,C,9,D,,,21,What is the remainder when `13^2024` is divided by 10?,MCQ,Q65,Quantitative Aptitude,40,MockSet1_QA,"We need the remainder when `13^2024` is divided by 10, which is the unit digit of `13^2024`.
+Application,"Unit Digit Calculation, Remainder Theorem Application",A,"Unit Digit Calculation, Remainder Theorem Application",Easy,FALSE,1,A,3,B,7,C,9,D,,,21,What is the remainder when `13^2024` is divided by 10?,MCQ,Q65,Quantitative Aptitude,40,MockSet1_QA,"We need the remainder when `13^2024` is divided by 10, which is the unit digit of `13^2024`.
 The unit digit is determined by the unit digit of the base, 3.
 The pattern of unit digits of powers of 3 is: 3¹, 3², 3³, 3⁴ -> 3, 9, 7, 1. The cycle length is 4.
 To find the unit digit of `3^2024`, we find the remainder of the exponent 2024 when divided by 4.
@@ -256,7 +256,7 @@ To find the unit digit of `3^2024`, we find the remainder of the exponent 2024 w
 A remainder of 0 corresponds to the last digit in the cycle, which is the unit digit of `3^4`.
 The unit digit is 1.
 The correct option is (A).",Cyclicity,Number System
-Analysis,"Running Averages, System of Linear Equations, Word Problem",15,"Running Averages, System of Linear Equations, Word Problem",Hard,True,,,,,,,,,,,22,"There are four distinct positive integers w, x, y, z. The average of w and x is w+1. The average of w, x, and y is (average of w, x) + 2. The average of w, x, y, and z is (average of w, x, y) + 3. Find the difference between the largest and smallest of the four numbers.",TITA,Q66,Quantitative Aptitude,40,MockSet1_QA,"Let the four distinct positive integers be w, x, y, z.
+Analysis,"Running Averages, System of Linear Equations, Word Problem",15,"Running Averages, System of Linear Equations, Word Problem",Hard,TRUE,,,,,,,,,,,22,"There are four distinct positive integers w, x, y, z. The average of w and x is w+1. The average of w, x, and y is (average of w, x) + 2. The average of w, x, y, and z is (average of w, x, y) + 3. Find the difference between the largest and smallest of the four numbers.",TITA,Q66,Quantitative Aptitude,40,MockSet1_QA,"Let the four distinct positive integers be w, x, y, z.
 1. Avg(w, x) = w+1: `(w+x)/2 = w+1 => w+x = 2w+2 => x = w+2`.
 2. Avg(w,x,y) = Avg(w,x) + 2: `(w+x+y)/3 = (w+1)+2 = w+3 => w+x+y = 3w+9`.
    Substitute `x=w+2`: `w+(w+2)+y = 3w+9 => 2w+2+y = 3w+9 => y = w+7`.

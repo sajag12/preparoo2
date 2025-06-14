@@ -1,5 +1,5 @@
 CognitiveSkillLevel,ConceptTested,CorrectAnswerValue,DetailedTags,DifficultyLevelPredicted,IsTITA,OptionAText,OptionAValue,OptionBText,OptionBValue,OptionCText,OptionCValue,OptionDText,OptionDValue,PassageOrSetContent,PassageOrSetID,QuestionNumberInSection,QuestionPrompt,QuestionType,QuestionUniqueID,SectionName,SectionTimeLimitMinutes,SetID,SolutionExplanation,SubTopic,Topic
-,"Profit, Loss & Discount",4,"Percentages, Multi-stage transactions",Hard,False,Rs. 120,1,Rs. 125,2,Rs. 150,3,Rs. 100,4,,,1,"A shopkeeper bought a certain number of articles. He sold 40% of them at a 50% profit, 25% of the remaining at a 20% loss, and 60% of the new remainder at a 25% profit. The rest of the articles, 36 in number, he sold at a 10% loss. If his overall profit was Rs. 4390, what was the cost price of each article?",MCQ,836209173,Quantitative Ability,,MockSet1_QA,"Let the total number of articles be N and the cost price of each article be C.
+,"Profit, Loss & Discount",4,"Percentages, Multi-stage transactions",Hard,FALSE,Rs. 120,1,Rs. 125,2,Rs. 150,3,Rs. 100,4,,,1,"A shopkeeper bought a certain number of articles. He sold 40% of them at a 50% profit, 25% of the remaining at a 20% loss, and 60% of the new remainder at a 25% profit. The rest of the articles, 36 in number, he sold at a 10% loss. If his overall profit was Rs. 4390, what was the cost price of each article?",MCQ,836209173,Quantitative Ability,,MockSet1_QA,"Let the total number of articles be N and the cost price of each article be C.
 Number of articles in the first batch = 0.4N. Profit on these = 0.4N × C × 0.50 = 0.2NC.
 Remaining articles = N - 0.4N = 0.6N.
 Number of articles in the second batch = 0.25 × 0.6N = 0.15N. Loss on these = 0.15N × C × 0.20 = 0.03NC.
@@ -22,7 +22,7 @@ Substituting N = 200:
 C = 4390 / 43.9 = 43900 / 439 = 100.
 The cost price of each article is Rs. 100.
 The correct option is (D).","Profit, Loss & Discount",Arithmetic
-,"Sequences & Series (AP, GP, HP, Special Series)",-105,"Arithmetic Progression, Sum of terms properties",Hard,True,,,,,,,,,,,2,"The sum of the 3rd and 15th elements of an arithmetic progression is equal to the sum of the 6th, 10th, and 12th elements of the same progression. If the 8th element is 21, what is the sum of the first 20 elements of this AP? (TITA)",TITA,862830954,Quantitative Ability,,MockSet1_QA,"Let the arithmetic progression have first term 'a' and common difference 'd'.
+,"Sequences & Series (AP, GP, HP, Special Series)",-105,"Arithmetic Progression, Sum of terms properties",Hard,TRUE,,,,,,,,,,,2,"The sum of the 3rd and 15th elements of an arithmetic progression is equal to the sum of the 6th, 10th, and 12th elements of the same progression. If the 8th element is 21, what is the sum of the first 20 elements of this AP? (TITA)",TITA,862830954,Quantitative Ability,,MockSet1_QA,"Let the arithmetic progression have first term 'a' and common difference 'd'.
 The n-th term is Tₙ = a + (n-1)d.
 Given: T₃ + T₁₅ = T₆ + T₁₀ + T₁₂.
 (a + 2d) + (a + 14d) = (a + 5d) + (a + 9d) + (a + 11d).
@@ -43,7 +43,7 @@ S₂₀ = 10 × [2(94.5) + 19(-10.5)].
 S₂₀ = 10 × [189 - 199.5].
 S₂₀ = 10 × [-10.5] = -105.
 The sum of the first 20 elements is -105.","Sequences & Series (AP, GP, HP, Special Series)",Algebra
-,"Functions (Domain, Range, Types, Graphs, Inverse)",2,"Modulus function, Minima-Maxima in interval",Hard,False,1,1,3.5,2,6,3,0,4,,,3,"Let f(x) = |x - 2| + |x - 5| + |x - a|. For what value of 'a' is the sum of the minimum and maximum values of f(x) in the interval [2, 5] equal to 7.5? (The interval [2, 5] includes both 2 and 5).",MCQ,501192837,Quantitative Ability,,MockSet1_QA,"For x ∈ [2, 5]:
+,"Functions (Domain, Range, Types, Graphs, Inverse)",2,"Modulus function, Minima-Maxima in interval",Hard,FALSE,1,1,3.5,2,6,3,0,4,,,3,"Let f(x) = |x - 2| + |x - 5| + |x - a|. For what value of 'a' is the sum of the minimum and maximum values of f(x) in the interval [2, 5] equal to 7.5? (The interval [2, 5] includes both 2 and 5).",MCQ,501192837,Quantitative Ability,,MockSet1_QA,"For x ∈ [2, 5]:
 |x - 2| = x - 2 (since x ≥ 2).
 |x - 5| = -(x - 5) = 5 - x (since x ≤ 5).
 So, f(x) = (x - 2) + (5 - x) + |x - a| = 3 + |x - a|.
@@ -74,7 +74,7 @@ The equation becomes (a-5) + (a-2) = 1.5.
 2a - 7 = 1.5 => 2a = 8.5 => a = 4.25. This contradicts the condition a > 5. So no solution here.
 The only value for 'a' is 3.5.
 The correct option is (B).","Functions (Domain, Range, Types, Graphs, Inverse)",Algebra
-,Time & Work,18,"Efficiency, Work sharing, Multiple workers",Easy,True,,,,,,,,,,,4,"A and B together can complete a task in 24 days. B and C together can complete the same task in 30 days. A and C together can complete it in 40 days. If A, B, and C work together, but C leaves after 5 days, in how many more days will A and B complete the remaining task? (TITA)",TITA,183675920,Quantitative Ability,,MockSet1_QA,"Let A, B, C be the rates of work (units/day). Let total work be LCM(24,30,40) = 120 units.
+,Time & Work,18,"Efficiency, Work sharing, Multiple workers",Easy,TRUE,,,,,,,,,,,4,"A and B together can complete a task in 24 days. B and C together can complete the same task in 30 days. A and C together can complete it in 40 days. If A, B, and C work together, but C leaves after 5 days, in how many more days will A and B complete the remaining task? (TITA)",TITA,183675920,Quantitative Ability,,MockSet1_QA,"Let A, B, C be the rates of work (units/day). Let total work be LCM(24,30,40) = 120 units.
 Rate(A+B) = 120/24 = 5 units/day.
 Rate(B+C) = 120/30 = 4 units/day.
 Rate(A+C) = 120/40 = 3 units/day.
@@ -89,7 +89,7 @@ Remaining work = Total Work - Work Done = 120 - 30 = 90 units.
 C leaves. A and B complete the remaining task. Their combined rate is Rate(A+B) = 5 units/day.
 Time taken by A and B to complete remaining work = Remaining Work / Rate(A+B) = 90 / 5 = 18 days.
 The number of more days is 18.",Time & Work,Arithmetic
-,"Circles (Properties, Chords, Tangents, Secants)",1,"Common tangents, Area of trapezium",Hard,False,78 sq. cm,1,156 sq. cm,2,160 sq. cm,3,169 sq. cm,4,,,5,"Two circles with centres O₁ and O₂ touch each other externally at point P. A common tangent to both circles touches them at points A and B respectively. If the radius of the circle with centre O₁ is 9 cm and the radius of the circle with centre O₂ is 4 cm, what is the area of the quadrilateral ABO₂O₁?",MCQ,374019283,Quantitative Ability,,MockSet1_QA,"Let r₁ and r₂ be the radii: r₁ = 9 cm, r₂ = 4 cm.
+,"Circles (Properties, Chords, Tangents, Secants)",1,"Common tangents, Area of trapezium",Hard,FALSE,78 sq. cm,1,156 sq. cm,2,160 sq. cm,3,169 sq. cm,4,,,5,"Two circles with centres O₁ and O₂ touch each other externally at point P. A common tangent to both circles touches them at points A and B respectively. If the radius of the circle with centre O₁ is 9 cm and the radius of the circle with centre O₂ is 4 cm, what is the area of the quadrilateral ABO₂O₁?",MCQ,374019283,Quantitative Ability,,MockSet1_QA,"Let r₁ and r₂ be the radii: r₁ = 9 cm, r₂ = 4 cm.
 The distance between the centers O₁O₂ = r₁ + r₂ = 9 + 4 = 13 cm (since they touch externally).
 The common tangent AB is a direct common tangent. Its length is given by the formula:
 AB = √((O₁O₂)² - (r₁ - r₂)²)
@@ -99,7 +99,7 @@ So, O₁A and O₂B are parallel. Thus, ABO₂O₁ is a trapezium with parallel 
 Area of trapezium ABO₂O₁ = (1/2) × (Sum of parallel sides) × Height
 Area = (1/2) × (r₁ + r₂) × AB = (1/2) × (9 + 4) × 12 = (1/2) × 13 × 12 = 13 × 6 = 78 sq. cm.
 The correct option is (A).","Circles (Properties, Chords, Tangents, Secants)",Geometry
-,Compound Interest,3,"Simple Interest, Compound Interest, Mixed Investment",Hard,False,Rs. 12000,1,Rs. 15000,2,Rs. 16000,3,Rs. 18000,4,,,6,"A sum of money is invested in two schemes, A and B. Scheme A offers simple interest at R% per annum and Scheme B offers compound interest at 10% per annum, compounded annually. An amount of Rs. X is invested in Scheme A for 3 years and Rs. (X+4000) is invested in Scheme B for 2 years. The total interest earned from both schemes is Rs. 9960. If R is 12%, find the value of X.",MCQ,650928374,Quantitative Ability,,MockSet1_QA,"Interest from Scheme A (Simple Interest): I_A = P_A × (Rate_A/100) × Time_A.
+,Compound Interest,3,"Simple Interest, Compound Interest, Mixed Investment",Hard,FALSE,Rs. 12000,1,Rs. 15000,2,Rs. 16000,3,Rs. 18000,4,,,6,"A sum of money is invested in two schemes, A and B. Scheme A offers simple interest at R% per annum and Scheme B offers compound interest at 10% per annum, compounded annually. An amount of Rs. X is invested in Scheme A for 3 years and Rs. (X+4000) is invested in Scheme B for 2 years. The total interest earned from both schemes is Rs. 9960. If R is 12%, find the value of X.",MCQ,650928374,Quantitative Ability,,MockSet1_QA,"Interest from Scheme A (Simple Interest): I_A = P_A × (Rate_A/100) × Time_A.
 P_A = X, Rate_A = R = 12%, Time_A = 3 years.
 I_A = X × (12/100) × 3 = 0.36X.
 Interest from Scheme B (Compound Interest): P_B = X + 4000, Rate_B = 10%, Time_B = 2 years.
@@ -117,7 +117,7 @@ So, 912 / 57 = 16.
 X = 16000.
 The value of X is Rs. 16000.
 The correct option is (C).",Compound Interest,Arithmetic
-,"Mensuration - 2D (Area & Perimeter: Triangles, Quadrilaterals, Polygons, Circles)",3,"Area of rectangle, Area of crossroads",Easy,False,"Rs. 120,750",1,"Rs. 125,250",2,"Rs. 129,375",3,"Rs. 131,500",4,,,7,"A rectangular park is 120 m long and 80 m wide. It has two concrete crossroads running in the middle of the park, one parallel to the length and the other parallel to the width. The width of both crossroads is 5 m. The rest of the park is covered with grass. If the cost of laying grass is Rs. 15 per sq. m, find the total cost of laying grass in the park.",MCQ,940518273,Quantitative Ability,,MockSet1_QA,"Length of the park L = 120 m. Width of the park W = 80 m.
+,"Mensuration - 2D (Area & Perimeter: Triangles, Quadrilaterals, Polygons, Circles)",3,"Area of rectangle, Area of crossroads",Easy,FALSE,"Rs. 120,750",1,"Rs. 125,250",2,"Rs. 129,375",3,"Rs. 131,500",4,,,7,"A rectangular park is 120 m long and 80 m wide. It has two concrete crossroads running in the middle of the park, one parallel to the length and the other parallel to the width. The width of both crossroads is 5 m. The rest of the park is covered with grass. If the cost of laying grass is Rs. 15 per sq. m, find the total cost of laying grass in the park.",MCQ,940518273,Quantitative Ability,,MockSet1_QA,"Length of the park L = 120 m. Width of the park W = 80 m.
 Total area of the park = L × W = 120 × 80 = 9600 sq. m.
 Crossroad 1 is parallel to the length: Length₁ = 120 m, Width₁ = 5 m. Area₁ = 120 × 5 = 600 sq. m.
 Crossroad 2 is parallel to the width: Length₂ = 80 m, Width₂ = 5 m. Area₂ = 80 × 5 = 400 sq. m.
@@ -131,7 +131,7 @@ Total cost of laying grass = 8625 × 15.
 8625 × 15 = 8625 × (10 + 5) = 86250 + (86250 / 2) = 86250 + 43125 = 129375.
 The total cost is Rs. 129,375.
 The correct option is (C).","Mensuration - 2D (Area & Perimeter: Triangles, Quadrilaterals, Polygons, Circles)",Geometry
-,"Time, Speed & Distance (General)",342,"Relative speed, Time and distance calculation",Medium,True,,,,,,,,,,,8,"A journey of 900 km was partly covered by train at a speed of 90 km/hr and partly by car at a speed of 60 km/hr. If the train journey was 30 minutes longer than the car journey, find the distance covered by the car (in km). (TITA)",TITA,106473829,Quantitative Ability,,MockSet1_QA,"Let D_t be distance by train and D_c be distance by car. D_t + D_c = 900.
+,"Time, Speed & Distance (General)",342,"Relative speed, Time and distance calculation",Medium,TRUE,,,,,,,,,,,8,"A journey of 900 km was partly covered by train at a speed of 90 km/hr and partly by car at a speed of 60 km/hr. If the train journey was 30 minutes longer than the car journey, find the distance covered by the car (in km). (TITA)",TITA,106473829,Quantitative Ability,,MockSet1_QA,"Let D_t be distance by train and D_c be distance by car. D_t + D_c = 900.
 Let T_t be time by train and T_c be time by car.
 Speed of train S_t = 90 km/hr. Speed of car S_c = 60 km/hr.
 T_t = D_t / 90. T_c = D_c / 60.
@@ -147,7 +147,7 @@ To sum the fractions: common denominator for 60 and 90 is 180.
 D_c = 9.5 × 36.
 D_c = (19/2) × 36 = 19 × 18 = 342 km.
 The distance covered by the car is 342 km.","Time, Speed & Distance (General)",Arithmetic
-,Inequalities (Linear & Quadratic),3,"Modulus, Rational inequality, Sign analysis",Hard,False,"x ∈ (-∞, -2) ∪ (2, 3) ∪ (4, ∞)",1,"x ∈ (-2, 1) ∪ (2, 3)",2,"x ∈ (-2, 2) ∪ (3, 4)",3,"x ∈ (-∞, -2) ∪ (3, 4)",4,,,9,The value of x for which the inequality (x² - 5x + 6) / (|x - 1| - 3) < 0 holds true is:,MCQ,384582019,Quantitative Ability,,MockSet1_QA,"Let f(x) = (x² - 5x + 6) / (|x - 1| - 3). We need f(x) < 0.
+,Inequalities (Linear & Quadratic),3,"Modulus, Rational inequality, Sign analysis",Hard,FALSE,"x ∈ (-∞, -2) ∪ (2, 3) ∪ (4, ∞)",1,"x ∈ (-2, 1) ∪ (2, 3)",2,"x ∈ (-2, 2) ∪ (3, 4)",3,"x ∈ (-∞, -2) ∪ (3, 4)",4,,,9,The value of x for which the inequality (x² - 5x + 6) / (|x - 1| - 3) < 0 holds true is:,MCQ,384582019,Quantitative Ability,,MockSet1_QA,"Let f(x) = (x² - 5x + 6) / (|x - 1| - 3). We need f(x) < 0.
 Numerator N(x) = x² - 5x + 6 = (x-2)(x-3). Roots at x=2, x=3.
 Denominator D(x) = |x - 1| - 3. D(x)=0 when |x-1|=3, so x-1=3 or x-1=-3. Thus x=4 or x=-2.
 Critical points for sign analysis: -2, 1 (where |x-1| definition changes), 2, 3, 4.
@@ -165,7 +165,7 @@ We need N(x) and D(x) to have opposite signs.
 Combining solution intervals: (-2, 1) ∪ [1, 2) ∪ (3, 4).
 This simplifies to (-2, 2) ∪ (3, 4).
 The correct option is (C).",Inequalities (Linear & Quadratic),Algebra
-,Probability,1,"Combinatorial probability, Drawing balls",Medium,False,2/11,1,3/11,2,4/11,3,5/22,4,,,10,"A bag contains 5 red balls, 4 blue balls, and 3 green balls. Three balls are drawn at random without replacement. What is the probability that exactly two of the drawn balls are red and one is blue?",MCQ,817560392,Quantitative Ability,,MockSet1_QA,"Total balls = 5 Red + 4 Blue + 3 Green = 12.
+,Probability,1,"Combinatorial probability, Drawing balls",Medium,FALSE,"""2/11""",1,"""3/11""",2,"""4/11""",3,"""5/22""",4,,,10,"A bag contains 5 red balls, 4 blue balls, and 3 green balls. Three balls are drawn at random without replacement. What is the probability that exactly two of the drawn balls are red and one is blue?",MCQ,817560392,Quantitative Ability,,MockSet1_QA,"Total balls = 5 Red + 4 Blue + 3 Green = 12.
 Number of ways to draw 3 balls from 12 is C(12,3) = (12×11×10)/(3×2×1) = 2×11×10 = 220.
 We want exactly two red balls and one blue ball.
 Number of ways to choose 2 red balls from 5 is C(5,2) = (5×4)/2 = 10.
@@ -173,7 +173,7 @@ Number of ways to choose 1 blue ball from 4 is C(4,1) = 4.
 Number of ways to choose 2 red and 1 blue = C(5,2) × C(4,1) = 10 × 4 = 40.
 Probability = (Favorable Outcomes) / (Total Outcomes) = 40 / 220 = 4/22 = 2/11.
 The correct option is (A).",Probability,Modern Maths
-,"Triangles (Properties, Congruence, Similarity)",4,"Area of similar triangles, Ratio of sides",Medium,False,90 sq. cm,1,100 sq. cm,2,105 sq. cm,3,120 sq. cm,4,,,11,"In a triangle ABC, D and E are points on sides AB and AC respectively such that AD = 2 BD and AE:EC = 3:2. If the area of triangle ADE is 48 sq. cm, what is the area of triangle ABC?",MCQ,304981928,Quantitative Ability,,MockSet1_QA,"The area of triangle ADE is related to the area of triangle ABC by the formula:
+,"Triangles (Properties, Congruence, Similarity)",4,"Area of similar triangles, Ratio of sides",Medium,FALSE,90 sq. cm,1,100 sq. cm,2,105 sq. cm,3,120 sq. cm,4,,,11,"In a triangle ABC, D and E are points on sides AB and AC respectively such that AD = 2 BD and AE:EC = 3:2. If the area of triangle ADE is 48 sq. cm, what is the area of triangle ABC?",MCQ,304981928,Quantitative Ability,,MockSet1_QA,"The area of triangle ADE is related to the area of triangle ABC by the formula:
 Area(ADE) / Area(ABC) = (AD/AB) × (AE/AC).
 Given AD = 2 BD, so AD/BD = 2/1. Thus AB = AD + BD = AD + (1/2)AD = (3/2)AD.
 This gives AD/AB = 2/3.
@@ -184,7 +184,7 @@ We are given Area(ADE) = 48 sq. cm.
 48 / Area(ABC) = 2/5.
 Area(ABC) = 48 × (5/2) = 24 × 5 = 120 sq. cm.
 The correct option is (D).","Triangles (Properties, Congruence, Similarity)",Geometry
-,Set Theory & Venn Diagrams,60,"Principle of Inclusion-Exclusion, Exactly two sets",Easy,True,,,,,,,,,,,12,"In a survey of 200 people, it was found that 120 read Newspaper A, 90 read Newspaper B, and 70 read Newspaper C. 40 read both A and B, 30 read both B and C, 50 read both A and C, and 20 read all three. How many people read exactly two newspapers? (TITA)",TITA,182773920,Quantitative Ability,,MockSet1_QA,"Let A, B, C denote the sets of people who read Newspaper A, B, C respectively.
+,Set Theory & Venn Diagrams,60,"Principle of Inclusion-Exclusion, Exactly two sets",Easy,TRUE,,,,,,,,,,,12,"In a survey of 200 people, it was found that 120 read Newspaper A, 90 read Newspaper B, and 70 read Newspaper C. 40 read both A and B, 30 read both B and C, 50 read both A and C, and 20 read all three. How many people read exactly two newspapers? (TITA)",TITA,182773920,Quantitative Ability,,MockSet1_QA,"Let A, B, C denote the sets of people who read Newspaper A, B, C respectively.
 Given: |A|=120, |B|=90, |C|=70, |A∩B|=40, |B∩C|=30, |A∩C|=50, |A∩B∩C|=20.
 Number of people who read exactly two newspapers is given by:
 (|A∩B| - |A∩B∩C|) + (|B∩C| - |A∩B∩C|) + (|A∩C| - |A∩B∩C|)
@@ -192,7 +192,7 @@ Number of people who read exactly two newspapers is given by:
 = (40 + 30 + 50) - 3 × 20
 = 120 - 60 = 60.
 The number of people who read exactly two newspapers is 60.",Set Theory & Venn Diagrams,Modern Maths
-,Quadratic Equations,-3,"Properties of roots, Discriminant",Hard,True,,,,,,,,,,,13,"If the roots of the quadratic equation x² – (k+2)x + (k²+3k+2) = 0 are α and β, and (α - β)² = N, where N is a non-negative integer. Find the sum of all possible integer values of k for which the roots α, β are real and N ≤ 1. (TITA)",TITA,394881720,Quantitative Ability,,MockSet1_QA,"The quadratic equation is x² – (k+2)x + (k²+3k+2) = 0.
+,Quadratic Equations,-3,"Properties of roots, Discriminant",Hard,TRUE,,,,,,,,,,,13,"If the roots of the quadratic equation x² – (k+2)x + (k²+3k+2) = 0 are α and β, and (α - β)² = N, where N is a non-negative integer. Find the sum of all possible integer values of k for which the roots α, β are real and N ≤ 1. (TITA)",TITA,394881720,Quantitative Ability,,MockSet1_QA,"The quadratic equation is x² – (k+2)x + (k²+3k+2) = 0.
 Let the roots be α and β.
 Then α+β = k+2 and αβ = k²+3k+2 = (k+1)(k+2).
 For the roots α, β to be real, the discriminant D_roots must be non-negative.
@@ -218,7 +218,7 @@ So, k = -5/3 or k = -1.
 Since k must be an integer, k=-1 is a possible value. This value is in the interval [-2, -2/3] because -2 ≤ -1 ≤ -2/3.
 The possible integer values of k are -2 and -1.
 The sum of these values is -2 + (-1) = -3.",Quadratic Equations,Algebra
-,"Triangles (Special: Equilateral, Isosceles, Right-angled)",1,"Right-angled triangle, Perimeter, Sum of squares of sides",Hard,False,55 cm,1,60 cm,2,61 cm,3,65 cm,4,,,14,The perimeter of a right-angled triangle is 132 cm and the sum of the squares of its sides is 6050 cm². What is the length of the hypotenuse of the triangle?,MCQ,678912345,Quantitative Ability,,MockSet1_QA,"Let the sides of the right-angled triangle be a, b and hypotenuse h.
+,"Triangles (Special: Equilateral, Isosceles, Right-angled)",1,"Right-angled triangle, Perimeter, Sum of squares of sides",Hard,FALSE,55 cm,1,60 cm,2,61 cm,3,65 cm,4,,,14,The perimeter of a right-angled triangle is 132 cm and the sum of the squares of its sides is 6050 cm². What is the length of the hypotenuse of the triangle?,MCQ,678912345,Quantitative Ability,,MockSet1_QA,"Let the sides of the right-angled triangle be a, b and hypotenuse h.
 Perimeter: a + b + h = 132.
 Sum of squares of sides: a² + b² + h² = 6050.
 Using the Pythagorean theorem, a² + b² = h².
@@ -229,7 +229,7 @@ To find h, note that 50² = 2500 and 60² = 3600. Since 3025 ends in 5, h must e
 Let's check 55: 55² = (50+5)² = 2500 + 2(50)(5) + 25 = 2500 + 500 + 25 = 3025.
 So, h = 55 cm.
 The correct option is (A).","Triangles (Special: Equilateral, Isosceles, Right-angled)",Geometry
-,"Sequences & Series (AP, GP, HP, Special Series)",20,"Arithmetic Progression, N-th term from sum",Medium,True,,,,,,,,,,,15,"The sum of the first 'n' terms of an arithmetic progression is given by Sₙ = 3n² + 5n. If the k-th term of this AP is 122, what is the value of k? (TITA)",TITA,543219876,Quantitative Ability,,MockSet1_QA,"Given Sₙ = 3n² + 5n.
+,"Sequences & Series (AP, GP, HP, Special Series)",20,"Arithmetic Progression, N-th term from sum",Medium,TRUE,,,,,,,,,,,15,"The sum of the first 'n' terms of an arithmetic progression is given by Sₙ = 3n² + 5n. If the k-th term of this AP is 122, what is the value of k? (TITA)",TITA,543219876,Quantitative Ability,,MockSet1_QA,"Given Sₙ = 3n² + 5n.
 The n-th term Tₙ = Sₙ - Sₙ₋₁ (for n ≥ 2).
 Tₙ = (3n² + 5n) - [3(n-1)² + 5(n-1)]
 Tₙ = (3n² + 5n) - [3(n²-2n+1) + 5n-5]
@@ -243,7 +243,7 @@ So, 6k + 2 = 122.
 6k = 120.
 k = 120/6 = 20.
 The value of k is 20.","Sequences & Series (AP, GP, HP, Special Series)",Algebra
-,Logarithms,2,"Logarithmic equations, Change of base",Hard,False,64,1,128,2,256,3,512,4,,,16,"If x and y are positive real numbers such that log₈(x³) + log₄(y²) = 7 and logₓ(8) - logᵧ(4) = 1, then the value of xy is:",MCQ,678902345,Quantitative Ability,,MockSet1_QA,"The first equation: log₈(x³) + log₄(y²) = 7.
+,Logarithms,2,"Logarithmic equations, Change of base",Hard,FALSE,64,1,128,2,256,3,512,4,,,16,"If x and y are positive real numbers such that log₈(x³) + log₄(y²) = 7 and logₓ(8) - logᵧ(4) = 1, then the value of xy is:",MCQ,678902345,Quantitative Ability,,MockSet1_QA,"The first equation: log₈(x³) + log₄(y²) = 7.
 Using the property log_{a^m}(b^n) = (n/m)log_a(b):
 log_{2³}(x³) + log_{2²}(y²) = 7.
 (3/3)log₂(x) + (2/2)log₂(y) = 7.
@@ -253,7 +253,7 @@ xy = 2⁷ = 128.
 The second equation logₓ(8) - logᵧ(4) = 1 can be used to find individual values of x and y, but xy is determined by the first equation alone.
 The value of xy = 128.
 The correct option is (B).",Logarithms,Algebra
-,HCF & LCM,4,"Remainders, Largest N-digit number",Hard,False,24,1,25,2,26,3,29,4,,,17,"Let N be the largest four-digit number which when divided by 12, 15, 20 and 24 leaves remainders 8, 11, 16 and 20 respectively. What is the sum of the digits of N?",MCQ,890123456,Quantitative Ability,,MockSet1_QA,"N leaves remainders 8, 11, 16, 20 when divided by 12, 15, 20, 24 respectively.
+,HCF & LCM,4,"Remainders, Largest N-digit number",Hard,FALSE,24,1,25,2,26,3,29,4,,,17,"Let N be the largest four-digit number which when divided by 12, 15, 20 and 24 leaves remainders 8, 11, 16 and 20 respectively. What is the sum of the digits of N?",MCQ,890123456,Quantitative Ability,,MockSet1_QA,"N leaves remainders 8, 11, 16, 20 when divided by 12, 15, 20, 24 respectively.
 The differences are: 12-8=4, 15-11=4, 20-16=4, 24-20=4.
 So, N is of the form k × LCM(12, 15, 20, 24) - 4.
 LCM calculation:
@@ -271,7 +271,7 @@ The largest integer k is 83.
 N = 120 × 83 - 4 = 9960 - 4 = 9956.
 The sum of the digits of N = 9 + 9 + 5 + 6 = 29.
 The correct option is (D).",HCF & LCM,Number System
-,Remainders (incl. Remainder Theorem),11,"Modular arithmetic, Order of element",Hard,True,,,,,,,,,,,18,What is the smallest positive integer k such that 2026^k leaves a remainder of 1 when divided by 23? (TITA),TITA,432108765,Quantitative Ability,,MockSet1_QA,"We need to find the smallest positive integer k such that 2026^k ≡ 1 (mod 23).
+,Remainders (incl. Remainder Theorem),11,"Modular arithmetic, Order of element",Hard,TRUE,,,,,,,,,,,18,What is the smallest positive integer k such that 2026^k leaves a remainder of 1 when divided by 23? (TITA),TITA,432108765,Quantitative Ability,,MockSet1_QA,"We need to find the smallest positive integer k such that 2026^k ≡ 1 (mod 23).
 First, find the remainder of 2026 when divided by 23.
 2026 = 23 × q + r.
 We know 23 × 80 = 1840.
@@ -293,7 +293,7 @@ k=11:
 81 = 3 × 23 + 12 (since 3 × 23 = 69). So 2¹⁰ ≡ 12 (mod 23).
 2¹¹ = 2 × 2¹⁰ ≡ 2 × 12 = 24 ≡ 1 (mod 23).
 The smallest positive integer k is 11.",Remainders (incl. Remainder Theorem),Number System
-,"Time, Speed & Distance (General)",2,"Variable speed, Scheduled time, Delays",Hard,False,12 minutes,1,15 minutes,2,18 minutes,3,20 minutes,4,,,19,"A bus travels from point P to point Q. On a particular day, it covers the first 40% of the distance in 50% of its scheduled time. It then encounters a delay of 'd' minutes. To arrive at Q on schedule, it has to increase its speed by 50% of its original scheduled speed for the rest of the journey. If the scheduled time for the entire journey was 2 hours 30 minutes, find the value of 'd'.",MCQ,901234567,Quantitative Ability,,MockSet1_QA,"Let D be the total distance and T_sch = 150 minutes be the scheduled time.
+,"Time, Speed & Distance (General)",2,"Variable speed, Scheduled time, Delays",Hard,FALSE,12 minutes,1,15 minutes,2,18 minutes,3,20 minutes,4,,,19,"A bus travels from point P to point Q. On a particular day, it covers the first 40% of the distance in 50% of its scheduled time. It then encounters a delay of 'd' minutes. To arrive at Q on schedule, it has to increase its speed by 50% of its original scheduled speed for the rest of the journey. If the scheduled time for the entire journey was 2 hours 30 minutes, find the value of 'd'.",MCQ,901234567,Quantitative Ability,,MockSet1_QA,"Let D be the total distance and T_sch = 150 minutes be the scheduled time.
 The original scheduled speed is S_orig = D / T_sch = D / 150.
 Part 1: Distance covered d₁ = 0.4D. Time taken t₁ = 0.5 T_sch = 0.5 × 150 = 75 minutes.
 Remaining distance d₂ = D - 0.4D = 0.6D.
@@ -307,7 +307,7 @@ This time t₂ must be equal to the available time (75 - d).
 So, 60 = 75 - d.
 d = 75 - 60 = 15 minutes.
 The correct option is (B).","Time, Speed & Distance (General)",Arithmetic
-,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",126,"Volume conversion, Sphere to cones",Medium,True,,,,,,,,,,,20,"A solid metallic sphere of radius 10.5 cm is melted and recast into a number of smaller identical cones, each of radius 3.5 cm and height 3 cm. What is the maximum number of such cones that can be formed? (Use π = 22/7) (TITA)",TITA,123567890,Quantitative Ability,,MockSet1_QA,"Volume of the sphere V_sph = (4/3)πR³. Given R = 10.5 cm.
+,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",126,"Volume conversion, Sphere to cones",Medium,TRUE,,,,,,,,,,,20,"A solid metallic sphere of radius 10.5 cm is melted and recast into a number of smaller identical cones, each of radius 3.5 cm and height 3 cm. What is the maximum number of such cones that can be formed? (Use π = 22/7) (TITA)",TITA,123567890,Quantitative Ability,,MockSet1_QA,"Volume of the sphere V_sph = (4/3)πR³. Given R = 10.5 cm.
 V_sph = (4/3)π(10.5)³.
 Volume of one cone V_cone = (1/3)πr²h. Given r = 3.5 cm and h = 3 cm.
 V_cone = (1/3)π(3.5)²(3) = π(3.5)².
@@ -320,7 +320,7 @@ N = (4/3) × ( (10.5/3.5) × (10.5/3.5) × 10.5 )
 N = (4/3) × (3 × 3 × 10.5) = 4 × 3 × 10.5 = 12 × 10.5.
 N = 12 × (21/2) = 6 × 21 = 126.
 The maximum number of such cones is 126.","Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Geometry
-,Mixtures & Alligations,2,"Mixture replacement, Ratio change",Medium,False,70,1,84,2,98,3,112,4,,,21,"A container has a mixture of milk and water in the ratio 7:3. If 20 litres of this mixture is removed and replaced with 20 litres of water, the ratio of milk to water becomes 7:5. What was the initial quantity of milk in the container (in litres)?",MCQ,234678901,Quantitative Ability,,MockSet1_QA,"Let the initial quantities of milk and water be 7k and 3k litres respectively.
+,Mixtures & Alligations,2,"Mixture replacement, Ratio change",Medium,FALSE,70,1,84,2,98,3,112,4,,,21,"A container has a mixture of milk and water in the ratio 7:3. If 20 litres of this mixture is removed and replaced with 20 litres of water, the ratio of milk to water becomes 7:5. What was the initial quantity of milk in the container (in litres)?",MCQ,234678901,Quantitative Ability,,MockSet1_QA,"Let the initial quantities of milk and water be 7k and 3k litres respectively.
 Total initial mixture = 10k litres.
 When 20 litres of this mixture is removed:
 Milk removed = (7/10) × 20 = 14 litres.
@@ -341,7 +341,7 @@ Since (7k - 14) = 7(k - 2), and assuming k≠2 (if k=2, initial milk is 14L, ini
 k = 12.
 The initial quantity of milk = 7k = 7 × 12 = 84 litres.
 The correct option is (B).",Mixtures & Alligations,Arithmetic
-,Permutations & Combinations,2,"Number formation, Divisibility, Distinct digits",Hard,False,192,1,216,2,228,3,240,4,,,22,"How many 5-digit numbers can be formed using the digits 0, 1, 2, 3, 4, 5 such that the number is divisible by 5 and no digit is repeated?",MCQ,345789012,Quantitative Ability,,MockSet1_QA,"The digits available are {0, 1, 2, 3, 4, 5}.
+,Permutations & Combinations,2,"Number formation, Divisibility, Distinct digits",Hard,FALSE,192,1,216,2,228,3,240,4,,,22,"How many 5-digit numbers can be formed using the digits 0, 1, 2, 3, 4, 5 such that the number is divisible by 5 and no digit is repeated?",MCQ,345789012,Quantitative Ability,,MockSet1_QA,"The digits available are {0, 1, 2, 3, 4, 5}.
 We need to form 5-digit numbers, so the first digit cannot be 0.
 The number must be divisible by 5, so the unit digit must be 0 or 5.
 No digit is repeated.

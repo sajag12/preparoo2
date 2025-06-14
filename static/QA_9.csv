@@ -1,5 +1,5 @@
 SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
-QA,,Q67,1,,,"A shopkeeper marks up his goods by 50% above his cost price. He then offers a discount of 20% on the marked price. Due to a faulty weighing machine, he sells only 900 grams for every 1 kg he bills. Furthermore, he had procured his stock using a supplier's faulty machine, obtaining 1100 grams of goods for the price of 1 kg. What is his approximate net profit percentage?",42.33%,46.67%,50.11%,52.78%,A,B,C,D,B,MCQ,Arithmetic,"Profit, Loss & Discount",Medium,"Percentages, Profit and Loss, Faulty Weights, Multiple stage profit calculation","Percentages, Profit and Loss, Faulty Weights, Multiple stage profit calculation",False,MockSet3_QA,,"Let the shopkeeper's actual cost for 1000 grams (1 kg) of goods from an honest supplier be Rs. 1000.
+QA,,Q67,1,,,"A shopkeeper marks up his goods by 50% above his cost price. He then offers a discount of 20% on the marked price. Due to a faulty weighing machine, he sells only 900 grams for every 1 kg he bills. Furthermore, he had procured his stock using a supplier's faulty machine, obtaining 1100 grams of goods for the price of 1 kg. What is his approximate net profit percentage?",42.33%,46.67%,50.11%,52.78%,A,B,C,D,B,MCQ,Arithmetic,"Profit, Loss & Discount",Medium,"Percentages, Profit and Loss, Faulty Weights, Multiple stage profit calculation","Percentages, Profit and Loss, Faulty Weights, Multiple stage profit calculation",FALSE,MockSet3_QA,,"Let the shopkeeper's actual cost for 1000 grams (1 kg) of goods from an honest supplier be Rs. 1000.
 Due to the supplier's faulty machine, he gets 1100 grams for Rs. 1000.
 So, his effective cost for 1100 grams is Rs. 1000.
 His effective cost per gram = Rs. 1000 / 1100 = Rs. 10/11.
@@ -19,7 +19,7 @@ Profit Percentage = (Profit / Cost of 900g) * 100
 = (4200 / 9000) * 100
 = (42 / 90) * 100 = (7 / 15) * 100 = 700 / 15 = 140 / 3 = 46.666...%
 Approximate net profit percentage = 46.67%."
-QA,,Q78,2,,,"If log₂(x) + log₄(x) + log₁₆(x) = 21/4, what is the value of x?",4,8,16,32,A,B,C,D,B,MCQ,Algebra,Logarithms,Easy,"Logarithms, Properties of Logarithms, Change of Base","Logarithms, Properties of Logarithms, Change of Base",False,MockSet3_QA,,"The given equation is log₂(x) + log₄(x) + log₁₆(x) = 21/4.
+QA,,Q78,2,,,"If log₂(x) + log₄(x) + log₁₆(x) = 21/4, what is the value of x?",4,8,16,32,A,B,C,D,B,MCQ,Algebra,Logarithms,Easy,"Logarithms, Properties of Logarithms, Change of Base","Logarithms, Properties of Logarithms, Change of Base",FALSE,MockSet3_QA,,"The given equation is log₂(x) + log₄(x) + log₁₆(x) = 21/4.
 To solve this, we convert all logarithms to a common base, preferably base 2.
 Recall the logarithm property: log_{b^k}(M) = (1/k)log_b(M).
 Using this property:
@@ -42,7 +42,7 @@ log₂(x) = 3.
 By the definition of logarithm (if log_b(a) = c, then a = b^c):
 x = 2³
 x = 8."
-QA,,Q83,3,,,"In ΔABC, AB = 20 cm, AC = 28 cm, and BC = 24 cm. D is a point on BC such that AD is the internal angle bisector of ∠A. If E is the midpoint of AD, and BE is extended to meet AC at F, find the length of AF in cm.",70/9,140/17,120/13,28/3,A,B,C,D,B,MCQ,Geometry,"Triangles (Properties, Congruence, Similarity)",Hard,"Geometry, Triangles, Angle Bisector Theorem, Mass Point Geometry (or Menelaus Theorem)","Geometry, Triangles, Angle Bisector Theorem, Mass Point Geometry (or Menelaus Theorem)",False,MockSet3_QA,,"Given ΔABC with AB=c=20, AC=b=28, BC=a=24. AD is the internal angle bisector of ∠A.
+QA,,Q83,3,,,"In ΔABC, AB = 20 cm, AC = 28 cm, and BC = 24 cm. D is a point on BC such that AD is the internal angle bisector of ∠A. If E is the midpoint of AD, and BE is extended to meet AC at F, find the length of AF in cm.",70/9,140/17,120/13,28/3,A,B,C,D,B,MCQ,Geometry,"Triangles (Properties, Congruence, Similarity)",Hard,"Geometry, Triangles, Angle Bisector Theorem, Mass Point Geometry (or Menelaus Theorem)","Geometry, Triangles, Angle Bisector Theorem, Mass Point Geometry (or Menelaus Theorem)",FALSE,MockSet3_QA,,"Given ΔABC with AB=c=20, AC=b=28, BC=a=24. AD is the internal angle bisector of ∠A.
 By Angle Bisector Theorem, BD/DC = AB/AC = 20/28 = 5/7.
 Since BD + DC = BC = 24, we have BD = (5/(5+7)) * 24 = (5/12) * 24 = 10 cm.
 DC = (7/12) * 24 = 14 cm.
@@ -59,7 +59,7 @@ The masses at A and C are m_A = 12 and m_C = 5.
 For F on AC, AF/FC = m_C/m_A = 5/12.
 The length of AF = (m_C / (m_A + m_C)) * AC = (5 / (12 + 5)) * 28
 AF = (5/17) * 28 = 140/17 cm."
-QA,,Q76,4,,,"When a positive integer N is divided by 7, the remainder is 2. When N is divided by 11, the remainder is 7. What is the remainder when N is divided by 77?",16,23,37,51,A,B,C,D,D,MCQ,Number System,Remainders (incl. Remainder Theorem),Medium,"Number System, Remainders, Chinese Remainder Theorem (or listing method)","Number System, Remainders, Chinese Remainder Theorem (or listing method)",False,MockSet3_QA,,"Given:
+QA,,Q76,4,,,"When a positive integer N is divided by 7, the remainder is 2. When N is divided by 11, the remainder is 7. What is the remainder when N is divided by 77?",16,23,37,51,A,B,C,D,D,MCQ,Number System,Remainders (incl. Remainder Theorem),Medium,"Number System, Remainders, Chinese Remainder Theorem (or listing method)","Number System, Remainders, Chinese Remainder Theorem (or listing method)",FALSE,MockSet3_QA,,"Given:
 1. When N is divided by 7, the remainder is 2. This can be written as N ≡ 2 (mod 7).
 2. When N is divided by 11, the remainder is 7. This can be written as N ≡ 7 (mod 11).
 We need to find the remainder when N is divided by 77. Let this remainder be R.
@@ -75,7 +75,7 @@ Now check these values with the first congruence (R ≡ 2 (mod 7)):
 • 40 mod 7 = 5 (not 2)
 • 51 mod 7 = 2 (since 51 = 7 × 7 + 2). This matches.
 So, R = 51 is a possible remainder. Since 0 ≤ 51 < 77, this is the required remainder."
-QA,,Q87,5,,,"How many 6-digit numbers can be formed using the digits 1, 2, 3, 4, 5, 6 (without repetition) such that the number formed is divisible by its unit digit?",,,,,,,,,648,TITA,Modern Maths,Permutations & Combinations,Hard,"Permutations and Combinations, Number Formation, Divisibility Rules, Casework","Permutations and Combinations, Number Formation, Divisibility Rules, Casework",True,MockSet3_QA,,"The digits available are 1, 2, 3, 4, 5, 6. All 6-digit numbers must be formed without repetition.
+QA,,Q87,5,,,"How many 6-digit numbers can be formed using the digits 1, 2, 3, 4, 5, 6 (without repetition) such that the number formed is divisible by its unit digit?",,,,,,,,,648,TITA,Modern Maths,Permutations & Combinations,Hard,"Permutations and Combinations, Number Formation, Divisibility Rules, Casework","Permutations and Combinations, Number Formation, Divisibility Rules, Casework",TRUE,MockSet3_QA,,"The digits available are 1, 2, 3, 4, 5, 6. All 6-digit numbers must be formed without repetition.
 The number formed must be divisible by its unit digit.
 Let the 6-digit number be N.
 Sum of digits = 1+2+3+4+5+6 = 21, which is divisible by 3. Any number formed using these 6 digits will be divisible by 3.
@@ -106,7 +106,7 @@ The number must be divisible by 6. This means it must be divisible by 2 (guarant
 The remaining 5 digits can be arranged in 5! = 120 ways.
 Total number of such numbers = 120 (ends in 1) + 120 (ends in 2) + 120 (ends in 3) + 48 (ends in 4) + 120 (ends in 5) + 120 (ends in 6)
 = 5 * 120 + 48 = 600 + 48 = 648."
-QA,,Q70,6,,,"Train A, 200m long, travelling at 72 kmph, overtakes Train B, 250m long, travelling in the same direction, in 90 seconds. Train A then crosses a platform of length L meters in 30 seconds. If Train B had been travelling in the opposite direction to Train A (with their original speeds), they would have crossed each other in T seconds. Find the approximate value of L + T.",410,413,415,418,A,B,C,D,B,MCQ,Arithmetic,"Time, Speed & Distance (Problems on Trains)",Hard,"Time Speed Distance, Trains, Relative Speed, Multiple scenarios","Time Speed Distance, Trains, Relative Speed, Multiple scenarios",False,MockSet3_QA,,"Speed of Train A (S_A) = 72 kmph = 72 * (5/18) m/s = 20 m/s. Length of Train A (L_A) = 200m.
+QA,,Q70,6,,,"Train A, 200m long, travelling at 72 kmph, overtakes Train B, 250m long, travelling in the same direction, in 90 seconds. Train A then crosses a platform of length L meters in 30 seconds. If Train B had been travelling in the opposite direction to Train A (with their original speeds), they would have crossed each other in T seconds. Find the approximate value of L + T.",410,413,415,418,A,B,C,D,B,MCQ,Arithmetic,"Time, Speed & Distance (Problems on Trains)",Hard,"Time Speed Distance, Trains, Relative Speed, Multiple scenarios","Time Speed Distance, Trains, Relative Speed, Multiple scenarios",FALSE,MockSet3_QA,,"Speed of Train A (S_A) = 72 kmph = 72 * (5/18) m/s = 20 m/s. Length of Train A (L_A) = 200m.
 Length of Train B (L_B) = 250m. Let speed of Train B be S_B m/s.
 Train A overtakes Train B (same direction) in 90 seconds.
 Relative speed (S_A - S_B) = (L_A + L_B) / Time
@@ -122,7 +122,7 @@ Time to cross (T) = (L_A + L_B) / (S_A + S_B) = (200 + 250) / 35 = 450 / 35 = 90
 T ≈ 12.857 seconds.
 We need L + T = 400 + 90/7 = 400 + 12.8571... = 412.8571...
 The closest integer value is 413."
-QA,,Q79,7,,,"If the quadratic equations x² + ax + b = 0 and x² + bx + a = 0 (where a ≠ b) have exactly one root in common, find the numerical value of a+b.",,,,,,,,,-1,TITA,Algebra,Quadratic Equations,Hard,"Quadratic Equations, Common Roots, System of Equations","Quadratic Equations, Common Roots, System of Equations",True,MockSet3_QA,,"Let the two quadratic equations be:
+QA,,Q79,7,,,"If the quadratic equations x² + ax + b = 0 and x² + bx + a = 0 (where a ≠ b) have exactly one root in common, find the numerical value of a+b.",,,,,,,,,-1,TITA,Algebra,Quadratic Equations,Hard,"Quadratic Equations, Common Roots, System of Equations","Quadratic Equations, Common Roots, System of Equations",TRUE,MockSet3_QA,,"Let the two quadratic equations be:
 (1) x² + ax + b = 0
 (2) x² + bx + a = 0
 Given a ≠ b and they have exactly one root in common. Let the common root be α.
@@ -149,7 +149,7 @@ If β₁ = 1, then b=1. If β₂ = 1, then a=1.
 If a=1, b=-2 (since a+b=-1). Eq1: x²+x-2=0 => (x-1)(x+2)=0. Roots 1, -2.
 Eq2: x²-2x+1=0 => (x-1)²=0. Roots 1, 1.
 The common root is x=1. This fits the condition ""exactly one root in common"" (the set of roots for eq1 is {1, -2}, for eq2 is {1}. Intersection is {1})."
-QA,,Q84,8,,,"Two circles with centers O₁ and O₂ touch each other externally at point P. A common external tangent AB touches the first circle at A and the second circle at B. If the radii of the circles are 9 cm and 4 cm respectively, what is the length of AB?",10 cm,12 cm,13 cm,15 cm,A,B,C,D,B,MCQ,Geometry,"Circles (Properties, Chords, Tangents, Secants)",Medium,"Geometry, Circles, Tangents, Common External Tangent","Geometry, Circles, Tangents, Common External Tangent",False,MockSet3_QA,,"Let the two circles have centers O₁ and O₂ and radii r₁ = 9 cm and r₂ = 4 cm, respectively.
+QA,,Q84,8,,,"Two circles with centers O₁ and O₂ touch each other externally at point P. A common external tangent AB touches the first circle at A and the second circle at B. If the radii of the circles are 9 cm and 4 cm respectively, what is the length of AB?",10 cm,12 cm,13 cm,15 cm,A,B,C,D,B,MCQ,Geometry,"Circles (Properties, Chords, Tangents, Secants)",Medium,"Geometry, Circles, Tangents, Common External Tangent","Geometry, Circles, Tangents, Common External Tangent",FALSE,MockSet3_QA,,"Let the two circles have centers O₁ and O₂ and radii r₁ = 9 cm and r₂ = 4 cm, respectively.
 The circles touch each other externally at point P. The distance between their centers is O₁O₂ = r₁ + r₂ = 9 + 4 = 13 cm.
 AB is a common external tangent, with A on the first circle and B on the second circle.
 The length of a common external tangent (L) between two circles with radii r₁ and r₂ and distance d between their centers is given by the formula:
@@ -159,7 +159,7 @@ So, AB = √( (13)² - (5)² ).
 AB = √(169 - 25).
 AB = √(144).
 AB = 12 cm."
-QA,,Q72,9,,,"A and B together can complete a task in 24 days. B and C together can complete it in 30 days. C and A together can complete it in 40 days. They start working together. A works for all the days until the task is completed. B leaves 4 days before the scheduled completion of work, and C leaves 2 days before the scheduled completion of work. In how many days was the work actually completed? (Enter your answer as a decimal, e.g., 22.33)",,,,,,,,,22.33,TITA,Arithmetic,Time & Work,Hard,"Time and Work, Efficiency, Work with Leavers, System of Equations","Time and Work, Efficiency, Work with Leavers, System of Equations",True,MockSet3_QA,,"Let rates of work be a, b, c for A, B, C respectively.
+QA,,Q72,9,,,"A and B together can complete a task in 24 days. B and C together can complete it in 30 days. C and A together can complete it in 40 days. They start working together. A works for all the days until the task is completed. B leaves 4 days before the scheduled completion of work, and C leaves 2 days before the scheduled completion of work. In how many days was the work actually completed? (Enter your answer as a decimal, e.g., 22.33)",,,,,,,,,22.33,TITA,Arithmetic,Time & Work,Hard,"Time and Work, Efficiency, Work with Leavers, System of Equations","Time and Work, Efficiency, Work with Leavers, System of Equations",TRUE,MockSet3_QA,,"Let rates of work be a, b, c for A, B, C respectively.
 a + b = 1/24 (1)
 b + c = 1/30 (2)
 c + a = 1/40 (3)
@@ -189,7 +189,7 @@ Total work = 2D + 3(D-4) + 1(D-2) = 120.
 6D = 134.
 D = 134/6 = 67/3 = 22.333... days.
 The question asks for answer as a decimal e.g. 22.33."
-QA,,Q81,10,,,"If f(x+1/x) = x² + 1/x² for x ≠ 0, find the value of f(3).",5,7,9,11,A,B,C,D,B,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Medium,"Functions, Evaluating Functions, Algebraic Manipulation","Functions, Evaluating Functions, Algebraic Manipulation",False,MockSet3_QA,,"Given f(x+1/x) = x² + 1/x².
+QA,,Q81,10,,,"If f(x+1/x) = x² + 1/x² for x ≠ 0, find the value of f(3).",5,7,9,11,A,B,C,D,B,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Medium,"Functions, Evaluating Functions, Algebraic Manipulation","Functions, Evaluating Functions, Algebraic Manipulation",FALSE,MockSet3_QA,,"Given f(x+1/x) = x² + 1/x².
 Let y = x + 1/x.
 We want to express x² + 1/x² in terms of y.
 Squaring y: y² = (x + 1/x)² = x² + (1/x)² + 2(x)(1/x) = x² + 1/x² + 2.
@@ -197,7 +197,7 @@ So, x² + 1/x² = y² - 2.
 Therefore, f(y) = y² - 2.
 We need to find f(3). This means we set y = 3.
 f(3) = (3)² - 2 = 9 - 2 = 7."
-QA,,Q73,11,,,"Pipe A can fill a tank in 12 hours and Pipe B can fill the same tank in 15 hours. Pipe C can empty the full tank in 10 hours. Initially, pipes A and B are opened. After 5 hours, pipe C is also opened. In how many more hours will the tank be completely filled?",,,,,,,,,5,TITA,Arithmetic,Pipes & Cisterns,Medium,"Pipes and Cisterns, Filling and Emptying, Combined Work","Pipes and Cisterns, Filling and Emptying, Combined Work",True,MockSet3_QA,,"Rate of Pipe A = +1/12 of tank per hour (filling).
+QA,,Q73,11,,,"Pipe A can fill a tank in 12 hours and Pipe B can fill the same tank in 15 hours. Pipe C can empty the full tank in 10 hours. Initially, pipes A and B are opened. After 5 hours, pipe C is also opened. In how many more hours will the tank be completely filled?",,,,,,,,,5,TITA,Arithmetic,Pipes & Cisterns,Medium,"Pipes and Cisterns, Filling and Emptying, Combined Work","Pipes and Cisterns, Filling and Emptying, Combined Work",TRUE,MockSet3_QA,,"Rate of Pipe A = +1/12 of tank per hour (filling).
 Rate of Pipe B = +1/15 of tank per hour (filling).
 Rate of Pipe C = -1/10 of tank per hour (emptying).
 For the first 5 hours, only pipes A and B are open.
@@ -213,7 +213,7 @@ Since the rate is positive (+1/20), the tank will continue to be filled.
 Time required to fill the remaining 1/4 of the tank = (Remaining fraction) / (New combined rate)
 = (1/4) / (1/20) = (1/4) × 20 = 5 hours.
 So, it will take 5 more hours for the tank to be completely filled."
-QA,,Q69,12,,,The difference between the compound interest and simple interest on a certain sum of money for 2 years at 10% per annum is Rs. 150. Find the principal sum in Rs.,,,,,,,,,15000,TITA,Arithmetic,"Simple Interest, Compound Interest",Easy,"Simple Interest, Compound Interest, Difference between SI and CI","Simple Interest, Compound Interest, Difference between SI and CI",True,MockSet3_QA,,"Let P be the principal sum and R be the rate of interest per annum.
+QA,,Q69,12,,,The difference between the compound interest and simple interest on a certain sum of money for 2 years at 10% per annum is Rs. 150. Find the principal sum in Rs.,,,,,,,,,15000,TITA,Arithmetic,"Simple Interest, Compound Interest",Easy,"Simple Interest, Compound Interest, Difference between SI and CI","Simple Interest, Compound Interest, Difference between SI and CI",TRUE,MockSet3_QA,,"Let P be the principal sum and R be the rate of interest per annum.
 Given R = 10% per annum, Time (T) = 2 years.
 The difference between Compound Interest (CI) and Simple Interest (SI) on a sum P for 2 years at rate R is given by the formula:
 Difference = P × (R/100)²
@@ -224,7 +224,7 @@ Given Difference = Rs. 150.
 P = 150 × 100
 P = 15,000.
 The principal sum is Rs. 15,000."
-QA,,Q77,13,,,"Find the sum of the digits of the smallest four-digit number which when divided by 12, 15, 18, and 27 leaves remainders 8, 11, 14, and 23 respectively.",,,,,,,,,14,TITA,Number System,HCF & LCM,Hard,"Number System, LCM, Remainders, Smallest N-digit number, Sum of digits","Number System, LCM, Remainders, Smallest N-digit number, Sum of digits",True,MockSet3_QA,,"Let the number be N.
+QA,,Q77,13,,,"Find the sum of the digits of the smallest four-digit number which when divided by 12, 15, 18, and 27 leaves remainders 8, 11, 14, and 23 respectively.",,,,,,,,,14,TITA,Number System,HCF & LCM,Hard,"Number System, LCM, Remainders, Smallest N-digit number, Sum of digits","Number System, LCM, Remainders, Smallest N-digit number, Sum of digits",TRUE,MockSet3_QA,,"Let the number be N.
 When N is divided by 12, remainder is 8. (12 - 8 = 4)
 When N is divided by 15, remainder is 11. (15 - 11 = 4)
 When N is divided by 18, remainder is 14. (18 - 14 = 4)
@@ -243,7 +243,7 @@ If k=1, N = 540 × 1 - 4 = 536 (This is a 3-digit number).
 If k=2, N = 540 × 2 - 4 = 1080 - 4 = 1076 (This is a 4-digit number).
 This is the smallest four-digit number satisfying the conditions.
 The sum of the digits of N = 1 + 0 + 7 + 6 = 14."
-QA,,Q88,14,,,"A bag contains 4 red, 5 blue, and 6 green balls. Three balls are drawn one by one without replacement. What is the probability that the three balls are of different colors? (Enter your answer as a fraction a/b in simplest form, then type the value of a+b).",,,,,,,,,115,TITA,Modern Maths,Probability,Hard,"Probability, Combinatorics, Drawing without replacement, Different Colors","Probability, Combinatorics, Drawing without replacement, Different Colors",True,MockSet3_QA,,"Total balls = 4 Red (R) + 5 Blue (B) + 6 Green (G) = 15 balls.
+QA,,Q88,14,,,"A bag contains 4 red, 5 blue, and 6 green balls. Three balls are drawn one by one without replacement. What is the probability that the three balls are of different colors? (Enter your answer as a fraction a/b in simplest form, then type the value of a+b).",,,,,,,,,115,TITA,Modern Maths,Probability,Hard,"Probability, Combinatorics, Drawing without replacement, Different Colors","Probability, Combinatorics, Drawing without replacement, Different Colors",TRUE,MockSet3_QA,,"Total balls = 4 Red (R) + 5 Blue (B) + 6 Green (G) = 15 balls.
 Three balls are drawn one by one without replacement. We want the probability that all three are of different colors.
 This means we draw one Red, one Blue, and one Green ball.
 The possible orders for drawing three different colored balls are 3! = 6: (RBG, RGB, BRG, BGR, GRB, GBR).
@@ -264,7 +264,7 @@ The prime factorization of 91 is 7 * 13. 24 is not divisible by 7 or 13.
 So, the fraction 24/91 is in simplest form.
 Here, a = 24 and b = 91.
 a + b = 24 + 91 = 115."
-QA,,Q74,15,,,"A container has 100 litres of pure milk. First, 10 litres of milk is taken out and replaced with an equal amount of water. Then, 20 litres of the mixture is taken out and replaced with an equal amount of water. Finally, 25 litres of the mixture is taken out and replaced with an equal amount of water. What is the percentage of milk in the final mixture?",50%,52.5%,54%,55.8%,A,B,C,D,C,MCQ,Arithmetic,Mixtures & Alligations,Hard,"Mixtures and Alligations, Replacement of Mixture, Multiple Replacements, Percentage Calculation","Mixtures and Alligations, Replacement of Mixture, Multiple Replacements, Percentage Calculation",False,MockSet3_QA,,"Let V be the total volume of the mixture (initially 100L of pure milk).
+QA,,Q74,15,,,"A container has 100 litres of pure milk. First, 10 litres of milk is taken out and replaced with an equal amount of water. Then, 20 litres of the mixture is taken out and replaced with an equal amount of water. Finally, 25 litres of the mixture is taken out and replaced with an equal amount of water. What is the percentage of milk in the final mixture?",50%,52.50%,54%,55.80%,A,B,C,D,C,MCQ,Arithmetic,Mixtures & Alligations,Hard,"Mixtures and Alligations, Replacement of Mixture, Multiple Replacements, Percentage Calculation","Mixtures and Alligations, Replacement of Mixture, Multiple Replacements, Percentage Calculation",FALSE,MockSet3_QA,,"Let V be the total volume of the mixture (initially 100L of pure milk).
 Initial quantity of milk M₀ = 100 L.
 Step 1: x₁ = 10 L removed and replaced with water.
 Fraction of milk remaining = (V - x₁)/V = (100 - 10)/100 = 90/100 = 0.9.
@@ -287,7 +287,7 @@ Final Milk = Initial Milk * (1 - x₁/V) * (1 - x₂/V) * (1 - x₃/V)
 = 100 * (9/10) * (12/20) = 100 * (9/10) * (3/5)
 = 100 * (27/50) = 2 * 27 = 54 L.
 Percentage = 54%."
-QA,,Q80,16,,,The sum of the first 'n' terms of an arithmetic progression is given by S_n = 2n² + 3n. What is the 10th term of this AP?,,,,,,,,,41,TITA,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Easy,"Arithmetic Progression, Sum of AP, nth term of AP","Arithmetic Progression, Sum of AP, nth term of AP",True,MockSet3_QA,,"The sum of the first 'n' terms of an arithmetic progression (AP) is given by S_n = 2n² + 3n.
+QA,,Q80,16,,,The sum of the first 'n' terms of an arithmetic progression is given by S_n = 2n² + 3n. What is the 10th term of this AP?,,,,,,,,,41,TITA,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Easy,"Arithmetic Progression, Sum of AP, nth term of AP","Arithmetic Progression, Sum of AP, nth term of AP",TRUE,MockSet3_QA,,"The sum of the first 'n' terms of an arithmetic progression (AP) is given by S_n = 2n² + 3n.
 The nth term (T_n) of an AP can be found using the relation T_n = S_n - S_{n-1} (for n > 1).
 The first term (T₁) is equal to S₁.
 T₁ = S₁ = 2(1)² + 3(1) = 2 + 3 = 5.
@@ -300,7 +300,7 @@ Here, a = 5 and d = 4.
 So, T_n = 5 + (n-1)4 = 5 + 4n - 4 = 4n + 1.
 We need to find the 10th term (T₁₀).
 T₁₀ = 4(10) + 1 = 40 + 1 = 41."
-QA,,Q86,17,,,"A right circular cone of height H and base radius R is cut by two planes parallel to the base at heights H/3 and 2H/3 from the base, dividing the cone into three parts (a small cone at the top, a middle frustum, and a bottom frustum). Find the ratio of the volume of the middle frustum to the volume of the bottom frustum.",7/27,7/19,8/19,1/3,A,B,C,D,B,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Hard,"Mensuration 3D, Cone, Frustum, Volume Ratios, Similar Solids","Mensuration 3D, Cone, Frustum, Volume Ratios, Similar Solids",False,MockSet3_QA,,"Let the original cone have height H and base radius R. Its volume V = (1/3)πR²H.
+QA,,Q86,17,,,"A right circular cone of height H and base radius R is cut by two planes parallel to the base at heights H/3 and 2H/3 from the base, dividing the cone into three parts (a small cone at the top, a middle frustum, and a bottom frustum). Find the ratio of the volume of the middle frustum to the volume of the bottom frustum.","""7/27""","""7/19""","""8/19""","""8/27""",A,B,C,D,B,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Hard,"Mensuration 3D, Cone, Frustum, Volume Ratios, Similar Solids","Mensuration 3D, Cone, Frustum, Volume Ratios, Similar Solids",FALSE,MockSet3_QA,,"Let the original cone have height H and base radius R. Its volume V = (1/3)πR²H.
 The cone is cut by two planes parallel to the base.
 Cut 1 is at height H/3 from the base. The height of the small cone C_upper_middle formed above this cut (measured from apex) is H - H/3 = 2H/3. Let its volume be V_um.
 V_um = V * ( (2H/3) / H )³ = V * (2/3)³ = 8V/27.
@@ -314,7 +314,7 @@ Volume F_mid = V_um - V_t = 8V/27 - V/27 = 7V/27.
 Volume F_bot = V - V_um = V - 8V/27 = 19V/27.
 The ratio of the volume of the middle frustum to the volume of the bottom frustum is:
 (F_mid) / (F_bot) = (7V/27) / (19V/27) = 7/19."
-QA,,Q71,18,,,"A man travels from point P to point Q. He covers the first one-third of the distance at a speed of 10 km/hr, the next one-third at a speed of 20 km/hr, and the last one-third at a speed of 60 km/hr. What is his average speed (in km/hr) for the entire journey?",,,,,,,,,18,TITA,Arithmetic,"Time, Speed & Distance (General)",Medium,"Time Speed Distance, Average Speed, Equal Distances","Time Speed Distance, Average Speed, Equal Distances",True,MockSet3_QA,,"Let the total distance from P to Q be 3D km.
+QA,,Q71,18,,,"A man travels from point P to point Q. He covers the first one-third of the distance at a speed of 10 km/hr, the next one-third at a speed of 20 km/hr, and the last one-third at a speed of 60 km/hr. What is his average speed (in km/hr) for the entire journey?",,,,,,,,,18,TITA,Arithmetic,"Time, Speed & Distance (General)",Medium,"Time Speed Distance, Average Speed, Equal Distances","Time Speed Distance, Average Speed, Equal Distances",TRUE,MockSet3_QA,,"Let the total distance from P to Q be 3D km.
 The journey is divided into three equal parts, each of distance D km.
 Speed for the first one-third (S₁) = 10 km/hr. Time taken (T₁) = D/10 hr.
 Speed for the next one-third (S₂) = 20 km/hr. Time taken (T₂) = D/20 hr.
@@ -325,7 +325,7 @@ To sum the fractions, find the LCM of 10, 20, and 60, which is 60.
 T_total = D × (6/60 + 3/60 + 1/60) = D × ((6+3+1)/60) = D × (10/60) = D/6 hr.
 Average speed = Total Distance / Total Time
 Average speed = (3D km) / (D/6 hr) = 3D × (6/D) km/hr = 18 km/hr."
-QA,,Q82,19,,,Find the number of integer solutions for the inequality ||x-3| - 4| ≤ 2.,,,,,,,,,10,TITA,Algebra,"Inequalities (Linear & Quadratic), Modulus (Absolute Values)",Hard,"Inequalities, Modulus, Nested Modulus, Integer Solutions","Inequalities, Modulus, Nested Modulus, Integer Solutions",True,MockSet3_QA,,"The inequality is ||x-3| - 4| ≤ 2.
+QA,,Q82,19,,,Find the number of integer solutions for the inequality ||x-3| - 4| ≤ 2.,,,,,,,,,10,TITA,Algebra,"Inequalities (Linear & Quadratic), Modulus (Absolute Values)",Hard,"Inequalities, Modulus, Nested Modulus, Integer Solutions","Inequalities, Modulus, Nested Modulus, Integer Solutions",TRUE,MockSet3_QA,,"The inequality is ||x-3| - 4| ≤ 2.
 Let y = |x-3|. The inequality becomes |y - 4| ≤ 2.
 This means -2 ≤ y - 4 ≤ 2.
 Adding 4 to all parts: -2 + 4 ≤ y ≤ 2 + 4, which simplifies to 2 ≤ y ≤ 6.
@@ -345,7 +345,7 @@ Intersection:
 Consider x ≤ 1: Integers satisfying this and -3 ≤ x ≤ 9 are x ∈ {-3, -2, -1, 0, 1}. (5 integers)
 Consider x ≥ 5: Integers satisfying this and -3 ≤ x ≤ 9 are x ∈ {5, 6, 7, 8, 9}. (5 integers)
 The total number of integer solutions is the sum of integers from these two disjoint sets: 5 + 5 = 10."
-QA,,Q68,20,,,"A, B, and C are partners. A invests Rs. 40,000. B invests Rs. 50,000. C invests Rs. 60,000. A is a working partner and gets 15% of the total profit for managing the business. B is also a working partner and gets 10% of the total profit for managing. The remaining profit is distributed in the ratio of their investments. If A's total share (salary + profit share) is Rs. 42,000, what is C's share of profit?","Rs. 30,000","Rs. 36,000","Rs. 40,000","Rs. 42,000",A,B,C,D,B,MCQ,Arithmetic,Partnership,Hard,"Partnership, Profit Sharing with Salary, Ratio and Proportion","Partnership, Profit Sharing with Salary, Ratio and Proportion",False,MockSet3_QA,,"Let the total profit be P.
+QA,,Q68,20,,,"A, B, and C are partners. A invests Rs. 40,000. B invests Rs. 50,000. C invests Rs. 60,000. A is a working partner and gets 15% of the total profit for managing the business. B is also a working partner and gets 10% of the total profit for managing. The remaining profit is distributed in the ratio of their investments. If A's total share (salary + profit share) is Rs. 42,000, what is C's share of profit?","Rs. 30,000","Rs. 36,000","Rs. 40,000","Rs. 42,000",A,B,C,D,B,MCQ,Arithmetic,Partnership,Hard,"Partnership, Profit Sharing with Salary, Ratio and Proportion","Partnership, Profit Sharing with Salary, Ratio and Proportion",FALSE,MockSet3_QA,,"Let the total profit be P.
 A's salary = 15% of P = 0.15P.
 B's salary = 10% of P = 0.10P.
 Total salary paid to A and B = 0.15P + 0.10P = 0.25P.
@@ -362,7 +362,7 @@ The distributable profit = 0.75P = 0.75 * 120,000 = Rs. 90,000.
 C's share of profit = (C's ratio part / Sum of ratio parts) * Distributable Profit
 = (6/15) * 90,000 = (2/5) * 90,000 = 2 * 18,000 = Rs. 36,000.
 (C gets no salary as per the problem statement)."
-QA,,Q85,21,,,An equilateral triangle T₁ has side length 24 cm. A second equilateral triangle T₂ is inscribed in T₁ such that its vertices are the midpoints of the sides of T₁. A circle C₁ is inscribed in T₂. A third equilateral triangle T₃ is inscribed in C₁. A circle C₂ is inscribed in T₃. Find the radius of C₂.,1 cm,√2 cm,√3 cm,2 cm,A,B,C,D,C,MCQ,Geometry,"Mensuration - 2D (Area & Perimeter: Triangles, Quadrilaterals, Polygons, Circles)",Hard,"Mensuration 2D, Equilateral Triangle, Incircle, Circumcircle, Iterative Process","Mensuration 2D, Equilateral Triangle, Incircle, Circumcircle, Iterative Process",False,MockSet3_QA,,"Let s_n be the side length of triangle T_n, and r_n be the radius of circle C_n.
+QA,,Q85,21,,,An equilateral triangle T₁ has side length 24 cm. A second equilateral triangle T₂ is inscribed in T₁ such that its vertices are the midpoints of the sides of T₁. A circle C₁ is inscribed in T₂. A third equilateral triangle T₃ is inscribed in C₁. A circle C₂ is inscribed in T₃. Find the radius of C₂.,1 cm,√2 cm,√3 cm,2 cm,A,B,C,D,C,MCQ,Geometry,"Mensuration - 2D (Area & Perimeter: Triangles, Quadrilaterals, Polygons, Circles)",Hard,"Mensuration 2D, Equilateral Triangle, Incircle, Circumcircle, Iterative Process","Mensuration 2D, Equilateral Triangle, Incircle, Circumcircle, Iterative Process",FALSE,MockSet3_QA,,"Let s_n be the side length of triangle T_n, and r_n be the radius of circle C_n.
 Side of T₁ (s₁) = 24 cm.
 T₂ is formed by joining midpoints of T₁. So, T₂ is equilateral and s₂ = s₁/2 = 24/2 = 12 cm.
 Circle C₁ is inscribed in T₂. The radius of an incircle of an equilateral triangle with side 's' is s/(2√3).
@@ -373,7 +373,7 @@ So, r₁ = s₃ / √3.
 s₃ = r₁ * √3 = (2√3) * √3 = 2 * 3 = 6 cm.
 Circle C₂ is inscribed in T₃.
 Radius of C₂ (r₂) = s₃ / (2√3) = 6 / (2√3) = 3/√3 = √3 cm."
-QA,,Q75,22,,,"The expenses of a family are partly constant and partly vary directly as the number of members in the family. When there are 4 members, the total expenses are Rs. 10,400 per month. When there are 7 members, the total expenses are Rs. 16,700 per month. If the number of members increases to 9, and the constant part of expenses increases by 10% while the variable cost per member increases by 20%, what would be the new total monthly expenses in Rs.?","Rs. 23,560","Rs. 24,200","Rs. 24,880","Rs. 25,120",A,B,C,D,C,MCQ,Arithmetic,"Ratio, Proportion & Variation",Hard,"Variation, Linear Equations, Percentage Change Application","Variation, Linear Equations, Percentage Change Application",False,MockSet3_QA,,"Let E be the total expenses, C be the constant part, N be the number of members, and k be the variable cost per member.
+QA,,Q75,22,,,"The expenses of a family are partly constant and partly vary directly as the number of members in the family. When there are 4 members, the total expenses are Rs. 10,400 per month. When there are 7 members, the total expenses are Rs. 16,700 per month. If the number of members increases to 9, and the constant part of expenses increases by 10% while the variable cost per member increases by 20%, what would be the new total monthly expenses in Rs.?","Rs. 23,560","Rs. 24,200","Rs. 24,880","Rs. 25,120",A,B,C,D,C,MCQ,Arithmetic,"Ratio, Proportion & Variation",Hard,"Variation, Linear Equations, Percentage Change Application","Variation, Linear Equations, Percentage Change Application",FALSE,MockSet3_QA,,"Let E be the total expenses, C be the constant part, N be the number of members, and k be the variable cost per member.
 The relationship is E = C + kN.
 Given:
 1. When N=4, E=10,400: 10,400 = C + 4k (Equation i)

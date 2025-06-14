@@ -1,5 +1,5 @@
 SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
-Quantitative Ability,40,882345101,1,,,"A vessel contains a mixture of milk and water in the ratio 7:3. When 20 litres of this mixture is removed and replaced with 20 litres of pure milk, the ratio of milk to water in the vessel becomes 11:3. What was the initial quantity of the mixture in the vessel, in litres?",70,90,100,120,A,B,C,D,A,MCQ,Arithmetic,Mixtures & Alligations,Medium,Applying concepts of ratio and proportion to solve problems involving mixture replacement.,"Mixture Replacement, Ratio Change, Alligations",False,MockSet_CAT_QA_001,Application,"Let the initial quantity of the mixture be V litres.
+Quantitative Ability,40,882345101,1,,,"A vessel contains a mixture of milk and water in the ratio 7:3. When 20 litres of this mixture is removed and replaced with 20 litres of pure milk, the ratio of milk to water in the vessel becomes 11:3. What was the initial quantity of the mixture in the vessel, in litres?",70,90,100,120,A,B,C,D,A,MCQ,Arithmetic,Mixtures & Alligations,Medium,Applying concepts of ratio and proportion to solve problems involving mixture replacement.,"Mixture Replacement, Ratio Change, Alligations",FALSE,MockSet_CAT_QA_001,Application,"Let the initial quantity of the mixture be V litres.
 Initial ratio of milk to water = 7:3.
 Initial quantity of milk M₀ = (7/10)V. Initial quantity of water W₀ = (3/10)V.
 When 20 litres of mixture is removed:
@@ -18,7 +18,7 @@ So, ((7/10)V + 6) / ((3/10)V - 6) = 11/3.
 84 = (12/10)V = (6/5)V.
 V = (84 × 5) / 6 = 14 × 5 = 70 litres.
 The correct option is (A)."
-Quantitative Ability,40,882345102,2,,,"The sides of a triangle are x-1, 3x-7, and 4x-11. If x is an integer, 4x-11 is the longest side, and the triangle is obtuse-angled, find the sum of all possible integer values of x such that 3 < x ≤ 5.",,,,,,,,,5,TITA,Geometry,Triangles,Hard,"Properties of triangles, including triangle inequality and the condition for an obtuse-angled triangle (Pythagorean inequality), and solving inequalities for integer solutions.","Triangle Inequality, Obtuse Triangle Condition, Integer Solutions, Longest Side",True,MockSet_CAT_QA_001,Analysis,"Sides are a = x-1, b = 3x-7, c = 4x-11.
+Quantitative Ability,40,882345102,2,,,"The sides of a triangle are x-1, 3x-7, and 4x-11. If x is an integer, 4x-11 is the longest side, and the triangle is obtuse-angled, find the sum of all possible integer values of x such that 3 < x ≤ 5.",,,,,,,,,5,TITA,Geometry,Triangles,Hard,"Properties of triangles, including triangle inequality and the condition for an obtuse-angled triangle (Pythagorean inequality), and solving inequalities for integer solutions.","Triangle Inequality, Obtuse Triangle Condition, Integer Solutions, Longest Side",TRUE,MockSet_CAT_QA_001,Analysis,"Sides are a = x-1, b = 3x-7, c = 4x-11.
 For c = 4x-11 to be the longest side, it must be greater than the other two sides:
 1. 4x-11 > 3x-7  =>  x > 4.
 2. 4x-11 > x-1  =>  3x > 10  => x > 10/3.
@@ -36,7 +36,7 @@ Combined conditions: x ≥ 5 AND (x < 2.39 or x > 4.93). This implies x ≥ 5.
 The question specifies 3 < x ≤ 5. The only integer satisfying this and x ≥ 5 is x=5.
 Check x=5: Sides are 4, 8, 9. 4²+8² = 16+64=80. 9²=81. 80 < 81, so it is obtuse.
 Thus, x=5 is the only possible integer value. Sum of values = 5."
-Quantitative Ability,40,882345103,3,,,"A shopkeeper marks his goods 60% above the cost price. He sells one-third of the goods at this marked price. He sells another one-third of the goods at a 25% discount on the marked price. To achieve an overall profit of 25% on the entire transaction, at what approximate discount percentage must he sell the remaining one-third of the goods on their marked price?",30.6%,32.5%,34.4%,40.6%,A,B,C,D,D,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,"Calculating selling price based on markup and discount, and determining the required discount on a portion of goods to meet an overall profit target.","Markup, Staged Sales, Multiple Discounts, Overall Profit Target",False,MockSet_CAT_QA_001,Analysis,"Let the cost price (CP) of each unit be 100. Let there be 3 units of goods. Total CP = 300.
+Quantitative Ability,40,882345103,3,,,"A shopkeeper marks his goods 60% above the cost price. He sells one-third of the goods at this marked price. He sells another one-third of the goods at a 25% discount on the marked price. To achieve an overall profit of 25% on the entire transaction, at what approximate discount percentage must he sell the remaining one-third of the goods on their marked price?",30.60%,32.50%,34.40%,40.60%,A,B,C,D,D,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,"Calculating selling price based on markup and discount, and determining the required discount on a portion of goods to meet an overall profit target.","Markup, Staged Sales, Multiple Discounts, Overall Profit Target",FALSE,MockSet_CAT_QA_001,Analysis,"Let the cost price (CP) of each unit be 100. Let there be 3 units of goods. Total CP = 300.
 Marked price (MP) per unit = 100 × 1.60 = 160.
 Overall profit desired = 25%. Total Selling Price (SP) required = 300 × 1.25 = 375.
 SP for first 1/3rd (1 unit) at MP = 160.
@@ -52,7 +52,7 @@ D/100 = 1 - 19/32 = (32 - 19)/32 = 13/32.
 D = (13/32) × 100 = 1300 / 32 = 325 / 8 = 40.625%.
 Approximate discount = 40.6%.
 The correct option is (D)."
-Quantitative Ability,40,882345104,4,,,"If f(x) = x / (x-1) for x ≠ 1. Let fⁿ(x) denote applying the function f, n times. If f⁸(k) = k, and k ≠ 0, what is the value of f¹⁵(k) + f²⁰(k)?",k,k / (k-1),(k² + k -1) / (k-1),k² / (k-1),A,B,C,D,D,MCQ,Algebra,Functions,Medium,Understanding and identifying cyclic functions through repeated function composition.,"Iterative Functions, Cyclic Function, Function Composition",False,MockSet_CAT_QA_001,Application,"f(x) = x / (x-1).
+Quantitative Ability,40,882345104,4,,,"If f(x) = x / (x-1) for x ≠ 1. Let fⁿ(x) denote applying the function f, n times. If f⁸(k) = k, and k ≠ 0, what is the value of f¹⁵(k) + f²⁰(k)?",k,k / (k-1),(k² + k -1) / (k-1),k² / (k-1),A,B,C,D,D,MCQ,Algebra,Functions,Medium,Understanding and identifying cyclic functions through repeated function composition.,"Iterative Functions, Cyclic Function, Function Composition",FALSE,MockSet_CAT_QA_001,Application,"f(x) = x / (x-1).
 f²(x) = f(f(x)) = f(x/(x-1)) = [x/(x-1)] / [x/(x-1) - 1]
 = [x/(x-1)] / [(x - (x-1))/(x-1)]
 = [x/(x-1)] / [1/(x-1)] = x.
@@ -64,7 +64,7 @@ f¹⁵(k): 15 is odd, so f¹⁵(k) = k/(k-1).
 f²⁰(k): 20 is even, so f²⁰(k) = k.
 f¹⁵(k) + f²⁰(k) = k/(k-1) + k = [k + k(k-1)] / (k-1) = (k + k² - k) / (k-1) = k² / (k-1).
 The correct option is (D)."
-Quantitative Ability,40,882345105,5,,,"A sum of money is invested at simple interest. It amounts to Rs. 7200 in 3 years and Rs. 8800 in 5 years. If the rate of interest was 2% more, in how many years would the same initial sum amount to Rs. 9280?",,,,,,,,,5,TITA,Arithmetic,Simple Interest,Medium,"Calculating principal and rate from two different amounts over time in simple interest, and then recalculating the time for a new amount with an adjusted rate.","Amount Calculation, Finding Principal and Rate, Changed Rate Application",True,MockSet_CAT_QA_001,Application,"Let P be the principal and R be the rate of simple interest.
+Quantitative Ability,40,882345105,5,,,"A sum of money is invested at simple interest. It amounts to Rs. 7200 in 3 years and Rs. 8800 in 5 years. If the rate of interest was 2% more, in how many years would the same initial sum amount to Rs. 9280?",,,,,,,,,5,TITA,Arithmetic,Simple Interest,Medium,"Calculating principal and rate from two different amounts over time in simple interest, and then recalculating the time for a new amount with an adjusted rate.","Amount Calculation, Finding Principal and Rate, Changed Rate Application",TRUE,MockSet_CAT_QA_001,Application,"Let P be the principal and R be the rate of simple interest.
 Amount in 3 years = P + (P×R×3)/100 = 7200. (1)
 Amount in 5 years = P + (P×R×5)/100 = 8800. (2)
 Subtracting (1) from (2): (P×R×2)/100 = 1600.
@@ -80,7 +80,7 @@ Let T' be the new time.
 4480 = (16 × 56 × T').
 4480 = 896 × T'.
 T' = 4480 / 896 = 5 years."
-Quantitative Ability,40,882345106,6,,,"In how many ways can 5 distinct Physics books, 4 distinct Chemistry books, and 3 distinct Mathematics books be arranged in a row such that all books of the same subject are together, and the block of Mathematics books is never adjacent to the block of Physics books?",34560,17280,20736,41472,A,B,C,D,A,MCQ,Modern Maths,Permutations & Combinations,Hard,Linear arrangements with grouping (items together) and restrictions (items not together).,"Linear Arrangement, Grouping, Restriction, Not Adjacent",False,MockSet_CAT_QA_001,Analysis,"Treat books of the same subject as single blocks: P (Physics), C (Chemistry), M (Mathematics).
+Quantitative Ability,40,882345106,6,,,"In how many ways can 5 distinct Physics books, 4 distinct Chemistry books, and 3 distinct Mathematics books be arranged in a row such that all books of the same subject are together, and the block of Mathematics books is never adjacent to the block of Physics books?",34560,17280,20736,41472,A,B,C,D,A,MCQ,Modern Maths,Permutations & Combinations,Hard,Linear arrangements with grouping (items together) and restrictions (items not together).,"Linear Arrangement, Grouping, Restriction, Not Adjacent",FALSE,MockSet_CAT_QA_001,Analysis,"Treat books of the same subject as single blocks: P (Physics), C (Chemistry), M (Mathematics).
 Internal arrangements: P: 5! = 120. C: 4! = 24. M: 3! = 6.
 Total internal arrangements = 5! × 4! × 3! = 120 × 24 × 6 = 17280.
 Arrange blocks {P, C, M} such that M is not adjacent to P.
@@ -90,7 +90,7 @@ Total arrangements where M and P are adjacent = 2! × 2! = 4.
 Number of ways blocks can be arranged so M and P are NOT together = (Total block arrangements) - (Adjacent arrangements) = 6 - 4 = 2 ways.
 Total ways = (Internal arrangements) × (Ways to arrange blocks) = 17280 × 2 = 34560.
 The correct option is (A)."
-Quantitative Ability,40,882345107,7,,,"Two trains, A and B, are 450 km apart. Train A starts from station P towards station Q at 9:00 AM at a speed of 60 km/hr. Train B starts from station Q towards station P at 10:00 AM at a speed of 75 km/hr. At what time will they meet (approximately)?",12:00 PM,12:30 PM,12:53 PM,1:30 PM,A,B,C,D,C,MCQ,Arithmetic,"Time, Speed & Distance (Trains)",Medium,"Relative speed of objects moving towards each other, with an adjustment for different start times.","Relative Speed, Meeting Point, Different Start Times",False,MockSet_CAT_QA_001,Application,"Distance = 450 km. S_A = 60 km/hr (starts 9 AM). S_B = 75 km/hr (starts 10 AM).
+Quantitative Ability,40,882345107,7,,,"Two trains, A and B, are 450 km apart. Train A starts from station P towards station Q at 9:00 AM at a speed of 60 km/hr. Train B starts from station Q towards station P at 10:00 AM at a speed of 75 km/hr. At what time will they meet (approximately)?",12:00 PM,12:30 PM,12:53 PM,1:30 PM,A,B,C,D,C,MCQ,Arithmetic,"Time, Speed & Distance (Trains)",Medium,"Relative speed of objects moving towards each other, with an adjustment for different start times.","Relative Speed, Meeting Point, Different Start Times",FALSE,MockSet_CAT_QA_001,Application,"Distance = 450 km. S_A = 60 km/hr (starts 9 AM). S_B = 75 km/hr (starts 10 AM).
 By 10:00 AM, Train A has travelled 60 km × 1 hr = 60 km.
 Remaining distance at 10:00 AM = 450 - 60 = 390 km.
 Relative speed of A and B (approaching) = S_A + S_B = 60 + 75 = 135 km/hr.
@@ -101,7 +101,7 @@ Time to meet after 10:00 AM = Remaining Distance / Relative Speed = 390 / 135 ho
 Meeting time = 10:00 AM + 2 hours 53 minutes 20 seconds = 12:53:20 PM.
 Approximately 12:53 PM.
 The correct option is (C)."
-Quantitative Ability,40,882345108,8,,,Find the number of integer solutions for the inequality ||x-4| - 6| ≤ 3.,,,,,,,,,14,TITA,Algebra,Inequalities,Hard,Solving nested absolute value (modulus) inequalities and finding the number of integer solutions within the resulting range(s).,"Nested Modulus, Absolute Value Inequality, Integer Solutions",True,MockSet_CAT_QA_001,Analysis,"Inequality: ||x-4| - 6| ≤ 3.
+Quantitative Ability,40,882345108,8,,,Find the number of integer solutions for the inequality ||x-4| - 6| ≤ 3.,,,,,,,,,14,TITA,Algebra,Inequalities,Hard,Solving nested absolute value (modulus) inequalities and finding the number of integer solutions within the resulting range(s).,"Nested Modulus, Absolute Value Inequality, Integer Solutions",TRUE,MockSet_CAT_QA_001,Analysis,"Inequality: ||x-4| - 6| ≤ 3.
 Let y = |x-4|. Then |y - 6| ≤ 3.
 This implies -3 ≤ y - 6 ≤ 3.
 Adding 6 to all parts: 3 ≤ y ≤ 9.
@@ -113,7 +113,7 @@ We need the intersection of these two conditions: (x ≥ 7 or x ≤ 1) AND (-5 �
 Intersection for x ≥ 7: The numbers must be ≥ 7 and ≤ 13. This gives the interval [7, 13]. The integers are 7, 8, 9, 10, 11, 12, 13 (7 integers).
 Intersection for x ≤ 1: The numbers must be ≤ 1 and ≥ -5. This gives the interval [-5, 1]. The integers are -5, -4, -3, -2, -1, 0, 1 (7 integers).
 Total number of integer solutions = 7 + 7 = 14."
-Quantitative Ability,40,882345109,9,,,"A hollow metallic cylinder has external radius R, internal radius r, and height h. The volume of the material in the cylinder is given as 1320 cm³. If the cylinder weighs 10.34 kg, what is the approximate value of the metal's density?",7.83 g/cm³,7.95 g/cm³,8.05 g/cm³,8.12 g/cm³,A,B,C,D,A,MCQ,Geometry,Mensuration - 3D,Medium,"Calculating density using the formula Density = Mass / Volume, involving unit conversion (kg to g).","Hollow Cylinder, Volume of Material, Density Calculation",False,MockSet_CAT_QA_001,Application,"Volume of material V_mat = 1320 cm³.
+Quantitative Ability,40,882345109,9,,,"A hollow metallic cylinder has external radius R, internal radius r, and height h. The volume of the material in the cylinder is given as 1320 cm³. If the cylinder weighs 10.34 kg, what is the approximate value of the metal's density?",7.83 g/cm³,7.95 g/cm³,8.05 g/cm³,8.12 g/cm³,A,B,C,D,A,MCQ,Geometry,Mensuration - 3D,Medium,"Calculating density using the formula Density = Mass / Volume, involving unit conversion (kg to g).","Hollow Cylinder, Volume of Material, Density Calculation",FALSE,MockSet_CAT_QA_001,Application,"Volume of material V_mat = 1320 cm³.
 Weight W = 10.34 kg = 10340 g.
 Density ρ = Weight / Volume.
 ρ = 10340 g / 1320 cm³.
@@ -126,7 +126,7 @@ So the value is between 7 and 8. ρ = 7 and 55/66 = 7 and 5/6 g/cm³.
 5/6 ≈ 0.8333...
 ρ ≈ 7.8333... g/cm³.
 The correct option is (A)."
-Quantitative Ability,40,882345110,10,,,"The roots of the quadratic equation x²-(k-1)x+(k-4)=0 are α and β. If 1/α + 1/β = 3/2, find the value of k. (Assume roots are real and non-zero).",6,8,12,10,A,B,C,D,D,MCQ,Algebra,Quadratic Equations,Medium,Using Vieta's formulas (relationship between roots and coefficients) to solve for an unknown coefficient in a quadratic equation.,"Relationship Between Roots and Coefficients, Vieta's Formulas",False,MockSet_CAT_QA_001,Application,"Given the quadratic equation x²-(k-1)x+(k-4)=0 with roots α and β.
+Quantitative Ability,40,882345110,10,,,"The roots of the quadratic equation x²-(k-1)x+(k-4)=0 are α and β. If 1/α + 1/β = 3/2, find the value of k. (Assume roots are real and non-zero).",6,8,12,10,A,B,C,D,D,MCQ,Algebra,Quadratic Equations,Medium,Using Vieta's formulas (relationship between roots and coefficients) to solve for an unknown coefficient in a quadratic equation.,"Relationship Between Roots and Coefficients, Vieta's Formulas",FALSE,MockSet_CAT_QA_001,Application,"Given the quadratic equation x²-(k-1)x+(k-4)=0 with roots α and β.
 From Vieta's formulas:
 Sum of roots: α + β = -(-(k-1))/1 = k-1.
 Product of roots: αβ = (k-4)/1 = k-4.
@@ -142,7 +142,7 @@ Check if roots are real for k=10:
 The equation becomes x² - 9x + 6 = 0.
 Discriminant D = b² - 4ac = (-9)² - 4(1)(6) = 81 - 24 = 57. Since D > 0, the roots are real.
 The correct option is (D)."
-Quantitative Ability,40,882345111,11,,,"Pipe P1 can fill a tank in 20 hours, Pipe P2 can fill it in 30 hours, and an outlet Pipe P3 can empty the full tank in 15 hours. Initially, P1 and P2 are opened. After 5 hours, P1's flow rate is halved and P3 is also opened. In how many more hours will the tank be completely emptied from this point? (Provide time as a positive integer, understanding it is emptying).",,,,,,,,,50,TITA,Arithmetic,Pipes & Cisterns,Hard,"Calculating net work rate with multiple pipes (inlet and outlet), and handling changes in flow rates over different time periods.","Multiple Pipes, Inlet/Outlet, Changing Flow Rates, Combined Work",True,MockSet_CAT_QA_001,Analysis,"Let the capacity of the tank be the LCM of (20, 30, 15) = 60 units.
+Quantitative Ability,40,882345111,11,,,"Pipe P1 can fill a tank in 20 hours, Pipe P2 can fill it in 30 hours, and an outlet Pipe P3 can empty the full tank in 15 hours. Initially, P1 and P2 are opened. After 5 hours, P1's flow rate is halved and P3 is also opened. In how many more hours will the tank be completely emptied from this point? (Provide time as a positive integer, understanding it is emptying).",,,,,,,,,50,TITA,Arithmetic,Pipes & Cisterns,Hard,"Calculating net work rate with multiple pipes (inlet and outlet), and handling changes in flow rates over different time periods.","Multiple Pipes, Inlet/Outlet, Changing Flow Rates, Combined Work",TRUE,MockSet_CAT_QA_001,Analysis,"Let the capacity of the tank be the LCM of (20, 30, 15) = 60 units.
 Rate of P1 = +60/20 = +3 units/hr.
 Rate of P2 = +60/30 = +2 units/hr.
 Rate of P3 (outlet) = -60/15 = -4 units/hr.
@@ -158,7 +158,7 @@ The negative sign indicates that the tank is now emptying.
 The amount of water to be emptied is the 25 units that were filled.
 Time to empty = Amount to empty / Net emptying rate = 25 / 0.5 = 50 hours.
 The answer is 50."
-Quantitative Ability,40,882345112,12,,,"If log₂(log₃(log₄(x))) = 0, find x.",16,64,256,512,A,B,C,D,B,MCQ,Algebra,Logarithms,Easy,Solving nested logarithmic equations by applying the fundamental definition of a logarithm (log_b(a) = c <=> b^c = a) iteratively.,"Nested Logarithms, Definition of Logarithm",False,MockSet_CAT_QA_001,Comprehension,"We are given the equation: log₂(log₃(log₄(x))) = 0.
+Quantitative Ability,40,882345112,12,,,"If log₂(log₃(log₄(x))) = 0, find x.",16,64,256,512,A,B,C,D,B,MCQ,Algebra,Logarithms,Easy,Solving nested logarithmic equations by applying the fundamental definition of a logarithm (log_b(a) = c <=> b^c = a) iteratively.,"Nested Logarithms, Definition of Logarithm",FALSE,MockSet_CAT_QA_001,Comprehension,"We are given the equation: log₂(log₃(log₄(x))) = 0.
 Step 1: Apply the definition of logarithm, b^c = a, to the outermost log.
 Here, base b=2 and result c=0. The argument 'a' is log₃(log₄(x)).
 So, log₃(log₄(x)) = 2⁰ = 1.
@@ -169,7 +169,7 @@ Step 3: Apply the definition one last time.
 Here, base b=4 and result c=3. The argument is x.
 So, x = 4³ = 64.
 The correct option is (B)."
-Quantitative Ability,40,882345113,13,,,"In a regular polygon, the ratio of an interior angle to its exterior angle is 7:2. How many diagonals does this polygon have?",20,27,35,44,A,B,C,D,B,MCQ,Geometry,Polygons,Easy,"Using the properties of regular polygons, specifically the relationship between interior and exterior angles, to find the number of sides and then calculating the number of diagonals.","Regular Polygon, Interior Angle, Exterior Angle, Number of Diagonals",False,MockSet_CAT_QA_001,Comprehension,"Let the number of sides of the regular polygon be n.
+Quantitative Ability,40,882345113,13,,,"In a regular polygon, the ratio of an interior angle to its exterior angle is 7:2. How many diagonals does this polygon have?",20,27,35,44,A,B,C,D,B,MCQ,Geometry,Polygons,Easy,"Using the properties of regular polygons, specifically the relationship between interior and exterior angles, to find the number of sides and then calculating the number of diagonals.","Regular Polygon, Interior Angle, Exterior Angle, Number of Diagonals",FALSE,MockSet_CAT_QA_001,Comprehension,"Let the number of sides of the regular polygon be n.
 Interior Angle (I) = (n-2) × 180 / n
 Exterior Angle (E) = 360 / n
 Also, a key property is that I + E = 180°.
@@ -184,7 +184,7 @@ Number of diagonals in a polygon with n sides is given by the formula: D = n(n-3
 For n=9, D = 9(9-3)/2 = 9(6)/2 = 54/2 = 27.
 The polygon has 27 diagonals.
 The correct option is (B)."
-Quantitative Ability,40,882345114,14,,,"Find the sum of all 3-digit numbers which leave a remainder of 2 when divided by 5, a remainder of 3 when divided by 7, and a remainder of 4 when divided by 9.",,,,,,,,,1416,TITA,Number System,Remainders,Hard,"Solving a system of linear congruences (Chinese Remainder Theorem) to find a general form of the numbers, then finding all numbers in a specific range (3-digit) and calculating their sum.","System of Congruences, Chinese Remainder Theorem, Sum of Numbers in Range, Number Properties",True,MockSet_CAT_QA_001,Analysis,"Let N be the number. We have the following congruences:
+Quantitative Ability,40,882345114,14,,,"Find the sum of all 3-digit numbers which leave a remainder of 2 when divided by 5, a remainder of 3 when divided by 7, and a remainder of 4 when divided by 9.",,,,,,,,,1416,TITA,Number System,Remainders,Hard,"Solving a system of linear congruences (Chinese Remainder Theorem) to find a general form of the numbers, then finding all numbers in a specific range (3-digit) and calculating their sum.","System of Congruences, Chinese Remainder Theorem, Sum of Numbers in Range, Number Properties",TRUE,MockSet_CAT_QA_001,Analysis,"Let N be the number. We have the following congruences:
 1. N ≡ 2 (mod 5)
 2. N ≡ 3 (mod 7)
 3. N ≡ 4 (mod 9)
@@ -205,7 +205,7 @@ For m=2, N = 315(2) + 157 = 630 + 157 = 787.
 For m=3, N = 315(3) + 157 = 945 + 157 = 1102 (which is a 4-digit number).
 So, the required 3-digit numbers are 157, 472, and 787.
 Sum = 157 + 472 + 787 = 1416."
-Quantitative Ability,40,882345115,15,,,"A works twice as fast as B, and B works one-third as fast as C. They work in a repeating cycle: A works alone for the first hour, B works alone for the second hour, C works alone for the third hour, then A and B work together for the fourth hour, B and C work together for the fifth hour, and C and A work together for the sixth hour. If the total work is completed in exactly two such 6-hour cycles, how many hours would C take to complete the work alone?",12,24,30,36,A,B,C,D,A,MCQ,Arithmetic,Time & Work,Hard,Calculating total work based on efficiency ratios and a complex work cycle involving individual and combined efforts.,"Efficiency Ratios, Work Cycle, Multiple Worker Types",False,MockSet_CAT_QA_001,Analysis,"First, establish the efficiency ratios. Let the efficiency of B be R_B.
+Quantitative Ability,40,882345115,15,,,"A works twice as fast as B, and B works one-third as fast as C. They work in a repeating cycle: A works alone for the first hour, B works alone for the second hour, C works alone for the third hour, then A and B work together for the fourth hour, B and C work together for the fifth hour, and C and A work together for the sixth hour. If the total work is completed in exactly two such 6-hour cycles, how many hours would C take to complete the work alone?",12,24,30,36,A,B,C,D,A,MCQ,Arithmetic,Time & Work,Hard,Calculating total work based on efficiency ratios and a complex work cycle involving individual and combined efforts.,"Efficiency Ratios, Work Cycle, Multiple Worker Types",FALSE,MockSet_CAT_QA_001,Analysis,"First, establish the efficiency ratios. Let the efficiency of B be R_B.
 Given: R_A = 2 × R_B and R_B = (1/3) × R_C.
 Let's choose a convenient value for R_B. Let R_B = 3 units/hr.
 Then, R_A = 2 × 3 = 6 units/hr.
@@ -224,7 +224,7 @@ Total Work = 2 × 54 = 108 units.
 Now, find the time C would take to complete this work alone.
 Time for C = Total Work / Efficiency of C = 108 / 9 = 12 hours.
 The correct option is (A)."
-Quantitative Ability,40,882345116,16,,,"The average monthly expenditure of a family for the first four months of a year was Rs. 2750. For the next three months, it was Rs. 2900, and for the last five months, it was Rs. 3120. If the total savings during the year were Rs. 5460, what was the average monthly income of the family (approximate to nearest Rs.)?",Rs. 3397,Rs. 3350,Rs. 3425,Rs. 3500,A,B,C,D,A,MCQ,Arithmetic,Averages,Medium,"Calculating total annual expenditure from monthly averages, finding total annual income by adding savings, and then calculating the average monthly income.","Average Calculation, Income, Expenditure, Savings",False,MockSet_CAT_QA_001,Application,"First, calculate the total annual expenditure.
+Quantitative Ability,40,882345116,16,,,"The average monthly expenditure of a family for the first four months of a year was Rs. 2750. For the next three months, it was Rs. 2900, and for the last five months, it was Rs. 3120. If the total savings during the year were Rs. 5460, what was the average monthly income of the family (approximate to nearest Rs.)?",Rs. 3397,Rs. 3350,Rs. 3425,Rs. 3500,A,B,C,D,A,MCQ,Arithmetic,Averages,Medium,"Calculating total annual expenditure from monthly averages, finding total annual income by adding savings, and then calculating the average monthly income.","Average Calculation, Income, Expenditure, Savings",FALSE,MockSet_CAT_QA_001,Application,"First, calculate the total annual expenditure.
 Expenditure for first 4 months = 4 × 2750 = Rs. 11000.
 Expenditure for next 3 months = 3 × 2900 = Rs. 8700.
 Expenditure for last 5 months = 5 × 3120 = Rs. 15600.
@@ -237,7 +237,7 @@ Average monthly income = Total Annual Income / 12 = 40760 / 12.
 40760 / 12 = 20380 / 6 = 10190 / 3 = 3396.66...
 Approximated to the nearest Rupee, the average monthly income is Rs. 3397.
 The correct option is (A)."
-Quantitative Ability,40,882345117,17,,,A five-digit number of the form 5X2Y6 is divisible by 72. Find the minimum possible value of X + Y.,,,,,,,,,5,TITA,Number System,Divisibility Rules,Medium,"Applying combined divisibility rules (for 72, which is 8 and 9) to find possible values of missing digits and then minimizing their sum.","Combined Divisibility, Divisibility by 8, Divisibility by 9, Missing Digits",True,MockSet_CAT_QA_001,Application,"A number divisible by 72 must be divisible by both 8 and 9 (since 8 and 9 are co-prime).
+Quantitative Ability,40,882345117,17,,,A five-digit number of the form 5X2Y6 is divisible by 72. Find the minimum possible value of X + Y.,,,,,,,,,5,TITA,Number System,Divisibility Rules,Medium,"Applying combined divisibility rules (for 72, which is 8 and 9) to find possible values of missing digits and then minimizing their sum.","Combined Divisibility, Divisibility by 8, Divisibility by 9, Missing Digits",TRUE,MockSet_CAT_QA_001,Application,"A number divisible by 72 must be divisible by both 8 and 9 (since 8 and 9 are co-prime).
 Divisibility by 8: The number formed by the last three digits, 2Y6, must be divisible by 8.
 Let's test values for Y: 200 is divisible by 8, so we need 10Y + 6 to be divisible by 8.
 - If Y=1, 10(1)+6 = 16. 16 is divisible by 8. So Y=1 is possible.
@@ -251,7 +251,7 @@ Case 1: Y = 1. The sum is 13 + X + 1 = 14 + X. For this to be divisible by 9, 14
 Case 2: Y = 5. The sum is 13 + X + 5 = 18 + X. For this to be divisible by 9, 18+X can be 18 or 27. This gives X=0 or X=9. Here, X+Y can be 0+5=5 or 9+5=14.
 Case 3: Y = 9. The sum is 13 + X + 9 = 22 + X. For this to be divisible by 9, 22+X must be 27. This gives X=5. Here, X+Y = 5+9=14.
 The possible values for X+Y are 5 and 14. The minimum possible value is 5."
-Quantitative Ability,40,882345118,18,,,"Two persons A and B start simultaneously from points P and Q towards each other. They meet at point M. After meeting, B takes 16 minutes more than A to reach P and Q respectively. If the ratio of speeds of A to B (S_A : S_B) is 5:4, find the total time (in minutes) B took to travel from Q to P.",64,80,100,72,A,B,C,D,B,MCQ,Arithmetic,"Time, Speed & Distance",Hard,"Using the proportionality concept for time taken after meeting, which states that the ratio of speeds is related to the square root of the ratio of times taken after meeting.","Relative Speed, Meeting Point, Time After Meeting Proportionality",False,MockSet_CAT_QA_001,Analysis,"Let the speeds of A and B be S_A and S_B. Let them meet after time t₀.
+Quantitative Ability,40,882345118,18,,,"Two persons A and B start simultaneously from points P and Q towards each other. They meet at point M. After meeting, B takes 16 minutes more than A to reach P and Q respectively. If the ratio of speeds of A to B (S_A : S_B) is 5:4, find the total time (in minutes) B took to travel from Q to P.",64,80,100,72,A,B,C,D,B,MCQ,Arithmetic,"Time, Speed & Distance",Hard,"Using the proportionality concept for time taken after meeting, which states that the ratio of speeds is related to the square root of the ratio of times taken after meeting.","Relative Speed, Meeting Point, Time After Meeting Proportionality",FALSE,MockSet_CAT_QA_001,Analysis,"Let the speeds of A and B be S_A and S_B. Let them meet after time t₀.
 Distance PM = S_A × t₀. Distance QM = S_B × t₀.
 After meeting, A travels QM and B travels PM.
 Let t_A' be the time for A to travel QM, so t_A' = QM / S_A = (S_B × t₀) / S_A.
@@ -271,7 +271,7 @@ t₀ = sqrt((256/9) × (400/9)) = sqrt((16²/3²) × (20²/3²)) = (16/3) × (20
 The total time for B to travel from Q to P is the time to reach the meeting point M (t₀) plus the time to travel from M to P (t_B').
 Total time for B = t₀ + t_B' = 320/9 + 400/9 = 720/9 = 80 minutes.
 The correct option is (B)."
-Quantitative Ability,40,882345119,19,,,The sum of an infinite arithmetico-geometric progression is 6. The first term of the AP part (which is also the first term of the AGP) is 2. The common ratio of the GP part is 1/2. What is the common difference of the AP part?,,,,,,,,,1,TITA,Algebra,Sequences & Series,Medium,Applying the formula for the sum of an infinite arithmetico-geometric progression (AGP) to find an unknown parameter (common difference).,"Arithmetico-Geometric Progression (AGP), Sum of Infinite Series, Common Difference",True,MockSet_CAT_QA_001,Application,"The formula for the sum of an infinite arithmetico-geometric progression (AGP) is S = a/(1-r) + dr/((1-r)²), where |r| < 1.
+Quantitative Ability,40,882345119,19,,,The sum of an infinite arithmetico-geometric progression is 6. The first term of the AP part (which is also the first term of the AGP) is 2. The common ratio of the GP part is 1/2. What is the common difference of the AP part?,,,,,,,,,1,TITA,Algebra,Sequences & Series,Medium,Applying the formula for the sum of an infinite arithmetico-geometric progression (AGP) to find an unknown parameter (common difference).,"Arithmetico-Geometric Progression (AGP), Sum of Infinite Series, Common Difference",TRUE,MockSet_CAT_QA_001,Application,"The formula for the sum of an infinite arithmetico-geometric progression (AGP) is S = a/(1-r) + dr/((1-r)²), where |r| < 1.
 Given values:
 Sum S = 6
 First term a = 2
@@ -289,7 +289,7 @@ Now, substitute the known values into the formula:
 2d = 2.
 d = 1.
 The common difference of the AP part is 1."
-Quantitative Ability,40,882345120,20,,,"A cone is formed by joining the straight edges of a sector of a circle of radius 15 cm. If the central angle of the sector is 216°, what is the radius of the base of the cone in cm?",6,7.5,9,10,A,B,C,D,C,MCQ,Geometry,Mensuration - 3D,Medium,"Understanding the relationship between a circular sector and the cone formed from it: the sector's radius becomes the cone's slant height, and the sector's arc length becomes the circumference of the cone's base.","Cone from Sector, Arc Length, Circumference, Slant Height",False,MockSet_CAT_QA_001,Application,"When a sector of a circle is folded to form a cone:
+Quantitative Ability,40,882345120,20,,,"A cone is formed by joining the straight edges of a sector of a circle of radius 15 cm. If the central angle of the sector is 216°, what is the radius of the base of the cone in cm?",6,7.5,9,10,A,B,C,D,C,MCQ,Geometry,Mensuration - 3D,Medium,"Understanding the relationship between a circular sector and the cone formed from it: the sector's radius becomes the cone's slant height, and the sector's arc length becomes the circumference of the cone's base.","Cone from Sector, Arc Length, Circumference, Slant Height",FALSE,MockSet_CAT_QA_001,Application,"When a sector of a circle is folded to form a cone:
 1. The radius of the sector becomes the slant height (L) of the cone.
 2. The arc length of the sector becomes the circumference of the base of the cone.
 Given: Radius of the sector, R_sec = 15 cm. Central angle of the sector, θ_sec = 216°.
@@ -304,7 +304,7 @@ Circumference of cone's base = 2πr_cone.
 So, 2πr_cone = 18π.
 Divide by 2π: r_cone = 9 cm.
 The correct option is (C)."
-Quantitative Ability,40,882345121,21,,,"A contractor undertakes to complete a project. He initially planned to use 60 workers to finish it in 100 days. After 40 days of work with these 60 workers, he realizes that only 1/3 of the total project work has been completed. How many additional workers must he employ to complete the project exactly on the originally planned time of 100 days, assuming all workers work at the same efficiency?",20,40,50,60,A,B,C,D,A,MCQ,Arithmetic,Time & Work,Medium,"Solving a contractor-based work problem by calculating remaining work and determining the required workforce to complete it within a deadline, using the concept of man-days.","Contractor Problem, Work Done, Efficiency, Additional Workers, Man-Days",False,MockSet_CAT_QA_001,Application,"We can use the concept of man-days. Let the total work be W.
+Quantitative Ability,40,882345121,21,,,"A contractor undertakes to complete a project. He initially planned to use 60 workers to finish it in 100 days. After 40 days of work with these 60 workers, he realizes that only 1/3 of the total project work has been completed. How many additional workers must he employ to complete the project exactly on the originally planned time of 100 days, assuming all workers work at the same efficiency?",20,40,50,60,A,B,C,D,A,MCQ,Arithmetic,Time & Work,Medium,"Solving a contractor-based work problem by calculating remaining work and determining the required workforce to complete it within a deadline, using the concept of man-days.","Contractor Problem, Work Done, Efficiency, Additional Workers, Man-Days",FALSE,MockSet_CAT_QA_001,Application,"We can use the concept of man-days. Let the total work be W.
 Work done in the first 40 days: 60 workers × 40 days = 2400 man-days.
 This work is equal to 1/3 of the total project: W/3 = 2400 man-days.
 From this, the total work required is W = 3 × 2400 = 7200 man-days.
@@ -319,7 +319,7 @@ So, 80 workers are needed in total for the remaining 60 days.
 Initially, there were 60 workers.
 Additional workers required = Total workers needed - Initial workers = 80 - 60 = 20.
 The correct option is (A)."
-Quantitative Ability,40,882345122,22,,,"In a test, 40% of students failed in Subject A, 35% failed in Subject B, and 15% failed in both. If 240 students passed in both subjects, what is the total number of students who appeared for the test?",,,,,,,,,600,TITA,Modern Maths,Set Theory & Venn Diagrams,Easy,"Using the principle of inclusion-exclusion in set theory to find the percentage of elements in the union of two sets, and then using this to find the complement (passed in both).","Percentage Based Sets, Union, Intersection, Passed, Failed",True,MockSet_CAT_QA_001,Comprehension,"Let A be the set of students who failed in Subject A, and B be the set of students who failed in Subject B.
+Quantitative Ability,40,882345122,22,,,"In a test, 40% of students failed in Subject A, 35% failed in Subject B, and 15% failed in both. If 240 students passed in both subjects, what is the total number of students who appeared for the test?",,,,,,,,,600,TITA,Modern Maths,Set Theory & Venn Diagrams,Easy,"Using the principle of inclusion-exclusion in set theory to find the percentage of elements in the union of two sets, and then using this to find the complement (passed in both).","Percentage Based Sets, Union, Intersection, Passed, Failed",TRUE,MockSet_CAT_QA_001,Comprehension,"Let A be the set of students who failed in Subject A, and B be the set of students who failed in Subject B.
 We are given:
 Percentage who failed in A, P(A) = 40%.
 Percentage who failed in B, P(B) = 35%.

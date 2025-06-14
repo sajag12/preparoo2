@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="{{ url_for('static', filename='timer-manager.js') }}"></script>
   <style>
     /* TITA specific styles */
     .tita-container {
@@ -61,8 +62,8 @@
         <span class="section-name-badge" id="current-section-name-badge">Loading Section...</span>
       </div>
       <div class="test-controls">
-        <span class="timer-chip"><span class="icon">⏱️</span> Section: <span id="section-timer" class="time">00:00</span></span>
-        <span class="timer-chip"><span class="icon">⏱️</span> Total: <span id="total-timer" class="time">00:00</span></span>
+        <span class="timer-chip"><span class="icon">⏱️</span> Section: <span id="section-timer" class="time">00:00</span> left</span>
+        <span class="timer-chip"><span class="icon">⏱️</span> Total: <span id="total-timer" class="time">00:00</span> left</span>
         <button class="instructions-btn" id="instructions-btn"><span class="icon">ℹ️</span> Instructions</button>
         <button class="calculator-btn" id="calculator-btn"><span class="icon" style="margin-right: 5px;">🧮</span> Calculator</button>
       </div>
@@ -404,7 +405,7 @@
       let currentSectionIndex = 0, currentQuestionIndex = 0;
       const sectionTimeSpent = new Array(testStructure.length).fill(0);
       let sectionStartTs = null;
-      let sectionTimeInSeconds = 0, totalTimeOverallTest = 0;
+      let sectionTimeInSeconds = 0, totalTimeOverallTest = null;
       let sectionIntervalId = null, totalIntervalId = null;
       const allQuestionStates = {};
       let questionStartTime = null;
@@ -463,13 +464,19 @@
           }
         }, 1000);
       }
+      
       function stopSectionTimer() {
         if (sectionIntervalId) { clearInterval(sectionIntervalId); sectionIntervalId = null; }
       }
 
       function startTotalTimer() {
-        totalTimeOverallTest = testStructure.reduce((sum, s) => sum + s.timeLimitMinutes, 0) * 60;
+        // Initialize total time only once when starting the test
+        if (totalTimeOverallTest === null || totalTimeOverallTest === undefined) {
+          totalTimeOverallTest = testStructure.reduce((sum, s) => sum + s.timeLimitMinutes, 0) * 60;
+        }
+        
         if (totalIntervalId || totalTimeOverallTest <= 0) return;
+        
         totalTimerDisplay.textContent = formatTime(totalTimeOverallTest);
         totalIntervalId = setInterval(() => {
           if (totalTimeOverallTest > 0) {
@@ -480,9 +487,16 @@
             stopSectionTimer(); // Stop section timer too
             alert("Total test time is up! Your test is being submitted.");
             // Force submit the test regardless of current section
-            submitTestDirectly();
+            performFinalSubmission();
           }
         }, 1000);
+      }
+      
+      function stopTotalTimer() {
+        if (totalIntervalId) { 
+          clearInterval(totalIntervalId); 
+          totalIntervalId = null; 
+        }
       }
 
       // Question-state management
@@ -591,6 +605,117 @@
         for (let k in counts) statusEls[k].textContent = counts[k];
       }
 
+      // Table parsing functions for LRDI sections
+      function parseMarkdownTable(content) {
+        // Handle markdown-style tables with pipe separators
+        const lines = content.split('\n');
+        let result = '';
+        let i = 0;
+        
+        while (i < lines.length) {
+          const line = lines[i].trim();
+          
+          // Check if this line starts a table (contains pipes and has content)
+          if (line.includes('|') && line.split('|').filter(cell => cell.trim()).length > 1) {
+            let tableLines = [];
+            let j = i;
+            
+            // Gather all consecutive table lines
+            while (j < lines.length) {
+              const currentLine = lines[j].trim();
+              if (currentLine.includes('|') && currentLine.split('|').filter(cell => cell.trim()).length > 1) {
+                tableLines.push(currentLine);
+                j++;
+              } else if (currentLine === '' && tableLines.length > 0) {
+                // Empty line after table - include it but stop gathering table lines
+                j++;
+                break;
+              } else {
+                // Non-table line - stop gathering
+                break;
+              }
+            }
+            
+            if (tableLines.length > 0) {
+              result += convertMarkdownTableToHTML(tableLines);
+              i = j;
+            } else {
+              result += processMarkdownText(line) + '<br>';
+              i++;
+            }
+          } else {
+            // Regular content - process markdown formatting
+            result += processMarkdownText(line) + '<br>';
+            i++;
+          }
+        }
+        
+        return result;
+      }
+
+      // Process markdown formatting (bold, italic, etc.)
+      function processMarkdownText(text) {
+        if (!text) return text;
+        
+        // Handle bold text (**text**)
+        text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        
+        // Handle italic text (*text*)
+        text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
+        
+        return text;
+      }
+
+      function convertMarkdownTableToHTML(tableLines) {
+        if (tableLines.length === 0) return '';
+        
+        let html = '<div class="table-container"><table class="data-table">';
+        let hasHeader = false;
+        
+        for (let i = 0; i < tableLines.length; i++) {
+          const line = tableLines[i].trim();
+          
+          // Skip separator lines (lines with only dashes, pipes, and spaces)
+          if (line.match(/^[\|\-\s:]+$/)) {
+            hasHeader = true; // This indicates the previous row was a header
+            continue;
+          }
+          
+          // Split by pipe and clean up cells
+          const cells = line.split('|')
+            .map(cell => cell.trim())
+            .filter(cell => cell !== ''); // Remove empty cells from start/end
+          
+          if (cells.length === 0) continue;
+          
+          // Determine if this should be a header row
+          const isHeaderRow = (i === 0 && !hasHeader) || (i === 0 && tableLines[1] && tableLines[1].match(/^[\|\-\s:]+$/));
+          const tag = isHeaderRow ? 'th' : 'td';
+          
+          html += '<tr>';
+          cells.forEach(cell => {
+            html += `<${tag}>${processMarkdownText(cell)}</${tag}>`;
+          });
+          html += '</tr>';
+        }
+        
+        html += '</table></div>';
+        return html;
+      }
+
+      // Check if current section is LRDI
+      function isLRDISection() {
+        const currentTest = testConfigs[testId];
+        if (!currentTest) return false;
+        
+        const section = currentTest.sections[currentSectionIndex];
+        if (!section) return false;
+        
+        return section.name.toLowerCase().includes('lrdi') || 
+               section.name.toLowerCase().includes('logical') || 
+               section.name.toLowerCase().includes('data interpretation');
+      }
+
       // Render a question
       function loadQuestion(qIdx) {
         // Record time for previous question if it exists
@@ -616,7 +741,12 @@
         sidebarSectionTitle.textContent = section.name;
 
         if (q.passageOrSetID && q.passageContent) {
-          passageContent.innerHTML = q.passageContent.replace(/\n/g,'<br>');
+          // Use table parser for LRDI sections, regular text processing for others
+          if (isLRDISection()) {
+            passageContent.innerHTML = parseMarkdownTable(q.passageContent);
+          } else {
+            passageContent.innerHTML = q.passageContent.replace(/\n/g,'<br>');
+          }
           passageScrollContainer.style.display = 'block';
         } else {
           passageScrollContainer.style.display = 'none';

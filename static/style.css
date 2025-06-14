@@ -1735,7 +1735,9 @@ button {
     color: #374151;       
     padding: 0; /* Padding is on the scroll container now */
     border: none; /* Border is on the scroll container now */
-    background-color: transparent; 
+    background-color: transparent;
+    width: 100%;
+    overflow-x: auto;
   }
 
   .question-prompt {
@@ -3651,6 +3653,112 @@ body.review-page {
 
   .question-content {
     padding: 20px;
+  }
+}
+
+/* =================================== */
+/* ===== TABLE STYLES FOR LRDI ===== */
+/* =================================== */
+
+.table-container {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Constrain table width to force horizontal scroll */
+  position: relative;
+  /* Webkit scrollbar styling for better appearance */
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f7fafc;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+.data-table {
+  width: auto;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 600px; /* Forces horizontal scroll for wide tables */
+  white-space: nowrap;
+  table-layout: fixed;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  border-right: 1px solid #f1f5f9;
+  white-space: nowrap;
+  min-width: 100px; /* Ensures readable column width */
+}
+
+.data-table th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #374151;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.data-table td:last-child,
+.data-table th:last-child {
+  border-right: none;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Bold text styling in passage content */
+.passage-scroll-container strong {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.passage-scroll-container em {
+  font-style: italic;
+  color: #374151;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .table-container {
+    margin: 0.5rem 0;
+  }
+  
+  .data-table {
+    font-size: 12px;
+    min-width: 500px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 8px 12px;
   }
 }
 

@@ -1,5 +1,5 @@
 SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
-QA,40,492137856,1,,,"A train running from City P to City Q maintains a constant usual speed. Ninety kilometres from P the driver is ordered to reduce speed to 75% of the usual speed, after which the train reaches Q 21 minutes late. Had the same order been given 150 km from P and the train thereafter run at exactly half its usual speed, it would have been only 18 minutes late. What is the train’s usual speed, in km/h?",,,,,,,,,80,TITA,Arithmetic,"Time, Speed & Distance (Trains)",Hard,"Time, Speed & Distance (Trains)","accident speed change, simultaneous equations, proportionality",True,MockSet1_QA_Rev1,Evaluating,"Let the usual speed be v km/h and the total distance be D km.
+QA,40,492137856,1,,,"A train running from City P to City Q maintains a constant usual speed. Ninety kilometres from P the driver is ordered to reduce speed to 75% of the usual speed, after which the train reaches Q 21 minutes late. Had the same order been given 150 km from P and the train thereafter run at exactly half its usual speed, it would have been only 18 minutes late. What is the train’s usual speed, in km/h?",,,,,,,,,80,TITA,Arithmetic,"Time, Speed & Distance (Trains)",Hard,"Time, Speed & Distance (Trains)","accident speed change, simultaneous equations, proportionality",TRUE,MockSet1_QA_Rev1,Evaluating,"Let the usual speed be v km/h and the total distance be D km.
 The usual time taken for a distance x is x/v.
 If speed is reduced to 0.75v, the time taken is x/(0.75v) = (4/3)(x/v). Extra time = (1/3)(x/v).
 If speed is reduced to 0.5v, the time taken is x/(0.5v) = 2(x/v). Extra time = (x/v).
@@ -14,12 +14,12 @@ Subtracting Equation 2 from Equation 1:
 60/v = 15/20 = 3/4
 3v = 60 * 4 = 240
 v = 240/3 = 80."
-QA,40,583201947,2,,,"The price of rice rises by 25%, and a household responds by reducing its consumption by 20%. How does its weekly expenditure on rice change?",Decreases by 16%,Increases by 5%,Decreases by 5%,No change,A,B,C,D,D,MCQ,Arithmetic,Percentages,Easy,Percentages,"successive change, multiplying factor",False,MockSet1_QA_Rev1,Applying,"Let initial price = P, initial consumption = C. Initial expenditure = P * C.
+QA,40,583201947,2,,,"The price of rice rises by 25%, and a household responds by reducing its consumption by 20%. How does its weekly expenditure on rice change?",Decreases by 16%,Increases by 5%,Decreases by 5%,No change,A,B,C,D,D,MCQ,Arithmetic,Percentages,Easy,Percentages,"successive change, multiplying factor",FALSE,MockSet1_QA_Rev1,Applying,"Let initial price = P, initial consumption = C. Initial expenditure = P * C.
 New price = P * (1 + 25/100) = 1.25P.
 New consumption = C * (1 - 20/100) = 0.80C.
 New expenditure = (1.25P) * (0.80C) = (1.25 * 0.80) * (P * C) = 1.00 * (P * C).
 The expenditure remains the same."
-QA,40,195824370,3,,,A circle has radius 7 cm. A chord is at a perpendicular distance of 4 cm from the centre. Find the length of the chord.,7 * sqrt(3) cm,2 * sqrt(33) cm,8 * sqrt(2) cm,5 * sqrt(5) cm,A,B,C,D,B,MCQ,Geometry,Circles (Chords),Easy,Circles (Chords),"perpendicular distance chord length, Pythagoras theorem",False,MockSet1_QA_Rev1,Applying,"Let R be the radius, d be the perpendicular distance from the centre to the chord, and L be the length of the chord.
+QA,40,195824370,3,,,A circle has radius 7 cm. A chord is at a perpendicular distance of 4 cm from the centre. Find the length of the chord.,7 * sqrt(3) cm,2 * sqrt(33) cm,8 * sqrt(2) cm,5 * sqrt(5) cm,A,B,C,D,B,MCQ,Geometry,Circles (Chords),Easy,Circles (Chords),"perpendicular distance chord length, Pythagoras theorem",FALSE,MockSet1_QA_Rev1,Applying,"Let R be the radius, d be the perpendicular distance from the centre to the chord, and L be the length of the chord.
 The perpendicular from the centre bisects the chord. So, (L/2)^2 + d^2 = R^2.
 Given R = 7 cm, d = 4 cm.
 (L/2)^2 + 4^2 = 7^2
@@ -27,7 +27,7 @@ Given R = 7 cm, d = 4 cm.
 (L/2)^2 = 49 - 16 = 33
 L/2 = sqrt(33)
 L = 2 * sqrt(33) cm."
-QA,40,820569134,4,,,"The ratio of A to B is 3 : 4, and the ratio of B to C is 5 : 6. If 2A - B + 3C = 246, find C.",,,,,,,,,72,TITA,Arithmetic,"Ratio, Proportion & Variation",Medium,"Ratio, Proportion & Variation","k-method, combined ratios, linear equation",True,MockSet1_QA_Rev1,Analyzing,"Given A : B = 3 : 4 and B : C = 5 : 6.
+QA,40,820569134,4,,,"The ratio of A to B is 3 : 4, and the ratio of B to C is 5 : 6. If 2A - B + 3C = 246, find C.",,,,,,,,,72,TITA,Arithmetic,"Ratio, Proportion & Variation",Medium,"Ratio, Proportion & Variation","k-method, combined ratios, linear equation",TRUE,MockSet1_QA_Rev1,Analyzing,"Given A : B = 3 : 4 and B : C = 5 : 6.
 To combine, make B common:
 A : B = 3 : 4 = (3*5) : (4*5) = 15 : 20
 B : C = 5 : 6 = (5*4) : (6*4) = 20 : 24
@@ -40,7 +40,7 @@ Given 2A - B + 3C = 246.
 82k = 246
 k = 246/82 = 3.
 We need to find C = 24k = 24 * 3 = 72."
-QA,40,647318529,5,,,The quadratics x^2 - (k+3)x + 2k = 0 and x^2 - (k+5)x + 3k = 0 have exactly one root in common. Which value(s) of k satisfy this?,k=0 only,k=2 only,k=0 or k=2,No real k,A,B,C,D,C,MCQ,Algebra,Quadratic Equations,Hard,Quadratic Equations,"common root condition, solving for parameter",False,MockSet1_QA_Rev1,Evaluating,"Let the common root be r.
+QA,40,647318529,5,,,The quadratics x^2 - (k+3)x + 2k = 0 and x^2 - (k+5)x + 3k = 0 have exactly one root in common. Which value(s) of k satisfy this?,k=0 only,k=2 only,k=0 or k=2,No real k,A,B,C,D,C,MCQ,Algebra,Quadratic Equations,Hard,Quadratic Equations,"common root condition, solving for parameter",FALSE,MockSet1_QA_Rev1,Evaluating,"Let the common root be r.
 Then r^2 - (k+3)r + 2k = 0 (1)
 And r^2 - (k+5)r + 3k = 0 (2)
 Subtracting (2) from (1):
@@ -62,7 +62,7 @@ If k=2:
 Eq 1: x^2-5x+4=0 => (x-1)(x-4)=0 (roots 1, 4)
 Eq 2: x^2-7x+6=0 => (x-1)(x-6)=0 (roots 1, 6). Common root x=1.
 Both values of k give exactly one common root."
-QA,40,732915468,6,,,"If log_3(x) + log_x(3) = 10/3, then x equals",27 only,3^(1/3) only,27 or 3^(1/3),9,A,B,C,D,C,MCQ,Algebra,Logarithms,Medium,Logarithms,"reciprocal logs, quadratic transformation",False,MockSet1_QA_Rev1,Analyzing,"Let y = log_3(x). Then log_x(3) = 1/log_3(x) = 1/y.
+QA,40,732915468,6,,,"If log_3(x) + log_x(3) = 10/3, then x equals",27 only,3^(1/3) only,27 or 3^(1/3),9,A,B,C,D,C,MCQ,Algebra,Logarithms,Medium,Logarithms,"reciprocal logs, quadratic transformation",FALSE,MockSet1_QA_Rev1,Analyzing,"Let y = log_3(x). Then log_x(3) = 1/log_3(x) = 1/y.
 The equation becomes y + 1/y = 10/3.
 Multiplying by 3y: 3y^2 + 3 = 10y
 3y^2 - 10y + 3 = 0
@@ -72,7 +72,7 @@ Multiplying by 3y: 3y^2 + 3 = 10y
 So, y=3 or y=1/3.
 If y=3, then log_3(x) = 3 => x = 3^3 = 27.
 If y=1/3, then log_3(x) = 1/3 => x = 3^(1/3)."
-QA,40,486752903,7,,,"A alone can finish a job in 12 days, B in 18 days and C in 24 days. A works alone for 2 days; then A and B work together for the next 4 days; thereafter A and C work together till completion. In exactly how many days from the start is the job finished? (Give the answer as an irreducible fraction.)",,,,,,,,,74/9,TITA,Arithmetic,Time & Work,Hard,Time & Work,"multi-stage work, alternate collaboration, fractional answer, LCM method",True,MockSet1_QA_Rev1,Evaluating,"Let the total work be LCM(12, 18, 24) = 72 units.
+QA,40,486752903,7,,,"A alone can finish a job in 12 days, B in 18 days and C in 24 days. A works alone for 2 days; then A and B work together for the next 4 days; thereafter A and C work together till completion. In exactly how many days from the start is the job finished? (Give the answer as an irreducible fraction.)",,,,,,,,,74/9,TITA,Arithmetic,Time & Work,Hard,Time & Work,"multi-stage work, alternate collaboration, fractional answer, LCM method",TRUE,MockSet1_QA_Rev1,Evaluating,"Let the total work be LCM(12, 18, 24) = 72 units.
 Rate of A = 72/12 = 6 units/day.
 Rate of B = 72/18 = 4 units/day.
 Rate of C = 72/24 = 3 units/day.
@@ -84,7 +84,7 @@ Remaining work = 60 - 40 = 20 units.
 Remaining work is done by A and C. Rate (A+C) = 6 + 3 = 9 units/day.
 Time taken by A and C = (Remaining work)/(Rate (A+C)) = 20/9 days.
 Total days = 2 + 4 + 20/9 = 6 + 20/9 = (54+20)/9 = 74/9 days."
-QA,40,914657320,8,,,"Machines M1, M2 and M3 produce 25%, 35% and 40% of a factory’s output. Their respective defect rates are 2%, 3% and 4%. An item chosen at random is defective. The probability that it was produced by M2 is",2/11,1/3,3/8,5/9,A,B,C,D,B,MCQ,Modern Mathematics,Probability,Hard,Probability,"Bayes theorem, conditional probability",False,MockSet1_QA_Rev1,Evaluating,"Let D be the event that an item is defective.
+QA,40,914657320,8,,,"Machines M1, M2 and M3 produce 25%, 35% and 40% of a factory’s output. Their respective defect rates are 2%, 3% and 4%. An item chosen at random is defective. The probability that it was produced by M2 is","""2/11""","""1/3""","""3/8""","""5/9""",A,B,C,D,B,MCQ,Modern Mathematics,Probability,Hard,Probability,"Bayes theorem, conditional probability",FALSE,MockSet1_QA_Rev1,Evaluating,"Let D be the event that an item is defective.
 Let M1, M2, M3 be the events that the item was produced by machine M1, M2, M3 respectively.
 P(M1) = 0.25, P(M2) = 0.35, P(M3) = 0.40.
 P(D|M1) = 0.02, P(D|M2) = 0.03, P(D|M3) = 0.04.
@@ -93,7 +93,7 @@ P(M2|D) = (P(D|M2)P(M2)) / (P(D|M1)P(M1) + P(D|M2)P(M2) + P(D|M3)P(M3))
 P(M2|D) = (0.03 * 0.35) / ((0.02 * 0.25) + (0.03 * 0.35) + (0.04 * 0.40))
 P(M2|D) = 0.0105 / (0.0050 + 0.0105 + 0.0160)
 P(M2|D) = 0.0105 / 0.0315 = 105/315 = 1/3."
-QA,40,561247890,9,,,A 40-litre mixture of milk and water is in the ratio 3 : 1. How many litres of pure water must be added so that milk becomes 60% of the new mixture?,8,10,12,15,A,B,C,D,B,MCQ,Arithmetic,Mixtures & Alligations,Easy,Mixtures & Alligations,"percentage composition, dilution",False,MockSet1_QA_Rev1,Applying,"Initial mixture = 40 litres. Ratio of milk to water = 3 : 1.
+QA,40,561247890,9,,,A 40-litre mixture of milk and water is in the ratio 3 : 1. How many litres of pure water must be added so that milk becomes 60% of the new mixture?,8,10,12,15,A,B,C,D,B,MCQ,Arithmetic,Mixtures & Alligations,Easy,Mixtures & Alligations,"percentage composition, dilution",FALSE,MockSet1_QA_Rev1,Applying,"Initial mixture = 40 litres. Ratio of milk to water = 3 : 1.
 Initial milk = (3/(3+1)) * 40 = (3/4) * 40 = 30 litres.
 Initial water = (1/4) * 40 = 10 litres.
 Let w litres of pure water be added.
@@ -107,7 +107,7 @@ So, (Milk)/(Total Mixture) = 0.60
 150 = 120 + 3w
 30 = 3w
 w = 10 litres."
-QA,40,308129754,10,,,How many integers satisfy |2x-5| < 3 and |x+1| > 4 simultaneously?,,,,,,,,,0,TITA,Algebra,Inequalities & Modulus,Medium,Inequalities & Modulus,"compound inequalities, intersection, integer solutions",True,MockSet1_QA_Rev1,Analyzing,"First inequality: |2x-5| < 3
+QA,40,308129754,10,,,How many integers satisfy |2x-5| < 3 and |x+1| > 4 simultaneously?,,,,,,,,,0,TITA,Algebra,Inequalities & Modulus,Medium,Inequalities & Modulus,"compound inequalities, intersection, integer solutions",TRUE,MockSet1_QA_Rev1,Analyzing,"First inequality: |2x-5| < 3
 -3 < 2x-5 < 3
 -3+5 < 2x < 3+5
 2 < 2x < 8
@@ -122,12 +122,12 @@ We need the intersection of (1 < x < 4) AND (x > 3 OR x < -5).
 Intersection of (1 < x < 4) and (x > 3) is 3 < x < 4. No integers here.
 Intersection of (1 < x < 4) and (x < -5) is an empty set.
 Thus, there are no integers satisfying both conditions simultaneously."
-QA,40,879410236,11,,,The sum of the first n terms of a sequence is S_n = 5n^2 + 3n. What is the 12th term of the sequence?,108,114,118,124,A,B,C,D,C,MCQ,Algebra,Sequences & Series (AP),Easy,Sequences & Series (AP),"sum-to-term relation, T_n = S_n - S_(n-1)",False,MockSet1_QA_Rev1,Applying,"The n-th term T_n of a sequence is given by S_n - S_(n-1) (for n>1).
+QA,40,879410236,11,,,The sum of the first n terms of a sequence is S_n = 5n^2 + 3n. What is the 12th term of the sequence?,108,114,118,124,A,B,C,D,C,MCQ,Algebra,Sequences & Series (AP),Easy,Sequences & Series (AP),"sum-to-term relation, T_n = S_n - S_(n-1)",FALSE,MockSet1_QA_Rev1,Applying,"The n-th term T_n of a sequence is given by S_n - S_(n-1) (for n>1).
 T_12 = S_12 - S_11.
 S_12 = 5*(12^2) + 3*(12) = 5*(144) + 36 = 720 + 36 = 756.
 S_11 = 5*(11^2) + 3*(11) = 5*(121) + 33 = 605 + 33 = 638.
 T_12 = 756 - 638 = 118."
-QA,40,693720415,12,,,"The areas of two similar triangles differ by 165 cm², and the ratio of their corresponding sides is 4 : 7. The area of the smaller triangle is",64 cm²,80 cm²,96 cm²,105 cm²,A,B,C,D,B,MCQ,Geometry,Similarity (Areas),Medium,Similarity (Areas),"area ratio, side ratio, difference",False,MockSet1_QA_Rev1,Analyzing,"Let the sides of the two similar triangles be s_1 and s_2, and their areas be A_1 and A_2.
+QA,40,693720415,12,,,"The areas of two similar triangles differ by 165 cm², and the ratio of their corresponding sides is 4 : 7. The area of the smaller triangle is",64 cm²,80 cm²,96 cm²,105 cm²,A,B,C,D,B,MCQ,Geometry,Similarity (Areas),Medium,Similarity (Areas),"area ratio, side ratio, difference",FALSE,MockSet1_QA_Rev1,Analyzing,"Let the sides of the two similar triangles be s_1 and s_2, and their areas be A_1 and A_2.
 Given s_1 : s_2 = 4 : 7.
 The ratio of their areas is A_1 : A_2 = s_1^2 : s_2^2 = 4^2 : 7^2 = 16 : 49.
 Let A_1 = 16k and A_2 = 49k.
@@ -135,7 +135,7 @@ The difference in areas is A_2 - A_1 = 49k - 16k = 33k.
 Given 33k = 165 cm^2.
 k = 165/33 = 5.
 The area of the smaller triangle is A_1 = 16k = 16 * 5 = 80 cm^2."
-QA,40,257984631,13,,,"A sum of ₹10,000 earns 10% interest in the first year, 12% in the second year and 8% in the third year, with annual compounding. Find the value of the investment, in rupees, at the end of three years. (Round to the nearest rupee.)",,,,,,,,,13306,TITA,Arithmetic,Compound Interest,Medium,Compound Interest,"variable rates, annual compounding, successive percentage change",True,MockSet1_QA_Rev1,Analyzing,"Initial sum P = ₹10,000.
+QA,40,257984631,13,,,"A sum of ₹10,000 earns 10% interest in the first year, 12% in the second year and 8% in the third year, with annual compounding. Find the value of the investment, in rupees, at the end of three years. (Round to the nearest rupee.)",,,,,,,,,13306,TITA,Arithmetic,Compound Interest,Medium,Compound Interest,"variable rates, annual compounding, successive percentage change",TRUE,MockSet1_QA_Rev1,Analyzing,"Initial sum P = ₹10,000.
 Rate for 1st year r_1 = 10% = 0.10.
 Rate for 2nd year r_2 = 12% = 0.12.
 Rate for 3rd year r_3 = 8% = 0.08.
@@ -147,7 +147,7 @@ Value after 3 years = 12320*(1+0.08) = 12320 * 1.08.
 Value = 12320 + 985.6 = ₹13305.6.
 Rounding to the nearest rupee, the value is ₹13,306.
 Alternatively: 10000 * 1.10 * 1.12 * 1.08 = 13305.6."
-QA,40,140968523,14,,,"In a class the average score of the girls is 68 and that of the boys is 72. If the overall average is 70 and there are 50 students in the class, the number of boys is",20,25,30,32,A,B,C,D,B,MCQ,Arithmetic,Averages & Weighted Averages,Medium,Averages & Weighted Averages,"combined average equation, solving for unknowns",False,MockSet1_QA_Rev1,Analyzing,"Let N_g be the number of girls and N_b be the number of boys. Total students = 50.
+QA,40,140968523,14,,,"In a class the average score of the girls is 68 and that of the boys is 72. If the overall average is 70 and there are 50 students in the class, the number of boys is",20,25,30,32,A,B,C,D,B,MCQ,Arithmetic,Averages & Weighted Averages,Medium,Averages & Weighted Averages,"combined average equation, solving for unknowns",FALSE,MockSet1_QA_Rev1,Analyzing,"Let N_g be the number of girls and N_b be the number of boys. Total students = 50.
 N_g + N_b = 50.
 Average score of girls = 68. Sum of scores of girls = 68 * N_g.
 Average score of boys = 72. Sum of scores of boys = 72 * N_b.
@@ -160,7 +160,7 @@ Since N_g = 50 - N_b:
 4 * N_b = 3500 - 3400 = 100
 N_b = 100/4 = 25.
 Number of boys = 25."
-QA,40,970562418,15,,,What is the highest power of 12 that exactly divides 100! ?,44,46,48,50,A,B,C,D,C,MCQ,Number System,Highest Power / Factorials,Medium,Highest Power / Factorials,"Legendre formula, composite divisor, prime factorization",False,MockSet1_QA_Rev1,Analyzing,"We need the highest power of 12 = 2^2 * 3 that divides 100!.
+QA,40,970562418,15,,,What is the highest power of 12 that exactly divides 100! ?,44,46,48,50,A,B,C,D,C,MCQ,Number System,Highest Power / Factorials,Medium,Highest Power / Factorials,"Legendre formula, composite divisor, prime factorization",FALSE,MockSet1_QA_Rev1,Analyzing,"We need the highest power of 12 = 2^2 * 3 that divides 100!.
 First, find the highest power of 2 in 100! using Legendre's formula:
 floor(100/2) + floor(100/4) + floor(100/8) + floor(100/16) + floor(100/32) + floor(100/64)
 = 50 + 25 + 12 + 6 + 3 + 1 = 97. So, 100! contains 2^97.
@@ -171,7 +171,7 @@ For 12^k = (2^2)^k * 3^k = 2^(2k) * 3^k.
 We need 2k <= 97 => k <= floor(97/2) = 48.
 And we need k <= 48.
 The highest power k is limited by the minimum of these constraints, so k = min(48, 48) = 48."
-QA,40,834125790_Rev1,16,,,Six married couples are to be seated around a round table. In how many ways can they be seated if all the men sit together and all the women sit together?,,,,,,,,,518400,TITA,Modern Mathematics,Permutations & Combinations,Hard,Permutations & Combinations,"circular arrangement, grouping, factorial",True,MockSet1_QA_Rev1,Evaluating,"There are 6 men and 6 women (6 couples). They are to be seated around a round table.
+QA,40,834125790_Rev1,16,,,Six married couples are to be seated around a round table. In how many ways can they be seated if all the men sit together and all the women sit together?,,,,,,,,,518400,TITA,Modern Mathematics,Permutations & Combinations,Hard,Permutations & Combinations,"circular arrangement, grouping, factorial",TRUE,MockSet1_QA_Rev1,Evaluating,"There are 6 men and 6 women (6 couples). They are to be seated around a round table.
 Condition: All men sit together, and all women sit together.
 Consider the group of 6 men as one block (M) and the group of 6 women as one block (W).
 These two blocks (M and W) can be arranged around a round table in (2-1)! = 1! = 1 way.
@@ -180,14 +180,14 @@ Within the block of 6 women, the women can be arranged in 6! ways.
 Total number of arrangements = 1 * 6! * 6!.
 6! = 720.
 Total arrangements = 1 * 720 * 720 = 518400."
-QA,40,612453908,17,,,A ladder 13 m long leans against a vertical wall with its foot 5 m from the wall’s base. The height in metres that the ladder reaches up the wall is,11,12,10,sqrt(194),A,B,C,D,B,MCQ,Geometry,Triangles (Right-angled),Easy,Triangles (Right-angled),"Pythagorean theorem, Pythagorean triple",False,MockSet1_QA_Rev1,Applying,"Let L be the length of the ladder, b be the distance of the foot of the ladder from the wall's base, and h be the height the ladder reaches up the wall.
+QA,40,612453908,17,,,A ladder 13 m long leans against a vertical wall with its foot 5 m from the wall’s base. The height in metres that the ladder reaches up the wall is,11,12,10,sqrt(194),A,B,C,D,B,MCQ,Geometry,Triangles (Right-angled),Easy,Triangles (Right-angled),"Pythagorean theorem, Pythagorean triple",FALSE,MockSet1_QA_Rev1,Applying,"Let L be the length of the ladder, b be the distance of the foot of the ladder from the wall's base, and h be the height the ladder reaches up the wall.
 By Pythagoras theorem: b^2 + h^2 = L^2.
 Given L=13 m, b=5 m.
 5^2 + h^2 = 13^2
 25 + h^2 = 169
 h^2 = 169 - 25 = 144
 h = sqrt(144) = 12 m."
-QA,40,735419862,18,,,"Pipe A can fill a tank in 8 h and Pipe B in 12 h. Both are opened together for 4 h, after which an outlet C that can empty the full tank in 16 h is also opened while A and B continue to run. How many additional hours are needed to fill the tank completely? (Give the answer as an irreducible fraction if necessary, e.g., 7/3)",,,,,,,,,8/7,TITA,Arithmetic,Pipes & Cisterns,Hard,Pipes & Cisterns,"multi-stage flow, inlet-outlet combination, work-rate",True,MockSet1_QA_Rev1,Evaluating,"Rate of Pipe A = 1/8 tank/hour.
+QA,40,735419862,18,,,"Pipe A can fill a tank in 8 h and Pipe B in 12 h. Both are opened together for 4 h, after which an outlet C that can empty the full tank in 16 h is also opened while A and B continue to run. How many additional hours are needed to fill the tank completely? (Give the answer as decimal rounded to two places)",,,,,,,,,1.14,TITA,Arithmetic,Pipes & Cisterns,Hard,Pipes & Cisterns,"multi-stage flow, inlet-outlet combination, work-rate",TRUE,MockSet1_QA_Rev1,Evaluating,"Rate of Pipe A = 1/8 tank/hour.
 Rate of Pipe B = 1/12 tank/hour.
 Rate of Outlet C = 1/16 tank/hour (emptying).
 Combined rate of A and B = 1/8 + 1/12 = (3+2)/24 = 5/24 tank/hour.
@@ -200,17 +200,17 @@ Net rate = (1/8 + 1/12) - 1/16 = 5/24 - 1/16.
 LCM(24, 16) = 48.
 Net rate = 10/48 - 3/48 = 7/48 tank/hour (filling).
 Additional time needed = (Remaining work)/(Net rate) = (1/6) / (7/48) = (1/6) * (48/7) = 48/42 = 8/7 hours."
-QA,40,487930156,19,,,Define f(x) = (2x)/(1+x) for x != -1. The value of f(f(f(2))) equals,32/27,16/15,4/3,8/5,A,B,C,D,B,MCQ,Algebra,Functions & Composition,Medium,Functions & Composition,"iterated rational function, step-by-step evaluation",False,MockSet1_QA_Rev1,Analyzing,"Given f(x) = (2x)/(1+x).
+QA,40,487930156,19,,,Define f(x) = (2x)/(1+x) for x != -1. The value of f(f(f(2))) equals,"""32/27""","""16/15""","""4/3""","""8/5""",A,B,C,D,B,MCQ,Algebra,Functions & Composition,Medium,Functions & Composition,"iterated rational function, step-by-step evaluation",FALSE,MockSet1_QA_Rev1,Analyzing,"Given f(x) = (2x)/(1+x).
 f(2) = (2*2)/(1+2) = 4/3.
 f(f(2)) = f(4/3) = (2 * (4/3)) / (1 + (4/3)) = (8/3) / ((3+4)/3) = (8/3) / (7/3) = 8/7.
 f(f(f(2))) = f(8/7) = (2 * (8/7)) / (1 + (8/7)) = (16/7) / ((7+8)/7) = (16/7) / (15/7) = 16/15."
-QA,40,209876541,20,,,"A frustum of a right circular cone has lower radius 5 cm, upper radius 3 cm and height 12 cm. Its volume in cubic centimetres is",204 * pi,196 * pi,180 * pi,168 * pi,A,B,C,D,B,MCQ,Geometry,Mensuration – 3D (Frustum),Medium,Mensuration – 3D (Frustum),"volume formula application, cone frustum",False,MockSet1_QA_Rev1,Analyzing,"Volume of a frustum of a cone is V = (1/3) * pi * h * (R^2 + r^2 + Rr), where h is height, R is lower radius, r is upper radius.
+QA,40,209876541,20,,,"A frustum of a right circular cone has lower radius 5 cm, upper radius 3 cm and height 12 cm. Its volume in cubic centimetres is",204 * pi,196 * pi,180 * pi,168 * pi,A,B,C,D,B,MCQ,Geometry,Mensuration – 3D (Frustum),Medium,Mensuration – 3D (Frustum),"volume formula application, cone frustum",FALSE,MockSet1_QA_Rev1,Analyzing,"Volume of a frustum of a cone is V = (1/3) * pi * h * (R^2 + r^2 + Rr), where h is height, R is lower radius, r is upper radius.
 Given R=5 cm, r=3 cm, h=12 cm.
 V = (1/3) * pi * (12) * (5^2 + 3^2 + 5*3)
 V = 4 * pi * (25 + 9 + 15)
 V = 4 * pi * (49)
 V = 196 * pi cm^3."
-QA,40,368419752,21,,,Find the minimum value of |x-3| + |x+1| + |x-7| for real x.,,,,,,,,,8,TITA,Algebra,Modulus (Absolute Values),Medium,Modulus (Absolute Values),"sum of distances, median property, minimization",True,MockSet1_QA_Rev1,Analyzing,"The expression is S(x) = |x-3| + |x-(-1)| + |x-7|.
+QA,40,368419752,21,,,Find the minimum value of |x-3| + |x+1| + |x-7| for real x.,,,,,,,,,8,TITA,Algebra,Modulus (Absolute Values),Medium,Modulus (Absolute Values),"sum of distances, median property, minimization",TRUE,MockSet1_QA_Rev1,Analyzing,"The expression is S(x) = |x-3| + |x-(-1)| + |x-7|.
 This represents the sum of distances of a point x on the number line from the points -1, 3, and 7.
 For an odd number of points, this sum is minimized when x is the median of these points.
 The points are -1, 3, 7. The median is 3.
@@ -218,7 +218,7 @@ So, the minimum value occurs at x=3.
 Minimum value = |3-3| + |3-(-1)| + |3-7|
 = |0| + |3+1| + |-4|
 = 0 + 4 + 4 = 8."
-QA,40,596214873,22,,,"In a college, 60% of the students study Mathematics and 70% study English; 20% study neither subject. If a student is selected at random, the probability that the student studies both Mathematics and English is",0.30,0.40,0.50,0.60,A,B,C,D,C,MCQ,Arithmetic,Percentages (Set Based) / Probability,Medium,Percentages (Set Based) / Probability,"Venn diagram, inclusion–exclusion principle, set theory probability",False,MockSet1_QA_Rev1,Analyzing,"Let M be the event that a student studies Mathematics, and E be the event that a student studies English.
+QA,40,596214873,22,,,"In a college, 60% of the students study Mathematics and 70% study English; 20% study neither subject. If a student is selected at random, the probability that the student studies both Mathematics and English is",0.3,0.4,0.5,0.6,A,B,C,D,C,MCQ,Arithmetic,Percentages (Set Based) / Probability,Medium,Percentages (Set Based) / Probability,"Venn diagram, inclusion–exclusion principle, set theory probability",FALSE,MockSet1_QA_Rev1,Analyzing,"Let M be the event that a student studies Mathematics, and E be the event that a student studies English.
 P(M) = 0.60.
 P(E) = 0.70.
 Percentage studying neither subject = 20%. So, P(neither M nor E) = P(not M and not E) = P(not (M or E)) = 0.20.

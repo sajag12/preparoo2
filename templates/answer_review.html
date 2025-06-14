@@ -5,11 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Answer Review - Preparoo 🦘</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Security Meta Tags -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <!-- Security JavaScript -->
+  <script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      return false;
+    });
+
+    // Disable key combinations
+    document.addEventListener('keydown', function(e) {
+      if (e.keyCode === 123 || // F12
+          (e.ctrlKey && e.shiftKey && e.keyCode === 73) || // Ctrl+Shift+I
+          (e.ctrlKey && e.shiftKey && e.keyCode === 74) || // Ctrl+Shift+J
+          (e.ctrlKey && e.keyCode === 85) || // Ctrl+U
+          (e.ctrlKey && e.keyCode === 65) || // Ctrl+A
+          (e.ctrlKey && e.keyCode === 67) || // Ctrl+C
+          (e.ctrlKey && e.keyCode === 88) || // Ctrl+X
+          (e.ctrlKey && e.keyCode === 86) || // Ctrl+V
+          (e.ctrlKey && e.keyCode === 80) || // Ctrl+P
+          (e.ctrlKey && e.keyCode === 83)) { // Ctrl+S
+        e.preventDefault();
+        if (e.ctrlKey && e.keyCode === 80) {
+          alert('Printing is not allowed for this content.');
+        }
+        return false;
+      }
+    });
+
+    // Disable text selection and drag
+    document.onselectstart = function() { return false; };
+    document.onmousedown = function() { return false; };
+    document.ondragstart = function() { return false; };
+
+    // Disable print
+    window.addEventListener('beforeprint', function(e) {
+      e.preventDefault();
+      alert('Printing is not allowed for this content.');
+      return false;
+    });
+
+    // Monitor for developer tools
+    setInterval(function() {
+      if (window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200) {
+        alert('Developer tools detected. Please close them to continue.');
+        window.location.href = '/';
+      }
+    }, 1000);
+  </script>
+  
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      /* Disable text selection and drag */
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+      -webkit-user-drag: none !important;
+      -webkit-touch-callout: none !important;
     }
 
     body {
@@ -17,6 +80,36 @@
       background: white;
       color: #333;
       line-height: 1.6;
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      user-select: none !important;
+    }
+
+    /* Hide content during print */
+    @media print {
+      * {
+        display: none !important;
+      }
+      body::before {
+        content: "🚫 PRINTING NOT ALLOWED 🚫" !important;
+        display: block !important;
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        font-size: 48px !important;
+        font-weight: bold !important;
+        color: red !important;
+        z-index: 99999 !important;
+        text-align: center !important;
+      }
+    }
+
+    /* Disable image operations */
+    img {
+      -webkit-user-drag: none !important;
+      pointer-events: none !important;
+      -webkit-user-select: none !important;
     }
 
     .container {
@@ -600,6 +693,50 @@
       box-shadow: 0 7px 20px rgba(0, 0, 0, 0.05);
     }
 
+    /* Table Styles for Review */
+    .table-container {
+      overflow-x: auto;
+      margin: 1rem 0;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      background: white;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      font-size: 0.9rem;
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+      border-right: 1px solid #e5e7eb;
+    }
+
+    .data-table th {
+      background: #f8fafc;
+      font-weight: 600;
+      color: #374151;
+      border-bottom: 2px solid #d1d5db;
+    }
+
+    .data-table tbody tr:hover {
+      background: #f9fafb;
+    }
+
+    .data-table td:last-child,
+    .data-table th:last-child {
+      border-right: none;
+    }
+
+    .data-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .navbar {
@@ -758,13 +895,13 @@
               {% if question.passage_content %}
               <div class="passage-section">
                 <h4>Passage:</h4>
-                <div class="passage-text">{{ question.passage_content|safe }}</div>
+                <div class="passage-text">{{ question.passage_content|markdown|safe }}</div>
               </div>
               {% endif %}
               
               <div class="question-prompt">
                 <h4>Question:</h4>
-                <p>{{ question.prompt|safe }}</p>
+                <p>{{ question.prompt|markdown|safe }}</p>
               </div>
               
               {% if question.question_type == 'MCQ' and question.options %}
@@ -813,7 +950,7 @@
               {% if question.solution %}
               <div class="solution-section">
                 <h4>Solution:</h4>
-                <div class="solution-text">{{ question.solution|safe }}</div>
+                <div class="solution-text">{{ question.solution|markdown|safe }}</div>
               </div>
               {% endif %}
               
@@ -848,13 +985,13 @@
               {% if question.passage_content %}
               <div class="passage-section">
                 <h4>Passage:</h4>
-                <div class="passage-text">{{ question.passage_content|safe }}</div>
+                <div class="passage-text">{{ question.passage_content|markdown|safe }}</div>
               </div>
               {% endif %}
               
               <div class="question-prompt">
                 <h4>Question:</h4>
-                <p>{{ question.prompt|safe }}</p>
+                <p>{{ question.prompt|markdown|safe }}</p>
               </div>
               
               {% if question.question_type == 'MCQ' and question.options %}
@@ -903,7 +1040,7 @@
               {% if question.solution %}
               <div class="solution-section">
                 <h4>Solution:</h4>
-                <div class="solution-text">{{ question.solution|safe }}</div>
+                <div class="solution-text">{{ question.solution|markdown|safe }}</div>
               </div>
               {% endif %}
               
@@ -992,9 +1129,143 @@
       });
     });
 
+    // Table parsing functions for rendering markdown tables
+    function parseMarkdownTable(content) {
+      // Handle markdown-style tables with pipe separators
+      const lines = content.split('\n');
+      let result = '';
+      let i = 0;
+      
+      while (i < lines.length) {
+        const line = lines[i].trim();
+        
+        // Check if this line starts a table (contains pipes and has content)
+        if (line.includes('|') && line.split('|').filter(cell => cell.trim()).length > 1) {
+          let tableLines = [];
+          let j = i;
+          
+          // Gather all consecutive table lines
+          while (j < lines.length) {
+            const currentLine = lines[j].trim();
+            if (currentLine.includes('|') && currentLine.split('|').filter(cell => cell.trim()).length > 1) {
+              tableLines.push(currentLine);
+              j++;
+            } else if (currentLine === '' && tableLines.length > 0) {
+              // Empty line after table - include it but stop gathering table lines
+              j++;
+              break;
+            } else {
+              // Non-table line - stop gathering
+              break;
+            }
+          }
+          
+          if (tableLines.length > 0) {
+            result += convertMarkdownTableToHTML(tableLines);
+            i = j;
+          } else {
+            result += processMarkdownText(line) + '<br>';
+            i++;
+          }
+        } else {
+          // Regular content - process markdown formatting
+          result += processMarkdownText(line) + '<br>';
+          i++;
+        }
+      }
+      
+      return result;
+    }
+
+    // Process markdown formatting (bold, italic, etc.)
+    function processMarkdownText(text) {
+      if (!text) return text;
+      
+      // Handle bold text (**text**)
+      text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      
+      // Handle italic text (*text*)
+      text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
+      
+      return text;
+    }
+
+    function convertMarkdownTableToHTML(tableLines) {
+      if (tableLines.length === 0) return '';
+      
+      let html = '<div class="table-container"><table class="data-table">';
+      let hasHeader = false;
+      
+      for (let i = 0; i < tableLines.length; i++) {
+        const line = tableLines[i].trim();
+        
+        // Skip separator lines (lines with only dashes, pipes, and spaces)
+        if (line.match(/^[\|\-\s:]+$/)) {
+          hasHeader = true; // This indicates the previous row was a header
+          continue;
+        }
+        
+        // Split by pipe and clean up cells
+        const cells = line.split('|')
+          .map(cell => cell.trim())
+          .filter(cell => cell !== ''); // Remove empty cells from start/end
+        
+        if (cells.length === 0) continue;
+        
+        // Determine if this should be a header row
+        const isHeaderRow = (i === 0 && !hasHeader) || (i === 0 && tableLines[1] && tableLines[1].match(/^[\|\-\s:]+$/));
+        const tag = isHeaderRow ? 'th' : 'td';
+        
+        html += '<tr>';
+        cells.forEach(cell => {
+          html += `<${tag}>${processMarkdownText(cell)}</${tag}>`;
+        });
+        html += '</tr>';
+      }
+      
+      html += '</table></div>';
+      return html;
+    }
+
+    // Function to render content with table support
+    function renderContentWithTables(content) {
+      if (!content) return content;
+      
+      // Check if content contains table-like structure
+      if (content.includes('|') && content.split('|').length > 2) {
+        return parseMarkdownTable(content);
+      } else {
+        // Process regular markdown formatting and line breaks
+        return processMarkdownText(content).replace(/\n/g, '<br>');
+      }
+    }
+
+    // Apply table rendering to all content on page load
+    function applyTableRendering() {
+      // Process passage content
+      document.querySelectorAll('.passage-text').forEach(element => {
+        const originalText = element.textContent || element.innerText;
+        element.innerHTML = renderContentWithTables(originalText);
+      });
+
+      // Process question prompts
+      document.querySelectorAll('.question-prompt p').forEach(element => {
+        const originalText = element.textContent || element.innerText;
+        element.innerHTML = renderContentWithTables(originalText);
+      });
+
+      // Process solution content
+      document.querySelectorAll('.solution-text').forEach(element => {
+        const originalText = element.textContent || element.innerText;
+        element.innerHTML = renderContentWithTables(originalText);
+      });
+    }
+
     // Debug: Log initial state when page loads
     document.addEventListener('DOMContentLoaded', () => {
       applyFilters();
+      // Apply table rendering after the page loads
+      setTimeout(applyTableRendering, 100);
     });
   </script>
 </body>

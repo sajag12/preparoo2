@@ -70,6 +70,7 @@ class TestResult(db.Model):
     missed_opportunities = db.Column(db.Text)  # JSON string
     time_wasters = db.Column(db.Text)          # JSON string
     swot_analysis = db.Column(db.Text)         # JSON string
+    topic_analysis = db.Column(db.Text)        # JSON string
     
     # Metadata
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
@@ -119,6 +120,9 @@ class TestResult(db.Model):
         if self.swot_analysis:
             result['swot_analysis'] = json.loads(self.swot_analysis)
             
+        if self.topic_analysis:
+            result['topic_analysis'] = json.loads(self.topic_analysis)
+            
         # Add section_name for sectional tests
         if self.test_type == 'sectional':
             result['section_name'] = self.test_name.replace('Sectional Mock - ', '')
@@ -130,8 +134,17 @@ class TestResult(db.Model):
     @staticmethod
     def create_from_session_data(user_id, test_id, session_data):
         """Create TestResult from session data"""
-        # Determine test type
-        test_type = 'sectional' if session_data.get('test_name', '').startswith('Sectional Mock') else 'full_mock'
+        # Determine test type using multiple indicators
+        test_name = session_data.get('test_name', '')
+        section_name = session_data.get('section_name', '')
+        
+        # Check if it's sectional based on multiple indicators
+        is_sectional = (
+            test_name.startswith('Sectional Mock') or 
+            bool(section_name) or 
+            str(test_id).startswith(('qa', 'varc', 'lrdi'))
+        )
+        test_type = 'sectional' if is_sectional else 'full_mock'
         
         # Calculate metrics based on test type
         if test_type == 'sectional':
@@ -192,6 +205,9 @@ class TestResult(db.Model):
             
         if 'swot_analysis' in session_data:
             test_result.swot_analysis = json.dumps(session_data['swot_analysis'])
+            
+        if 'topic_analysis' in session_data:
+            test_result.topic_analysis = json.dumps(session_data['topic_analysis'])
         
         return test_result
     
@@ -211,8 +227,17 @@ class TestResult(db.Model):
                 print(f"DEBUG: Updating existing test result for user {user_id}, test {test_id}")
                 # Update existing result with new data
                 
-                # Determine test type
-                test_type = 'sectional' if session_data.get('test_name', '').startswith('Sectional Mock') else 'full_mock'
+                # Determine test type using multiple indicators
+                test_name = session_data.get('test_name', '')
+                section_name = session_data.get('section_name', '')
+                
+                # Check if it's sectional based on multiple indicators
+                is_sectional = (
+                    test_name.startswith('Sectional Mock') or 
+                    bool(section_name) or 
+                    str(test_id).startswith(('qa', 'varc', 'lrdi'))
+                )
+                test_type = 'sectional' if is_sectional else 'full_mock'
                 
                 # Calculate metrics based on test type
                 if test_type == 'sectional':

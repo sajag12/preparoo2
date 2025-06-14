@@ -1,5 +1,5 @@
 SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
-Quantitative Aptitude,,100000001,1,,,"The cost of producing a batch of custom-made widgets is Rs. (A + Bx + C/x²), where x is the number of widgets in the batch, and A, B, C are constants. If the cost of producing 10 widgets is Rs. 2400, for 20 widgets is Rs. 1700, and for 40 widgets is Rs. 2400, what is the fixed component 'A' of the cost?",Rs. 200,Rs. 250,Rs. 300,Rs. 350,A,B,C,D,C,MCQ,Arithmetic,"Ratio, Proportion & Variation",Hard,"Ratio, Proportion & Variation","Variation_SumDifference_VaryingDifferently_SystemOfEq, CostFunction_FixedVariableAdditional",False,MockSet_CAT_Adv4_Final_CleanV2,,"Let the cost function be C(x) = A + Bx + C/x².
+Quantitative Aptitude,,100000001,1,,,"The cost of producing a batch of custom-made widgets is Rs. (A + Bx + C/x²), where x is the number of widgets in the batch, and A, B, C are constants. If the cost of producing 10 widgets is Rs. 2400, for 20 widgets is Rs. 1700, and for 40 widgets is Rs. 2400, what is the fixed component 'A' of the cost?",Rs. 200,Rs. 250,Rs. 300,Rs. 350,A,B,C,D,C,MCQ,Arithmetic,"Ratio, Proportion & Variation",Hard,"Ratio, Proportion & Variation","Variation_SumDifference_VaryingDifferently_SystemOfEq, CostFunction_FixedVariableAdditional",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"Let the cost function be C(x) = A + Bx + C/x².
 From the given data:
 1. For x=10, C(10) = A + 10B + C/100 = 2400
 2. For x=20, C(20) = A + 20B + C/400 = 1700
@@ -33,7 +33,7 @@ A + 10(50) + 160000/100 = 2400
 A + 500 + 1600 = 2400 => A + 2100 = 2400 => A = 300.
 The fixed component 'A' is Rs. 300.
 The correct option is (C)."
-Quantitative Aptitude,,100000002,2,,,"In triangle PQR, S is a point on QR such that PS is the angle bisector of ∠P. If PQ = 6 cm, PR = 9 cm, and QR = 10 cm, find the value of PS².",,,,,,,,,30,TITA,Geometry,"Triangles (Properties, Congruence, Similarity)",Medium,"Triangles (Properties, Congruence, Similarity)","Triangle_AngleBisector_LengthFormula, BasicProperties",True,MockSet_CAT_Adv4_Final_CleanV2,,"PQ = 6 cm, PR = 9 cm, QR = 10 cm. PS is the angle bisector.
+Quantitative Aptitude,,100000002,2,,,"In triangle PQR, S is a point on QR such that PS is the angle bisector of ∠P. If PQ = 6 cm, PR = 9 cm, and QR = 10 cm, find the value of PS².",,,,,,,,,30,TITA,Geometry,"Triangles (Properties, Congruence, Similarity)",Medium,"Triangles (Properties, Congruence, Similarity)","Triangle_AngleBisector_LengthFormula, BasicProperties",TRUE,MockSet_CAT_Adv4_Final_CleanV2,,"PQ = 6 cm, PR = 9 cm, QR = 10 cm. PS is the angle bisector.
 By Angle Bisector Theorem, QS/SR = PQ/PR = 6/9 = 2/3.
 Since QS + SR = QR = 10 cm:
 QS = (2/(2+3)) * 10 = (2/5) * 10 = 4 cm.
@@ -42,7 +42,7 @@ Length of angle bisector PS² = PQ * PR - QS * SR.
 PS² = (6 cm) * (9 cm) - (4 cm) * (6 cm)
 PS² = 54 - 24 = 30 cm².
 Answer: 30."
-Quantitative Aptitude,,100000003,3,,,"A sum of money is lent at compound interest, compounded annually. The interest for the second year is Rs. 1320 and the interest for the third year is Rs. 1452. If an additional Rs. 5000 was added to the principal at the start of the fourth year, what would be the compound interest for the fourth year?",Rs. 2102.20,Rs. 2157.20,Rs. 2202.20,Rs. 2097.20,A,B,C,D,D,MCQ,Arithmetic,Compound Interest,Hard,Compound Interest,"CI_Ratio_SuccessiveYearsInterest, CI_PrincipalChange_MidTerm",False,MockSet_CAT_Adv4_Final_CleanV2,,"Let Principal = P, Rate = R.
+Quantitative Aptitude,,100000003,3,,,"A sum of money is lent at compound interest, compounded annually. The interest for the second year is Rs. 1320 and the interest for the third year is Rs. 1452. If an additional Rs. 5000 was added to the principal at the start of the fourth year, what would be the compound interest for the fourth year?",Rs. 2102.20,Rs. 2157.20,Rs. 2202.20,Rs. 2097.20,A,B,C,D,D,MCQ,Arithmetic,Compound Interest,Hard,Compound Interest,"CI_Ratio_SuccessiveYearsInterest, CI_PrincipalChange_MidTerm",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"Let Principal = P, Rate = R.
 Interest for 2nd year = P(1+R)R = 1320.
 Interest for 3rd year = P(1+R)²R = 1452.
 Dividing these: (1+R) = 1452/1320 = 1.1. So R = 0.1 = 10%.
@@ -51,7 +51,7 @@ Amount at end of 3rd year = P(1+R)³ = 12000(1.1)³ = 12000(1.331) = 15972.
 Principal for 4th year (P_4_start) = Amount at end of 3rd year + 5000 = 15972 + 5000 = 20972.
 Compound interest for 4th year = P_4_start × R = 20972 × 0.1 = 2097.20.
 The correct option is (D)."
-Quantitative Aptitude,,100000004,4,,,"Two friends, A and B, simultaneously start running from the same point on a circular track of length 1200m. A runs at 8 m/s and B runs at 5 m/s. If they run in the same direction, after how much time will A be exactly 300m ahead of B for the second time?",100 seconds,150 seconds,200 seconds,500 seconds,A,B,C,D,D,MCQ,Arithmetic,"Time, Speed & Distance (General)",Medium,"Time, Speed & Distance (General)","CircularMotion_RaceLaps_NumberOfMeetings, RelativeSpeed_SameDirection, RelativeDistanceGain",False,MockSet_CAT_Adv4_Final_CleanV2,,"Let L be track length (1200m). S_A=8m/s, S_B=5m/s. Same direction.
+Quantitative Aptitude,,100000004,4,,,"Two friends, A and B, simultaneously start running from the same point on a circular track of length 1200m. A runs at 8 m/s and B runs at 5 m/s. If they run in the same direction, after how much time will A be exactly 300m ahead of B for the second time?",100 seconds,150 seconds,200 seconds,500 seconds,A,B,C,D,D,MCQ,Arithmetic,"Time, Speed & Distance (General)",Medium,"Time, Speed & Distance (General)","CircularMotion_RaceLaps_NumberOfMeetings, RelativeSpeed_SameDirection, RelativeDistanceGain",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"Let L be track length (1200m). S_A=8m/s, S_B=5m/s. Same direction.
 Relative speed S_rel = S_A - S_B = 8-5 = 3 m/s.
 For A to be 300m ahead of B for the first time, A must gain 300m on B.
 Time t₁ = 300 / S_rel = 300 / 3 = 100 seconds.
@@ -59,7 +59,7 @@ For A to be 300m ahead of B for the second time, A must have gained a full lap (
 The total distance gained by A on B from the start is 300m (for the first time) + 1200m (for the second time) = 1500m.
 Time t₂ = Total distance gained / S_rel = 1500 / 3 = 500 seconds.
 The correct option is (D)."
-Quantitative Aptitude,,100000005,5,,,"An 80-litre mixture contains liquids A and B in the ratio 5:3. When 24 litres of this mixture is drawn off, it is replaced with 24 litres of liquid B. Then, 'x' litres of this new mixture is drawn off and replaced with 'x' litres of liquid A. If the final quantity of liquid A in the (still 80-litre) mixture is 44 litres, find the integer value of 'x'.",,,,,,,,,16,TITA,Arithmetic,Mixtures & Alligations,Hard,Mixtures & Alligations,"RemovalReplacement_MultiStage_DifferentQuantities, RemovalReplacement_MultiStage_DifferentReplacements, SystemOfLinearEquations",True,MockSet_CAT_Adv4_Final_CleanV2,,"Initial mixture: 80L. A:B = 5:3.
+Quantitative Aptitude,,100000005,5,,,"An 80-litre mixture contains liquids A and B in the ratio 5:3. When 24 litres of this mixture is drawn off, it is replaced with 24 litres of liquid B. Then, 'x' litres of this new mixture is drawn off and replaced with 'x' litres of liquid A. If the final quantity of liquid A in the (still 80-litre) mixture is 44 litres, find the integer value of 'x'.",,,,,,,,,16,TITA,Arithmetic,Mixtures & Alligations,Hard,Mixtures & Alligations,"RemovalReplacement_MultiStage_DifferentQuantities, RemovalReplacement_MultiStage_DifferentReplacements, SystemOfLinearEquations",TRUE,MockSet_CAT_Adv4_Final_CleanV2,,"Initial mixture: 80L. A:B = 5:3.
 Initial A = (5/8) * 80 = 50 L. Initial B = (3/8) * 80 = 30 L.
 
 Step 1: 24L of mixture is drawn off.
@@ -79,7 +79,7 @@ Final A = (Amount of A before operation) - (Amount of A removed) + (Amount of A 
 9 = x * (9/16)
 x = 16.
 Answer: 16."
-Quantitative Aptitude,,100000006,6,,,Let f(x) be a function such that `f(x) + 2f(1/x) = 3x` for all x ≠ 0. Find the value of `f(2)`.,-1,1,2,5/3,A,B,C,D,A,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Hard,"Functions (Domain, Range, Types, Graphs, Inverse)","Function_Evaluation_AlgebraicInput_f(g(x)), FunctionalEquation_SubstitutionMethod, ReciprocalProperty",False,MockSet_CAT_Adv4_Final_CleanV2,,"Given `f(x) + 2f(1/x) = 3x`. (1)
+Quantitative Aptitude,,100000006,6,,,Let f(x) be a function such that `f(x) + 2f(1/x) = 3x` for all x ≠ 0. Find the value of `f(2)`.,-1,1,2,3-May,A,B,C,D,A,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Hard,"Functions (Domain, Range, Types, Graphs, Inverse)","Function_Evaluation_AlgebraicInput_f(g(x)), FunctionalEquation_SubstitutionMethod, ReciprocalProperty",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"Given `f(x) + 2f(1/x) = 3x`. (1)
 We need to find f(2). Substitute x=2 into (1):
 `f(2) + 2f(1/2) = 3(2) = 6`. (A)
 To create a system of equations, substitute x=1/2 into (1):
@@ -91,7 +91,7 @@ Subtract equation (A) from equation (C):
 `3f(2) = -3`
 `f(2) = -1`.
 The correct option is (A)."
-Quantitative Aptitude,,100000007,7,,,"In triangle ABC, AB = 10 cm, AC = 12 cm, and BC = 14 cm. A point D is taken on BC such that BD:DC = 2:5. A point E is taken on AD such that AE:ED = 3:4. If the line CE is extended to intersect AB at F, what is the ratio AF:FB?",3:7,8:27,9:20,15:28,A,B,C,D,D,MCQ,Geometry,"Triangles (Properties, Congruence, Similarity)",Hard,"Triangles (Properties, Congruence, Similarity)","Triangle_AreaRatio_MultipleCevians, MenelausTheorem_Application, MassPointGeometry",False,MockSet_CAT_Adv4_Final_CleanV2,,"Using Mass Point Geometry:
+Quantitative Aptitude,,100000007,7,,,"In triangle ABC, AB = 10 cm, AC = 12 cm, and BC = 14 cm. A point D is taken on BC such that BD:DC = 2:5. A point E is taken on AD such that AE:ED = 3:4. If the line CE is extended to intersect AB at F, what is the ratio AF:FB?","""3:7""","""8:27""","""9:20""","""15:28""",A,B,C,D,D,MCQ,Geometry,"Triangles (Properties, Congruence, Similarity)",Hard,"Triangles (Properties, Congruence, Similarity)","Triangle_AreaRatio_MultipleCevians, MenelausTheorem_Application, MassPointGeometry",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"Using Mass Point Geometry:
 D on BC, BD:DC = 2:5. Place mass m_B at B, m_C at C.
 m_B * BD = m_C * DC => m_B * 2 = m_C * 5 => m_B/m_C = 5/2.
 Let m_B = 5k, m_C = 2k. Mass at D, m_D = m_B + m_C = 7k.
@@ -100,7 +100,7 @@ Place mass m_A at A. m_A * AE = m_D * ED => m_A * 3 = (7k) * 4 => m_A = 28k/3.
 Line CE (extended) intersects AB at F. F is the center of mass of (A, m_A) and (B, m_B).
 AF:FB = m_B : m_A = 5k : (28k/3) = 5 : 28/3 = 15 : 28.
 The correct option is (D)."
-Quantitative Aptitude,,100000008,8,,,"Find the smallest natural number N such that N leaves a remainder of 3 when divided by 7, N leaves a remainder of 5 when divided by 9, and N leaves a remainder of 8 when divided by 11.",,,,,,,,,437,TITA,Number System,Remainders (incl. Remainder Theorem),Medium,Remainders (incl. Remainder Theorem),"Divisibility_WithRemainders_LCM_CRT_Implicit, SmallestNumber_SatisfyingConditions",True,MockSet_CAT_Adv4_Final_CleanV2,,"N ≡ 3 (mod 7)
+Quantitative Aptitude,,100000008,8,,,"Find the smallest natural number N such that N leaves a remainder of 3 when divided by 7, N leaves a remainder of 5 when divided by 9, and N leaves a remainder of 8 when divided by 11.",,,,,,,,,437,TITA,Number System,Remainders (incl. Remainder Theorem),Medium,Remainders (incl. Remainder Theorem),"Divisibility_WithRemainders_LCM_CRT_Implicit, SmallestNumber_SatisfyingConditions",TRUE,MockSet_CAT_Adv4_Final_CleanV2,,"N ≡ 3 (mod 7)
 N ≡ 5 (mod 9)
 N ≡ 8 (mod 11)
 From the first congruence, N = 7a + 3.
@@ -115,7 +115,7 @@ Multiply by 7 (inverse of 8 mod 11): 56k ≡ 28 (mod 11) => k ≡ 6 (mod 11).
 Smallest non-negative k is 6.
 N = 63(6) + 59 = 378 + 59 = 437.
 Answer: 437."
-Quantitative Aptitude,,100000009,9,,,"A man can row a boat 30 km upstream and 44 km downstream in 10 hours. He can also row 40 km upstream and 55 km downstream in 13 hours. If he rows the same boat in a river flowing at twice its original speed, how long will it take him to row 60 km upstream?",10 hours,12 hours,15 hours,30 hours,A,B,C,D,D,MCQ,Arithmetic,"Time, Speed & Distance (Boats & Streams)",Hard,"Time, Speed & Distance (Boats & Streams)","BoatsStreams_UpstreamDownstream_SystemOfEquations, BoatsStreams_StreamSpeedChange_Impact",False,MockSet_CAT_Adv4_Final_CleanV2,,"Let u be speed of boat in still water, v be speed of stream.
+Quantitative Aptitude,,100000009,9,,,"A man can row a boat 30 km upstream and 44 km downstream in 10 hours. He can also row 40 km upstream and 55 km downstream in 13 hours. If he rows the same boat in a river flowing at twice its original speed, how long will it take him to row 60 km upstream?",10 hours,12 hours,15 hours,30 hours,A,B,C,D,D,MCQ,Arithmetic,"Time, Speed & Distance (Boats & Streams)",Hard,"Time, Speed & Distance (Boats & Streams)","BoatsStreams_UpstreamDownstream_SystemOfEquations, BoatsStreams_StreamSpeedChange_Impact",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"Let u be speed of boat in still water, v be speed of stream.
 Upstream speed = u-v. Downstream speed = u+v.
 Eq 1: 30/(u-v) + 44/(u+v) = 10
 Eq 2: 40/(u-v) + 55/(u+v) = 13
@@ -134,7 +134,7 @@ New stream speed v' = 2v = 2*3 = 6 km/hr.
 Time to row 60 km upstream with new stream speed:
 Time = Distance / (u-v') = 60 / (8-6) = 60 / 2 = 30 hours.
 The correct option is (D)."
-Quantitative Aptitude,,100000010,10,,,"In a survey of a town, it was found that 60% of the households subscribe to Newspaper A, 55% subscribe to Newspaper B, and 40% subscribe to Newspaper C. It was also found that 30% subscribe to both A and B, 25% to both B and C, and 20% to both A and C. If 15% of households subscribe to all three newspapers, and 300 households subscribe to none of these newspapers, what is the total number of households in the town?",2000,2500,3000,6000,A,B,C,D,D,MCQ,Modern Maths,Set Theory & Venn Diagrams,Medium,Set Theory & Venn Diagrams,"Percentage_VennDiagram_3Set, InclusionExclusionPrinciple, PopulationSegmentation",False,MockSet_CAT_Adv4_Final_CleanV2,,"P(A)=0.6, P(B)=0.55, P(C)=0.4.
+Quantitative Aptitude,,100000010,10,,,"In a survey of a town, it was found that 60% of the households subscribe to Newspaper A, 55% subscribe to Newspaper B, and 40% subscribe to Newspaper C. It was also found that 30% subscribe to both A and B, 25% to both B and C, and 20% to both A and C. If 15% of households subscribe to all three newspapers, and 300 households subscribe to none of these newspapers, what is the total number of households in the town?",2000,2500,3000,6000,A,B,C,D,D,MCQ,Modern Maths,Set Theory & Venn Diagrams,Medium,Set Theory & Venn Diagrams,"Percentage_VennDiagram_3Set, InclusionExclusionPrinciple, PopulationSegmentation",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"P(A)=0.6, P(B)=0.55, P(C)=0.4.
 P(A∩B)=0.3, P(B∩C)=0.25, P(A∩C)=0.2. P(A∩B∩C)=0.15.
 P(A∪B∪C) = P(A)+P(B)+P(C) - P(A∩B)-P(B∩C)-P(A∩C) + P(A∩B∩C)
 = 0.6 + 0.55 + 0.4 - 0.3 - 0.25 - 0.2 + 0.15
@@ -144,7 +144,7 @@ Households subscribing to none = 100% - 95% = 5%.
 Given 5% of Total Households = 300.
 Total Households = 300 / 0.05 = 300 × 20 = 6000.
 The correct option is (D)."
-Quantitative Aptitude,,100000011,11,,,"In triangle ABC, the median AD has length 9 cm. The median BE has length 12 cm. If AD is perpendicular to BE, find the area of triangle ABC in cm².",,,,,,,,,72,TITA,Geometry,"Triangles (Properties, Congruence, Similarity)",Medium,"Triangles (Properties, Congruence, Similarity)","Triangle_Median_Properties, PerpendicularMedians_AreaRelation, CentroidProperties",True,MockSet_CAT_Adv4_Final_CleanV2,,"Let G be the centroid. AD and BE are medians. AD ⊥ BE.
+Quantitative Aptitude,,100000011,11,,,"In triangle ABC, the median AD has length 9 cm. The median BE has length 12 cm. If AD is perpendicular to BE, find the area of triangle ABC in cm².",,,,,,,,,72,TITA,Geometry,"Triangles (Properties, Congruence, Similarity)",Medium,"Triangles (Properties, Congruence, Similarity)","Triangle_Median_Properties, PerpendicularMedians_AreaRelation, CentroidProperties",TRUE,MockSet_CAT_Adv4_Final_CleanV2,,"Let G be the centroid. AD and BE are medians. AD ⊥ BE.
 G divides medians in 2:1. AG = (2/3)AD = (2/3)*9 = 6 cm. GD = 3 cm.
 BG = (2/3)BE = (2/3)*12 = 8 cm. GE = 4 cm.
 Since AD ⊥ BE, they intersect at G at 90°.
@@ -153,7 +153,7 @@ Area(ΔAGB) = (1/2) × AG × BG = (1/2) × 6 × 8 = 24 cm².
 The centroid divides the triangle into 3 triangles of equal area (AGB, BGC, CGA).
 Area(ΔABC) = 3 * Area(ΔAGB) = 3 * 24 = 72 cm².
 Answer: 72."
-Quantitative Aptitude,,100000012,12,,,"A trader sells two articles, P and Q. Article P is sold at a 25% profit and Article Q at a 15% loss, resulting in an overall no profit, no loss. If the total cost price of P and Q is Rs. 4000, what is the cost price of Article P?",Rs. 1500,Rs. 1800,Rs. 2200,Rs. 2500,A,B,C,D,A,MCQ,Arithmetic,"Profit, Loss & Discount",Medium,"Profit, Loss & Discount","ProfitLoss_MultipleArticles_OverallProfitLoss_Amount, SystemOfLinearEquations",False,MockSet_CAT_Adv4_Final_CleanV2,,"Let the cost price of Article P be `CP_P` and Article Q be `CP_Q`.
+Quantitative Aptitude,,100000012,12,,,"A trader sells two articles, P and Q. Article P is sold at a 25% profit and Article Q at a 15% loss, resulting in an overall no profit, no loss. If the total cost price of P and Q is Rs. 4000, what is the cost price of Article P?",Rs. 1500,Rs. 1800,Rs. 2200,Rs. 2500,A,B,C,D,A,MCQ,Arithmetic,"Profit, Loss & Discount",Medium,"Profit, Loss & Discount","ProfitLoss_MultipleArticles_OverallProfitLoss_Amount, SystemOfLinearEquations",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"Let the cost price of Article P be `CP_P` and Article Q be `CP_Q`.
 Given `CP_P + CP_Q = 4000`.
 The profit on P is 25% of `CP_P`. The loss on Q is 15% of `CP_Q`.
 The overall result is no profit, no loss, which means Total Profit = Total Loss.
@@ -167,7 +167,7 @@ Substitute `CP_Q = 4000 - CP_P`:
 `CP_P = 600 / 0.4 = 1500`.
 The cost price of Article P is Rs. 1500.
 The correct option is (A)."
-Quantitative Aptitude,,100000013,13,,,"If (log₃x)(logₓ2x)(log₂ₓy) = logₓx², find the value of y. (x > 0, x ≠ 1, 2x ≠ 1).",,,,,,,,,9,TITA,Algebra,Logarithms,Medium,Logarithms,"Logarithm_Equation_ChangeOfBase, Logarithm_Properties_ProductRule",True,MockSet_CAT_Adv4_Final_CleanV2,,"(log₃x)(logₓ2x)(log₂ₓy) = logₓx².
+Quantitative Aptitude,,100000013,13,,,"If (log₃x)(logₓ2x)(log₂ₓy) = logₓx², find the value of y. (x > 0, x ≠ 1, 2x ≠ 1).",,,,,,,,,9,TITA,Algebra,Logarithms,Medium,Logarithms,"Logarithm_Equation_ChangeOfBase, Logarithm_Properties_ProductRule",TRUE,MockSet_CAT_Adv4_Final_CleanV2,,"(log₃x)(logₓ2x)(log₂ₓy) = logₓx².
 Using log_b(a) = log(a)/log(b) and log_b(b^n) = n:
 (logx/log3) * (log2x/logx) * (logy/log2x) = 2. (Since logₓx² = 2logₓx = 2, for x≠1)
 Cancel terms: (logy/log3) = 2.
@@ -175,7 +175,7 @@ This means log₃y = 2.
 By definition of logarithm, y = 3².
 y = 9.
 Answer: 9."
-Quantitative Aptitude,,100000014,14,,,"The average age of a committee of 11 members is 45 years. Three members, whose average age was 40 years, resigned. They were replaced by three new members whose ages are in the ratio 3:4:5. If the average age of the new committee so formed is 45 years, what is the age of the youngest new member in years?",24,27,30,33,A,B,C,D,C,MCQ,Arithmetic,Averages & Weighted Averages,Medium,Averages & Weighted Averages,"Average_ReplacementOfElements_ValueChange, Average_Group_RatioAges",False,MockSet_CAT_Adv4_Final_CleanV2,,"Initial total age of 11 members = 11 × 45 = 495 years.
+Quantitative Aptitude,,100000014,14,,,"The average age of a committee of 11 members is 45 years. Three members, whose average age was 40 years, resigned. They were replaced by three new members whose ages are in the ratio 3:4:5. If the average age of the new committee so formed is 45 years, what is the age of the youngest new member in years?",24,27,30,33,A,B,C,D,C,MCQ,Arithmetic,Averages & Weighted Averages,Medium,Averages & Weighted Averages,"Average_ReplacementOfElements_ValueChange, Average_Group_RatioAges",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"Initial total age of 11 members = 11 × 45 = 495 years.
 Sum of ages of 3 members who resigned = 3 × 40 = 120 years.
 Sum of ages of remaining 8 members = 495 - 120 = 375 years.
 Ages of the 3 new members are 3k, 4k, 5k. Sum of their ages = 12k.
@@ -188,7 +188,7 @@ k = 10.
 The ages of the new members are 3k=30, 4k=40, 5k=50.
 The age of the youngest new member is 30 years.
 The correct option is (C)."
-Quantitative Aptitude,,100000015,15,,,"How many 5-digit numbers can be formed using the digits 0, 1, 2, 3, 4, 5 (without repetition) such that the number formed is divisible by 3, and the digits at the odd positions (1st, 3rd, 5th from left) are all odd, and digits at even positions are all even?",6,8,10,12,A,B,C,D,D,MCQ,Modern Maths,Permutations & Combinations,Hard,Permutations & Combinations,"P&C_NumberFormation_MultipleConstraints_Divisibility, P&C_NumberFormation_PositionalConstraints_OddEven, Casework",False,MockSet_CAT_Adv4_Final_CleanV2,,"5-digit number. Digits {0,1,2,3,4,5} no repetition.
+Quantitative Aptitude,,100000015,15,,,"How many 5-digit numbers can be formed using the digits 0, 1, 2, 3, 4, 5 (without repetition) such that the number formed is divisible by 3, and the digits at the odd positions (1st, 3rd, 5th from left) are all odd, and digits at even positions are all even?",6,8,10,12,A,B,C,D,D,MCQ,Modern Maths,Permutations & Combinations,Hard,Permutations & Combinations,"P&C_NumberFormation_MultipleConstraints_Divisibility, P&C_NumberFormation_PositionalConstraints_OddEven, Casework",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"5-digit number. Digits {0,1,2,3,4,5} no repetition.
 Odd positions (O1, O3, O5) must be odd digits. Even positions (E2, E4) must be even digits.
 Available odd digits: {1,3,5}. Available even digits: {0,2,4}.
 Condition: Divisible by 3. Sum of the 5 chosen digits must be divisible by 3.
@@ -202,7 +202,7 @@ Odd digits for O1,O3,O5: {1,3,5}. These can be arranged in 3! = 6 ways.
 Even digits for E2,E4: {2,4}. These can be arranged in 2! = 2 ways.
 Number of such numbers = (Ways to arrange odd digits) × (Ways to arrange even digits) = 6 × 2 = 12.
 The correct option is (D)."
-Quantitative Aptitude,,100000016,16,,,"Three pipes A, B, and C are connected to a tank. A and B are inlet pipes, and C is an outlet pipe. A alone can fill the tank in 10 hours. B alone can fill the tank in 15 hours. When A, B, and C are all opened simultaneously, the tank gets filled in 12 hours. If pipes A and C are opened together for 5 hours, and then A is closed and B is opened along with C, and the tank continues to fill, in how many more hours will the tank be completely filled? (If the tank starts emptying under the new conditions or cannot be filled, enter -1).",,,,,,,,,-1,TITA,Arithmetic,Pipes & Cisterns,Hard,Pipes & Cisterns,"PipesCisterns_MultipleInletOutlet_Sequential, FindingOutletRate, WorkDoneInStages, ConditionalOutcome",True,MockSet_CAT_Adv4_Final_CleanV2,,"A=10h, B=15h. Let tank capacity = LCM(10,15,12) = 60 units.
+Quantitative Aptitude,,100000016,16,,,"Three pipes A, B, and C are connected to a tank. A and B are inlet pipes, and C is an outlet pipe. A alone can fill the tank in 10 hours. B alone can fill the tank in 15 hours. When A, B, and C are all opened simultaneously, the tank gets filled in 12 hours. If pipes A and C are opened together for 5 hours, and then A is closed and B is opened along with C, and the tank continues to fill, in how many more hours will the tank be completely filled? (If the tank starts emptying under the new conditions or cannot be filled, enter -1).",,,,,,,,,-1,TITA,Arithmetic,Pipes & Cisterns,Hard,Pipes & Cisterns,"PipesCisterns_MultipleInletOutlet_Sequential, FindingOutletRate, WorkDoneInStages, ConditionalOutcome",TRUE,MockSet_CAT_Adv4_Final_CleanV2,,"A=10h, B=15h. Let tank capacity = LCM(10,15,12) = 60 units.
 Rate A = +60/10 = +6 units/hr.
 Rate B = +60/15 = +4 units/hr.
 A, B, C together fill in 12h. Rate (A+B+C) = 60/12 = +5 units/hr.
@@ -215,7 +215,7 @@ Then A is closed, B is opened along with C.
 New combined rate (B+C) = Rate B + Rate C = 4 + (-5) = -1 unit/hr.
 Since the rate is negative, the tank will start emptying. As per instructions, the answer is -1.
 Answer: -1."
-Quantitative Aptitude,,100000017,17,,,"Find the number of integer pairs (x, y) that satisfy the equation |x - |y-3|| = 2, given that 0 ≤ y ≤ 5 and |x| ≤ 4.",6,7,8,11,A,B,C,D,D,MCQ,Algebra,Inequalities & Modulus,Medium,Inequalities & Modulus,"Modulus_Equation_Nested, IntegerSolutions_Bounds, CaseAnalysis",False,MockSet_CAT_Adv4_Final_CleanV2,,"|x - |y-3|| = 2.
+Quantitative Aptitude,,100000017,17,,,"Find the number of integer pairs (x, y) that satisfy the equation |x - |y-3|| = 2, given that 0 ≤ y ≤ 5 and |x| ≤ 4.",6,7,8,11,A,B,C,D,D,MCQ,Algebra,Inequalities & Modulus,Medium,Inequalities & Modulus,"Modulus_Equation_Nested, IntegerSolutions_Bounds, CaseAnalysis",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"|x - |y-3|| = 2.
 Constraints: 0 ≤ y ≤ 5 and -4 ≤ x ≤ 4. x, y are integers.
 Case 1: y-3 ≥ 0 => y ≥ 3. So y ∈ {3,4,5}.
 Then |y-3| = y-3. The equation becomes |x - (y-3)| = 2 => |x-y+3| = 2.
@@ -233,7 +233,7 @@ If y=2: x+2=5 => x=3 (Valid); x+2=1 => x=-1 (Valid). Pairs: (3,2), (-1,2).
 Total pairs from Case 2 = 1+2+2 = 5.
 Total number of integer pairs = 6 + 5 = 11.
 The correct option is (D)."
-Quantitative Aptitude,,100000018,18,,,"A sum of Rs. 16,000 is lent out in two parts. The first part is lent at 8% simple interest per annum and the second part at 12% simple interest per annum. If the total annual interest received is Rs. 1560, but if the rates of interest had been interchanged, the total annual interest would have been Rs. 1640. What is the amount lent at 12% initially?",Rs. 6000,Rs. 7000,Rs. 8000,Rs. 9000,A,B,C,D,B,MCQ,Arithmetic,Simple Interest,Medium,Simple Interest,"SI_SplitPrincipal_DifferentRatesTimes, SystemOfLinearEquations",False,MockSet_CAT_Adv4_Final_CleanV2,,"Let the two parts be P₁ and P₂.
+Quantitative Aptitude,,100000018,18,,,"A sum of Rs. 16,000 is lent out in two parts. The first part is lent at 8% simple interest per annum and the second part at 12% simple interest per annum. If the total annual interest received is Rs. 1560, but if the rates of interest had been interchanged, the total annual interest would have been Rs. 1640. What is the amount lent at 12% initially?",Rs. 6000,Rs. 7000,Rs. 8000,Rs. 9000,A,B,C,D,B,MCQ,Arithmetic,Simple Interest,Medium,Simple Interest,"SI_SplitPrincipal_DifferentRatesTimes, SystemOfLinearEquations",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"Let the two parts be P₁ and P₂.
 Scenario 1: Total SI = 1560.
 (P₁ × 8 × 1)/100 + (P₂ × 12 × 1)/100 = 1560
 8P₁ + 12P₂ = 156000 => 2P₁ + 3P₂ = 39000 (1)
@@ -257,7 +257,7 @@ Substitute P₂=7000 into equation (1):
 The amount lent at 12% initially was P₂. So, P₂ = Rs. 7000.
 Check against the question's premise: P₁ + P₂ = 9000 + 7000 = 16,000. This matches the total sum given in the question.
 The correct option is (B)."
-Quantitative Aptitude,,100000019,19,,,"The nth term of a sequence is given by T_n = an² + bn + c. If T₁ = 7, T₂ = 13, and the sum of the first three terms (S₃) is 39, find the value of T₅.",,,,,,,,,31,TITA,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Medium,"Sequences & Series (AP, GP, HP, Special Series)","Series_Sum_NthTermPolynomial, FindingNthTerm_FromTn_Sn_Relation, SystemOfEquations_Coefficients",True,MockSet_CAT_Adv4_Final_CleanV2,,"T_n = an² + bn + c.
+Quantitative Aptitude,,100000019,19,,,"The nth term of a sequence is given by T_n = an² + bn + c. If T₁ = 7, T₂ = 13, and the sum of the first three terms (S₃) is 39, find the value of T₅.",,,,,,,,,31,TITA,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Medium,"Sequences & Series (AP, GP, HP, Special Series)","Series_Sum_NthTermPolynomial, FindingNthTerm_FromTn_Sn_Relation, SystemOfEquations_Coefficients",TRUE,MockSet_CAT_Adv4_Final_CleanV2,,"T_n = an² + bn + c.
 T₁ = a(1)² + b(1) + c = a+b+c = 7. (1)
 T₂ = a(2)² + b(2) + c = 4a+2b+c = 13. (2)
 S₃ = T₁+T₂+T₃ = 39. So T₃ = 39 - (T₁+T₂) = 39 - (7+13) = 19.
@@ -272,7 +272,7 @@ From c=7-a-b, c=7-0-6=1.
 So, T_n = 0n² + 6n + 1 = 6n+1.
 We need T₅ = 6(5)+1 = 30+1 = 31.
 Answer: 31."
-Quantitative Aptitude,,100000020,20,,,"A right circular cone is cut by two planes parallel to its base. The first cut is at 1/3rd of the height from the apex, and the second cut is at 2/3rd of the height from the apex. This divides the cone into three parts: a small cone at the top (Part 1), a middle frustum (Part 2), and a bottom frustum (Part 3). If the volume of Part 2 is 140 cm³, what is the volume of Part 3?",300 cm³,330 cm³,360 cm³,380 cm³,A,B,C,D,D,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Hard,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)","Mensuration3D_Cone_Frustum_VolumeRatios, SimilarSolids_VolumeScaling",False,MockSet_CAT_Adv4_Final_CleanV2,,"Let H be height of original cone. The volumes of cones are proportional to the cube of their heights.
+Quantitative Aptitude,,100000020,20,,,"A right circular cone is cut by two planes parallel to its base. The first cut is at 1/3rd of the height from the apex, and the second cut is at 2/3rd of the height from the apex. This divides the cone into three parts: a small cone at the top (Part 1), a middle frustum (Part 2), and a bottom frustum (Part 3). If the volume of Part 2 is 140 cm³, what is the volume of Part 3?",300 cm³,330 cm³,360 cm³,380 cm³,A,B,C,D,D,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Hard,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)","Mensuration3D_Cone_Frustum_VolumeRatios, SimilarSolids_VolumeScaling",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"Let H be height of original cone. The volumes of cones are proportional to the cube of their heights.
 The heights of the three cones (the small top cone, the cone up to the middle cut, and the full cone) are in the ratio H/3 : 2H/3 : H, or 1:2:3.
 Their volumes are in the ratio 1³ : 2³ : 3³ = 1 : 8 : 27.
 Let the volumes of the three parts be V₁, V₂, and V₃.
@@ -284,7 +284,7 @@ Given Volume of Part 2 = 140 cm³.
 7k = 140 => k = 20.
 Volume of Part 3 = 19k = 19 × 20 = 380 cm³.
 The correct option is (D)."
-Quantitative Aptitude,,100000021,21,,,"A garrison of 100 men has provisions for 12 days at a consumption rate of R₁ kg per man per day. After 10 days, 20 men leave. For how many more days will the remaining food last if the consumption rate per man remains R₁?",2 days,2.5 days,3 days,3.5 days,A,B,C,D,B,MCQ,Arithmetic,Time & Work,Medium,Time & Work,"ChainRule_FoodProvision_FluctuatingNumbersRates, WorkEquivalency",False,MockSet_CAT_Adv4_Final_CleanV2,,"Total provisions = Man-days × Rate = 100 men × 12 days × R₁ = 1200 R₁ units of food.
+Quantitative Aptitude,,100000021,21,,,"A garrison of 100 men has provisions for 12 days at a consumption rate of R₁ kg per man per day. After 10 days, 20 men leave. For how many more days will the remaining food last if the consumption rate per man remains R₁?",2 days,2.5 days,3 days,3.5 days,A,B,C,D,B,MCQ,Arithmetic,Time & Work,Medium,Time & Work,"ChainRule_FoodProvision_FluctuatingNumbersRates, WorkEquivalency",FALSE,MockSet_CAT_Adv4_Final_CleanV2,,"Total provisions = Man-days × Rate = 100 men × 12 days × R₁ = 1200 R₁ units of food.
 Food consumed in first 10 days = 100 men × 10 days × R₁ = 1000 R₁ units.
 Remaining food = 1200 R₁ - 1000 R₁ = 200 R₁ units.
 Number of men remaining = 100 - 20 = 80 men.
@@ -294,7 +294,7 @@ Remaining Food = (Remaining Men) × (Remaining Days) × Rate
 80 D' = 200.
 D' = 200 / 80 = 20 / 8 = 2.5 days.
 The correct option is (B)."
-Quantitative Aptitude,,100000022,22,,,Find the number of factors of N = 2⁵ × 3⁴ × 5³ that are multiples of 12 but are not multiples of 90.,,,,,,,,,28,TITA,Number System,Number of Factors & Sum of Factors,Hard,Number of Factors & Sum of Factors,"Factors_NumberOfFactors_SpecificProperties_MultipleOfK_NotMultipleOfM, InclusionExclusionPrinciple",True,MockSet_CAT_Adv4_Final_CleanV2,,"N = 2⁵ × 3⁴ × 5³.
+Quantitative Aptitude,,100000022,22,,,Find the number of factors of N = 2⁵ × 3⁴ × 5³ that are multiples of 12 but are not multiples of 90.,,,,,,,,,28,TITA,Number System,Number of Factors & Sum of Factors,Hard,Number of Factors & Sum of Factors,"Factors_NumberOfFactors_SpecificProperties_MultipleOfK_NotMultipleOfM, InclusionExclusionPrinciple",TRUE,MockSet_CAT_Adv4_Final_CleanV2,,"N = 2⁵ × 3⁴ × 5³.
 We need factors that are multiples of 12 (2² × 3¹) but not multiples of 90 (2¹ × 3² × 5¹).
 This means we must find the number of factors that are multiples of 12 and subtract those that are also multiples of 90.
 A number that is a multiple of both 12 and 90 must be a multiple of their LCM.

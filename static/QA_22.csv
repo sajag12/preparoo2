@@ -1,5 +1,5 @@
 CognitiveSkillLevel,ConceptTested,CorrectAnswerValue,DetailedTags,DifficultyLevelPredicted,IsTITA,OptionAText,OptionAValue,OptionBText,OptionBValue,OptionCText,OptionCValue,OptionDText,OptionDValue,PassageOrSetContent,PassageOrSetID,QuestionNumberInSection,QuestionPrompt,QuestionType,QuestionUniqueID,SectionName,SectionTimeLimitMinutes,SetID,SolutionExplanation,SubTopic,Topic
-Analyzing,"Ratio of Income, Expenditure, and Savings",C,"Income_Expenditure_Savings, System_of_Equations",Hard,False,"Rs. 32,000",A,"Rs. 40,000",B,"Rs. 48,000",C,"Rs. 56,000",D,,,1,"The incomes of A and B are in the ratio 3:4 and their expenditures are in the ratio 4:5. A saves 25% of his income. If the total savings of A and B together amount to Rs. 23,250, what is the income of B?",MCQ,Q177,QA,40,MockSet_CAT_QA_004,"Let incomes of A and B be 3k and 4k respectively.
+Analyzing,"Ratio of Income, Expenditure, and Savings",C,"Income_Expenditure_Savings, System_of_Equations",Hard,FALSE,"Rs. 32,000",A,"Rs. 40,000",B,"Rs. 48,000",C,"Rs. 56,000",D,,,1,"The incomes of A and B are in the ratio 3:4 and their expenditures are in the ratio 4:5. A saves 25% of his income. If the total savings of A and B together amount to Rs. 23,250, what is the income of B?",MCQ,Q177,QA,40,MockSet_CAT_QA_004,"Let incomes of A and B be 3k and 4k respectively.
 Let expenditures of A and B be 4m and 5m respectively.
 A's savings = Income of A - Expenditure of A = 3k - 4m.
 A saves 25% of his income, so A's savings = 0.25 × 3k = (3/4)k.
@@ -15,7 +15,7 @@ Given total savings = Rs. 23,250.
 k = (23250 × 16) / 31 = 750 × 16 = 12000.
 Income of B = 4k = 4 × 12000 = Rs. 48,000.
 The correct option is (C).","Ratio, Proportion & Variation",Arithmetic
-Applying,Volume Conservation in Recasting Solids,8,"Recasting_Solids, Spherical_Shell_Volume",Hard,True,,,,,,,,,,,2,"A metallic spherical shell has an external radius of 10 cm and an internal radius of 6 cm. If this shell is melted and recast into a solid right circular cylinder of height 16 cm, what is the radius of the base of this cylinder in cm? (Answer to the nearest integer)",TITA,Q178,QA,40,MockSet_CAT_QA_004,"External radius, R_ext = 10 cm. Internal radius, R_int = 6 cm.
+Applying,Volume Conservation in Recasting Solids,8,"Recasting_Solids, Spherical_Shell_Volume",Hard,TRUE,,,,,,,,,,,2,"A metallic spherical shell has an external radius of 10 cm and an internal radius of 6 cm. If this shell is melted and recast into a solid right circular cylinder of height 16 cm, what is the radius of the base of this cylinder in cm? (Answer to the nearest integer)",TITA,Q178,QA,40,MockSet_CAT_QA_004,"External radius, R_ext = 10 cm. Internal radius, R_int = 6 cm.
 Volume of the metallic shell, V_shell = (4/3)π(R_ext³ - R_int³)
 V_shell = (4/3)π(10³ - 6³) = (4/3)π(1000 - 216) = (4/3)π(784) cm³.
 This material is recast into a cylinder of height H_cyl = 16 cm. Let its radius be r_cyl.
@@ -27,7 +27,7 @@ V_shell = V_cyl.
 r_cyl = √(196/3) = 14/√3 ≈ 14 / 1.732 ≈ 8.08 cm.
 To the nearest integer, r_cyl = 8 cm.
 The answer is 8.",Mensuration - 3D,Geometry
-Analyzing,Time calculation for a faulty clock,D,"Faulty_Clock, Relative_Time",Medium,False,3:45 PM,A,4:00 PM,B,4:15 PM,C,3:33 PM,D,,,3,A clock is set right at 10:00 AM on Monday. The clock loses 15 minutes in every 24 actual hours. What will be the actual time when this clock indicates 3:00 PM on the following Wednesday?,MCQ,Q179,QA,40,MockSet_CAT_QA_004,"The clock loses 15 min in 24 actual hours.
+Analyzing,Time calculation for a faulty clock,D,"Faulty_Clock, Relative_Time",Medium,FALSE,3:45 PM,A,4:00 PM,B,4:15 PM,C,3:33 PM,D,,,3,A clock is set right at 10:00 AM on Monday. The clock loses 15 minutes in every 24 actual hours. What will be the actual time when this clock indicates 3:00 PM on the following Wednesday?,MCQ,Q179,QA,40,MockSet_CAT_QA_004,"The clock loses 15 min in 24 actual hours.
 This means 24 hours of actual time correspond to 23 hours 45 minutes (23.75 hours) on the faulty clock.
 Ratio of Actual Time / Clock Time = 24 / 23.75 = 24 / (95/4) = 96/95.
 The time indicated by the clock is from Monday 10:00 AM to Wednesday 3:00 PM.
@@ -40,7 +40,7 @@ Actual time = Monday 10:00 AM + 53 hours 33 minutes.
 = Monday 10:00 AM + 48 hours + 5 hours 33 minutes
 = Wednesday 10:00 AM + 5 hours 33 minutes = Wednesday 3:33 PM.
 The correct option is (D).",Clocks and Calendars,Arithmetic
-Applying,Simplification using cubic algebraic identities,20,"Cubic_Identities, Algebraic_Manipulation",Medium,True,,,,,,,,,,,4,"If (x³ + y³ + z³ - 3xyz) / ((x-y)² + (y-z)² + (z-x)²) = 10, and it is known that x+y+z = k, find the value of k.",TITA,Q180,QA,40,MockSet_CAT_QA_004,"The identity for the numerator is: x³ + y³ + z³ - 3xyz = (x+y+z)(x² + y² + z² - xy - yz - zx).
+Applying,Simplification using cubic algebraic identities,20,"Cubic_Identities, Algebraic_Manipulation",Medium,TRUE,,,,,,,,,,,4,"If (x³ + y³ + z³ - 3xyz) / ((x-y)² + (y-z)² + (z-x)²) = 10, and it is known that x+y+z = k, find the value of k.",TITA,Q180,QA,40,MockSet_CAT_QA_004,"The identity for the numerator is: x³ + y³ + z³ - 3xyz = (x+y+z)(x² + y² + z² - xy - yz - zx).
 The denominator can be related by: (x-y)² + (y-z)² + (z-x)² = 2(x² + y² + z² - xy - yz - zx).
 Let D = (x-y)² + (y-z)² + (z-x)².
 Then (x² + y² + z² - xy - yz - zx) = D/2.
@@ -50,7 +50,7 @@ Substituting these into the given equation:
 x+y+z = 20.
 Since x+y+z = k, k = 20.
 The answer is 20.",Algebraic Identities,Algebra
-Applying,Probability of committee formation with constraints,C,"Combinations, Probability, Committee_Selection",Medium,False,121/252,A,131/252,B,31/42,C,15/42,D,,,5,A committee of 5 members is to be formed from 6 men and 4 women. What is the probability that the committee contains more men than women?,MCQ,Q181,QA,40,MockSet_CAT_QA_004,"Total members = 6 men (M) + 4 women (W) = 10. A committee of 5 is to be formed.
+Applying,Probability of committee formation with constraints,C,"Combinations, Probability, Committee_Selection",Medium,FALSE,121/252,A,131/252,B,31/42,C,15/42,D,,,5,A committee of 5 members is to be formed from 6 men and 4 women. What is the probability that the committee contains more men than women?,MCQ,Q181,QA,40,MockSet_CAT_QA_004,"Total members = 6 men (M) + 4 women (W) = 10. A committee of 5 is to be formed.
 Total ways to form the committee = C(10,5) = (10×9×8×7×6)/(5×4×3×2×1) = 252.
 For the committee to have more men than women, the possible compositions (M, W) are:
 1. (3M, 2W): C(6,3) × C(4,2) = 20 × 6 = 120 ways.
@@ -61,7 +61,7 @@ Probability = Favorable ways / Total ways = 186 / 252.
 Dividing numerator and denominator by HCF (6): 186/6 = 31; 252/6 = 42.
 Probability = 31/42.
 The correct option is (C).",Permutations & Combinations,Modern Maths
-Applying,Area of intersecting paths (Inclusion-Exclusion),950,"Area_of_Paths, Inclusion-Exclusion",Medium,True,,,,,,,,,,,6,"A rectangular field is 80 m long and 60 m wide. Three roads, each 5 m wide, are constructed within the field such that two roads are parallel to the breadth and one road is parallel to the length. These roads intersect each other. Find the area of the field covered by the roads in square meters.",TITA,Q182,QA,40,MockSet_CAT_QA_004,"Field dimensions: L=80m, B=60m. Road width: w=5m.
+Applying,Area of intersecting paths (Inclusion-Exclusion),950,"Area_of_Paths, Inclusion-Exclusion",Medium,TRUE,,,,,,,,,,,6,"A rectangular field is 80 m long and 60 m wide. Three roads, each 5 m wide, are constructed within the field such that two roads are parallel to the breadth and one road is parallel to the length. These roads intersect each other. Find the area of the field covered by the roads in square meters.",TITA,Q182,QA,40,MockSet_CAT_QA_004,"Field dimensions: L=80m, B=60m. Road width: w=5m.
 Area of one road parallel to length = L × w = 80 × 5 = 400 m².
 Area of two roads parallel to breadth = 2 × (B × w) = 2 × (60 × 5) = 600 m².
 Total area of the roads if there were no overlap = 400 + 600 = 1000 m².
@@ -70,7 +70,7 @@ Area of each intersection = w × w = 5 × 5 = 25 m².
 Total overlapping area = 2 × 25 = 50 m².
 Area covered by roads = (Sum of road areas) - (Overlapping area) = 1000 - 50 = 950 m².
 The answer is 950.",Mensuration - 2D,Geometry
-Applying,Effect of new members on average,D,"Change_in_Average, Group_Addition",Medium,False,10,A,12,B,14,C,16,D,,,7,"The average age of a group of N students is 18 years. When two new students, aged 24 years and 30 years, join the group, the average age of the group increases by 1 year. What is the value of N?",MCQ,Q183,QA,40,MockSet_CAT_QA_004,"Initial number of students = N. Initial average age = 18. Initial total age = 18N.
+Applying,Effect of new members on average,D,"Change_in_Average, Group_Addition",Medium,FALSE,10,A,12,B,14,C,16,D,,,7,"The average age of a group of N students is 18 years. When two new students, aged 24 years and 30 years, join the group, the average age of the group increases by 1 year. What is the value of N?",MCQ,Q183,QA,40,MockSet_CAT_QA_004,"Initial number of students = N. Initial average age = 18. Initial total age = 18N.
 Two new students (ages 24 and 30) join. Sum of their ages = 54.
 New number of students = N+2.
 New total age = 18N + 54.
@@ -79,7 +79,7 @@ New average age = (18N + 54) / (N+2). This is given to be 18+1 = 19.
 18N + 54 = 19(N+2) = 19N + 38.
 54 - 38 = 19N - 18N => N = 16.
 The correct option is (D).",Averages,Arithmetic
-Analyzing,Relation between roots of a quadratic equation (Vieta's formulas),A,"Properties_of_Roots, VietaFormulas_AlphaBetaExpressions",Hard,False,-11,A,-20,B,-24,C,-28,D,,,8,The sum of the squares of the roots of the quadratic equation x² - (k-2)x + (k-3) = 0 is 21. What is the product of the possible values of k?,MCQ,Q184,QA,40,MockSet_CAT_QA_004,"For x² - (k-2)x + (k-3) = 0, let the roots be α and β.
+Analyzing,Relation between roots of a quadratic equation (Vieta's formulas),A,"Properties_of_Roots, VietaFormulas_AlphaBetaExpressions",Hard,FALSE,-11,A,-20,B,-24,C,-28,D,,,8,The sum of the squares of the roots of the quadratic equation x² - (k-2)x + (k-3) = 0 is 21. What is the product of the possible values of k?,MCQ,Q184,QA,40,MockSet_CAT_QA_004,"For x² - (k-2)x + (k-3) = 0, let the roots be α and β.
 Sum of roots: α+β = k-2.
 Product of roots: αβ = k-3.
 The sum of the squares of the roots is α² + β² = (α+β)² - 2αβ.
@@ -88,7 +88,7 @@ Given α² + β² = 21.
 k²-6k+10 = 21 => k²-6k-11 = 0.
 This is a quadratic equation in k. The product of its possible values (k₁k₂) is c/a = -11/1 = -11.
 The correct option is (A).",Quadratic Equations,Algebra
-Analyzing,Properties of Arithmetic and Geometric Progressions,16,"AP_GP_Mix, System_of_Equations",Hard,True,,,,,,,,,,,9,"Three positive integers a, b, and c are in continued proportion. If a, b+2, c are in Arithmetic Progression and a+b+c = 28, find the value of c, given a < c.",TITA,Q185,QA,40,MockSet_CAT_QA_004,"a, b, c are in continued proportion, so b² = ac.
+Analyzing,Properties of Arithmetic and Geometric Progressions,16,"AP_GP_Mix, System_of_Equations",Hard,TRUE,,,,,,,,,,,9,"Three positive integers a, b, and c are in continued proportion. If a, b+2, c are in Arithmetic Progression and a+b+c = 28, find the value of c, given a < c.",TITA,Q185,QA,40,MockSet_CAT_QA_004,"a, b, c are in continued proportion, so b² = ac.
 a, b+2, c are in AP, so 2(b+2) = a+c.
 a+b+c = 28.
 From the sum equation, substitute a+c = 2(b+2):
@@ -100,7 +100,7 @@ We need two numbers with sum 20 and product 64. The numbers are 4 and 16.
 Given a < c, so a=4 and c=16.
 The value of c is 16.
 The answer is 16.","Sequences & Series (AP, GP, HP, Special Series)",Algebra
-Analyzing,Mixtures and Alligation with Profit & Loss,A,"Mixtures_Alligation, Profit_Calculation",Medium,False,"1:0 (Effectively, only Solution A is used)",A,2:3,B,3:4,C,1:1,D,,,10,"A milkman mixes two types of milk solutions. Solution A contains 80% milk and Solution B contains 60% milk. He mixes them to create a new solution which he sells at the cost price of pure milk, thereby making a profit of 25% (due to the water content). In what ratio did he mix Solution A and Solution B?",MCQ,Q186,QA,40,MockSet_CAT_QA_004,"Let the cost price (CP) of pure milk be Re 1 per litre.
+Analyzing,Mixtures and Alligation with Profit & Loss,A,"Mixtures_Alligation, Profit_Calculation",Medium,FALSE,"""1:0 (Effectively, only Solution A is used)""",A,"""2:3""",B,"""3:4""",C,"""1:1""",D,,,10,"A milkman mixes two types of milk solutions. Solution A contains 80% milk and Solution B contains 60% milk. He mixes them to create a new solution which he sells at the cost price of pure milk, thereby making a profit of 25% (due to the water content). In what ratio did he mix Solution A and Solution B?",MCQ,Q186,QA,40,MockSet_CAT_QA_004,"Let the cost price (CP) of pure milk be Re 1 per litre.
 The cost of Solution A (80% milk) is Re 0.80/litre.
 The cost of Solution B (60% milk) is Re 0.60/litre.
 The milkman sells the final mixture at the CP of pure milk, so Selling Price (SP) = Re 1/litre.
@@ -116,7 +116,7 @@ Cost of A (0.80)     Cost of B (0.60)
 Ratio of quantity of A : quantity of B = 0.20 : 0 = 1 : 0.
 This implies only Solution A is used.
 The correct option is (A).","Profit, Loss & Discount",Arithmetic
-Applying,Solving logarithmic equations using change of base,A,"Logarithmic_Equations, Change_of_Base",Medium,False,18,A,20,B,12,C,10,D,,,11,"If log₂(x) + logₓ(16) = 5, where x > 1, find the sum of the possible values of x.",MCQ,Q187,QA,40,MockSet_CAT_QA_004,"log₂(x) + logₓ(16) = 5.
+Applying,Solving logarithmic equations using change of base,A,"Logarithmic_Equations, Change_of_Base",Medium,FALSE,18,A,20,B,12,C,10,D,,,11,"If log₂(x) + logₓ(16) = 5, where x > 1, find the sum of the possible values of x.",MCQ,Q187,QA,40,MockSet_CAT_QA_004,"log₂(x) + logₓ(16) = 5.
 Using change of base formula: logₓ(16) = log₂(16) / log₂(x) = 4 / log₂(x).
 Let y = log₂(x). The equation becomes y + 4/y = 5.
 y² + 4 = 5y => y² - 5y + 4 = 0.
@@ -126,7 +126,7 @@ If y=4: log₂(x) = 4 => x = 2⁴ = 16.
 Both values satisfy x > 1.
 Sum of possible values = 2 + 16 = 18.
 The correct option is (A).",Logarithms,Algebra
-Analyzing,Relative speed on an escalator,120,"TSD_Escalators, Relative_Speed",Medium,True,,,,,,,,,,,12,Rohan walks up a moving escalator (moving upwards) in 30 seconds taking 60 steps. Sohan walks up the same moving escalator in 20 seconds taking 80 steps. How many steps are visible on the escalator when it is stationary?,TITA,Q188,QA,40,MockSet_CAT_QA_004,"Let N be the total number of steps on the stationary escalator and v_e be the escalator's speed in steps/sec.
+Analyzing,Relative speed on an escalator,120,"TSD_Escalators, Relative_Speed",Medium,TRUE,,,,,,,,,,,12,Rohan walks up a moving escalator (moving upwards) in 30 seconds taking 60 steps. Sohan walks up the same moving escalator in 20 seconds taking 80 steps. How many steps are visible on the escalator when it is stationary?,TITA,Q188,QA,40,MockSet_CAT_QA_004,"Let N be the total number of steps on the stationary escalator and v_e be the escalator's speed in steps/sec.
 The number of steps on the escalator is the sum of steps walked by the person and steps moved by the escalator.
 For Rohan: N = 60 (walked) + 30 (time) × v_e. (1)
 For Sohan: N = 80 (walked) + 20 (time) × v_e. (2)
@@ -136,7 +136,7 @@ Equating (1) and (2):
 Substitute v_e back into equation (1):
 N = 60 + 30(2) = 60 + 60 = 120 steps.
 The answer is 120.","Time, Speed & Distance",Arithmetic
-Applying,Application of Angle Bisector Theorem on triangle areas,C,"Angle_Bisector_Theorem, Area_Ratio",Medium,False,60 sq cm,A,65 sq cm,B,70 sq cm,C,75 sq cm,D,,,13,"In a triangle ABC, the internal bisector of angle A meets BC at D. If AB = 10 cm, AC = 14 cm, and the area of triangle ABD is 50 sq cm, what is the area of triangle ACD?",MCQ,Q189,QA,40,MockSet_CAT_QA_004,"By the Angle Bisector Theorem, the bisector of an angle in a triangle divides the opposite side in the ratio of the other two sides.
+Applying,Application of Angle Bisector Theorem on triangle areas,C,"Angle_Bisector_Theorem, Area_Ratio",Medium,FALSE,60 sq cm,A,65 sq cm,B,70 sq cm,C,75 sq cm,D,,,13,"In a triangle ABC, the internal bisector of angle A meets BC at D. If AB = 10 cm, AC = 14 cm, and the area of triangle ABD is 50 sq cm, what is the area of triangle ACD?",MCQ,Q189,QA,40,MockSet_CAT_QA_004,"By the Angle Bisector Theorem, the bisector of an angle in a triangle divides the opposite side in the ratio of the other two sides.
 BD/DC = AB/AC = 10/14 = 5/7.
 Triangles ABD and ACD have the same height (the altitude from vertex A to base BC).
 The ratio of their areas is equal to the ratio of their bases.
@@ -145,7 +145,7 @@ Given Area(ΔABD) = 50 sq cm.
 50 / Area(ΔACD) = 5/7.
 Area(ΔACD) = (50 × 7) / 5 = 10 × 7 = 70 sq cm.
 The correct option is (C).",Triangles,Geometry
-Applying,Solving system of congruences (Chinese Remainder Theorem),C,"Chinese_Remainder_Theorem, System_of_Congruences",Medium,False,11,A,12,B,13,C,14,D,,,14,"A number when divided by 7 leaves a remainder of 3, and when divided by 11 leaves a remainder of 5. If the number is between 300 and 400, what is the sum of its digits?",MCQ,Q190,QA,40,MockSet_CAT_QA_004,"Let the number be N.
+Applying,Solving system of congruences (Chinese Remainder Theorem),C,"Chinese_Remainder_Theorem, System_of_Congruences",Medium,FALSE,11,A,12,B,13,C,14,D,,,14,"A number when divided by 7 leaves a remainder of 3, and when divided by 11 leaves a remainder of 5. If the number is between 300 and 400, what is the sum of its digits?",MCQ,Q190,QA,40,MockSet_CAT_QA_004,"Let the number be N.
 N = 7a + 3 and N = 11b + 5.
 From the second condition, N can be 5, 16, 27, 38, 49, 60, ...
 Check these values for the first condition (N ≡ 3 mod 7):
@@ -158,7 +158,7 @@ If k=5, N = 77(5) + 38 = 385 + 38 = 423 (Too large).
 The number is 346.
 Sum of its digits = 3 + 4 + 6 = 13.
 The correct option is (C).",Remainders (incl. Remainder Theorem),Number System
-Analyzing,Counting integer solutions with constraints (Case Analysis),15,"Distribution_IdenticalItems, Case_Analysis, Upper_Bounds",Hard,True,,,,,,,,,,,15,"Find the number of non-negative integer solutions to the equation x + y + z + w = 6 such that 0 ≤ x ≤ 3, 0 ≤ y ≤ 2, 0 ≤ z ≤ 3, and 0 ≤ w ≤ 1.",TITA,Q191,QA,40,MockSet_CAT_QA_004,"The equation is x + y + z + w = 6, with constraints 0≤x≤3, 0≤y≤2, 0≤z≤3, 0≤w≤1.
+Analyzing,Counting integer solutions with constraints (Case Analysis),15,"Distribution_IdenticalItems, Case_Analysis, Upper_Bounds",Hard,TRUE,,,,,,,,,,,15,"Find the number of non-negative integer solutions to the equation x + y + z + w = 6 such that 0 ≤ x ≤ 3, 0 ≤ y ≤ 2, 0 ≤ z ≤ 3, and 0 ≤ w ≤ 1.",TITA,Q191,QA,40,MockSet_CAT_QA_004,"The equation is x + y + z + w = 6, with constraints 0≤x≤3, 0≤y≤2, 0≤z≤3, 0≤w≤1.
 Case 1: w = 0. The equation becomes x + y + z = 6.
  • If y = 0, x+z=6. With x≤3, z≤3, the only solution is (x,z) = (3,3). (1 sol)
  • If y = 1, x+z=5. Solutions: (2,3), (3,2). (2 sols)
@@ -171,7 +171,7 @@ Case 2: w = 1. The equation becomes x + y + z = 5.
 Total for w=1: 2+3+4 = 9 solutions.
 Total number of solutions = 6 + 9 = 15.
 The answer is 15.",Permutations & Combinations,Modern Maths
-Applying,Direct variation and percentage change,D,"Direct_Variation, Proportionality, Percentage_Loss",Medium,False,72.5%,A,75.5%,B,77.5%,C,86.4%,D,,,16,"The value of a diamond is proportional to the cube of its weight. A diamond weighing 20 grams, valued at Rs. 64,000, breaks into three pieces whose weights are in the ratio 1:2:2. What is the percentage loss in the value of the diamond due to the breakage?",MCQ,Q192,QA,40,MockSet_CAT_QA_004,"Value V is proportional to cube of weight W, so V = kW³.
+Applying,Direct variation and percentage change,D,"Direct_Variation, Proportionality, Percentage_Loss",Medium,FALSE,72.50%,A,75.50%,B,77.50%,C,86.40%,D,,,16,"The value of a diamond is proportional to the cube of its weight. A diamond weighing 20 grams, valued at Rs. 64,000, breaks into three pieces whose weights are in the ratio 1:2:2. What is the percentage loss in the value of the diamond due to the breakage?",MCQ,Q192,QA,40,MockSet_CAT_QA_004,"Value V is proportional to cube of weight W, so V = kW³.
 Given W=20g, V=Rs. 64,000.
 64000 = k(20)³ = 8000k => k = 8.
 So, V = 8W³.
@@ -184,7 +184,7 @@ New Total Value, V_new = 8(4³) + 8(8³) + 8(8³) = 8(64) + 8(512) + 8(512) = 51
 Loss in value = 64000 - 8704 = 55296.
 Percentage Loss = (Loss / Original Value) × 100 = (55296 / 64000) × 100 = 86.4%.
 The correct option is (D).","Ratio, Proportion & Variation",Arithmetic
-Analyzing,Solving absolute value (modulus) inequalities,B,"Modulus_Inequality, Quadratic_Inequality, Case_Analysis",Hard,False,1,A,2,B,3,C,4,D,,,17,Find the number of integer solutions to the inequality |x² - 2x - 3| < 3x - 3.,MCQ,Q193,QA,40,MockSet_CAT_QA_004,"The inequality is |x² - 2x - 3| < 3x - 3.
+Analyzing,Solving absolute value (modulus) inequalities,B,"Modulus_Inequality, Quadratic_Inequality, Case_Analysis",Hard,FALSE,1,A,2,B,3,C,4,D,,,17,Find the number of integer solutions to the inequality |x² - 2x - 3| < 3x - 3.,MCQ,Q193,QA,40,MockSet_CAT_QA_004,"The inequality is |x² - 2x - 3| < 3x - 3.
 The LHS is non-negative, so the RHS must be positive: 3x - 3 > 0 => x > 1.
 The expression inside the modulus is x² - 2x - 3 = (x-3)(x+1).
 Case 1: x² - 2x - 3 ≥ 0. This holds for x ≥ 3 or x ≤ -1. With x > 1, this case applies for x ≥ 3.
@@ -195,7 +195,7 @@ The inequality is: -(x² - 2x - 3) < 3x - 3 => -x² + 2x + 3 < 3x - 3 => 0 < x²
 This is 0 < (x+3)(x-2), which is true for x > 2 or x < -3. The intersection with 1 < x < 3 is 2 < x < 3. No integer solutions here.
 The only integer solutions are 3 and 4. There are 2 solutions.
 The correct option is (B).",Inequalities (Linear & Quadratic),Algebra
-Applying,Work and time with inlet/outlet pipes,60,"Pipes_and_Cisterns, Efficiency, Work_Rate",Medium,True,,,,,,,,,,,18,"Three pipes A, B, and C are connected to a tank. A and B are inlet pipes that can fill the tank individually in 20 minutes and 30 minutes, respectively. C is an outlet pipe. When all three pipes are opened together, the tank gets filled in 15 minutes. In how many minutes can pipe C alone empty the full tank?",TITA,Q194,QA,40,MockSet_CAT_QA_004,"Let the tank capacity be LCM(20, 30, 15) = 60 units.
+Applying,Work and time with inlet/outlet pipes,60,"Pipes_and_Cisterns, Efficiency, Work_Rate",Medium,TRUE,,,,,,,,,,,18,"Three pipes A, B, and C are connected to a tank. A and B are inlet pipes that can fill the tank individually in 20 minutes and 30 minutes, respectively. C is an outlet pipe. When all three pipes are opened together, the tank gets filled in 15 minutes. In how many minutes can pipe C alone empty the full tank?",TITA,Q194,QA,40,MockSet_CAT_QA_004,"Let the tank capacity be LCM(20, 30, 15) = 60 units.
 Rate of A = 60/20 = +3 units/min.
 Rate of B = 60/30 = +2 units/min.
 Rate of A+B+C = 60/15 = +4 units/min.
@@ -205,7 +205,7 @@ Let the rate of C be R_C.
 The negative sign confirms C is an outlet pipe.
 Time for C alone to empty the full tank (60 units) = Capacity / |Rate of C| = 60 / 1 = 60 minutes.
 The answer is 60.",Time & Work,Arithmetic
-Applying,Finding sum of a range of terms in an AP from S_n,B,"Sum_of_n_terms, Finding_nth_term, Arithmetic_Progression",Medium,False,252,A,282,B,300,C,312,D,,,19,The sum of the first 'n' terms of a series is given by S_n = 3n² + 5n. The sum of the 5th term to the 10th term (inclusive) of this series is:,MCQ,Q195,QA,40,MockSet_CAT_QA_004,"The nth term T_n is given by T_n = S_n - S_{n-1} for n ≥ 2.
+Applying,Finding sum of a range of terms in an AP from S_n,B,"Sum_of_n_terms, Finding_nth_term, Arithmetic_Progression",Medium,FALSE,252,A,282,B,300,C,312,D,,,19,The sum of the first 'n' terms of a series is given by S_n = 3n² + 5n. The sum of the 5th term to the 10th term (inclusive) of this series is:,MCQ,Q195,QA,40,MockSet_CAT_QA_004,"The nth term T_n is given by T_n = S_n - S_{n-1} for n ≥ 2.
 T_n = (3n² + 5n) - [3(n-1)² + 5(n-1)]
 T_n = (3n² + 5n) - [3(n²-2n+1) + 5n-5]
 T_n = (3n² + 5n) - (3n² - 6n + 3 + 5n - 5)
@@ -215,7 +215,7 @@ We need the sum from the 5th to the 10th term.
 This is an AP with 6 terms. First term is T₅ = 6(5)+2 = 32. Last term is T₁₀ = 6(10)+2 = 62.
 Sum = (Number of terms / 2) × (First term + Last term) = (6/2) × (32 + 62) = 3 × 94 = 282.
 The correct option is (B).","Sequences & Series (AP, GP, HP, Special Series)",Algebra
-Applying,Compound interest growth and time calculation,B,"CI_Amount_Tupling_FindTime, ExponentialGrowth",Medium,False,20 years,A,25 years,B,30 years,C,37.5 years,D,,,20,"A sum of money becomes 8 times itself in 15 years at a certain rate of compound interest, compounded annually. In how many years will it become 32 times itself at the same rate?",MCQ,Q196,QA,40,MockSet_CAT_QA_004,"Let Principal=P, rate=R, Amount=A. A = P(1 + R/100)ᵗ.
+Applying,Compound interest growth and time calculation,B,"CI_Amount_Tupling_FindTime, ExponentialGrowth",Medium,FALSE,20 years,A,25 years,B,30 years,C,37.5 years,D,,,20,"A sum of money becomes 8 times itself in 15 years at a certain rate of compound interest, compounded annually. In how many years will it become 32 times itself at the same rate?",MCQ,Q196,QA,40,MockSet_CAT_QA_004,"Let Principal=P, rate=R, Amount=A. A = P(1 + R/100)ᵗ.
 In 15 years, amount becomes 8P.
 8P = P(1 + R/100)¹⁵ => 8 = (1 + R/100)¹⁵.
 2³ = (1 + R/100)¹⁵.
@@ -225,7 +225,7 @@ Let T be the time for the amount to become 32P.
 2⁵ = (2^(1/5))ᵀ = 2^(T/5).
 Equating the powers of 2: 5 = T/5 => T = 25 years.
 The correct option is (B).",Compound Interest,Arithmetic
-Applying,Venn diagrams and set theory for 'exactly one' category,900,"Two_Sets, Inclusion-Exclusion, Exactly_One_Set",Medium,True,,,,,,,,,,,21,"In an examination, 70% of the candidates passed in English, 65% passed in Mathematics, and 15% failed in both subjects. If 315 candidates passed in exactly one subject, what was the total number of candidates who appeared for the examination?",TITA,Q197,QA,40,MockSet_CAT_QA_004,"Let P(E) be the percentage passing in English and P(M) be for Maths.
+Applying,Venn diagrams and set theory for 'exactly one' category,900,"Two_Sets, Inclusion-Exclusion, Exactly_One_Set",Medium,TRUE,,,,,,,,,,,21,"In an examination, 70% of the candidates passed in English, 65% passed in Mathematics, and 15% failed in both subjects. If 315 candidates passed in exactly one subject, what was the total number of candidates who appeared for the examination?",TITA,Q197,QA,40,MockSet_CAT_QA_004,"Let P(E) be the percentage passing in English and P(M) be for Maths.
 P(E) = 70%, P(M) = 65%.
 Percentage failing in both, P(E' ∩ M') = 15%.
 By De Morgan's laws, P(E∪M) = 1 - P(E' ∩ M') = 100% - 15% = 85%.
@@ -239,7 +239,7 @@ Let T be the total number of candidates. 0.35 × T = 315.
 T = 315 / 0.35 = 31500 / 35 = 900.
 The total number of candidates was 900.
 The answer is 900.",Set Theory & Venn Diagrams,Modern Maths
-Applying,Algebraic identities involving x + 1/x,C,"Algebraic_Identities, x+1/x_identities, Algebraic_Simplification",Easy,False,12,A,15,B,18,C,2√21,D,,,22,"If (x² + 1/x²) = 7, and x > 0, what is the value of (x³ + 1/x³)?",MCQ,Q198,QA,40,MockSet_CAT_QA_004,"Given x² + 1/x² = 7.
+Applying,Algebraic identities involving x + 1/x,C,"Algebraic_Identities, x+1/x_identities, Algebraic_Simplification",Easy,FALSE,12,A,15,B,18,C,2√21,D,,,22,"If (x² + 1/x²) = 7, and x > 0, what is the value of (x³ + 1/x³)?",MCQ,Q198,QA,40,MockSet_CAT_QA_004,"Given x² + 1/x² = 7.
 (x + 1/x)² = x² + 1/x² + 2(x)(1/x) = 7 + 2 = 9.
 Since x > 0, we take the positive root: x + 1/x = 3.
 The identity for the sum of cubes is x³ + 1/x³ = (x + 1/x)³ - 3(x)(1/x)(x + 1/x).

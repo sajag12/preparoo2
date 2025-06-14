@@ -1,12 +1,12 @@
 SectionName,SectionTimeLimitMinutes,QuestionUniqueID,QuestionNumberInSection,PassageOrSetID,PassageOrSetContent,QuestionPrompt,OptionAText,OptionBText,OptionCText,OptionDText,OptionAValue,OptionBValue,OptionCValue,OptionDValue,CorrectAnswerValue,QuestionType,Topic,SubTopic,DifficultyLevelPredicted,ConceptTested,DetailedTags,IsTITA,SetID,CognitiveSkillLevel,SolutionExplanation
-Quantitative Ability,40,Q96,1,,,"The average monthly electricity bill of a household for the first four months of the year was Rs. 1200. For the next three months, the average bill was Rs. 1500. For the subsequent four months, the average bill was Rs. 1350. If the total electricity bill for the entire year was Rs. 16,500, what was the electricity bill for the last month of the year (in Rs.)?",,,,,,,,,1800,TITA,Arithmetic,Averages & Weighted Averages,Medium,Averages & Weighted Averages,"Average Calculation, Monthly Data, Yearly Total",True,MockSet1_QA,Application,"Total bill for the first 4 months = 4 * 1200 = Rs. 4800.
+Quantitative Ability,40,Q96,1,,,"The average monthly electricity bill of a household for the first four months of the year was Rs. 1200. For the next three months, the average bill was Rs. 1500. For the subsequent four months, the average bill was Rs. 1350. If the total electricity bill for the entire year was Rs. 16,500, what was the electricity bill for the last month of the year (in Rs.)?",,,,,,,,,1800,TITA,Arithmetic,Averages & Weighted Averages,Medium,Averages & Weighted Averages,"Average Calculation, Monthly Data, Yearly Total",TRUE,MockSet1_QA,Application,"Total bill for the first 4 months = 4 * 1200 = Rs. 4800.
 Total bill for the next 3 months = 3 * 1500 = Rs. 4500.
 Total bill for the subsequent 4 months = 4 * 1350 = Rs. 5400.
 Total bill for the first 4+3+4 = 11 months = 4800 + 4500 + 5400 = Rs. 14700.
 Total electricity bill for the entire year (12 months) = Rs. 16,500.
 The electricity bill for the last month = Total yearly bill - Total bill for first 11 months
 = 16500 - 14700 = Rs. 1800."
-Quantitative Ability,40,Q97,2,,,"If x, y are positive integers such that x to the power y = y to the power x and x is not equal to y, and additionally x = 2y. Find y to the power (x-y).",1,2,4,8,A,B,C,D,C,MCQ,Algebra,Basics of Algebra & Identities,Hard,Exponential Equations,"Exponential Equations, Integer Solutions, Simultaneous Equations",False,MockSet1_QA,Analysis,"Given x = 2y. Substitute this into the equation x to the power y = y to the power x:
+Quantitative Ability,40,Q97,2,,,"If x, y are positive integers such that x to the power y = y to the power x and x is not equal to y, and additionally x = 2y. Find y to the power (x-y).",1,2,4,8,A,B,C,D,C,MCQ,Algebra,Basics of Algebra & Identities,Hard,Exponential Equations,"Exponential Equations, Integer Solutions, Simultaneous Equations",FALSE,MockSet1_QA,Analysis,"Given x = 2y. Substitute this into the equation x to the power y = y to the power x:
 (2y) to the power y = y to the power (2y).
 (2 to the power y) * (y to the power y) = (y to the power y) * (y to the power y).
 Since y is a positive integer, y > 0. So, y to the power y > 0. We can divide both sides by y to the power y:
@@ -15,7 +15,7 @@ Since y is a positive integer, this implies y=2.
 If y=2, then x=2y=4.
 Check condition x is not equal to y: 4 is not equal to 2, satisfied.
 The value to find is y to the power (x-y) = 2 to the power (4-2) = 2 to the power 2 = 4."
-Quantitative Ability,40,Q98,3,,,Two identical circles of radius 6 cm intersect such that the distance between their centers is 6 cm. Find the area of the region common to both circles.,24pi - 18sqrt(3),12pi - 9sqrt(3),24pi - 36sqrt(3),12pi - 18sqrt(3),A,B,C,D,A,MCQ,Geometry,"Mensuration - 2D (Area & Perimeter: Triangles, Quadrilaterals, Polygons, Circles)",Hard,Area of Intersecting Circles,"Intersecting Circles, Area of Common Region, Sector Area, Equilateral Triangle",False,MockSet1_QA,Analysis,"Let the two circles be C1 and C2, with centers O1 and O2 respectively, and radius r=6 cm.
+Quantitative Ability,40,Q98,3,,,Two identical circles of radius 6 cm intersect such that the distance between their centers is 6 cm. Find the area of the region common to both circles.,24pi - 18sqrt(3),12pi - 9sqrt(3),24pi - 36sqrt(3),12pi - 18sqrt(3),A,B,C,D,A,MCQ,Geometry,"Mensuration - 2D (Area & Perimeter: Triangles, Quadrilaterals, Polygons, Circles)",Hard,Area of Intersecting Circles,"Intersecting Circles, Area of Common Region, Sector Area, Equilateral Triangle",FALSE,MockSet1_QA,Analysis,"Let the two circles be C1 and C2, with centers O1 and O2 respectively, and radius r=6 cm.
 The distance between their centers is d=6 cm.
 The area of intersection of two identical circles is given by 2 * (Area of segment).
 Area of segment = Area of sector - Area of triangle.
@@ -26,7 +26,7 @@ Area of the sector PO1Q in C1 = (angle in degrees / 360) * pi * r^2 = (120/360) 
 Area of triangle PO1Q = (1/2) * r^2 * sin(120 degrees) = (1/2) * (6^2) * (sqrt(3)/2) = (1/2) * 36 * (sqrt(3)/2) = 9sqrt(3) cm sq.
 Area of one segment = 12pi - 9sqrt(3) cm sq.
 The area of common region = 2 * (Area of one segment) = 2 * (12pi - 9sqrt(3)) = 24pi - 18sqrt(3) cm sq."
-Quantitative Ability,40,Q99,4,,,"A car travels from point X to point Y. It covers the first 40% of the distance at a speed of 60 km/hr. It then covers 50% of the remaining distance at a speed of 80 km/hr. Finally, it covers the rest of the distance at a speed of 40 km/hr. If the total time taken for the journey is 4.3 hours, what is the total distance between X and Y (in km)?",,,,,,,,,240,TITA,Arithmetic,"Time, Speed & Distance (General)",Hard,"Time, Speed & Distance (General)","Variable Speed, Fractional Distances, Total Time Calculation, Algebraic Manipulation",True,MockSet1_QA,Analysis,"Let the total distance be D km.
+Quantitative Ability,40,Q99,4,,,"A car travels from point X to point Y. It covers the first 40% of the distance at a speed of 60 km/hr. It then covers 50% of the remaining distance at a speed of 80 km/hr. Finally, it covers the rest of the distance at a speed of 40 km/hr. If the total time taken for the journey is 4.3 hours, what is the total distance between X and Y (in km)?",,,,,,,,,240,TITA,Arithmetic,"Time, Speed & Distance (General)",Hard,"Time, Speed & Distance (General)","Variable Speed, Fractional Distances, Total Time Calculation, Algebraic Manipulation",TRUE,MockSet1_QA,Analysis,"Let the total distance be D km.
 1. First part: Distance D1 = 0.4D. Speed S1 = 60 km/hr. Time T1 = D1/S1 = 0.4D/60 = D/150 hr.
 2. Remaining distance after first part = D - 0.4D = 0.6D.
 Second part: Distance D2 = 50% of 0.6D = 0.5 * 0.6D = 0.3D. Speed S2 = 80 km/hr. Time T2 = D2/S2 = 0.3D/80 = 3D/800 hr.
@@ -41,13 +41,13 @@ The LCM of 150, 800, 400 is 2400.
 Dividing both sides by 43:
 D / 2400 = 1/10.
 D = 2400 / 10 = 240 km."
-Quantitative Ability,40,Q71,5,,,A shopkeeper buys an article for Rs. 500. He marks it up by 30% and then sells it at a discount of 10% on the marked price. Calculate his profit in Rupees.,,,,,,,,,85,TITA,Arithmetic,"Profit, Loss & Discount",Easy,"Profit, Loss & Discount","Cost Price, Marked Price, Discount, Profit Calculation",True,MockSet1_QA,Application,"Cost Price (CP) = Rs. 500.
+Quantitative Ability,40,Q71,5,,,A shopkeeper buys an article for Rs. 500. He marks it up by 30% and then sells it at a discount of 10% on the marked price. Calculate his profit in Rupees.,,,,,,,,,85,TITA,Arithmetic,"Profit, Loss & Discount",Easy,"Profit, Loss & Discount","Cost Price, Marked Price, Discount, Profit Calculation",TRUE,MockSet1_QA,Application,"Cost Price (CP) = Rs. 500.
 Markup = 30% of CP = (30/100) * 500 = Rs. 150.
 Marked Price (MP) = CP + Markup amount = 500 + 150 = Rs. 650.
 Discount = 10% on MP = (10/100) * 650 = Rs. 65.
 Selling Price (SP) = MP - Discount amount = 650 - 65 = Rs. 585.
 Profit = SP - CP = 585 - 500 = Rs. 85."
-Quantitative Ability,40,Q72,6,,,Find the value of the sum from n=1 to 130 of floor(cuberoot(n)).,,,,,,,,,430,TITA,Algebra,Number Systems,Hard,Floor Function and Summation,"Floor Function, Summation, Cube Roots, Number Ranges",True,MockSet1_QA,Analysis,"Sum S = Sum from n=1 to 130 of floor(cuberoot(n)).
+Quantitative Ability,40,Q72,6,,,Find the value of the sum from n=1 to 130 of floor(cuberoot(n)).,,,,,,,,,430,TITA,Algebra,Number Systems,Hard,Floor Function and Summation,"Floor Function, Summation, Cube Roots, Number Ranges",TRUE,MockSet1_QA,Analysis,"Sum S = Sum from n=1 to 130 of floor(cuberoot(n)).
 Let k = floor(cuberoot(n)). This means k <= cuberoot(n) < k+1, which is k^3 <= n < (k+1)^3.
 k=1: 1^3 <= n < 2^3 implies 1 <= n <= 7. (7 terms). Sum = 7 * 1 = 7.
 k=2: 2^3 <= n < 3^3 implies 8 <= n <= 26. (19 terms). Sum = 19 * 2 = 38.
@@ -55,14 +55,14 @@ k=3: 3^3 <= n < 4^3 implies 27 <= n <= 63. (37 terms). Sum = 37 * 3 = 111.
 k=4: 4^3 <= n < 5^3 implies 64 <= n <= 124. (61 terms). Sum = 61 * 4 = 244.
 k=5: 5^3 <= n <= 130 implies 125 <= n <= 130. (6 terms). Sum = 6 * 5 = 30.
 Total sum = 7 + 38 + 111 + 244 + 30 = 430."
-Quantitative Ability,40,Q93,7,,,"Pipe A can fill a tank in 12 hours. Pipe B is 50% more efficient than Pipe A. Pipe C can empty the full tank in 24 hours. If all three pipes are opened together when the tank is empty, in how many hours will the tank be completely full?",6,7.2,8,9.6,A,B,C,D,A,MCQ,Arithmetic,Pipes & Cisterns,Medium,Pipes & Cisterns,"Work Rate, Efficiency Comparison, Combined Work (Filling and Emptying)",False,MockSet1_QA,Application,"Rate of Pipe A: R_A = 1/12 tank/hr.
+Quantitative Ability,40,Q93,7,,,"Pipe A can fill a tank in 12 hours. Pipe B is 50% more efficient than Pipe A. Pipe C can empty the full tank in 24 hours. If all three pipes are opened together when the tank is empty, in how many hours will the tank be completely full?",6,7.2,8,9.6,A,B,C,D,A,MCQ,Arithmetic,Pipes & Cisterns,Medium,Pipes & Cisterns,"Work Rate, Efficiency Comparison, Combined Work (Filling and Emptying)",FALSE,MockSet1_QA,Application,"Rate of Pipe A: R_A = 1/12 tank/hr.
 Pipe B is 50% more efficient: R_B = 1.5 * R_A = 1.5 * (1/12) = (3/2) * (1/12) = 1/8 tank/hr.
 Rate of Pipe C (emptying): R_C = -1/24 tank/hr.
 Combined rate R_total = R_A + R_B + R_C = 1/12 + 1/8 - 1/24.
 LCM(12, 8, 24) = 24.
 R_total = (2/24) + (3/24) - (1/24) = (2+3-1)/24 = 4/24 = 1/6 tank/hr.
 Time to fill = 1 / R_total = 1 / (1/6) = 6 hours."
-Quantitative Ability,40,Q74,8,,,Let f(x) = (x+1)/(x-1) for x not equal to 1. Let f to the power 1 of (x) = f(x) and f to the power (n+1) of (x) = f(f to the power n of (x)) for n >= 1. Find f to the power 2024 of (2).,-1/2,2,3,1/3,A,B,C,D,B,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Hard,Composite Functions,"Composite Functions, Iterative Functions, Pattern Recognition",False,MockSet1_QA,Analysis,"f(x) = (x+1)/(x-1).
+Quantitative Ability,40,Q74,8,,,Let f(x) = (x+1)/(x-1) for x not equal to 1. Let f to the power 1 of (x) = f(x) and f to the power (n+1) of (x) = f(f to the power n of (x)) for n >= 1. Find f to the power 2024 of (2).,-0.5,2,3,0.33,A,B,C,D,B,MCQ,Algebra,"Functions (Domain, Range, Types, Graphs, Inverse)",Hard,Composite Functions,"Composite Functions, Iterative Functions, Pattern Recognition",FALSE,MockSet1_QA,Analysis,"f(x) = (x+1)/(x-1).
 f(f(x)) = f((x+1)/(x-1)) = ( ((x+1)/(x-1)) + 1 ) / ( ((x+1)/(x-1)) - 1 ).
 Multiply numerator and denominator by (x-1):
 f(f(x)) = ( (x+1) + (x-1) ) / ( (x+1) - (x-1) ) = (2x) / 2 = x.
@@ -70,13 +70,13 @@ So, f^2(x) = x.
 This means f^3(x) = f(f^2(x)) = f(x), and f^4(x) = f(f^3(x)) = f(f(x)) = x.
 In general, f^n(x) = x if n is even, and f^n(x) = f(x) if n is odd.
 We need f to the power 2024 of (2). Since 2024 is an even number, f to the power 2024 of (2) = 2."
-Quantitative Ability,40,Q100,9,,,"The price of an article is reduced by 20%. To restore it to the original price, the new price must be increased by what percentage?",20%,22.5%,25%,30%,A,B,C,D,C,MCQ,Arithmetic,Percentages,Easy,Percentages,"Percentage Decrease, Percentage Increase to Restore Original Value",False,MockSet1_QA,Application,"Let the original price be P.
+Quantitative Ability,40,Q100,9,,,"The price of an article is reduced by 20%. To restore it to the original price, the new price must be increased by what percentage?",20%,22.50%,25%,30%,A,B,C,D,C,MCQ,Arithmetic,Percentages,Easy,Percentages,"Percentage Decrease, Percentage Increase to Restore Original Value",FALSE,MockSet1_QA,Application,"Let the original price be P.
 Price is reduced by 20%. New price P' = P * (1 - 20/100) = P * 0.8 = 0.8P.
 To restore P' to P, the increase needed is P - P' = P - 0.8P = 0.2P.
 The percentage increase is calculated on the new price P'.
 Percentage increase = (Increase / New Price) * 100
 = (0.2P / 0.8P) * 100 = (0.2/0.8) * 100 = (1/4) * 100 = 25%."
-Quantitative Ability,40,Q101,10,,,The sum of the first n terms of an arithmetic progression is S_n = 2n^2 + 5n. Find the common difference of this AP.,4,5,6,9,A,B,C,D,A,MCQ,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Easy,Arithmetic Progression,"Arithmetic Progression, Sum of AP terms, Common Difference from Sn formula",False,MockSet1_QA,Application,"Given S_n = 2n^2 + 5n.
+Quantitative Ability,40,Q101,10,,,The sum of the first n terms of an arithmetic progression is S_n = 2n^2 + 5n. Find the common difference of this AP.,4,5,6,9,A,B,C,D,A,MCQ,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Easy,Arithmetic Progression,"Arithmetic Progression, Sum of AP terms, Common Difference from Sn formula",FALSE,MockSet1_QA,Application,"Given S_n = 2n^2 + 5n.
 The n-th term of an AP, T_n = S_n - S_{n-1} (for n>1).
 T_n = (2n^2 + 5n) - (2*(n-1)^2 + 5*(n-1))
 = (2n^2 + 5n) - (2*(n^2 - 2n + 1) + 5n - 5)
@@ -88,7 +88,7 @@ Using the formula T_n = 4n+3 for n=1 gives T_1 = 4(1)+3 = 7. So the formula is v
 The common difference d = T_2 - T_1.
 T_2 = 4(2)+3 = 8+3=11.
 d = 11 - 7 = 4."
-Quantitative Ability,40,Q77,11,,,A boat travels 30 km upstream and 44 km downstream in 10 hours. It can travel 40 km upstream and 55 km downstream in 13 hours. What is the speed of the boat in still water (in km/hr)?,,,,,,,,,8,TITA,Arithmetic,"Time, Speed & Distance (Boats & Streams)",Hard,Boats & Streams,"Upstream Speed, Downstream Speed, System of Linear Equations",True,MockSet1_QA,Analysis,"Let speed of boat in still water be u km/hr and speed of stream be v km/hr.
+Quantitative Ability,40,Q77,11,,,A boat travels 30 km upstream and 44 km downstream in 10 hours. It can travel 40 km upstream and 55 km downstream in 13 hours. What is the speed of the boat in still water (in km/hr)?,,,,,,,,,8,TITA,Arithmetic,"Time, Speed & Distance (Boats & Streams)",Hard,Boats & Streams,"Upstream Speed, Downstream Speed, System of Linear Equations",TRUE,MockSet1_QA,Analysis,"Let speed of boat in still water be u km/hr and speed of stream be v km/hr.
 Upstream speed = u-v. Downstream speed = u+v.
 Equations from given data:
 1. 30/(u-v) + 44/(u+v) = 10
@@ -105,7 +105,7 @@ So, u-v = 1/X = 5.
 We have u+v=11 and u-v=5.
 Adding these two equations: 2u = 16 implies u = 8.
 The speed of the boat in still water is u = 8 km/hr."
-Quantitative Ability,40,Q78,12,,,"If log_base_x (4x-3) = 2, find the sum of all possible values of x.",1,3,4,No real solution,A,B,C,D,B,MCQ,Algebra,Logarithms,Medium,Logarithmic Equations,"Logarithmic Equations, Definition of Logarithm, Quadratic Equation from Log Equation",False,MockSet1_QA,Application,"Given log_base_x (4x-3) = 2.
+Quantitative Ability,40,Q78,12,,,"If log_base_x (4x-3) = 2, find the sum of all possible values of x.",1,3,4,No real solution,A,B,C,D,B,MCQ,Algebra,Logarithms,Medium,Logarithmic Equations,"Logarithmic Equations, Definition of Logarithm, Quadratic Equation from Log Equation",FALSE,MockSet1_QA,Application,"Given log_base_x (4x-3) = 2.
 Conditions for logarithm definition: Base x > 0 and x is not equal to 1. Argument 4x-3 > 0 implies x > 3/4.
 Combining conditions: x > 3/4 and x is not equal to 1.
 Convert to exponential form: x^2 = 4x-3.
@@ -116,7 +116,7 @@ Check against conditions:
 If x=1: Disallowed as base cannot be 1.
 If x=3: Satisfies x > 3/4 and x is not equal to 1. So, x=3 is a valid solution.
 The only possible value of x is 3. The sum of all possible values is 3."
-Quantitative Ability,40,Q79,13,,,"In how many ways can 5 distinct books on Mathematics and 4 distinct books on Physics be arranged on a shelf such that no two Physics books are together, and a specific Mathematics book M1 and a specific Physics book P1 are never adjacent?",,,,,,,,,28800,TITA,Modern Maths,Permutations & Combinations,Hard,Arrangements with Restrictions,"Linear Arrangements, Restrictions (No two together, Not adjacent), Inclusion-Exclusion Principle application",True,MockSet1_QA,Analysis,"Step 1: Total arrangements where no two Physics books are together.
+Quantitative Ability,40,Q79,13,,,"In how many ways can 5 distinct books on Mathematics and 4 distinct books on Physics be arranged on a shelf such that no two Physics books are together, and a specific Mathematics book M1 and a specific Physics book P1 are never adjacent?",,,,,,,,,28800,TITA,Modern Maths,Permutations & Combinations,Hard,Arrangements with Restrictions,"Linear Arrangements, Restrictions (No two together, Not adjacent), Inclusion-Exclusion Principle application",TRUE,MockSet1_QA,Analysis,"Step 1: Total arrangements where no two Physics books are together.
 Arrange the 5 distinct Math books: 5! = 120 ways.
 This creates 6 gaps: _ M _ M _ M _ M _ M _
 Place the 4 distinct Physics books in these 6 distinct gaps: Number of ways = P(6,4) = 6!/(6-4)! = 360 ways.
@@ -131,12 +131,12 @@ Number of ways = 5! * 1 * P(5,3) = 120 * 60 = 7200.
 Total arrangements where M1 and P1 are adjacent AND no two Physics books are together = 7200 + 7200 = 14400.
 Required arrangements = (Total with no two P books together) - (Total with M1,P1 adjacent and no two P books together)
 = 43200 - 14400 = 28800."
-Quantitative Ability,40,Q80,14,,,"The ratio of the present ages of A and B is 7:5. After 10 years, the ratio of their ages will be 9:7. What is A's current age?",25,30,35,40,A,B,C,D,C,MCQ,Arithmetic,"Ratio, Proportion & Variation",Easy,Ratio and Age Problems,"Age Problems, Ratio of Ages, Future Ages",False,MockSet1_QA,Application,"Let A's current age be 7x and B's current age be 5x.
+Quantitative Ability,40,Q80,14,,,"The ratio of the present ages of A and B is 7:5. After 10 years, the ratio of their ages will be 9:7. What is A's current age?",25,30,35,40,A,B,C,D,C,MCQ,Arithmetic,"Ratio, Proportion & Variation",Easy,Ratio and Age Problems,"Age Problems, Ratio of Ages, Future Ages",FALSE,MockSet1_QA,Application,"Let A's current age be 7x and B's current age be 5x.
 After 10 years: A's age = 7x+10. B's age = 5x+10.
 Ratio: (7x+10)/(5x+10) = 9/7.
 7(7x+10) = 9(5x+10) => 49x+70 = 45x+90 => 4x = 20 => x=5.
 A's current age = 7x = 7*5 = 35 years."
-Quantitative Ability,40,Q81,15,,,"A solid toy is in the form of a hemisphere surmounted by a right circular cone. The height of the cone is 1.5 cm and the diameter of the base is 6 cm. If a cylinder circumscribes the toy (meaning the cylinder has the same base radius as the hemisphere/cone and its height is the total height of the toy), find the difference between the volume of the cylinder and the volume of the toy (Use pi = 22/7).",264/7 cm³,396/7 cm³,528/7 cm³,792/7 cm³,A,B,C,D,B,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Hard,Volume of Combined Solids,"Combined Solids (Hemisphere, Cone, Cylinder), Volume Calculation, Circumscribing Solid",False,MockSet1_QA,Analysis,"Radius r = diameter/2 = 6/2 = 3 cm. Height of cone h_c = 1.5 cm.
+Quantitative Ability,40,Q81,15,,,"A solid toy is in the form of a hemisphere surmounted by a right circular cone. The height of the cone is 1.5 cm and the diameter of the base is 6 cm. If a cylinder circumscribes the toy (meaning the cylinder has the same base radius as the hemisphere/cone and its height is the total height of the toy), find the difference between the volume of the cylinder and the volume of the toy (Use pi = 22/7).",264/7 cm³,396/7 cm³,528/7 cm³,792/7 cm³,A,B,C,D,B,MCQ,Geometry,"Mensuration - 3D (Volume & Surface Area: Cubes, Cuboids, Cylinders, Cones, Spheres, Prisms, Pyramids, Frustum)",Hard,Volume of Combined Solids,"Combined Solids (Hemisphere, Cone, Cylinder), Volume Calculation, Circumscribing Solid",FALSE,MockSet1_QA,Analysis,"Radius r = diameter/2 = 6/2 = 3 cm. Height of cone h_c = 1.5 cm.
 Volume of hemisphere V_h = (2/3)pir^3 = (2/3)pi(3^3) = 18pi cm^3.
 Volume of cone V_c = (1/3)pir^2h_c = (1/3)pi(3^2)(1.5) = 4.5pi cm^3.
 Volume of toy V_toy = V_h + V_c = 18pi + 4.5pi = 22.5pi cm^3.
@@ -144,7 +144,7 @@ Cylinder: Radius R_cyl = r = 3 cm. Height H_cyl = r + h_c = 3 + 1.5 = 4.5 cm.
 Volume of cylinder V_cyl = piR_cyl^2H_cyl = pi(3^2)(4.5) = 40.5pi cm^3.
 Difference = V_cyl - V_toy = 40.5pi - 22.5pi = 18*pi cm^3.
 Using pi = 22/7: Difference = 18 * (22/7) = 396/7 cm^3."
-Quantitative Ability,40,Q82,16,,,Find the number of integer solutions for the inequality x^2 - 5*|x| + 6 <= 0.,0,2,4,Infinitely many,A,B,C,D,C,MCQ,Algebra,Inequalities (Linear & Quadratic),Hard,Absolute Value Inequalities,"Absolute Value Inequality, Quadratic Inequality with Modulus, Integer Solutions",False,MockSet1_QA,Analysis,"Inequality: x^2 - 5*|x| + 6 <= 0. Let y = |x|. Then y^2 = x^2.
+Quantitative Ability,40,Q82,16,,,Find the number of integer solutions for the inequality x^2 - 5*|x| + 6 <= 0.,0,2,4,Infinitely many,A,B,C,D,C,MCQ,Algebra,Inequalities (Linear & Quadratic),Hard,Absolute Value Inequalities,"Absolute Value Inequality, Quadratic Inequality with Modulus, Integer Solutions",FALSE,MockSet1_QA,Analysis,"Inequality: x^2 - 5*|x| + 6 <= 0. Let y = |x|. Then y^2 = x^2.
 y^2 - 5y + 6 <= 0.
 Factor: (y-2)(y-3) <= 0. This holds for 2 <= y <= 3.
 Substitute y = |x|: 2 <= |x| <= 3.
@@ -153,7 +153,7 @@ This means:
 2. |x| <= 3 => -3 <= x <= 3.
 Combining: The interval is [-3, -2] union [2, 3].
 Integer solutions: x = -3, -2, 2, 3. There are 4 solutions."
-Quantitative Ability,40,Q83,17,,,"Find the smallest natural number which when divided by 5, 6, 7 leaves remainders 2, 3, 4 respectively, but is exactly divisible by 9.",,,,,,,,,207,TITA,Algebra,Number Systems,Medium,Remainders and LCM,"Remainders, LCM, Chinese Remainder Theorem (Implicit), Divisibility",True,MockSet1_QA,Application,"N = 5a+2, N = 6b+3, N = 7c+4.
+Quantitative Ability,40,Q83,17,,,"Find the smallest natural number which when divided by 5, 6, 7 leaves remainders 2, 3, 4 respectively, but is exactly divisible by 9.",,,,,,,,,207,TITA,Algebra,Number Systems,Medium,Remainders and LCM,"Remainders, LCM, Chinese Remainder Theorem (Implicit), Divisibility",TRUE,MockSet1_QA,Application,"N = 5a+2, N = 6b+3, N = 7c+4.
 N+3 = 5a+5 = 5(a+1).
 N+3 = 6b+6 = 6(b+1).
 N+3 = 7c+7 = 7(c+1).
@@ -168,7 +168,7 @@ k-1 = 3m. Smallest natural N means smallest k (k=1,2,3...).
 If m=0, k-1=0 => k=1.
 N = 210(1)-3 = 207.
 Check: 207/9 = 23. Divisible by 9."
-Quantitative Ability,40,Q84,18,,,A merchant has 120 kg of tea. He sells one-third of it at a profit of 10%. He sells another 40 kg at a profit of 25%. At what approximate percentage profit must he sell the remaining tea so as to make an overall profit of 15% on the whole transaction?,8%,9%,10%,11%,A,B,C,D,C,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,Weighted Profit,"Fractional Sales, Weighted Profit, Overall Profit Calculation",False,MockSet1_QA,Analysis,"Total tea = 120 kg. Let CP per kg = C. Total CP = 120C.
+Quantitative Ability,40,Q84,18,,,A merchant has 120 kg of tea. He sells one-third of it at a profit of 10%. He sells another 40 kg at a profit of 25%. At what approximate percentage profit must he sell the remaining tea so as to make an overall profit of 15% on the whole transaction?,8%,9%,10%,11%,A,B,C,D,C,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,Weighted Profit,"Fractional Sales, Weighted Profit, Overall Profit Calculation",FALSE,MockSet1_QA,Analysis,"Total tea = 120 kg. Let CP per kg = C. Total CP = 120C.
 Overall profit = 15%. Total SP = 120C * 1.15 = 138C.
 Part 1: 40 kg (1/3 of 120). Profit 10%. SP1 = 40C * 1.10 = 44C.
 Part 2: 40 kg. Profit 25%. SP2 = 40C * 1.25 = 50C.
@@ -179,19 +179,19 @@ Divide by C: 138 = 94 + 40(1+P/100).
 44 = 40(1+P/100).
 44/40 = 1.1 = 1+P/100.
 P/100 = 0.1 => P=10. Profit on remaining tea = 10%."
-Quantitative Ability,40,Q85,19,,,"The sum of the first 10 terms of an arithmetic progression is 155, and the sum of the first 20 terms is 610. Find the 15th term of the progression.",38,41,44,47,A,B,C,D,C,MCQ,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Medium,Arithmetic Progression,"Arithmetic Progression, Sum of AP, Finding nth term of AP",False,MockSet1_QA,Application,"Sum of AP: S_n = (n/2)(2a + (n-1)d).
+Quantitative Ability,40,Q85,19,,,"The sum of the first 10 terms of an arithmetic progression is 155, and the sum of the first 20 terms is 610. Find the 15th term of the progression.",38,41,44,47,A,B,C,D,C,MCQ,Algebra,"Sequences & Series (AP, GP, HP, Special Series)",Medium,Arithmetic Progression,"Arithmetic Progression, Sum of AP, Finding nth term of AP",FALSE,MockSet1_QA,Application,"Sum of AP: S_n = (n/2)(2a + (n-1)d).
 S_10 = 5(2a+9d) = 155 => 2a+9d = 31. (1)
 S_20 = 10(2a+19d) = 610 => 2a+19d = 61. (2)
 (2)-(1): 10d = 30 => d=3.
 In (1): 2a+9(3)=31 => 2a+27=31 => 2a=4 => a=2.
 T_15 = a + 14d = 2 + 14(3) = 2+42 = 44."
-Quantitative Ability,40,Q86,20,,,"Ajay sold an article to Bhuvan at a profit of 20%. Bhuvan sold it to Chetan at a loss of 10%. Chetan sold it to Dinesh for Rs. 1296, making a profit of 20%. What was the cost price of the article for Ajay?",Rs. 1000,Rs. 1050,Rs. 1100,Rs. 1125,A,B,C,D,A,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,Chain Transactions,"Chain Transactions, Profit Percentage, Loss Percentage, Cost Price Calculation",False,MockSet1_QA,Analysis,"CP_Ajay.
+Quantitative Ability,40,Q86,20,,,"Ajay sold an article to Bhuvan at a profit of 20%. Bhuvan sold it to Chetan at a loss of 10%. Chetan sold it to Dinesh for Rs. 1296, making a profit of 20%. What was the cost price of the article for Ajay?",Rs. 1000,Rs. 1050,Rs. 1100,Rs. 1125,A,B,C,D,A,MCQ,Arithmetic,"Profit, Loss & Discount",Hard,Chain Transactions,"Chain Transactions, Profit Percentage, Loss Percentage, Cost Price Calculation",FALSE,MockSet1_QA,Analysis,"CP_Ajay.
 CP_Bhuvan = 1.2 * CP_Ajay.
 CP_Chetan = 0.9 * CP_Bhuvan = 0.9 * 1.2 * CP_Ajay = 1.08 * CP_Ajay.
 SP_Chetan = 1.2 * CP_Chetan (20% profit).
 1296 = 1.2 * CP_Chetan => CP_Chetan = 1296/1.2 = 1080.
 1080 = 1.08 * CP_Ajay => CP_Ajay = 1080/1.08 = 1000."
-Quantitative Ability,40,Q87,21,,,"In a triangle ABC, the measure of angle A is 40°. If the bisectors of angle B and angle C meet at point O, then the measure of angle BOC is:",70°,100°,110°,140°,A,B,C,D,C,MCQ,Geometry,"Triangles (Properties, Congruence, Similarity)",Easy,Angle Bisector Properties,"Angle Bisectors, Angle Sum Property of Triangle, Incenter related angle",False,MockSet1_QA,Application,"In triangle ABC, Angle A + Angle B + Angle C = 180 degrees.
+Quantitative Ability,40,Q87,21,,,"In a triangle ABC, the measure of angle A is 40°. If the bisectors of angle B and angle C meet at point O, then the measure of angle BOC is:",70°,100°,110°,140°,A,B,C,D,C,MCQ,Geometry,"Triangles (Properties, Congruence, Similarity)",Easy,Angle Bisector Properties,"Angle Bisectors, Angle Sum Property of Triangle, Incenter related angle",FALSE,MockSet1_QA,Application,"In triangle ABC, Angle A + Angle B + Angle C = 180 degrees.
 Angle A = 40 degrees. So, Angle B + Angle C = 140 degrees.
 O is the meeting point of bisectors of Angle B and Angle C.
 In triangle BOC, Angle OBC = (Angle B)/2, Angle OCB = (Angle C)/2.
@@ -200,7 +200,7 @@ Angle BOC + (Angle B)/2 + (Angle C)/2 = 180 degrees.
 Angle BOC + (Angle B + Angle C)/2 = 180 degrees.
 Angle BOC + 140/2 = 180 degrees.
 Angle BOC + 70 = 180 degrees => Angle BOC = 110 degrees."
-Quantitative Ability,40,Q88,22,,,"A vessel contains a mixture of three liquids A, B, and C in the ratio 2:3:5. 20 litres of the mixture is drawn off and replaced with 10 litres of liquid A. If the ratio of A to B in the new mixture becomes 1:1, what was the initial quantity of liquid C in the vessel (in litres)?",,,,,,,,,60,TITA,Arithmetic,Mixtures & Alligations,Hard,Mixtures with Replacement,"Mixtures of multiple liquids, Drawing off and Replacement, Ratio manipulation",True,MockSet1_QA,Analysis,"Initial ratio A:B:C = 2:3:5. Let quantities be 2k, 3k, 5k. Total = 10k.
+Quantitative Ability,40,Q88,22,,,"A vessel contains a mixture of three liquids A, B, and C in the ratio 2:3:5. 20 litres of the mixture is drawn off and replaced with 10 litres of liquid A. If the ratio of A to B in the new mixture becomes 1:1, what was the initial quantity of liquid C in the vessel (in litres)?",,,,,,,,,60,TITA,Arithmetic,Mixtures & Alligations,Hard,Mixtures with Replacement,"Mixtures of multiple liquids, Drawing off and Replacement, Ratio manipulation",TRUE,MockSet1_QA,Analysis,"Initial ratio A:B:C = 2:3:5. Let quantities be 2k, 3k, 5k. Total = 10k.
 20 litres drawn off.
 A removed = (2/10)*20 = 4L. B removed = (3/10)*20 = 6L. C removed = (5/10)*20 = 10L.
 Remaining: A_rem = 2k-4, B_rem = 3k-6, C_rem = 5k-10.
