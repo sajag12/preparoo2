@@ -6,6 +6,7 @@ import csv
 import os
 import warnings
 import traceback
+import markdown
 
 # Import configuration and models
 from config import Config
@@ -40,7 +41,16 @@ def startswith_filter(text, prefix):
     """Custom Jinja2 filter to check if text starts with prefix"""
     return str(text).startswith(str(prefix))
 
+def markdown_filter(text):
+    """Custom Jinja2 filter to convert markdown text to HTML"""
+    if not text:
+        return ""
+    # Convert markdown to HTML
+    md = markdown.Markdown(extensions=['nl2br'])  # nl2br for line breaks
+    return md.convert(str(text))
+
 app.jinja_env.filters['startswith'] = startswith_filter
+app.jinja_env.filters['markdown'] = markdown_filter
 
 # Create Google OAuth blueprint
 google_bp = make_google_blueprint(
@@ -192,6 +202,48 @@ def health_check():
         return {'status': 'healthy', 'database': 'connected'}, 200
     except Exception as e:
         return {'status': 'unhealthy', 'error': str(e)}, 500
+
+@app.route('/fix-test-classifications')
+@login_required
+def fix_test_classifications():
+    """Fix incorrectly classified test results in database"""
+    try:
+        # Only allow admin users (you can add more security here)
+        if current_user.email != 'sajag.prakash@newgen.co.in':
+            return "Access denied", 403
+        
+        fixed_count = 0
+        all_results = TestResult.query.all()
+        
+        for result in all_results:
+            # Check if test should be sectional based on test_id
+            is_sectional_by_id = (
+                result.test_id.startswith('qa') or 
+                result.test_id.startswith('varc') or 
+                result.test_id.startswith('lrdi')
+            ) if result.test_id else False
+            
+            is_sectional_by_name = (
+                result.test_name and 
+                result.test_name.startswith('Sectional Mock')
+            ) if result.test_name else False
+            
+            # Fix incorrect classifications
+            if (is_sectional_by_id or is_sectional_by_name) and result.test_type != 'sectional':
+                print(f"Fixing test {result.id}: {result.test_id} from {result.test_type} to sectional")
+                result.test_type = 'sectional'
+                fixed_count += 1
+            elif not (is_sectional_by_id or is_sectional_by_name) and result.test_type != 'full_mock':
+                print(f"Fixing test {result.id}: {result.test_id} from {result.test_type} to full_mock")
+                result.test_type = 'full_mock'
+                fixed_count += 1
+        
+        db.session.commit()
+        return {'status': 'success', 'fixed_count': fixed_count}, 200
+        
+    except Exception as e:
+        db.session.rollback()
+        return {'status': 'error', 'error': str(e)}, 500
 
 # Custom redirect after successful OAuth login
 @app.route('/after-oauth')
@@ -601,7 +653,34 @@ def check_test_session_state(test_id):
         if existing_result:
             # User has already taken this test, redirect to their results
             session.clear()  # Clear any existing session data
-            session['results'] = existing_result.to_dict()
+            result_data = existing_result.to_dict()
+            
+            # Fix old test results that don't have proper topic analysis structure
+            if 'topic_analysis' not in result_data or not result_data['topic_analysis']:
+                print("DEBUG: Old full mock test result missing topic_analysis, generating empty structure")
+                result_data['topic_analysis'] = {
+                    'varc': {},
+                    'qa': {},
+                    'lrdi': {}
+                }
+                
+                # Initialize all topics for full mock tests
+                for section_key in ['varc', 'qa', 'lrdi']:
+                    if section_key == 'varc':
+                        topics = ['reading_comprehension', 'sentence_completion', 'sentence_correction', 'para_jumbles', 'para_completion']
+                    elif section_key == 'qa':
+                        topics = ['algebra', 'arithmetic', 'geometry', 'number_system', 'probability', 'permutation_combination']
+                    else:  # lrdi
+                        topics = ['logical_reasoning', 'data_interpretation', 'data_sufficiency', 'puzzles_games']
+                    
+                    for topic in topics:
+                        result_data['topic_analysis'][section_key][topic] = {
+                            'easy': {'correct': 0, 'wrong': 0},
+                            'medium': {'correct': 0, 'wrong': 0},
+                            'hard': {'correct': 0, 'wrong': 0}
+                        }
+            
+            session['results'] = result_data
             session['test_submitted'] = True
             session['current_test_id'] = test_id
             flash(f'You have already taken this test on {existing_result.created_at.strftime("%B %d, %Y")}. Here are your results. <a href="?retake=true" class="alert-link">Click here to retake (your previous score will be replaced)</a>.', 'info')
@@ -638,7 +717,42 @@ def check_sectional_test_state(test_id):
         if existing_result:
             # User has already taken this test, redirect to their results
             session.clear()  # Clear any existing session data
-            session['results'] = existing_result.to_dict()
+            result_data = existing_result.to_dict()
+            
+            # Fix old sectional test results that don't have proper topic analysis structure
+            if 'topic_analysis' not in result_data or not result_data['topic_analysis']:
+                print("DEBUG: Old sectional test result missing topic_analysis, generating empty structure")
+                result_data['topic_analysis'] = {
+                    'varc': {},
+                    'qa': {},
+                    'lrdi': {}
+                }
+                
+                # Determine which section this sectional test belongs to
+                section_name = result_data.get('section_name', '')
+                
+                if 'Quantitative' in section_name:
+                    section_key = 'qa'
+                    relevant_topics = ['algebra', 'arithmetic', 'geometry', 'number_system', 'probability', 'permutation_combination']
+                elif 'Verbal' in section_name:
+                    section_key = 'varc'
+                    relevant_topics = ['reading_comprehension', 'sentence_completion', 'sentence_correction', 'para_jumbles', 'para_completion']
+                elif 'Data Interpretation' in section_name or 'Logical' in section_name:
+                    section_key = 'lrdi'
+                    relevant_topics = ['logical_reasoning', 'data_interpretation', 'data_sufficiency', 'puzzles_games']
+                else:
+                    section_key = 'qa'  # fallback
+                    relevant_topics = ['algebra', 'arithmetic', 'geometry', 'number_system', 'probability', 'permutation_combination']
+                
+                # Initialize only relevant topics for sectional tests
+                for topic in relevant_topics:
+                    result_data['topic_analysis'][section_key][topic] = {
+                        'easy': {'correct': 0, 'wrong': 0},
+                        'medium': {'correct': 0, 'wrong': 0},
+                        'hard': {'correct': 0, 'wrong': 0}
+                    }
+            
+            session['results'] = result_data
             session['test_submitted'] = True
             session['current_test_id'] = test_id
             flash(f'You have already taken this sectional test on {existing_result.created_at.strftime("%B %d, %Y")}. Here are your results. <a href="?retake=true" class="alert-link">Click here to retake (your previous score will be replaced)</a>.', 'info')
@@ -708,12 +822,32 @@ def generate_sectional_swot_analysis(stats):
         'qa2': { 'name': "Quantitative Aptitude", 'csv': 'QA_17.csv', 'short_name': 'QA' },
         'qa3': { 'name': "Quantitative Aptitude", 'csv': 'QA_18.csv', 'short_name': 'QA' },
         'qa4': { 'name': "Quantitative Aptitude", 'csv': 'QA_19.csv', 'short_name': 'QA' },
+        'qa5': { 'name': "Quantitative Aptitude", 'csv': 'QA_20.csv', 'short_name': 'QA' },
+        'qa6': { 'name': "Quantitative Aptitude", 'csv': 'QA_21.csv', 'short_name': 'QA' },
+        'qa7': { 'name': "Quantitative Aptitude", 'csv': 'QA_22.csv', 'short_name': 'QA' },
+        'qa8': { 'name': "Quantitative Aptitude", 'csv': 'QA_23.csv', 'short_name': 'QA' },
+        'qa9': { 'name': "Quantitative Aptitude", 'csv': 'QA_24.csv', 'short_name': 'QA' },
+        'qa10': { 'name': "Quantitative Aptitude", 'csv': 'QA_25.csv', 'short_name': 'QA' },
         'varc1': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#16.csv', 'short_name': 'VARC' },
         'varc2': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#17.csv', 'short_name': 'VARC' },
         'varc3': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#18.csv', 'short_name': 'VARC' },
+        'varc4': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#19.csv', 'short_name': 'VARC' },
+        'varc5': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#20.csv', 'short_name': 'VARC' },
+        'varc6': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#21.csv', 'short_name': 'VARC' },
+        'varc7': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#22.csv', 'short_name': 'VARC' },
+        'varc8': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#23.csv', 'short_name': 'VARC' },
+        'varc9': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#24.csv', 'short_name': 'VARC' },
+        'varc10': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#25.csv', 'short_name': 'VARC' },
         'lrdi1': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#16.csv', 'short_name': 'LRDI' },
         'lrdi2': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#17.csv', 'short_name': 'LRDI' },
-        'lrdi3': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#18.csv', 'short_name': 'LRDI' }
+        'lrdi3': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#18.csv', 'short_name': 'LRDI' },
+        'lrdi4': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#19.csv', 'short_name': 'LRDI' },
+        'lrdi5': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#20.csv', 'short_name': 'LRDI' },
+        'lrdi6': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#21.csv', 'short_name': 'LRDI' },
+        'lrdi7': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#22.csv', 'short_name': 'LRDI' },
+        'lrdi8': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#23.csv', 'short_name': 'LRDI' },
+        'lrdi9': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#24.csv', 'short_name': 'LRDI' },
+        'lrdi10': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#25.csv', 'short_name': 'LRDI' }
     }
     
     if test_id not in section_conf_map:
@@ -1003,31 +1137,36 @@ def reconstruct_detailed_sections(stats):
                     else:
                         combined = 'status-long-incorrect'
             
-            # Add options to the question
-            question_options = []
-            for letter in ['A', 'B', 'C', 'D', 'E']:
-                option_text = row.get(f'Option{letter}Text', '')
-                option_value = row.get(f'Option{letter}Value', letter)
-                if option_text:
-                    question_options.append({
-                        'text': option_text,
-                        'value': option_value
-                    })
-            
-            detailed_questions.append({
+            # Store complete question data for answer review
+            question_data = {
                 'number': q_idx+1,
                 'status': status,
                 'combined_status_class': combined,
-                'corner_icon_char': '✓' if status == 'correct' else ('✗' if status=='incorrect' else '–'),
                 'time_spent_on_question_formatted': format_seconds_to_str(time_spent),
-                'prompt': row.get('QuestionPrompt', ''),
-                'passage_content': row.get('PassageOrSetContent', ''),
-                'options': question_options,
+                'time_spent_seconds': time_spent if time_spent is not None else 0,
                 'correct_answer': actual,
                 'user_answer': user_ans,
+                'question_type': row.get('QuestionType', 'MCQ'),
+                'prompt': row.get('QuestionPrompt', ''),
+                'passage_content': row.get('PassageOrSetContent', ''),
                 'solution': row.get('SolutionExplanation', ''),
-                'question_type': row.get('QuestionType', 'MCQ')
-            })
+                'options': []
+            }
+            
+            # Add options for MCQ questions
+            if row.get('QuestionType', 'MCQ') == 'MCQ':
+                options = []
+                for option_letter in ['A', 'B', 'C', 'D']:
+                    option_text = row.get(f'Option{option_letter}Text', '')
+                    option_value = row.get(f'Option{option_letter}Value', option_letter)
+                    if option_text:  # Only add if option text exists
+                        options.append({
+                            'text': option_text,
+                            'value': option_value
+                        })
+                question_data['options'] = options
+            
+            detailed_questions.append(question_data)
         
         detailed_sections.append({
             'name': sec_conf['name'],
@@ -1042,7 +1181,7 @@ def reconstruct_sectional_questions(stats):
         return stats['detailed_questions']  # Already reconstructed
     
     test_id = stats.get('test_id')
-    if not test_id or test_id not in ['qa1', 'qa2', 'qa3', 'qa4', 'varc1', 'varc2', 'varc3', 'lrdi1', 'lrdi2', 'lrdi3']:
+    if not test_id or test_id not in ['qa1', 'qa2', 'qa3', 'qa4', 'qa5', 'qa6', 'qa7', 'qa8', 'qa9', 'qa10', 'varc1', 'varc2', 'varc3', 'varc4', 'varc5', 'varc6', 'varc7', 'varc8', 'varc9', 'varc10', 'lrdi1', 'lrdi2', 'lrdi3', 'lrdi4', 'lrdi5', 'lrdi6', 'lrdi7', 'lrdi8', 'lrdi9', 'lrdi10']:
         return []  # Not a sectional test
     
     answer_data = stats.get('answer_data', {})
@@ -1077,6 +1216,48 @@ def reconstruct_sectional_questions(stats):
             'optimal_time_correct': 75,
             'quick_time_incorrect': 50
         }
+    elif test_id == 'qa5':
+        section_conf = {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_20.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        }
+    elif test_id == 'qa6':
+        section_conf = {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_21.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        }
+    elif test_id == 'qa7':
+        section_conf = {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_22.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        }
+    elif test_id == 'qa8':
+        section_conf = {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_23.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        }
+    elif test_id == 'qa9':
+        section_conf = {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_24.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        }
+    elif test_id == 'qa10':
+        section_conf = {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_25.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        }
     elif test_id == 'varc1':
         section_conf = {
             'name': "Verbal Ability and Reading Comprehension",
@@ -1095,6 +1276,55 @@ def reconstruct_sectional_questions(stats):
         section_conf = {
             'name': "Verbal Ability and Reading Comprehension",
             'csv': 'VARC_#18.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        }
+    elif test_id == 'varc4':
+        section_conf = {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#19.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        }
+    elif test_id == 'varc5':
+        section_conf = {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#20.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        }
+    elif test_id == 'varc6':
+        section_conf = {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#21.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        }
+    elif test_id == 'varc7':
+        section_conf = {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#22.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        }
+    elif test_id == 'varc8':
+        section_conf = {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#23.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        }
+    elif test_id == 'varc9':
+        section_conf = {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#24.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        }
+    elif test_id == 'varc10':
+        section_conf = {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#25.csv',
             'optimal_time_correct': 60,
             'quick_time_incorrect': 40
         }
@@ -1119,6 +1349,55 @@ def reconstruct_sectional_questions(stats):
             'optimal_time_correct': 90,
             'quick_time_incorrect': 60
         }
+    elif test_id == 'lrdi4':
+        section_conf = {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#19.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        }
+    elif test_id == 'lrdi5':
+        section_conf = {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#20.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        }
+    elif test_id == 'lrdi6':
+        section_conf = {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#21.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        }
+    elif test_id == 'lrdi7':
+        section_conf = {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#22.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        }
+    elif test_id == 'lrdi8':
+        section_conf = {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#23.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        }
+    elif test_id == 'lrdi9':
+        section_conf = {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#24.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        }
+    elif test_id == 'lrdi10':
+        section_conf = {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#25.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        }
     else:
         return []
     
@@ -1131,8 +1410,9 @@ def reconstruct_sectional_questions(stats):
     
     # Process answers and calculate stats
     answers = answer_data.get('0', {})  # Sectional tests only have one section (index 0)
-    detailed_questions = []
     current_section_q_times = question_times.get('0', {})
+    
+    detailed = []
     
     for q_idx, row in enumerate(rows):
         user_ans = answers.get(str(q_idx), {}).get('answer')
@@ -1163,43 +1443,49 @@ def reconstruct_sectional_questions(stats):
             
             if is_correct:
                 status = 'correct'
-                if time_spent and time_spent <= section_conf['optimal_time_correct']:
+                if time_spent and time_spent <= section_conf.get('optimal_time_correct', 90):
                     combined = 'status-optimal-correct'
                 else:
                     combined = 'status-longer-correct'
             else:
                 status = 'incorrect'
-                if time_spent and time_spent <= section_conf['quick_time_incorrect']:
+                if time_spent and time_spent <= section_conf.get('quick_time_incorrect', 60):
                     combined = 'status-quick-incorrect'
                 else:
                     combined = 'status-long-incorrect'
         
-        # Add options to the question
-        question_options = []
-        for letter in ['A', 'B', 'C', 'D', 'E']:
-            option_text = row.get(f'Option{letter}Text', '')
-            option_value = row.get(f'Option{letter}Value', letter)
-            if option_text:
-                question_options.append({
-                    'text': option_text,
-                    'value': option_value
-                })
-        
-        detailed_questions.append({
-            'number': q_idx + 1,
+        # Store complete question data for answer review
+        question_data = {
+            'number': q_idx+1,
             'status': status,
             'combined_status_class': combined,
             'time_spent_on_question_formatted': format_seconds_to_str(time_spent),
-            'prompt': row.get('QuestionPrompt', ''),
-            'passage_content': row.get('PassageOrSetContent', ''),
-            'options': question_options,
+            'time_spent_seconds': time_spent if time_spent is not None else 0,
             'correct_answer': actual,
             'user_answer': user_ans,
+            'question_type': row.get('QuestionType', 'MCQ'),
+            'prompt': row.get('QuestionPrompt', ''),
+            'passage_content': row.get('PassageOrSetContent', ''),
             'solution': row.get('SolutionExplanation', ''),
-            'question_type': row.get('QuestionType', 'MCQ')
-        })
+            'options': []
+        }
+        
+        # Add options for MCQ questions
+        if row.get('QuestionType', 'MCQ') == 'MCQ':
+            options = []
+            for option_letter in ['A', 'B', 'C', 'D']:
+                option_text = row.get(f'Option{option_letter}Text', '')
+                option_value = row.get(f'Option{option_letter}Value', option_letter)
+                if option_text:  # Only add if option text exists
+                    options.append({
+                        'text': option_text,
+                        'value': option_value
+                    })
+            question_data['options'] = options
+        
+        detailed.append(question_data)
     
-    return detailed_questions
+    return detailed
 
 @app.route('/')
 def home():
@@ -1658,37 +1944,73 @@ def submit_test():
         print("DEBUG: Taking SECTIONAL path")
         # CLEAR session completely before processing sectional test
         session.clear()
-        section_stats = process_sectional_data(data)
-        session['results'] = section_stats
         
-        # Mark test as submitted to prevent back navigation
-        session['test_submitted'] = True
-        session['current_test_id'] = test_id
-        session.pop('test_in_progress', None)
-        
-        print(f"DEBUG: Set sectional session data with test_name: '{section_stats.get('test_name')}'")
-        
-        # Save test result to database
-        if current_user.is_authenticated:
-            try:
-                # Use safer create_or_update method for retakes
-                test_result, is_update = TestResult.create_or_update_test_result(current_user.id, test_id, section_stats)
-                
-                if not is_update:
-                    db.session.add(test_result)
-                
-                db.session.commit()
-                
-                # Set appropriate message for retake
-                if is_update:
-                    session['retake_success'] = True
+        try:
+            section_stats = process_sectional_data(data)
+            print(f"DEBUG: process_sectional_data returned: {type(section_stats)}")
+            print(f"DEBUG: section_stats keys: {list(section_stats.keys()) if isinstance(section_stats, dict) else 'Not a dict'}")
+            
+            # Check if there was an error in processing
+            if isinstance(section_stats, dict) and 'error' in section_stats:
+                print(f"ERROR: process_sectional_data returned error: {section_stats['error']}")
+                # Store error in session for debugging
+                session['results'] = section_stats
+                session['test_submitted'] = True
+                session['current_test_id'] = test_id
+                return ('', 204)
+            
+            session['results'] = section_stats
+            
+            # Mark test as submitted to prevent back navigation
+            session['test_submitted'] = True
+            session['current_test_id'] = test_id
+            session.pop('test_in_progress', None)
+            
+            print(f"DEBUG: Set sectional session data with test_name: '{section_stats.get('test_name')}'")
+            print(f"DEBUG: Section stats keys: {list(section_stats.keys())}")
+            print(f"DEBUG: Section stats test_id: '{section_stats.get('test_id')}'")
+            print(f"DEBUG: Section stats section_name: '{section_stats.get('section_name')}'")
+            
+            # Save test result to database
+            if current_user.is_authenticated:
+                try:
+                    # Use safer create_or_update method for retakes
+                    test_result, is_update = TestResult.create_or_update_test_result(current_user.id, test_id, section_stats)
                     
-                print(f"DEBUG: Successfully {'updated' if is_update else 'created'} sectional test result for user {current_user.id}, test {test_id}")
-            except Exception as e:
-                print(f"ERROR: Failed to save sectional test result: {str(e)}")
-                print(f"ERROR: Exception details: {type(e).__name__}: {e}")
-                db.session.rollback()
-                # Continue anyway - user still sees their current session results
+                    if not is_update:
+                        db.session.add(test_result)
+                    
+                    db.session.commit()
+                    
+                    # COOKIE SIZE FIX: Instead of storing large data in session, store only the result ID
+                    # Clear the large session data and store minimal identifier
+                    session.pop('results', None)  # Remove large data
+                    session['current_result_id'] = test_result.id  # Store only result ID
+                    session['test_submitted'] = True
+                    session['current_test_id'] = test_id
+                    session.pop('test_in_progress', None)
+                    
+                    # Set appropriate message for retake
+                    if is_update:
+                        session['retake_success'] = True
+                        
+                    print(f"DEBUG: Successfully {'updated' if is_update else 'created'} sectional test result for user {current_user.id}, test {test_id}")
+                    print(f"DEBUG: Stored result ID {test_result.id} in session instead of large data")
+                except Exception as e:
+                    print(f"ERROR: Failed to save sectional test result: {str(e)}")
+                    print(f"ERROR: Exception details: {type(e).__name__}: {e}")
+                    db.session.rollback()
+                    # Continue anyway - user still sees their current session results
+            
+        except Exception as e:
+            print(f"ERROR: Exception in sectional processing: {str(e)}")
+            print(f"ERROR: Exception type: {type(e).__name__}")
+            import traceback
+            print(f"ERROR: Traceback: {traceback.format_exc()}")
+            # Store error in session
+            session['results'] = {'error': f'Processing failed: {str(e)}'}
+            session['test_submitted'] = True
+            session['current_test_id'] = test_id
         
         return ('', 204)
     else:  # Full mock tests
@@ -1774,6 +2096,7 @@ def submit_test():
                     'combined_status_class': combined,
                     'corner_icon_char': '✓' if status == 'correct' else ('✗' if status=='incorrect' else '–'),
                     'time_spent_on_question_formatted': format_seconds_to_str(time_spent),
+                    'time_spent_seconds': time_spent if time_spent is not None else 0,
                     'prompt': row.get('QuestionPrompt', ''),
                     'passage_content': row.get('PassageOrSetContent', ''),
                     'options': [],
@@ -1877,6 +2200,9 @@ def submit_test():
         missed_ops = generate_missed_opportunities(temp_stats, is_sectional=False)
         time_wasters = generate_time_wasters(temp_stats, is_sectional=False)
         swot_analysis = generate_swot_analysis(temp_stats)
+        
+        # Generate topic-wise analysis
+        topic_analysis = generate_topic_analysis(temp_stats, is_sectional=False)
 
         # 6) Save into session - STORE ONLY ESSENTIAL DATA (not detailed questions)
         session['results'] = {
@@ -1898,6 +2224,7 @@ def submit_test():
           'missed_opportunities': missed_ops,
           'time_wasters': time_wasters,
           'swot_analysis': swot_analysis,
+          'topic_analysis': topic_analysis,
           # Store answer data to reconstruct detailed questions when needed
           'answer_data': answer_data,
           'question_times': question_times,
@@ -1924,11 +2251,20 @@ def submit_test():
                 
                 db.session.commit()
                 
+                # COOKIE SIZE FIX: Instead of storing large data in session, store only the result ID
+                # Clear the large session data and store minimal identifier
+                session.pop('results', None)  # Remove large data
+                session['current_result_id'] = test_result.id  # Store only result ID
+                session['test_submitted'] = True
+                session['current_test_id'] = test_id
+                session.pop('test_in_progress', None)
+                
                 # Set appropriate message for retake
                 if is_update:
                     session['retake_success'] = True
                     
                 print(f"DEBUG: Successfully {'updated' if is_update else 'created'} full mock test result for user {current_user.id}, test {test_id}")
+                print(f"DEBUG: Stored result ID {test_result.id} in session instead of large data")
             except Exception as e:
                 print(f"ERROR: Failed to save full mock test result: {str(e)}")
                 print(f"ERROR: Exception details: {type(e).__name__}: {e}")
@@ -1940,6 +2276,165 @@ def submit_test():
 @app.route('/results')
 @login_required
 def results_page():
+    print("DEBUG: results_page called")
+    
+    # First check if we have a result ID in session (after database storage)
+    result_id = session.get('current_result_id')
+    if result_id:
+        print(f"DEBUG: Loading result from database with ID: {result_id}")
+        test_result = TestResult.query.filter_by(id=result_id, user_id=current_user.id).first()
+        if test_result:
+            # Load data from database
+            stats = test_result.to_dict()
+            
+            # Add completion date
+            stats['completion_date'] = test_result.created_at.strftime('%b %d, %Y')
+            
+            # Show retake success message if applicable
+            if session.pop('retake_success', False):
+                flash('Test retaken successfully! Your previous score has been replaced with this new result.', 'success')
+            
+            # Don't clear the result ID immediately to allow page refreshes and navigation
+            # The ID should only be cleared when the user navigates away or starts a new test
+            
+            return render_results_template(stats)
+        else:
+            print(f"ERROR: Could not find test result with ID {result_id} for user {current_user.id}")
+            flash('Test result not found. Please try again.', 'error')
+            return redirect(url_for('test_history'))
+    
+    # Fallback: check legacy session data
+    stats = session.get('results')
+    print(f"DEBUG: results_page - stats type: {type(stats)}")
+    
+    if not stats:
+        print("DEBUG: results_page - No stats found, redirecting to mock_tests_page")
+        return redirect(url_for('mock_tests_page'))
+    
+    # Check if user has actually submitted a test (prevent direct URL access)
+    if 'test_submitted' not in session:
+        print("DEBUG: results_page - No test_submitted in session")
+        flash('Please complete a test to view results.', 'warning')
+        return redirect(url_for('mock_tests_page'))
+    
+    # Show retake success message if applicable
+    if session.pop('retake_success', False):
+        flash('Test retaken successfully! Your previous score has been replaced with this new result.', 'success')
+    
+    return render_results_template(stats)
+
+def render_results_template(stats):
+    """Helper function to render the appropriate results template"""
+    try:
+        # Determine test type based on test_name field AND section_name field
+        test_name = stats.get('test_name', '')
+        section_name = stats.get('section_name', '')
+        test_id = stats.get('test_id', '')
+        
+        print(f"DEBUG: render_results_template - test_name = '{test_name}'")
+        print(f"DEBUG: render_results_template - section_name = '{section_name}'")
+        print(f"DEBUG: render_results_template - test_id = '{test_id}'")
+        
+        # Check if it's sectional based on multiple indicators
+        is_sectional = (
+            test_name.startswith('Sectional Mock') or 
+            bool(section_name) or 
+            str(test_id).startswith(('qa', 'varc', 'lrdi'))
+        )
+        print(f"DEBUG: render_results_template - is_sectional = {is_sectional}")
+        
+        if is_sectional:  # Sectional test - redirect to dedicated sectional results route
+            print("DEBUG: render_results_template - Redirecting to sectional_results_page")
+            return redirect(url_for('sectional_results_page'))
+        else:  # Full mock test
+            print("DEBUG: render_results_template - Processing as full mock test")
+            # Ensure all required fields are present for full mock tests
+            if not test_name or test_name.startswith('Sectional Mock'):
+                stats['test_name'] = 'Full Mock Test'
+            
+            # Remove any conflicting section_name field for full mock tests
+            if 'section_name' in stats:
+                del stats['section_name']
+            
+            # Ensure topic_analysis exists and is properly structured for full mock tests
+            if 'topic_analysis' not in stats:
+                stats['topic_analysis'] = {}
+            
+            # Ensure each section exists and has proper structure
+            if 'varc' not in stats['topic_analysis'] or not stats['topic_analysis']['varc']:
+                stats['topic_analysis']['varc'] = {
+                    'reading_comprehension': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'sentence_completion': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'sentence_correction': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'para_jumbles': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'para_completion': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}}
+                }
+            
+            if 'qa' not in stats['topic_analysis'] or not stats['topic_analysis']['qa']:
+                stats['topic_analysis']['qa'] = {
+                    'algebra': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'arithmetic': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'geometry': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'number_system': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'probability': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'permutation_combination': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}}
+                }
+            
+            if 'lrdi' not in stats['topic_analysis'] or not stats['topic_analysis']['lrdi']:
+                stats['topic_analysis']['lrdi'] = {
+                    'logical_reasoning': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'data_interpretation': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'data_sufficiency': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                    'puzzles_games': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}}
+                }
+            
+            # Reconstruct detailed sections for heatmap
+            if 'detailed_sections' not in stats:
+                stats['detailed_sections'] = reconstruct_detailed_sections(stats)
+            
+            return render_template('results.html', stats=stats)
+    except Exception as e:
+        print(f"ERROR in render_results_template: {str(e)}")
+        print(f"Stats structure: {stats}")
+        # Return a simple error page or redirect
+        return f"Error loading results: {str(e)}", 500
+
+@app.route('/sectional-results')
+@login_required
+def sectional_results_page():
+    print("DEBUG: sectional_results_page called")
+    
+    # First check if we have a result ID in session (after database storage)
+    result_id = session.get('current_result_id')
+    if result_id:
+        print(f"DEBUG: Loading sectional result from database with ID: {result_id}")
+        test_result = TestResult.query.filter_by(id=result_id, user_id=current_user.id).first()
+        if test_result:
+            print(f"DEBUG: Found test_result - test_id: {test_result.test_id}, test_name: {test_result.test_name}")
+            print(f"DEBUG: Database values - total_score: {test_result.total_score}, correct: {test_result.correct}, wrong: {test_result.wrong}, skipped: {test_result.skipped}")
+            print(f"DEBUG: Database values - total_possible: {test_result.total_possible}, time_spent: {test_result.time_spent}")
+            
+            # Load data from database
+            stats = test_result.to_dict()
+            print(f"DEBUG: After to_dict() - stats score: {stats.get('score')}, stats total_score: {stats.get('total_score')}")
+            
+            # Add completion date
+            stats['completion_date'] = test_result.created_at.strftime('%b %d, %Y')
+            
+            # Show retake success message if applicable
+            if session.pop('retake_success', False):
+                flash('Test retaken successfully! Your previous score has been replaced with this new result.', 'success')
+            
+            # Don't clear the result ID immediately to allow page refreshes and navigation
+            # The ID should only be cleared when the user navigates away or starts a new test
+            
+            return render_sectional_template(stats)
+        else:
+            print(f"ERROR: Could not find sectional test result with ID {result_id} for user {current_user.id}")
+            flash('Test result not found. Please try again.', 'error')
+            return redirect(url_for('test_history'))
+    
+    # Fallback: check legacy session data
     stats = session.get('results')
     if not stats:
         return redirect(url_for('mock_tests_page'))
@@ -1953,58 +2448,100 @@ def results_page():
     if session.pop('retake_success', False):
         flash('Test retaken successfully! Your previous score has been replaced with this new result.', 'success')
     
+    return render_sectional_template(stats)
 
-    
+def render_sectional_template(stats):
+    """Helper function to render sectional results template"""
     try:
-        # Determine test type based on test_name field (same logic as review_answers)
-        test_name = stats.get('test_name', '')
-        is_sectional = test_name.startswith('Sectional Mock')
+        print(f"DEBUG: render_sectional_template - stats keys: {list(stats.keys())}")
+        print(f"DEBUG: render_sectional_template - stats score: {stats.get('score')}")
+        print(f"DEBUG: render_sectional_template - stats total_score: {stats.get('total_score')}")
+        print(f"DEBUG: render_sectional_template - stats correct: {stats.get('correct')}")
+        print(f"DEBUG: render_sectional_template - stats wrong: {stats.get('wrong')}")
+        print(f"DEBUG: render_sectional_template - stats skipped: {stats.get('skipped')}")
+        print(f"DEBUG: render_sectional_template - stats time_spent: {stats.get('time_spent')}")
+        print(f"DEBUG: render_sectional_template - stats total_possible: {stats.get('total_possible')}")
         
-        print(f"DEBUG: test_name = '{test_name}'")
-        print(f"DEBUG: is_sectional = {is_sectional}")
+        # Ensure required fields exist and fix missing values
+        if 'score' not in stats or stats.get('score') is None:
+            stats['score'] = stats.get('total_score', 0)
         
-        if is_sectional:  # Sectional test
-            print("DEBUG: Rendering sectional_results.html")
-            # Ensure all required fields are present for sectional results
-            if 'accuracy' not in stats:
-                total_attempted = stats.get('correct', 0) + stats.get('wrong', 0)
-                stats['accuracy'] = round((stats.get('correct', 0) / total_attempted * 100) if total_attempted > 0 else 0)
+        if 'total_possible' not in stats or stats.get('total_possible') is None:
+            stats['total_possible'] = 72  # Default for sectional tests (24 questions * 3 points each)
+        
+        if 'time_spent' not in stats or stats.get('time_spent') is None:
+            stats['time_spent'] = 'N/A'
+        
+        if 'correct' not in stats or stats.get('correct') is None:
+            stats['correct'] = 0
+        
+        if 'wrong' not in stats or stats.get('wrong') is None:
+            stats['wrong'] = 0
+        
+        if 'skipped' not in stats or stats.get('skipped') is None:
+            stats['skipped'] = 0
+        
+        # Ensure all required fields are present for sectional results
+        if 'accuracy' not in stats:
+            total_attempted = stats.get('correct', 0) + stats.get('wrong', 0)
+            stats['accuracy'] = round((stats.get('correct', 0) / total_attempted * 100) if total_attempted > 0 else 0)
+        
+        if 'avg_time_per_question' not in stats:
+            stats['avg_time_per_question'] = '1m 30s'  # Default value
+        
+        # Ensure topic_analysis exists and is properly structured for sectional tests
+        if 'topic_analysis' not in stats:
+            stats['topic_analysis'] = {}
+        
+        # Ensure each section exists and has proper structure
+        if 'varc' not in stats['topic_analysis'] or not stats['topic_analysis']['varc']:
+            stats['topic_analysis']['varc'] = {
+                'reading_comprehension': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'sentence_completion': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'sentence_correction': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'para_jumbles': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'para_completion': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}}
+            }
+        
+        if 'qa' not in stats['topic_analysis'] or not stats['topic_analysis']['qa']:
+            stats['topic_analysis']['qa'] = {
+                'algebra': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'arithmetic': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'geometry': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'number_system': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'probability': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'permutation_combination': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}}
+            }
+        
+        if 'lrdi' not in stats['topic_analysis'] or not stats['topic_analysis']['lrdi']:
+            stats['topic_analysis']['lrdi'] = {
+                'logical_reasoning': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'data_interpretation': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'data_sufficiency': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}},
+                'puzzles_games': {'easy': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'medium': {'correct': 0, 'wrong': 0, 'skipped': 0}, 'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}}
+            }
             
-            if 'avg_time_per_question' not in stats:
-                stats['avg_time_per_question'] = '1m 30s'  # Default value
-            
-            if 'topic_analysis' not in stats:
-                stats['topic_analysis'] = []
-            
-            if 'improvement_areas' not in stats:
-                stats['improvement_areas'] = []
-            
-            if 'time_analysis' not in stats:
-                stats['time_analysis'] = {
-                    'optimal_count': 0,
-                    'longer_count': 0,
-                    'avg_time_correct': '1m 30s',
-                    'avg_time_incorrect': '2m 00s'
-                }
-            
-            return render_template('sectional_results.html', stats=stats)
-        else:  # Full mock test
-            print("DEBUG: Rendering results.html")
-            # Ensure all required fields are present for full mock tests
-            if not test_name or test_name.startswith('Sectional Mock'):
-                stats['test_name'] = 'Full Mock Test'
-            
-            # Remove any conflicting section_name field for full mock tests
-            if 'section_name' in stats:
-                del stats['section_name']
-                print("DEBUG: Removed section_name from stats")
-            
-            return render_template('results.html', stats=stats)
+        if 'improvement_areas' not in stats:
+            stats['improvement_areas'] = []
+        
+        if 'time_analysis' not in stats:
+            stats['time_analysis'] = {
+                'optimal_count': 0,
+                'longer_count': 0,
+                'avg_time_correct': '1m 30s',
+                'avg_time_incorrect': '2m 00s'
+            }
+        
+        # Reconstruct detailed questions for sectional heatmap
+        if 'detailed_questions' not in stats:
+            stats['detailed_questions'] = reconstruct_sectional_questions(stats)
+        
+        return render_template('sectional_results.html', stats=stats)
     except Exception as e:
-        print(f"ERROR in results_page: {str(e)}")
+        print(f"ERROR in render_sectional_template: {str(e)}")
         print(f"Stats structure: {stats}")
         # Return a simple error page or redirect
-        return f"Error loading results: {str(e)}", 500
+        return f"Error loading sectional results: {str(e)}", 500
 
 @app.route('/clear-session')
 @login_required
@@ -2017,40 +2554,96 @@ def clear_session():
 @login_required
 def test_history():
     """Show user's test history"""
-    user_results = TestResult.query.filter_by(user_id=current_user.id).order_by(TestResult.created_at.desc()).all()
+    try:
+        # Safely query user results with error handling
+        user_results = TestResult.query.filter_by(user_id=current_user.id).order_by(TestResult.created_at.desc()).all()
+        
+        # Group results by test type with safe checking and fix incorrect classifications
+        full_mock_results = []
+        sectional_results = []
+        
+        for result in user_results:
+            if hasattr(result, 'test_type') and result.test_type:
+                # Check if test_type is incorrectly classified based on test_id pattern
+                is_sectional_by_id = (
+                    result.test_id.startswith('qa') or 
+                    result.test_id.startswith('varc') or 
+                    result.test_id.startswith('lrdi')
+                ) if result.test_id else False
+                
+                is_sectional_by_name = (
+                    result.test_name and 
+                    result.test_name.startswith('Sectional Mock')
+                ) if result.test_name else False
+                
+                # Determine correct classification
+                if is_sectional_by_id or is_sectional_by_name:
+                    sectional_results.append(result)
+                elif result.test_type == 'full_mock' and not is_sectional_by_id:
+                    full_mock_results.append(result)
+        
+        return render_template('test_history.html', 
+                             full_mock_results=full_mock_results,
+                             sectional_results=sectional_results)
     
-    # Group results by test type
-    full_mock_results = [result for result in user_results if result.test_type == 'full_mock']
-    sectional_results = [result for result in user_results if result.test_type == 'sectional']
-    
-    return render_template('test_history.html', 
-                         full_mock_results=full_mock_results,
-                         sectional_results=sectional_results)
+    except Exception as e:
+        print(f"ERROR in test_history route: {str(e)}")
+        # Import traceback for detailed error logging
+        import traceback
+        traceback.print_exc()
+        
+        # Provide fallback with empty results
+        flash('Unable to load test history. Please try again later.', 'error')
+        return render_template('test_history.html', 
+                             full_mock_results=[],
+                             sectional_results=[])
 
 @app.route('/view-result/<int:result_id>')
 @login_required
 def view_result(result_id):
     """View a specific test result by ID"""
+    print(f"DEBUG: view_result called with result_id: {result_id} for user: {current_user.id}")
     test_result = TestResult.query.filter_by(id=result_id, user_id=current_user.id).first()
     
     if not test_result:
+        print(f"ERROR: Test result not found - ID: {result_id}, User: {current_user.id}")
         flash('Test result not found or access denied.', 'error')
         return redirect(url_for('test_history'))
+    
+    print(f"DEBUG: Found test result - test_id: {test_result.test_id}, test_name: {test_result.test_name}")
     
     # Clear any existing session data to prevent conflicts
     session.clear()
     
-    # Load fresh result data into session for viewing
+    # COOKIE SIZE FIX: Don't load large data into session, use database-first approach
     print(f"DEBUG: Loading test result ID {result_id} for user {current_user.id}")
-    session['results'] = test_result.to_dict()
+    
+    # Store only the result ID in session instead of large data
+    session['current_result_id'] = result_id
     session['test_submitted'] = True
     session['current_test_id'] = test_result.test_id
     
+    print(f"DEBUG: Stored result ID {result_id} in session and redirecting to results_page")
     return redirect(url_for('results_page'))
 
 @app.route('/review-answers')
 @login_required
 def review_answers():
+    # First check if we have a result ID in session (after database storage)
+    result_id = session.get('current_result_id')
+    if result_id:
+        print(f"DEBUG: Loading answer review from database with ID: {result_id}")
+        test_result = TestResult.query.filter_by(id=result_id, user_id=current_user.id).first()
+        if test_result:
+            # Load data from database
+            stats = test_result.to_dict()
+            
+            # Add completion date
+            stats['completion_date'] = test_result.created_at.strftime('%b %d, %Y')
+            
+            return render_answer_review_template(stats)
+    
+    # Fallback: check legacy session data
     stats = session.get('results')
     if not stats:
         return redirect(url_for('mock_tests_page'))
@@ -2060,10 +2653,22 @@ def review_answers():
         flash('Please complete a test to view answers.', 'warning')
         return redirect(url_for('mock_tests_page'))
     
+    return render_answer_review_template(stats)
+
+def render_answer_review_template(stats):
+    """Helper function to render answer review template"""
     try:
-        # Determine test type based on test_name field (more reliable than section_name)
+        # Determine test type based on multiple indicators
         test_name = stats.get('test_name', '')
-        is_sectional = test_name.startswith('Sectional Mock')
+        section_name = stats.get('section_name', '')
+        test_id = stats.get('test_id', '')
+        
+        # Check if it's sectional based on multiple indicators
+        is_sectional = (
+            test_name.startswith('Sectional Mock') or 
+            bool(section_name) or 
+            str(test_id).startswith(('qa', 'varc', 'lrdi'))
+        )
         
         # Ensure required data is present
         if is_sectional:
@@ -2087,16 +2692,32 @@ def review_answers():
         
         return render_template('answer_review.html', stats=stats, is_sectional=is_sectional)
     except Exception as e:
-        print(f"ERROR in review_answers: {str(e)}")
+        print(f"ERROR in render_answer_review_template: {str(e)}")
         print(f"Stats structure: {stats}")
         return f"Error loading answer review: {str(e)}", 500
 
 def process_sectional_data(data):
     # Extract data from request
-    answer_data = data.get('answers', {})
-    section_times = data.get('times', [])
-    question_times = data.get('question_times', {})
-    test_id = data.get('test_id')
+    print(f"DEBUG: process_sectional_data called with data type: {type(data)}")
+    print(f"DEBUG: process_sectional_data called with data: {data}")
+    
+    # Check if data is a dictionary
+    if not isinstance(data, dict):
+        print(f"ERROR: process_sectional_data received non-dict data: {data}")
+        return {'error': f'Invalid data type: {type(data)}'}
+    
+    try:
+        answer_data = data.get('answers', {})
+        section_times = data.get('times', [])
+        question_times = data.get('question_times', {})
+        test_id = data.get('test_id')
+        
+        print(f"DEBUG: process_sectional_data called with test_id: '{test_id}'")
+        print(f"DEBUG: answer_data keys: {list(answer_data.keys())}")
+        print(f"DEBUG: section_times: {section_times}")
+    except Exception as e:
+        print(f"ERROR: Failed to extract data from request: {e}")
+        return {'error': f'Failed to extract data: {str(e)}'}
 
     # Determine section configuration based on test_id
     section_conf_map = {
@@ -2124,6 +2745,42 @@ def process_sectional_data(data):
             'optimal_time_correct': 75,
             'quick_time_incorrect': 50
         },
+        'qa5': {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_20.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        },
+        'qa6': {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_21.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        },
+        'qa7': {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_22.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        },
+        'qa8': {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_23.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        },
+        'qa9': {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_24.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        },
+        'qa10': {
+            'name': "Quantitative Aptitude",
+            'csv': 'QA_25.csv',
+            'optimal_time_correct': 75,
+            'quick_time_incorrect': 50
+        },
         'varc1': {
             'name': "Verbal Ability and Reading Comprehension",
             'csv': 'VARC_#16.csv',
@@ -2139,6 +2796,48 @@ def process_sectional_data(data):
         'varc3': {
             'name': "Verbal Ability and Reading Comprehension",
             'csv': 'VARC_#18.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        },
+        'varc4': {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#19.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        },
+        'varc5': {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#20.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        },
+        'varc6': {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#21.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        },
+        'varc7': {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#22.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        },
+        'varc8': {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#23.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        },
+        'varc9': {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#24.csv',
+            'optimal_time_correct': 60,
+            'quick_time_incorrect': 40
+        },
+        'varc10': {
+            'name': "Verbal Ability and Reading Comprehension",
+            'csv': 'VARC_#25.csv',
             'optimal_time_correct': 60,
             'quick_time_incorrect': 40
         },
@@ -2159,18 +2858,65 @@ def process_sectional_data(data):
             'csv': 'LRDI_#18.csv',
             'optimal_time_correct': 90,
             'quick_time_incorrect': 60
+        },
+        'lrdi4': {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#19.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        },
+        'lrdi5': {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#20.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        },
+        'lrdi6': {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#21.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        },
+        'lrdi7': {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#22.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        },
+        'lrdi8': {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#23.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        },
+        'lrdi9': {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#24.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
+        },
+        'lrdi10': {
+            'name': "Data Interpretation & Logical Reasoning",
+            'csv': 'LRDI_#25.csv',
+            'optimal_time_correct': 90,
+            'quick_time_incorrect': 60
         }
     }
     
     section_conf = section_conf_map.get(test_id)
+    print(f"DEBUG: section_conf for {test_id}: {section_conf}")
     if not section_conf:
+        print(f"DEBUG: ERROR - Invalid test ID: {test_id}")
         return {'error': 'Invalid test ID'}
 
     # Load questions from CSV
     path = app.static_folder + '/' + section_conf['csv']
+    print(f"DEBUG: Trying to load CSV from path: {path}")
     try:
         rows = list(csv.DictReader(open(path, encoding='utf-8')))
+        print(f"DEBUG: Successfully loaded {len(rows)} rows from CSV")
     except FileNotFoundError:
+        print(f"DEBUG: ERROR - Question set not found at path: {path}")
         return {'error': 'Question set not found'}
 
     # Process answers and calculate stats
@@ -2261,6 +3007,15 @@ def process_sectional_data(data):
     avg_time_str = format_seconds_to_str(avg_time)
 
     # Prepare stats for SWOT analysis and final return
+    temp_stats = {
+        'test_id': test_id,
+        'answer_data': {'0': answers},  # Sectional tests have answers under index '0'
+        'question_times': {'0': current_section_q_times}
+    }
+    
+    # Generate topic analysis for sectional test
+    topic_analysis = generate_topic_analysis(temp_stats, is_sectional=True)
+    
     sectional_stats = {
         'test_name': f"Sectional Mock - {section_conf['name']}",
         'test_id': test_id,  # Store test_id to reconstruct data later
@@ -2273,15 +3028,7 @@ def process_sectional_data(data):
         'wrong': wrong,
         'skipped': skipped,
         'avg_time_per_question': avg_time_str,
-        'topic_analysis': [
-            {
-                'name': 'Topic 1',  # You can add actual topic analysis here
-                'total_questions': 10,
-                'correct': 8,
-                'accuracy': 80,
-                'avg_time': '1:45'
-            }
-        ],
+        'topic_analysis': topic_analysis,
         'improvement_areas': [
             {
                 'icon': '⚡',
@@ -2308,6 +3055,10 @@ def process_sectional_data(data):
     # Generate SWOT analysis for sectional test
     swot_analysis = generate_sectional_swot_analysis(sectional_stats)
     sectional_stats['swot_analysis'] = swot_analysis
+    
+    # Generate topic analysis for sectional test
+    topic_analysis = generate_topic_analysis(sectional_stats, is_sectional=True)
+    sectional_stats['topic_analysis'] = topic_analysis
 
     # Generate missed opportunities and time wasters for sectional test
     missed_ops = generate_missed_opportunities(sectional_stats, is_sectional=True)
@@ -2334,12 +3085,32 @@ def generate_missed_opportunities(stats, is_sectional=False):
             'qa2': { 'name': "Quantitative Aptitude", 'csv': 'QA_17.csv', 'short_name': 'QA' },
             'qa3': { 'name': "Quantitative Aptitude", 'csv': 'QA_18.csv', 'short_name': 'QA' },
             'qa4': { 'name': "Quantitative Aptitude", 'csv': 'QA_19.csv', 'short_name': 'QA' },
+            'qa5': { 'name': "Quantitative Aptitude", 'csv': 'QA_20.csv', 'short_name': 'QA' },
+            'qa6': { 'name': "Quantitative Aptitude", 'csv': 'QA_21.csv', 'short_name': 'QA' },
+            'qa7': { 'name': "Quantitative Aptitude", 'csv': 'QA_22.csv', 'short_name': 'QA' },
+            'qa8': { 'name': "Quantitative Aptitude", 'csv': 'QA_23.csv', 'short_name': 'QA' },
+            'qa9': { 'name': "Quantitative Aptitude", 'csv': 'QA_24.csv', 'short_name': 'QA' },
+            'qa10': { 'name': "Quantitative Aptitude", 'csv': 'QA_25.csv', 'short_name': 'QA' },
             'varc1': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#16.csv', 'short_name': 'VARC' },
             'varc2': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#17.csv', 'short_name': 'VARC' },
             'varc3': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#18.csv', 'short_name': 'VARC' },
+            'varc4': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#19.csv', 'short_name': 'VARC' },
+            'varc5': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#20.csv', 'short_name': 'VARC' },
+            'varc6': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#21.csv', 'short_name': 'VARC' },
+            'varc7': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#22.csv', 'short_name': 'VARC' },
+            'varc8': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#23.csv', 'short_name': 'VARC' },
+            'varc9': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#24.csv', 'short_name': 'VARC' },
+            'varc10': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#25.csv', 'short_name': 'VARC' },
             'lrdi1': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#16.csv', 'short_name': 'LRDI' },
             'lrdi2': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#17.csv', 'short_name': 'LRDI' },
-            'lrdi3': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#18.csv', 'short_name': 'LRDI' }
+            'lrdi3': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#18.csv', 'short_name': 'LRDI' },
+            'lrdi4': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#19.csv', 'short_name': 'LRDI' },
+            'lrdi5': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#20.csv', 'short_name': 'LRDI' },
+            'lrdi6': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#21.csv', 'short_name': 'LRDI' },
+            'lrdi7': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#22.csv', 'short_name': 'LRDI' },
+            'lrdi8': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#23.csv', 'short_name': 'LRDI' },
+            'lrdi9': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#24.csv', 'short_name': 'LRDI' },
+            'lrdi10': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#25.csv', 'short_name': 'LRDI' }
         }
         
         if test_id in section_conf_map:
@@ -2474,12 +3245,32 @@ def generate_time_wasters(stats, is_sectional=False):
             'qa2': { 'name': "Quantitative Aptitude", 'csv': 'QA_17.csv', 'short_name': 'QA' },
             'qa3': { 'name': "Quantitative Aptitude", 'csv': 'QA_18.csv', 'short_name': 'QA' },
             'qa4': { 'name': "Quantitative Aptitude", 'csv': 'QA_19.csv', 'short_name': 'QA' },
+            'qa5': { 'name': "Quantitative Aptitude", 'csv': 'QA_20.csv', 'short_name': 'QA' },
+            'qa6': { 'name': "Quantitative Aptitude", 'csv': 'QA_21.csv', 'short_name': 'QA' },
+            'qa7': { 'name': "Quantitative Aptitude", 'csv': 'QA_22.csv', 'short_name': 'QA' },
+            'qa8': { 'name': "Quantitative Aptitude", 'csv': 'QA_23.csv', 'short_name': 'QA' },
+            'qa9': { 'name': "Quantitative Aptitude", 'csv': 'QA_24.csv', 'short_name': 'QA' },
+            'qa10': { 'name': "Quantitative Aptitude", 'csv': 'QA_25.csv', 'short_name': 'QA' },
             'varc1': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#16.csv', 'short_name': 'VARC' },
             'varc2': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#17.csv', 'short_name': 'VARC' },
             'varc3': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#18.csv', 'short_name': 'VARC' },
+            'varc4': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#19.csv', 'short_name': 'VARC' },
+            'varc5': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#20.csv', 'short_name': 'VARC' },
+            'varc6': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#21.csv', 'short_name': 'VARC' },
+            'varc7': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#22.csv', 'short_name': 'VARC' },
+            'varc8': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#23.csv', 'short_name': 'VARC' },
+            'varc9': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#24.csv', 'short_name': 'VARC' },
+            'varc10': { 'name': "Verbal Ability and Reading Comprehension", 'csv': 'VARC_#25.csv', 'short_name': 'VARC' },
             'lrdi1': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#16.csv', 'short_name': 'LRDI' },
             'lrdi2': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#17.csv', 'short_name': 'LRDI' },
-            'lrdi3': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#18.csv', 'short_name': 'LRDI' }
+            'lrdi3': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#18.csv', 'short_name': 'LRDI' },
+            'lrdi4': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#19.csv', 'short_name': 'LRDI' },
+            'lrdi5': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#20.csv', 'short_name': 'LRDI' },
+            'lrdi6': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#21.csv', 'short_name': 'LRDI' },
+            'lrdi7': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#22.csv', 'short_name': 'LRDI' },
+            'lrdi8': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#23.csv', 'short_name': 'LRDI' },
+            'lrdi9': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#24.csv', 'short_name': 'LRDI' },
+            'lrdi10': { 'name': "Data Interpretation & Logical Reasoning", 'csv': 'LRDI_#25.csv', 'short_name': 'LRDI' }
         }
         
         if test_id in section_conf_map:
@@ -2830,6 +3621,310 @@ def generate_fallback_time_wasters(section_conf, stats):
         return time_wasters
     except FileNotFoundError:
         return []
+
+def generate_topic_analysis(stats, is_sectional=False):
+    """Generate topic-wise analysis data from CSV files"""
+    topic_analysis = {
+        'varc': {},
+        'qa': {},
+        'lrdi': {}
+    }
+    
+    if is_sectional:
+        # Handle sectional tests
+        test_id = stats.get('test_id')
+        answer_data = stats.get('answer_data', {})
+        
+        # Map test IDs to section configurations
+        section_conf_map = {
+            'qa1': {'csv': 'QA_16.csv', 'section': 'qa'},
+            'qa2': {'csv': 'QA_17.csv', 'section': 'qa'},
+            'qa3': {'csv': 'QA_18.csv', 'section': 'qa'},
+            'qa4': {'csv': 'QA_19.csv', 'section': 'qa'},
+            'qa5': {'csv': 'QA_20.csv', 'section': 'qa'},
+            'qa6': {'csv': 'QA_21.csv', 'section': 'qa'},
+            'qa7': {'csv': 'QA_22.csv', 'section': 'qa'},
+            'qa8': {'csv': 'QA_23.csv', 'section': 'qa'},
+            'qa9': {'csv': 'QA_24.csv', 'section': 'qa'},
+            'qa10': {'csv': 'QA_25.csv', 'section': 'qa'},
+            'varc1': {'csv': 'VARC_#16.csv', 'section': 'varc'},
+            'varc2': {'csv': 'VARC_#17.csv', 'section': 'varc'},
+            'varc3': {'csv': 'VARC_#18.csv', 'section': 'varc'},
+            'varc4': {'csv': 'VARC_#19.csv', 'section': 'varc'},
+            'varc5': {'csv': 'VARC_#20.csv', 'section': 'varc'},
+            'varc6': {'csv': 'VARC_#21.csv', 'section': 'varc'},
+            'varc7': {'csv': 'VARC_#22.csv', 'section': 'varc'},
+            'varc8': {'csv': 'VARC_#23.csv', 'section': 'varc'},
+            'varc9': {'csv': 'VARC_#24.csv', 'section': 'varc'},
+            'varc10': {'csv': 'VARC_#25.csv', 'section': 'varc'},
+            'lrdi1': {'csv': 'LRDI_#16.csv', 'section': 'lrdi'},
+            'lrdi2': {'csv': 'LRDI_#17.csv', 'section': 'lrdi'},
+            'lrdi3': {'csv': 'LRDI_#18.csv', 'section': 'lrdi'},
+            'lrdi4': {'csv': 'LRDI_#19.csv', 'section': 'lrdi'},
+            'lrdi5': {'csv': 'LRDI_#20.csv', 'section': 'lrdi'},
+            'lrdi6': {'csv': 'LRDI_#21.csv', 'section': 'lrdi'},
+            'lrdi7': {'csv': 'LRDI_#22.csv', 'section': 'lrdi'},
+            'lrdi8': {'csv': 'LRDI_#23.csv', 'section': 'lrdi'},
+            'lrdi9': {'csv': 'LRDI_#24.csv', 'section': 'lrdi'},
+            'lrdi10': {'csv': 'LRDI_#25.csv', 'section': 'lrdi'}
+        }
+        
+        if test_id in section_conf_map:
+            conf = section_conf_map[test_id]
+            section_analysis = analyze_csv_for_topics(conf['csv'], answer_data.get('0', {}))
+            topic_analysis[conf['section']] = section_analysis
+            
+    else:
+        # Handle full mock tests
+        test_id = stats.get('test_id')
+        answer_data = stats.get('answer_data', {})
+        
+        # Get sections configuration
+        sections_conf = get_sections_conf_for_test(test_id)
+        
+        for sec_idx, sec_conf in enumerate(sections_conf):
+            section_name = sec_conf['name'].lower()
+            csv_file = sec_conf['csv']
+            section_answers = answer_data.get(str(sec_idx), {})
+            
+            # Map section names to our structure
+            if 'verbal' in section_name or 'varc' in section_name:
+                topic_analysis['varc'] = analyze_csv_for_topics(csv_file, section_answers)
+            elif 'quantitative' in section_name or 'qa' in section_name:
+                topic_analysis['qa'] = analyze_csv_for_topics(csv_file, section_answers)
+            elif 'logical' in section_name or 'data' in section_name or 'lrdi' in section_name:
+                topic_analysis['lrdi'] = analyze_csv_for_topics(csv_file, section_answers)
+    
+    return topic_analysis
+
+def analyze_csv_for_topics(csv_filename, answer_data):
+    """Analyze CSV file to extract topic-wise performance data"""
+    try:
+        path = app.static_folder + '/' + csv_filename
+        rows = list(csv.DictReader(open(path, encoding='utf-8')))
+        
+        # Direct topic mapping from CSV Topic column to our template structure
+        topic_mapping = {
+            # VARC topics - More granular mapping
+            'RC': 'reading_comprehension',
+            'Reading Comprehension (RC)': 'reading_comprehension',
+            'Reading Comprehension': 'reading_comprehension',
+            'Humanities': 'reading_comprehension',
+            'Social Science/Philosophy': 'reading_comprehension',
+            'Science/Technology': 'reading_comprehension',
+            'Abstract/Conceptual Argumentative': 'reading_comprehension',
+            
+            'VA': 'para_jumbles',  # Default VA mapping
+            'Verbal Ability (VA)': 'para_jumbles',
+            'Verbal Ability': 'para_jumbles',
+            
+            # QA topics  
+            'Algebra': 'algebra',
+            'Arithmetic': 'arithmetic', 
+            'Geometry': 'geometry',
+            'Number System': 'number_system',
+            'Modern Maths': 'permutation_combination',  # Modern Maths typically includes P&C, Probability
+            
+            # LRDI topics - More granular mapping
+            'Logical Reasoning': 'logical_reasoning',
+            'LR': 'logical_reasoning',
+            'Games & Tournaments': 'puzzles_games',
+            'Set Theory': 'logical_reasoning',
+            'Algorithmic Reasoning': 'logical_reasoning',
+            
+            'Data Interpretation': 'data_interpretation',
+            'DI': 'data_interpretation',
+            'Hybrid (DI/LR)': 'data_interpretation'
+        }
+        
+        # Initialize topic structure with all expected topics
+        all_expected_topics = [
+            'reading_comprehension', 'sentence_completion', 'sentence_correction', 
+            'para_jumbles', 'para_completion',  # VARC
+            'algebra', 'arithmetic', 'geometry', 'number_system', 
+            'probability', 'permutation_combination',  # QA
+            'logical_reasoning', 'data_interpretation', 'data_sufficiency', 'puzzles_games'  # LRDI
+        ]
+        
+        topic_data = {}
+        for topic in all_expected_topics:
+            topic_data[topic] = {
+                'easy': {'correct': 0, 'wrong': 0, 'skipped': 0},
+                'medium': {'correct': 0, 'wrong': 0, 'skipped': 0},
+                'hard': {'correct': 0, 'wrong': 0, 'skipped': 0}
+            }
+        
+        for q_idx, row in enumerate(rows):
+            topic = row.get('Topic', '').strip()
+            subtopic = row.get('SubTopic', '').strip()
+            difficulty = row.get('DifficultyLevelPredicted', '').strip().lower()
+            user_ans = answer_data.get(str(q_idx), {}).get('answer')
+            correct_ans = row.get('CorrectAnswerValue')
+            
+            # Normalize difficulty
+            if 'easy' in difficulty:
+                difficulty = 'easy'
+            elif 'medium' in difficulty:
+                difficulty = 'medium'
+            elif 'hard' in difficulty:
+                difficulty = 'hard'
+            else:
+                difficulty = 'medium'  # default
+            
+            # Map CSV topic to our template structure
+            main_topic = topic_mapping.get(topic)
+            
+            # If direct mapping doesn't work, try to categorize based on subtopic for better granularity
+            if not main_topic:
+                main_topic = categorize_subtopic_from_csv_topic(topic, subtopic)
+            
+            # For VA topics, use SubTopic to determine more specific categorization
+            if main_topic == 'para_jumbles' and subtopic:
+                main_topic = categorize_va_subtopic(subtopic)
+            
+            # For LR topics, use SubTopic to determine more specific categorization  
+            if main_topic == 'logical_reasoning' and subtopic:
+                main_topic = categorize_lr_subtopic(subtopic)
+            
+            # Ensure topic exists in our structure, fallback to logical_reasoning if unknown
+            if main_topic not in topic_data:
+                main_topic = 'logical_reasoning'  # fallback
+            
+            # Count correct/wrong/skipped answers
+            if user_ans is not None:  # Attempted questions
+                is_correct = str(user_ans) == str(correct_ans)
+                if is_correct:
+                    topic_data[main_topic][difficulty]['correct'] += 1
+                else:
+                    topic_data[main_topic][difficulty]['wrong'] += 1
+            else:  # Skipped questions
+                topic_data[main_topic][difficulty]['skipped'] += 1
+        
+        return topic_data
+        
+    except Exception as e:
+        print(f"Error analyzing CSV {csv_filename}: {str(e)}")
+        return {}
+
+def categorize_subtopic_from_csv_topic(topic, subtopic):
+    """Categorize based on CSV Topic and SubTopic for better granularity"""
+    topic_lower = topic.lower()
+    subtopic_lower = subtopic.lower()
+    
+    # Handle VA (Verbal Ability) subtopics more granularly
+    if topic_lower == 'va':
+        if any(word in subtopic_lower for word in ['para jumbles', 'jumbles', 'odd one out']):
+            return 'para_jumbles'
+        elif any(word in subtopic_lower for word in ['para summary', 'summary']):
+            return 'sentence_completion'
+        elif any(word in subtopic_lower for word in ['sentence sequencing', 'sentence placement', 'sequencing']):
+            return 'sentence_correction'
+        elif any(word in subtopic_lower for word in ['para completion', 'completion']):
+            return 'para_completion'
+        else:
+            return 'para_jumbles'  # default for VA (changed from vocabulary)
+    
+    # Handle Modern Maths subtopics
+    elif topic_lower == 'modern maths':
+        if any(word in subtopic_lower for word in ['probability', 'chance']):
+            return 'probability'
+        else:
+            return 'permutation_combination'  # default for Modern Maths
+    
+    # Handle Logical Reasoning subtopics
+    elif topic_lower == 'logical reasoning':
+        if any(word in subtopic_lower for word in ['grid puzzle', 'constraint satisfaction', 'scheduling', 'matrix logic', 'games', 'tournaments']):
+            return 'puzzles_games'
+        elif any(word in subtopic_lower for word in ['data sufficiency', 'sufficiency']):
+            return 'data_sufficiency'
+        else:
+            return 'logical_reasoning'  # default
+    
+    # Fallback to original categorization logic for unknown topics
+    return categorize_subtopic_legacy(subtopic)
+
+def categorize_subtopic_legacy(subtopic):
+    """Legacy categorization function for backward compatibility"""
+    subtopic_lower = subtopic.lower()
+    
+    # VARC patterns
+    if any(word in subtopic_lower for word in ['rc', 'reading', 'comprehension', 'passage']):
+        return 'reading_comprehension'
+    elif any(word in subtopic_lower for word in ['para summary', 'summary']):
+        return 'sentence_completion'
+    elif any(word in subtopic_lower for word in ['sentence sequencing', 'sentence placement', 'sequencing']):
+        return 'sentence_correction'
+    elif any(word in subtopic_lower for word in ['para jumbles', 'jumbles', 'odd one out']):
+        return 'para_jumbles'
+    elif any(word in subtopic_lower for word in ['vocab', 'word', 'meaning', 'synonym', 'antonym']):
+        return 'para_jumbles'  # changed from vocabulary
+    elif any(word in subtopic_lower for word in ['para completion', 'completion']):
+        return 'para_completion'
+    
+    # QA patterns
+    elif any(word in subtopic_lower for word in ['algebra', 'equation', 'quadratic', 'linear', 'function', 'modulus', 'inequalities', 'discriminant', 'completing', 'square', 'roots', 'factorial']):
+        return 'algebra'
+    elif any(word in subtopic_lower for word in ['percentage', 'ratio', 'interest', 'profit', 'loss', 'discount', 'mixture', 'alligation', 'average', 'progression', 'sequence', 'series', 'logarithm', 'time', 'speed', 'distance', 'work', 'pipe', 'cistern', 'boat', 'stream']):
+        return 'arithmetic'
+    elif any(word in subtopic_lower for word in ['circle', 'triangle', 'mensuration', 'geometry', 'coordinate', 'area', 'volume', 'chord', 'tangent', 'secant', 'angle', 'bisector', 'theorem']):
+        return 'geometry'
+    elif any(word in subtopic_lower for word in ['number system', 'remainder', 'divisibility', 'digit', 'hcf', 'lcm', 'gcd']):
+        return 'number_system'
+    elif any(word in subtopic_lower for word in ['probability', 'chance']):
+        return 'probability'
+    elif any(word in subtopic_lower for word in ['permutation', 'combination', 'arrangement']):
+        return 'permutation_combination'
+    
+    # LRDI patterns
+    elif any(word in subtopic_lower for word in ['grid puzzle', 'constraint satisfaction', 'scheduling', 'matrix logic']):
+        return 'puzzles_games'
+    elif any(word in subtopic_lower for word in ['table completion', 'comparative analysis', 'aggregate calculation', 'formula application']):
+        return 'data_interpretation'
+    elif any(word in subtopic_lower for word in ['logical', 'reasoning', 'logic']):
+        return 'logical_reasoning'
+    elif any(word in subtopic_lower for word in ['data', 'interpretation', 'table', 'graph', 'chart', 'calculation']):
+        return 'data_interpretation'
+    elif any(word in subtopic_lower for word in ['sufficiency', 'adequate', 'enough']):
+        return 'data_sufficiency'
+    
+    else:
+        # Default categorization based on section context
+        if any(word in subtopic_lower for word in ['rc', 'para', 'sentence']):
+            return 'reading_comprehension'  # VARC fallback
+        elif any(word in subtopic_lower for word in ['number', 'calculation', 'math']):
+            return 'arithmetic'  # QA fallback
+        else:
+            return 'logical_reasoning'  # LRDI fallback
+
+def categorize_va_subtopic(subtopic):
+    """Categorize VA (Verbal Ability) subtopics more granularly"""
+    subtopic_lower = subtopic.lower()
+    
+    if any(word in subtopic_lower for word in ['para jumbles', 'jumbles', 'sentence rearrangement', 'odd one out', 'sentence exclusion']):
+        return 'para_jumbles'
+    elif any(word in subtopic_lower for word in ['para summary', 'summary', 'essence']):
+        return 'sentence_completion'
+    elif any(word in subtopic_lower for word in ['sentence sequencing', 'sentence placement', 'sequencing']):
+        return 'sentence_correction'
+    elif any(word in subtopic_lower for word in ['para completion', 'completion', 'fill in the blank', 'last sentence']):
+        return 'para_completion'
+    elif any(word in subtopic_lower for word in ['logical flow', 'contextual appropriateness']):
+        return 'sentence_completion'  # Map vocabulary-like topics to sentence completion
+    else:
+        return 'para_jumbles'  # default for VA
+
+def categorize_lr_subtopic(subtopic):
+    """Categorize LR (Logical Reasoning) subtopics more granularly"""
+    subtopic_lower = subtopic.lower()
+    
+    if any(word in subtopic_lower for word in ['games', 'tournaments', 'puzzle', 'grid', 'matrix', 'scheduling', 'arrangement', 'assignment', 'auction']):
+        return 'puzzles_games'
+    elif any(word in subtopic_lower for word in ['venn diagram', 'set theory']):
+        return 'logical_reasoning'  # Keep as logical reasoning for set theory
+    elif any(word in subtopic_lower for word in ['data sufficiency', 'sufficiency']):
+        return 'data_sufficiency'
+    else:
+        return 'logical_reasoning'  # default for LR
 
 if __name__ == '__main__':
     # Initialize database tables
