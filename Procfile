@@ -1,1 +1,1 @@
-web: gunicorn app:app --bind 0.0.0.0:$PORT 
+web: python railway_init.py && gunicorn app:app --bind 0.0.0.0:$PORT 
